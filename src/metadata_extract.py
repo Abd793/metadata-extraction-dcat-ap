@@ -247,7 +247,7 @@ def extract_metadata(client: OpenAI, model: str, file: Path, output_dir: Path):
 
 # main async function
 def main(args):
-    safe_model_name = args.model.replace('/', '_')
+    safe_model_name = args.model.replace('/', '_').replace(':', '_')
     result_dir = Path(f'./results/llm/{safe_model_name}')
     # 1. read all markdown files in the folder
     files = sorted([x for x in Path("results/readme_files").glob("*.md")])
@@ -290,7 +290,7 @@ if __name__ == '__main__':
     model_choices = [
         "deepseek/deepseek-v4-flash",
         "qwen/qwen3.5-flash-02-23",
-        "openai/gpt-oss-120b",
+        "qwen/qwen3.6-flash",
     ]
     parser.add_argument("--model", choices=model_choices, required=False, default="deepseek/deepseek-v4-flash")
     parser.add_argument("--parallel", type=int, required=False, default=1)

@@ -23,6 +23,7 @@ def main(args):
         "deepseek/deepseek-v4-flash",
         "qwen/qwen3.5-flash",
         "openai/gpt-oss-120b",
+        "google/gemma-4-31b-it:free",
     ]
     model_to_metadata_files = {}
     for model in model_choices:
