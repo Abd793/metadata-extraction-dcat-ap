@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "Wildlife ML",
+      "normalized_value": "Wildlife ML",
+      "evidence": "# Welcome to **Wildlife ML**!",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the project name."
+    },
+    {
+      "field": "package_name",
+      "value": "wildlifeml",
+      "normalized_value": "wildlifeml",
+      "evidence": "from wildlifeml import MegaDetector",
+      "evidence_location": "99",
+      "confidence": "high",
+      "reason": "Python import name for the package."
+    },
+    {
+      "field": "description",
+      "value": "a software package designed specifically to help ecologists to leverage the potential of active learning\nand deep learning for image classification.",
+      "normalized_value": "a software package designed specifically to help ecologists to leverage the potential of active learning and deep learning for image classification.",
+      "evidence": "a software package designed specifically to help ecologists to leverage the potential of active learning\nand deep learning for image classification.",
+      "evidence_location": "6-7",
+      "confidence": "high",
+      "reason": "Describes the purpose of the software."
+    },
+    {
+      "field": "task",
+      "value": "Automated wildlife image classification",
+      "normalized_value": "Automated wildlife image classification",
+      "evidence": "Automated wildlife image classification: An active learning tool for ecological applications",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "The paper title identifies the task."
+    },
+    {
+      "field": "method",
+      "value": "Our approach is two-fold, combining improved strategies for object detection and\nimage classification with an active learning system that allows for\nmore efficient training of deep learning models.",
+      "normalized_value": "Our approach is two-fold, combining improved strategies for object detection and image classification with an active learning system that allows for more efficient training of deep learning models.",
+      "evidence": "Our approach is two-fold, combining improved strategies for object detection and\nimage classification with an active learning system that allows for\nmore efficient training of deep learning models.",
+      "evidence_location": "9-11",
+      "confidence": "high",
+      "reason": "Describes the core methodology."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2303.15823",
+      "normalized_value": "https://arxiv.org/abs/2303.15823",
+      "evidence": "https://arxiv.org/abs/2303.15823",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Link to the associated paper."
+    },
+    {
+      "field": "doi",
+      "value": "10.1016/j.ecoinf.2023.102231",
+      "normalized_value": "10.1016/j.ecoinf.2023.102231",
+      "evidence": "doi = {10.1016/j.ecoinf.2023.102231}",
+      "evidence_location": "52",
+      "confidence": "high",
+      "reason": "Digital Object Identifier for the paper."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{bothmann_et_al_2023,\n\ttitle = {Automated wildlife image classification: {An} active learning tool for ecological applications},\n\tvolume = {77},\n\tissn = {1574-9541},\n\turl = {https://www.sciencedirect.com/science/article/pii/S1574954123002601},\n\tdoi = {10.1016/j.ecoinf.2023.102231},\n\tjournal = {Ecological Informatics},\n\tauthor = {Bothmann, Ludwig and Wimmer, Lisa and Charrakh, Omid and Weber, Tobias and Edelhoff, Hendrik and Peters, Wibke and Nguyen, Hien and Benjamin, Caryl and Menzel, Annette},\n\tyear = {2023},\n\tpages = {102231}\n}",
+      "normalized_value": "@article{bothmann_et_al_2023, title = {Automated wildlife image classification: {An} active learning tool for ecological applications}, volume = {77}, issn = {1574-9541}, url = {https://www.sciencedirect.com/science/article/pii/S1574954123002601}, doi = {10.1016/j.ecoinf.2023.102231}, journal = {Ecological Informatics}, author = {Bothmann, Ludwig and Wimmer, Lisa and Charrakh, Omid and Weber, Tobias and Edelhoff, Hendrik and Peters, Wibke and Nguyen, Hien and Benjamin, Caryl and Menzel, Annette}, year = {2023}, pages = {102231}}",
+      "evidence": "```\n@article{bothmann_et_al_2023,\n\ttitle = {Automated wildlife image classification: {An} active learning tool for ecological applications},\n\tvolume = {77},\n\tissn = {1574-9541},\n\turl = {https://www.sciencedirect.com/science/article/pii/S1574954123002601},\n\tdoi = {10.1016/j.ecoinf.2023.102231},\n\tjournal = {Ecological Informatics},\n\tauthor = {Bothmann, Ludwig and Wimmer, Lisa and Charrakh, Omid and Weber, Tobias and Edelhoff, Hendrik and Peters, Wibke and Nguyen, Hien and Benjamin, Caryl and Menzel, Annette},\n\tyear = {2023},\n\tpages = {102231}\n}\n```",
+      "evidence_location": "46-57",
+      "confidence": "high",
+      "reason": "BibTeX citation for the paper."
+    },
+    {
+      "field": "experiments_repository",
+      "value": "https://github.com/slds-lmu/wildlife-experiments/",
+      "normalized_value": "https://github.com/slds-lmu/wildlife-experiments/",
+      "evidence": "https://github.com/slds-lmu/wildlife-experiments/",
+      "evidence_location": "39",
+      "confidence": "high",
+      "reason": "Link to experiments repository with example scripts."
+    },
+    {
+      "field": "dependency_megadetector",
+      "value": "Megadetector (Microsoft CameraTraps)",
+      "normalized_value": "Megadetector (Microsoft CameraTraps)",
+      "evidence": "[Megadetector](https://github.com/microsoft/CameraTraps)",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "External object detection model used as first stage."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "```python\nfrom wildlifeml import MegaDetector\n\nmd = MegaDetector(batch_size=32, confidence_threshold=0.1)\nmd.predict_directory(directory='<directory>', output_file='<output_file>')\n```",
+      "evidence_location": "98-103",
+      "confidence": "high",
+      "reason": "Code examples are in Python, indicating the language."
+    },
+    {
+      "field": "deep_learning_framework",
+      "value": "TensorFlow/Keras",
+      "normalized_value": "TensorFlow/Keras",
+      "evidence": "Our dataset builds on the Keras `Sequence` utility and thus supports multi-threaded loading during training.",
+      "evidence_location": "178",
+      "confidence": "high",
+      "reason": "Explicit mention of Keras, and TF is mentioned in training parameters."
+    },
+    {
+      "field": "cli_command",
+      "value": "wildlifeml-get-bbox -d <directory>",
+      "normalized_value": "wildlifeml-get-bbox -d <directory>",
+      "evidence": "```shell\nwildlifeml-get-bbox -d <directory>\n```",
+      "evidence_location": "111-113",
+      "confidence": "high",
+      "reason": "Command-line interface for running Megadetector."
+    },
+    {
+      "field": "training_parameters",
+      "value": "- `batch_size`: Batch size\n- `loss_func`: TF or Keras loss function\n- `num_classes`: The number of classes in the dataset\n- `transfer_epochs`: How many epochs to train in the `transfer`-phase.\n- `finetune_epochs`: How many epochs to train in the `finetune`-phase.\n- `transfer_optimizer`: Keras optimizer to use in the `transfer`-phase.\n- `finetune_optimizer`: Keras optimizer to use in the `finetune`-phase.\n- `finetune_layers`: Number of layers to unfreeze for the `finetune`-phase.",
+      "normalized_value": "- `batch_size`: Batch size - `loss_func`: TF or Keras loss function - `num_classes`: The number of classes in the dataset - `transfer_epochs`: How many epochs to train in the `transfer`-phase. - `finetune_epochs`: How many epochs to train in the `finetune`-phase. - `transfer_optimizer`: Keras optimizer to use in the `transfer`-phase. - `finetune_optimizer`: Keras optimizer to use in the `finetune`-phase. - `finetune_layers`: Number of layers to unfreeze for the `finetune`-phase.",
+      "evidence": "- `batch_size`: Batch size\n- `loss_func`: TF or Keras loss function\n- `num_classes`: The number of classes in the dataset\n- `transfer_epochs`: How many epochs to train in the `transfer`-phase.\n- `finetune_epochs`: How many epochs to train in the `finetune`-phase.\n- `transfer_optimizer`: Keras optimizer to use in the `transfer`-phase.\n- `finetune_optimizer`: Keras optimizer to use in the `finetune`-phase.\n- `finetune_layers`: Number of layers to unfreeze for the `finetune`-phase.",
+      "evidence_location": "230-237",
+      "confidence": "high",
+      "reason": "Mandatory parameters for the WildlifeTrainer, essential for reproduction."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "accuracy, precision, recall and f1 score",
+      "normalized_value": "accuracy, precision, recall and f1 score",
+      "evidence": "For a trained model, which is contained in a `WildlifeTrainer`, the accuracy, precision, recall and f1 score is computed as:",
+      "evidence_location": "304-305",
+      "confidence": "high",
+      "reason": "Lists the metrics computed by the evaluator."
+    },
+    {
+      "field": "evaluator_parameters",
+      "value": "- `label_file_path`: Path pointing to the labels\n- `detector_file_path`: Path to the MD file\n- `dataset`: `WildlifeDataset` to evaluate\n- `num_classes`: Number of classes in the dataset.",
+      "normalized_value": "- `label_file_path`: Path pointing to the labels - `detector_file_path`: Path to the MD file - `dataset`: `WildlifeDataset` to evaluate - `num_classes`: Number of classes in the dataset.",
+      "evidence": "- `label_file_path`: Path pointing to the labels\n- `detector_file_path`: Path to the MD file\n- `dataset`: `WildlifeDataset` to evaluate\n- `num_classes`: Number of classes in the dataset.",
+      "evidence_location": "278-281",
+      "confidence": "high",
+      "reason": "Required parameters for the Evaluator."
+    },
+    {
+      "field": "active_learning_parameters",
+      "value": "- `trainer`: `WildlifeTrainer` as model container and handler.\n- `pool_dataset`: `WildlifeDataset` without labels\n- `label_file_path`: Path pointing to the file where labels should be saved\n- `label_file_path`: Path pointing to the file where labels should be saved\n- `conf_threshold`: Minimal confidence for bounding boxes in the MD file\n- `empty_class_id`: idx of the class that symbolizes an empty image",
+      "normalized_value": "- `trainer`: `WildlifeTrainer` as model container and handler. - `pool_dataset`: `WildlifeDataset` without labels - `label_file_path`: Path pointing to the file where labels should be saved - `label_file_path`: Path pointing to the file where labels should be saved - `conf_threshold`: Minimal confidence for bounding boxes in the MD file - `empty_class_id`: idx of the class that symbolizes an empty image",
+      "evidence": "- `trainer`: `WildlifeTrainer` as model container and handler.\n- `pool_dataset`: `WildlifeDataset` without labels\n- `label_file_path`: Path pointing to the file where labels should be saved\n- `label_file_path`: Path pointing to the file where labels should be saved\n- `conf_threshold`: Minimal confidence for bounding boxes in the MD file\n- `empty_class_id`: idx of the class that symbolizes an empty image",
+      "evidence_location": "328-333",
+      "confidence": "high",
+      "reason": "Required parameters for the ActiveLearner."
+    },
+    {
+      "field": "data_folder_structure",
+      "value": "├── labels.csv\n├── images_megadetector.json\n└── images\n    ├── img_id1.xx\n    ├── ...\n    └── img_idn.xx",
+      "normalized_value": "├── labels.csv ├── images_megadetector.json └── images     ├── img_id1.xx     ├── ...     └── img_idn.xx",
+      "evidence": "```\n├── labels.csv\n├── images_megadetector.json\n└── images\n    ├── img_id1.xx\n    ├── ...\n    └── img_idn.xx\n```",
+      "evidence_location": "66-73",
+      "confidence": "high",
+      "reason": "Recommended folder structure for using the package."
+    },
+    {
+      "field": "data_labels_format",
+      "value": "img_id1.xx,<int_label>\n...\nimg_idn.xx,<int_label>",
+      "normalized_value": "img_id1.xx,<int_label> ... img_idn.xx,<int_label>",
+      "evidence": "```\nimg_id1.xx,<int_label>\n...\nimg_idn.xx,<int_label>\n```",
+      "evidence_location": "77-81",
+      "confidence": "high",
+      "reason": "Format of the labels.csv file."
+    },
+    {
+      "field": "image_format_compatibility",
+      "value": "compatible with PIL",
+      "normalized_value": "compatible with PIL",
+      "evidence": "as long as the format is compatible with `PIL`",
+      "evidence_location": "87",
+      "confidence": "high",
+      "reason": "Specifies that image format must be readable by PIL."
+    }
+  ]
+}

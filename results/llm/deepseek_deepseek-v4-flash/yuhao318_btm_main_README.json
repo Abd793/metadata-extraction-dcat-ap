@@ -1,0 +1,211 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "BTM",
+      "normalized_value": "BTM",
+      "evidence": "# BTM",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the artifact name."
+    },
+    {
+      "field": "title",
+      "value": "Reviving Undersampling for Long-Tailed Learning",
+      "normalized_value": "Reviving Undersampling for Long-Tailed Learning",
+      "evidence": "**Reviving Undersampling for Long-Tailed Learning**",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Full title of the associated paper."
+    },
+    {
+      "field": "authors",
+      "value": "Hao Yu, Yingxiao Du, Jianxin Wu",
+      "normalized_value": "Hao Yu, Yingxiao Du, Jianxin Wu",
+      "evidence": "**Authors**: Hao Yu, Yingxiao Du, Jianxin Wu",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Provides author list for attribution."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2401.16811.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2401.16811.pdf",
+      "evidence": "[[`arXiv`](https://arxiv.org/pdf/2401.16811.pdf)]",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Direct link to the paper PDF."
+    },
+    {
+      "field": "description",
+      "value": "BTM is a simple, and efficient framework for long-tailed recognition.",
+      "normalized_value": "BTM is a simple, and efficient framework for long-tailed recognition.",
+      "evidence": "BTM is a simple, and efficient framework for long-tailed recognition.",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Describes the purpose of the artifact."
+    },
+    {
+      "field": "python_version",
+      "value": "Python 3.8",
+      "normalized_value": "Python 3.8",
+      "evidence": "* Python 3.8",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Required Python version for reproducibility."
+    },
+    {
+      "field": "pytorch_version",
+      "value": "Pytorch 1.12.0",
+      "normalized_value": "Pytorch 1.12.0",
+      "evidence": "* Pytorch 1.12.0",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Required PyTorch version."
+    },
+    {
+      "field": "torchvision_version",
+      "value": "torchvision 0.13.0",
+      "normalized_value": "torchvision 0.13.0",
+      "evidence": "* torchvision 0.13.0",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Required torchvision version."
+    },
+    {
+      "field": "dataset",
+      "value": "ImageNet-LT",
+      "normalized_value": "ImageNet-LT",
+      "evidence": "* [ImageNet-LT](http://image-net.org/index)",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Dataset used for training/evaluation."
+    },
+    {
+      "field": "dataset",
+      "value": "iNaturalist 2018",
+      "normalized_value": "iNaturalist 2018",
+      "evidence": "* [iNaturalist 2018](https://github.com/visipedia/inat_comp/tree/master/2018)",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Dataset used for training/evaluation."
+    },
+    {
+      "field": "dataset",
+      "value": "Places-LT",
+      "normalized_value": "Places-LT",
+      "evidence": "* [Places-LT](http://places2.csail.mit.edu/download.html)",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Dataset used for training/evaluation."
+    },
+    {
+      "field": "command",
+      "value": "python train_stage1.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml",
+      "normalized_value": "python train_stage1.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml",
+      "evidence": "python train_stage1.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml",
+      "evidence_location": "33",
+      "confidence": "high",
+      "reason": "Command to train Stage-1 model."
+    },
+    {
+      "field": "command",
+      "value": "python train_stage1_bl_10_classifier.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup_bl_10_calssifier.yaml",
+      "normalized_value": "python train_stage1_bl_10_classifier.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup_bl_10_calssifier.yaml",
+      "evidence": "python train_stage1_bl_10_classifier.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup_bl_10_calssifier.yaml",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Command to train model with balanced undersampling (BTM step)."
+    },
+    {
+      "field": "command",
+      "value": "python merge.py",
+      "normalized_value": "python merge.py",
+      "evidence": "python merge.py",
+      "evidence_location": "51",
+      "confidence": "high",
+      "reason": "Command to merge model checkpoints for ensemble."
+    },
+    {
+      "field": "command",
+      "value": "python train_stage2.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/BTM",
+      "normalized_value": "python train_stage2.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/BTM",
+      "evidence": "python train_stage2.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/BTM",
+      "evidence_location": "62",
+      "confidence": "high",
+      "reason": "Command to train Stage-2 model."
+    },
+    {
+      "field": "command",
+      "value": "python eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml  resume /path/to/checkpoint/stage1",
+      "normalized_value": "python eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml resume /path/to/checkpoint/stage1",
+      "evidence": "python eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml  resume /path/to/checkpoint/stage1",
+      "evidence_location": "82",
+      "confidence": "high",
+      "reason": "Command to evaluate Stage-1 model."
+    },
+    {
+      "field": "command",
+      "value": "python eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/stage2",
+      "normalized_value": "python eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/stage2",
+      "evidence": "python eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/stage2",
+      "evidence_location": "83",
+      "confidence": "high",
+      "reason": "Command to evaluate Stage-2 model."
+    },
+    {
+      "field": "supported_architectures",
+      "value": "resnet50/101/152 for imagenet, resnet50 for ina2018, and resnet152 for places",
+      "normalized_value": "resnet50/101/152 for imagenet, resnet50 for ina2018, and resnet152 for places",
+      "evidence": "`ARCH` can be `resnet50/101/152` for `imagenet`, `resnet50` for `ina2018`, and `resnet152` for `places`, respectively.",
+      "evidence_location": "38",
+      "confidence": "high",
+      "reason": "Supported model architectures for different datasets."
+    },
+    {
+      "field": "method",
+      "value": "balanced undersampling and model ensemble strategy",
+      "normalized_value": "balanced undersampling and model ensemble strategy",
+      "evidence": "We revive the balanced undersampling produces a more equitable distribution of accuracy across categories, and devise a straightforward model ensemble strategy",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Core method proposed in the paper."
+    },
+    {
+      "field": "task",
+      "value": "long-tailed recognition",
+      "normalized_value": "long-tailed recognition",
+      "evidence": "long-tailed recognition",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Identifies the task addressed by the artifact."
+    },
+    {
+      "field": "metrics",
+      "value": "harmonic mean, geometric mean, average accuracy",
+      "normalized_value": "harmonic mean, geometric mean, average accuracy",
+      "evidence": "*We aim to enhance the accuracy of the worst-performing categories and utilize the harmonic mean and geometric mean to assess the model's performance. We revive the balanced undersampling produces a more equitable distribution of accuracy across categories, and devise a straightforward model ensemble strategy, which does not result in any additional overhead and achieves improved harmonic and geometric mean while keeping the average accuracy.*",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Metrics used to evaluate model performance."
+    },
+    {
+      "field": "bibtex",
+      "value": "@article{yu2024reviving,\n  title={Reviving Undersampling for Long-Tailed Learning},\n  author={Yu, Hao and Du, Yingxiao and Wu, Jianxin},\n  journal={arXiv preprint arXiv:2401.16811},\n  year={2024}\n}",
+      "normalized_value": "@article{yu2024reviving, title={Reviving Undersampling for Long-Tailed Learning}, author={Yu, Hao and Du, Yingxiao and Wu, Jianxin}, journal={arXiv preprint arXiv:2401.16811}, year={2024}}",
+      "evidence": "```bib\n@article{yu2024reviving,\n  title={Reviving Undersampling for Long-Tailed Learning},\n  author={Yu, Hao and Du, Yingxiao and Wu, Jianxin},\n  journal={arXiv preprint arXiv:2401.16811},\n  year={2024}\n}\n```",
+      "evidence_location": "88-94",
+      "confidence": "high",
+      "reason": "Citation for the paper in BibTeX format."
+    },
+    {
+      "field": "contact_email",
+      "value": "yuh@lamda.nju.edu.cn",
+      "normalized_value": "yuh@lamda.nju.edu.cn",
+      "evidence": "Hao Yu: yuh@lamda.nju.edu.cn",
+      "evidence_location": "99",
+      "confidence": "high",
+      "reason": "Contact email for questions about the work."
+    }
+  ]
+}
