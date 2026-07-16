@@ -17,4 +17,4 @@
 #     qwen/qwen3.5-flash-02-23 \
 #     deepseek/deepseek-v4-pro
 
-python3 src/openrouter_metadata_extract.py --threads 1 --models deepseek/deepseek-v4-flash
+python3 src/metadata_extract.py --threads 1 --models deepseek/deepseek-v4-flash
