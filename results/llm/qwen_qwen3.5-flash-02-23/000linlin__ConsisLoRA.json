@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "ConsisLoRA: Enhancing Content and Style Consistency for LoRA-based Style Transfer",
+      "normalized_value": "ConsisLoRA: Enhancing Content and Style Consistency for LoRA-based Style Transfer",
+      "evidence": "# ConsisLoRA: Enhancing Content and Style Consistency for LoRA-based Style Transfer",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly stated as the main title of the repository."
+    },
+    {
+      "field": "artifact_description",
+      "value": "This repository contains the reference source code for the paper [ConsisLoRA: Enhancing Content and Style Consistency for LoRA-based Style Transfer](https://arxiv.org/pdf/2503.10614).",
+      "normalized_value": "This repository contains the reference source code for the paper ConsisLoRA: Enhancing Content and Style Consistency for LoRA-based Style Transfer https://arxiv.org/pdf/2503.10614",
+      "evidence": "This repository contains the reference source code for the paper \n[ConsisLoRA: Enhancing Content and Style Consistency for LoRA-based Style Transfer](https://arxiv.org/pdf/2503.10614).",
+      "evidence_location": "6-7",
+      "confidence": "high",
+      "reason": "Explicitly describes the purpose of the repository."
+    },
+    {
+      "field": "project_page",
+      "value": "https://ConsisLoRA.github.io/",
+      "normalized_value": "https://ConsisLoRA.github.io/",
+      "evidence": "<a href='https://ConsisLoRA.github.io/'><img src='https://img.shields.io/badge/Project-Page-green'></a>",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Direct link to the project page provided in the header."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2503.10614",
+      "normalized_value": "https://arxiv.org/abs/2503.10614",
+      "evidence": "<a href='https://arxiv.org/abs/2503.10614'><img src='https://img.shields.io/badge/arXiv-2503.10614-b31b1b.svg'></a>",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Direct link to the arXiv paper provided in the header."
+    },
+    {
+      "field": "checkpoint_url",
+      "value": "https://huggingface.co/chenblin26",
+      "normalized_value": "https://huggingface.co/chenblin26",
+      "evidence": "- **2025/03/24**: We release the inference code and LoRA checkpoints (see [here](https://huggingface.co/chenblin26)).",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Explicit link to HuggingFace checkpoints mentioned in the News section."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/000linlin/ConsisLoRA.git",
+      "normalized_value": "https://github.com/000linlin/ConsisLoRA.git",
+      "evidence": "git clone https://github.com/000linlin/ConsisLoRA.git",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Explicit repository URL provided in the Installation section."
+    },
+    {
+      "field": "environment_python",
+      "value": "Python 3.11",
+      "normalized_value": "Python 3.11",
+      "evidence": "This code was tested with Python 3.11, Pytorch 2.1 and Diffusers 0.31.",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Explicitly stated tested Python version."
+    },
+    {
+      "field": "environment_pytorch",
+      "value": "Pytorch 2.1",
+      "normalized_value": "Pytorch 2.1",
+      "evidence": "This code was tested with Python 3.11, Pytorch 2.1 and Diffusers 0.31.",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Explicitly stated tested PyTorch version."
+    },
+    {
+      "field": "environment_diffusers",
+      "value": "Diffusers 0.31",
+      "normalized_value": "Diffusers 0.31",
+      "evidence": "This code was tested with Python 3.11, Pytorch 2.1 and Diffusers 0.31.",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Explicitly stated tested Diffusers version."
+    },
+    {
+      "field": "installation_command",
+      "value": "git clone https://github.com/000linlin/ConsisLoRA.git\ncd consislora\n\nconda create -n consislora python=3.11\nconda activate consislora\n\npip install -r requirements.txt",
+      "normalized_value": "git clone https://github.com/000linlin/ConsisLoRA.git cd consislora conda create -n consislora python=3.11 conda activate consislora pip install -r requirements.txt",
+      "evidence": "```\ngit clone https://github.com/000linlin/ConsisLoRA.git\ncd consislora\n\nconda create -n consislora python=3.11\nconda activate consislora\n\npip install -r requirements.txt\n```",
+      "evidence_location": "22-30",
+      "confidence": "high",
+      "reason": "Complete installation steps provided in the Installation section."
+    },
+    {
+      "field": "inference_command",
+      "value": "python inference.py \\\n    --prompt \"a [c] in the style of [v]\" \\\n    --content_image_lora_path \"path/to/content\" \\\n    --style_image_lora_path \"path/to/style\" \\\n    --lora_scaling 1. 1. \\\n    --guidance_scale 7.5 \\\n    --output_dir \"inference-images\" \\\n    --num_images_per_prompt 1 \\\n    --num_steps 30",
+      "normalized_value": "python inference.py --prompt \"a [c] in the style of [v]\" --content_image_lora_path \"path/to/content\" --style_image_lora_path \"path/to/style\" --lora_scaling 1. 1. --guidance_scale 7.5 --output_dir \"inference-images\" --num_images_per_prompt 1 --num_steps 30",
+      "evidence": "```\npython inference.py \\\n    --prompt \"a [c] in the style of [v]\" \\\n    --content_image_lora_path \"path/to/content\" \\\n    --style_image_lora_path \"path/to/style\" \\\n    --lora_scaling 1. 1. \\\n    --guidance_scale 7.5 \\\n    --output_dir \"inference-images\" \\\n    --num_images_per_prompt 1 \\\n    --num_steps 30 \n```",
+      "evidence_location": "37-47",
+      "confidence": "high",
+      "reason": "Primary inference command for style transfer provided in the Usage section."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{chen2025consislora,\n        title={ConsisLoRA: Enhancing Content and Style Consistency for LoRA-based Style Transfer},\n        author={Bolin Chen, Baoquan Zhao, Haoran Xie, Yi Cai, Qing Li and Xudong Mao},\n        journal={arXiv preprint arXiv:2503.10614},\n        year={2025}\n}",
+      "normalized_value": "@article{chen2025consislora, title={ConsisLoRA: Enhancing Content and Style Consistency for LoRA-based Style Transfer}, author={Bolin Chen, Baoquan Zhao, Haoran Xie, Yi Cai, Qing Li and Xudong Mao}, journal={arXiv preprint arXiv:2503.10614}, year={2025}}",
+      "evidence": "```\nbibtex\n@article{chen2025consislora,\n        title={ConsisLoRA: Enhancing Content and Style Consistency for LoRA-based Style Transfer},\n        author={Bolin Chen, Baoquan Zhao, Haoran Xie, Yi Cai, Qing Li and Xudong Mao},\n        journal={arXiv preprint arXiv:2503.10614},\n        year={2025}\n}\n```",
+      "evidence_location": "81-87",
+      "confidence": "high",
+      "reason": "Complete BibTeX citation provided in the Citation section."
+    },
+    {
+      "field": "authors",
+      "value": "Bolin Chen, Baoquan Zhao, Haoran Xie, Yi Cai, Qing Li and Xudong Mao",
+      "normalized_value": "Bolin Chen, Baoquan Zhao, Haoran Xie, Yi Cai, Qing Li and Xudong Mao",
+      "evidence": "        author={Bolin Chen, Baoquan Zhao, Haoran Xie, Yi Cai, Qing Li and Xudong Mao},",
+      "evidence_location": "84",
+      "confidence": "high",
+      "reason": "Authors listed explicitly in the BibTeX citation."
+    },
+    {
+      "field": "publication_year",
+      "value": "2025",
+      "normalized_value": "2025",
+      "evidence": "        year={2025}",
+      "evidence_location": "86",
+      "confidence": "high",
+      "reason": "Publication year explicitly listed in the BibTeX citation."
+    },
+    {
+      "field": "training_code_status",
+      "value": "Waiting for training code release.",
+      "normalized_value": "Waiting for training code release.",
+      "evidence": "Waiting for training code release.",
+      "evidence_location": "33",
+      "confidence": "high",
+      "reason": "Explicitly states training code is not yet released."
+    },
+    {
+      "field": "base_repositories",
+      "value": "B-LoRA, diffusers",
+      "normalized_value": "B-LoRA, diffusers",
+      "evidence": "Our code mainly bases on [B-LoRA](https://github.com/yardenfren1996/B-LoRA) and [diffusers](https://github.com/huggingface/diffusers/blob/main/examples/dreambooth/train_dreambooth_lora_sdxl.py).",
+      "evidence_location": "77",
+      "confidence": "high",
+      "reason": "Explicitly mentions base repositories the code is based on."
+    },
+    {
+      "field": "notebook_demo",
+      "value": "inference_demo.ipynb",
+      "normalized_value": "inference_demo.ipynb",
+      "evidence": "See the [**inference_demo**][inference] notebook for more details on how to generate stylized images.",
+      "evidence_location": "69",
+      "confidence": "high",
+      "reason": "Explicitly mentions a notebook file for demonstration."
+    }
+  ]
+}

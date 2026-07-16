@@ -18,5 +18,5 @@
 #     deepseek/deepseek-v4-pro
 
 python3 src/metadata_extract.py --parallel 1 --model deepseek/deepseek-v4-flash
-python3 src/metadata_extract.py --parallel 1 --model qwen/qwen3.5-flash
+python3 src/metadata_extract.py --parallel 1 --model qwen/qwen3.5-flash-02-23
 python3 src/metadata_extract.py --parallel 1 --model openai/gpt-oss-120b

@@ -261,7 +261,7 @@ def main(args):
     client = OpenAI(
         base_url="https://openrouter.ai/api/v1",
         api_key=api_key,
-        timeout=600,
+        timeout=120,
     )
     files = files[:1]
     if args.parallel == 1:
