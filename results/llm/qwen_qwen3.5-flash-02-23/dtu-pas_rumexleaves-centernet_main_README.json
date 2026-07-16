@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "RumexLeaves-CenterNet",
+      "normalized_value": "RumexLeaves-CenterNet",
+      "evidence": "# RumexLeaves-CenterNet",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the name of the repository/project in the main header."
+    },
+    {
+      "field": "artifact_description",
+      "value": "This repository contains the official implementation for Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances.",
+      "normalized_value": "This repository contains the official implementation for Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances.",
+      "evidence": "This repository contains the official implementation for\n\n[Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances.](https://ieeexplore.ieee.org/document/10373101) Ronja Güldenring, Rasmus Eckholdt Andersen and Lazaros Nalpantidis, IEEE Robotics and Automation Letters (RA-L), 2023",
+      "evidence_location": "2-4",
+      "confidence": "high",
+      "reason": "Describes the purpose and content of the repository."
+    },
+    {
+      "field": "authors",
+      "value": "Ronja Güldenring, Rasmus Eckholdt Andersen and Lazaros Nalpantidis",
+      "normalized_value": "Ronja Güldenring, Rasmus Eckholdt Andersen and Lazaros Nalpantidis",
+      "evidence": "Ronja Güldenring, Rasmus Eckholdt Andersen and Lazaros Nalpantidis",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Lists the authors of the associated publication and implementation."
+    },
+    {
+      "field": "publication_venue",
+      "value": "IEEE Robotics and Automation Letters (RA-L)",
+      "normalized_value": "IEEE Robotics and Automation Letters (RA-L)",
+      "evidence": "IEEE Robotics and Automation Letters (RA-L)",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Identifies the journal or conference where the work was published."
+    },
+    {
+      "field": "publication_year",
+      "value": "2024",
+      "normalized_value": "2024",
+      "evidence": "year = {2024}",
+      "evidence_location": "112",
+      "confidence": "high",
+      "reason": "Explicit publication year found in the citation block."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "└── LICENSE              <- MIT License",
+      "evidence_location": "98",
+      "confidence": "high",
+      "reason": "Specifies the license under which the code is distributed."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://data.dtu.dk/articles/dataset/_strong_RumexLeaves_Dataset_introduced_by_Paper_Fine-grained_Leaf_Analysis_for_Efficient_Weeding_Robots_strong_/23659524",
+      "normalized_value": "https://data.dtu.dk/articles/dataset/_strong_RumexLeaves_Dataset_introduced_by_Paper_Fine-grained_Leaf_Analysis_for_Efficient_Weeding_Robots_strong_/23659524",
+      "evidence": "* [Dataset](https://data.dtu.dk/articles/dataset/_strong_RumexLeaves_Dataset_introduced_by_Paper_Fine-grained_Leaf_Analysis_for_Efficient_Weeding_Robots_strong_/23659524)",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Provides a direct link to the associated dataset."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://ieeexplore.ieee.org/document/10373101",
+      "normalized_value": "https://ieeexplore.ieee.org/document/10373101",
+      "evidence": "* [Publication](https://ieeexplore.ieee.org/document/10373101)",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Provides a direct link to the official publication."
+    },
+    {
+      "field": "arxiv_url",
+      "value": "https://arxiv.org/abs/2312.08805",
+      "normalized_value": "https://arxiv.org/abs/2312.08805",
+      "evidence": "* [Arxiv](https://arxiv.org/abs/2312.08805)",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Provides a direct link to the preprint version."
+    },
+    {
+      "field": "training_command",
+      "value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/train.py --exp_file exp_files/train_final_model.py",
+      "normalized_value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/train.py --exp_file exp_files/train_final_model.py",
+      "evidence": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/train.py --exp_file exp_files/train_final_model.py",
+      "evidence_location": "48",
+      "confidence": "high",
+      "reason": "Command to reproduce the training of the final model."
+    },
+    {
+      "field": "inference_command",
+      "value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/inference.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth -img data/processed/RumexLeaves/iNaturalist/4150.jpg",
+      "normalized_value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/inference.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth -img data/processed/RumexLeaves/iNaturalist/4150.jpg",
+      "evidence": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/inference.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth -img data/processed/RumexLeaves/iNaturalist/4150.jpg",
+      "evidence_location": "40",
+      "confidence": "high",
+      "reason": "Command to run inference on example images."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/evaluate.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth",
+      "normalized_value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/evaluate.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth",
+      "evidence": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/evaluate.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Command to evaluate the final model on validation data."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{RumexLeaves-CenterNet,\nauthor = {Güldenring, Ronja and Andersen, Rasmus Eckholdt and Nalpantidis, Lazaros},\ntitle = {Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances},\njournal = {IEEE Robotics and Automation Letters (RA-L)},\nyear = {2024}\n}",
+      "normalized_value": "@article{RumexLeaves-CenterNet, author = {Güldenring, Ronja and Andersen, Rasmus Eckholdt and Nalpantidis, Lazaros}, title = {Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances}, journal = {IEEE Robotics and Automation Letters (RA-L)}, year = {2024} }",
+      "evidence": "```\n@article{RumexLeaves-CenterNet,\nauthor = {Güldenring, Ronja and Andersen, Rasmus Eckholdt and Nalpantidis, Lazaros},\ntitle = {Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances},\njournal = {IEEE Robotics and Automation Letters (RA-L)},\nyear = {2024}\n}\n```",
+      "evidence_location": "107-114",
+      "confidence": "high",
+      "reason": "Provides the BibTeX citation string for academic referencing."
+    },
+    {
+      "field": "project_template",
+      "value": "mlops_template",
+      "normalized_value": "mlops_template",
+      "evidence": "Created using [mlops_template](https://github.com/SkafteNicki/mlops_template),",
+      "evidence_location": "100",
+      "confidence": "high",
+      "reason": "Identifies the template used to scaffold the project structure."
+    },
+    {
+      "field": "programming_language",
+      "value": "python",
+      "normalized_value": "python",
+      "evidence": "conda run -n rumexleaves_centernet python rumexleaves_centernet/visualizations/visualize_data.py",
+      "evidence_location": "32",
+      "confidence": "high",
+      "reason": "Explicitly indicates the programming language used in the project."
+    },
+    {
+      "field": "environment_manager",
+      "value": "conda",
+      "normalized_value": "conda",
+      "evidence": "conda run -n rumexleaves_centernet",
+      "evidence_location": "32",
+      "confidence": "high",
+      "reason": "Indicates the environment management tool used for setup."
+    }
+  ]
+}

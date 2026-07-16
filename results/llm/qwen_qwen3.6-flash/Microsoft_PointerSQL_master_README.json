@@ -1,0 +1,120 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PointSQL",
+      "normalized_value": "PointSQL",
+      "evidence": "# Introduction\nThis is PointSQL, the source codes of [Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400) \nand [Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text) from Microsoft Research.",
+      "evidence_location": "1-3",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the introduction."
+    },
+    {
+      "field": "artifact_description",
+      "value": "This is PointSQL, the source codes of [Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400) \nand [Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text) from Microsoft Research.\nWe present the setup for the WikiSQL experiments.",
+      "normalized_value": "This is PointSQL, the source codes of [Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400) and [Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text) from Microsoft Research. We present the setup for the WikiSQL experiments.",
+      "evidence_location": "2-4",
+      "confidence": "high",
+      "reason": "Describes the purpose, origin, and experimental focus of the codebase."
+    },
+    {
+      "field": "preprocessed_dataset_url",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny",
+      "evidence": "- Download a preprocessed dataset [link](https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny) to `input/`",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Provides direct access to the preprocessed dataset required for setup."
+    },
+    {
+      "field": "dataset_name",
+      "value": "WikiSQL",
+      "normalized_value": "WikiSQL",
+      "evidence": "1. Download data from [WikiSQL](https://github.com/salesforce/WikiSQL).",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Identifies the benchmark dataset used for experiments."
+    },
+    {
+      "field": "requirements",
+      "value": "- Tensorflow 1.4\n- python 3.6\n- [Stanza](https://github.com/stanfordnlp/stanza)",
+      "normalized_value": "- Tensorflow 1.4 - python 3.6 - [Stanza](https://github.com/stanfordnlp/stanza)",
+      "evidence": "- Tensorflow 1.4\n- python 3.6\n- [Stanza](https://github.com/stanfordnlp/stanza)",
+      "evidence_location": "130-132",
+      "confidence": "high",
+      "reason": "Lists explicit software dependencies and versions needed to run the code."
+    },
+    {
+      "field": "training_command",
+      "value": "$ OUTDIR=output/meta_sum\n$ mkdir $OUTDIR\n$ python run.py --input-dir ./input \\\n    --output-dir $OUTDIR \\\n    --config config/nl2prog.meta_2_0.001.rank.config  \\\n    --meta_learning_rate 0.001 --gradient_clip_norm 5 \\\n    --num_layers 3  --num_meta_example 2 \\\n    --meta_learning --production",
+      "normalized_value": "$ OUTDIR=output/meta_sum $ mkdir $OUTDIR $ python run.py --input-dir ./input \\ --output-dir $OUTDIR \\ --config config/nl2prog.meta_2_0.001.rank.config \\ --meta_learning_rate 0.001 --gradient_clip_norm 5 \\ --num_layers 3 --num_meta_example 2 \\ --meta_learning --production",
+      "evidence": "$ OUTDIR=output/meta_sum\n$ mkdir $OUTDIR\n$ python run.py --input-dir ./input \\\n    --output-dir $OUTDIR \\\n    --config config/nl2prog.meta_2_0.001.rank.config  \\\n    --meta_learning_rate 0.001 --gradient_clip_norm 5 \\\n    --num_layers 3  --num_meta_example 2 \\\n    --meta_learning --production",
+      "evidence_location": "50-57",
+      "confidence": "high",
+      "reason": "Provides the exact command to reproduce the meta-learning model training."
+    },
+    {
+      "field": "evaluation_command_dev",
+      "value": "$ mkdir -p ${OUTDIR}_dev\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_dev \\ \n    --config config/nl2prog.meta_2_0.001.rank.devconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production",
+      "normalized_value": "$ mkdir -p ${OUTDIR}_dev $ python run.py --input-dir ./input --output-dir ${OUTDIR}_dev \\ --config config/nl2prog.meta_2_0.001.rank.devconfig \\ --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40 --production",
+      "evidence": "$ mkdir -p ${OUTDIR}_dev\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_dev \\ \n    --config config/nl2prog.meta_2_0.001.rank.devconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production",
+      "evidence_location": "66-69",
+      "confidence": "high",
+      "reason": "Provides the exact command to run evaluation on the development set."
+    },
+    {
+      "field": "metrics",
+      "value": "Logical Form Accuracy: 0.631383269546\n    Execute Accuracy: 0.68277747403",
+      "normalized_value": "Logical Form Accuracy: 0.631383269546 Execute Accuracy: 0.68277747403",
+      "evidence": "Logical Form Accuracy: 0.631383269546\n    Execute Accuracy: 0.68277747403",
+      "evidence_location": "78-79",
+      "confidence": "high",
+      "reason": "Identifies the primary evaluation metrics reported for the model."
+    },
+    {
+      "field": "results_dev_execute_accuracy",
+      "value": "0.68277747403",
+      "normalized_value": "0.68277747403",
+      "evidence": "Execute Accuracy: 0.68277747403",
+      "evidence_location": "79",
+      "confidence": "high",
+      "reason": "Reports the specific performance metric on the development set."
+    },
+    {
+      "field": "results_test_execute_accuracy",
+      "value": "0.680379563733",
+      "normalized_value": "0.680379563733",
+      "evidence": "Execute Accuracy: 0.680379563733",
+      "evidence_location": "97",
+      "confidence": "high",
+      "reason": "Reports the specific performance metric on the test set."
+    },
+    {
+      "field": "baseline_results_test_execute_accuracy",
+      "value": "0.668055314471",
+      "normalized_value": "0.668055314471",
+      "evidence": "Execute Accuracy: 0.668055314471",
+      "evidence_location": "118",
+      "confidence": "high",
+      "reason": "Reports the baseline model's performance for comparison."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{pshuang2018PT-MAML,\n  author    = {Po{-}Sen Huang and\n                Chenglong Wang and\n                Rishabh Singh and\n                Wen-tau Yih and\n                Xiaodong He},\n  title     = {Natural Language to Structured Query Generation via Meta-Learning},\n  booktitle = {NAACL},\n  year      = {2018},\n}",
+      "normalized_value": "@inproceedings{pshuang2018PT-MAML, author = {Po{-}Sen Huang and Chenglong Wang and Rishabh Singh and Wen-tau Yih and Xiaodong He}, title = {Natural Language to Structured Query Generation via Meta-Learning}, booktitle = {NAACL}, year = {2018}, }",
+      "evidence": "@inproceedings{pshuang2018PT-MAML,\n  author    = {Po{-}Sen Huang and\n                Chenglong Wang and\n                Rishabh Singh and\n                Wen-tau Yih and\n                Xiaodong He},\n  title     = {Natural Language to Structured Query Generation via Meta-Learning},\n  booktitle = {NAACL},\n  year      = {2018},\n}",
+      "evidence_location": "142-152",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for the primary associated paper."
+    },
+    {
+      "field": "contribution_policy",
+      "value": "Most contributions require you to agree to a\nContributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us\nthe rights to use your contribution. For details, visit https://cla.microsoft.com.",
+      "normalized_value": "Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit https://cla.microsoft.com.",
+      "evidence": "Most contributions require you to agree to a\nContributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us\nthe rights to use your contribution. For details, visit https://cla.microsoft.com.",
+      "evidence_location": "187-189",
+      "confidence": "high",
+      "reason": "Specifies the legal requirement (CLA) for contributing to the project."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Novel Class Discovery for 3D Point Cloud Semantic Segmentation",
+      "normalized_value": "Novel Class Discovery for 3D Point Cloud Semantic Segmentation",
+      "evidence": "# **Novel Class Discovery for 3D Point Cloud Semantic Segmentation [CVPR 2023]**",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the main header."
+    },
+    {
+      "field": "description",
+      "value": "The official implementation of our work \"Novel Class Discovery for 3D Point Cloud Semantic Segmentation\".",
+      "normalized_value": "The official implementation of our work \"Novel Class Discovery for 3D Point Cloud Semantic Segmentation\".",
+      "evidence": "The official implementation of our work \"Novel Class Discovery for 3D Point Cloud Semantic Segmentation\".",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Clearly defines the repository's purpose as the official code for the paper."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/pdf/2303.11610",
+      "normalized_value": "https://arxiv.org/pdf/2303.11610",
+      "evidence": ":fire: For more information have a look at our [PAPER](https://arxiv.org/pdf/2303.11610)! :fire:",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated research paper."
+    },
+    {
+      "field": "authors",
+      "value": "Luigi Riz, Cristiano Saltori, Elisa Ricci, Fabio Poiesi",
+      "normalized_value": "Luigi Riz, Cristiano Saltori, Elisa Ricci, Fabio Poiesi",
+      "evidence": "Authors: \n        [Luigi Riz](https://scholar.google.com/citations?user=djO2pVUAAAAJ&hl),\n        [Cristiano Saltori](https://scholar.google.com/citations?user=PID7Z4oAAAAJ&hl),\n        [Elisa Ricci](https://scholar.google.ca/citations?user=xf1T870AAAAJ&hl),\n        [Fabio Poiesi](https://scholar.google.co.uk/citations?user=BQ7li6AAAAAJ&hl)",
+      "evidence_location": "19-23",
+      "confidence": "high",
+      "reason": "Lists all contributing authors with their profiles."
+    },
+    {
+      "field": "venue",
+      "value": "CVPR 2023",
+      "normalized_value": "CVPR 2023",
+      "evidence": "# **Novel Class Discovery for 3D Point Cloud Semantic Segmentation [CVPR 2023]**",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Indicates the conference where the work was published."
+    },
+    {
+      "field": "environment",
+      "value": "Python 3.8, CUDA 11.3, pytorch 1.10.1 and pytorch-lighting 1.4.8",
+      "normalized_value": "Python 3.8, CUDA 11.3, pytorch 1.10.1 and pytorch-lighting 1.4.8",
+      "evidence": "The code has been tested with Python 3.8, CUDA 11.3, pytorch 1.10.1 and pytorch-lighting 1.4.8.",
+      "evidence_location": "31",
+      "confidence": "high",
+      "reason": "Specifies the exact software versions tested for compatibility."
+    },
+    {
+      "field": "dependencies",
+      "value": "Pytorch 1.10.1, Minkowski Engine, Pytorch-Lighting 1.4.8 (be sure to install torchmetrics=0.7.2), Scipy 1.7.3, Wandb",
+      "normalized_value": "Pytorch 1.10.1, Minkowski Engine, Pytorch-Lighting 1.4.8 (be sure to install torchmetrics=0.7.2), Scipy 1.7.3, Wandb",
+      "evidence": "- [Pytorch 1.10.1](https://pytorch.org/get-started/previous-versions/)\n- [Minkowski Engine](https://github.com/NVIDIA/MinkowskiEngine)\n- [Pytorch-Lighting 1.4.8](https://www.pytorchlightning.ai) (be sure to install torchmetrics=0.7.2)\n- [Scipy 1.7.3](https://scipy.org/install/)\n- [Wandb](https://docs.wandb.ai/quickstart)",
+      "evidence_location": "35-39",
+      "confidence": "high",
+      "reason": "Lists required third-party libraries and specific version constraints."
+    },
+    {
+      "field": "datasets",
+      "value": "SemanticKITTI, SemanticPOSS",
+      "normalized_value": "SemanticKITTI, SemanticPOSS",
+      "evidence": "We thoroughly evaluate our method on SemanticKITTI and SemanticPOSS datasets, showing that it can significantly outperform the baseline.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Identifies the benchmark datasets used for evaluation."
+    },
+    {
+      "field": "training_command",
+      "value": "python main_pretrain.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "normalized_value": "python main_pretrain.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "evidence": "python main_pretrain.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "evidence_location": "65",
+      "confidence": "high",
+      "reason": "Provides the exact command to initiate the pretraining phase."
+    },
+    {
+      "field": "inference_command",
+      "value": "python main_discover_test.py -s [SPLIT NUMBER] --checkpoint=[PATH TO LIGHTNING CHECKPOINT]",
+      "normalized_value": "python main_discover_test.py -s [SPLIT NUMBER] --checkpoint=[PATH TO LIGHTNING CHECKPOINT]",
+      "evidence": "python main_discover_test.py -s [SPLIT NUMBER] --checkpoint=[PATH TO LIGHTNING CHECKPOINT]",
+      "evidence_location": "91",
+      "confidence": "high",
+      "reason": "Provides the command to run inference/testing using a saved checkpoint."
+    },
+    {
+      "field": "reproduction_command",
+      "value": "python main_discover.py -s [SPLIT NUMBER] --dataset SemanticPOSS --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.3",
+      "normalized_value": "python main_discover.py -s [SPLIT NUMBER] --dataset SemanticPOSS --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.3",
+      "evidence": "python main_discover.py -s [SPLIT NUMBER] --dataset SemanticPOSS --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.3",
+      "evidence_location": "83",
+      "confidence": "high",
+      "reason": "Specifies the exact command and hyperparameters to reproduce the paper's results."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{riz2023novel,\n  author={Riz, Luigi and Saltori, Cristiano and Ricci, Elisa and Poiesi, Fabio},\n  booktitle={2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, \n  title={Novel Class Discovery for 3D Point Cloud Semantic Segmentation}, \n  year={2023},\n  volume={},\n  number={},\n  pages={9393-9402},\n  doi={10.1109/CVPR52729.2023.00906}}",
+      "normalized_value": "@inproceedings{riz2023novel, author={Riz, Luigi and Saltori, Cristiano and Ricci, Elisa and Poiesi, Fabio}, booktitle={2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, title={Novel Class Discovery for 3D Point Cloud Semantic Segmentation}, year={2023}, volume={}, number={}, pages={9393-9402}, doi={10.1109/CVPR52729.2023.00906}}",
+      "evidence": "```latex\n@inproceedings{riz2023novel,\n  author={Riz, Luigi and Saltori, Cristiano and Ricci, Elisa and Poiesi, Fabio},\n  booktitle={2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, \n  title={Novel Class Discovery for 3D Point Cloud Semantic Segmentation}, \n  year={2023},\n  volume={},\n  number={},\n  pages={9393-9402},\n  doi={10.1109/CVPR52729.2023.00906}}\n```",
+      "evidence_location": "98-108",
+      "confidence": "high",
+      "reason": "Provides the complete BibTeX entry for academic citation."
+    }
+  ]
+}

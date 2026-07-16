@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "extrapolating-classifier-accuracy-to-larger-datasets",
+      "normalized_value": "extrapolating-classifier-accuracy-to-larger-datasets",
+      "evidence": "# extrapolating-classifier-accuracy-to-larger-datasets",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the repository or project name for indexing and search."
+    },
+    {
+      "field": "paper_title",
+      "value": "A Probabilistic Method to Predict Classifier Accuracy on Larger Datasets given Small Pilot Data",
+      "normalized_value": "A Probabilistic Method to Predict Classifier Accuracy on Larger Datasets given Small Pilot Data",
+      "evidence": "[A Probabilistic Method to Predict Classifier Accuracy on Larger Datasets given Small Pilot Data](https://arxiv.org/abs/2311.18025)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides the official title of the associated research paper for academic context."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2311.18025",
+      "normalized_value": "https://arxiv.org/abs/2311.18025",
+      "evidence": "[A Probabilistic Method to Predict Classifier Accuracy on Larger Datasets given Small Pilot Data](https://arxiv.org/abs/2311.18025)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Direct access link to the preprint for verification and reading."
+    },
+    {
+      "field": "authors",
+      "value": "Ethan Harvey, Wansu Chen, David M. Kent, and Michael C. Hughes",
+      "normalized_value": "Ethan Harvey, Wansu Chen, David M. Kent, and Michael C. Hughes",
+      "evidence": "by Ethan Harvey, Wansu Chen, David M. Kent, and Michael C. Hughes",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Lists the creators for proper attribution and contact."
+    },
+    {
+      "field": "method_name",
+      "value": "APEx-GP",
+      "normalized_value": "APEx-GP",
+      "evidence": "(1) a reusable GP-based accuracy probabilistic extrapolator (APEx-GP) that can match existing curve-fitting approaches in terms of error while providing additional uncertainty estimates, and",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Names the specific algorithm implemented, aiding in technical search and reuse."
+    },
+    {
+      "field": "task_and_modalities",
+      "value": "six medical classification tasks involving both 2D and 3D images across diverse modalities (x-ray, ultrasound, and CT)",
+      "normalized_value": "six medical classification tasks involving both 2D and 3D images across diverse modalities (x-ray, ultrasound, and CT)",
+      "evidence": "(2) a careful assessment of our proposed probabilistic extrapolations compared to ground truth on larger datasets across six medical classification tasks involving both 2D and 3D images across diverse modalities (x-ray, ultrasound, and CT) with various sample sizes.",
+      "evidence_location": "26",
+      "confidence": "high",
+      "reason": "Defines the evaluation scope, data types, and application domain for reproducibility."
+    },
+    {
+      "field": "usage_example_path",
+      "value": "notebooks/demo.ipynb",
+      "normalized_value": "notebooks/demo.ipynb",
+      "evidence": "To use our Gaussian process to extrapolate classifier accuracy to larger datasets see `notebooks/demo.ipynb`.",
+      "evidence_location": "30",
+      "confidence": "high",
+      "reason": "Points to the primary demonstration notebook for quick start and usage."
+    },
+    {
+      "field": "initialization_code",
+      "value": "likelihood = gpytorch.likelihoods.GaussianLikelihood()\n# Note: If you want to use the Gaussian process with an arctan mean function use models.GPArctan() instead.\nmodel = models.GPPowerLaw(X_train, y_train, likelihood, epsilon_min=0.05, with_priors=True)",
+      "normalized_value": "likelihood = gpytorch.likelihoods.GaussianLikelihood()\n# Note: If you want to use the Gaussian process with an arctan mean function use models.GPArctan() instead.\nmodel = models.GPPowerLaw(X_train, y_train, likelihood, epsilon_min=0.05, with_priors=True)",
+      "evidence": "```python\nlikelihood = gpytorch.likelihoods.GaussianLikelihood()\n# Note: If you want to use the Gaussian process with an arctan mean function use models.GPArctan() instead.\nmodel = models.GPPowerLaw(X_train, y_train, likelihood, epsilon_min=0.05, with_priors=True)\n```",
+      "evidence_location": "34-38",
+      "confidence": "high",
+      "reason": "Provides the exact code snippet required to instantiate the core model with dependencies."
+    },
+    {
+      "field": "inference_code",
+      "value": "with torch.no_grad(): predictions = likelihood(model(X_test))\nloc = predictions.mean.numpy()\nscale = predictions.stddev.numpy()\n# Note: If you want to forecast with 20%-80% change lower and upper percentile.\nlower, upper = priors.truncated_normal_uncertainty(a=0.0, b=1.0, loc=loc, scale=scale, lower_percentile=0.025, upper_percentile=0.975)",
+      "normalized_value": "with torch.no_grad(): predictions = likelihood(model(X_test))\nloc = predictions.mean.numpy()\nscale = predictions.stddev.numpy()\n# Note: If you want to forecast with 20%-80% change lower and upper percentile.\nlower, upper = priors.truncated_normal_uncertainty(a=0.0, b=1.0, loc=loc, scale=scale, lower_percentile=0.025, upper_percentile=0.975)",
+      "evidence": "```python\nwith torch.no_grad(): predictions = likelihood(model(X_test))\nloc = predictions.mean.numpy()\nscale = predictions.stddev.numpy()\n# Note: If you want to forecast with 20%-80% change lower and upper percentile.\nlower, upper = priors.truncated_normal_uncertainty(a=0.0, b=1.0, loc=loc, scale=scale, lower_percentile=0.025, upper_percentile=0.975) \n```",
+      "evidence_location": "42-48",
+      "confidence": "high",
+      "reason": "Shows how to run predictions and extract uncertainty estimates from the trained model."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{harvey2023probabilistic,\n  author={Harvey, Ethan and Chen, Wansu and Kent, David M. and Hughes, Michael C.},\n  title={A Probabilistic Method to Predict Classifier Accuracy on Larger Datasets given Small Pilot Data},\n  booktitle={Machine Learning for Health (ML4H)},\n  year={2023}\n}",
+      "normalized_value": "@inproceedings{harvey2023probabilistic,\n  author={Harvey, Ethan and Chen, Wansu and Kent, David M. and Hughes, Michael C.},\n  title={A Probabilistic Method to Predict Classifier Accuracy on Larger Datasets given Small Pilot Data},\n  booktitle={Machine Learning for Health (ML4H)},\n  year={2023}\n}",
+      "evidence": "```bibtex\n@inproceedings{harvey2023probabilistic,\n  author={Harvey, Ethan and Chen, Wansu and Kent, David M. and Hughes, Michael C.},\n  title={A Probabilistic Method to Predict Classifier Accuracy on Larger Datasets given Small Pilot Data},\n  booktitle={Machine Learning for Health (ML4H)},\n  year={2023}\n}\n```",
+      "evidence_location": "52-59",
+      "confidence": "high",
+      "reason": "Provides the standard citation format for academic attribution and reference management."
+    },
+    {
+      "field": "reproduction_paths",
+      "value": "download datasets (see `encode_images/README.md` and `label_images/README.md` for more details) and 2) fit classifiers to each dataset (see `src/finetune_2D.py` and `src/finetune_3D.py`). The results from our paper are saved in `experiments/`.",
+      "normalized_value": "download datasets (see `encode_images/README.md` and `label_images/README.md` for more details) and 2) fit classifiers to each dataset (see `src/finetune_2D.py` and `src/finetune_3D.py`). The results from our paper are saved in `experiments/`.",
+      "evidence": "To reproduce model performance at varying dataset sizes 1) download datasets (see `encode_images/README.md` and `label_images/README.md` for more details) and 2) fit classifiers to each dataset (see `src/finetune_2D.py` and `src/finetune_3D.py`). The results from our paper are saved in `experiments/`.",
+      "evidence_location": "63",
+      "confidence": "high",
+      "reason": "Lists the specific scripts, data directories, and output paths required to reproduce the paper's results."
+    },
+    {
+      "field": "reproduction_notebooks",
+      "value": "notebooks/figures.ipynb and notebooks/tables.ipynb",
+      "normalized_value": "notebooks/figures.ipynb and notebooks/tables.ipynb",
+      "evidence": "To reproduce learning curves with the results from our paper see `notebooks/figures.ipynb` and `notebooks/tables.ipynb`.",
+      "evidence_location": "65",
+      "confidence": "high",
+      "reason": "Identifies the notebooks needed to regenerate the paper's figures and tables for verification."
+    }
+  ]
+}

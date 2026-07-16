@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Highway",
+      "normalized_value": "Highway",
+      "evidence": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Explicitly states the name of the library in the first descriptive sentence."
+    },
+    {
+      "field": "artifact_description",
+      "value": "C++ library that provides portable SIMD/vector intrinsics",
+      "normalized_value": "C++ library that provides portable SIMD/vector intrinsics",
+      "evidence": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Direct description of the artifact's purpose and nature."
+    },
+    {
+      "field": "license",
+      "value": "Apache 2 / BSD-3",
+      "normalized_value": "Apache 2 / BSD-3",
+      "evidence": "Previously licensed under Apache 2, now dual-licensed as Apache 2 / BSD-3.",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Explicitly states the current dual license."
+    },
+    {
+      "field": "programming_language",
+      "value": "C++",
+      "normalized_value": "C++",
+      "evidence": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Explicitly identifies the programming language."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://google.github.io/highway/en/master/",
+      "normalized_value": "https://google.github.io/highway/en/master/",
+      "evidence": "[Documentation](https://google.github.io/highway/en/master/)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Explicit link to documentation."
+    },
+    {
+      "field": "version",
+      "value": "1.0",
+      "normalized_value": "1.0",
+      "evidence": "The current version 1.0 signals an increased focus on backwards compatibility.",
+      "evidence_location": "188",
+      "confidence": "high",
+      "reason": "Explicitly states the current version number."
+    },
+    {
+      "field": "build_system",
+      "value": "CMake",
+      "normalized_value": "CMake",
+      "evidence": "This project uses CMake to generate and build.",
+      "evidence_location": "220",
+      "confidence": "high",
+      "reason": "Explicitly states the primary build system used."
+    },
+    {
+      "field": "build_system",
+      "value": "Bazel",
+      "normalized_value": "Bazel",
+      "evidence": "Bazel is also supported for building, but it is not as widely used/tested.",
+      "evidence_location": "253",
+      "confidence": "high",
+      "reason": "Explicitly states an alternative build system supported."
+    },
+    {
+      "field": "dependencies",
+      "value": "googletest",
+      "normalized_value": "googletest",
+      "evidence": "Highway's unit tests use [googletest](https://github.com/google/googletest).",
+      "evidence_location": "227",
+      "confidence": "high",
+      "reason": "Explicitly mentions a dependency for unit tests."
+    },
+    {
+      "field": "dependencies",
+      "value": "qemu-user-binfmt",
+      "normalized_value": "qemu-user-binfmt",
+      "evidence": "Running cross-compiled tests requires support from the OS, which on Debian is provided by the `qemu-user-binfmt` package.",
+      "evidence_location": "239",
+      "confidence": "high",
+      "reason": "Explicitly mentions a required package for cross-compiled tests."
+    },
+    {
+      "field": "supported_platforms",
+      "value": "Armv7+, IBM Z, POWER, RISC-V, WebAssembly, x86",
+      "normalized_value": "Armv7+, IBM Z, POWER, RISC-V, WebAssembly, x86",
+      "evidence": "Highway supports five architectures; the same application code can target various instruction sets, including those with 'scalable' vectors (size unknown at compile time). Highway only requires C++11 and supports four families of compilers. If you would like to use Highway on other platforms, please raise an issue.",
+      "evidence_location": "32-36",
+      "confidence": "medium",
+      "reason": "Mentions five architectures generally, specific list found later in 'Targets' section."
+    },
+    {
+      "field": "supported_platforms",
+      "value": "Any, Armv7+, IBM Z, POWER, RISC-V, WebAssembly, x86",
+      "normalized_value": "Any, Armv7+, IBM Z, POWER, RISC-V, WebAssembly, x86",
+      "evidence": "Highway supports 24 targets, listed in alphabetical order of platform:\n\n-   Any: `EMU128`, `SCALAR`;\n-   Armv7+: `NEON_WITHOUT_AES`, `NEON`, `NEON_BF16`, `SVE`, `SVE2`, `SVE_256`,\n    `SVE2_128`;\n-   IBM Z: `Z14`, `Z15`;\n-   POWER: `PPC8` (v2.07), `PPC9` (v3.0), `PPC10` (v3.1B, not yet supported due\n    to compiler bugs, see #1207; also requires QEMU 7.2);\n-   RISC-V: `RVV` (1.0);\n-   WebAssembly: `WASM`, `WASM_EMU256` (a 2x unrolled version of wasm128,\n    enabled if `HWY_WANT_WASM2` is defined. This will remain supported until it\n    is potentially superseded by a future version of WASM.);",
+      "evidence_location": "146-157",
+      "confidence": "high",
+      "reason": "Explicitly lists the supported platforms/architectures in the 'Targets' section."
+    },
+    {
+      "field": "installation_command",
+      "value": "sudo apt install cmake",
+      "normalized_value": "sudo apt install cmake",
+      "evidence": "```bash\nsudo apt install cmake\n```",
+      "evidence_location": "223-225",
+      "confidence": "high",
+      "reason": "Explicit installation command for a dependency."
+    },
+    {
+      "field": "installation_command",
+      "value": "vcpkg install highway",
+      "normalized_value": "vcpkg install highway",
+      "evidence": "```bash\nvcpkg install highway\n```",
+      "evidence_location": "271-273",
+      "confidence": "high",
+      "reason": "Explicit installation command via vcpkg."
+    },
+    {
+      "field": "contact_email",
+      "value": "janwas@google.com",
+      "normalized_value": "janwas@google.com",
+      "evidence": "Contact: janwas@google.com",
+      "evidence_location": "496",
+      "confidence": "high",
+      "reason": "Explicitly provides contact email."
+    },
+    {
+      "field": "compiler_flags",
+      "value": "-O2",
+      "normalized_value": "-O2",
+      "evidence": "For clang and GCC, `-O2` is generally sufficient.",
+      "evidence_location": "371-372",
+      "confidence": "high",
+      "reason": "Explicitly recommends compiler optimization flags."
+    },
+    {
+      "field": "compiler_flags",
+      "value": "/arch:AVX2",
+      "normalized_value": "/arch:AVX2",
+      "evidence": "If intending to use the AVX2 target together with half-width vectors (e.g. for `PromoteTo`), it is also important to compile with `/arch:AVX2`.",
+      "evidence_location": "376-377",
+      "confidence": "high",
+      "reason": "Explicitly recommends MSVC compiler flag for AVX2."
+    },
+    {
+      "field": "performance_claim",
+      "value": "fivefold",
+      "normalized_value": "fivefold",
+      "evidence": "This can reduce energy usage e.g. *fivefold* because fewer instructions are executed.",
+      "evidence_location": "21-22",
+      "confidence": "high",
+      "reason": "Quantitative claim about energy reduction performance."
+    },
+    {
+      "field": "performance_claim",
+      "value": "5-10x",
+      "normalized_value": "5-10x",
+      "evidence": "We also often see *5-10x* speedups.",
+      "evidence_location": "22-23",
+      "confidence": "high",
+      "reason": "Quantitative claim about speedup performance."
+    },
+    {
+      "field": "minimum_cpp_version",
+      "value": "C++11",
+      "normalized_value": "C++11",
+      "evidence": "Highway only requires C++11 and supports four families of compilers.",
+      "evidence_location": "34",
+      "confidence": "high",
+      "reason": "Explicitly states the minimum C++ standard required."
+    }
+  ]
+}

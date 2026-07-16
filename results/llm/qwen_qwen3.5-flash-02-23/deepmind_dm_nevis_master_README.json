@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "NEVIS'22",
+      "normalized_value": "NEVIS'22",
+      "evidence": "# 🏝️ NEVIS'22",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly states the name of the artifact in the main header."
+    },
+    {
+      "field": "artifact_description",
+      "value": "NEVIS’22 is a benchmark for measuring the performance of algorithms in the field of continual learning.",
+      "normalized_value": "NEVIS’22 is a benchmark for measuring the performance of algorithms in the field of continual learning.",
+      "evidence": "NEVIS’22 is a benchmark for measuring the performance of algorithms in the field\nof continual learning.",
+      "evidence_location": "10-11",
+      "confidence": "high",
+      "reason": "Explicitly describes the purpose and nature of the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2211.11747",
+      "normalized_value": "https://arxiv.org/abs/2211.11747",
+      "evidence": "[![Paper](https://img.shields.io/badge/arXiv-2211.11747-red)](https://arxiv.org/abs/2211.11747)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper provided in the badges."
+    },
+    {
+      "field": "blog_url",
+      "value": "https://www.deepmind.com/blog/benchmarking-the-next-generation-of-never-ending-learners",
+      "normalized_value": "https://www.deepmind.com/blog/benchmarking-the-next-generation-of-never-ending-learners",
+      "evidence": "[![Blog](https://img.shields.io/badge/blog-link-blue)](https://www.deepmind.com/blog/benchmarking-the-next-generation-of-never-ending-learners)",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Direct link to the project blog post provided in the badges."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python, JAX, PyTorch",
+      "normalized_value": "Python, JAX, PyTorch",
+      "evidence": "-   Our JAX learners use TensorFlow and JAX, and our PyTorch Learners use PyTorch. Each (datasets,\n    jax learners, and pytorch learners) have their own `requirements.txt` that\n    you are welcome to install with `pip` and a Python version above 3.8.",
+      "evidence_location": "51-53",
+      "confidence": "high",
+      "reason": "Explicitly lists the programming languages and frameworks used for learners and dependencies."
+    },
+    {
+      "field": "task",
+      "value": "continual learning",
+      "normalized_value": "continual learning",
+      "evidence": "NEVIS’22 is a benchmark for measuring the performance of algorithms in the field of continual learning.",
+      "evidence_location": "10-11",
+      "confidence": "high",
+      "reason": "Identifies the specific machine learning task the benchmark addresses."
+    },
+    {
+      "field": "task_type",
+      "value": "supervised classification task",
+      "normalized_value": "supervised classification task",
+      "evidence": "Each task is a supervised classification task",
+      "evidence_location": "26",
+      "confidence": "high",
+      "reason": "Specifies the type of machine learning task within the benchmark."
+    },
+    {
+      "field": "number_of_tasks",
+      "value": "106",
+      "normalized_value": "106",
+      "evidence": "NEVIS’22 is composed of 106 tasks",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Quantifies the scale of the benchmark in terms of number of tasks."
+    },
+    {
+      "field": "domain",
+      "value": "computer vision",
+      "normalized_value": "computer vision",
+      "evidence": "major computer vision conferences",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Identifies the application domain of the benchmark."
+    },
+    {
+      "field": "stream_variants",
+      "value": "FULL, SHORT, TINY, DEBUG",
+      "normalized_value": "FULL, SHORT, TINY, DEBUG",
+      "evidence": "-s <STREAM_NAME>  | Stream variant name (FULL|SHORT|TINY|DEBUG|...)",
+      "evidence_location": "105",
+      "confidence": "high",
+      "reason": "Lists the available stream configuration variants for the benchmark."
+    },
+    {
+      "field": "baseline_models",
+      "value": "Independent, Previous, Dynamic",
+      "normalized_value": "Independent, Previous, Dynamic",
+      "evidence": "- **Independent**, in `configs/finetuning_ind.py` where each dataset is learned by an independent model\n- **Previous**, in `configs/finetuning_prev.py` where we learn sequentially each dataset and initialize its parameters from the parameter vector learned on the previous task.\n- **Dynamic**, in `configs/finetuning_dknn.py`. where the initialization of task T is chosen among the models which have been trained on a dataset most similar to the current dataset.",
+      "evidence_location": "220-222",
+      "confidence": "high",
+      "reason": "Lists the specific baseline approaches provided for evaluation."
+    },
+    {
+      "field": "dataset_sources",
+      "value": "Tensorflow-Datasets, Custom dataset downloaders, Manual dataset download",
+      "normalized_value": "Tensorflow-Datasets, Custom dataset downloaders, Manual dataset download",
+      "evidence": "1.  **Datasets on Tensorflow-Datasets (TFDS)**: they will be downloaded\n     automatically when needed\n\n2.  **Custom dataset downloaders**: you need the `./build_dataset.sh` script\n\n3.  **Manual dataset download**: you need to download data yourself",
+      "evidence_location": "70-76",
+      "confidence": "high",
+      "reason": "Describes the different methods for obtaining datasets for the benchmark."
+    },
+    {
+      "field": "citation",
+      "value": "@article{bornschein2022nevis,\n  author={Bornschein, J\"org and Galashov, Alexandre and Hemsley, Ross and Rannen-Triki, Amal and Chen, Yutian and Chaudhry, Arslan and He, Xu Owen and Douillard, Arthur and Caccia, Massimo and Feng, Qixuang and Shen, Jiajun and Rebuffi, Sylvestre-Alvise and Stacpoole, Kitty and de las Casas, Diego and Hawkins, Will and Lazaridou, Angeliki and Teh, Yee Whye and Rusu, Andrei A. and Pascanu, Razvan and Ranzato, Marc'Aurelio},\n  title={Nevis\\'22: A Stream of 100 Tasks Sampled from 30 Years of Computer Vision Research},\n  journal={CoRR},\n  volume={abs/2211.11747},\n  year={2022},\n  url={https://arxiv.org/abs/2211.11747},\n  eprinttype={arXiv}\n}",
+      "normalized_value": "@article{bornschein2022nevis, author={Bornschein, J\"org and Galashov, Alexandre and Hemsley, Ross and Rannen-Triki, Amal and Chen, Yutian and Chaudhry, Arslan and He, Xu Owen and Douillard, Arthur and Caccia, Massimo and Feng, Qixuang and Shen, Jiajun and Rebuffi, Sylvestre-Alvise and Stacpoole, Kitty and de las Casas, Diego and Hawkins, Will and Lazaridou, Angeliki and Teh, Yee Whye and Rusu, Andrei A. and Pascanu, Razvan and Ranzato, Marc'Aurelio}, title={Nevis\\'22: A Stream of 100 Tasks Sampled from 30 Years of Computer Vision Research}, journal={CoRR}, volume={abs/2211.11747}, year={2022}, url={https://arxiv.org/abs/2211.11747}, eprinttype={arXiv}",
+      "evidence": "```bibtex\n@article{bornschein2022nevis,\n  author={Bornschein, J\"org and Galashov, Alexandre and Hemsley, Ross and Rannen-Triki, Amal and Chen, Yutian and Chaudhry, Arslan and He, Xu Owen and Douillard, Arthur and Caccia, Massimo and Feng, Qixuang and Shen, Jiajun and Rebuffi, Sylvestre-Alvise and Stacpoole, Kitty and de las Casas, Diego and Hawkins, Will and Lazaridou, Angeliki and Teh, Yee Whye and Rusu, Andrei A. and Pascanu, Razvan and Ranzato, Marc'Aurelio},\n  title={Nevis\\'22: A Stream of 100 Tasks Sampled from 30 Years of Computer Vision Research},\n  journal={CoRR},\n  volume={abs/2211.11747},\n  year={2022},\n  url={https://arxiv.org/abs/2211.11747},\n  eprinttype={arXiv}\n}\n```",
+      "evidence_location": "281-291",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for the benchmark paper."
+    },
+    {
+      "field": "launch_command",
+      "value": "./launch_local.sh <X> example",
+      "normalized_value": "./launch_local.sh <X> example",
+      "evidence": "./launch_local.sh <X> example",
+      "evidence_location": "144",
+      "confidence": "high",
+      "reason": "Command to launch an experiment on the benchmark."
+    },
+    {
+      "field": "env_variable_tfds_data_dir",
+      "value": "TFDS_DATA_DIR",
+      "normalized_value": "TFDS_DATA_DIR",
+      "evidence": "TFDS will look for datasets in the directory defined by the\nenvironment variable `TFDS_DATA_DIR`.",
+      "evidence_location": "129-130",
+      "confidence": "high",
+      "reason": "Lists environment variable used to configure dataset directory."
+    },
+    {
+      "field": "env_variable_nevis_output_dir",
+      "value": "NEVIS_DEFAULT_OUTPUT_DIR",
+      "normalized_value": "NEVIS_DEFAULT_OUTPUT_DIR",
+      "evidence": "You can specify a different path by overriding the environment variable\n`NEVIS_DEFAULT_OUTPUT_DIR`.",
+      "evidence_location": "159-160",
+      "confidence": "high",
+      "reason": "Lists environment variable used to configure output directory."
+    },
+    {
+      "field": "env_variable_local_dir",
+      "value": "LOCAL_DIR",
+      "normalized_value": "LOCAL_DIR",
+      "evidence": "You can change this directory by overriding the env variable `LOCAL_DIR` in the script.",
+      "evidence_location": "201",
+      "confidence": "high",
+      "reason": "Lists environment variable used to configure local data directory."
+    }
+  ]
+}

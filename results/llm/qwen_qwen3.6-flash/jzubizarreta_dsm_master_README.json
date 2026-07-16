@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "# DSM: Direct Sparse Mapping",
+      "normalized_value": "DSM: Direct Sparse Mapping",
+      "evidence": "# DSM: Direct Sparse Mapping",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit title identifying the software artifact."
+    },
+    {
+      "field": "description",
+      "value": "DSM is a novel approach to monocular SLAM. It is a fully direct system that estimates the camera trajectory and a consistent global map.",
+      "normalized_value": "DSM is a novel approach to monocular SLAM. It is a fully direct system that estimates the camera trajectory and a consistent global map.",
+      "evidence": "DSM is a novel approach to monocular SLAM. It is a fully direct system that estimates the camera trajectory and a consistent global map.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Clearly states the core purpose and functionality of the system."
+    },
+    {
+      "field": "authors",
+      "value": "**Authors:** Jon Zubizarreta, Iker Aguinaga, Juan D. Tardós and J. M. M. Montiel.",
+      "normalized_value": "Authors: Jon Zubizarreta, Iker Aguinaga, Juan D. Tardós and J. M. M. Montiel.",
+      "evidence": "**Authors:** Jon Zubizarreta, Iker Aguinaga, Juan D. Tardós and J. M. M. Montiel.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Lists the creators and primary contributors to the project."
+    },
+    {
+      "field": "contact_email",
+      "value": "**Contact:** dsm (at) unizar (dot) es",
+      "normalized_value": "Contact: dsm (at) unizar (dot) es",
+      "evidence": "**Contact:** dsm (at) unizar (dot) es",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Provides official contact information for inquiries or commercial licensing."
+    },
+    {
+      "field": "repository_url",
+      "value": "git clone https://github.com/jzubizarreta/dsm.git",
+      "normalized_value": "git clone https://github.com/jzubizarreta/dsm.git",
+      "evidence": "git clone https://github.com/jzubizarreta/dsm.git",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Direct command to clone the source code repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "[[pdf](https://arxiv.org/abs/1904.06577)]",
+      "normalized_value": "https://arxiv.org/abs/1904.06577",
+      "evidence": "[[pdf](https://arxiv.org/abs/1904.06577)]",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Links to the associated peer-reviewed academic publication."
+    },
+    {
+      "field": "citation",
+      "value": "    @article{Zubizarreta2020,\n      title={Direct Sparse Mapping},\n      author={Zubizarreta, Jon, Aguinaga, Iker and Montiel, J. M. M.},\n      journal={IEEE Transactions on Robotics},\n      doi = {10.1109/TRO.2020.2991614},\n      year={2020}\n     }",
+      "normalized_value": "@article{Zubizarreta2020, title={Direct Sparse Mapping}, author={Zubizarreta, Jon, Aguinaga, Iker and Montiel, J. M. M.}, journal={IEEE Transactions on Robotics}, doi = {10.1109/TRO.2020.2991614}, year={2020} }",
+      "evidence": "    @article{Zubizarreta2020,\n      title={Direct Sparse Mapping},\n      author={Zubizarreta, Jon, Aguinaga, Iker and Montiel, J. M. M.},\n      journal={IEEE Transactions on Robotics},\n      doi = {10.1109/TRO.2020.2991614},\n      year={2020}\n     }",
+      "evidence_location": "253-259",
+      "confidence": "high",
+      "reason": "Provides the exact BibTeX entry required for academic attribution."
+    },
+    {
+      "field": "license",
+      "value": "DSM is released under a [GPLv3 license](https://github.com/jzubizarreta/dsm/blob/master/License-gpl.txt).",
+      "normalized_value": "DSM is released under a GPLv3 license",
+      "evidence": "DSM is released under a [GPLv3 license](https://github.com/jzubizarreta/dsm/blob/master/License-gpl.txt).",
+      "evidence_location": "247",
+      "confidence": "high",
+      "reason": "Specifies the open-source license governing distribution and reuse."
+    },
+    {
+      "field": "supported_os",
+      "value": "We tested DSM int two different system configurations: **Ubuntu 18.04** and **Windows 10** (VS15 and VS17). It should be easy to compile in other platforms. See below for experimental **macOS** support.",
+      "normalized_value": "We tested DSM int two different system configurations: Ubuntu 18.04 and Windows 10 (VS15 and VS17). It should be easy to compile in other platforms. See below for experimental macOS support.",
+      "evidence": "We tested DSM int two different system configurations: **Ubuntu 18.04** and **Windows 10** (VS15 and VS17). It should be easy to compile in other platforms. See below for experimental **macOS** support.",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Indicates tested operating systems and compiler environments for successful compilation."
+    },
+    {
+      "field": "dependencies",
+      "value": "#### Eigen3\n\nWe use [Eigen3](http://eigen.tuxfamily.org) for almost any mathematical operation. \n\t\nInstall with\n\t\n```sh\nsudo apt-get install libeigen3-dev\n```\n\n#### OpenCV\n\nWe use [OpenCV](https://opencv.org/) to manipulate images (read/write/display) and to bootstrap the monocular system. Feel free to implement those functionalities with your prefered library, if you want to get rid off Opencv. \n\t\nInstall with\n\t\n```sh\nsudo apt-get install libopencv-dev\n```\n\n#### Ceres Solver\n\nWe use [Ceres Solver](http://ceres-solver.org) to perform the photometric bundle adjustment. In addition to the standard installation process, we generate a custom template specialization corresponding to our Schur structure, which speeds up the Schur elimination step. This is an optional step that can be skipped.\n\t\n```sh\ngit clone https://ceres-solver.googlesource.com/ceres-solver\n```\n\t\nCeres dependencies:\n\t\n```sh\n# glog & gflags\nsudo apt-get install libgoogle-glog-dev\n\n# BLAS & LAPACK\nsudo apt-get install libatlas-base-dev\n\n# SuiteSparse\nsudo apt-get install libsuitesparse-dev\n```\n\t\t\nGenerate the custom template specialization (optional):\n\n```sh\ncp ./dsm/thirdparty/Ceres/generate_template_specializations.py ./ceres-solver/internal/ceres/\npython2 ceres-solver/internal/ceres/generate_template_specializations.py\n```\n\nInstall with\n\t\n```sh\ncd ceres-solver\nmkdir build\ncd build\ncmake ..\nmake -j4\nsudo make install\t\n```\n\n### 2.2 Optional Dependencies\n\n#### Qt\n\nWe use [Qt](https://www.qt.io/) for GUI and visualization. Although Qt is required to compile the whole project in the current version, it is easy to remove it. DSM does not depend on Qt. All the code related with Qt is in the `QtVisualizer` folder. Feel free to implement your own version of `IVisualizer` and replace the current visualizer `QtVisualizer`.\n\nInstall with\n\n```sh\nsudo apt-get install qt5-default\n```",
+      "normalized_value": "#### Eigen3 We use [Eigen3](http://eigen.tuxfamily.org) for almost any mathematical operation. Install with sudo apt-get install libeigen3-dev #### OpenCV We use [OpenCV](https://opencv.org/) to manipulate images (read/write/display) and to bootstrap the monocular system. Feel free to implement those functionalities with your prefered library, if you want to get rid off Opencv. Install with sudo apt-get install libopencv-dev #### Ceres Solver We use [Ceres Solver](http://ceres-solver.org) to perform the photometric bundle adjustment. In addition to the standard installation process, we generate a custom template specialization corresponding to our Schur structure, which speeds up the Schur elimination step. This is an optional step that can be skipped. git clone https://ceres-solver.googlesource.com/ceres-solver Ceres dependencies: # glog & gflags sudo apt-get install libgoogle-glog-dev # BLAS & LAPACK sudo apt-get install libatlas-base-dev # SuiteSparse sudo apt-get install libsuitesparse-dev Generate the custom template specialization (optional): cp ./dsm/thirdparty/Ceres/generate_template_specializations.py ./ceres-solver/internal/ceres/ python2 ceres-solver/internal/ceres/generate_template_specializations.py Install with cd ceres-solver mkdir build cd build cmake .. make -j4 sudo make install ### 2.2 Optional Dependencies #### Qt We use [Qt](https://www.qt.io/) for GUI and visualization. Although Qt is required to compile the whole project in the current version, it is easy to remove it. DSM does not depend on Qt. All the code related with Qt is in the `QtVisualizer` folder. Feel free to implement your own version of `IVisualizer` and replace the current visualizer `QtVisualizer`. Install with sudo apt-get install qt5-default",
+      "evidence": "#### Eigen3\n\nWe use [Eigen3](http://eigen.tuxfamily.org) for almost any mathematical operation. \n\t\nInstall with\n\t\n```sh\nsudo apt-get install libeigen3-dev\n```\n\n#### OpenCV\n\nWe use [OpenCV](https://opencv.org/) to manipulate images (read/write/display) and to bootstrap the monocular system. Feel free to implement those functionalities with your prefered library, if you want to get rid off Opencv. \n\t\nInstall with\n\t\n```sh\nsudo apt-get install libopencv-dev\n```\n\n#### Ceres Solver\n\nWe use [Ceres Solver](http://ceres-solver.org) to perform the photometric bundle adjustment. In addition to the standard installation process, we generate a custom template specialization corresponding to our Schur structure, which speeds up the Schur elimination step. This is an optional step that can be skipped.\n\t\n```sh\ngit clone https://ceres-solver.googlesource.com/ceres-solver\n```\n\t\nCeres dependencies:\n\t\n```sh\n# glog & gflags\nsudo apt-get install libgoogle-glog-dev\n\n# BLAS & LAPACK\nsudo apt-get install libatlas-base-dev\n\n# SuiteSparse\nsudo apt-get install libsuitesparse-dev\n```\n\t\t\nGenerate the custom template specialization (optional):\n\n```sh\ncp ./dsm/thirdparty/Ceres/generate_template_specializations.py ./ceres-solver/internal/ceres/\npython2 ceres-solver/internal/ceres/generate_template_specializations.py\n```\n\nInstall with\n\t\n```sh\ncd ceres-solver\nmkdir build\ncd build\ncmake ..\nmake -j4\nsudo make install\t\n```\n\n### 2.2 Optional Dependencies\n\n#### Qt\n\nWe use [Qt](https://www.qt.io/) for GUI and visualization. Although Qt is required to compile the whole project in the current version, it is easy to remove it. DSM does not depend on Qt. All the code related with Qt is in the `QtVisualizer` folder. Feel free to implement your own version of `IVisualizer` and replace the current visualizer `QtVisualizer`.\n\nInstall with\n\n```sh\nsudo apt-get install qt5-default\n```",
+      "evidence_location": "27-96",
+      "confidence": "high",
+      "reason": "Lists all required and optional software libraries needed to build and run the system."
+    },
+    {
+      "field": "task",
+      "value": "monocular SLAM",
+      "normalized_value": "monocular SLAM",
+      "evidence": "DSM is a novel approach to monocular SLAM.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Defines the specific computer vision task the artifact addresses."
+    },
+    {
+      "field": "dataset",
+      "value": "EuRoC dataset",
+      "normalized_value": "EuRoC dataset",
+      "evidence": "We provide examples to run the SLAM system in the [EuRoC dataset](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Identifies the standard benchmark dataset used for evaluation and provided examples."
+    },
+    {
+      "field": "build_command",
+      "value": "```sh\ncd ../../dsm\nmkdir build\ncd build\ncmake ..\nmake -j4\n```",
+      "normalized_value": "cd ../../dsm mkdir build cd build cmake .. make -j4",
+      "evidence": "```sh\ncd ../../dsm\nmkdir build\ncd build\ncmake ..\nmake -j4\n```",
+      "evidence_location": "102-108",
+      "confidence": "high",
+      "reason": "Provides the exact shell commands required to compile the project from source."
+    },
+    {
+      "field": "usage_command",
+      "value": "```sh\n./EurocExample <IMAGE_FOLDER> <TIMESTAMPS_FILE> <CALIB_FILE> <SETTINGS_FILE>\n```",
+      "normalized_value": "./EurocExample <IMAGE_FOLDER> <TIMESTAMPS_FILE> <CALIB_FILE> <SETTINGS_FILE>",
+      "evidence": "```sh\n./EurocExample <IMAGE_FOLDER> <TIMESTAMPS_FILE> <CALIB_FILE> <SETTINGS_FILE>\n```",
+      "evidence_location": "153-155",
+      "confidence": "high",
+      "reason": "Shows the exact command-line interface for running the system on a benchmark sequence."
+    }
+  ]
+}

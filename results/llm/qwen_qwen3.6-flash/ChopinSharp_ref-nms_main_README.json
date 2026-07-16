@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Ref-NMS",
+      "normalized_value": "Ref-NMS",
+      "evidence": "# Ref-NMS",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the repository and artifact name."
+    },
+    {
+      "field": "paper_title",
+      "value": "Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding",
+      "normalized_value": "Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding",
+      "evidence": "[\"Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding\"](https://arxiv.org/abs/2009.01449)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Identifies the associated academic paper for scientific context and citation."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2009.01449",
+      "normalized_value": "https://arxiv.org/abs/2009.01449",
+      "evidence": "(https://arxiv.org/abs/2009.01449)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Direct access link to the paper, enabling verification and background reading."
+    },
+    {
+      "field": "conference",
+      "value": "AAAI 2021",
+      "normalized_value": "AAAI 2021",
+      "evidence": "Official codebase for AAAI 2021 paper",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Indicates publication venue and year, crucial for academic indexing and credibility."
+    },
+    {
+      "field": "task",
+      "value": "Referring Expression Grounding",
+      "normalized_value": "Referring Expression Grounding",
+      "evidence": "Referring Expression Grounding",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Clearly defines the core computer vision/NLP task addressed by the codebase."
+    },
+    {
+      "field": "dependencies",
+      "value": "python 3.7.6, pytorch 1.1.0, torchvision 0.3.0, tensorboard 2.1.0, spacy 2.2.3",
+      "normalized_value": "python 3.7.6, pytorch 1.1.0, torchvision 0.3.0, tensorboard 2.1.0, spacy 2.2.3",
+      "evidence": "- python 3.7.6\n- pytorch 1.1.0\n- torchvision 0.3.0\n- tensorboard 2.1.0\n- spacy 2.2.3",
+      "evidence_location": "6-10",
+      "confidence": "high",
+      "reason": "Specifies exact software versions required to reproduce the environment and run the code."
+    },
+    {
+      "field": "training_command",
+      "value": "PYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc",
+      "normalized_value": "PYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc",
+      "evidence": "PYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Provides the exact command to train the model using binary XE loss, essential for reproduction."
+    },
+    {
+      "field": "training_command_rank",
+      "value": "PYTHONPATH=$PWD python tools/train_att_rank.py --dataset refcoco --split-by unc",
+      "normalized_value": "PYTHONPATH=$PWD python tools/train_att_rank.py --dataset refcoco --split-by unc",
+      "evidence": "PYTHONPATH=$PWD python tools/train_att_rank.py --dataset refcoco --split-by unc",
+      "evidence_location": "34",
+      "confidence": "high",
+      "reason": "Provides the exact command to train the model using ranking loss, covering alternative training configurations."
+    },
+    {
+      "field": "evaluation_command_recall",
+      "value": "PYTHONPATH=$PWD python tools/eval_proposal_hit_rate.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>",
+      "normalized_value": "PYTHONPATH=$PWD python tools/eval_proposal_hit_rate.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>",
+      "evidence": "PYTHONPATH=$PWD python tools/eval_proposal_hit_rate.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>",
+      "evidence_location": "48",
+      "confidence": "high",
+      "reason": "Command to evaluate recall on the referent object, necessary for reproducing reported metrics."
+    },
+    {
+      "field": "evaluation_command_reg",
+      "value": "python tools/eval_ref.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>",
+      "normalized_value": "python tools/eval_ref.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>",
+      "evidence": "python tools/eval_ref.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>",
+      "evidence_location": "70",
+      "confidence": "high",
+      "reason": "Command to evaluate REG performance, required to reproduce downstream task results."
+    },
+    {
+      "field": "pretrained_model_urls",
+      "value": "https://drive.google.com/drive/folders/1BPqWW0LrAEBFna7b-ORF2TcrY7K_DDvM?usp=sharing, https://pan.baidu.com/s/1G4k7APKSUs-_5StXoYaNrA",
+      "normalized_value": "https://drive.google.com/drive/folders/1BPqWW0LrAEBFna7b-ORF2TcrY7K_DDvM?usp=sharing, https://pan.baidu.com/s/1G4k7APKSUs-_5StXoYaNrA",
+      "evidence": "[[Google Drive]](https://drive.google.com/drive/folders/1BPqWW0LrAEBFna7b-ORF2TcrY7K_DDvM?usp=sharing) [[Baidu Disk]](https://pan.baidu.com/s/1G4k7APKSUs-_5StXoYaNrA)",
+      "evidence_location": "79",
+      "confidence": "high",
+      "reason": "Direct download links for pre-trained weights, enabling immediate evaluation and reuse without training from scratch."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{chen2021ref,\n  title={Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding},\n  author={Chen, Long and Ma, Wenbo and Xiao, Jun and Zhang, Hanwang and Chang, Shih-Fu},\n  booktitle={AAAI},\n  year={2021}\n}",
+      "normalized_value": "@inproceedings{chen2021ref, title={Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding}, author={Chen, Long and Ma, Wenbo and Xiao, Jun and Zhang, Hanwang and Chang, Shih-Fu}, booktitle={AAAI}, year={2021}}",
+      "evidence": "@inproceedings{chen2021ref,\n  title={Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding},\n  author={Chen, Long and Ma, Wenbo and Xiao, Jun and Zhang, Hanwang and Chang, Shih-Fu},\n  booktitle={AAAI},\n  year={2021}\n}",
+      "evidence_location": "82-88",
+      "confidence": "high",
+      "reason": "Standard BibTeX entry for proper academic attribution and citation tracking."
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Prompt-OIRL",
+      "normalized_value": "Prompt-OIRL",
+      "evidence": "# 🪄 Prompt-OIRL: Learning to Prompt LLMs with Expert Knowledge (Known Magic Words 🧙)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the title."
+    },
+    {
+      "field": "artifact_purpose",
+      "value": "enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization",
+      "normalized_value": "enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization",
+      "evidence": "> In this study, we aim to enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization.",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Clearly states the primary goal and application domain of the artifact."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/pdf/2309.06553.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2309.06553.pdf",
+      "evidence": "- [Paper Link](https://arxiv.org/pdf/2309.06553.pdf)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper for context and citation."
+    },
+    {
+      "field": "open_review_link",
+      "value": "https://openreview.net/forum?id=N6o0ZtPzTg",
+      "normalized_value": "https://openreview.net/forum?id=N6o0ZtPzTg",
+      "evidence": "- [Open Review Link](https://openreview.net/forum?id=N6o0ZtPzTg)",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Direct link to the open peer review page for the paper."
+    },
+    {
+      "field": "conference",
+      "value": "ICLR 2024",
+      "normalized_value": "ICLR 2024",
+      "evidence": "### 💻 Implementation and 📒 tutorial for ICLR 2024 paper",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Indicates the conference where the paper was accepted, providing scientific context."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python 3.10",
+      "normalized_value": "Python 3.10",
+      "evidence": "2. Create a new virtual environment with Python 3.10, e.g.,",
+      "evidence_location": "46",
+      "confidence": "high",
+      "reason": "Specifies the exact Python version required for the environment setup."
+    },
+    {
+      "field": "dataset",
+      "value": "SVAMP, GSM8K, MAWPS",
+      "normalized_value": "SVAMP, GSM8K, MAWPS",
+      "evidence": "2. get access to the datasets: [SVAMP](https://github.com/arkilpatel/SVAMP), [GSM8K](https://huggingface.co/datasets/gsm8k), [MAWPS](https://github.com/sroy9/mawps)",
+      "evidence_location": "39",
+      "confidence": "high",
+      "reason": "Lists the specific benchmark datasets used for evaluation and training."
+    },
+    {
+      "field": "llm_model",
+      "value": "LLaMA-2",
+      "normalized_value": "LLaMA-2",
+      "evidence": "1. get the [license to use LLaMA-2](https://ai.meta.com/llama/).",
+      "evidence_location": "37",
+      "confidence": "high",
+      "reason": "Identifies the primary LLM model used in the reproduction steps and license requirements."
+    },
+    {
+      "field": "method",
+      "value": "offline inverse reinforcement learning",
+      "normalized_value": "offline inverse reinforcement learning",
+      "evidence": "To address this, we introduce Prompt-OIRL, which harnesses offline inverse reinforcement learning to draw insights from offline prompting demonstration data.",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Describes the core algorithmic approach and technical contribution of the artifact."
+    },
+    {
+      "field": "installation_command",
+      "value": "git clone git@github.com:holarissun/Prompt-OIRL.git",
+      "normalized_value": "git clone git@github.com:holarissun/Prompt-OIRL.git",
+      "evidence": "git clone git@github.com:holarissun/Prompt-OIRL.git",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Command to clone the repository, essential for initial access."
+    },
+    {
+      "field": "environment_setup_command",
+      "value": "conda create --name prompt-oirl python==3.10\nconda activate prompt-oirl\ncd Prompt-OIRL",
+      "normalized_value": "conda create --name prompt-oirl python==3.10\nconda activate prompt-oirl\ncd Prompt-OIRL",
+      "evidence": "conda create --name prompt-oirl python==3.10\nconda activate prompt-oirl\ncd Prompt-OIRL",
+      "evidence_location": "48-50",
+      "confidence": "high",
+      "reason": "Commands to create the virtual environment and navigate to the project directory."
+    },
+    {
+      "field": "dependency_install_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "54",
+      "confidence": "high",
+      "reason": "Command to install all required Python dependencies."
+    },
+    {
+      "field": "reproduction_command_generate_data",
+      "value": "torchrun --nproc_per_node 1 llama_step1_gen_offline.py \\\n    --ckpt_dir llama-2-7b-chat/ \\\n    --tokenizer_path tokenizer.model \\\n    --max_seq_len 512 --max_batch_size 8 --prompt_idx 0 --dataset_eval gsm8k",
+      "normalized_value": "torchrun --nproc_per_node 1 llama_step1_gen_offline.py \\\n    --ckpt_dir llama-2-7b-chat/ \\\n    --tokenizer_path tokenizer.model \\\n    --max_seq_len 512 --max_batch_size 8 --prompt_idx 0 --dataset_eval gsm8k",
+      "evidence": "torchrun --nproc_per_node 1 llama_step1_gen_offline.py \\\n    --ckpt_dir llama-2-7b-chat/ \\\n    --tokenizer_path tokenizer.model \\\n    --max_seq_len 512 --max_batch_size 8 --prompt_idx 0 --dataset_eval gsm8k",
+      "evidence_location": "73-77",
+      "confidence": "high",
+      "reason": "Command to generate the offline dataset using LLaMA-2, a critical first step for reproduction."
+    },
+    {
+      "field": "reproduction_command_reorganize_data",
+      "value": "python3 llama_step2_reorg_data.py",
+      "normalized_value": "python3 llama_step2_reorg_data.py",
+      "evidence": "python3 llama_step2_reorg_data.py",
+      "evidence_location": "82",
+      "confidence": "high",
+      "reason": "Command to reorganize collected offline data into the required format."
+    },
+    {
+      "field": "reproduction_command_preprocess_data",
+      "value": "python3 llama_step3_data_processing.py",
+      "normalized_value": "python3 llama_step3_data_processing.py",
+      "evidence": "python3 llama_step3_data_processing.py",
+      "evidence_location": "90",
+      "confidence": "high",
+      "reason": "Command to pre-process data, compute embeddings, and prepare labels."
+    },
+    {
+      "field": "reproduction_command_train_reward_model",
+      "value": "python3 llama_step4_offline_evaluation.py",
+      "normalized_value": "python3 llama_step4_offline_evaluation.py",
+      "evidence": "python3 llama_step4_offline_evaluation.py",
+      "evidence_location": "95",
+      "confidence": "high",
+      "reason": "Command to train the proxy reward model for offline prompt evaluation."
+    },
+    {
+      "field": "reproduction_command_optimize_prompt",
+      "value": "python3 llama_step5_offline_optimization.py",
+      "normalized_value": "python3 llama_step5_offline_optimization.py",
+      "evidence": "python3 llama_step5_offline_optimization.py",
+      "evidence_location": "102",
+      "confidence": "high",
+      "reason": "Command to perform the final offline prompt optimization step."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{sun2023query,\n  title={Query-Dependent Prompt Evaluation and Optimization with Offline Inverse RL},\n  author={Sun, Hao and H{\"u}y{\"u}k, Alihan and van der Schaar, Mihaela},\n  booktitle={The Twelfth International Conference on Learning Representations},\n  year={2024}\n}\n\n\n@article{sun2023reinforcement,\n  title={Reinforcement Learning in the Era of LLMs: What is Essential? What is needed? An RL Perspective on RLHF, Prompting, and Beyond},\n  author={Sun, Hao},\n  journal={arXiv preprint arXiv:2310.06147},\n  year={2023}\n}",
+      "normalized_value": "@inproceedings{sun2023query,\n  title={Query-Dependent Prompt Evaluation and Optimization with Offline Inverse RL},\n  author={Sun, Hao and H{\"u}y{\"u}k, Alihan and van der Schaar, Mihaela},\n  booktitle={The Twelfth International Conference on Learning Representations},\n  year={2024}\n}\n\n\n@article{sun2023reinforcement,\n  title={Reinforcement Learning in the Era of LLMs: What is Essential? What is needed? An RL Perspective on RLHF, Prompting, and Beyond},\n  author={Sun, Hao},\n  journal={arXiv preprint arXiv:2310.06147},\n  year={2023}\n}",
+      "evidence": "@inproceedings{sun2023query,\n  title={Query-Dependent Prompt Evaluation and Optimization with Offline Inverse RL},\n  author={Sun, Hao and H{\"u}y{\"u}k, Alihan and van der Schaar, Mihaela},\n  booktitle={The Twelfth International Conference on Learning Representations},\n  year={2024}\n}\n\n\n@article{sun2023reinforcement,\n  title={Reinforcement Learning in the Era of LLMs: What is Essential? What is needed? An RL Perspective on RLHF, Prompting, and Beyond},\n  author={Sun, Hao},\n  journal={arXiv preprint arXiv:2310.06147},\n  year={2023}\n}",
+      "evidence_location": "117-131",
+      "confidence": "high",
+      "reason": "Provides standard BibTeX citation format for the associated papers, enabling proper academic attribution."
+    },
+    {
+      "field": "license_requirement",
+      "value": "get the [license to use LLaMA-2](https://ai.meta.com/llama/).",
+      "normalized_value": "get the [license to use LLaMA-2](https://ai.meta.com/llama/).",
+      "evidence": "1. get the [license to use LLaMA-2](https://ai.meta.com/llama/).",
+      "evidence_location": "37",
+      "confidence": "high",
+      "reason": "Specifies a mandatory license requirement for a key dependency, crucial for legal compliance and reproduction."
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PFHedge",
+      "normalized_value": "PFHedge",
+      "evidence": "<h1 align=\"center\">PFHedge: Deep Hedging in PyTorch</h1>",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly stated as the project title in the main heading."
+    },
+    {
+      "field": "artifact_description",
+      "value": "PyTorch-based framework for Deep Hedging",
+      "normalized_value": "PyTorch-based framework for Deep Hedging",
+      "evidence": "**PFHedge** is a [PyTorch](https://pytorch.org/)-based framework for [Deep Hedging][deep-hedging-arxiv].",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Clearly defines the artifact's purpose and underlying technology."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/pfnet-research/pfhedge",
+      "normalized_value": "https://github.com/pfnet-research/pfhedge",
+      "evidence": "[![CI](https://github.com/pfnet-research/pfhedge/workflows/CI/badge.svg)](https://github.com/pfnet-research/pfhedge/actions?query=workflow%3ACI)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Direct link to the source code repository."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://pfnet-research.github.io/pfhedge/",
+      "normalized_value": "https://pfnet-research.github.io/pfhedge/",
+      "evidence": "* [PFHedge Documentation](https://pfnet-research.github.io/pfhedge/)",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Provides the official documentation site for the library."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install pfhedge",
+      "normalized_value": "pip install pfhedge",
+      "evidence": "pip install pfhedge",
+      "evidence_location": "66",
+      "confidence": "high",
+      "reason": "Standard pip command for installing the package."
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "**PFHedge** is a [PyTorch](https://pytorch.org/)-based framework for [Deep Hedging][deep-hedging-arxiv].",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Identifies the core machine learning framework used."
+    },
+    {
+      "field": "pytorch_version",
+      "value": "1.9.0 - 2.0.0",
+      "normalized_value": "1.9.0 - 2.0.0",
+      "evidence": "![pytorch](https://img.shields.io/badge/torch-1.9.0--%20%7C%202.0.0---red)",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Badge indicates the supported PyTorch version range."
+    },
+    {
+      "field": "organization",
+      "value": "Preferred Networks",
+      "normalized_value": "Preferred Networks",
+      "evidence": "This project is owned by [Preferred Networks](https://www.preferred.jp/en/) and maintained by [Shota Imaki](https://github.com/simaki) and [Masanori Hirano](https://github.com/masanorihirano).",
+      "evidence_location": "294",
+      "confidence": "high",
+      "reason": "Explicitly states the owning organization."
+    },
+    {
+      "field": "maintainers",
+      "value": "Shota Imaki, Masanori Hirano",
+      "normalized_value": "Shota Imaki, Masanori Hirano",
+      "evidence": "This project is owned by [Preferred Networks](https://www.preferred.jp/en/) and maintained by [Shota Imaki](https://github.com/simaki) and [Masanori Hirano](https://github.com/masanorihirano).",
+      "evidence_location": "294",
+      "confidence": "high",
+      "reason": "Lists the individuals responsible for maintaining the project."
+    },
+    {
+      "field": "training_command",
+      "value": "hedger.fit(derivative, n_epochs=200)",
+      "normalized_value": "hedger.fit(derivative, n_epochs=200)",
+      "evidence": "hedger.fit(derivative, n_epochs=200)",
+      "evidence_location": "156",
+      "confidence": "high",
+      "reason": "Example command demonstrating how to train the hedger model."
+    },
+    {
+      "field": "pricing_command",
+      "value": "price = hedger.price(derivative)",
+      "normalized_value": "price = hedger.price(derivative)",
+      "evidence": "price = hedger.price(derivative)",
+      "evidence_location": "162",
+      "confidence": "high",
+      "reason": "Example command for pricing derivatives after training."
+    },
+    {
+      "field": "input_features",
+      "value": "log_moneyness, expiry_time, volatility, prev_hedge",
+      "normalized_value": "log_moneyness, expiry_time, volatility, prev_hedge",
+      "evidence": "* **'log_moneyness'**: [Log-moneyness](https://en.wikipedia.org/wiki/Moneyness) of the stock.\n    - **'expiry_time'**: Remaining time to the [maturity](https://en.wikipedia.org/wiki/Maturity_(finance)) of the option.\n    - **'volatility'**: [Volatility](https://en.wikipedia.org/wiki/Volatility_(finance)) of the stock.\n    - **'prev_hedge'**: The hedge ratio at the previous time step.",
+      "evidence_location": "102-105",
+      "confidence": "high",
+      "reason": "Lists the specific market information features used as inputs for the hedger model."
+    },
+    {
+      "field": "supported_models",
+      "value": "MultiLayerPerceptron, BlackScholes, WhalleyWilmott",
+      "normalized_value": "MultiLayerPerceptron, BlackScholes, WhalleyWilmott",
+      "evidence": "* **[`MultiLayerPerceptron`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.MultiLayerPerceptron.html)**: [Multi-layer perceptron](https://en.wikipedia.org/wiki/Multilayer_perceptron).\n    - **[`BlackScholes`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.BlackScholes.html)**: [Black-Scholes](https://en.wikipedia.org/wiki/Delta_neutral)' delta-hedging strategy.\n    - **[`WhalleyWilmott`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.WhalleyWilmott.html)**: [Whalley-Wilmott][whalley-wilmott]'s asymptotically optimal strategy for small costs.",
+      "evidence_location": "107-109",
+      "confidence": "high",
+      "reason": "Lists the built-in neural network models available for hedging."
+    },
+    {
+      "field": "risk_measures",
+      "value": "EntropicRiskMeasure, ExpectedShortFall",
+      "normalized_value": "EntropicRiskMeasure, ExpectedShortFall",
+      "evidence": "* **[`EntropicRiskMeasure`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.EntropicRiskMeasure.html)**: [Entropic Risk Measure](https://en.wikipedia.org/wiki/Entropic_risk_measure), a risk measure derived from [exponential utility](https://en.wikipedia.org/wiki/Exponential_utility).\n    - **[`ExpectedShortFall`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.ExpectedShortfall.html)**: [Expected Shortfall](https://en.wikipedia.org/wiki/Expected_shortfall) or CVaR, a common measure to assess portfolio risk.",
+      "evidence_location": "112-113",
+      "confidence": "high",
+      "reason": "Lists the available risk measures used to train and optimize the hedger."
+    },
+    {
+      "field": "citation",
+      "value": "Hans Bühler, Lukas Gonson, Josef Teichmann and Ben Wood, \"Deep hedging\". Quantitative Finance, 2019, 19, 1271-1291. arXiv:1802.03042 [q-fin.CP].",
+      "normalized_value": "Hans Bühler, Lukas Gonson, Josef Teichmann and Ben Wood, \"Deep hedging\". Quantitative Finance, 2019, 19, 1271-1291. arXiv:1802.03042 [q-fin.CP].",
+      "evidence": "* Hans Bühler, Lukas Gonson, Josef Teichmann and Ben Wood, \"[Deep hedging][deep-hedging-qf]\". Quantitative Finance, 2019, 19, 1271-1291. arXiv:[1802.03042][deep-hedging-arxiv] \\[q-fin.CP\\].",
+      "evidence_location": "298",
+      "confidence": "high",
+      "reason": "Provides the primary academic citation for the Deep Hedging methodology."
+    },
+    {
+      "field": "colab_example_url",
+      "value": "https://colab.research.google.com/github/pfnet-research/pfhedge/blob/main/examples/example_readme.ipynb",
+      "normalized_value": "https://colab.research.google.com/github/pfnet-research/pfhedge/blob/main/examples/example_readme.ipynb",
+      "evidence": "[example-readme-colab]: https://colab.research.google.com/github/pfnet-research/pfhedge/blob/main/examples/example_readme.ipynb",
+      "evidence_location": "308",
+      "confidence": "high",
+      "reason": "Direct link to a runnable Colab notebook demonstrating usage."
+    }
+  ]
+}

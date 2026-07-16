@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Wildlife ML",
+      "normalized_value": "Wildlife ML",
+      "evidence": "# Welcome to **Wildlife ML**!",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the main header."
+    },
+    {
+      "field": "artifact_description",
+      "value": "software package designed specifically to help ecologists to leverage the potential of active learning and deep learning for image classification.",
+      "normalized_value": "software package designed specifically to help ecologists to leverage the potential of active learning and deep learning for image classification.",
+      "evidence": "Look no further than our new GitHub repository, which provides a software package\ndesigned specifically to help ecologists to leverage the potential of active learning\nand deep learning for image classification.",
+      "evidence_location": "5-7",
+      "confidence": "high",
+      "reason": "Clearly describes the purpose and functionality of the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2303.15823",
+      "normalized_value": "https://arxiv.org/abs/2303.15823",
+      "evidence": "By using this repo, please cite our paper [Automated wildlife image classification: An active learning tool for ecological applications](https://arxiv.org/abs/2303.15823), here is a bibtex entry for it:",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Provides the direct link to the associated academic paper."
+    },
+    {
+      "field": "paper_title",
+      "value": "Automated wildlife image classification: An active learning tool for ecological applications",
+      "normalized_value": "Automated wildlife image classification: An active learning tool for ecological applications",
+      "evidence": "By using this repo, please cite our paper [Automated wildlife image classification: An active learning tool for ecological applications](https://arxiv.org/abs/2303.15823), here is a bibtex entry for it:",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Explicitly states the title of the cited paper."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{bothmann_et_al_2023,\n\ttitle = {Automated wildlife image classification: {An} active learning tool for ecological applications},\n\tvolume = {77},\n\tissn = {1574-9541},\n\turl = {https://www.sciencedirect.com/science/article/pii/S1574954123002601},\n\tdoi = {10.1016/j.ecoinf.2023.102231},\n\tjournal = {Ecological Informatics},\n\tauthor = {Bothmann, Ludwig and Wimmer, Lisa and Charrakh, Omid and Weber, Tobias and Edelhoff, Hendrik and Peters, Wibke and Nguyen, Hien and Benjamin, Caryl and Menzel, Annette},\n\tyear = {2023},\n\tpages = {102231}\n}",
+      "normalized_value": "@article{bothmann_et_al_2023, title = {Automated wildlife image classification: {An} active learning tool for ecological applications}, volume = {77}, issn = {1574-9541}, url = {https://www.sciencedirect.com/science/article/pii/S1574954123002601}, doi = {10.1016/j.ecoinf.2023.102231}, journal = {Ecological Informatics}, author = {Bothmann, Ludwig and Wimmer, Lisa and Charrakh, Omid and Weber, Tobias and Edelhoff, Hendrik and Peters, Wibke and Nguyen, Hien and Benjamin, Caryl and Menzel, Annette}, year = {2023}, pages = {102231}}",
+      "evidence": "```\n@article{bothmann_et_al_2023,\n\ttitle = {Automated wildlife image classification: {An} active learning tool for ecological applications},\n\tvolume = {77},\n\tissn = {1574-9541},\n\turl = {https://www.sciencedirect.com/science/article/pii/S1574954123002601},\n\tdoi = {10.1016/j.ecoinf.2023.102231},\n\tjournal = {Ecological Informatics},\n\tauthor = {Bothmann, Ludwig and Wimmer, Lisa and Charrakh, Omid and Weber, Tobias and Edelhoff, Hendrik and Peters, Wibke and Nguyen, Hien and Benjamin, Caryl and Menzel, Annette},\n\tyear = {2023},\n\tpages = {102231}\n}\n```",
+      "evidence_location": "46-58",
+      "confidence": "high",
+      "reason": "Provides a complete, ready-to-use BibTeX entry for academic citation."
+    },
+    {
+      "field": "related_repository",
+      "value": "https://github.com/slds-lmu/wildlife-experiments/",
+      "normalized_value": "https://github.com/slds-lmu/wildlife-experiments/",
+      "evidence": "*Please see our\n[experiments repository](https://github.com/slds-lmu/wildlife-experiments/) in the\nmeantime :).*",
+      "evidence_location": "38-40",
+      "confidence": "high",
+      "reason": "Links to an external repository containing experiments and example scripts."
+    },
+    {
+      "field": "external_dependency",
+      "value": "Megadetector",
+      "normalized_value": "Megadetector",
+      "evidence": "First, we leverage the predictive power of the amazing\n[Megadetector](https://github.com/microsoft/CameraTraps) (**MD**) to pre-select images\nthat contain wildlife.",
+      "evidence_location": "21-23",
+      "confidence": "high",
+      "reason": "Identifies a key external model/dependency used in the pipeline."
+    },
+    {
+      "field": "external_dependency_url",
+      "value": "https://github.com/microsoft/CameraTraps",
+      "normalized_value": "https://github.com/microsoft/CameraTraps",
+      "evidence": "First, we leverage the predictive power of the amazing\n[Megadetector](https://github.com/microsoft/CameraTraps) (**MD**) to pre-select images\nthat contain wildlife.",
+      "evidence_location": "21-23",
+      "confidence": "high",
+      "reason": "Provides the direct link to the repository for the Megadetector dependency."
+    },
+    {
+      "field": "framework",
+      "value": "Keras",
+      "normalized_value": "Keras",
+      "evidence": "Our dataset builds on the Keras `Sequence` utility and thus supports multi-threaded\nloading during training.",
+      "evidence_location": "178-179",
+      "confidence": "high",
+      "reason": "Explicitly names the deep learning framework used for dataset handling."
+    },
+    {
+      "field": "cli_command",
+      "value": "wildlifeml-get-bbox -d <directory>",
+      "normalized_value": "wildlifeml-get-bbox -d <directory>",
+      "evidence": "We also offer a CLI option:\n\n```shell\nwildlifeml-get-bbox -d <directory>\n```",
+      "evidence_location": "109-113",
+      "confidence": "high",
+      "reason": "Provides a concrete command-line interface command for running part of the pipeline."
+    },
+    {
+      "field": "task",
+      "value": "active learning, deep learning for image classification",
+      "normalized_value": "active learning, deep learning for image classification",
+      "evidence": "designed specifically to help ecologists to leverage the potential of active learning\nand deep learning for image classification.",
+      "evidence_location": "6-7",
+      "confidence": "high",
+      "reason": "Clearly defines the core tasks the software addresses."
+    },
+    {
+      "field": "method",
+      "value": "two-stage framework",
+      "normalized_value": "two-stage framework",
+      "evidence": "With our proposed two-stage framework, we show that implementing active learning can\nlead to improved predictive performance and more efficient use of pre-labeled data.",
+      "evidence_location": "14-15",
+      "confidence": "high",
+      "reason": "Describes the architectural approach used by the software."
+    }
+  ]
+}

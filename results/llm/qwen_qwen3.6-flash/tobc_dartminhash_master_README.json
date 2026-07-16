@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "DartMinHash",
+      "normalized_value": "DartMinHash",
+      "evidence": "# DartMinHash: Fast Sketching for Weighted Sets",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly stated as the repository title."
+    },
+    {
+      "field": "description",
+      "value": "Fast Sketching for Weighted Sets",
+      "normalized_value": "Fast Sketching for Weighted Sets",
+      "evidence": "# DartMinHash: Fast Sketching for Weighted Sets",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Part of the title describing the artifact's core function."
+    },
+    {
+      "field": "purpose",
+      "value": "experiments for comparing the estimation accuracy and running times of the following weighted minwise hashing algorithms",
+      "normalized_value": "experiments for comparing the estimation accuracy and running times of the following weighted minwise hashing algorithms",
+      "evidence": "This repository contains experiments for comparing the estimation accuracy and running times of the following weighted minwise hashing algorithms:",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Directly states the repository's goal and scope."
+    },
+    {
+      "field": "algorithms_compared",
+      "value": "DartMinHash, ICWS, FastICWS, BagMinHash",
+      "normalized_value": "DartMinHash, ICWS, FastICWS, BagMinHash",
+      "evidence": "* DartMinHash https://arxiv.org/abs/2005.11547 \n* ICWS and FastICWS https://research.google/pubs/pub36928/ \n* BagMinHash https://arxiv.org/abs/1802.03914",
+      "evidence_location": "5-7",
+      "confidence": "high",
+      "reason": "Lists the specific algorithms evaluated in the experiments."
+    },
+    {
+      "field": "paper_links",
+      "value": "https://arxiv.org/abs/2005.11547, https://research.google/pubs/pub36928/, https://arxiv.org/abs/1802.03914",
+      "normalized_value": "https://arxiv.org/abs/2005.11547, https://research.google/pubs/pub36928/, https://arxiv.org/abs/1802.03914",
+      "evidence": "* DartMinHash https://arxiv.org/abs/2005.11547 \n* ICWS and FastICWS https://research.google/pubs/pub36928/ \n* BagMinHash https://arxiv.org/abs/1802.03914",
+      "evidence_location": "5-7",
+      "confidence": "high",
+      "reason": "Provides direct links to the academic papers describing each algorithm."
+    },
+    {
+      "field": "external_implementation_source",
+      "value": "https://github.com/oertl/bagminhash",
+      "normalized_value": "https://github.com/oertl/bagminhash",
+      "evidence": "For BagMinHash and ICWS we use the implementation from here https://github.com/oertl/bagminhash with the relevant files included in the /bagminhash folder.",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Identifies the external repository providing baseline implementations used in the experiments."
+    },
+    {
+      "field": "required_dependencies",
+      "value": "XXHash64, GCC version 7.5.0, make",
+      "normalized_value": "XXHash64, GCC version 7.5.0, make",
+      "evidence": "The BagMinHash algorithm uses XXHash64 which must be installed:\n\n1. Get xxhash from https://github.com/Cyan4973/xxHash, e.g. using `git clone https://github.com/Cyan4973/xxHash.git`\n2. Build using `make lib`\n3. Place xxhash.h and libxxhash.a into the directory /bagminhash/xxhash\n\nThe code compiles under GCC version 7.5.0 https://gcc.gnu.org/ with relevant commands in the makefile https://www.gnu.org/software/make/.",
+      "evidence_location": "14-20",
+      "confidence": "high",
+      "reason": "Specifies the exact software libraries and compiler versions required to build and run the code."
+    },
+    {
+      "field": "build_commands",
+      "value": "make lib, make run, make test",
+      "normalized_value": "make lib, make run, make test",
+      "evidence": "2. Build using `make lib`\n\n`make run` compiles and executes the main function in main.cpp.\n\n`make test` compiles and run unit tests.",
+      "evidence_location": "17, 24, 26",
+      "confidence": "high",
+      "reason": "Provides the exact shell commands for building, running, and testing the project."
+    },
+    {
+      "field": "experiment_types",
+      "value": "time_performance, time_performance_specific, measure_similarity",
+      "normalized_value": "time_performance, time_performance_specific, measure_similarity",
+      "evidence": "1. `time_performance`: Times different algorithms on synthetic data for all combinations of sketch lengths, and L0 and L1 norms chosen. \n2. `time_performance_specific`: Same as above, but only runs on specified tuples of parameters.\n3. `measure_similarity`: Returns the estimated Jaccard similarity of different algorithms on synthetic pairs of weighted sets with a specific similarity.",
+      "evidence_location": "31-33",
+      "confidence": "high",
+      "reason": "Details the specific experimental configurations available in the code."
+    },
+    {
+      "field": "output_format",
+      "value": "CSV",
+      "normalized_value": "CSV",
+      "evidence": "The different experiments are all placed in the main.cpp and write their output to stdout in CSV format.",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Indicates the data format produced by the experiments, useful for downstream analysis and reproduction."
+    },
+    {
+      "field": "testing_framework",
+      "value": "Catch2",
+      "normalized_value": "Catch2",
+      "evidence": "We use Catch2 https://github.com/catchorg/Catch2 for unit testing.",
+      "evidence_location": "80",
+      "confidence": "high",
+      "reason": "Identifies the library used for unit testing."
+    },
+    {
+      "field": "source_file",
+      "value": "main.cpp",
+      "normalized_value": "main.cpp",
+      "evidence": "The different experiments are all placed in the main.cpp and write their output to stdout in CSV format.",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Points to the primary source file containing the experiment logic."
+    }
+  ]
+}

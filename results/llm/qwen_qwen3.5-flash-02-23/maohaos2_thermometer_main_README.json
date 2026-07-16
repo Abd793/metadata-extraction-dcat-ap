@@ -1,0 +1,94 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Thermometer: Towards Universal Calibration for Large Language Models",
+      "normalized_value": "Thermometer: Towards Universal Calibration for Large Language Models",
+      "evidence": "# Thermometer: Towards Universal Calibration for Large Language Models",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the name of the artifact in the main header."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2403.08819",
+      "normalized_value": "https://arxiv.org/abs/2403.08819",
+      "evidence": "https://arxiv.org/abs/2403.08819",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper provided in the description."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install torch==2.2.1 transformers==4.28.1 evaluate==0.4.1 tqdm pandas",
+      "normalized_value": "pip install torch==2.2.1 transformers==4.28.1 evaluate==0.4.1 tqdm pandas",
+      "evidence": "pip install torch==2.2.1 transformers==4.28.1 evaluate==0.4.1 tqdm pandas",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Explicit command for installing required dependencies."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@InProceedings{pmlr-v235-shen24c,\n  title = {Thermometer: Towards Universal Calibration for Large Language Models},\n  author =  {Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya},\n  booktitle = {Proceedings of the 41st International Conference on Machine Learning},\n  pages = {44687--44711},\n  year =  {2024},\n  editor =  {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix},\n  volume = {235},\n  series = {Proceedings of Machine Learning Research},\n  month = {21--27 Jul},\n  publisher = {PMLR}\n}",
+      "normalized_value": "@InProceedings{pmlr-v235-shen24c,\n  title = {Thermometer: Towards Universal Calibration for Large Language Models},\n  author =  {Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya},\n  booktitle = {Proceedings of the 41st International Conference on Machine Learning},\n  pages = {44687--44711},\n  year =  {2024},\n  editor =  {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix},\n  volume = {235},\n  series = {Proceedings of Machine Learning Research},\n  month = {21--27 Jul},\n  publisher = {PMLR}\n}",
+      "evidence": "@InProceedings{pmlr-v235-shen24c,\n  title = {Thermometer: Towards Universal Calibration for Large Language Models},\n  author =  {Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya},\n  booktitle = {Proceedings of the 41st International Conference on Machine Learning},\n  pages = {44687--44711},\n  year =  {2024},\n  editor =  {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix},\n  volume = {235},\n  series = {Proceedings of Machine Learning Research},\n  month = {21--27 Jul},\n  publisher = {PMLR}\n}",
+      "evidence_location": "48-59",
+      "confidence": "high",
+      "reason": "Complete BibTeX citation entry for the associated paper."
+    },
+    {
+      "field": "authors",
+      "value": "Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya",
+      "normalized_value": "Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya",
+      "evidence": "author =  {Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya},",
+      "evidence_location": "50",
+      "confidence": "high",
+      "reason": "List of authors extracted from the citation BibTeX."
+    },
+    {
+      "field": "conference",
+      "value": "Proceedings of the 41st International Conference on Machine Learning",
+      "normalized_value": "Proceedings of the 41st International Conference on Machine Learning",
+      "evidence": "booktitle = {Proceedings of the 41st International Conference on Machine Learning},",
+      "evidence_location": "51",
+      "confidence": "high",
+      "reason": "Venue where the paper was published."
+    },
+    {
+      "field": "publication_year",
+      "value": "2024",
+      "normalized_value": "2024",
+      "evidence": "year =  {2024},",
+      "evidence_location": "53",
+      "confidence": "high",
+      "reason": "Year of publication extracted from the citation."
+    },
+    {
+      "field": "usage_scripts",
+      "value": "exract.sh, train.sh, eval.sh, mrqa.sh",
+      "normalized_value": "exract.sh, train.sh, eval.sh, mrqa.sh",
+      "evidence": "    exract.sh\n    ```\n- ### Step-2: train Thermometer model,\n    ```\n    train.sh\n    ```\n- ### Step-3: evaluate calibration of trained Thermometer model,\n    ```\n    eval.sh\n    ```\n- ### Free-form QA task requires an additional step to pre-process the raw data, i.e., append the LLM's response to the prompts,\n    ```\n    mrqa.sh\n    ```\n",
+      "evidence_location": "25-37",
+      "confidence": "high",
+      "reason": "Lists the shell scripts provided for reproduction and usage."
+    },
+    {
+      "field": "model_types",
+      "value": "decoder_only, encoder_decoder",
+      "normalized_value": "decoder_only, encoder_decoder",
+      "evidence": "    --model_type decoder_only --model_name Llama-2-7b-chat-hf\n    --model_type encoder_decoder --model_name flan-t5-xl",
+      "evidence_location": "41-42",
+      "confidence": "high",
+      "reason": "Identifies the types of LLM architectures supported by the scripts."
+    },
+    {
+      "field": "example_models",
+      "value": "Llama-2-7b-chat-hf, flan-t5-xl",
+      "normalized_value": "Llama-2-7b-chat-hf, flan-t5-xl",
+      "evidence": "    --model_type decoder_only --model_name Llama-2-7b-chat-hf\n    --model_type encoder_decoder --model_name flan-t5-xl",
+      "evidence_location": "41-42",
+      "confidence": "high",
+      "reason": "Specific model names provided as examples for configuration."
+    }
+  ]
+}

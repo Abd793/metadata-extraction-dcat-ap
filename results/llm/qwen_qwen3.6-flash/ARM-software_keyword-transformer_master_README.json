@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Keyword Transformer: A Self-Attention Model for Keyword Spotting",
+      "normalized_value": "Keyword Transformer: A Self-Attention Model for Keyword Spotting",
+      "evidence": "# Keyword Transformer: A Self-Attention Model for Keyword Spotting",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit project title identifying the artifact."
+    },
+    {
+      "field": "artifact_purpose",
+      "value": "Keyword Spotting",
+      "normalized_value": "Keyword Spotting",
+      "evidence": "# Keyword Transformer: A Self-Attention Model for Keyword Spotting",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Clearly states the specific application domain of the model."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2104.00769",
+      "normalized_value": "https://arxiv.org/abs/2104.00769",
+      "evidence": "[Keyword Transformer: A Self-Attention Model for Keyword Spotting](https://arxiv.org/abs/2104.00769)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper for context and citation."
+    },
+    {
+      "field": "conference",
+      "value": "Interspeech 2021",
+      "normalized_value": "Interspeech 2021",
+      "evidence": "presented at Interspeech 2021.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Identifies the publication venue and year."
+    },
+    {
+      "field": "dataset",
+      "value": "Google Speech Commands V1 and V2",
+      "normalized_value": "Google Speech Commands V1 and V2",
+      "evidence": "There are two versions of the dataset, V1 and V2.",
+      "evidence_location": "20-22",
+      "confidence": "high",
+      "reason": "Specifies the exact dataset used for training and evaluation."
+    },
+    {
+      "field": "software_dependencies",
+      "value": "Tensorflow 2.4.0rc1 with CUDA 11",
+      "normalized_value": "Tensorflow 2.4.0rc1 with CUDA 11",
+      "evidence": "Tested using Tensorflow 2.4.0rc1 with CUDA 11.",
+      "evidence_location": "60",
+      "confidence": "high",
+      "reason": "Critical environment specification explicitly noted for reproducibility."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{berg21_interspeech,\n  author={Axel Berg and Mark O’Connor and Miguel Tairum Cruz},\n  title={{Keyword Transformer: A Self-Attention Model for Keyword Spotting}},\n  year=2021,\n  booktitle={Proc. Interspeech 2021},\n  pages={4249--4253},\n  doi={10.21437/Interspeech.2021-1286}\n}",
+      "normalized_value": "@inproceedings{berg21_interspeech, author={Axel Berg and Mark O’Connor and Miguel Tairum Cruz}, title={{Keyword Transformer: A Self-Attention Model for Keyword Spotting}}, year=2021, booktitle={Proc. Interspeech 2021}, pages={4249--4253}, doi={10.21437/Interspeech.2021-1286}",
+      "evidence": "@inproceedings{berg21_interspeech,\n  author={Axel Berg and Mark O’Connor and Miguel Tairum Cruz},\n  title={{Keyword Transformer: A Self-Attention Model for Keyword Spotting}},\n  year=2021,\n  booktitle={Proc. Interspeech 2021},\n  pages={4249--4253},\n  doi={10.21437/Interspeech.2021-1286}\n}",
+      "evidence_location": "7-16",
+      "confidence": "high",
+      "reason": "Provides the exact BibTeX entry required for academic attribution."
+    },
+    {
+      "field": "input_specification",
+      "value": "mel scale spectrogram, shape 98 x 40",
+      "normalized_value": "mel scale spectrogram, shape 98 x 40",
+      "evidence": "It takes the mel scale spectrogram as input, which has shape 98 x 40 using the default settings, corresponding to the 98 time windows with 40 frequency coefficients.",
+      "evidence_location": "65",
+      "confidence": "high",
+      "reason": "Defines the expected input format and dimensions for the model."
+    },
+    {
+      "field": "model_variants",
+      "value": "Time-domain attention, Frequency-domain attention, Combination of both, Patch-wise attention",
+      "normalized_value": "Time-domain attention, Frequency-domain attention, Combination of both, Patch-wise attention",
+      "evidence": "* **Time-domain attention**: each time-window is treated as a patch, self-attention is computed between time-windows\n* **Frequency-domain attention**: each frequency is treated as a patch self-attention is computed between frequencies\n* **Combination of both**: The signal is fed into both a time- and a frequency-domain transformer and the outputs are combined\n* **Patch-wise attention**: Similar to the vision transformer, it extracts rectangular patches from the spectrogram, so attention happens both in the time and frequency domain simultaneously.",
+      "evidence_location": "69-72",
+      "confidence": "high",
+      "reason": "Lists the supported architectural variants and their attention mechanisms."
+    },
+    {
+      "field": "training_command",
+      "value": "sh train.sh",
+      "normalized_value": "sh train.sh",
+      "evidence": "sh train.sh",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Command to train the KWT-3 model from scratch."
+    },
+    {
+      "field": "training_arguments",
+      "value": "--num_layers 12, --heads 3, --d_model 192, --mlp_dim 768, --dropout1 0., --attention_type 'time', --patch_size '1,40', --prenorm False",
+      "normalized_value": "--num_layers 12, --heads 3, --d_model 192, --mlp_dim 768, --dropout1 0., --attention_type 'time', --patch_size '1,40', --prenorm False",
+      "evidence": "--num_layers 12 \\ #number of sequential transformer encoders\n--heads 3 \\ #number of attentions heads\n--d_model 192 \\ #embedding dimension\n--mlp_dim 768 \\ #mlp-dimension\n--dropout1 0. \\ #dropout in mlp/multi-head attention blocks\n--attention_type 'time' \\ #attention type: 'time', 'freq', 'both' or 'patch'\n--patch_size '1,40' \\ #spectrogram patch_size, if patch attention is used\n--prenorm False \\ # if False, use postnorm",
+      "evidence_location": "85-94",
+      "confidence": "high",
+      "reason": "Provides default hyperparameters and configuration options for the model."
+    },
+    {
+      "field": "distillation_command",
+      "value": "sh distill.sh",
+      "normalized_value": "sh distill.sh",
+      "evidence": "sh distill.sh",
+      "evidence_location": "103",
+      "confidence": "high",
+      "reason": "Command to train the model using hard distillation from a convolutional teacher model."
+    },
+    {
+      "field": "pre_trained_models_location",
+      "value": "./models_data_v2_12_labels",
+      "normalized_value": "./models_data_v2_12_labels",
+      "evidence": "Pre-trained weights for KWT-3, KWT-2 and KWT-1 are provided in ./models_data_v2_12_labels.",
+      "evidence_location": "108",
+      "confidence": "high",
+      "reason": "Path to downloadable model checkpoints for immediate use."
+    },
+    {
+      "field": "benchmark_results",
+      "value": "KWT-1: 97.7, KWT-2: 98.2, KWT-3: 98.7",
+      "normalized_value": "KWT-1: 97.7, KWT-2: 98.2, KWT-3: 98.7",
+      "evidence": "|KWT-1|64|128|1|12|607K|97.7|[here](models_data_v2_12_labels/kwt1)|\n|KWT-2|128|256|2|12|2.4M|98.2|[here](models_data_v2_12_labels/kwt2)|\n|KWT-3|192|768|3|12|5.5M|98.7|[here](models_data_v2_12_labels/kwt3)|",
+      "evidence_location": "112-114",
+      "confidence": "high",
+      "reason": "Reports accuracy metrics on the Google Speech Commands V2 benchmark with 12 labels."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "sh eval.sh",
+      "normalized_value": "sh eval.sh",
+      "evidence": "sh eval.sh",
+      "evidence_location": "119",
+      "confidence": "high",
+      "reason": "Command to run inference and evaluation on the specified dataset."
+    },
+    {
+      "field": "license",
+      "value": "Apache 2.0",
+      "normalized_value": "Apache 2.0",
+      "evidence": "The source files in this repository are released under the [Apache 2.0](LICENSE.txt) license.",
+      "evidence_location": "132",
+      "confidence": "high",
+      "reason": "Explicit licensing information governing code reuse and distribution."
+    }
+  ]
+}

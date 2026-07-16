@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Systematic-Generalization-via-Meaningful-Learning",
+      "normalized_value": "Systematic-Generalization-via-Meaningful-Learning",
+      "evidence": "# Systematic-Generalization-via-Meaningful-Learning",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit repository name in the main header."
+    },
+    {
+      "field": "paper_title",
+      "value": "Revisit Systematic Generalization via Meaningful Learning",
+      "normalized_value": "Revisit Systematic Generalization via Meaningful Learning",
+      "evidence": "[Revisit Systematic Generalization via Meaningful Learning](https://aclanthology.org/2022.blackboxnlp-1.6)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Explicit paper title linked in the description."
+    },
+    {
+      "field": "authors",
+      "value": "Shi, Ning, Wang, Boxin, Wang, Wei, Liu, Xiangyu, Lin, Zhouhan",
+      "normalized_value": "Shi, Ning, Wang, Boxin, Wang, Wei, Liu, Xiangyu, Lin, Zhouhan",
+      "evidence": "author = \"Shi, Ning  and\n      Wang, Boxin  and\n      Wang, Wei  and\n      Liu, Xiangyu  and\n      Lin, Zhouhan\",",
+      "evidence_location": "175-179",
+      "confidence": "high",
+      "reason": "List of authors extracted from the BibTeX citation block."
+    },
+    {
+      "field": "conference",
+      "value": "Proceedings of the Fifth BlackboxNLP Workshop on Analyzing and Interpreting Neural Networks for NLP",
+      "normalized_value": "Proceedings of the Fifth BlackboxNLP Workshop on Analyzing and Interpreting Neural Networks for NLP",
+      "evidence": "*In Proceedings of the Fifth BlackboxNLP Workshop on Analyzing and Interpreting Neural Networks for NLP*, pages 62–79, Abu Dhabi, United Arab Emirates (Hybrid). Association for Computational Linguistics.",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Explicit conference/workshop name in the description."
+    },
+    {
+      "field": "year",
+      "value": "2022",
+      "normalized_value": "2022",
+      "evidence": "year = \"2022\",",
+      "evidence_location": "183",
+      "confidence": "high",
+      "reason": "Publication year explicitly stated in BibTeX."
+    },
+    {
+      "field": "arxiv_url",
+      "value": "https://arxiv.org/abs/2003.06658",
+      "normalized_value": "https://arxiv.org/abs/2003.06658",
+      "evidence": "[[arXiv](https://arxiv.org/abs/2003.06658)]",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Direct link to arXiv preprint."
+    },
+    {
+      "field": "data_url",
+      "value": "https://drive.google.com/drive/folders/19vFBn5C-nTdjxMeuMgw-BvsPNsLF6DpV?usp=sharing",
+      "normalized_value": "https://drive.google.com/drive/folders/19vFBn5C-nTdjxMeuMgw-BvsPNsLF6DpV?usp=sharing",
+      "evidence": "All datasets can be downloaded [here](https://drive.google.com/drive/folders/19vFBn5C-nTdjxMeuMgw-BvsPNsLF6DpV?usp=sharing) and should be placed under **main/res/data** according to specific tasks.",
+      "evidence_location": "43",
+      "confidence": "high",
+      "reason": "Direct link to dataset storage."
+    },
+    {
+      "field": "dependencies",
+      "value": "+ python >= 3.10.6\n+ tqdm >= 4.64.1\n+ numpy >= 1.23.4\n+ torch >= 1.13.0",
+      "normalized_value": "+ python >= 3.10.6 + tqdm >= 4.64.1 + numpy >= 1.23.4 + torch >= 1.13.0",
+      "evidence": "+ python >= 3.10.6\n+ tqdm >= 4.64.1\n+ numpy >= 1.23.4\n+ torch >= 1.13.0",
+      "evidence_location": "37-40",
+      "confidence": "high",
+      "reason": "Explicit list of required packages and versions."
+    },
+    {
+      "field": "training_command",
+      "value": "python train.py",
+      "normalized_value": "python train.py",
+      "evidence": "$ python train.py",
+      "evidence_location": "69",
+      "confidence": "high",
+      "reason": "Command to run training."
+    },
+    {
+      "field": "evaluation_metric",
+      "value": "BLEU, ScareBLEU",
+      "normalized_value": "BLEU, ScareBLEU",
+      "evidence": "BLEU\n```\nfairseq-generate data-bin/iwslt14.tokenized.de-en \\\n    --path checkpoints/checkpoint_best.pt \\\n    -s en -t de \\\n    --batch-size 128 --beam 5 --lenpen 0.6 \\\n    --scoring bleu --remove-bpe --cpu >bleu.log 2>&1 &\n```\nScareBLEU",
+      "evidence_location": "151, 159",
+      "confidence": "medium",
+      "reason": "Metrics identified from section headers and command flags (note: 'ScareBLEU' appears to be a typo for 'SacreBLEU' in the header)."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{shi-etal-2022-revisit,\n    title = \"Revisit Systematic Generalization via Meaningful Learning\",\n    author = \"Shi, Ning  and\n      Wang, Boxin  and\n      Wang, Wei  and\n      Liu, Xiangyu  and\n      Lin, Zhouhan\",\n    booktitle = \"Proceedings of the Fifth BlackboxNLP Workshop on Analyzing and Interpreting Neural Networks for NLP\",\n    month = dec,\n    year = \"2022\",\n    address = \"Abu Dhabi, United Arab Emirates (Hybrid)\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.blackboxnlp-1.6\",\n    pages = \"62--79\",\n    abstract = \"Humans can systematically generalize to novel compositions of existing concepts. Recent studies argue that neural networks appear inherently ineffective in such cognitive capacity, leading to a pessimistic view and a lack of attention to optimistic results. We revisit this controversial topic from the perspective of meaningful learning, an exceptional capability of humans to learn novel concepts by connecting them with known ones. We reassess the compositional skills of sequence-to-sequence models conditioned on the semantic links between new and old concepts. Our observations suggest that models can successfully one-shot generalize to novel concepts and compositions through semantic linking, either inductively or deductively. We demonstrate that prior knowledge plays a key role as well. In addition to synthetic tests, we further conduct proof-of-concept experiments in machine translation and semantic parsing, showing the benefits of meaningful learning in applications. We hope our positive findings will encourage excavating modern neural networks{'} potential in systematic generalization through more advanced learning schemes.\",\n}",
+      "normalized_value": "@inproceedings{shi-etal-2022-revisit, title = \"Revisit Systematic Generalization via Meaningful Learning\", author = \"Shi, Ning  and Wang, Boxin  and Wang, Wei  and Liu, Xiangyu  and Lin, Zhouhan\", booktitle = \"Proceedings of the Fifth BlackboxNLP Workshop on Analyzing and Interpreting Neural Networks for NLP\", month = dec, year = \"2022\", address = \"Abu Dhabi, United Arab Emirates (Hybrid)\", publisher = \"Association for Computational Linguistics\", url = \"https://aclanthology.org/2022.blackboxnlp-1.6\", pages = \"62--79\", abstract = \"Humans can systematically generalize to novel compositions of existing concepts. Recent studies argue that neural networks appear inherently ineffective in such cognitive capacity, leading to a pessimistic view and a lack of attention to optimistic results. We revisit this controversial topic from the perspective of meaningful learning, an exceptional capability of humans to learn novel concepts by connecting them with known ones. We reassess the compositional skills of sequence-to-sequence models conditioned on the semantic links between new and old concepts. Our observations suggest that models can successfully one-shot generalize to novel concepts and compositions through semantic linking, either inductively or deductively. We demonstrate that prior knowledge plays a key role as well. In addition to synthetic tests, we further conduct proof-of-concept experiments in machine translation and semantic parsing, showing the benefits of meaningful learning in applications. We hope our positive findings will encourage excavating modern neural networks{'} potential in systematic generalization through more advanced learning schemes.\", }",
+      "evidence": "```\n@inproceedings{shi-etal-2022-revisit,\n    title = \"Revisit Systematic Generalization via Meaningful Learning\",\n    author = \"Shi, Ning  and\n      Wang, Boxin  and\n      Wang, Wei  and\n      Liu, Xiangyu  and\n      Lin, Zhouhan\",\n    booktitle = \"Proceedings of the Fifth BlackboxNLP Workshop on Analyzing and Interpreting Neural Networks for NLP\",\n    month = dec,\n    year = \"2022\",\n    address = \"Abu Dhabi, United Arab Emirates (Hybrid)\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.blackboxnlp-1.6\",\n    pages = \"62--79\",\n    abstract = \"Humans can systematically generalize to novel compositions of existing concepts. Recent studies argue that neural networks appear inherently ineffective in such cognitive capacity, leading to a pessimistic view and a lack of attention to optimistic results. We revisit this controversial topic from the perspective of meaningful learning, an exceptional capability of humans to learn novel concepts by connecting them with known ones. We reassess the compositional skills of sequence-to-sequence models conditioned on the semantic links between new and old concepts. Our observations suggest that models can successfully one-shot generalize to novel concepts and compositions through semantic linking, either inductively or deductively. We demonstrate that prior knowledge plays a key role as well. In addition to synthetic tests, we further conduct proof-of-concept experiments in machine translation and semantic parsing, showing the benefits of meaningful learning in applications. We hope our positive findings will encourage excavating modern neural networks{'} potential in systematic generalization through more advanced learning schemes.\",\n}\n```",
+      "evidence_location": "172-188",
+      "confidence": "high",
+      "reason": "Complete BibTeX citation provided for the paper."
+    },
+    {
+      "field": "task",
+      "value": "Systematic Generalization, Machine Translation, Semantic Parsing",
+      "normalized_value": "Systematic Generalization, Machine Translation, Semantic Parsing",
+      "evidence": "This repository is for the paper [Revisit Systematic Generalization via Meaningful Learning](https://aclanthology.org/2022.blackboxnlp-1.6). *In Proceedings of the Fifth BlackboxNLP Workshop on Analyzing and Interpreting Neural Networks for NLP*, pages 62–79, Abu Dhabi, United Arab Emirates (Hybrid). Association for Computational Linguistics.\n\nWe use [fairseq](https://github.com/facebookresearch/fairseq) for NMT tasks in Section 4.1.\n\nPlease refer to [text2sql-data](https://github.com/jkkummerfeld/text2sql-data/tree/master/data) for details.",
+      "evidence_location": "2, 87, 43",
+      "confidence": "high",
+      "reason": "Tasks identified from paper description and data references."
+    },
+    {
+      "field": "model_architecture",
+      "value": "bi_lstm_rnn_att, lstm_luong_wmt_en_de, transformer_iwslt_de_en, lightconv_iwslt_de_en",
+      "normalized_value": "bi_lstm_rnn_att, lstm_luong_wmt_en_de, transformer_iwslt_de_en, lightconv_iwslt_de_en",
+      "evidence": "model name: bi_lstm_rnn_att\n\n+ LSTM - lstm_luong_wmt_en_de\n+ Transformer - transformer_iwslt_de_en\n+ Dynamic Conv. - lightconv_iwslt_de_en",
+      "evidence_location": "77, 90-92",
+      "confidence": "high",
+      "reason": "Specific model architecture names listed in outputs and NMT sections."
+    },
+    {
+      "field": "checkpoint_path",
+      "value": "checkpoints/checkpoint_best.pt",
+      "normalized_value": "checkpoints/checkpoint_best.pt",
+      "evidence": "--path checkpoints/checkpoint_best.pt",
+      "evidence_location": "154",
+      "confidence": "high",
+      "reason": "Path to the best model checkpoint used for evaluation."
+    },
+    {
+      "field": "data_directory",
+      "value": "main/res/data",
+      "normalized_value": "main/res/data",
+      "evidence": "All datasets can be downloaded [here](https://drive.google.com/drive/folders/19vFBn5C-nTdjxMeuMgw-BvsPNsLF6DpV?usp=sharing) and should be placed under **main/res/data** according to specific tasks.",
+      "evidence_location": "43",
+      "confidence": "high",
+      "reason": "Directory path where datasets should be placed."
+    }
+  ]
+}

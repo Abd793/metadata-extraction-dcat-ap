@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "tcn3r",
+      "normalized_value": "tcn3r",
+      "evidence": "# tcn3r",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly stated as the title of the repository."
+    },
+    {
+      "field": "artifact_description",
+      "value": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "normalized_value": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "evidence": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly stated in the first paragraph describing the project."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2002.08103.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2002.08103.pdf",
+      "evidence": "[the related article](https://arxiv.org/pdf/2002.08103.pdf)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Direct link to the related article provided in the text."
+    },
+    {
+      "field": "citation_authors",
+      "value": "Pierre Monnin, Miguel Couceiro, Amedeo Napoli, and Adrien Coulet",
+      "normalized_value": "Pierre Monnin, Miguel Couceiro, Amedeo Napoli, and Adrien Coulet",
+      "evidence": "Pierre Monnin, Miguel Couceiro, Amedeo Napoli, and Adrien Coulet.",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Explicitly listed in the citation reference section."
+    },
+    {
+      "field": "citation_title",
+      "value": "Knowledge-Based Matching of n-ary Tuples",
+      "normalized_value": "Knowledge-Based Matching of n-ary Tuples",
+      "evidence": "title     = {Knowledge-Based Matching of n-ary Tuples},",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Explicitly stated in the BibTeX citation block."
+    },
+    {
+      "field": "citation_conference",
+      "value": "Ontologies and Concepts in Mind and Machine - 25th International Conference on Conceptual Structures, ICCS 2020, Bolzano, Italy, September 18-20, 2020, Proceedings",
+      "normalized_value": "Ontologies and Concepts in Mind and Machine - 25th International Conference on Conceptual Structures, ICCS 2020, Bolzano, Italy, September 18-20, 2020, Proceedings",
+      "evidence": "   booktitle = {Ontologies and Concepts in Mind and Machine - 25th International Conference\n                on Conceptual Structures, {ICCS} 2020, Bolzano, Italy, September 18-20,\n                2020, Proceedings},",
+      "evidence_location": "28-30",
+      "confidence": "high",
+      "reason": "Explicitly stated in the BibTeX citation block."
+    },
+    {
+      "field": "citation_year",
+      "value": "2020",
+      "normalized_value": "2020",
+      "evidence": "year      = {2020},",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Explicitly stated in the BibTeX citation block."
+    },
+    {
+      "field": "citation_doi",
+      "value": "10.1007/978-3-030-57855-8_4",
+      "normalized_value": "10.1007/978-3-030-57855-8_4",
+      "evidence": "doi       = {10.1007/978-3-030-57855-8_4},",
+      "evidence_location": "37",
+      "confidence": "high",
+      "reason": "Explicitly stated in the BibTeX citation block."
+    },
+    {
+      "field": "programming_language",
+      "value": "C++17",
+      "normalized_value": "C++17",
+      "evidence": "* C++17",
+      "evidence_location": "245",
+      "confidence": "high",
+      "reason": "Explicitly listed under Dependencies section."
+    },
+    {
+      "field": "dependencies",
+      "value": "boost, libcurl, OpenMP",
+      "normalized_value": "boost, libcurl, OpenMP",
+      "evidence": "* boost\n* libcurl\n* OpenMP",
+      "evidence_location": "246-248",
+      "confidence": "high",
+      "reason": "Explicitly listed under Dependencies section."
+    },
+    {
+      "field": "execution_modes",
+      "value": "batch, explain",
+      "normalized_value": "batch, explain",
+      "evidence": "### ``batch`` mode\n\nExecutes reconciliation rules on every pair of relationships in the triplestore.\n\n#### Execution (without Docker)\n\n```bash\ntcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads\n```\n\nwhere:\n\n* *conf.json*: is the configuration file needed to configure the scripts -- see below\n* *output.ttl*: is the path to the output TTL file where the generated links between relationships will be stored\n* *SL*: Minimum similarity on non-empty aggregated dimensions to consider relations as related (< 0 to disable)\n* *CL*: Minimum number of non-empty comparable aggregated dimensions to consider relations as related (< 0 to disable)\n* *DL*: Minimum number of non-empty aggregated dimensions to apply simlimit or complimit (< 0 to disable)\n* *MR*: Max number of rows the SPARQL endpoint can return for a query\n* *threads*: number of threads to use when comparing relations (e.g., 8)\n\n#### Execution (in Docker)\n\nYou can use the target ``run`` of the provided Makefile that calls the Docker image with:\n\n```bash\ndocker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4\n```\n\nThe ``data`` subdirectory of the current directory is shared with the Docker container as ``/data``.\nIt is expected that the JSON configuration file is in this directory.\n``/data`` is also the directory where the output TTL file will be stored.\n``simlimit`` is set to 0.8, ``complimit`` to 2 and ``dimensionlimit`` is set to 2.\n4 threads will be used.\n\n### ``explain`` mode",
+      "evidence_location": "43-78",
+      "confidence": "high",
+      "reason": "Explicitly defined as section headers for execution modes."
+    },
+    {
+      "field": "command_batch_no_docker",
+      "value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads",
+      "normalized_value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads",
+      "evidence": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads",
+      "evidence_location": "50",
+      "confidence": "high",
+      "reason": "Explicitly provided as the command for batch mode execution without Docker."
+    },
+    {
+      "field": "command_batch_docker",
+      "value": "docker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4",
+      "normalized_value": "docker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4",
+      "evidence": "docker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4",
+      "evidence_location": "68",
+      "confidence": "high",
+      "reason": "Explicitly provided as the command for batch mode execution in Docker."
+    },
+    {
+      "field": "command_explain_no_docker",
+      "value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR --explain true",
+      "normalized_value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR --explain true",
+      "evidence": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR --explain true",
+      "evidence_location": "82",
+      "confidence": "high",
+      "reason": "Explicitly provided as the command for explain mode execution without Docker."
+    },
+    {
+      "field": "test_data_file",
+      "value": "test/pgxo+test.owl",
+      "normalized_value": "test/pgxo+test.owl",
+      "evidence": "A [test/pgxo+test.owl](test/pgxo+test.owl) file is available to test tcn3r.",
+      "evidence_location": "235",
+      "confidence": "high",
+      "reason": "Explicitly mentioned as the test file to import in a triplestore."
+    },
+    {
+      "field": "test_config_file",
+      "value": "test/test-conf.json",
+      "normalized_value": "test/test-conf.json",
+      "evidence": "run tcn3r using the test configuration provided in [test/test-conf.json](test/test-conf.json) and the following parameters",
+      "evidence_location": "238",
+      "confidence": "high",
+      "reason": "Explicitly mentioned as the test configuration file."
+    },
+    {
+      "field": "test_expected_output_file",
+      "value": "test/expected-output.ttl",
+      "normalized_value": "test/expected-output.ttl",
+      "evidence": "The (sorted) expected results can be found in [test/expected-output.ttl](test/expected-output.ttl).",
+      "evidence_location": "241",
+      "confidence": "high",
+      "reason": "Explicitly mentioned as the file containing expected results."
+    },
+    {
+      "field": "test_parameters",
+      "value": "--simlimit 0.85 --complimit 3 --dimensionlimit 3",
+      "normalized_value": "--simlimit 0.85 --complimit 3 --dimensionlimit 3",
+      "evidence": "``--simlimit 0.85 --complimit 3 --dimensionlimit 3``.",
+      "evidence_location": "239",
+      "confidence": "high",
+      "reason": "Explicitly provided as the parameters to run tcn3r for testing."
+    }
+  ]
+}

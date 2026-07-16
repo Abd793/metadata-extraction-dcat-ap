@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Aspire",
+      "normalized_value": "Aspire",
+      "evidence": "### Aspire",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name at the top of the README."
+    },
+    {
+      "field": "paper_title",
+      "value": "Multi-Vector Models with Textual Guidance for Fine-Grained Scientific Document Similarity",
+      "normalized_value": "Multi-Vector Models with Textual Guidance for Fine-Grained Scientific Document Similarity",
+      "evidence": "**Title**: \"Multi-Vector Models with Textual Guidance for Fine-Grained Scientific Document Similarity\"",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Provides the exact title of the accompanying research paper."
+    },
+    {
+      "field": "authors",
+      "value": "Sheshera Mysore, Arman Cohan, Tom Hope",
+      "normalized_value": "Sheshera Mysore, Arman Cohan, Tom Hope",
+      "evidence": "**Authors**: Sheshera Mysore, Arman Cohan, Tom Hope",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Lists the authors responsible for the work, essential for attribution and citation."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2111.08366",
+      "normalized_value": "https://arxiv.org/abs/2111.08366",
+      "evidence": "The pre-print can be accessed here: https://arxiv.org/abs/2111.08366",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Direct link to the pre-print version of the paper for context and reproducibility."
+    },
+    {
+      "field": "task",
+      "value": "modeling fine grained similarity between documents",
+      "normalized_value": "modeling fine grained similarity between documents",
+      "evidence": "Repository accompanying paper for modeling fine grained similarity between documents:",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Clearly defines the primary scientific task the artifact addresses."
+    },
+    {
+      "field": "method",
+      "value": "multi-vector representations, Optimal Transport mechanism, Earth Mover's Distance",
+      "normalized_value": "multi-vector representations, Optimal Transport mechanism, Earth Mover's Distance",
+      "evidence": "We develop multi-vector representations where vectors correspond to sentence-level aspects of documents, and present two methods for aspect matching: (1) A fast method that only matches single aspects, and (2) a method that makes sparse multiple matches with an Optimal Transport mechanism that computes an Earth Mover's Distance between aspects.",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Describes the core algorithmic approach and matching mechanisms used in the model."
+    },
+    {
+      "field": "datasets",
+      "value": "RELISH, TRECCOVID, SciDocs, CSFCube",
+      "normalized_value": "RELISH, TRECCOVID, SciDocs, CSFCube",
+      "evidence": "The paper uses the following evaluation datasets:\n\n- RELISH was created in [Brown et al. 2019](https://academic.oup.com/database/article/doi/10.1093/database/baz085/5608006?login=true). While I wasn't able to access the link in the publication. I was able to obtain a copy of the dataset from: [link](http://pubannotation.org/projects/RELISH-DB). Dataset splits are created in `pre_proc_relish.py`.\n\n- TRECCOVID presents an ad-hoc search dataset. The versions of the dataset used may be accessed here: [query topics](https://ir.nist.gov/covidSubmit/data/topics-rnd5.xml), [relevance annotations](https://ir.nist.gov/covidSubmit/data/qrels-covid_d5_j0.5-5.txt), and the metadata for papers is obtained from the [CORD-19](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html) dataset in the [2021-06-21](https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2021-06-21/metadata.csv) release. The function `get_qbe_pools` in `pre_proc_treccovid.py`, converts the dataset in its original form to the reformulated form, TRECCOVID-RF, used in the paper. Dataset splits are created in `pre_proc_treccovid.py`.\n\n- SciDocs is obtained from: [link](https://github.com/allenai/scidocs). The dataset splits supplied alongside the original dataset are used as is.\n\n- CSFCube is obtained from: [link](https://github.com/iesl/CSFCube). The dataset splits supplied alongside the original dataset are used as is.",
+      "evidence_location": "168-176",
+      "confidence": "high",
+      "reason": "Lists the specific evaluation benchmarks used to validate the models, crucial for reproduction and comparison."
+    },
+    {
+      "field": "venue",
+      "value": "NAACL 2022",
+      "normalized_value": "NAACL 2022",
+      "evidence": "**NEWS:** This work has been accepted to NAACL 2022, stay tuned for the camera-ready paper and additional artifacts.",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Indicates the publication venue and year, providing scientific context and credibility."
+    },
+    {
+      "field": "software_dependencies",
+      "value": "transformers, GeomLoss, sentence-transformers",
+      "normalized_value": "transformers, GeomLoss, sentence-transformers",
+      "evidence": "can be used via the `transformers` library\n\n...\n\nThe software packages: [GeomLoss](https://www.kernel-operations.io/geomloss/index.html) and [sentence-transformers](https://www.sbert.net/).",
+      "evidence_location": "56, 271",
+      "confidence": "high",
+      "reason": "Identifies the core software libraries required to run the models and reproduce experiments."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/allenai/aspire",
+      "normalized_value": "https://github.com/allenai/aspire",
+      "evidence": "View example usage and sample document matches here: [`examples/demo-contextualsentence-multim.ipynb`](https://github.com/allenai/aspire/blob/main/examples/demo-contextualsentence-multim.ipynb)",
+      "evidence_location": "99",
+      "confidence": "high",
+      "reason": "Provides the direct link to the source code repository for access and contribution."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@misc{mysore2021aspire,\n      title={Multi-Vector Models with Textual Guidance for Fine-Grained Scientific Document Similarity}, \n      author={Sheshera Mysore and Arman Cohan and Tom Hope},\n      year={2021},\n      eprint={2111.08366},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL}\n}",
+      "normalized_value": "@misc{mysore2021aspire,\n      title={Multi-Vector Models with Textual Guidance for Fine-Grained Scientific Document Similarity}, \n      author={Sheshera Mysore and Arman Cohan and Tom Hope},\n      year={2021},\n      eprint={2111.08366},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL}\n}",
+      "evidence": "```bibtex\n@misc{mysore2021aspire,\n      title={Multi-Vector Models with Textual Guidance for Fine-Grained Scientific Document Similarity}, \n      author={Sheshera Mysore and Arman Cohan and Tom Hope},\n      year={2021},\n      eprint={2111.08366},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL}\n}\n```",
+      "evidence_location": "278-287",
+      "confidence": "high",
+      "reason": "Provides a ready-to-use BibTeX entry for proper academic attribution."
+    },
+    {
+      "field": "hf_model_names",
+      "value": "allenai/aspire-contextualsentence-multim-compsci, allenai/aspire-contextualsentence-multim-biomed, allenai/aspire-contextualsentence-singlem-compsci, allenai/aspire-contextualsentence-singlem-biomed, allenai/aspire-biencoder-compsci-spec, allenai/aspire-biencoder-biomed-scib, allenai/aspire-biencoder-biomed-spec, allenai/aspire-sentence-embedder",
+      "normalized_value": "allenai/aspire-contextualsentence-multim-compsci, allenai/aspire-contextualsentence-multim-biomed, allenai/aspire-contextualsentence-singlem-compsci, allenai/aspire-contextualsentence-singlem-biomed, allenai/aspire-biencoder-compsci-spec, allenai/aspire-biencoder-biomed-scib, allenai/aspire-biencoder-biomed-spec, allenai/aspire-sentence-embedder",
+      "evidence": "- [`allenai/aspire-contextualsentence-multim-compsci`](https://huggingface.co/allenai/aspire-contextualsentence-multim-compsci)\n- [`allenai/aspire-contextualsentence-multim-biomed`](https://huggingface.co/allenai/aspire-contextualsentence-multim-biomed)\n\n`tsAspire`: \n\n- [`allenai/aspire-contextualsentence-singlem-compsci`](https://huggingface.co/allenai/aspire-contextualsentence-singlem-compsci)\n- [`allenai/aspire-contextualsentence-singlem-biomed`](https://huggingface.co/allenai/aspire-contextualsentence-singlem-biomed)\n\n\n`SPECTER-CoCite`: \n\n- [`allenai/aspire-biencoder-compsci-spec`](https://huggingface.co/allenai/aspire-biencoder-compsci-spec)\n- [`allenai/aspire-biencoder-biomed-scib`](https://huggingface.co/allenai/aspire-biencoder-biomed-scib)\n- [`allenai/aspire-biencoder-biomed-spec`](https://huggingface.co/allenai/aspire-biencoder-biomed-spec)\n\n`cosentbert`: \n\n- [`allenai/aspire-sentence-embedder`](https://huggingface.co/allenai/aspire-sentence-embedder)",
+      "evidence_location": "33-50",
+      "confidence": "high",
+      "reason": "Lists all released Hugging Face model identifiers, enabling direct model loading and inference."
+    },
+    {
+      "field": "training_script",
+      "value": "src/learning/main_fsim.py",
+      "normalized_value": "src/learning/main_fsim.py",
+      "evidence": "`src/learning/main_fsim.py`: The main script called from `bin/learning/run_main_fsim-ddp.sh` to initialize and train a model.",
+      "evidence_location": "234",
+      "confidence": "high",
+      "reason": "Identifies the primary entry point for model training, essential for reproduction."
+    },
+    {
+      "field": "evaluation_script",
+      "value": "src/evaluation/evaluate.py",
+      "normalized_value": "src/evaluation/evaluate.py",
+      "evidence": "`src/evaluation/evaluate.py`: Contain code to generate rankings over the evaluation datasets.",
+      "evidence_location": "236",
+      "confidence": "high",
+      "reason": "Points to the script used for running evaluations and generating metrics on benchmarks."
+    },
+    {
+      "field": "preprocessing_scripts",
+      "value": "src/pre_process/pre_proc_gorc.py, src/pre_process/pre_proc_cocits.py, src/pre_process/pre_proc_{relish/scidocs/treccovid}.py",
+      "normalized_value": "src/pre_process/pre_proc_gorc.py, src/pre_process/pre_proc_cocits.py, src/pre_process/pre_proc_{relish/scidocs/treccovid}.py",
+      "evidence": "`src/pre_process/pre_proc_gorc.py:` Code to gather full text articles from the [S2ORC](https://github.com/allenai/s2orc) corpus, exclude noisy data, and gather co-citations for different domains used in the paper (biomedical papers and computer science papers). This code assumes the 2019-09-28 release of S2ORC. \n\n`src/pre_process/pre_proc_cocits.py:` Generate training data for the models reported in the paper. Co-citations are used for training sentence level encoder models and whole abstract models, training data for both these model types are generated from functions in this script. These are the `filter_cocitation_sentences` and `filter_cocitation_papers` functions respectively. Functions listed under `write_examples` generate training positive pairs for various models (negatives are generated with in-batch negative sampling).\n\n`src/pre_process/pre_proc_{relish/scidocs/treccovid}.py`: Pre-process the evaluation datasets (RELISH, TRECCOVID, and SciDocs) into a format consumed by trained models and evaluation scripts.",
+      "evidence_location": "239-243",
+      "confidence": "high",
+      "reason": "Lists scripts responsible for data gathering, co-citation generation, and dataset formatting, critical for reproducing the training pipeline."
+    },
+    {
+      "field": "config_directory",
+      "value": "config/models_config",
+      "normalized_value": "config/models_config",
+      "evidence": "`config/models_config`: JSON files with hyper-parameters for models in the paper consumed by code in `src/learning/`.",
+      "evidence_location": "226",
+      "confidence": "high",
+      "reason": "Indicates where model hyperparameters are stored, necessary for configuring and reproducing experiments."
+    },
+    {
+      "field": "training_data_status",
+      "value": "in-progress",
+      "normalized_value": "in-progress",
+      "evidence": "2. Release training training data.\n    - Co-citation data used to train the above model will also be released, this is co-citation pairs on the order of a few million pairs of papers.",
+      "evidence_location": "294-295",
+      "confidence": "high",
+      "reason": "Clarifies the current availability status of the training dataset, managing user expectations for full reproducibility."
+    }
+  ]
+}

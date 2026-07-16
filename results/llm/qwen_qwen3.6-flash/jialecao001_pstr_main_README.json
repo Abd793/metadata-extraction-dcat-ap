@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PSTR",
+      "normalized_value": "PSTR",
+      "evidence": "# PSTR (CVPR2022)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the main title."
+    },
+    {
+      "field": "artifact_purpose",
+      "value": "End-to-end one-step person search with Transformers",
+      "normalized_value": "End-to-end one-step person search with Transformers",
+      "evidence": "- **End-to-end one-step person search** with Transformers, which does not requre NMS post-processing.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Clearly describes the core task and architectural approach of the artifact."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2204.03340",
+      "normalized_value": "https://arxiv.org/abs/2204.03340",
+      "evidence": "- This code is an official implementation of \"[*PSTR: End-to-End One-Step Person Search With Transformers (CVPR2022)*](https://arxiv.org/abs/2204.03340)\".",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Provides the direct link to the associated research paper."
+    },
+    {
+      "field": "repository_link",
+      "value": "https://github.com/JialeCao001/PSTR.git",
+      "normalized_value": "https://github.com/JialeCao001/PSTR.git",
+      "evidence": "git clone https://github.com/JialeCao001/PSTR.git",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Provides the exact clone URL for the source code repository."
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch1.8.0 (or PyTorch1.9.0)",
+      "normalized_value": "PyTorch1.8.0 (or PyTorch1.9.0)",
+      "evidence": "- We install this project using cuda11.1 and PyTorch1.8.0 (or PyTorch1.9.0) as follows.",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Specifies the primary deep learning framework and supported versions."
+    },
+    {
+      "field": "cuda_version",
+      "value": "11.1",
+      "normalized_value": "11.1",
+      "evidence": "- We install this project using cuda11.1 and PyTorch1.8.0 (or PyTorch1.9.0) as follows.",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Specifies the required CUDA toolkit version for GPU acceleration."
+    },
+    {
+      "field": "python_version",
+      "value": "3.7",
+      "normalized_value": "3.7",
+      "evidence": "conda create -n pstr python=3.7 -y",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Specifies the required Python version for the virtual environment."
+    },
+    {
+      "field": "training_command",
+      "value": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "normalized_value": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "evidence": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "evidence_location": "53",
+      "confidence": "high",
+      "reason": "Command to initiate model training."
+    },
+    {
+      "field": "testing_commands",
+      "value": "sh run_test_prw.sh, sh run_test_cuhk.sh",
+      "normalized_value": "sh run_test_prw.sh, sh run_test_cuhk.sh",
+      "evidence": "PRW: sh run_test_prw.sh \nCUHK: sh run_test_cuhk.sh  ",
+      "evidence_location": "60-61",
+      "confidence": "high",
+      "reason": "Commands to run inference/evaluation on the PRW and CUHK-SYSU datasets respectively."
+    },
+    {
+      "field": "datasets",
+      "value": "PRW, CUHK-SYSU",
+      "normalized_value": "PRW, CUHK-SYSU",
+      "evidence": "- Download [PRW](https://github.com/liangzheng06/PRW-baseline) and [CUHK-SYSU](https://github.com/ShuangLI59/person_search) datasets.",
+      "evidence_location": "47",
+      "confidence": "high",
+      "reason": "Lists the datasets used for training and evaluation."
+    },
+    {
+      "field": "metrics",
+      "value": "mAP, top-1, mAP+, top-1+",
+      "normalized_value": "mAP, top-1, mAP+, top-1+",
+      "evidence": "|    name  | dataset  | backbone |  mAP  | top-1 |  mAP+ | top-1+  | download|",
+      "evidence_location": "71",
+      "confidence": "high",
+      "reason": "Lists the evaluation metrics reported in the results table."
+    },
+    {
+      "field": "backbones",
+      "value": "PVTv2-B2, ResNet50, ResNet50-DCN",
+      "normalized_value": "PVTv2-B2, ResNet50, ResNet50-DCN",
+      "evidence": "|     PSTR | PRW    | PVTv2-B2  |   57.46  |   90.57   |58.07   |    92.03     |          [model](https://drive.google.com/file/d/1hrmyvS9f8fzflpoIlEhWQ-XDyNp_qCGq/view?usp=sharing)         |\n|     PSTR |  PRW   | ResNet50  |   50.03   | 88.04   | 50.64   |    89.94   |        [model](https://drive.google.com/file/d/12j71smXyc3QAyCvIPRlQCbyhSXZENBIX/view?usp=sharing)         |\n|     PSTR |  PRW   | ResNet50-DCN  |   51.09   | 88.33   | 51.62   |    90.13   |        [model](https://drive.google.com/file/d/111f_efZOYMFkz9i76TgqcO7a88npoJV5/view?usp=sharing)         |",
+      "evidence_location": "73-75",
+      "confidence": "high",
+      "reason": "Lists the neural network backbones used in the experiments."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}",
+      "normalized_value": "@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}",
+      "evidence": "```\n@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}\n```",
+      "evidence_location": "87-94",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for the associated paper."
+    },
+    {
+      "field": "acknowledgements",
+      "value": "mmdetection, AlignPS, SeqNet",
+      "normalized_value": "mmdetection, AlignPS, SeqNet",
+      "evidence": "Many thanks to the open source codes: [mmdetection](https://github.com/open-mmlab/mmdetection), [AlignPS](https://github.com/daodaofr/AlignPS), and [SeqNet](https://github.com/serend1p1ty/SeqNet).",
+      "evidence_location": "96-97",
+      "confidence": "high",
+      "reason": "Lists external open-source projects that the implementation builds upon or acknowledges."
+    }
+  ]
+}

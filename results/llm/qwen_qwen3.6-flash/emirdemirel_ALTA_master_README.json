@@ -1,0 +1,175 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "# ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "normalized_value": "# ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "evidence": "# ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit project title provided in the main header."
+    },
+    {
+      "field": "artifact_description",
+      "value": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "normalized_value": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "evidence": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Directly states the purpose and nature of the artifact."
+    },
+    {
+      "field": "task",
+      "value": "Automatic Lyrics Transcription",
+      "normalized_value": "Automatic Lyrics Transcription",
+      "evidence": "Automatic Lyrics Transcription is the task of translating singing voice into text.",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Explicitly defines the core task addressed by the recipe."
+    },
+    {
+      "field": "framework",
+      "value": "Kaldi",
+      "normalized_value": "Kaldi",
+      "evidence": "This framework is built as a [Kaldi](http://kaldi-asr.org/)[1] recipe",
+      "evidence_location": "63",
+      "confidence": "high",
+      "reason": "Identifies the primary speech recognition toolkit used."
+    },
+    {
+      "field": "dependencies_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "69",
+      "confidence": "high",
+      "reason": "Standard command for installing Python dependencies listed in the repository."
+    },
+    {
+      "field": "training_command_singlestream",
+      "value": "./run_singlestream.sh $audiopath",
+      "normalized_value": "./run_singlestream.sh $audiopath",
+      "evidence": "./run_singlestream.sh $audiopath",
+      "evidence_location": "130",
+      "confidence": "high",
+      "reason": "Command to execute the single-stream CTDNN training pipeline."
+    },
+    {
+      "field": "training_command_mstrenet",
+      "value": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} \\\n    --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo}",
+      "normalized_value": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo}",
+      "evidence": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} \\\n    --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo}",
+      "evidence_location": "137-139",
+      "confidence": "high",
+      "reason": "Command to run the recommended MStreNet multistream cross-domain training pipeline."
+    },
+    {
+      "field": "inference_command",
+      "value": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "normalized_value": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "evidence": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "evidence_location": "175",
+      "confidence": "high",
+      "reason": "Command to extract frame-level phoneme posteriorgrams from input audio."
+    },
+    {
+      "field": "dataset_damp",
+      "value": "https://ccrma.stanford.edu/damp/",
+      "normalized_value": "https://ccrma.stanford.edu/damp/",
+      "evidence": "https://ccrma.stanford.edu/damp/",
+      "evidence_location": "82",
+      "confidence": "high",
+      "reason": "URL to retrieve the DAMP dataset used for training."
+    },
+    {
+      "field": "dataset_dali",
+      "value": "https://github.com/gabolsgabs/DALI",
+      "normalized_value": "https://github.com/gabolsgabs/DALI",
+      "evidence": "https://github.com/gabolsgabs/DALI",
+      "evidence_location": "93",
+      "confidence": "high",
+      "reason": "URL to retrieve the DALI dataset used for training."
+    },
+    {
+      "field": "dataset_dali_talt",
+      "value": "https://github.com/emirdemirel/DALI-TestSet4ALT",
+      "normalized_value": "https://github.com/emirdemirel/DALI-TestSet4ALT",
+      "evidence": "https://github.com/emirdemirel/DALI-TestSet4ALT",
+      "evidence_location": "102",
+      "confidence": "high",
+      "reason": "URL to retrieve the DALI-TALT test set used for evaluation."
+    },
+    {
+      "field": "dataset_jamendo",
+      "value": "https://github.com/f90/jamendolyrics",
+      "normalized_value": "https://github.com/f90/jamendolyrics",
+      "evidence": "https://github.com/f90/jamendolyrics",
+      "evidence_location": "109",
+      "confidence": "high",
+      "reason": "URL to retrieve the Jamendo benchmark dataset used for evaluation."
+    },
+    {
+      "field": "paper_link_mstrenet",
+      "value": "https://arxiv.org/pdf/2108.02625.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2108.02625.pdf",
+      "evidence": "https://arxiv.org/pdf/2108.02625.pdf",
+      "evidence_location": "197",
+      "confidence": "high",
+      "reason": "Direct link to the MStreNet paper describing the recommended model."
+    },
+    {
+      "field": "paper_link_singlestream",
+      "value": "https://arxiv.org/abs/2007.06486",
+      "normalized_value": "https://arxiv.org/abs/2007.06486",
+      "evidence": "https://arxiv.org/abs/2007.06486",
+      "evidence_location": "211",
+      "confidence": "high",
+      "reason": "Direct link to the paper describing the single-stream approach."
+    },
+    {
+      "field": "citation_bibtex_mstrenet",
+      "value": "@article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}",
+      "normalized_value": "@article{demirel2021mstre, title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription}, author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon}, booktitle={In proceedings of ISMIR2021}, year={2021}}",
+      "evidence": "@article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}",
+      "evidence_location": "190-196",
+      "confidence": "high",
+      "reason": "BibTeX citation block for the MStreNet model."
+    },
+    {
+      "field": "citation_bibtex_singlestream",
+      "value": "@inproceedings{demirel2020,\n  title={Automatic lyrics transcription using dilated convolutional neural networks with self-attention},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={International Joint Conference on Neural Networks},\n  publisher={IEEE},\n  year={2020}\n}",
+      "normalized_value": "@inproceedings{demirel2020, title={Automatic lyrics transcription using dilated convolutional neural networks with self-attention}, author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon}, booktitle={International Joint Conference on Neural Networks}, publisher={IEEE}, year={2020}}",
+      "evidence": "@inproceedings{demirel2020,\n  title={Automatic lyrics transcription using dilated convolutional neural networks with self-attention},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={International Joint Conference on Neural Networks},\n  publisher={IEEE},\n  year={2020}\n}",
+      "evidence_location": "202-209",
+      "confidence": "high",
+      "reason": "BibTeX citation block for the single-stream approach."
+    },
+    {
+      "field": "license",
+      "value": "Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International",
+      "normalized_value": "Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International",
+      "evidence": "This work is licensed under Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International, which means that the reusers can copy, distribute, remix, transform and build upon the material in any media providing the appropriate credits to this repository and to be used for non-commercial purposes.",
+      "evidence_location": "235",
+      "confidence": "high",
+      "reason": "Explicit license statement governing reuse and distribution."
+    },
+    {
+      "field": "audio_sample_rate",
+      "value": "16kHz",
+      "normalized_value": "16kHz",
+      "evidence": "Note that we have used 16kHz for the sample rate and 10ms of hop size.",
+      "evidence_location": "180",
+      "confidence": "high",
+      "reason": "Specifies the audio sampling rate used in the pipeline."
+    },
+    {
+      "field": "audio_hop_size",
+      "value": "10ms",
+      "normalized_value": "10ms",
+      "evidence": "Note that we have used 16kHz for the sample rate and 10ms of hop size.",
+      "evidence_location": "180",
+      "confidence": "high",
+      "reason": "Specifies the audio frame hop size used in the pipeline."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Simple learning agents interacting with an agent-based market model",
+      "normalized_value": "Simple learning agents interacting with an agent-based market model",
+      "evidence": "# Simple learning agents interacting with an agent-based market model",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit title of the repository/project."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "normalized_value": "https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "evidence": "git clone https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Direct clone URL provided for installation."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2208.10434",
+      "normalized_value": "https://arxiv.org/abs/2208.10434",
+      "evidence": "The link to the arxiv paper can be found [here](https://arxiv.org/abs/2208.10434).",
+      "evidence_location": "76",
+      "confidence": "high",
+      "reason": "Link to the associated scientific paper."
+    },
+    {
+      "field": "programming_language",
+      "value": "Julia",
+      "normalized_value": "Julia",
+      "evidence": "Julia version 1.7.1.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Primary programming language specified in prerequisites."
+    },
+    {
+      "field": "authors",
+      "value": "Matthew Dicks, Tim Gebbie",
+      "normalized_value": "Matthew Dicks, Tim Gebbie",
+      "evidence": "1. Matthew Dicks\n2. Tim Gebbie",
+      "evidence_location": "71-72",
+      "confidence": "high",
+      "reason": "List of authors explicitly stated in the Authors section."
+    },
+    {
+      "field": "branches",
+      "value": "Calibrated-ABM, RL-ABM",
+      "normalized_value": "Calibrated-ABM, RL-ABM",
+      "evidence": "The [Calibrated-ABM](https://github.com/matthewdicks98/MDTG-MALABM/tree/Calibrated-ABM) branch contains all the files needed to:\n\n* Simulate the event-based ABM.\n* Perform the sensitivity analysis and calibration of the ABM.\n* Clean JSE L1LOB TAQ data as well as clean raw message data from the ABM simulation.\n* Generate price path and stylised fact visualisations.\n\nThe [RL-ABM](https://github.com/matthewdicks98/MDTG-MALABM/tree/RL-ABM) branch extends the [Calibrated-ABM](https://github.com/matthewdicks98/MDTG-MALABM/tree/Calibrated-ABM) branch's functionality and contains additional files needed to:\n\n* Simulate the event-based ABM with an RL agent included for one episode.\n* Train an RL agent inside the ABM.\n* Visualise the convergence and learning dynamics of the RL agent.\n* Visualise the effect the RL agent had on the ABM.",
+      "evidence_location": "29-41",
+      "confidence": "high",
+      "reason": "Branch names and their specific functionalities are detailed."
+    },
+    {
+      "field": "key_files",
+      "value": "RunReactiveABM.jl, SensitivityAnalysis.jl, Calibration.jl, CoinTossX.jl, JSE.jl, StylisedFacts.jl, RLUtilities.jl, RLVisualizations.jl",
+      "normalized_value": "RunReactiveABM.jl, SensitivityAnalysis.jl, Calibration.jl, CoinTossX.jl, JSE.jl, StylisedFacts.jl, RLUtilities.jl, RLVisualizations.jl",
+      "evidence": "* [RunReactiveABM.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/RunReactiveABM.jl) runs the event-based simulation once for a given set of parameters.  \n* [SensitivityAnalysis.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/SensitivityAnalysis.jl) runs the sensitivity analysis for given ranges of parameter values.\n* [Calibration.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/Calibration.jl) uses [NMTA.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/NMTA.jl) to calibrate the ABM to a day of JSE data. [NMTA.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/NMTA.jl) implements the Nelder-Mead with threshold accepting optimisation algorithm.\n* [CoinTossX.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/CoinTossX.jl) and [JSE.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/JSE.jl) clean the ABM and JSE data into the L1LOB format respectively. [CoinTossX.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/CoinTossX.jl) also visualises the realised price path.\n* [StylisedFacts.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/StylisedFacts.jl) visualises the stylised facts found in the ABM and the JSE.\n\nIn addition to the functionality listed above the [RL-ABM](https://github.com/matthewdicks98/MDTG-MALABM/tree/RL-ABM) branch contains:\n\n* [RLUtilities.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/RLUtilities.jl) which contains functions that can simulate an RL agent in an ABM for one episode and train the RL agent to optimally liquidate a parent order. \n* [RLVisualizations.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/RLVisualizations.jl) which allows you to visualise different aspects of the RL agent's convergence as well as the learning dynamics and how the agent has affected the ABM.\n* The [StylisedFacts.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/StylisedFacts.jl) file includes extra functionality that allows you to visualise stylised facts for the RL agent.",
+      "evidence_location": "55-65",
+      "confidence": "high",
+      "reason": "List of key scripts and their functions for reproducibility."
+    },
+    {
+      "field": "data_source",
+      "value": "JSE L1LOB TAQ data",
+      "normalized_value": "JSE L1LOB TAQ data",
+      "evidence": "Clean JSE L1LOB TAQ data as well as clean raw message data from the ABM simulation.",
+      "evidence_location": "33",
+      "confidence": "high",
+      "reason": "Specific dataset used for calibration and analysis."
+    },
+    {
+      "field": "optimization_algorithm",
+      "value": "Nelder-Mead with threshold accepting",
+      "normalized_value": "Nelder-Mead with threshold accepting",
+      "evidence": "Nelder-Mead with threshold accepting optimisation algorithm.",
+      "evidence_location": "57",
+      "confidence": "high",
+      "reason": "Specific algorithm used for calibration mentioned in key files."
+    },
+    {
+      "field": "related_repositories",
+      "value": "IJPCTG-ABMCoinTossX, CoinTossX",
+      "normalized_value": "IJPCTG-ABMCoinTossX, CoinTossX",
+      "evidence": "The event-time ABM is an extension of the hybrid stochastic time ABM with the description found [here](https://arxiv.org/abs/2108.07806) and the implementation found in this repository: [IJPCTG-ABMCoinTossX](https://github.com/IvanJericevich/IJPCTG-ABMCoinTossX).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Links to foundational repositories mentioned in the description."
+    },
+    {
+      "field": "matching_engine_repository",
+      "value": "CoinTossX",
+      "normalized_value": "CoinTossX",
+      "evidence": "The matching engine used is a fork from the official release of version [v1.1.0](https://github.com/dharmeshsing/CoinTossX/tree/v1.1.0) of [CoinTossX](https://github.com/dharmeshsing/CoinTossX). This fork was used because it contains a UDP socket on which market data updates can be received from the matching engine. The fork can be found [here](https://github.com/IvanJericevich/CoinTossX).<Need to update to include the wait loop removal.>",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Specific repository for the matching engine component."
+    },
+    {
+      "field": "related_paper_url",
+      "value": "https://arxiv.org/abs/2108.07806",
+      "normalized_value": "https://arxiv.org/abs/2108.07806",
+      "evidence": "The event-time ABM is an extension of the hybrid stochastic time ABM with the description found [here](https://arxiv.org/abs/2108.07806) and the implementation found in this repository: [IJPCTG-ABMCoinTossX](https://github.com/IvanJericevich/IJPCTG-ABMCoinTossX).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Link to the paper describing the underlying ABM model."
+    },
+    {
+      "field": "prerequisites",
+      "value": "Julia version 1.7.1, Text editor, Git",
+      "normalized_value": "Julia version 1.7.1, Text editor, Git",
+      "evidence": "1. Julia version 1.7.1.\n2. A text editor such as [VS Code](https://code.visualstudio.com/) or [Atom](https://atom.io/).\n4. [Git](https://git-scm.com/)",
+      "evidence_location": "7-9",
+      "confidence": "high",
+      "reason": "Software requirements listed in the Prerequisites section."
+    }
+  ]
+}

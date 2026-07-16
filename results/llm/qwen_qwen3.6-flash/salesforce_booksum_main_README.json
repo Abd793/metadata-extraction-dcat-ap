@@ -1,0 +1,103 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "BOOKSUM: A Collection of Datasets for Long-form Narrative Summarization",
+      "normalized_value": "BOOKSUM: A Collection of Datasets for Long-form Narrative Summarization",
+      "evidence": "# BOOKSUM: A Collection of Datasets for Long-form Narrative Summarization",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name and primary purpose in the main heading."
+    },
+    {
+      "field": "artifact_description",
+      "value": "We address these issues by introducing BookSum, a collection of datasets for long-form narrative summarization. Our dataset covers source documents from the literature domain, such as novels, plays and stories, and includes highly abstractive, human written summaries on three levels of granularity of increasing difficulty: paragraph-, chapter-, and book-level.",
+      "normalized_value": "We address these issues by introducing BookSum, a collection of datasets for long-form narrative summarization. Our dataset covers source documents from the literature domain, such as novels, plays and stories, and includes highly abstractive, human written summaries on three levels of granularity of increasing difficulty: paragraph-, chapter-, and book-level.",
+      "evidence": "We address these issues by introducing BookSum, a collection of datasets for long-form narrative summarization.\nOur dataset covers source documents from the literature domain, such as novels, plays and stories, and includes highly abstractive, human written summaries on three levels of granularity of increasing difficulty: paragraph-, chapter-, and book-level.",
+      "evidence_location": "7-8",
+      "confidence": "high",
+      "reason": "Clearly defines the artifact's scope, domain, and granularity levels for reproducibility and understanding."
+    },
+    {
+      "field": "authors",
+      "value": "Wojciech Kryściński, Nazneen Rajani, Divyansh Agarwal, Caiming Xiong, Dragomir Radev",
+      "normalized_value": "Wojciech Kryściński, Nazneen Rajani, Divyansh Agarwal, Caiming Xiong, Dragomir Radev",
+      "evidence": "Authors: [Wojciech Kryściński](https://twitter.com/iam_wkr), [Nazneen Rajani](https://twitter.com/nazneenrajani), [Divyansh Agarwal](https://twitter.com/jigsaw2212), [Caiming Xiong](https://twitter.com/caimingxiong), [Dragomir Radev](http://www.cs.yale.edu/homes/radev/)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Lists all contributing authors explicitly, required for attribution and citation."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2105.08209",
+      "normalized_value": "https://arxiv.org/abs/2105.08209",
+      "evidence": "Paper link: https://arxiv.org/abs/2105.08209",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated research paper for scientific context and methodology details."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{kryscinski2021booksum,\n      title={BookSum: A Collection of Datasets for Long-form Narrative Summarization}, \n      author={Wojciech Kry{\\'s}ci{\\'n}ski and Nazneen Rajani and Divyansh Agarwal and Caiming Xiong and Dragomir Radev},\n      year={2021},\n      eprint={2105.08209},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL}\n}",
+      "normalized_value": "@article{kryscinski2021booksum, title={BookSum: A Collection of Datasets for Long-form Narrative Summarization}, author={Wojciech Kry{\\'s}ci{\\'n}ski and Nazneen Rajani and Divyansh Agarwal and Caiming Xiong and Dragomir Radev}, year={2021}, eprint={2105.08209}, archivePrefix={arXiv}, primaryClass={cs.CL}}",
+      "evidence": "```\n@article{kryscinski2021booksum,\n      title={BookSum: A Collection of Datasets for Long-form Narrative Summarization}, \n      author={Wojciech Kry{\\'s}ci{\\'n}ski and Nazneen Rajani and Divyansh Agarwal and Caiming Xiong and Dragomir Radev},\n      year={2021},\n      eprint={2105.08209},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL}\n}\n```",
+      "evidence_location": "31-40",
+      "confidence": "high",
+      "reason": "Provides a ready-to-use citation format for academic reuse and proper attribution."
+    },
+    {
+      "field": "license",
+      "value": "BSD-3 License",
+      "normalized_value": "BSD-3 License",
+      "evidence": "The code is released under the **BSD-3 License** (see `LICENSE.txt` for details).",
+      "evidence_location": "58",
+      "confidence": "high",
+      "reason": "Specifies the legal license governing code reuse and distribution."
+    },
+    {
+      "field": "usage_terms",
+      "value": "You may only use the scripts shared in this code repository for research purposes. You may not use or allow others to use the scripts for any other purposes and other uses are expressly prohibited.",
+      "normalized_value": "You may only use the scripts shared in this code repository for research purposes. You may not use or allow others to use the scripts for any other purposes and other uses are expressly prohibited.",
+      "evidence": "1. You may only use the scripts shared in this code repository for research purposes. You\nmay not use or allow others to use the scripts for any other purposes and other uses are\nexpressly prohibited.",
+      "evidence_location": "46-48",
+      "confidence": "high",
+      "reason": "Defines strict legal and ethical constraints on artifact usage, critical for compliance."
+    },
+    {
+      "field": "data_download_command",
+      "value": "gsutil cp gs://sfr-books-dataset-chapters-research/all_chapterized_books.zip .",
+      "normalized_value": "gsutil cp gs://sfr-books-dataset-chapters-research/all_chapterized_books.zip .",
+      "evidence": "gsutil cp gs://sfr-books-dataset-chapters-research/all_chapterized_books.zip .",
+      "evidence_location": "66",
+      "confidence": "high",
+      "reason": "Provides the exact command to retrieve the primary dataset source, essential for reproduction."
+    },
+    {
+      "field": "data_collection_script",
+      "value": "python get_summaries.py",
+      "normalized_value": "python get_summaries.py",
+      "evidence": "python get_summaries.py",
+      "evidence_location": "79",
+      "confidence": "high",
+      "reason": "Identifies the specific script used to collect summary data from provided links, supporting reproducibility."
+    },
+    {
+      "field": "data_cleaning_scripts",
+      "value": "python basic_clean.py, python split_aggregate_chaps_all_sources.py, python clean_summaries.py",
+      "normalized_value": "python basic_clean.py, python split_aggregate_chaps_all_sources.py, python clean_summaries.py",
+      "evidence": "python basic_clean.py\npython split_aggregate_chaps_all_sources.py\npython clean_summaries.py",
+      "evidence_location": "88, 93, 98",
+      "confidence": "high",
+      "reason": "Lists the sequential scripts required to clean and structure the raw data, necessary for pipeline reproduction."
+    },
+    {
+      "field": "alignment_model",
+      "value": "paraphrase-distilroberta-base-v1",
+      "normalized_value": "paraphrase-distilroberta-base-v1",
+      "evidence": "bi-encoder **paraphrase-distilroberta-base-v1**",
+      "evidence_location": "110",
+      "confidence": "high",
+      "reason": "Specifies the exact pre-trained model used for paragraph-sentence alignment, critical for reproducing data processing steps."
+    }
+  ]
+}

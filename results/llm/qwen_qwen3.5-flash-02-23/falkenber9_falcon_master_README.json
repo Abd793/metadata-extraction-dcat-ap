@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "FALCON",
+      "normalized_value": "FALCON",
+      "evidence": "FALCON - Fast Analysis of LTE Control channels",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the header."
+    },
+    {
+      "field": "artifact_description",
+      "value": "**FALCON** is an open-source software collection for real-time analysis of radio resources in private or commercial LTE/LTE-A networks.",
+      "normalized_value": "**FALCON** is an open-source software collection for real-time analysis of radio resources in private or commercial LTE/LTE-A networks.",
+      "evidence": "**FALCON** is an open-source software collection for real-time analysis of radio resources in private or commercial LTE/LTE-A networks.",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Provides a clear description of the software's purpose."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/falkenber9/falcon.git",
+      "normalized_value": "https://github.com/falkenber9/falcon.git",
+      "evidence": "git clone https://github.com/falkenber9/falcon.git",
+      "evidence_location": "109",
+      "confidence": "high",
+      "reason": "Direct link to the source code repository provided in installation instructions."
+    },
+    {
+      "field": "license",
+      "value": "AGPLv3",
+      "normalized_value": "AGPLv3",
+      "evidence": "FALCON is released under the [AGPLv3 license](LICENSE).",
+      "evidence_location": "39",
+      "confidence": "high",
+      "reason": "Explicitly states the license type."
+    },
+    {
+      "field": "operating_systems",
+      "value": "* Ubuntu 18.04.x LTS (Bionic Beaver)\n* Ubuntu 20.04.x LTS (Focal Fossa)\n* Archlinux [![](https://img.shields.io/aur/version/tudo-falcon)](https://aur.archlinux.org/packages/tudo-falcon) [![](https://img.shields.io/aur/maintainer/tudo-falcon)](https://aur.archlinux.org/packages/tudo-falcon)",
+      "normalized_value": "* Ubuntu 18.04.x LTS (Bionic Beaver) * Ubuntu 20.04.x LTS (Focal Fossa) * Archlinux [![](https://img.shields.io/aur/version/tudo-falcon)](https://aur.archlinux.org/packages/tudo-falcon) [![](https://img.shields.io/aur/maintainer/tudo-falcon)](https://aur.archlinux.org/packages/tudo-falcon)",
+      "evidence": "* Ubuntu 18.04.x LTS (Bionic Beaver)\n* Ubuntu 20.04.x LTS (Focal Fossa)\n* Archlinux [![](https://img.shields.io/aur/version/tudo-falcon)](https://aur.archlinux.org/packages/tudo-falcon) [![](https://img.shields.io/aur/maintainer/tudo-falcon)](https://aur.archlinux.org/packages/tudo-falcon)",
+      "evidence_location": "63-65",
+      "confidence": "high",
+      "reason": "Lists the operating systems where installation has been verified."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "Based on [srsLTE][srslte] library, the software can be run on a plain x86 general-purpose PCs with any compatible SDR.",
+      "normalized_value": "Based on [srsLTE][srslte] library, the software can be run on a plain x86 general-purpose PCs with any compatible SDR.",
+      "evidence": "Based on [srsLTE][srslte] library, the software can be run on a plain x86 general-purpose PCs with any compatible SDR.",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Describes the general hardware requirements for running the software."
+    },
+    {
+      "field": "tested_sdr_hardware",
+      "value": "* Ettus Research: USRP B210\n* Ettus Research: USRP B205mini\n* Lime Microsystems: LimeSDR Mini",
+      "normalized_value": "* Ettus Research: USRP B210 * Ettus Research: USRP B205mini * Lime Microsystems: LimeSDR Mini",
+      "evidence": "* Ettus Research: USRP B210\n* Ettus Research: USRP B205mini\n* Lime Microsystems: LimeSDR Mini",
+      "evidence_location": "175-177",
+      "confidence": "high",
+      "reason": "Lists specific SDR hardware models tested with the software."
+    },
+    {
+      "field": "cpu_requirements",
+      "value": "* Use a CPU with at least 4 physical cores",
+      "normalized_value": "* Use a CPU with at least 4 physical cores",
+      "evidence": "* Use a CPU with at least 4 physical cores",
+      "evidence_location": "192",
+      "confidence": "high",
+      "reason": "Specifies minimum CPU core requirements for real-time performance."
+    },
+    {
+      "field": "installation_commands",
+      "value": "git clone https://github.com/falkenber9/falcon.git\ncd falcon\nmkdir build\ncd build\ncmake -DCMAKE_INSTALL_PREFIX=/usr ../\nmake\n\n# Install (optional)\nsudo make install\n\n# Uninstall (use carefully!)\nsudo xargs rm < install_manifest.txt",
+      "normalized_value": "git clone https://github.com/falkenber9/falcon.git cd falcon mkdir build cd build cmake -DCMAKE_INSTALL_PREFIX=/usr ../ make # Install (optional) sudo make install # Uninstall (use carefully!) sudo xargs rm < install_manifest.txt",
+      "evidence": "git clone https://github.com/falkenber9/falcon.git\ncd falcon\nmkdir build\ncd build\ncmake -DCMAKE_INSTALL_PREFIX=/usr ../\nmake\n\n# Install (optional)\nsudo make install\n\n# Uninstall (use carefully!)\nsudo xargs rm < install_manifest.txt",
+      "evidence_location": "109-121",
+      "confidence": "high",
+      "reason": "Provides the exact commands required to clone, build, and install the software."
+    },
+    {
+      "field": "usage_commands",
+      "value": "FalconEye -f 1829.4e6 -D /tmp/dci.csv",
+      "normalized_value": "FalconEye -f 1829.4e6 -D /tmp/dci.csv",
+      "evidence": "FalconEye -f 1829.4e6 -D /tmp/dci.csv",
+      "evidence_location": "237",
+      "confidence": "high",
+      "reason": "Example command for running the command-line decoder."
+    },
+    {
+      "field": "citation",
+      "value": "@InProceedings{Falkenberg2019a,\n\tAuthor = {Robert Falkenberg and Christian Wietfeld},\n\tTitle = {{FALCON}: An Accurate Real-time Monitor for Client-based Mobile Network Data Analytics},\n\tBooktitle = {2019 IEEE Global Communications Conference (GLOBECOM)},\n\tYear = {2019},\n\tAddress = {Waikoloa, Hawaii, USA},\n\tMonth = dec,\n\tPublisher = {IEEE},\n\tDoi = {10.1109/GLOBECOM38437.2019.9014096},\n\tEprint = {1907.10110},\n\tEprinttype = {arxiv},\n\tUrl = {https://arxiv.org/abs/1907.10110}\n}",
+      "normalized_value": "@InProceedings{Falkenberg2019a, Author = {Robert Falkenberg and Christian Wietfeld}, Title = {{FALCON}: An Accurate Real-time Monitor for Client-based Mobile Network Data Analytics}, Booktitle = {2019 IEEE Global Communications Conference (GLOBECOM)}, Year = {2019}, Address = {Waikoloa, Hawaii, USA}, Month = dec, Publisher = {IEEE}, Doi = {10.1109/GLOBECOM38437.2019.9014096}, Eprint = {1907.10110}, Eprinttype = {arxiv}, Url = {https://arxiv.org/abs/1907.10110}",
+      "evidence": "@InProceedings{Falkenberg2019a,\n\tAuthor = {Robert Falkenberg and Christian Wietfeld},\n\tTitle = {{FALCON}: An Accurate Real-time Monitor for Client-based Mobile Network Data Analytics},\n\tBooktitle = {2019 IEEE Global Communications Conference (GLOBECOM)},\n\tYear = {2019},\n\tAddress = {Waikoloa, Hawaii, USA},\n\tMonth = dec,\n\tPublisher = {IEEE},\n\tDoi = {10.1109/GLOBECOM38437.2019.9014096},\n\tEprint = {1907.10110},\n\tEprinttype = {arxiv},\n\tUrl = {https://arxiv.org/abs/1907.10110}\n}",
+      "evidence_location": "360-372",
+      "confidence": "high",
+      "reason": "Provides the BibTeX citation for the associated scientific publication."
+    },
+    {
+      "field": "doi",
+      "value": "10.1109/GLOBECOM38437.2019.9014096",
+      "normalized_value": "10.1109/GLOBECOM38437.2019.9014096",
+      "evidence": "[![DOI](https://img.shields.io/badge/DOI-10.1109/GLOBECOM38437.2019.9014096-fcb426.svg)](https://dx.doi.org/10.1109/GLOBECOM38437.2019.9014096)",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Explicitly states the DOI of the scientific publication."
+    },
+    {
+      "field": "arxiv_id",
+      "value": "1907.10110",
+      "normalized_value": "1907.10110",
+      "evidence": "[![arXiv](https://img.shields.io/badge/arXiv-1907.10110-b31b1b.svg)](https://arxiv.org/abs/1907.10110)",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Explicitly states the arXiv identifier for the preprint."
+    },
+    {
+      "field": "video_url",
+      "value": "http://www.youtube.com/watch?v=Va_aZYxRu3U",
+      "normalized_value": "http://www.youtube.com/watch?v=Va_aZYxRu3U",
+      "evidence": "[![Video](https://img.shields.io/youtube/views/Va_aZYxRu3U)](http://www.youtube.com/watch?v=Va_aZYxRu3U)",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Provides a link to a video presentation of the project."
+    },
+    {
+      "field": "funding",
+      "value": "The research around this project has been supported by *Deutsche Forschungsgemeinschaft* (DFG) within the Collaborative Research Center SFB 876",
+      "normalized_value": "The research around this project has been supported by *Deutsche Forschungsgemeinschaft* (DFG) within the Collaborative Research Center SFB 876",
+      "evidence": "The research around this project has been supported by *Deutsche Forschungsgemeinschaft* (DFG) within the Collaborative Research Center SFB 876",
+      "evidence_location": "28",
+      "confidence": "high",
+      "reason": "Identifies the funding source and research center supporting the project."
+    }
+  ]
+}

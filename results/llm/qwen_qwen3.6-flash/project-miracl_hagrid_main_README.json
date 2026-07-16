@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "HAGRID",
+      "normalized_value": "HAGRID",
+      "evidence": "# HAGRID: A Human-LLM Collaborative Dataset for Generative Information-seeking with Attribution",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the artifact name in the repository title."
+    },
+    {
+      "field": "artifact_description",
+      "value": "HAGRID (**H**uman-in-the-loop **A**ttributable **G**enerative **R**etrieval for **I**nformation-seeking **D**ataset) is a dataset for generative information-seeking scenarios.",
+      "normalized_value": "HAGRID (**H**uman-in-the-loop **A**ttributable **G**enerative **R**etrieval for **I**nformation-seeking **D**ataset) is a dataset for generative information-seeking scenarios.",
+      "evidence": "HAGRID (**H**uman-in-the-loop **A**ttributable **G**enerative **R**etrieval for **I**nformation-seeking **D**ataset) is a dataset for generative information-seeking scenarios.",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Provides the full name, acronym expansion, and core purpose of the artifact."
+    },
+    {
+      "field": "base_dataset",
+      "value": "MIRACL",
+      "normalized_value": "MIRACL",
+      "evidence": "It is constructed on top of [MIRACL 🌍🙌🌏](HTTP://miracl.ai), an information retrieval dataset that consists of queries along with a set of manually labelled relevant passages (quotes).",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Identifies the foundational dataset the artifact is built upon."
+    },
+    {
+      "field": "generation_model",
+      "value": "GPT-3.5",
+      "normalized_value": "GPT-3.5",
+      "evidence": "We collect attributed explanations for each question by eliciting prompts from [GPT-3.5](https://openai.com/blog/chatgpt), based on the given relevant passages.",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Specifies the LLM used to generate the dataset's explanations."
+    },
+    {
+      "field": "annotation_criteria",
+      "value": "Informativeness, Attributability",
+      "normalized_value": "Informativeness, Attributability",
+      "evidence": "We then ask human annotators to judge the explanations based on two criteria:\n1. __Informativeness:__ whether they provide a direct answer to the question.\n2. __Attributability:__ whether they are attributable to the source passages.",
+      "evidence_location": "22-24",
+      "confidence": "high",
+      "reason": "Details the specific human evaluation metrics used in dataset construction."
+    },
+    {
+      "field": "dataset_host",
+      "value": "Hugging Face",
+      "normalized_value": "Hugging Face",
+      "evidence": "HAGRID is hosted on Hugging Face 🤗: [link](https://huggingface.co/datasets/miracl/hagrid).",
+      "evidence_location": "37",
+      "confidence": "high",
+      "reason": "Indicates the platform where the dataset is publicly accessible."
+    },
+    {
+      "field": "dataset_access_url",
+      "value": "https://huggingface.co/datasets/miracl/hagrid",
+      "normalized_value": "https://huggingface.co/datasets/miracl/hagrid",
+      "evidence": "HAGRID is hosted on Hugging Face 🤗: [link](https://huggingface.co/datasets/miracl/hagrid).",
+      "evidence_location": "37",
+      "confidence": "high",
+      "reason": "Provides the direct URL to access the dataset."
+    },
+    {
+      "field": "dataset_loading_command",
+      "value": "import datasets\nhagrid = datasets.load_dataset(\"miracl/hagrid\", split=\"train\")\nprint(hagrid[0])",
+      "normalized_value": "import datasets\nhagrid = datasets.load_dataset(\"miracl/hagrid\", split=\"train\")\nprint(hagrid[0])",
+      "evidence": "```python\nimport datasets\nhagrid = datasets.load_dataset(\"miracl/hagrid\", split=\"train\")\nprint(hagrid[0])\n```",
+      "evidence_location": "39-43",
+      "confidence": "high",
+      "reason": "Provides a concrete code snippet for reproducing dataset access."
+    },
+    {
+      "field": "dataset_statistics",
+      "value": "|  Split | #Q | #A       | #Informativeness  | #Attribuatability       |\n|:-----|:------:|:-------:|:------:|:-------:|\n| Train     | 1,922 | 3,214 | 3,214 | 754 |\n| Dev     | 716 | 1,318 | 1,157 | 826 |",
+      "normalized_value": "| Split | #Q | #A | #Informativeness | #Attribuatability |\n|:-----|:------:|:-------:|:------:|:-------:|\n| Train | 1,922 | 3,214 | 3,214 | 754 |\n| Dev | 716 | 1,318 | 1,157 | 826 |",
+      "evidence": "|  Split | #Q | #A       | #Informativeness  | #Attribuatability       |\n|:-----|:------:|:-------:|:------:|:-------:|\n| Train     | 1,922 | 3,214 | 3,214 | 754 |\n| Dev     | 716 | 1,318 | 1,157 | 826 |",
+      "evidence_location": "45-49",
+      "confidence": "high",
+      "reason": "Summarizes the dataset's composition across splits and evaluation dimensions."
+    },
+    {
+      "field": "license",
+      "value": "Apache 2 license",
+      "normalized_value": "Apache 2 license",
+      "evidence": "This work is licensed under the Apache 2 license. See [LICENSE](LICENSE) for details.",
+      "evidence_location": "61",
+      "confidence": "high",
+      "reason": "Explicitly states the legal license governing reuse."
+    },
+    {
+      "field": "citation",
+      "value": "@article{hagrid,\n      title={{HAGRID}: A Human-LLM Collaborative Dataset for Generative Information-Seeking with Attribution}, \n      author={Ehsan Kamalloo and Aref Jafari and Xinyu Zhang and Nandan Thakur and Jimmy Lin},\n      year={2023},\n      journal={arXiv:2307.16883},\n}",
+      "normalized_value": "@article{hagrid,\n      title={{HAGRID}: A Human-LLM Collaborative Dataset for Generative Information-Seeking with Attribution}, \n      author={Ehsan Kamalloo and Aref Jafari and Xinyu Zhang and Nandan Thakur and Jimmy Lin},\n      year={2023},\n      journal={arXiv:2307.16883},\n}",
+      "evidence": "```\n@article{hagrid,\n      title={{HAGRID}: A Human-LLM Collaborative Dataset for Generative Information-Seeking with Attribution}, \n      author={Ehsan Kamalloo and Aref Jafari and Xinyu Zhang and Nandan Thakur and Jimmy Lin},\n      year={2023},\n      journal={arXiv:2307.16883},\n}\n```",
+      "evidence_location": "65-72",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for academic attribution."
+    },
+    {
+      "field": "arxiv_paper_url",
+      "value": "https://arxiv.org/abs/2307.16883",
+      "normalized_value": "https://arxiv.org/abs/2307.16883",
+      "evidence": "<a href=\"https://arxiv.org/abs/2307.16883\">",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper."
+    }
+  ]
+}

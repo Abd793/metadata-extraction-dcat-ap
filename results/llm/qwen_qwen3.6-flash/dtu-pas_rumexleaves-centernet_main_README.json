@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "RumexLeaves-CenterNet",
+      "normalized_value": "RumexLeaves-CenterNet",
+      "evidence": "# RumexLeaves-CenterNet",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the repository name in the main header."
+    },
+    {
+      "field": "artifact_description",
+      "value": "This repository contains the official implementation for Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances.",
+      "normalized_value": "This repository contains the official implementation for Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances.",
+      "evidence": "This repository contains the official implementation for\n\n[Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances.](https://ieeexplore.ieee.org/document/10373101)",
+      "evidence_location": "2-4",
+      "confidence": "high",
+      "reason": "Directly describes the purpose and scope of the repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://ieeexplore.ieee.org/document/10373101",
+      "normalized_value": "https://ieeexplore.ieee.org/document/10373101",
+      "evidence": "[Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances.](https://ieeexplore.ieee.org/document/10373101)",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Provides direct access to the peer-reviewed publication."
+    },
+    {
+      "field": "project_page_url",
+      "value": "https://dtu-pas.github.io/RumexLeaves/",
+      "normalized_value": "https://dtu-pas.github.io/RumexLeaves/",
+      "evidence": "[RumexLeaves Website](https://dtu-pas.github.io/RumexLeaves/)",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Links to the official project website for additional resources."
+    },
+    {
+      "field": "arxiv_url",
+      "value": "https://arxiv.org/abs/2312.08805",
+      "normalized_value": "https://arxiv.org/abs/2312.08805",
+      "evidence": "[Arxiv](https://arxiv.org/abs/2312.08805)",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Provides access to the preprint version of the paper."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://data.dtu.dk/articles/dataset/_strong_RumexLeaves_Dataset_introduced_by_Paper_Fine-grained_Leaf_Analysis_for_Efficient_Weeding_Robots_strong_/23659524",
+      "normalized_value": "https://data.dtu.dk/articles/dataset/_strong_RumexLeaves_Dataset_introduced_by_Paper_Fine-grained_Leaf_Analysis_for_Efficient_Weeding_Robots_strong_/23659524",
+      "evidence": "[Dataset](https://data.dtu.dk/articles/dataset/_strong_RumexLeaves_Dataset_introduced_by_Paper_Fine-grained_Leaf_Analysis_for_Efficient_Weeding_Robots_strong_/23659524)",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Direct link to the publicly available dataset used in the study."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "└── LICENSE              <- MIT License",
+      "evidence_location": "98",
+      "confidence": "high",
+      "reason": "Specifies the open-source license governing reuse and distribution."
+    },
+    {
+      "field": "environment_setup_commands",
+      "value": "make create_environment\nmake requirements",
+      "normalized_value": "make create_environment make requirements",
+      "evidence": "make create_environment\nmake requirements",
+      "evidence_location": "23-24",
+      "confidence": "high",
+      "reason": "Provides the exact commands to set up the Python environment and install dependencies."
+    },
+    {
+      "field": "data_preparation_command",
+      "value": "make data",
+      "normalized_value": "make data",
+      "evidence": "make data",
+      "evidence_location": "28",
+      "confidence": "high",
+      "reason": "Command to download and prepare the dataset for training and evaluation."
+    },
+    {
+      "field": "inference_command",
+      "value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/inference.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth -img data/processed/RumexLeaves/iNaturalist/4150.jpg",
+      "normalized_value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/inference.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth -img data/processed/RumexLeaves/iNaturalist/4150.jpg",
+      "evidence": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/inference.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth -img data/processed/RumexLeaves/iNaturalist/4150.jpg",
+      "evidence_location": "40",
+      "confidence": "high",
+      "reason": "Example command to run model inference on a sample image."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/evaluate.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth",
+      "normalized_value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/evaluate.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth",
+      "evidence": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/evaluate.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Command to validate the final model on the iNaturalist dataset."
+    },
+    {
+      "field": "training_command",
+      "value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/train.py --exp_file exp_files/train_final_model.py",
+      "normalized_value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/train.py --exp_file exp_files/train_final_model.py",
+      "evidence": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/train.py --exp_file exp_files/train_final_model.py",
+      "evidence_location": "48",
+      "confidence": "high",
+      "reason": "Command to train the final model from scratch."
+    },
+    {
+      "field": "docker_training_command",
+      "value": "docker run --gpus all -v \"$(pwd)/data/processed:/data/processed\" -v \"$(pwd)/log:/log\" -v \"$(pwd)/exp_files/train_final_model.py:/exp_file.py\" -e WANDB_API_KEY=<your-api-key> --shm-size=500m train_model",
+      "normalized_value": "docker run --gpus all -v \"$(pwd)/data/processed:/data/processed\" -v \"$(pwd)/log:/log\" -v \"$(pwd)/exp_files/train_final_model.py:/exp_file.py\" -e WANDB_API_KEY=<your-api-key> --shm-size=500m train_model",
+      "evidence": "docker run --gpus all -v \"$(pwd)/data/processed:/data/processed\" -v \"$(pwd)/log:/log\" -v \"$(pwd)/exp_files/train_final_model.py:/exp_file.py\" -e WANDB_API_KEY=<your-api-key> --shm-size=500m train_model",
+      "evidence_location": "66",
+      "confidence": "high",
+      "reason": "Provides a reproducible Docker command for training with GPU support and volume mounts."
+    },
+    {
+      "field": "task",
+      "value": "Fine-grained analysis of leaf, stem and vein instances",
+      "normalized_value": "Fine-grained analysis of leaf, stem and vein instances",
+      "evidence": "Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances.",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Clearly defines the computer vision task addressed by the model."
+    },
+    {
+      "field": "dataset_name",
+      "value": "RumexLeaves",
+      "normalized_value": "RumexLeaves",
+      "evidence": "The underlying dataset \\textit{RumexLeaves} is made publicly available",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Names the specific dataset introduced and used for this work."
+    },
+    {
+      "field": "metric",
+      "value": "POKS",
+      "normalized_value": "POKS",
+      "evidence": "Furthermore, we introduce an adapted metric POKS complying with the concept of keypoint-guided polylines.",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Identifies the novel evaluation metric proposed in the paper."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{RumexLeaves-CenterNet,\nauthor = {Güldenring, Ronja and Andersen, Rasmus Eckholdt and Nalpantidis, Lazaros},\ntitle = {Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances},\njournal = {IEEE Robotics and Automation Letters (RA-L)},\nyear = {2024}\n}",
+      "normalized_value": "@article{RumexLeaves-CenterNet, author = {Güldenring, Ronja and Andersen, Rasmus Eckholdt and Nalpantidis, Lazaros}, title = {Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances}, journal = {IEEE Robotics and Automation Letters (RA-L)}, year = {2024}}",
+      "evidence": "@article{RumexLeaves-CenterNet,\nauthor = {Güldenring, Ronja and Andersen, Rasmus Eckholdt and Nalpantidis, Lazaros},\ntitle = {Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances},\njournal = {IEEE Robotics and Automation Letters (RA-L)},\nyear = {2024}\n}",
+      "evidence_location": "108-113",
+      "confidence": "high",
+      "reason": "Provides the exact BibTeX entry required for academic citation."
+    }
+  ]
+}

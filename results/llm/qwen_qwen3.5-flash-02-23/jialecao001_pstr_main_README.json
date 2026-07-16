@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PSTR",
+      "normalized_value": "PSTR",
+      "evidence": "# PSTR (CVPR2022)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly stated in the title header."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2204.03340",
+      "normalized_value": "https://arxiv.org/abs/2204.03340",
+      "evidence": "[*PSTR: End-to-End One-Step Person Search With Transformers (CVPR2022)*](https://arxiv.org/abs/2204.03340)",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Explicitly linked as the official implementation paper."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/JialeCao001/PSTR.git",
+      "normalized_value": "https://github.com/JialeCao001/PSTR.git",
+      "evidence": "git clone https://github.com/JialeCao001/PSTR.git",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Explicitly provided in the installation instructions."
+    },
+    {
+      "field": "description",
+      "value": "End-to-end one-step person search with Transformers",
+      "normalized_value": "End-to-end one-step person search with Transformers",
+      "evidence": "**End-to-end one-step person search** with Transformers, which does not requre NMS post-processing.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Describes the core functionality of the project."
+    },
+    {
+      "field": "python_version",
+      "value": "3.7",
+      "normalized_value": "3.7",
+      "evidence": "conda create -n pstr python=3.7 -y",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Explicitly specified in the conda environment creation command."
+    },
+    {
+      "field": "pytorch_version",
+      "value": "1.8.1",
+      "normalized_value": "1.8.1",
+      "evidence": "pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html",
+      "evidence_location": "26",
+      "confidence": "high",
+      "reason": "Explicitly specified in the pip install command."
+    },
+    {
+      "field": "cuda_version",
+      "value": "cuda11.1",
+      "normalized_value": "cuda11.1",
+      "evidence": "We install this project using cuda11.1 and PyTorch1.8.0 (or PyTorch1.9.0) as follows.",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Explicitly stated in the installation description."
+    },
+    {
+      "field": "training_command",
+      "value": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "normalized_value": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "evidence": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "evidence_location": "53",
+      "confidence": "high",
+      "reason": "Explicitly provided as the command for training with a single GPU."
+    },
+    {
+      "field": "testing_command",
+      "value": "sh run_test_prw.sh, sh run_test_cuhk.sh",
+      "normalized_value": "sh run_test_prw.sh, sh run_test_cuhk.sh",
+      "evidence": "PRW: sh run_test_prw.sh \nCUHK: sh run_test_cuhk.sh  ",
+      "evidence_location": "60-61",
+      "confidence": "high",
+      "reason": "Explicitly provided as the commands for testing on PRW and CUHK datasets."
+    },
+    {
+      "field": "datasets",
+      "value": "PRW, CUHK-SYSU",
+      "normalized_value": "PRW, CUHK-SYSU",
+      "evidence": "- Download [PRW](https://github.com/liangzheng06/PRW-baseline) and [CUHK-SYSU](https://github.com/ShuangLI59/person_search) datasets.",
+      "evidence_location": "47",
+      "confidence": "high",
+      "reason": "Explicitly listed as required datasets for the project."
+    },
+    {
+      "field": "backbones",
+      "value": "ResNet50, ResNet50-DCN, and PVTv2b2",
+      "normalized_value": "ResNet50, ResNet50-DCN, and PVTv2b2",
+      "evidence": "**Pre-trained models** with ResNet50, ResNet50-DCN, and PVTv2b2.",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Explicitly listed as supported backbones for pre-trained models."
+    },
+    {
+      "field": "authors",
+      "value": "Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan",
+      "normalized_value": "Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan",
+      "evidence": "  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},",
+      "evidence_location": "89",
+      "confidence": "high",
+      "reason": "Explicitly listed in the citation BibTeX entry."
+    },
+    {
+      "field": "citation",
+      "value": "@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}",
+      "normalized_value": "@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}",
+      "evidence": "```\n@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}\n```",
+      "evidence_location": "87-94",
+      "confidence": "high",
+      "reason": "Explicitly provided in the Citation section."
+    },
+    {
+      "field": "conference",
+      "value": "CVPR2022",
+      "normalized_value": "CVPR2022",
+      "evidence": "# PSTR (CVPR2022)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly stated in the title header."
+    }
+  ]
+}

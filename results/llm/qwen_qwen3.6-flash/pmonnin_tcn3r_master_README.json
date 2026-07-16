@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "tcn3r",
+      "normalized_value": "tcn3r",
+      "evidence": "# tcn3r",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the name of the artifact in the main heading."
+    },
+    {
+      "field": "description",
+      "value": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "normalized_value": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "evidence": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides a concise description of the artifact's purpose."
+    },
+    {
+      "field": "related_article_url",
+      "value": "https://arxiv.org/pdf/2002.08103.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2002.08103.pdf",
+      "evidence": "[the related article](https://arxiv.org/pdf/2002.08103.pdf)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Links to the detailed article describing the motivation and algorithms."
+    },
+    {
+      "field": "citation",
+      "value": "Pierre Monnin, Miguel Couceiro, Amedeo Napoli, and Adrien Coulet. \"Knowledge-Based Matching of n-ary Tuples\". In: Ontologies and Concepts in Mind and Machine - 25th International Conference on Conceptual Structures, ICCS 2020, Bolzano, Italy, September 18–20, 2020, Proceedings. Ed. by Mehwish Alam, Tanya Braun, and Bruno Yun. Vol. 12277. Lecture Notes in Computer Science. Springer, 2020, pp. 48–56. doi: 10.1007/978-3-030-57855-8_4. url: https://doi.org/10.1007/978-3-030-57855-8_4.",
+      "normalized_value": "Pierre Monnin, Miguel Couceiro, Amedeo Napoli, and Adrien Coulet. \"Knowledge-Based Matching of n-ary Tuples\". In: Ontologies and Concepts in Mind and Machine - 25th International Conference on Conceptual Structures, ICCS 2020, Bolzano, Italy, September 18–20, 2020, Proceedings. Ed. by Mehwish Alam, Tanya Braun, and Bruno Yun. Vol. 12277. Lecture Notes in Computer Science. Springer, 2020, pp. 48–56. doi: 10.1007/978-3-030-57855-8_4. url: https://doi.org/10.1007/978-3-030-57855-8_4.",
+      "evidence": "Pierre Monnin, Miguel Couceiro, Amedeo Napoli, and Adrien Coulet. \"Knowledge-Based\nMatching of n-ary Tuples\". In: Ontologies and Concepts in Mind and Machine - 25th\nInternational Conference on Conceptual Structures, ICCS 2020, Bolzano, Italy, September\n18–20, 2020, Proceedings. Ed. by Mehwish Alam, Tanya Braun, and Bruno Yun. Vol. 12277.\nLecture Notes in Computer Science. Springer, 2020, pp. 48–56. doi: 10.1007/978-3-030-\n57855-8_4. url: https://doi.org/10.1007/978-3-030-57855-8_4.",
+      "evidence_location": "11-16",
+      "confidence": "high",
+      "reason": "Provides the full academic citation required for referencing the artifact."
+    },
+    {
+      "field": "batch_mode_command",
+      "value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads",
+      "normalized_value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads",
+      "evidence": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads",
+      "evidence_location": "50",
+      "confidence": "high",
+      "reason": "Defines the command-line interface for running the tool in batch mode."
+    },
+    {
+      "field": "docker_mode_command",
+      "value": "docker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4",
+      "normalized_value": "docker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4",
+      "evidence": "docker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4",
+      "evidence_location": "68",
+      "confidence": "high",
+      "reason": "Provides the exact Docker command to execute the tool with example parameters."
+    },
+    {
+      "field": "configuration_example_path",
+      "value": "data/conf.json.example",
+      "normalized_value": "data/conf.json.example",
+      "evidence": "[An example is provided](data/conf.json.example).",
+      "evidence_location": "104",
+      "confidence": "high",
+      "reason": "Points to the example configuration file needed to run the tool."
+    },
+    {
+      "field": "test_owl_file_path",
+      "value": "test/pgxo+test.owl",
+      "normalized_value": "test/pgxo+test.owl",
+      "evidence": "A [test/pgxo+test.owl](test/pgxo+test.owl) file is available to test tcn3r.",
+      "evidence_location": "235",
+      "confidence": "high",
+      "reason": "Indicates the test ontology file used for validating the tool."
+    },
+    {
+      "field": "test_config_path",
+      "value": "test/test-conf.json",
+      "normalized_value": "test/test-conf.json",
+      "evidence": "run tcn3r using the test configuration provided in [test/test-conf.json](test/test-conf.json) and the following parameters",
+      "evidence_location": "237",
+      "confidence": "high",
+      "reason": "Points to the test configuration file for reproducing test cases."
+    },
+    {
+      "field": "test_expected_output_path",
+      "value": "test/expected-output.ttl",
+      "normalized_value": "test/expected-output.ttl",
+      "evidence": "The (sorted) expected results can be found in [test/expected-output.ttl](test/expected-output.ttl).",
+      "evidence_location": "241",
+      "confidence": "high",
+      "reason": "Provides the path to the expected output for verifying test results."
+    },
+    {
+      "field": "test_documentation_path",
+      "value": "test/documentation-tests.pdf",
+      "normalized_value": "test/documentation-tests.pdf",
+      "evidence": "The description of the test cases can be found in [test/documentation-tests.pdf](test/documentation-tests.pdf).",
+      "evidence_location": "240",
+      "confidence": "high",
+      "reason": "Points to the documentation describing the test cases."
+    },
+    {
+      "field": "dependencies",
+      "value": "C++17, boost, libcurl, OpenMP",
+      "normalized_value": "C++17, boost, libcurl, OpenMP",
+      "evidence": "* C++17\n* boost\n* libcurl\n* OpenMP",
+      "evidence_location": "245-248",
+      "confidence": "high",
+      "reason": "Lists the required software dependencies for building or running the artifact."
+    }
+  ]
+}

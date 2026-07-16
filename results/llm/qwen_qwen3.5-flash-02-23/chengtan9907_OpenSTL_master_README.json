@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "# OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning",
+      "normalized_value": "OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning",
+      "evidence": "# OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the main header."
+    },
+    {
+      "field": "artifact_description",
+      "value": "OpenSTL is a comprehensive benchmark for spatio-temporal predictive learning, encompassing a broad spectrum of methods and diverse tasks, ranging from synthetic moving object trajectories to real-world scenarios such as human motion, driving scenes, traffic flow, and weather forecasting.",
+      "normalized_value": "OpenSTL is a comprehensive benchmark for spatio-temporal predictive learning, encompassing a broad spectrum of methods and diverse tasks, ranging from synthetic moving object trajectories to real-world scenarios such as human motion, driving scenes, traffic flow, and weather forecasting.",
+      "evidence": "OpenSTL is a comprehensive benchmark for spatio-temporal predictive learning, encompassing a broad spectrum of methods and diverse tasks, ranging from synthetic moving object trajectories to real-world scenarios such as human motion, driving scenes, traffic flow, and weather forecasting.",
+      "evidence_location": "33",
+      "confidence": "high",
+      "reason": "Provides a clear description of the artifact's purpose and scope."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/chengtan9907/OpenSTL",
+      "normalized_value": "https://github.com/chengtan9907/OpenSTL",
+      "evidence": "git clone https://github.com/chengtan9907/OpenSTL",
+      "evidence_location": "85",
+      "confidence": "high",
+      "reason": "Direct link to the source code repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2306.11249",
+      "normalized_value": "https://arxiv.org/abs/2306.11249",
+      "evidence": "<a href=\"https://arxiv.org/abs/2306.11249\" alt=\"arXiv\">",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Link to the associated research paper on arXiv."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://openstl.readthedocs.io/en/latest/",
+      "normalized_value": "https://openstl.readthedocs.io/en/latest/",
+      "evidence": "<a href=\"https://openstl.readthedocs.io/en/latest/\" alt=\"docs\">",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Link to the official documentation site."
+    },
+    {
+      "field": "license",
+      "value": "This project is released under the [Apache 2.0 license](LICENSE).",
+      "normalized_value": "This project is released under the [Apache 2.0 license](LICENSE)",
+      "evidence": "This project is released under the [Apache 2.0 license](LICENSE).",
+      "evidence_location": "243",
+      "confidence": "high",
+      "reason": "Explicitly states the license type and terms."
+    },
+    {
+      "field": "installation_commands",
+      "value": "```shell\ngit clone https://github.com/chengtan9907/OpenSTL\ncd OpenSTL\nconda env create -f environment.yml\nconda activate OpenSTL\npython setup.py develop\n```",
+      "normalized_value": "```shell git clone https://github.com/chengtan9907/OpenSTL cd OpenSTL conda env create -f environment.yml conda activate OpenSTL python setup.py develop ```",
+      "evidence": "```shell\ngit clone https://github.com/chengtan9907/OpenSTL\ncd OpenSTL\nconda env create -f environment.yml\nconda activate OpenSTL\npython setup.py develop\n```",
+      "evidence_location": "84-90",
+      "confidence": "high",
+      "reason": "Provides the exact commands required to clone and set up the environment."
+    },
+    {
+      "field": "dependencies",
+      "value": "* argparse\n* dask\n* decord\n* fvcore\n* hickle\n* lpips\n* matplotlib\n* netcdf4\n* numpy\n* opencv-python\n* packaging\n* pandas\n* python<=3.10.8\n* scikit-image\n* scikit-learn\n* torch\n* timm\n* tqdm\n* xarray==0.19.0",
+      "normalized_value": "* argparse * dask * decord * fvcore * hickle * lpips * matplotlib * netcdf4 * numpy * opencv-python * packaging * pandas * python<=3.10.8 * scikit-image * scikit-learn * torch * timm * tqdm * xarray==0.19.0",
+      "evidence": "* argparse\n* dask\n* decord\n* fvcore\n* hickle\n* lpips\n* matplotlib\n* netcdf4\n* numpy\n* opencv-python\n* packaging\n* pandas\n* python<=3.10.8\n* scikit-image\n* scikit-learn\n* torch\n* timm\n* tqdm\n* xarray==0.19.0",
+      "evidence_location": "95-114",
+      "confidence": "high",
+      "reason": "Lists all required Python packages and versions for the project."
+    },
+    {
+      "field": "training_command_example",
+      "value": "```shell\nbash tools/prepare_data/download_mmnist.sh\npython tools/train.py -d mmnist --lr 1e-3 -c configs/mmnist/simvp/SimVP_gSTA.py --ex_name mmnist_simvp_gsta\n```",
+      "normalized_value": "```shell bash tools/prepare_data/download_mmnist.sh python tools/train.py -d mmnist --lr 1e-3 -c configs/mmnist/simvp/SimVP_gSTA.py --ex_name mmnist_simvp_gsta ```",
+      "evidence": "```shell\nbash tools/prepare_data/download_mmnist.sh\npython tools/train.py -d mmnist --lr 1e-3 -c configs/mmnist/simvp/SimVP_gSTA.py --ex_name mmnist_simvp_gsta\n```",
+      "evidence_location": "121-124",
+      "confidence": "high",
+      "reason": "Provides a concrete example of how to run training on a specific dataset."
+    },
+    {
+      "field": "supported_datasets",
+      "value": "- [x] [BAIR Robot Pushing](https://arxiv.org/abs/1710.05268) (CoRL'2017) [[download](https://sites.google.com/berkeley.edu/robotic-interaction-datasets)] [[config](configs/bair)]\n- [x] [Human3.6M](http://vision.imar.ro/human3.6m/pami-h36m.pdf) (TPAMI'2014) [[download](http://vision.imar.ro/human3.6m/description.php)] [[config](configs/human)]\n- [x] [KTH Action](https://ieeexplore.ieee.org/document/1334462) (ICPR'2004) [[download](https://www.csc.kth.se/cvap/actions/)] [[config](configs/kth)]\n- [x] [KittiCaltech Pedestrian](https://dl.acm.org/doi/10.1177/0278364913491297) (IJRR'2013) [[download](https://www.dropbox.com/s/rpwlnn6j39jjme4/kitti_data.zip)] [[config](configs/kitticaltech)]\n- [x] [Kinetics-400](https://arxiv.org/abs/1705.06950) (ArXiv'2017) [[download](https://deepmind.com/research/open-source/kinetics)] [[config](configs/kinetics)]\n- [x] [Moving MNIST](http://arxiv.org/abs/1502.04681) (ICML'2015) [[download](http://www.cs.toronto.edu/~nitish/unsupervised_video/)] [[config](configs/mmnist)]\n- [x] [Moving FMNIST](http://arxiv.org/abs/1502.04681) (ICML'2015) [[download](https://pan.baidu.com/s/1fudsBHyrf3nbt-7d42YWWg?pwd=kjfk)] [[config](configs/mfmnist)]\n- [x] [TaxiBJ](https://arxiv.org/abs/1610.00081) (AAAI'2017) [[download](https://github.com/TolicWang/DeepST/tree/master/data/TaxiBJ)] [[config](configs/taxibj)]\n- [x] [WeatherBench](https://arxiv.org/abs/2002.00469) (ArXiv'2020) [[download](https://github.com/pangeo-data/WeatherBench)] [[config](configs/weather)]",
+      "normalized_value": "- [x] [BAIR Robot Pushing](https://arxiv.org/abs/1710.05268) (CoRL'2017) [[download](https://sites.google.com/berkeley.edu/robotic-interaction-datasets)] [[config](configs/bair)] - [x] [Human3.6M](http://vision.imar.ro/human3.6m/pami-h36m.pdf) (TPAMI'2014) [[download](http://vision.imar.ro/human3.6m/description.php)] [[config](configs/human)] - [x] [KTH Action](https://ieeexplore.ieee.org/document/1334462) (ICPR'2004) [[download](https://www.csc.kth.se/cvap/actions/)] [[config](configs/kth)] - [x] [KittiCaltech Pedestrian](https://dl.acm.org/doi/10.1177/0278364913491297) (IJRR'2013) [[download](https://www.dropbox.com/s/rpwlnn6j39jjme4/kitti_data.zip)] [[config](configs/kitticaltech)] - [x] [Kinetics-400](https://arxiv.org/abs/1705.06950) (ArXiv'2017) [[download](https://deepmind.com/research/open-source/kinetics)] [[config](configs/kinetics)] - [x] [Moving MNIST](http://arxiv.org/abs/1502.04681) (ICML'2015) [[download](http://www.cs.toronto.edu/~nitish/unsupervised_video/)] [[config](configs/mmnist)] - [x] [Moving FMNIST](http://arxiv.org/abs/1502.04681) (ICML'2015) [[download](https://pan.baidu.com/s/1fudsBHyrf3nbt-7d42YWWg?pwd=kjfk)] [[config](configs/mfmnist)] - [x] [TaxiBJ](https://arxiv.org/abs/1610.00081) (AAAI'2017) [[download](https://github.com/TolicWang/DeepST/tree/master/data/TaxiBJ)] [[config](configs/taxibj)] - [x] [WeatherBench](https://arxiv.org/abs/2002.00469) (ArXiv'2020) [[download](https://github.com/pangeo-data/WeatherBench)] [[config](configs/weather)]",
+      "evidence": "- [x] [BAIR Robot Pushing](https://arxiv.org/abs/1710.05268) (CoRL'2017) [[download](https://sites.google.com/berkeley.edu/robotic-interaction-datasets)] [[config](configs/bair)]\n- [x] [Human3.6M](http://vision.imar.ro/human3.6m/pami-h36m.pdf) (TPAMI'2014) [[download](http://vision.imar.ro/human3.6m/description.php)] [[config](configs/human)]\n- [x] [KTH Action](https://ieeexplore.ieee.org/document/1334462) (ICPR'2004) [[download](https://www.csc.kth.se/cvap/actions/)] [[config](configs/kth)]\n- [x] [KittiCaltech Pedestrian](https://dl.acm.org/doi/10.1177/0278364913491297) (IJRR'2013) [[download](https://www.dropbox.com/s/rpwlnn6j39jjme4/kitti_data.zip)] [[config](configs/kitticaltech)]\n- [x] [Kinetics-400](https://arxiv.org/abs/1705.06950) (ArXiv'2017) [[download](https://deepmind.com/research/open-source/kinetics)] [[config](configs/kinetics)]\n- [x] [Moving MNIST](http://arxiv.org/abs/1502.04681) (ICML'2015) [[download](http://www.cs.toronto.edu/~nitish/unsupervised_video/)] [[config](configs/mmnist)]\n- [x] [Moving FMNIST](http://arxiv.org/abs/1502.04681) (ICML'2015) [[download](https://pan.baidu.com/s/1fudsBHyrf3nbt-7d42YWWg?pwd=kjfk)] [[config](configs/mfmnist)]\n- [x] [TaxiBJ](https://arxiv.org/abs/1610.00081) (AAAI'2017) [[download](https://github.com/TolicWang/DeepST/tree/master/data/TaxiBJ)] [[config](configs/taxibj)]\n- [x] [WeatherBench](https://arxiv.org/abs/2002.00469) (ArXiv'2020) [[download](https://github.com/pangeo-data/WeatherBench)] [[config](configs/weather)]",
+      "evidence_location": "185-194",
+      "confidence": "high",
+      "reason": "Lists all datasets supported by the benchmark framework."
+    },
+    {
+      "field": "supported_methods",
+      "value": "- [x] [ConvLSTM](https://arxiv.org/abs/1506.04214) (NeurIPS'2015)\n- [x] [PredRNN](https://dl.acm.org/doi/abs/10.5555/3294771.3294855) (NeurIPS'2017)\n- [x] [PredRNN++](https://arxiv.org/abs/1804.06300) (ICML'2018)\n- [x] [E3D-LSTM](https://openreview.net/forum?id=B1lKS2AqtX) (ICLR'2018)\n- [x] [MIM](https://arxiv.org/abs/1811.07490) (CVPR'2019)\n- [x] [PhyDNet](https://arxiv.org/abs/2003.01460) (CVPR'2020)\n- [x] [MAU](https://openreview.net/forum?id=qwtfY-3ibt7) (NeurIPS'2021)\n- [x] [PredRNN.V2](https://arxiv.org/abs/2103.09504v4) (TPAMI'2022)\n- [x] [SimVP](https://arxiv.org/abs/2206.05099) (CVPR'2022)\n- [x] [SimVP.V2](https://arxiv.org/abs/2211.12509) (ArXiv'2022)\n- [x] [TAU](https://arxiv.org/abs/2206.12126) (CVPR'2023)\n- [x] [MMVP](https://arxiv.org/abs/2308.16154) (ICCV'2023)\n- [x] [SwinLSTM](https://arxiv.org/abs/2308.09891) (ICCV'2023)\n- [x] WaST (AAAI'2024)",
+      "normalized_value": "- [x] [ConvLSTM](https://arxiv.org/abs/1506.04214) (NeurIPS'2015) - [x] [PredRNN](https://dl.acm.org/doi/abs/10.5555/3294771.3294855) (NeurIPS'2017) - [x] [PredRNN++](https://arxiv.org/abs/1804.06300) (ICML'2018) - [x] [E3D-LSTM](https://openreview.net/forum?id=B1lKS2AqtX) (ICLR'2018) - [x] [MIM](https://arxiv.org/abs/1811.07490) (CVPR'2019) - [x] [PhyDNet](https://arxiv.org/abs/2003.01460) (CVPR'2020) - [x] [MAU](https://openreview.net/forum?id=qwtfY-3ibt7) (NeurIPS'2021) - [x] [PredRNN.V2](https://arxiv.org/abs/2103.09504v4) (TPAMI'2022) - [x] [SimVP](https://arxiv.org/abs/2206.05099) (CVPR'2022) - [x] [SimVP.V2](https://arxiv.org/abs/2211.12509) (ArXiv'2022) - [x] [TAU](https://arxiv.org/abs/2206.12126) (CVPR'2023) - [x] [MMVP](https://arxiv.org/abs/2308.16154) (ICCV'2023) - [x] [SwinLSTM](https://arxiv.org/abs/2308.09891) (ICCV'2023) - [x] WaST (AAAI'2024)",
+      "evidence": "- [x] [ConvLSTM](https://arxiv.org/abs/1506.04214) (NeurIPS'2015)\n- [x] [PredRNN](https://dl.acm.org/doi/abs/10.5555/3294771.3294855) (NeurIPS'2017)\n- [x] [PredRNN++](https://arxiv.org/abs/1804.06300) (ICML'2018)\n- [x] [E3D-LSTM](https://openreview.net/forum?id=B1lKS2AqtX) (ICLR'2018)\n- [x] [MIM](https://arxiv.org/abs/1811.07490) (CVPR'2019)\n- [x] [PhyDNet](https://arxiv.org/abs/2003.01460) (CVPR'2020)\n- [x] [MAU](https://openreview.net/forum?id=qwtfY-3ibt7) (NeurIPS'2021)\n- [x] [PredRNN.V2](https://arxiv.org/abs/2103.09504v4) (TPAMI'2022)\n- [x] [SimVP](https://arxiv.org/abs/2206.05099) (CVPR'2022)\n- [x] [SimVP.V2](https://arxiv.org/abs/2211.12509) (ArXiv'2022)\n- [x] [TAU](https://arxiv.org/abs/2206.12126) (CVPR'2023)\n- [x] [MMVP](https://arxiv.org/abs/2308.16154) (ICCV'2023)\n- [x] [SwinLSTM](https://arxiv.org/abs/2308.09891) (ICCV'2023)\n- [x] WaST (AAAI'2024)",
+      "evidence_location": "145-158",
+      "confidence": "high",
+      "reason": "Lists all spatiotemporal prediction methods supported by the framework."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{tan2023openstl,\n  title={OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning},\n  author={Tan, Cheng and Li, Siyuan and Gao, Zhangyang and Guan, Wenfei and Wang, Zedong and Liu, Zicheng and Wu, Lirong and Li, Stan Z},\n  booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year={2023}\n}\n@inproceedings{gao2022simvp,\n  title={Simvp: Simpler yet better video prediction},\n  author={Gao, Zhangyang and Tan, Cheng and Wu, Lirong and Li, Stan Z},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={3170--3180},\n  year={2022}\n}\n@article{tan2022simvpv2,\n  title={SimVP: Towards Simple yet Powerful Spatiotemporal Predictive Learning},\n  author={Tan, Cheng and Gao, Zhangyang and Li, Siyuan and Li, Stan Z},\n  journal={arXiv preprint arXiv:2211.12509},\n  year={2022}\n}\n@inproceedings{tan2023temporal,\n  title={Temporal attention unit: Towards efficient spatiotemporal predictive learning},\n  author={Tan, Cheng and Gao, Zhangyang and Wu, Lirong and Xu, Yongjie and Xia, Jun and Li, Siyuan and Li, Stan Z},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={18770--18782},\n  year={2023}\n}",
+      "normalized_value": "@inproceedings{tan2023openstl, title={OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning}, author={Tan, Cheng and Li, Siyuan and Gao, Zhangyang and Guan, Wenfei and Wang, Zedong and Liu, Zicheng and Wu, Lirong and Li, Stan Z}, booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track}, year={2023} } @inproceedings{gao2022simvp, title={Simvp: Simpler yet better video prediction}, author={Gao, Zhangyang and Tan, Cheng and Wu, Lirong and Li, Stan Z}, booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages={3170--3180}, year={2022} } @article{tan2022simvpv2, title={SimVP: Towards Simple yet Powerful Spatiotemporal Predictive Learning}, author={Tan, Cheng and Gao, Zhangyang and Li, Siyuan and Li, Stan Z}, journal={arXiv preprint arXiv:2211.12509}, year={2022} } @inproceedings{tan2023temporal, title={Temporal attention unit: Towards efficient spatiotemporal predictive learning}, author={Tan, Cheng and Gao, Zhangyang and Wu, Lirong and Xu, Yongjie and Xia, Jun and Li, Siyuan and Li, Stan Z}, booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages={18770--18782}, year={2023} }",
+      "evidence": "@inproceedings{tan2023openstl,\n  title={OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning},\n  author={Tan, Cheng and Li, Siyuan and Gao, Zhangyang and Guan, Wenfei and Wang, Zedong and Liu, Zicheng and Wu, Lirong and Li, Stan Z},\n  booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year={2023}\n}\n@inproceedings{gao2022simvp,\n  title={Simvp: Simpler yet better video prediction},\n  author={Gao, Zhangyang and Tan, Cheng and Wu, Lirong and Li, Stan Z},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={3170--3180},\n  year={2022}\n}\n@article{tan2022simvpv2,\n  title={SimVP: Towards Simple yet Powerful Spatiotemporal Predictive Learning},\n  author={Tan, Cheng and Gao, Zhangyang and Li, Siyuan and Li, Stan Z},\n  journal={arXiv preprint arXiv:2211.12509},\n  year={2022}\n}\n@inproceedings{tan2023temporal,\n  title={Temporal attention unit: Towards efficient spatiotemporal predictive learning},\n  author={Tan, Cheng and Gao, Zhangyang and Wu, Lirong and Xu, Yongjie and Xia, Jun and Li, Siyuan and Li, Stan Z},\n  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\n  pages={18770--18782},\n  year={2023}\n}",
+      "evidence_location": "253-280",
+      "confidence": "high",
+      "reason": "Provides BibTeX entries for citing the project and related papers."
+    },
+    {
+      "field": "contact_email",
+      "value": "- Siyuan Li (lisiyuan@westlake.edu.cn), Westlake University & Zhejiang University\n- Cheng Tan (tancheng@westlake.edu.cn), Westlake University & Zhejiang University\n- Zhangyang Gao (gaozhangyang@westlake.edu.cn), Westlake University & Zhejiang University",
+      "normalized_value": "- Siyuan Li (lisiyuan@westlake.edu.cn), Westlake University & Zhejiang University - Cheng Tan (tancheng@westlake.edu.cn), Westlake University & Zhejiang University - Zhangyang Gao (gaozhangyang@westlake.edu.cn), Westlake University & Zhejiang University",
+      "evidence": "- Siyuan Li (lisiyuan@westlake.edu.cn), Westlake University & Zhejiang University\n- Cheng Tan (tancheng@westlake.edu.cn), Westlake University & Zhejiang University\n- Zhangyang Gao (gaozhangyang@westlake.edu.cn), Westlake University & Zhejiang University",
+      "evidence_location": "286-289",
+      "confidence": "high",
+      "reason": "Lists contact emails and affiliations for the project maintainers."
+    }
+  ]
+}

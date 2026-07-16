@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "AltEntities (Alternative Entities) dataset",
+      "normalized_value": "AltEntities (Alternative Entities) dataset",
+      "evidence": "# AltEntities (Alternative Entities) dataset: Resolving Indirect Referring Expressions for Entity Selection",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the name of the artifact in the main header."
+    },
+    {
+      "field": "artifact_purpose",
+      "value": "Resolving Indirect Referring Expressions for Entity Selection",
+      "normalized_value": "Resolving Indirect Referring Expressions for Entity Selection",
+      "evidence": "# AltEntities (Alternative Entities) dataset: Resolving Indirect Referring Expressions for Entity Selection",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Clearly describes the primary task and purpose of the dataset."
+    },
+    {
+      "field": "license",
+      "value": "CC-BY SA 3.0 License",
+      "normalized_value": "CC-BY SA 3.0 License",
+      "evidence": "This is the work of *Mohammad Javad Hosseini*, *Filip Radlinski*, *Silvia Pareti*, and *Annie Louis* from Google LLC, made available under the CC-BY SA 3.0 License.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Explicitly states the license governing reuse and distribution."
+    },
+    {
+      "field": "license_url",
+      "value": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "normalized_value": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "evidence": "A full copy of the license can be found at https://creativecommons.org/licenses/by-sa/3.0/",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Provides a direct link to the full license text for legal compliance."
+    },
+    {
+      "field": "authors",
+      "value": "Mohammad Javad Hosseini, Filip Radlinski, Silvia Pareti, and Annie Louis",
+      "normalized_value": "Mohammad Javad Hosseini, Filip Radlinski, Silvia Pareti, and Annie Louis",
+      "evidence": "This is the work of *Mohammad Javad Hosseini*, *Filip Radlinski*, *Silvia Pareti*, and *Annie Louis* from Google LLC",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Identifies the creators of the dataset for attribution."
+    },
+    {
+      "field": "organization",
+      "value": "Google LLC",
+      "normalized_value": "Google LLC",
+      "evidence": "This is the work of *Mohammad Javad Hosseini*, *Filip Radlinski*, *Silvia Pareti*, and *Annie Louis* from Google LLC",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Identifies the affiliated institution of the authors."
+    },
+    {
+      "field": "dataset_size",
+      "value": "6,247 alternative questions in three domains--books, songs (music), and recipes--and 42,529 referring expressions",
+      "normalized_value": "6,247 alternative questions in three domains--books, songs (music), and recipes--and 42,529 referring expressions",
+      "evidence": "The dataset contains **6,247 alternative questions in three domains--books, songs (music), and recipes--and 42,529 referring expressions**.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Provides exact counts of questions and referring expressions, crucial for understanding dataset scale."
+    },
+    {
+      "field": "dataset_domains",
+      "value": "books, songs (music), and recipes",
+      "normalized_value": "books, songs (music), and recipes",
+      "evidence": "The dataset contains **6,247 alternative questions in three domains--books, songs (music), and recipes--and 42,529 referring expressions**.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Specifies the three domains covered by the dataset."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2212.10933",
+      "normalized_value": "https://arxiv.org/abs/2212.10933",
+      "evidence": "A full description of the data collection methodology, analyses, human rater instructions, and the performance of the SOTA LLMs can be found in the associated research [paper](https://arxiv.org/abs/2212.10933).",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Links to the associated research paper detailing methodology and results."
+    },
+    {
+      "field": "data_format",
+      "value": "json",
+      "normalized_value": "json",
+      "evidence": "The data is released in a json format with each example (json object) representing one alternative question along with its referring expressions.",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Specifies the file format used for data distribution."
+    },
+    {
+      "field": "data_schema_fields",
+      "value": "domain, question, target, target_index, sampling_method, description_section, choices, choice/name, choice/wikipedia_url, choice/description, choice/infobox, choice/unshown_background, expressions",
+      "normalized_value": "domain, question, target, target_index, sampling_method, description_section, choices, choice/name, choice/wikipedia_url, choice/description, choice/infobox, choice/unshown_background, expressions",
+      "evidence": "* domain: The domain of the example: “BOOKS”, “RECIPES”, or “SONGS”.\n* question: An alternative question providing two choices.\n* target: The URL of the target entity.\n* target_index: The index (position) of the target entity in the question (0 or 1).\n* sampling_method: The sampling method used to sample the entities in the question (e.g., SAME_NAME, SIMILAR_NAME, or SIMILAR_DESCRIPTION).\n* description_section: The title of the Wikipedia section shown to crowd workers. If empty, indicates the first section. This does not apply to the \"SONGS\" domain.\n* choices: Information about the two choices. See below fields for more information.\n* choice/name: The name of the choice.\n* choice/wikipedia_url: The Wikipedia URL of the choice.\n* choice/description: The choice description shown to crowd workers.\n* choice/infobox: Textual representation of the choice’s Wikipedia infobox.\n* choice/unshown_background: The choice/infobox above concatenated with Wikipedia sections that were *not* shown to crowd workers.\n* expressions: Referring expressions written by crowd workers to select the target entity.",
+      "evidence_location": "25-37",
+      "confidence": "high",
+      "reason": "Lists all JSON keys provided in the dataset, essential for programmatic access and understanding data structure."
+    },
+    {
+      "field": "data_directory_structure",
+      "value": "The data directory contains the full set of examples (all.json). For each domain (books, recipes, and songs), a subdirectory contains all its examples which are split into train.json, dev.json, and test.json. In addition, the mixed subdirectory contains the mix of examples in the three domains.",
+      "normalized_value": "The data directory contains the full set of examples (all.json). For each domain (books, recipes, and songs), a subdirectory contains all its examples which are split into train.json, dev.json, and test.json. In addition, the mixed subdirectory contains the mix of examples in the three domains.",
+      "evidence": "The *data* directory contains the full set of examples (*all.json*). For each domain (*books*, *recipes*, and *songs*), a subdirectory contains all its examples which are split into *train.json*, *dev.json*, and *test.json*. In addition, the mixed subdirectory contains the mix of examples in the three domains.",
+      "evidence_location": "39",
+      "confidence": "high",
+      "reason": "Describes the directory layout and train/dev/test splits, critical for reproducibility and usage."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{hosseini2022resolving, title={Resolving Indirect Referring Expressions for Entity Selection}, author={Hosseini, Mohammad Javad and Radlinski, Filip and Pareti, Silvia and Louis, Annie}, journal={arXiv preprint arXiv:2212.10933}, year={2022}}",
+      "normalized_value": "@article{hosseini2022resolving, title={Resolving Indirect Referring Expressions for Entity Selection}, author={Hosseini, Mohammad Javad and Radlinski, Filip and Pareti, Silvia and Louis, Annie}, journal={arXiv preprint arXiv:2212.10933}, year={2022}}",
+      "evidence": "```\n@article{hosseini2022resolving,\n  title={Resolving Indirect Referring Expressions for Entity Selection},\n  author={Hosseini, Mohammad Javad and Radlinski, Filip and Pareti, Silvia and Louis, Annie},\n  journal={arXiv preprint arXiv:2212.10933},\n  year={2022}\n}\n```",
+      "evidence_location": "44-50",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for academic attribution."
+    },
+    {
+      "field": "task",
+      "value": "resolving indirect referring expressions for entity selection",
+      "normalized_value": "resolving indirect referring expressions for entity selection",
+      "evidence": "The dataset is suitable for building machine learning systems to resolve indirect referring expressions for entity selection.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Explicitly states the machine learning task the dataset is designed for."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Words as Gatekeepers",
+      "normalized_value": "Words as Gatekeepers",
+      "evidence": "# Words as Gatekeepers",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit title of the project/repository."
+    },
+    {
+      "field": "license",
+      "value": "CC BY-NC 4.0",
+      "normalized_value": "CC BY-NC 4.0",
+      "evidence": "License: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly states the license under which the artifact is distributed."
+    },
+    {
+      "field": "authors",
+      "value": "Li Lucy, Jesse Dodge, David Bamman, Katherine A. Keith",
+      "normalized_value": "Li Lucy, Jesse Dodge, David Bamman, Katherine A. Keith",
+      "evidence": "**Authors**: Li Lucy, Jesse Dodge, David Bamman, Katherine A. Keith",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Lists the creators of the work, essential for attribution."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2212.09676",
+      "normalized_value": "https://arxiv.org/abs/2212.09676",
+      "evidence": "[Paper](https://arxiv.org/abs/2212.09676)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Direct link to the associated academic paper for citation and context."
+    },
+    {
+      "field": "blog_post_url",
+      "value": "https://blog.allenai.org/words-as-gatekeepers-measuring-discipline-specific-terms-and-meanings-in-scholarly-publications-718dc56d08a5",
+      "normalized_value": "https://blog.allenai.org/words-as-gatekeepers-measuring-discipline-specific-terms-and-meanings-in-scholarly-publications-718dc56d08a5",
+      "evidence": "[Blog post](https://blog.allenai.org/words-as-gatekeepers-measuring-discipline-specific-terms-and-meanings-in-scholarly-publications-718dc56d08a5)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Provides additional context and summary of the research outside the paper."
+    },
+    {
+      "field": "description",
+      "value": "Scholarly text is often laden with jargon, or specialized language that can facilitate efficient in-group communication within fields but hinder understanding for out-groups. In this work, we develop and validate an interpretable approach for measuring scholarly jargon from text. Expanding the scope of prior work which focuses on word types, we use word sense induction to also identify words that are widespread but overloaded with different meanings across fields. We then estimate the prevalence of these discipline-specific words and senses across hundreds of subfields, and show that word senses provide a complementary, yet unique view of jargon alongside word types. We demonstrate the utility of our metrics for science of science and computational sociolinguistics by highlighting two key social implications. First, though most fields reduce their use of jargon when writing for general-purpose venues, and some fields (e.g., biological sciences) do so less than others. Second, the direction of correlation between jargon and citation rates varies among fields, but jargon is nearly always negatively correlated with interdisciplinary impact. Broadly, our findings suggest that though multidisciplinary venues intend to cater to more general audiences, some fields' writing norms may act as barriers rather than bridges, and thus impede the dispersion of scholarly ideas.",
+      "normalized_value": "Scholarly text is often laden with jargon, or specialized language that can facilitate efficient in-group communication within fields but hinder understanding for out-groups. In this work, we develop and validate an interpretable approach for measuring scholarly jargon from text. Expanding the scope of prior work which focuses on word types, we use word sense induction to also identify words that are widespread but overloaded with different meanings across fields. We then estimate the prevalence of these discipline-specific words and senses across hundreds of subfields, and show that word senses provide a complementary, yet unique view of jargon alongside word types. We demonstrate the utility of our metrics for science of science and computational sociolinguistics by highlighting two key social implications. First, though most fields reduce their use of jargon when writing for general-purpose venues, and some fields (e.g., biological sciences) do so less than others. Second, the direction of correlation between jargon and citation rates varies among fields, but jargon is nearly always negatively correlated with interdisciplinary impact. Broadly, our findings suggest that though multidisciplinary venues intend to cater to more general audiences, some fields' writing norms may act as barriers rather than bridges, and thus impede the dispersion of scholarly ideas.",
+      "evidence": "**Abstract**: Scholarly text is often laden with jargon, or specialized language that can facilitate efficient in-group communication within fields but hinder understanding for out-groups. In this work, we develop and validate an interpretable approach for measuring scholarly jargon from text. Expanding the scope of prior work which focuses on word types, we use word sense induction to also identify words that are widespread but overloaded with different meanings across fields. We then estimate the prevalence of these discipline-specific words and senses across hundreds of subfields, and show that word senses provide a complementary, yet unique view of jargon alongside word types. We demonstrate the utility of our metrics for science of science and computational sociolinguistics by highlighting two key social implications. First, though most fields reduce their use of jargon when writing for general-purpose venues, and some fields (e.g., biological sciences) do so less than others. Second, the direction of correlation between jargon and citation rates varies among fields, but jargon is nearly always negatively correlated with interdisciplinary impact. Broadly, our findings suggest that though multidisciplinary venues intend to cater to more general audiences, some fields' writing norms may act as barriers rather than bridges, and thus impede the dispersion of scholarly ideas.",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Provides a comprehensive summary of the artifact's purpose, methodology, and findings."
+    },
+    {
+      "field": "task",
+      "value": "measuring scholarly jargon from text, word sense induction",
+      "normalized_value": "measuring scholarly jargon from text, word sense induction",
+      "evidence": "we develop and validate an interpretable approach for measuring scholarly jargon from text. Expanding the scope of prior work which focuses on word types, we use word sense induction to also identify words that are widespread but overloaded with different meanings across fields.",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Clearly defines the core NLP task and methodology addressed by the artifact."
+    },
+    {
+      "field": "dataset",
+      "value": "S2ORC, Wikipedia, MAG",
+      "normalized_value": "S2ORC, Wikipedia, MAG",
+      "evidence": "Information on accessing S2ORC can be found [here](https://github.com/allenai/s2orc). \n\n- `data_process/clean_up_wikipedia.py`: sample a subset of Wikipedia \n- `create_mag_mapping()` in `val_data_process/fos_analysis.py`: get all MAG IDs to fos.",
+      "evidence_location": "30-33",
+      "confidence": "high",
+      "reason": "Identifies the primary data sources used for training and evaluation."
+    },
+    {
+      "field": "model",
+      "value": "scholarBERT",
+      "normalized_value": "scholarBERT",
+      "evidence": "--model scholarBERT",
+      "evidence_location": "71",
+      "confidence": "high",
+      "reason": "Specifies the pre-trained language model used in the pipeline."
+    },
+    {
+      "field": "inference_command",
+      "value": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset s2orc --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "normalized_value": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset s2orc --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "evidence": "```\npython write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset s2orc --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24\n```",
+      "evidence_location": "70-72",
+      "confidence": "high",
+      "reason": "Provides a concrete, runnable example for generating mask predictions on the S2ORC dataset."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python jargonyness_per_paper.py --cutoff 0.1 --exp_name general_specific\n\npython jargonyness_per_paper.py --cutoff 0.1 --exp_name regression_sample",
+      "normalized_value": "python jargonyness_per_paper.py --cutoff 0.1 --exp_name general_specific python jargonyness_per_paper.py --cutoff 0.1 --exp_name regression_sample",
+      "evidence": "```\npython jargonyness_per_paper.py --cutoff 0.1 --exp_name general_specific\n\npython jargonyness_per_paper.py --cutoff 0.1 --exp_name regression_sample\n```",
+      "evidence_location": "130-134",
+      "confidence": "high",
+      "reason": "Shows how to run the social implication experiments and calculate jargon metrics per paper."
+    },
+    {
+      "field": "output_data_structure",
+      "value": "logs/word_clusters_lemmed/0.0/, logs/fos_senses/es-True_res-0.0/, logs/type_npmi/fos_set-False_lemma-True/",
+      "normalized_value": "logs/word_clusters_lemmed/0.0/ logs/fos_senses/es-True_res-0.0/ logs/type_npmi/fos_set-False_lemma-True/",
+      "evidence": "- `logs/word_clusters_lemmed/0.0/` includes senses and their top predicted substitutes. Use the `Word Cluster Analysis` notebook in the code folder to inspect the content of these files. \n- `logs/fos_senses/es-True_res-0.0/` includes senses and their npmi scores in each field\n\n### Discipline-specific word types \n\n- `logs/type_npmi/fos_set-False_lemma-True/` includes lists of word types in each subfield and their npmi scores",
+      "evidence_location": "19-24",
+      "confidence": "high",
+      "reason": "Documents the expected directory structure and contents of generated analysis outputs."
+    }
+  ]
+}

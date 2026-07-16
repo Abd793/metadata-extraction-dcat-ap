@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Recursive Visual Attention in Visual Dialog",
+      "normalized_value": "Recursive Visual Attention in Visual Dialog",
+      "evidence": "Recursive Visual Attention in Visual Dialog",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the primary name of the repository and associated paper."
+    },
+    {
+      "field": "paper_title",
+      "value": "Recursive Visual Attention in Visual Dialog",
+      "normalized_value": "Recursive Visual Attention in Visual Dialog",
+      "evidence": "* Yulei Niu, Hanwang Zhang, Manli Zhang, Jianhong Zhang, Zhiwu Lu, Ji-Rong Wen, *Recursive Visual Attention in Visual Dialog*. In CVPR, 2019. ([PDF](https://arxiv.org/pdf/1812.02664.pdf))",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Explicitly states the full title of the published paper."
+    },
+    {
+      "field": "authors",
+      "value": "Yulei Niu, Hanwang Zhang, Manli Zhang, Jianhong Zhang, Zhiwu Lu, Ji-Rong Wen",
+      "normalized_value": "Yulei Niu, Hanwang Zhang, Manli Zhang, Jianhong Zhang, Zhiwu Lu, Ji-Rong Wen",
+      "evidence": "* Yulei Niu, Hanwang Zhang, Manli Zhang, Jianhong Zhang, Zhiwu Lu, Ji-Rong Wen, *Recursive Visual Attention in Visual Dialog*. In CVPR, 2019. ([PDF](https://arxiv.org/pdf/1812.02664.pdf))",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Lists all contributing authors for citation and attribution purposes."
+    },
+    {
+      "field": "publication_venue",
+      "value": "CVPR, 2019",
+      "normalized_value": "CVPR, 2019",
+      "evidence": "* Yulei Niu, Hanwang Zhang, Manli Zhang, Jianhong Zhang, Zhiwu Lu, Ji-Rong Wen, *Recursive Visual Attention in Visual Dialog*. In CVPR, 2019. ([PDF](https://arxiv.org/pdf/1812.02664.pdf))",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Specifies the conference and year where the paper was published."
+    },
+    {
+      "field": "paper_pdf_url",
+      "value": "https://arxiv.org/pdf/1812.02664.pdf",
+      "normalized_value": "https://arxiv.org/pdf/1812.02664.pdf",
+      "evidence": "([PDF](https://arxiv.org/pdf/1812.02664.pdf))",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Provides a direct link to access the full paper PDF."
+    },
+    {
+      "field": "base_repository",
+      "value": "batra-mlp-lab/visdial-challenge-starter-pytorch",
+      "normalized_value": "batra-mlp-lab/visdial-challenge-starter-pytorch",
+      "evidence": "This code is reimplemented as a fork of [batra-mlp-lab/visdial-challenge-starter-pytorch][6].",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Identifies the original repository this code is derived from, useful for tracing lineage and dependencies."
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch v1.0",
+      "normalized_value": "PyTorch v1.0",
+      "evidence": "This code is implemented using PyTorch v1.0, and provides out of the box support with CUDA 9 and CuDNN 7.",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Specifies the core deep learning framework and exact version required for reproduction."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "CUDA 9 and CuDNN 7",
+      "normalized_value": "CUDA 9 and CuDNN 7",
+      "evidence": "This code is implemented using PyTorch v1.0, and provides out of the box support with CUDA 9 and CuDNN 7.",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Details the specific GPU compute libraries and versions needed for execution."
+    },
+    {
+      "field": "environment_manager",
+      "value": "Anaconda/Miniconda",
+      "normalized_value": "Anaconda/Miniconda",
+      "evidence": "Anaconda/Miniconda is the recommended to set up this codebase:",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Recommends a specific package and environment management tool for setup."
+    },
+    {
+      "field": "dataset",
+      "value": "VisDial v1.0",
+      "normalized_value": "VisDial v1.0",
+      "evidence": "1. Download the VisDial v1.0 dialog json files from [here][3] and keep it under `$PROJECT_ROOT/data` directory, for default arguments to work effectively.",
+      "evidence_location": "49",
+      "confidence": "high",
+      "reason": "Identifies the primary dataset used for training and evaluation."
+    },
+    {
+      "field": "metrics",
+      "value": "Mean reciprocal rank, R@{1, 5, 10}, Mean rank, Normalized Discounted Cumulative Gain (NDCG)",
+      "normalized_value": "Mean reciprocal rank, R@{1, 5, 10}, Mean rank, Normalized Discounted Cumulative Gain (NDCG)",
+      "evidence": "This will generate an EvalAI submission file, and report metrics from the [Visual Dialog paper][5] (Mean reciprocal rank, R@{1, 5, 10}, Mean rank), and Normalized Discounted Cumulative Gain (NDCG), introduced in the first Visual Dialog Challenge (in 2018).",
+      "evidence_location": "121",
+      "confidence": "high",
+      "reason": "Lists the exact evaluation metrics computed and reported by the code."
+    },
+    {
+      "field": "training_command",
+      "value": "python train.py --config-yml configs/rva.yml --gpu-ids 0 # provide more ids for multi-GPU execution other args...",
+      "normalized_value": "python train.py --config-yml configs/rva.yml --gpu-ids 0 # provide more ids for multi-GPU execution other args...",
+      "evidence": "```shell\npython train.py --config-yml configs/rva.yml --gpu-ids 0 # provide more ids for multi-GPU execution other args...\n```",
+      "evidence_location": "99-101",
+      "confidence": "high",
+      "reason": "Provides the exact shell command required to train the model."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python evaluate.py --config-yml /path/to/config.yml --load-pthpath /path/to/checkpoint.pth --split val --gpu-ids 0",
+      "normalized_value": "python evaluate.py --config-yml /path/to/config.yml --load-pthpath /path/to/checkpoint.pth --split val --gpu-ids 0",
+      "evidence": "```shell\npython evaluate.py --config-yml /path/to/config.yml --load-pthpath /path/to/checkpoint.pth --split val --gpu-ids 0\n```",
+      "evidence_location": "117-119",
+      "confidence": "high",
+      "reason": "Provides the exact shell command required to evaluate a trained model checkpoint."
+    }
+  ]
+}

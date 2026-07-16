@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "MeanSum: A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "normalized_value": "MeanSum: A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence": "# MeanSum: A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the main title."
+    },
+    {
+      "field": "task",
+      "value": "Unsupervised Neural Multi-Document Abstractive Summarization",
+      "normalized_value": "Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence": "# MeanSum: A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Clearly defines the specific NLP task and methodological approach."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/1810.05739",
+      "normalized_value": "https://arxiv.org/abs/1810.05739",
+      "evidence": "Corresponding paper, accepted to ICML 2019: [https://arxiv.org/abs/1810.05739](https://arxiv.org/abs/1810.05739).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides direct access to the corresponding academic publication."
+    },
+    {
+      "field": "publication_venue",
+      "value": "ICML 2019",
+      "normalized_value": "ICML 2019",
+      "evidence": "Corresponding paper, accepted to ICML 2019: [https://arxiv.org/abs/1810.05739](https://arxiv.org/abs/1810.05739).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the conference and year where the research was published."
+    },
+    {
+      "field": "programming_language",
+      "value": "python 3",
+      "normalized_value": "python 3",
+      "evidence": "- python 3",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Specifies the required programming language version."
+    },
+    {
+      "field": "deep_learning_framework",
+      "value": "torch 0.4.0",
+      "normalized_value": "torch 0.4.0",
+      "evidence": "- torch 0.4.0",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Specifies the exact version of the PyTorch framework required."
+    },
+    {
+      "field": "docker_image",
+      "value": "pytorch/pytorch:0.4_cuda9_cudnn7",
+      "normalized_value": "pytorch/pytorch:0.4_cuda9_cudnn7",
+      "evidence": "Tested in Docker, image = ```pytorch/pytorch:0.4_cuda9_cudnn7```.",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Provides a reproducible container environment for running the code."
+    },
+    {
+      "field": "setup_commands",
+      "value": "bash setup_dirs.sh\nbash install_python_pkgs.sh\npython update_tensorboard.py",
+      "normalized_value": "bash setup_dirs.sh bash install_python_pkgs.sh python update_tensorboard.py",
+      "evidence": "bash setup_dirs.sh\n\nbash install_python_pkgs.sh\n\npython update_tensorboard.py",
+      "evidence_location": "21-34",
+      "confidence": "high",
+      "reason": "Provides the exact shell commands needed to initialize the project environment and fix dependencies."
+    },
+    {
+      "field": "dataset_name",
+      "value": "Yelp data",
+      "normalized_value": "Yelp data",
+      "evidence": "1. Download Yelp data: https://www.yelp.com/dataset and place files in ```datasets/yelp_dataset/```",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "Identifies the primary dataset used for training and evaluation."
+    },
+    {
+      "field": "data_preprocessing_command",
+      "value": "bash scripts/preprocess_data.sh",
+      "normalized_value": "bash scripts/preprocess_data.sh",
+      "evidence": "    bash scripts/preprocess_data.sh",
+      "evidence_location": "45",
+      "confidence": "high",
+      "reason": "Command to prepare the raw dataset into train/val/test splits."
+    },
+    {
+      "field": "pretrained_model_links",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt\nhttps://s3.us-east-2.amazonaws.com/unsup-sum/lm_e24_2.88.pt\nhttps://s3.us-east-2.amazonaws.com/unsup-sum/clf_e10_l0.6760_a0.7092.pt",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt https://s3.us-east-2.amazonaws.com/unsup-sum/lm_e24_2.88.pt https://s3.us-east-2.amazonaws.com/unsup-sum/clf_e10_l0.6760_a0.7092.pt",
+      "evidence": "[link](https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt)\n\n[link](https://s3.us-east-2.amazonaws.com/unsup-sum/lm_e24_2.88.pt)\n\n[link](https://s3.us-east-2.amazonaws.com/unsup-sum/clf_e10_l0.6760_a0.7092.pt)",
+      "evidence_location": "55, 58, 61",
+      "confidence": "high",
+      "reason": "Direct download links for the summarization, language, and classification model checkpoints."
+    },
+    {
+      "field": "reference_summaries_link",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/summaries_0-200_cleaned.csv",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/summaries_0-200_cleaned.csv",
+      "evidence": "Download from: [link](https://s3.us-east-2.amazonaws.com/unsup-sum/summaries_0-200_cleaned.csv).",
+      "evidence_location": "66",
+      "confidence": "high",
+      "reason": "Provides ground truth reference summaries for evaluation."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>",
+      "normalized_value": "python train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>",
+      "evidence": "python train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>",
+      "evidence_location": "79",
+      "confidence": "high",
+      "reason": "Command to run inference and compute automated metrics on the test set."
+    },
+    {
+      "field": "training_command",
+      "value": "python train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes>",
+      "normalized_value": "python train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes>",
+      "evidence": "python train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes>",
+      "evidence_location": "85",
+      "confidence": "high",
+      "reason": "Command to train the summarization model with specified hyperparameters and GPU allocation."
+    }
+  ]
+}

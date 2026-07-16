@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Scaffolding Learning Regime (SLR)",
+      "normalized_value": "Scaffolding Learning Regime (SLR)",
+      "evidence": "# Scaffolding Learning Regime (SLR)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Project title explicitly stated in the main header."
+    },
+    {
+      "field": "description",
+      "value": "A PyTorch implementation of the Scaffolding Learning Regime (SLR) for training obstacle detection models for aquatic domains.",
+      "normalized_value": "A PyTorch implementation of the Scaffolding Learning Regime (SLR) for training obstacle detection models for aquatic domains.",
+      "evidence": "A PyTorch implementation of the Scaffolding Learning Regime (SLR) for training obstacle detection models for aquatic domains.",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Explicit description of the artifact's purpose and framework."
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "A PyTorch implementation of the Scaffolding Learning Regime (SLR) for training obstacle detection models for aquatic domains.",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Programming framework explicitly mentioned in the description."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2206.13263",
+      "normalized_value": "https://arxiv.org/abs/2206.13263",
+      "evidence": "[![paper](https://img.shields.io/badge/paper-52b69a?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2206.13263)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Direct link to the paper provided in the badges section."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/lojzezust/SLR",
+      "normalized_value": "https://github.com/lojzezust/SLR",
+      "evidence": "    git clone https://github.com/lojzezust/SLR",
+      "evidence_location": "39",
+      "confidence": "high",
+      "reason": "Repository URL explicitly provided in the installation instructions."
+    },
+    {
+      "field": "task",
+      "value": "maritime obstacle detection",
+      "normalized_value": "maritime obstacle detection",
+      "evidence": "Scaffolding Learning Regime (SLR) is a method for training semantic segmentation models for maritime obstacle detection using only weak annotations (obstacle bounding boxes and water-edge poly-line). Despite a **signifficant reduction in annotation time (20x)**, SLR training **improves robustness** of networks for obstacle detection, which is a remarkable result.",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Task explicitly defined in the 'About SLR' section."
+    },
+    {
+      "field": "dataset",
+      "value": "MaSTr1325 dataset",
+      "normalized_value": "MaSTr1325 dataset",
+      "evidence": "1. Download the [MaSTr1325 dataset](https://box.vicos.si/borja/viamaro/index.html) and corresponding [weak annotations](https://github.com/lojzezust/SLR/releases/download/weights_v2/mastr_slr.zip). The weak annotation archive also includes automatically generated prior obstacle segmentation masks (i.e. using DEXTR).",
+      "evidence_location": "58",
+      "confidence": "high",
+      "reason": "Dataset name explicitly mentioned in the data preparation section."
+    },
+    {
+      "field": "benchmark",
+      "value": "MODS benchmark",
+      "normalized_value": "MODS benchmark",
+      "evidence": "Currently available pretrained model weights. All models are trained on the MaSTr1325 dataset using SLR and weak annotations and evaluated on the [MODS benchmark](https://github.com/bborja/mods_evaluation).",
+      "evidence_location": "173",
+      "confidence": "high",
+      "reason": "Benchmark explicitly mentioned in the pretrained models section."
+    },
+    {
+      "field": "metrics",
+      "value": "F1 obstacle detection scores",
+      "normalized_value": "F1 obstacle detection scores",
+      "evidence": "F1 obstacle detection scores are reported overall and separately within the 15m critical danger zone around the boat.",
+      "evidence_location": "175",
+      "confidence": "high",
+      "reason": "Evaluation metrics explicitly described in the pretrained models section."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{Zust2022Learning,\n    author = {Žust, Lojze and Kristan, Matej},\n    title = {Learning with Weak Annotations for Robust Maritime Obstacle Detection},\n    journal = {Sensors},\n    volume = {22},\n    year = {2022},\n    number = {23},\n    article-number = {9139},\n    url = {https://www.mdpi.com/1424-8220/22/23/9139},\n    issn = {1424-8220},\n    doi = {10.3390/s22239139}\n}",
+      "normalized_value": "@article{Zust2022Learning,\n    author = {Žust, Lojze and Kristan, Matej},\n    title = {Learning with Weak Annotations for Robust Maritime Obstacle Detection},\n    journal = {Sensors},\n    volume = {22},\n    year = {2022},\n    number = {23},\n    article-number = {9139},\n    url = {https://www.mdpi.com/1424-8220/22/23/9139},\n    issn = {1424-8220},\n    doi = {10.3390/s22239139}\n}",
+      "evidence": "```bibtex\n@article{Zust2022Learning,\n    author = {Žust, Lojze and Kristan, Matej},\n    title = {Learning with Weak Annotations for Robust Maritime Obstacle Detection},\n    journal = {Sensors},\n    volume = {22},\n    year = {2022},\n    number = {23},\n    article-number = {9139},\n    url = {https://www.mdpi.com/1424-8220/22/23/9139},\n    issn = {1424-8220},\n    doi = {10.3390/s22239139}\n}\n```",
+      "evidence_location": "187-200",
+      "confidence": "high",
+      "reason": "Complete BibTeX citation entry provided for the work."
+    },
+    {
+      "field": "training_command",
+      "value": "tools/train_slr.sh",
+      "normalized_value": "tools/train_slr.sh",
+      "evidence": "tools/train_slr.sh",
+      "evidence_location": "76",
+      "confidence": "high",
+      "reason": "Command to run the full SLR training pipeline."
+    },
+    {
+      "field": "inference_command",
+      "value": "python tools/general_inference.py",
+      "normalized_value": "python tools/general_inference.py",
+      "evidence": "python tools/general_inference.py \\",
+      "evidence_location": "149",
+      "confidence": "high",
+      "reason": "Command to run inference using a trained model."
+    }
+  ]
+}

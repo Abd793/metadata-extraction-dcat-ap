@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "CADET",
+      "normalized_value": "CADET",
+      "evidence": "# CADET",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Explicit project title."
+    },
+    {
+      "field": "description",
+      "value": "CADET is a solver for _quantified Boolean formulas_ with a forall-exists quantifier alternation (2QBF).",
+      "normalized_value": "CADET is a solver for _quantified Boolean formulas_ with a forall-exists quantifier alternation (2QBF).",
+      "evidence": "CADET is a solver for _quantified Boolean formulas_ with a forall-exists quantifier alternation (2QBF).",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Directly states the purpose and scope of the artifact."
+    },
+    {
+      "field": "author",
+      "value": "Markus N. Rabe",
+      "normalized_value": "Markus N. Rabe",
+      "evidence": "was written by [Markus N. Rabe](https://people.eecs.berkeley.edu/~rabe/).",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Explicitly names the author."
+    },
+    {
+      "field": "method",
+      "value": "Incremental Determinization",
+      "normalized_value": "Incremental Determinization",
+      "evidence": "The solver is based on the _Incremental Determinization_ algorithm published in SAT 2016",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Identifies the core algorithm used."
+    },
+    {
+      "field": "task",
+      "value": "2QBF solving",
+      "normalized_value": "2QBF solving",
+      "evidence": "solver for _quantified Boolean formulas_ with a forall-exists quantifier alternation (2QBF).",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Defines the specific computational problem addressed."
+    },
+    {
+      "field": "input_formats",
+      "value": "QDIMACS, QAIGER",
+      "normalized_value": "QDIMACS, QAIGER",
+      "evidence": "CADET reads files in both [QDIMACS](http://www.qbflib.org/qdimacs.html) and [QAIGER](https://github.com/ltentrup/QAIGER) format.",
+      "evidence_location": "109",
+      "confidence": "high",
+      "reason": "Specifies supported file formats for input."
+    },
+    {
+      "field": "build_tools",
+      "value": "clang, gcc",
+      "normalized_value": "clang, gcc",
+      "evidence": "CADET can be built from source with both clang and gcc.",
+      "evidence_location": "75",
+      "confidence": "high",
+      "reason": "Indicates required compilers for building from source."
+    },
+    {
+      "field": "supported_os",
+      "value": "Linux, OSX",
+      "normalized_value": "Linux, OSX",
+      "evidence": "You can find pre-built binaries of CADET for Linux and OSX.",
+      "evidence_location": "75",
+      "confidence": "high",
+      "reason": "Specifies target operating systems."
+    },
+    {
+      "field": "dependencies",
+      "value": "Python 3",
+      "normalized_value": "Python 3",
+      "evidence": "The testing scripts require Python 3.",
+      "evidence_location": "75",
+      "confidence": "high",
+      "reason": "Specifies runtime/build dependency for tests."
+    },
+    {
+      "field": "installation_command",
+      "value": "./configure && make",
+      "normalized_value": "./configure && make",
+      "evidence": "```bash\n$ ./configure && make\n```",
+      "evidence_location": "80-82",
+      "confidence": "high",
+      "reason": "Standard build command for compiling the solver."
+    },
+    {
+      "field": "test_command",
+      "value": "make test",
+      "normalized_value": "make test",
+      "evidence": "```bash\n$ make test\n```",
+      "evidence_location": "86-88",
+      "confidence": "high",
+      "reason": "Command to verify correct installation."
+    },
+    {
+      "field": "usage_command",
+      "value": "./cadet file.qdimacs",
+      "normalized_value": "./cadet file.qdimacs",
+      "evidence": "```bash\n$ ./cadet file.qdimacs\n```",
+      "evidence_location": "97-99",
+      "confidence": "high",
+      "reason": "Primary command for running the solver on input files."
+    },
+    {
+      "field": "benchmark",
+      "value": "QBFEval 2QBF track",
+      "normalized_value": "QBFEval 2QBF track",
+      "evidence": "It won second price in the 2QBF track of [QBFEval](http://www.qbflib.org/qbfeval17.php)",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Identifies the competition/benchmark where the solver was evaluated."
+    },
+    {
+      "field": "benchmark_result",
+      "value": "second price in the 2QBF track of QBFEval",
+      "normalized_value": "second price in the 2QBF track of QBFEval",
+      "evidence": "It won second price in the 2QBF track of [QBFEval](http://www.qbflib.org/qbfeval17.php)",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Reports the specific achievement in the benchmark."
+    },
+    {
+      "field": "certificate_generation_command",
+      "value": "./cadet -c result.aig formula.qdimacs",
+      "normalized_value": "./cadet -c result.aig formula.qdimacs",
+      "evidence": "```bash\n$ ./cadet -c result.aig formula.qdimacs\n```",
+      "evidence_location": "47-49",
+      "confidence": "high",
+      "reason": "Command to generate proof certificates (Skolem functions) as AIGER circuits."
+    },
+    {
+      "field": "citation_papers",
+      "value": "[Learning Heuristics for 2QBF through Deep Reinforcement Learning](https://arxiv.org/abs/1807.08058). Gil Lederman, Markus N. Rabe, Edward A. Lee, Sanjit A. Seshia. arXiv preprint, 2018.\n\n[Understanding and Extending Incremental Determinization for 2QBF](https://people.eecs.berkeley.edu/~sseshia/pubdir/id-cav18.pdf). Markus N. Rabe, Leander Tentrup, Cameron Rasmussen, and Sanjit Seshia. CAV, 2018.\n\n[Encodings of Bounded Synthesis](https://www.react.uni-saarland.de/publications/FFRT17.html) Faymonville, Finkbeiner, Rabe, Tentrup. TACAS, 2017.\n\n[Incremental Determinization](https://www.eecs.berkeley.edu/~rabe/IncrementalDeterminizationSAT2016.pdf). Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "normalized_value": "[Learning Heuristics for 2QBF through Deep Reinforcement Learning](https://arxiv.org/abs/1807.08058). Gil Lederman, Markus N. Rabe, Edward A. Lee, Sanjit A. Seshia. arXiv preprint, 2018.\n\n[Understanding and Extending Incremental Determinization for 2QBF](https://people.eecs.berkeley.edu/~sseshia/pubdir/id-cav18.pdf). Markus N. Rabe, Leander Tentrup, Cameron Rasmussen, and Sanjit Seshia. CAV, 2018.\n\n[Encodings of Bounded Synthesis](https://www.react.uni-saarland.de/publications/FFRT17.html) Faymonville, Finkbeiner, Rabe, Tentrup. TACAS, 2017.\n\n[Incremental Determinization](https://www.eecs.berkeley.edu/~rabe/IncrementalDeterminizationSAT2016.pdf). Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "evidence": "[Learning Heuristics for 2QBF through Deep Reinforcement Learning](https://arxiv.org/abs/1807.08058). Gil Lederman, Markus N. Rabe, Edward A. Lee, Sanjit A. Seshia. arXiv preprint, 2018.\n\n[Understanding and Extending Incremental Determinization for 2QBF](https://people.eecs.berkeley.edu/~sseshia/pubdir/id-cav18.pdf). Markus N. Rabe, Leander Tentrup, Cameron Rasmussen, and Sanjit Seshia. CAV, 2018.\n\n[Encodings of Bounded Synthesis](https://www.react.uni-saarland.de/publications/FFRT17.html) Faymonville, Finkbeiner, Rabe, Tentrup. TACAS, 2017.\n\n[Incremental Determinization](https://www.eecs.berkeley.edu/~rabe/IncrementalDeterminizationSAT2016.pdf). Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "evidence_location": "136-142",
+      "confidence": "high",
+      "reason": "Provides academic references for the solver and its underlying algorithms."
+    }
+  ]
+}

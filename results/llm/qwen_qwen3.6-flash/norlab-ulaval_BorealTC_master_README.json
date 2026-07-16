@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "normalized_value": "Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "evidence": "# Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the title of the project and associated paper."
+    },
+    {
+      "field": "artifact_description",
+      "value": "This repo contains the source code and the datasets used in our paper _Proprioception Is All You Need: Terrain Classification for Boreal Forests_ that was submitted to the 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024).",
+      "normalized_value": "This repo contains the source code and the datasets used in our paper _Proprioception Is All You Need: Terrain Classification for Boreal Forests_ that was submitted to the 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024).",
+      "evidence": "This repo contains the source code and the datasets used in our paper _Proprioception Is All You Need: Terrain Classification for Boreal Forests_ that was submitted to the 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024).",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Clearly describes the repository's contents and academic context."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2403.16877",
+      "normalized_value": "https://arxiv.org/abs/2403.16877",
+      "evidence": "Paper: https://arxiv.org/abs/2403.16877",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated research paper."
+    },
+    {
+      "field": "conference",
+      "value": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024)",
+      "normalized_value": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024)",
+      "evidence": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024)",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Identifies the conference where the work was submitted/published."
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "normalized_value": "MIT",
+      "evidence": "This project is licensed under a [MIT](LICENSE) license.",
+      "evidence_location": "140",
+      "confidence": "high",
+      "reason": "Specifies the open-source license governing reuse."
+    },
+    {
+      "field": "installation_command",
+      "value": "python3.10 -m venv .venv\n. .venv/bin/activate\npip install -r requirements.txt",
+      "normalized_value": "python3.10 -m venv .venv\n. .venv/bin/activate\npip install -r requirements.txt",
+      "evidence": "python3.10 -m venv .venv\n. .venv/bin/activate\npip install -r requirements.txt",
+      "evidence_location": "25-28",
+      "confidence": "high",
+      "reason": "Provides exact commands to set up the virtual environment and install dependencies."
+    },
+    {
+      "field": "docker_build_command",
+      "value": "docker build -t borealtc-gpu -f DockerfileGPU .",
+      "normalized_value": "docker build -t borealtc-gpu -f DockerfileGPU .",
+      "evidence": "docker build -t borealtc-gpu -f DockerfileGPU .",
+      "evidence_location": "34",
+      "confidence": "high",
+      "reason": "Command to build the Docker image containing all dependencies."
+    },
+    {
+      "field": "docker_run_command",
+      "value": "docker run --gpus all -e CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES --rm --ipc host \\\n\t  --mount type=bind,source=.,target=/code/ \\\n\t  --mount type=bind,source=/dev/shm,target=/dev/shm \\\n\t  borealtc-gpu python3 main.py",
+      "normalized_value": "docker run --gpus all -e CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES --rm --ipc host \\\n\t  --mount type=bind,source=.,target=/code/ \\\n\t  --mount type=bind,source=/dev/shm,target=/dev/shm \\\n\t  borealtc-gpu python3 main.py",
+      "evidence": "docker run --gpus all -e CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES --rm --ipc host \\\n\t  --mount type=bind,source=.,target=/code/ \\\n\t  --mount type=bind,source=/dev/shm,target=/dev/shm \\\n\t  borealtc-gpu python3 main.py",
+      "evidence_location": "37-40",
+      "confidence": "high",
+      "reason": "Command to run the Docker container with GPU support and necessary mounts."
+    },
+    {
+      "field": "hardware_requirement",
+      "value": "NVIDIA GPU",
+      "normalized_value": "NVIDIA GPU",
+      "evidence": "Two dependencies, [`mamba-ssm`](https://github.com/state-spaces/mamba) and [`causal-conv1d`](https://github.com/Dao-AILab/causal-conv1d) require a NVIDIA GPU.",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Specifies critical hardware needed for specific dependencies."
+    },
+    {
+      "field": "dataset_names",
+      "value": "BorealTC, Vulpi",
+      "normalized_value": "BorealTC, Vulpi",
+      "evidence": "* the `BorealTC` dataset, our publicly available dataset\n* the `Vulpi` dataset, from the 2021 [paper](https://doi.org/10.1016/j.jterra.2020.12.002) of Vulpi et al.",
+      "evidence_location": "47-48",
+      "confidence": "high",
+      "reason": "Lists the datasets included in the repository for training/evaluation."
+    },
+    {
+      "field": "checkpoint_files",
+      "value": "mamba_vulpi.ckpt, mamba_borealtc.ckpt, mamba_combined.ckpt",
+      "normalized_value": "mamba_vulpi.ckpt, mamba_borealtc.ckpt, mamba_combined.ckpt",
+      "evidence": "[mamba_vulpi.ckpt](checkpoints/mamba_vulpi.ckpt)\n[mamba_borealtc.ckpt](checkpoints/mamba_borealtc.ckpt)\n[mamba_combined.ckpt](checkpoints/mamba_combined.ckpt)",
+      "evidence_location": "93-95",
+      "confidence": "high",
+      "reason": "Provides links to pre-trained model checkpoints for reproducibility."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{LaRocque2024BorealTC,\n    title={Proprioception Is All You Need: Terrain Classification for Boreal Forests},\n    author={Damien LaRocque and William Guimont-Martin and David-Alexandre Duclos and Philippe Giguère and François Pomerleau},\n    journal={arXiv preprint arXiv:2403.16877},\n    year={2024},\n    eprint={2403.16877},\n    archivePrefix={arXiv},\n    primaryClass={cs.RO}\n}",
+      "normalized_value": "@article{LaRocque2024BorealTC,\n    title={Proprioception Is All You Need: Terrain Classification for Boreal Forests},\n    author={Damien LaRocque and William Guimont-Martin and David-Alexandre Duclos and Philippe Giguère and François Pomerleau},\n    journal={arXiv preprint arXiv:2403.16877},\n    year={2024},\n    eprint={2403.16877},\n    archivePrefix={arXiv},\n    primaryClass={cs.RO}\n}",
+      "evidence": "@article{LaRocque2024BorealTC,\n    title={Proprioception Is All You Need: Terrain Classification for Boreal Forests},\n    author={Damien LaRocque and William Guimont-Martin and David-Alexandre Duclos and Philippe Giguère and François Pomerleau},\n    journal={arXiv preprint arXiv:2403.16877},\n    year={2024},\n    eprint={2403.16877},\n    archivePrefix={arXiv},\n    primaryClass={cs.RO}\n}",
+      "evidence_location": "127-135",
+      "confidence": "high",
+      "reason": "Provides the exact BibTeX entry for academic citation."
+    }
+  ]
+}

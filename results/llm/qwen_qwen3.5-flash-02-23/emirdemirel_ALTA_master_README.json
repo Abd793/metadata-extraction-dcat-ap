@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "normalized_value": "ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "evidence": "# ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly stated as the main title of the repository."
+    },
+    {
+      "field": "artifact_description",
+      "value": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "normalized_value": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "evidence": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Direct description of the artifact's purpose."
+    },
+    {
+      "field": "task",
+      "value": "Automatic Lyrics Transcription",
+      "normalized_value": "Automatic Lyrics Transcription",
+      "evidence": "Automatic Lyrics Transcription is the task of translating singing voice into text.",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Defines the specific task the artifact addresses."
+    },
+    {
+      "field": "framework",
+      "value": "Kaldi",
+      "normalized_value": "Kaldi",
+      "evidence": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the core software framework used."
+    },
+    {
+      "field": "license",
+      "value": "Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International",
+      "normalized_value": "Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International",
+      "evidence": "This work is licensed under Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International, which means that the reusers can copy, distribute, remix, transform and build upon the material in any media providing the appropriate credits to this repository and to be used for non-commercial purposes.",
+      "evidence_location": "235",
+      "confidence": "high",
+      "reason": "Explicitly states the license terms for reuse."
+    },
+    {
+      "field": "citation",
+      "value": "@article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}",
+      "normalized_value": "@article{demirel2021mstre, title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription}, author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon}, booktitle={In proceedings of ISMIR2021}, year={2021}}",
+      "evidence": "  @article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}",
+      "evidence_location": "190-196",
+      "confidence": "high",
+      "reason": "Provides the recommended BibTeX citation for the primary model."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/pdf/2108.02625.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2108.02625.pdf",
+      "evidence": "Link to paper : https://arxiv.org/pdf/2108.02625.pdf",
+      "evidence_location": "197",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/emirdemirel/ALTA",
+      "normalized_value": "https://github.com/emirdemirel/ALTA",
+      "evidence": "src=\"https://github.com/emirdemirel/ALTA/blob/master/img/img-git1.png\"",
+      "evidence_location": "30",
+      "confidence": "medium",
+      "reason": "Inferred from image source URL within the README."
+    },
+    {
+      "field": "dataset",
+      "value": "DAMP, DALI, DALI-TALT, Jamendo",
+      "normalized_value": "DAMP, DALI, DALI-TALT, Jamendo",
+      "evidence": "* DAMP:\n\nWe use the Sing!300x30x2 data within the DAMP repository[6]. To retrieve the data, you need to apply for authorization from https://ccrma.stanford.edu/damp/ .\nThe train/dev/test splits are automatically done within this recipe.\nPlease define the directory where you downloaded the dataset (```path-to-damp```) as follows:\n```\ndatadir_damp='path-to-damp'\n```\n\n* DALI:\n\nDALI_v2.0 is used to train the polyphonic and cross-domain lyrics transcription models. To retrieve the data, please refer to the relevant Github repository at:\n\nhttps://github.com/gabolsgabs/DALI\n\nAccording to the repository, you can download the audio files under 'Getting the audio' section. Refer this as:\n```\ndatadir_dali='path-to-dali'\n```\n\n* DALI-TALT:\n\nThis dataset is a subset of DALI, presented in [7] It is the largest test set used for evaluating polyphonic ALT models. The data can be retrieved via the tutorial at: https://github.com/emirdemirel/DALI-TestSet4ALT .\n```\ndatadir_dali_talt='path-to-dali-talt'\n```\n\n* Jamendo:\n\nJamendo(lyrics) is a benchmark evaluation set for both lyrics transcription and audio-to-lyrics alignment tasks[8]. It is also used in MIREX challenges. Data can be retrieved at https://github.com/f90/jamendolyrics . \n```\ndatadir_jamendo='path-to-jamendo'\n```",
+      "evidence_location": "81-112",
+      "confidence": "high",
+      "reason": "Lists the specific datasets required for training and evaluation."
+    },
+    {
+      "field": "command_training",
+      "value": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} \\\n    --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo} \\",
+      "normalized_value": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo}",
+      "evidence": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} \\\n    --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo} \\",
+      "evidence_location": "137-139",
+      "confidence": "high",
+      "reason": "Primary command for running the recommended training pipeline."
+    },
+    {
+      "field": "command_inference",
+      "value": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "normalized_value": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "evidence": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "evidence_location": "175",
+      "confidence": "high",
+      "reason": "Command for extracting phoneme posteriorgrams (inference/feature extraction)."
+    },
+    {
+      "field": "dependencies",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "69",
+      "confidence": "high",
+      "reason": "Explicit instruction for installing Python dependencies."
+    },
+    {
+      "field": "audio_sample_rate",
+      "value": "16kHz",
+      "normalized_value": "16kHz",
+      "evidence": "Note that we have used 16kHz for the sample rate and 10ms of hop size.",
+      "evidence_location": "180",
+      "confidence": "high",
+      "reason": "Specifies the audio sample rate used in the pipeline."
+    },
+    {
+      "field": "audio_hop_size",
+      "value": "10ms",
+      "normalized_value": "10ms",
+      "evidence": "Note that we have used 16kHz for the sample rate and 10ms of hop size.",
+      "evidence_location": "180",
+      "confidence": "high",
+      "reason": "Specifies the audio hop size used in the pipeline."
+    },
+    {
+      "field": "model_architecture",
+      "value": "multistream TDNN architecture",
+      "normalized_value": "multistream TDNN architecture",
+      "evidence": "The neural network is based on the multistream TDNN architecture with distinct TDNN streams.",
+      "evidence_location": "34",
+      "confidence": "high",
+      "reason": "Describes the specific neural network architecture used."
+    },
+    {
+      "field": "language_model_type",
+      "value": "4-gram MaxEnt",
+      "normalized_value": "4-gram MaxEnt",
+      "evidence": "The LM is a 4-gram MaxEnt trained using the SRILM toolkit, where Kneser-Ney smoothing applied.",
+      "evidence_location": "52",
+      "confidence": "high",
+      "reason": "Details the type of language model used."
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "GLIB",
+      "normalized_value": "GLIB",
+      "evidence": "# GLIB",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name."
+    },
+    {
+      "field": "artifact_description",
+      "value": "CNN-based visual understanding for detecting UI glitches in game Apps",
+      "normalized_value": "CNN-based visual understanding for detecting UI glitches in game Apps",
+      "evidence": "CNN-based visual understanding for detecting UI glitches in game Apps",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Clearly defines the core purpose and functionality of the artifact."
+    },
+    {
+      "field": "paper_title",
+      "value": "GLIB: Towards Automated Test Oracle for Graphically-Rich Applications",
+      "normalized_value": "GLIB: Towards Automated Test Oracle for Graphically-Rich Applications",
+      "evidence": "> GLIB: Towards Automated Test Oracle for Graphically-Rich Applications <br>",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Provides the academic paper title for citation and scientific context."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2106.10507",
+      "normalized_value": "https://arxiv.org/abs/2106.10507",
+      "evidence": "> Paper URL: https://arxiv.org/abs/2106.10507",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://doi.org/10.5281/zenodo.5081242",
+      "normalized_value": "https://doi.org/10.5281/zenodo.5081242",
+      "evidence": "download the UI image [dataset](https://doi.org/10.5281/zenodo.5081242) and unzip:",
+      "evidence_location": "36",
+      "confidence": "high",
+      "reason": "Link to the UI image dataset required for training and evaluation."
+    },
+    {
+      "field": "model_url",
+      "value": "https://doi.org/10.5281/zenodo.5081280",
+      "normalized_value": "https://doi.org/10.5281/zenodo.5081280",
+      "evidence": "download the pre-trained [model](https://doi.org/10.5281/zenodo.5081280) and unzip:",
+      "evidence_location": "61",
+      "confidence": "high",
+      "reason": "Link to pre-trained model checkpoints for reproduction."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/GLIB-game/GLIB.git",
+      "normalized_value": "https://github.com/GLIB-game/GLIB.git",
+      "evidence": "git clone --recursive https://github.com/GLIB-game/GLIB.git",
+      "evidence_location": "105",
+      "confidence": "high",
+      "reason": "Direct link to the source code repository."
+    },
+    {
+      "field": "docker_image",
+      "value": "qwertymj/glib:0.0.1",
+      "normalized_value": "qwertymj/glib:0.0.1",
+      "evidence": "docker pull qwertymj/glib:0.0.1",
+      "evidence_location": "84",
+      "confidence": "high",
+      "reason": "Pre-built Docker image for reproducible environment setup."
+    },
+    {
+      "field": "operating_system",
+      "value": "Ubuntu",
+      "normalized_value": "Ubuntu",
+      "evidence": "On Ubuntu:",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Specifies the supported operating system."
+    },
+    {
+      "field": "programming_language",
+      "value": "python",
+      "normalized_value": "python",
+      "evidence": "- python(3.5.2)",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Identifies the primary programming language used."
+    },
+    {
+      "field": "python_version",
+      "value": "3.5.2",
+      "normalized_value": "3.5.2",
+      "evidence": "- python(3.5.2)",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Specifies the exact Python version required."
+    },
+    {
+      "field": "pytorch_version",
+      "value": "0.4.0",
+      "normalized_value": "0.4.0",
+      "evidence": "- pytorch(0.4.0)",
+      "evidence_location": "26",
+      "confidence": "high",
+      "reason": "Specifies the exact PyTorch version required."
+    },
+    {
+      "field": "cuda_version",
+      "value": "9.0.176",
+      "normalized_value": "9.0.176",
+      "evidence": "First you should make sure your linux system has installed cuda(9.0.176) and cudnn(7.4.2)",
+      "evidence_location": "129",
+      "confidence": "high",
+      "reason": "Specifies the required CUDA version for GPU acceleration."
+    },
+    {
+      "field": "cudnn_version",
+      "value": "7.4.2",
+      "normalized_value": "7.4.2",
+      "evidence": "First you should make sure your linux system has installed cuda(9.0.176) and cudnn(7.4.2)",
+      "evidence_location": "129",
+      "confidence": "high",
+      "reason": "Specifies the required cuDNN version for GPU acceleration."
+    },
+    {
+      "field": "training_command",
+      "value": "python train.py --train_data train_file_path --eval_data eval_file_path --augType Type",
+      "normalized_value": "python train.py --train_data train_file_path --eval_data eval_file_path --augType Type",
+      "evidence": "python train.py --train_data train_file_path --eval_data eval_file_path --augType Type",
+      "evidence_location": "178",
+      "confidence": "high",
+      "reason": "Command template for training the CNN model from scratch."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python test.py --test_data test_data_path --model model_path",
+      "normalized_value": "python test.py --test_data test_data_path --model model_path",
+      "evidence": "python test.py --test_data test_data_path --model model_path",
+      "evidence_location": "202",
+      "confidence": "high",
+      "reason": "Command template for evaluating the trained model."
+    },
+    {
+      "field": "configuration_file",
+      "value": "config.py",
+      "normalized_value": "config.py",
+      "evidence": "Changing hyper-parameters is possible by editing the file [config.py](https://github.com/GLIB-game/GLIB/blob/main/config.py)",
+      "evidence_location": "227",
+      "confidence": "high",
+      "reason": "Identifies the file used to modify model hyperparameters."
+    },
+    {
+      "field": "hyperparameters",
+      "value": "EPOCH, TRAIN_BATCH_SIZE, SAVE_STEP, EVAL_STEP, LR, EVAL_BATCH_SIZE, TEST_BATCH_SIZE",
+      "normalized_value": "EPOCH, TRAIN_BATCH_SIZE, SAVE_STEP, EVAL_STEP, LR, EVAL_BATCH_SIZE, TEST_BATCH_SIZE",
+      "evidence": "#### config.EPOCH:\n\nThe max number of epochs to train the model. Stopping earlier must be done manually (kill).\n\n#### config.TRAIN_BATCH_SIZE:\n\nBatch size in training.\n\n#### config.SAVE_STEP:\n\nAfter how many training steps a model should be saved.\n\n#### config.EVAL_STEP:\n\nAfter how many training steps the model test its performance on evaluation dataset.\n\n#### config.LR:\n\nThe learning rate in training.\n\n#### config.EVAL_BATCH_SIZE\n\nBatch size in evaluation step.\n\n#### config.TEST_BATCH_SIZE\n\nBatch size in test step.",
+      "evidence_location": "229-255",
+      "confidence": "high",
+      "reason": "Lists all configurable hyperparameters available in the project."
+    }
+  ]
+}

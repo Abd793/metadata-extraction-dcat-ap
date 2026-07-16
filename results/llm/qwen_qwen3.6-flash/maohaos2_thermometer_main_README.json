@@ -1,0 +1,85 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "Thermometer: Towards Universal Calibration for Large Language Models",
+      "normalized_value": "Thermometer: Towards Universal Calibration for Large Language Models",
+      "evidence": "# Thermometer: Towards Universal Calibration for Large Language Models",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the full name and subtitle of the project."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2403.08819",
+      "normalized_value": "https://arxiv.org/abs/2403.08819",
+      "evidence": "#### This repository contains official implementation of the paper [Thermometer: Towards Universal Calibration for Large Language Models](https://arxiv.org/abs/2403.08819).",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated research paper."
+    },
+    {
+      "field": "requirements",
+      "value": "pip install torch==2.2.1 transformers==4.28.1 evaluate==0.4.1 tqdm pandas",
+      "normalized_value": "pip install torch==2.2.1 transformers==4.28.1 evaluate==0.4.1 tqdm pandas",
+      "evidence": "```bash\npip install torch==2.2.1 transformers==4.28.1 evaluate==0.4.1 tqdm pandas\n```",
+      "evidence_location": "5-7",
+      "confidence": "high",
+      "reason": "Lists exact package versions required for environment setup."
+    },
+    {
+      "field": "source_directory",
+      "value": "src",
+      "normalized_value": "src",
+      "evidence": "#### *src* folder includes all the source code for the experiments.",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Indicates the directory containing the main implementation code."
+    },
+    {
+      "field": "training_script",
+      "value": "train_thermometer.py",
+      "normalized_value": "train_thermometer.py",
+      "evidence": "- *train_thermometer.py* and *eval_thermometer.py* contain the main function to train Thermometer,",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Identifies the specific Python script used for training the model."
+    },
+    {
+      "field": "evaluation_script",
+      "value": "eval_thermometer.py",
+      "normalized_value": "eval_thermometer.py",
+      "evidence": "- *train_thermometer.py* and *eval_thermometer.py* contain the main function to train Thermometer,\n   and the functions to evaluate calibration performance of trained Thermometer, respectively.",
+      "evidence_location": "17-18",
+      "confidence": "high",
+      "reason": "Identifies the specific Python script used for evaluating calibration performance."
+    },
+    {
+      "field": "reproduction_commands",
+      "value": "exract.sh\ntrain.sh\neval.sh\nmrqa.sh",
+      "normalized_value": "exract.sh train.sh eval.sh mrqa.sh",
+      "evidence": "- ### Step-1: extract the features and logits from pre-trained LLMs,\n    ```\n    exract.sh\n    ```\n- ### Step-2: train Thermometer model,\n    ```\n    train.sh\n    ```\n- ### Step-3: evaluate calibration of trained Thermometer model,\n    ```\n    eval.sh\n    ```\n- ### Free-form QA task requires an additional step to pre-process the raw data, i.e., append the LLM's response to the prompts,\n    ```\n    mrqa.sh\n    ```",
+      "evidence_location": "23-38",
+      "confidence": "high",
+      "reason": "Provides shell scripts to reproduce the paper's experimental results."
+    },
+    {
+      "field": "model_flags",
+      "value": "--model_type decoder_only --model_name Llama-2-7b-chat-hf\n--model_type encoder_decoder --model_name flan-t5-xl",
+      "normalized_value": "--model_type decoder_only --model_name Llama-2-7b-chat-hf --model_type encoder_decoder --model_name flan-t5-xl",
+      "evidence": "- ### Choose different types of LLMs,\n    ```\n    --model_type decoder_only --model_name Llama-2-7b-chat-hf\n    --model_type encoder_decoder --model_name flan-t5-xl\n    ```",
+      "evidence_location": "39-43",
+      "confidence": "high",
+      "reason": "Shows example command-line arguments for selecting different LLM architectures."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@InProceedings{pmlr-v235-shen24c,\n  title = {Thermometer: Towards Universal Calibration for Large Language Models},\n  author =  {Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya},\n  booktitle = {Proceedings of the 41st International Conference on Machine Learning},\n  pages = {44687--44711},\n  year =  {2024},\n  editor =  {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix},\n  volume =  {235},\n  series = {Proceedings of Machine Learning Research},\n  month = {21--27 Jul},\n  publisher = {PMLR}\n}",
+      "normalized_value": "@InProceedings{pmlr-v235-shen24c, title = {Thermometer: Towards Universal Calibration for Large Language Models}, author = {Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya}, booktitle = {Proceedings of the 41st International Conference on Machine Learning}, pages = {44687--44711}, year = {2024}, editor = {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix}, volume = {235}, series = {Proceedings of Machine Learning Research}, month = {21--27 Jul}, publisher = {PMLR}",
+      "evidence": "```\n@InProceedings{pmlr-v235-shen24c,\n  title = {Thermometer: Towards Universal Calibration for Large Language Models},\n  author =  {Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya},\n  booktitle = {Proceedings of the 41st International Conference on Machine Learning},\n  pages = {44687--44711},\n  year =  {2024},\n  editor =  {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix},\n  volume =  {235},\n  series = {Proceedings of Machine Learning Research},\n  month = {21--27 Jul},\n  publisher = {PMLR}\n}\n```",
+      "evidence_location": "47-59",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for the associated research paper."
+    }
+  ]
+}

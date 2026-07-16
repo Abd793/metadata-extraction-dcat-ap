@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "sql4ml",
+      "normalized_value": "sql4ml",
+      "evidence": "# sql4ml",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the title."
+    },
+    {
+      "field": "description",
+      "value": "Sql4ml is a Haskell project that takes as input SQL code which defines the objective/cost/loss function of a supervised machine learning model (ML), as well as a set of parameters, and generates TensorFlow (Python API) code that trains this model.",
+      "normalized_value": "Sql4ml is a Haskell project that takes as input SQL code which defines the objective/cost/loss function of a supervised machine learning model (ML), as well as a set of parameters, and generates TensorFlow (Python API) code that trains this model.",
+      "evidence": "Sql4ml is a Haskell project that takes as input SQL code which defines the objective/cost/loss function of a supervised machine learning model (ML), as well as a set of parameters, and generates TensorFlow (Python API) code that trains this model.",
+      "evidence_location": "3-5",
+      "confidence": "high",
+      "reason": "Clearly defines the tool's purpose, input/output, and target framework."
+    },
+    {
+      "field": "paper_title",
+      "value": "\"Nantia Makrynioti, Ruy Ley-Wild and Vasilis Vassalos. sql4ml: a declarative end-to-end workflow for machine learning.\"",
+      "normalized_value": "\"Nantia Makrynioti, Ruy Ley-Wild and Vasilis Vassalos. sql4ml: a declarative end-to-end workflow for machine learning.\"",
+      "evidence": "\"Nantia Makrynioti, Ruy Ley-Wild and Vasilis Vassalos. sql4ml: a declarative end-to-end workflow for machine learning.\"",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Provides the exact academic citation for the prototype."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/1907.12415",
+      "normalized_value": "https://arxiv.org/abs/1907.12415",
+      "evidence": "(https://arxiv.org/abs/1907.12415)",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper for context and citation."
+    },
+    {
+      "field": "programming_language",
+      "value": "Haskell",
+      "normalized_value": "Haskell",
+      "evidence": "Sql4ml is a Haskell project",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the primary implementation language."
+    },
+    {
+      "field": "tested_os",
+      "value": "macOS High Sierra and Ubuntu 16.04",
+      "normalized_value": "macOS High Sierra and Ubuntu 16.04",
+      "evidence": "The software has been tested on macOS High Sierra and Ubuntu 16.04.",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Specifies compatible operating systems for reproducibility."
+    },
+    {
+      "field": "compiler",
+      "value": "Haskell Platform",
+      "normalized_value": "Haskell Platform",
+      "evidence": "To compile it you need to install the Haskell Platform (https://www.haskell.org/platform/).",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Specifies the required compiler/toolchain for building."
+    },
+    {
+      "field": "dependency",
+      "value": "queryparser (https://github.com/uber/queryparser)",
+      "normalized_value": "queryparser (https://github.com/uber/queryparser)",
+      "evidence": "Sql4ml uses the open source project queryparser (https://github.com/uber/queryparser), also in Haskell.",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Lists a critical external dependency required for compilation."
+    },
+    {
+      "field": "database_dependency",
+      "value": "MySQL",
+      "normalized_value": "MySQL",
+      "evidence": "Sql4ml uses the MySQL database (https://www.mysql.com/) for storing data.",
+      "evidence_location": "32",
+      "confidence": "high",
+      "reason": "Identifies the required database system for data storage and training."
+    },
+    {
+      "field": "datasets",
+      "value": "Boston Housing dataset, Iris dataset",
+      "normalized_value": "Boston Housing dataset, Iris dataset",
+      "evidence": "...one based on the Boston Housing dataset (https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html) and the other based on the Iris dataset (https://archive.ics.uci.edu/ml/datasets/iris)...",
+      "evidence_location": "37-38",
+      "confidence": "high",
+      "reason": "Names the specific datasets used for setup and testing."
+    },
+    {
+      "field": "compilation_command",
+      "value": "ghc -o main main.hs",
+      "normalized_value": "ghc -o main main.hs",
+      "evidence": "    ghc -o main main.hs",
+      "evidence_location": "30",
+      "confidence": "high",
+      "reason": "Provides the exact terminal command to compile the main module."
+    },
+    {
+      "field": "run_command",
+      "value": "./main linear //To generate TensorFlow code for the Linear Regression model in working_examples/linear_regression.sql\n./main logistic //To generate TensorFlow code for the Logistic Regression model in working_examples/logistic_regression.sql",
+      "normalized_value": "./main linear //To generate TensorFlow code for the Linear Regression model in working_examples/linear_regression.sql ./main logistic //To generate TensorFlow code for the Logistic Regression model in working_examples/logistic_regression.sql",
+      "evidence": "    ./main linear //To generate TensorFlow code for the Linear Regression model in working_examples/linear_regression.sql\n    ./main logistic //To generate TensorFlow code for the Logistic Regression model in working_examples/logistic_regression.sql",
+      "evidence_location": "77-78",
+      "confidence": "high",
+      "reason": "Shows how to execute the tool to generate TensorFlow code for specific models."
+    },
+    {
+      "field": "interactive_command",
+      "value": "translateToTensorFlowCommand (L.pack \"CREATE VIEW squaredErrors AS SELECT POW(errors.errorValue, 2) AS squaredErrorValue, errors.observationID AS observationID FROM errors;\") [\"features\"] [\"weights\"] [[\"f1\", \"f2\"]]",
+      "normalized_value": "translateToTensorFlowCommand (L.pack \"CREATE VIEW squaredErrors AS SELECT POW(errors.errorValue, 2) AS squaredErrorValue, errors.observationID AS observationID FROM errors;\") [\"features\"] [\"weights\"] [[\"f1\", \"f2\"]]",
+      "evidence": "    translateToTensorFlowCommand (L.pack \"CREATE VIEW squaredErrors AS SELECT POW(errors.errorValue, 2) AS squaredErrorValue, errors.observationID AS observationID FROM errors;\") [\"features\"] [\"weights\"] [[\"f1\", \"f2\"]]",
+      "evidence_location": "84",
+      "confidence": "high",
+      "reason": "Demonstrates interactive usage via ghci for translating individual SQL queries."
+    },
+    {
+      "field": "supported_sql_syntax",
+      "value": "CREATE VIEW $(name) AS SELECT $(columns), $(numericExpr) FROM $(tables) WHERE $(joinElement) GROUP BY $(groupingElement)",
+      "normalized_value": "CREATE VIEW $(name) AS SELECT $(columns), $(numericExpr) FROM $(tables) WHERE $(joinElement) GROUP BY $(groupingElement)",
+      "evidence": "    CREATE VIEW $(name) AS\n    SELECT $(columns), $(numericExpr)\n    FROM $(tables)\n    WHERE $(joinElement)\n    GROUP BY $(groupingElement)",
+      "evidence_location": "62-66",
+      "confidence": "high",
+      "reason": "Defines the exact SQL structure the tool can parse and translate."
+    },
+    {
+      "field": "generated_tf_syntax",
+      "value": "$(name) = $(translateNumericExpr(numericExpr))",
+      "normalized_value": "$(name) = $(translateNumericExpr(numericExpr))",
+      "evidence": "    $(name) = $(translateNumericExpr(numericExpr))",
+      "evidence_location": "70",
+      "confidence": "high",
+      "reason": "Shows the output format of the generated TensorFlow code."
+    },
+    {
+      "field": "main_function",
+      "value": "endToEndTranslate",
+      "normalized_value": "endToEndTranslate",
+      "evidence": "In file main.hs you can find two examples on how to call function endToEndTranslate, which takes the following input parameters:",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "Identifies the primary API function for end-to-end translation."
+    },
+    {
+      "field": "translator_function",
+      "value": "translateToTensorFlowCommand :: L.Text -> [String] -> [String] -> [[String]] -> String",
+      "normalized_value": "translateToTensorFlowCommand :: L.Text -> [String] -> [String] -> [[String]] -> String",
+      "evidence": "    translateToTensorFlowCommand :: L.Text -> [String] -> [String] -> [[String]] -> String",
+      "evidence_location": "88",
+      "confidence": "high",
+      "reason": "Provides the exact function signature for the core translation logic."
+    }
+  ]
+}

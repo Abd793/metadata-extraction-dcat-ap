@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Probabilistic Cross-Modal Embedding (PCME)",
+      "normalized_value": "Probabilistic Cross-Modal Embedding (PCME)",
+      "evidence": "# Probabilistic Cross-Modal Embedding (PCME) CVPR 2021",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the main header."
+    },
+    {
+      "field": "artifact_description",
+      "value": "Official Pytorch implementation of PCME",
+      "normalized_value": "Official Pytorch implementation of PCME",
+      "evidence": "Official Pytorch implementation of PCME | [Paper](https://arxiv.org/abs/2101.05068)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Clearly describes the purpose and framework of the repository."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2101.05068",
+      "normalized_value": "https://arxiv.org/abs/2101.05068",
+      "evidence": "[Paper](https://arxiv.org/abs/2101.05068)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated research paper."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "MIT License",
+      "evidence_location": "209",
+      "confidence": "high",
+      "reason": "Specifies the open-source license governing reuse and distribution."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "single V100",
+      "normalized_value": "single V100",
+      "evidence": "NOTE: we train each model with mixed-precision training (O2) on a single V100.",
+      "evidence_location": "133",
+      "confidence": "high",
+      "reason": "Indicates the specific GPU hardware used for training, crucial for reproduction."
+    },
+    {
+      "field": "training_time",
+      "value": "46 hours in a single V100 with mixed precision training",
+      "normalized_value": "46 hours in a single V100 with mixed precision training",
+      "evidence": "It takes about 46 hours in a single V100 with mixed precision training.",
+      "evidence_location": "144",
+      "confidence": "high",
+      "reason": "Provides expected runtime for training on the specified hardware."
+    },
+    {
+      "field": "datasets",
+      "value": "COCO Caption, CUB Caption",
+      "normalized_value": "COCO Caption, CUB Caption",
+      "evidence": "### COCO Caption\n\n### CUB Caption",
+      "evidence_location": "54, 61",
+      "confidence": "high",
+      "reason": "Lists the specific datasets used for experiments and evaluation."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "PMRP, R@1, ECCV mAP@R",
+      "normalized_value": "PMRP, R@1, ECCV mAP@R",
+      "evidence": "| Method   | I2T 1K PMRP | I2T 1K R@1 | I2T ECCV mAP@R | T2I 1K PMRP | T2I 1K R@1 | T2I ECCV mAP@R | Model file |",
+      "evidence_location": "92",
+      "confidence": "high",
+      "reason": "Identifies the quantitative metrics used to evaluate model performance."
+    },
+    {
+      "field": "docker_image",
+      "value": "sanghyukchun/pcme:torch1.2-apex-dali",
+      "normalized_value": "sanghyukchun/pcme:torch1.2-apex-dali",
+      "evidence": "docker pull sanghyukchun/pcme:torch1.2-apex-dali",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Provides a ready-to-use container image to ensure environment reproducibility."
+    },
+    {
+      "field": "pretrained_model_links",
+      "value": "https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_coco.pth, https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_cutmix_coco.pth",
+      "normalized_value": "https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_coco.pth, https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_cutmix_coco.pth",
+      "evidence": "| PCME     | 45.0     | 68.8    |   26.2   | 46.0     | 54.6    |   48.0   | [link](https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_coco.pth) |\n| PCME (CutMix-pretrained) | 46.2 | 68.3 | 28.6 | 47.1 | 56.7 | 54.9 | [link](https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_cutmix_coco.pth) |",
+      "evidence_location": "94-95",
+      "confidence": "high",
+      "reason": "Direct download links for official pretrained weights to enable inference."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{chun2021pcme,\n    title={Probabilistic Embeddings for Cross-Modal Retrieval},\n    author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane},\n    year={2021},\n    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},\n}",
+      "normalized_value": "@inproceedings{chun2021pcme, title={Probabilistic Embeddings for Cross-Modal Retrieval}, author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane}, year={2021}, booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},}",
+      "evidence": "@inproceedings{chun2021pcme,\n    title={Probabilistic Embeddings for Cross-Modal Retrieval},\n    author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane},\n    year={2021},\n    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},\n}",
+      "evidence_location": "181-187",
+      "confidence": "high",
+      "reason": "Provides the exact BibTeX entry required for academic citation."
+    },
+    {
+      "field": "installation_commands",
+      "value": "pip install cython && pip install -r requirements.txt\npython -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")'\ngit clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./",
+      "normalized_value": "pip install cython && pip install -r requirements.txt python -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")' git clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./",
+      "evidence": "```\npip install cython && pip install -r requirements.txt\npython -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")'\ngit clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./\n```",
+      "evidence_location": "25-29",
+      "confidence": "high",
+      "reason": "Lists all necessary package installations and dependencies to set up the environment."
+    },
+    {
+      "field": "training_commands",
+      "value": "python train_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path>",
+      "normalized_value": "python train_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path>",
+      "evidence": "python train_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path> \\",
+      "evidence_location": "140",
+      "confidence": "high",
+      "reason": "Provides the exact command to initiate model training on the COCO dataset."
+    },
+    {
+      "field": "evaluation_commands",
+      "value": "python evaluate_recall_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth",
+      "normalized_value": "python evaluate_recall_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path> --model_path model_last.pth",
+      "evidence": "python evaluate_recall_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth \\",
+      "evidence_location": "75-78",
+      "confidence": "high",
+      "reason": "Provides the exact command to compute evaluation metrics on the COCO dataset."
+    }
+  ]
+}

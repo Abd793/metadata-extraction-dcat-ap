@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "arXiv public datasets",
+      "normalized_value": "arXiv public datasets",
+      "evidence": "# arXiv public datasets",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name."
+    },
+    {
+      "field": "artifact_purpose",
+      "value": "Our primary purpose is to develop a set of tools to standardize and facilitate use of the arXiv as a dataset.",
+      "normalized_value": "Our primary purpose is to develop a set of tools to standardize and facilitate use of the arXiv as a dataset.",
+      "evidence": "Our primary purpose is to\ndevelop a set of tools to standardize and facilitate use of the arXiv as a\ndataset.",
+      "evidence_location": "5-7",
+      "confidence": "high",
+      "reason": "Clearly defines the core objective and scope of the project."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/mattbierbaum/arxiv-public-datasets",
+      "normalized_value": "https://github.com/mattbierbaum/arxiv-public-datasets",
+      "evidence": "git clone https://github.com/mattbierbaum/arxiv-public-datasets",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Direct link to the source code repository for cloning and contribution."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/1905.00075",
+      "normalized_value": "https://arxiv.org/abs/1905.00075",
+      "evidence": "[arXiv:1905.00075](https://arxiv.org/abs/1905.00075)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Provides the academic manuscript associated with the dataset and tools."
+    },
+    {
+      "field": "dataset_license_url",
+      "value": "https://raw.githubusercontent.com/mattbierbaum/arxiv-public-datasets/master/LICENSE",
+      "normalized_value": "https://raw.githubusercontent.com/mattbierbaum/arxiv-public-datasets/master/LICENSE",
+      "evidence": "<code itemprop=\"license\">https://raw.githubusercontent.com/mattbierbaum/arxiv-public-datasets/master/LICENSE</code>",
+      "evidence_location": "206",
+      "confidence": "high",
+      "reason": "Direct link to the legal license governing reuse of the project and dataset."
+    },
+    {
+      "field": "kaggle_dataset_url",
+      "value": "https://www.kaggle.com/Cornell-University/arxiv",
+      "normalized_value": "https://www.kaggle.com/Cornell-University/arxiv",
+      "evidence": "[Kaggle has agreed](https://www.kaggle.com/Cornell-University/arxiv)",
+      "evidence_location": "31",
+      "confidence": "high",
+      "reason": "Offers an alternative, hosted source for the PDF data to avoid AWS costs."
+    },
+    {
+      "field": "operating_system",
+      "value": "Linux",
+      "normalized_value": "Linux",
+      "evidence": "## Setup on Linux",
+      "evidence_location": "55",
+      "confidence": "high",
+      "reason": "Specifies the target operating system for the provided setup instructions."
+    },
+    {
+      "field": "system_dependencies",
+      "value": "python3 python3-pip python3-virtualenv poppler-utils",
+      "normalized_value": "python3 python3-pip python3-virtualenv poppler-utils",
+      "evidence": "sudo apt install python3 python3-pip python3-virtualenv poppler-utils",
+      "evidence_location": "60",
+      "confidence": "high",
+      "reason": "Lists required system-level packages for Debian/Ubuntu environments."
+    },
+    {
+      "field": "python_install_command",
+      "value": "pip3 install -e .\npip3 install -r requirements.txt",
+      "normalized_value": "pip3 install -e . pip3 install -r requirements.txt",
+      "evidence": "    pip3 install -e .\n    pip3 install -r requirements.txt",
+      "evidence_location": "70-71",
+      "confidence": "high",
+      "reason": "Standard commands to install the package in editable mode and resolve Python dependencies."
+    },
+    {
+      "field": "dataset_components",
+      "value": "* **Article metadata** -- title, authors string, category, doi, abstract, submitter\n* **PDFs** -- all PDFs available through arXiv bulk download\n* **Plain text** -- PDFs converted to UTF-8 encoded plain text\n* **Citation graph** -- intra-arXiv citation graph between arXiv IDs only (generated from plain text)\n* **Author string parsing** -- convert metadata author strings into standardized list of name, affiliations",
+      "normalized_value": "* **Article metadata** -- title, authors string, category, doi, abstract, submitter * **PDFs** -- all PDFs available through arXiv bulk download * **Plain text** -- PDFs converted to UTF-8 encoded plain text * **Citation graph** -- intra-arXiv citation graph between arXiv IDs only (generated from plain text) * **Author string parsing** -- convert metadata author strings into standardized list of name, affiliations",
+      "evidence": "* **Article metadata** -- title, authors string, category, doi, abstract, submitter\n* **PDFs** -- all PDFs available through arXiv bulk download\n* **Plain text** -- PDFs converted to UTF-8 encoded plain text\n* **Citation graph** -- intra-arXiv citation graph between arXiv IDs only (generated from plain text)\n* **Author string parsing** -- convert metadata author strings into standardized list of name, affiliations",
+      "evidence_location": "18-22",
+      "confidence": "high",
+      "reason": "Enumerates the specific data artifacts and processing outputs generated by the project."
+    },
+    {
+      "field": "storage_requirements",
+      "value": "~ 1TB of pdfs and ~ 70GB of text",
+      "normalized_value": "~ 1TB of pdfs and ~ 70GB of text",
+      "evidence": "This\ndirectory needs to have adequate space to hold ~ 1TB of pdfs and ~ 70GB of text",
+      "evidence_location": "74-75",
+      "confidence": "high",
+      "reason": "Specifies the disk space required to store the downloaded and processed dataset."
+    },
+    {
+      "field": "compute_requirements",
+      "value": "over 400 core-hours using two Intel Xeon E5-2600 CPUs",
+      "normalized_value": "over 400 core-hours using two Intel Xeon E5-2600 CPUs",
+      "evidence": "At the time of writing, converting 1.39 million articles requires over 400 core-hours\nusing two Intel Xeon E5-2600 CPUs.",
+      "evidence_location": "134-135",
+      "confidence": "high",
+      "reason": "Provides concrete hardware and time estimates for processing the full dataset."
+    },
+    {
+      "field": "aws_download_cost",
+      "value": "about 100 USD",
+      "normalized_value": "about 100 USD",
+      "evidence": "This download costs about 100 USD (and is 1.1TB) at the time of writing",
+      "evidence_location": "113",
+      "confidence": "high",
+      "reason": "Warns users about potential cloud storage fees for bulk downloading arXiv PDFs."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@misc{clement2019arxiv,\n        title={On the Use of ArXiv as a Dataset},\n        author={Colin B. Clement and Matthew Bierbaum and Kevin P. O'Keeffe and Alexander A. Alemi},\n        year={2019},\n        eprint={1905.00075},\n        archivePrefix={arXiv},\n        primaryClass={cs.IR}\n    }",
+      "normalized_value": "@misc{clement2019arxiv, title={On the Use of ArXiv as a Dataset}, author={Colin B. Clement and Matthew Bierbaum and Kevin P. O'Keeffe and Alexander A. Alemi}, year={2019}, eprint={1905.00075}, archivePrefix={arXiv}, primaryClass={cs.IR} }",
+      "evidence": "    @misc{clement2019arxiv,\n        title={On the Use of ArXiv as a Dataset},\n        author={Colin B. Clement and Matthew Bierbaum and Kevin P. O'Keeffe and Alexander A. Alemi},\n        year={2019},\n        eprint={1905.00075},\n        archivePrefix={arXiv},\n        primaryClass={cs.IR}\n    }",
+      "evidence_location": "46-53",
+      "confidence": "high",
+      "reason": "Provides the recommended academic citation format for referencing the dataset in publications."
+    },
+    {
+      "field": "workshop_conference",
+      "value": "ICLR 2019 workshop, RLGM",
+      "normalized_value": "ICLR 2019 workshop, RLGM",
+      "evidence": "This project is part of a submission to an ICLR 2019 workshop, RLGM\nRepresentation Learning on Graphs and Manifolds.",
+      "evidence_location": "3-4",
+      "confidence": "high",
+      "reason": "Indicates the academic venue and research context associated with the project."
+    },
+    {
+      "field": "versioning_scheme",
+      "value": "semver",
+      "normalized_value": "semver",
+      "evidence": "We have adopted [semver](https://semver.org/) and as such will denote\nmajor releases with the first numeral in the tagged version.",
+      "evidence_location": "13-14",
+      "confidence": "high",
+      "reason": "Describes the semantic versioning strategy used for project releases."
+    }
+  ]
+}

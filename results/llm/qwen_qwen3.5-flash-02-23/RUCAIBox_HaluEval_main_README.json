@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "HaluEval",
+      "normalized_value": "HaluEval",
+      "evidence": "# HaluEval: A Hallucination Evaluation Benchmark for LLMs",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the name of the artifact in the main header."
+    },
+    {
+      "field": "artifact_description",
+      "value": "A Hallucination Evaluation Benchmark for LLMs",
+      "normalized_value": "A Hallucination Evaluation Benchmark for LLMs",
+      "evidence": "# HaluEval: A Hallucination Evaluation Benchmark for LLMs",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Describes the purpose and scope of the artifact in the title."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/RUCAIBox/HaluEval",
+      "normalized_value": "https://github.com/RUCAIBox/HaluEval",
+      "evidence": "<a href=\"https://github.com/RUCAIBox/HaluEval\" target=\"_blank\">",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Provides the direct link to the GitHub repository hosting the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2305.11747",
+      "normalized_value": "https://arxiv.org/abs/2305.11747",
+      "evidence": "[HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models](https://arxiv.org/abs/2305.11747)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Links to the associated research paper on arXiv."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "HaluEval uses [MIT License](./LICENSE).",
+      "evidence_location": "103",
+      "confidence": "high",
+      "reason": "Specifies the legal license under which the artifact is distributed."
+    },
+    {
+      "field": "citation",
+      "value": "@misc{HaluEval,\n  author = {Junyi Li and Xiaoxue Cheng and Wayne Xin Zhao and Jian-Yun Nie and Ji-Rong Wen },\n  title = {HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models},\n  year = {2023},\n  journal={arXiv preprint arXiv:2305.11747},\n  url={https://arxiv.org/abs/2305.11747}\n}",
+      "normalized_value": "@misc{HaluEval,\n  author = {Junyi Li and Xiaoxue Cheng and Wayne Xin Zhao and Jian-Yun Nie and Ji-Rong Wen },\n  title = {HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models},\n  year = {2023},\n  journal={arXiv preprint arXiv:2305.11747},\n  url={https://arxiv.org/abs/2305.11747}\n}",
+      "evidence": "```\n@misc{HaluEval,\n  author = {Junyi Li and Xiaoxue Cheng and Wayne Xin Zhao and Jian-Yun Nie and Ji-Rong Wen },\n  title = {HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models},\n  year = {2023},\n  journal={arXiv preprint arXiv:2305.11747},\n  url={https://arxiv.org/abs/2305.11747}\n}\n```",
+      "evidence_location": "109-117",
+      "confidence": "high",
+      "reason": "Provides the BibTeX citation format for referencing the work."
+    },
+    {
+      "field": "tasks",
+      "value": "question answering, knowledge-grounded dialogue, and text summarization",
+      "normalized_value": "question answering, knowledge-grounded dialogue, and text summarization",
+      "evidence": "question answering, knowledge-grounded dialogue, and text summarization.",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Lists the specific tasks the benchmark is designed to evaluate."
+    },
+    {
+      "field": "data_size",
+      "value": "35K",
+      "normalized_value": "35K",
+      "evidence": "The [35K data](#data-release) used for evaluating the LLM.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Indicates the scale of the dataset provided in the repository."
+    },
+    {
+      "field": "seed_datasets",
+      "value": "HotpotQA, OpenDialKG, and CNN/Daily Mail",
+      "normalized_value": "HotpotQA, OpenDialKG, and CNN/Daily Mail",
+      "evidence": "First, we download the training sets of HotpotQA, OpenDialKG, and CNN/Daily Mail.",
+      "evidence_location": "47",
+      "confidence": "high",
+      "reason": "Identifies the source datasets used to generate the benchmark samples."
+    },
+    {
+      "field": "general_data_source",
+      "value": "Alpaca",
+      "normalized_value": "Alpaca",
+      "evidence": "from [Alpaca](https://github.com/tatsu-lab/stanford_alpaca).",
+      "evidence_location": "38",
+      "confidence": "high",
+      "reason": "Identifies the source of the general user query data."
+    },
+    {
+      "field": "generation_command",
+      "value": "python generate.py --seed_data hotpot_train_v1.1.json --task qa --strategy one-turn",
+      "normalized_value": "python generate.py --seed_data hotpot_train_v1.1.json --task qa --strategy one-turn",
+      "evidence": "python generate.py --seed_data hotpot_train_v1.1.json --task qa --strategy one-turn",
+      "evidence_location": "62",
+      "confidence": "high",
+      "reason": "Provides the command to generate hallucinated samples for the benchmark."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python evaluate.py --task qa --model gpt-3.5-turbo",
+      "normalized_value": "python evaluate.py --task qa --model gpt-3.5-turbo",
+      "evidence": "python evaluate.py --task qa --model gpt-3.5-turbo",
+      "evidence_location": "84",
+      "confidence": "high",
+      "reason": "Provides the command to evaluate a model on the benchmark."
+    },
+    {
+      "field": "analysis_command",
+      "value": "python analyze.py --task qa --result ../evaluation/qa/qa_gpt-3.5-turbo_result.json --category all",
+      "normalized_value": "python analyze.py --task qa --result ../evaluation/qa/qa_gpt-3.5-turbo_result.json --category all",
+      "evidence": "python analyze.py --task qa --result ../evaluation/qa/qa_gpt-3.5-turbo_result.json --category all",
+      "evidence_location": "98",
+      "confidence": "high",
+      "reason": "Provides the command to analyze the evaluation results."
+    },
+    {
+      "field": "authors",
+      "value": "Junyi Li and Xiaoxue Cheng and Wayne Xin Zhao and Jian-Yun Nie and Ji-Rong Wen",
+      "normalized_value": "Junyi Li and Xiaoxue Cheng and Wayne Xin Zhao and Jian-Yun Nie and Ji-Rong Wen",
+      "evidence": "  author = {Junyi Li and Xiaoxue Cheng and Wayne Xin Zhao and Jian-Yun Nie and Ji-Rong Wen },",
+      "evidence_location": "111",
+      "confidence": "high",
+      "reason": "Lists the authors of the paper and benchmark."
+    },
+    {
+      "field": "publication_year",
+      "value": "2023",
+      "normalized_value": "2023",
+      "evidence": "  year = {2023},",
+      "evidence_location": "113",
+      "confidence": "high",
+      "reason": "Indicates the year the paper was published."
+    }
+  ]
+}

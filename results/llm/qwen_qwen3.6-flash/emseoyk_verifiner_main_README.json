@@ -1,0 +1,67 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "VerifiNER",
+      "normalized_value": "VerifiNER",
+      "evidence": "# VerifiNER",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the primary name of the project for indexing and search."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2402.18374",
+      "normalized_value": "https://arxiv.org/abs/2402.18374",
+      "evidence": "[VerifiNER: Verification-augmented NER via Knowledge-grounded Reasoning with Large Language Models](https://arxiv.org/abs/2402.18374)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated academic paper for context, methodology details, and reproducibility."
+    },
+    {
+      "field": "conference",
+      "value": "ACL 2024",
+      "normalized_value": "ACL 2024",
+      "evidence": "Official code for ACL 2024 paper:",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Indicates the publication venue and year, useful for academic tracking and credibility assessment."
+    },
+    {
+      "field": "task",
+      "value": "NER",
+      "normalized_value": "NER",
+      "evidence": "Verification-augmented NER via Knowledge-grounded Reasoning with Large Language Models",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Specifies the core NLP task (Named Entity Recognition) addressed by the artifact."
+    },
+    {
+      "field": "usage_command",
+      "value": "export OPENAI_API_KEY=\"your-api-key\" \\\nsh scripts/verification.sh",
+      "normalized_value": "export OPENAI_API_KEY=\"your-api-key\" \\ sh scripts/verification.sh",
+      "evidence": "```\nexport OPENAI_API_KEY=\"your-api-key\" \\\nsh scripts/verification.sh\n```",
+      "evidence_location": "14-17",
+      "confidence": "high",
+      "reason": "Provides the exact shell command to execute the preprocessing, verification, and evaluation pipeline."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@misc{kim2024verifiner,\n      title={VerifiNER: Verification-augmented NER via Knowledge-grounded Reasoning with Large Language Models}, \n      author={Seoyeon Kim and Kwangwook Seo and Hyungjoo Chae and Jinyoung Yeo and Dongha Lee},\n      year={2024},\n      eprint={2402.18374},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL}\n}",
+      "normalized_value": "@misc{kim2024verifiner, title={VerifiNER: Verification-augmented NER via Knowledge-grounded Reasoning with Large Language Models}, author={Seoyeon Kim and Kwangwook Seo and Hyungjoo Chae and Jinyoung Yeo and Dongha Lee}, year={2024}, eprint={2402.18374}, archivePrefix={arXiv}, primaryClass={cs.CL}}",
+      "evidence": "```\n@misc{kim2024verifiner,\n      title={VerifiNER: Verification-augmented NER via Knowledge-grounded Reasoning with Large Language Models}, \n      author={Seoyeon Kim and Kwangwook Seo and Hyungjoo Chae and Jinyoung Yeo and Dongha Lee},\n      year={2024},\n      eprint={2402.18374},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL}\n}\n```",
+      "evidence_location": "22-31",
+      "confidence": "high",
+      "reason": "Standard academic citation format for proper attribution, indexing, and reuse tracking."
+    },
+    {
+      "field": "method_description",
+      "value": "1. Using entity prediction by existing models, we (a) extract candidate spans to retrieve knowledge from KB and verify factuality of span accordingly. Then (b) using retrieved knowledge, we verify factuality of type by generating knowledge-grounded evidence.\n2. We take consistency voting to select a candidate that is the most contextually relevant, with the help of the reasoning ability of LLMs.",
+      "normalized_value": "1. Using entity prediction by existing models, we (a) extract candidate spans to retrieve knowledge from KB and verify factuality of span accordingly. Then (b) using retrieved knowledge, we verify factuality of type by generating knowledge-grounded evidence. 2. We take consistency voting to select a candidate that is the most contextually relevant, with the help of the reasoning ability of LLMs.",
+      "evidence": "1. Using entity prediction by existing models, we (a) extract candidate spans to retrieve knowledge from KB and verify factuality of span accordingly. Then (b) using retrieved knowledge, we verify factuality of type by generating knowledge-grounded evidence.\n2. We take consistency voting to select a candidate that is the most contextually relevant, with the help of the reasoning ability of LLMs.",
+      "evidence_location": "8-9",
+      "confidence": "high",
+      "reason": "Summarizes the core methodology and pipeline steps, aiding understanding and reproduction of the framework."
+    }
+  ]
+}

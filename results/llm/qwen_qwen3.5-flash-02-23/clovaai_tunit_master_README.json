@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "TUNIT",
+      "normalized_value": "TUNIT",
+      "evidence": "TUNIT is distributed under MIT unless the header specifies another license.",
+      "evidence_location": "224",
+      "confidence": "high",
+      "reason": "Explicitly names the project artifact."
+    },
+    {
+      "field": "paper_title",
+      "value": "Rethinking the Truly Unsupervised Image-to-Image Translation",
+      "normalized_value": "Rethinking the Truly Unsupervised Image-to-Image Translation",
+      "evidence": "## Rethinking the Truly Unsupervised Image-to-Image Translation<br/>(ICCV 2021)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Title of the research paper and project."
+    },
+    {
+      "field": "conference",
+      "value": "ICCV 2021",
+      "normalized_value": "ICCV 2021",
+      "evidence": "## Rethinking the Truly Unsupervised Image-to-Image Translation<br/>(ICCV 2021)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Publication venue and year."
+    },
+    {
+      "field": "arxiv_url",
+      "value": "https://arxiv.org/abs/2006.06500",
+      "normalized_value": "https://arxiv.org/abs/2006.06500",
+      "evidence": "> __[Rethinking the Truly Unsupervised Image-to-Image Translation](https://arxiv.org/abs/2006.06500)__",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Link to the paper on arXiv."
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "normalized_value": "MIT",
+      "evidence": "TUNIT is distributed under MIT unless the header specifies another license.",
+      "evidence_location": "224",
+      "confidence": "high",
+      "reason": "License for the source code."
+    },
+    {
+      "field": "license_model",
+      "value": "Creative Commons BY-NC 4.0",
+      "normalized_value": "Creative Commons BY-NC 4.0",
+      "evidence": "The pretrained models is covered by Creative Commons BY-NC 4.0 license by NAVER Corporation.",
+      "evidence_location": "248",
+      "confidence": "high",
+      "reason": "License for the pretrained models."
+    },
+    {
+      "field": "framework",
+      "value": "pytorch",
+      "normalized_value": "pytorch",
+      "evidence": "* pytorch==1.1.0 or 1.2.0",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Deep learning framework used."
+    },
+    {
+      "field": "hardware",
+      "value": "V100 and P40",
+      "normalized_value": "V100 and P40",
+      "evidence": "* This source code is mainly tested on V100 and P40.",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Hardware tested for the source code."
+    },
+    {
+      "field": "citation",
+      "value": "@InProceedings{Baek_2021_ICCV,\n    author    = {Baek, Kyungjune and Choi, Yunjey and Uh, Youngjung and Yoo, Jaejun and Shim, Hyunjung},\n    title     = {Rethinking the Truly Unsupervised Image-to-Image Translation},\n    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n    month     = {October},\n    year      = {2021},\n    pages     = {14154-14163}\n}",
+      "normalized_value": "@InProceedings{Baek_2021_ICCV,\n    author    = {Baek, Kyungjune and Choi, Yunjey and Uh, Youngjung and Yoo, Jaejun and Shim, Hyunjung},\n    title     = {Rethinking the Truly Unsupervised Image-to-Image Translation},\n    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n    month     = {October},\n    year      = {2021},\n    pages     = {14154-14163}\n}",
+      "evidence": "```\n@InProceedings{Baek_2021_ICCV,\n    author    = {Baek, Kyungjune and Choi, Yunjey and Uh, Youngjung and Yoo, Jaejun and Shim, Hyunjung},\n    title     = {Rethinking the Truly Unsupervised Image-to-Image Translation},\n    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n    month     = {October},\n    year      = {2021},\n    pages     = {14154-14163}\n}\n```",
+      "evidence_location": "253-262",
+      "confidence": "high",
+      "reason": "BibTeX citation for the paper."
+    },
+    {
+      "field": "dataset",
+      "value": "AFHQ, AnimalFaces, FFHQ, LSUN",
+      "normalized_value": "AFHQ, AnimalFaces, FFHQ, LSUN",
+      "evidence": "* Download : [AFHQ (StarGANv2)](https://www.dropbox.com/s/t9l9o3vsx2jai3z/afhq.zip?dl=0) / [AnimalFaces (FUNIT)](https://github.com/NVlabs/FUNIT)\n* Example directory hierarchy (AFHQ, AnimalFaces): \n```\nProject\n|--- tunit\n|          |--- main.py\n|          |--- train\n|                 |--- train_unsupervised.py\n|                 |--- ...\n|\n|--- data\n       |--- afhq\n             |--- train\n             |--- test\n       |--- animal_faces\n             |--- n02085620\n             |--- n02085782\n             |--- ...\n       |--- ffhq\n             |--- images\n                    |--- 000001.jpg\n                    |--- ...\n       |--- lsun_car\n             |--- images\n                    |--- 000001.jpg\n                    |--- ...\n\nThen, call --data_path='../data'\n```",
+      "evidence_location": "33-61",
+      "confidence": "high",
+      "reason": "Datasets used and supported by the project."
+    },
+    {
+      "field": "training_mode",
+      "value": "Supervised, Semi-supervised, Unsupervised",
+      "normalized_value": "Supervised, Semi-supervised, Unsupervised",
+      "evidence": "__Train on local__\n```\nSupervised\npython main.py --gpu $GPU_TO_USE --p_semi 1.0 --dataset animal_faces --data_path='../data'\n\nSemi-supervised\npython main.py --gpu $GPU_TO_USE --p_semi 0.5 --dataset animal_faces --data_path='../data'\n\nUnsupervised\npython main.py --gpu $GPU_TO_USE --p_semi 0.0 --dataset animal_faces --data_path='../data'\n```",
+      "evidence_location": "69-80",
+      "confidence": "high",
+      "reason": "Training modes supported by the code."
+    },
+    {
+      "field": "command_train_unsupervised",
+      "value": "python main.py --gpu $GPU_TO_USE --p_semi 0.0 --dataset animal_faces --data_path='../data'",
+      "normalized_value": "python main.py --gpu $GPU_TO_USE --p_semi 0.0 --dataset animal_faces --data_path='../data'",
+      "evidence": "python main.py --gpu $GPU_TO_USE --p_semi 0.0 --dataset animal_faces --data_path='../data'",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Command to run unsupervised training."
+    },
+    {
+      "field": "command_test",
+      "value": "python main.py --gpu $GPU_TO_USE --validation --load_model $DIR_TO_LOAD --dataset animal_faces",
+      "normalized_value": "python main.py --gpu $GPU_TO_USE --validation --load_model $DIR_TO_LOAD --dataset animal_faces",
+      "evidence": "python main.py --gpu $GPU_TO_USE --validation --load_model $DIR_TO_LOAD --dataset animal_faces",
+      "evidence_location": "83",
+      "confidence": "high",
+      "reason": "Command to run testing."
+    },
+    {
+      "field": "command_monitor",
+      "value": "tensorboard --logdir=$DIR/events --port=$PORT",
+      "normalized_value": "tensorboard --logdir=$DIR/events --port=$PORT",
+      "evidence": "tensorboard --logdir=$DIR/events --port=$PORT",
+      "evidence_location": "88",
+      "confidence": "high",
+      "reason": "Command to monitor training."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "python main.py --gpu $GPU_TO_USE --p_semi 0.0 --dataset animal_faces --data_path='../data'",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Programming language inferred from command usage."
+    },
+    {
+      "field": "task",
+      "value": "Image-to-Image Translation",
+      "normalized_value": "Image-to-Image Translation",
+      "evidence": "## Rethinking the Truly Unsupervised Image-to-Image Translation<br/>(ICCV 2021)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Task addressed by the project."
+    },
+    {
+      "field": "pretrained_model_url",
+      "value": "https://1drv.ms/u/s!AprVWp5MreFV8BLY22ias4Gt1ZtO?e=IYsUwX",
+      "normalized_value": "https://1drv.ms/u/s!AprVWp5MreFV8BLY22ias4Gt1ZtO?e=IYsUwX",
+      "evidence": "[One Drive](https://1drv.ms/u/s!AprVWp5MreFV8BLY22ias4Gt1ZtO?e=IYsUwX)",
+      "evidence_location": "111",
+      "confidence": "high",
+      "reason": "Link to download pretrained models."
+    },
+    {
+      "field": "requirements",
+      "value": "pip install -r requirements.txt\n\n* pytorch==1.1.0 or 1.2.0  \n* tqdm  \n* opencv-python  \n* scipy  \n* sklearn\n* matplotlib  \n* pillow  \n* tensorboardX",
+      "normalized_value": "pip install -r requirements.txt\n\n* pytorch==1.1.0 or 1.2.0\n* tqdm\n* opencv-python\n* scipy\n* sklearn\n* matplotlib\n* pillow\n* tensorboardX",
+      "evidence": "```\npip install -r requirements.txt\n\n* pytorch==1.1.0 or 1.2.0  \n* tqdm  \n* opencv-python  \n* scipy  \n* sklearn\n* matplotlib  \n* pillow  \n* tensorboardX \n```",
+      "evidence_location": "18-30",
+      "confidence": "high",
+      "reason": "Dependencies and installation instructions."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "# Probabilistic Cross-Modal Embedding (PCME) CVPR 2021",
+      "normalized_value": "# Probabilistic Cross-Modal Embedding (PCME) CVPR 2021",
+      "evidence": "# Probabilistic Cross-Modal Embedding (PCME) CVPR 2021",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly stated in the title of the README."
+    },
+    {
+      "field": "description",
+      "value": "Official Pytorch implementation of PCME",
+      "normalized_value": "Official Pytorch implementation of PCME",
+      "evidence": "Official Pytorch implementation of PCME | [Paper](https://arxiv.org/abs/2101.05068)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly states the purpose and implementation framework."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2101.05068",
+      "normalized_value": "https://arxiv.org/abs/2101.05068",
+      "evidence": "Official Pytorch implementation of PCME | [Paper](https://arxiv.org/abs/2101.05068)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper."
+    },
+    {
+      "field": "authors",
+      "value": "[Sanghyuk Chun](https://sanghyukchun.github.io/home/)<sup>1</sup> [Seong Joon Oh](https://seongjoonoh.com/)<sup>1</sup> Rafael Sampaio de Rezende<sup>2</sup> [Yannis Kalantidis](https://www.skamalas.com/)<sup>2</sup> Diane Larlus<sup>2</sup>",
+      "normalized_value": "[Sanghyuk Chun](https://sanghyukchun.github.io/home/)<sup>1</sup>[Seong Joon Oh](https://seongjoonoh.com/)<sup>1</sup>Rafael Sampaio de Rezende<sup>2</sup>[Yannis Kalantidis](https://www.skamalas.com/)<sup>2</sup>Diane Larlus<sup>2</sup>",
+      "evidence": "[Sanghyuk Chun](https://sanghyukchun.github.io/home/)<sup>1</sup> [Seong Joon Oh](https://seongjoonoh.com/)<sup>1</sup> Rafael Sampaio de Rezende<sup>2</sup> [Yannis Kalantidis](https://www.skamalas.com/)<sup>2</sup> Diane Larlus<sup>2</sup>",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "List of authors explicitly provided in the header."
+    },
+    {
+      "field": "affiliations",
+      "value": "<sup>1</sup><sub>[NAVER AI LAB](https://naver-career.gitbook.io/en/teams/clova-cic)</sub><br><sup>2</sup><sub>[NAVER LABS Europe](https://europe.naverlabs.com/)</sub>",
+      "normalized_value": "<sup>1</sup><sub>[NAVER AI LAB](https://naver-career.gitbook.io/en/teams/clova-cic)</sub><br><sup>2</sup><sub>[NAVER LABS Europe](https://europe.naverlabs.com/)</sub>",
+      "evidence": "<sup>1</sup><sub>[NAVER AI LAB](https://naver-career.gitbook.io/en/teams/clova-cic)</sub><br><sup>2</sup><sub>[NAVER LABS Europe](https://europe.naverlabs.com/)</sub>",
+      "evidence_location": "7-8",
+      "confidence": "high",
+      "reason": "Affiliations of the authors explicitly listed."
+    },
+    {
+      "field": "installation_commands",
+      "value": "pip install cython && pip install -r requirements.txt\npython -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")'\ngit clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./",
+      "normalized_value": "pip install cython && pip install -r requirements.txt python -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")' git clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./",
+      "evidence": "pip install cython && pip install -r requirements.txt\npython -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")'\ngit clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./",
+      "evidence_location": "25-29",
+      "confidence": "high",
+      "reason": "Explicit installation commands provided in the Installation section."
+    },
+    {
+      "field": "docker_image",
+      "value": "sanghyukchun/pcme:torch1.2-apex-dali",
+      "normalized_value": "sanghyukchun/pcme:torch1.2-apex-dali",
+      "evidence": "docker pull sanghyukchun/pcme:torch1.2-apex-dali",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Docker image name provided for environment setup."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "single V100",
+      "normalized_value": "single V100",
+      "evidence": "NOTE: we train each model with mixed-precision training (O2) on a single V100.<br>",
+      "evidence_location": "133",
+      "confidence": "high",
+      "reason": "Explicitly states the hardware used for training."
+    },
+    {
+      "field": "training_time_coco",
+      "value": "46 hours",
+      "normalized_value": "46 hours",
+      "evidence": "It takes about 46 hours in a single V100 with mixed precision training.",
+      "evidence_location": "144",
+      "confidence": "high",
+      "reason": "Explicit training time estimate for COCO Caption dataset."
+    },
+    {
+      "field": "training_time_cub",
+      "value": "4 hours",
+      "normalized_value": "4 hours",
+      "evidence": "It takes about 4 hours in a single V100 with mixed precision training.",
+      "evidence_location": "176",
+      "confidence": "high",
+      "reason": "Explicit training time estimate for CUB Caption dataset."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{chun2021pcme,\n    title={Probabilistic Embeddings for Cross-Modal Retrieval},\n    author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane},\n    year={2021},\n    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},\n}",
+      "normalized_value": "@inproceedings{chun2021pcme, title={Probabilistic Embeddings for Cross-Modal Retrieval}, author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane}, year={2021}, booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},}",
+      "evidence": "@inproceedings{chun2021pcme,\n    title={Probabilistic Embeddings for Cross-Modal Retrieval},\n    author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane},\n    year={2021},\n    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},\n}",
+      "evidence_location": "181-187",
+      "confidence": "high",
+      "reason": "BibTeX citation entry provided for the paper."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "MIT License",
+      "evidence_location": "209",
+      "confidence": "high",
+      "reason": "License type explicitly stated in the License section."
+    },
+    {
+      "field": "metrics",
+      "value": "PMRP, R@1, mAP@R",
+      "normalized_value": "PMRP, R@1, mAP@R",
+      "evidence": "| Method   | I2T 1K PMRP | I2T 1K R@1 | I2T ECCV mAP@R | T2I 1K PMRP | T2I 1K R@1 | T2I ECCV mAP@R | Model file |",
+      "evidence_location": "93",
+      "confidence": "high",
+      "reason": "Evaluation metrics listed in the results table header."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "normalized_value": "Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "evidence": "# Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit title of the repository and paper."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/pdf/2112.08812.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2112.08812.pdf",
+      "evidence": "[Ditch the Gold Standard: Re-evaluating Conversational Question Answering](https://arxiv.org/pdf/2112.08812.pdf)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Direct link to the paper PDF provided in the introduction."
+    },
+    {
+      "field": "conference",
+      "value": "ACL'2022",
+      "normalized_value": "ACL'2022",
+      "evidence": "This is the repository for our ACL'2022 paper",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Explicitly states the conference and year of publication."
+    },
+    {
+      "field": "authors",
+      "value": "Li, Huihan, Gao, Tianyu, Goenka, Manan, Chen, Danqi",
+      "normalized_value": "Li, Huihan, Gao, Tianyu, Goenka, Manan, Chen, Danqi",
+      "evidence": "    author = \"Li, Huihan  and\n      Gao, Tianyu  and\n      Goenka, Manan  and\n      Chen, Danqi\",",
+      "evidence_location": "244-247",
+      "confidence": "high",
+      "reason": "Extracted from the BibTeX citation block."
+    },
+    {
+      "field": "task",
+      "value": "Conversational Question Answering",
+      "normalized_value": "Conversational Question Answering",
+      "evidence": "# Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Task name is explicitly stated in the title."
+    },
+    {
+      "field": "dataset",
+      "value": "QuAC, CANARD",
+      "normalized_value": "QuAC, CANARD",
+      "evidence": "Our experiments use [QuAC dataset](https://quac.ai) for passages and conversations, and the test set of [CANARD dataset](https://sites.google.com/view/qanta/projects/canard) for context-independent questions in `Auto-Replace`.",
+      "evidence_location": "90",
+      "confidence": "high",
+      "reason": "Lists the datasets used for experiments."
+    },
+    {
+      "field": "evaluation_protocols",
+      "value": "Auto-Pred, Auto-Replace, Auto-Rewrite",
+      "normalized_value": "Auto-Pred, Auto-Replace, Auto-Rewrite",
+      "evidence": "We provide a convenient interface to test model performance on a few evaluation protocols compared in our paper, including `Auto-Pred`, `Auto-Replace` and our proposed evaluation protocol, `Auto-Rewrite`",
+      "evidence_location": "75",
+      "confidence": "high",
+      "reason": "Lists the specific evaluation protocols implemented."
+    },
+    {
+      "field": "models_evaluated",
+      "value": "BERT, GraphFlow, HAM, ExCorD",
+      "normalized_value": "BERT, GraphFlow, HAM, ExCorD",
+      "evidence": "We provide our implementations for the four models that we used in our paper: BERT, [GraphFlow](https://www.ijcai.org/Proceedings/2020/171), [HAM](https://dl.acm.org/doi/abs/10.1145/3357384.3357905), [ExCorD](https://aclanthology.org/2021.acl-long.478/).",
+      "evidence_location": "94",
+      "confidence": "high",
+      "reason": "Lists the models for which implementations are provided."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{li2022ditch,\n    title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\",\n    author = \"Li, Huihan  and\n      Gao, Tianyu  and\n      Goenka, Manan  and\n      Chen, Danqi\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.555\",\n    pages = \"8074--8085\",\n}",
+      "normalized_value": "@inproceedings{li2022ditch,\n    title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\",\n    author = \"Li, Huihan  and\n      Gao, Tianyu  and\n      Goenka, Manan  and\n      Chen, Danqi\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.555\",\n    pages = \"8074--8085\",\n}",
+      "evidence": "```\nbibtex\n@inproceedings{li2022ditch,\n    title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\",\n    author = \"Li, Huihan  and\n      Gao, Tianyu  and\n      Goenka, Manan  and\n      Chen, Danqi\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.555\",\n    pages = \"8074--8085\",\n}\n```",
+      "evidence_location": "241-252",
+      "confidence": "high",
+      "reason": "Full BibTeX citation provided for the paper."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "85",
+      "confidence": "high",
+      "reason": "Command to install dependencies."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python run_quac_eval.py \\\n  --type bert \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --rewrite \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "normalized_value": "python run_quac_eval.py --type bert --output_dir ${directory-to-model-checkpoint} --write_dir ${directory-to-write-evaluation-result} --predict_file val_v0.2.json --max_seq_length 512 --doc_stride 128 --max_query_length 64 --match_metric f1 --add_background --skip_entity --rewrite --start_i ${index_of_first_passage_to_eval} --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence": "```\nbash\n# Run Evaluation (Auto-Rewrite as example)\npython run_quac_eval.py \\\n  --type bert \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --rewrite \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive} \n```",
+      "evidence_location": "117-132",
+      "confidence": "high",
+      "reason": "Example command for evaluating the BERT model."
+    },
+    {
+      "field": "checkpoint_links",
+      "value": "https://worksheets.codalab.org/rest/bundles/0x5c08cb0fb90c4afd8a2811bb63023cce/contents/blob/, https://drive.google.com/file/d/1Xf0-XUvGi7jgiAAdA5BQLk7p5ikc_wOl/view?usp=sharing",
+      "normalized_value": "https://worksheets.codalab.org/rest/bundles/0x5c08cb0fb90c4afd8a2811bb63023cce/contents/blob/, https://drive.google.com/file/d/1Xf0-XUvGi7jgiAAdA5BQLk7p5ikc_wOl/view?usp=sharing",
+      "evidence": "The orgininal model checkpoint can be downloaded from [CodaLab](https://worksheets.codalab.org/rest/bundles/0x5c08cb0fb90c4afd8a2811bb63023cce/contents/blob/)\nThe original model checkpoint can be downloaded from [their repo](https://drive.google.com/file/d/1Xf0-XUvGi7jgiAAdA5BQLk7p5ikc_wOl/view?usp=sharing)",
+      "evidence_location": "179, 216",
+      "confidence": "high",
+      "reason": "Links to model checkpoints for HAM and ExCorD."
+    }
+  ]
+}

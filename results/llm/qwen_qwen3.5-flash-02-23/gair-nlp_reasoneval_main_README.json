@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "ReasonEval",
+      "normalized_value": "ReasonEval",
+      "evidence": "**ReasonEval**",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Explicitly named as the suite developed for the repository."
+    },
+    {
+      "field": "artifact_description",
+      "value": "a suite comprising a new evaluation methodology with defined metrics for assessing mathematical reasoning quality and corresponding LLM-based evaluators for automated calculation.",
+      "normalized_value": "a suite comprising a new evaluation methodology with defined metrics for assessing mathematical reasoning quality and corresponding LLM-based evaluators for automated calculation.",
+      "evidence": "To measure reasoning beyond final-answer accuracy, we develop **ReasonEval**, a suite comprising a new evaluation methodology with defined metrics for assessing mathematical reasoning quality and corresponding LLM-based evaluators for automated calculation.",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Describes the purpose and functionality of the artifact."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/GAIR-NLP/ReasonEval",
+      "normalized_value": "https://github.com/GAIR-NLP/ReasonEval",
+      "evidence": "git clone https://github.com/GAIR-NLP/ReasonEval",
+      "evidence_location": "43",
+      "confidence": "high",
+      "reason": "Direct link to the source code repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2404.05692.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2404.05692.pdf",
+      "evidence": "[Evaluating Mathematical Reasoning Beyond Accuracy](https://arxiv.org/pdf/2404.05692.pdf)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Link to the associated research paper."
+    },
+    {
+      "field": "model_names",
+      "value": "ReasonEval-7B, ReasonEval-34B",
+      "normalized_value": "ReasonEval-7B ReasonEval-34B",
+      "evidence": "| ReasonEval-7B     | [🤗 GAIR/ReasonEval-7B](https://huggingface.co/GAIR/ReasonEval-7B) | **7B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) | [WizardMath-7B-V1.1](https://huggingface.co/WizardLM/WizardMath-7B-V1.1)|\n| ReasonEval-34B    |[🤗 GAIR/ReasonEval-34B](https://huggingface.co/GAIR/ReasonEval-34B) | **34B** | [Apache License 2.0](https://www.apache.org/licenses/) | [llemma_34b](https://huggingface.co/EleutherAI/llemma_34b)|",
+      "evidence_location": "65-66",
+      "confidence": "high",
+      "reason": "Lists the available model checkpoints released in the repository."
+    },
+    {
+      "field": "model_licenses",
+      "value": "Llama 2, Apache License 2.0",
+      "normalized_value": "Llama 2 Apache License 2.0",
+      "evidence": "| ReasonEval-7B     | [🤗 GAIR/ReasonEval-7B](https://huggingface.co/GAIR/ReasonEval-7B) | **7B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) | [WizardMath-7B-V1.1](https://huggingface.co/WizardLM/WizardMath-7B-V1.1)|\n| ReasonEval-34B    |[🤗 GAIR/ReasonEval-34B](https://huggingface.co/GAIR/ReasonEval-34B) | **34B** | [Apache License 2.0](https://www.apache.org/licenses/) | [llemma_34b](https://huggingface.co/EleutherAI/llemma_34b)|",
+      "evidence_location": "65-66",
+      "confidence": "high",
+      "reason": "Specifies the licensing terms for the released models."
+    },
+    {
+      "field": "installation_commands",
+      "value": "git clone https://github.com/GAIR-NLP/ReasonEval\ncd ReasonEval\n\nconda create -n ReasonEval python=3.10\nconda activate ReasonEval\n\npip install -r requirements.txt",
+      "normalized_value": "git clone https://github.com/GAIR-NLP/ReasonEval cd ReasonEval conda create -n ReasonEval python=3.10 conda activate ReasonEval pip install -r requirements.txt",
+      "evidence": "```bash\ngit clone https://github.com/GAIR-NLP/ReasonEval\ncd ReasonEval\n```\n* Create a conda environment and activate the environment\n```bash\nconda create -n ReasonEval python=3.10\nconda activate ReasonEval\n```\n* Install the required libraries\n```bash\npip install -r requirements.txt\n```",
+      "evidence_location": "43-45, 48-50, 53-54",
+      "confidence": "high",
+      "reason": "Provides the exact commands required to set up the environment and install dependencies."
+    },
+    {
+      "field": "usage_commands",
+      "value": "python ./codes/examples.py\n--model_name_or_path GAIR/ReasonEval-7B # Specify the model name or path here\n--model_size 7B # Indicate the model size of ReasonEval (7B or 34B)",
+      "normalized_value": "python ./codes/examples.py --model_name_or_path GAIR/ReasonEval-7B # Specify the model name or path here --model_size 7B # Indicate the model size of ReasonEval (7B or 34B)",
+      "evidence": "```bash\n# examples\n## Replace the 'question' and 'reasoning_steps' in ./codes/examples.py with your own content.\npython ./codes/examples.py\n--model_name_or_path GAIR/ReasonEval-7B # Specify the model name or path here\n--model_size 7B # Indicate the model size of ReasonEval (7B or 34B)\n```",
+      "evidence_location": "91-95",
+      "confidence": "high",
+      "reason": "Shows the command to run the evaluation script with required arguments."
+    },
+    {
+      "field": "citation",
+      "value": "@article{xia2024evaluating,\n        title={Evaluating Mathematical Reasoning Beyond Accuracy}, \n        author={Xia, Shijie and Li, Xuefeng and Liu, Yixin and Wu, Tongshuang and Liu, Pengfei},\n        journal={arXiv preprint arXiv:2404.05692},\n        year={2024},\n}",
+      "normalized_value": "@article{xia2024evaluating, title={Evaluating Mathematical Reasoning Beyond Accuracy}, author={Xia, Shijie and Li, Xuefeng and Liu, Yixin and Wu, Tongshuang and Liu, Pengfei}, journal={arXiv preprint arXiv:2404.05692}, year={2024},}",
+      "evidence": "```\n@article{xia2024evaluating,\n        title={Evaluating Mathematical Reasoning Beyond Accuracy}, \n        author={Xia, Shijie and Li, Xuefeng and Liu, Yixin and Wu, Tongshuang and Liu, Pengfei},\n        journal={arXiv preprint arXiv:2404.05692},\n        year={2024},\n}\n```",
+      "evidence_location": "219-224",
+      "confidence": "high",
+      "reason": "Provides the BibTeX citation for the associated paper."
+    },
+    {
+      "field": "task",
+      "value": "Mathematical Reasoning",
+      "normalized_value": "Mathematical Reasoning",
+      "evidence": "To measure reasoning beyond final-answer accuracy, we develop **ReasonEval**, a suite comprising a new evaluation methodology with defined metrics for assessing mathematical reasoning quality",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Identifies the specific domain and task the artifact addresses."
+    },
+    {
+      "field": "metrics",
+      "value": "Validity, Redundancy",
+      "normalized_value": "Validity Redundancy",
+      "evidence": "- **Validity**: The step contains no mistakes in calculation and logic.\n- **Redundancy**: The step lacks utility in solving the problem but is still valid.",
+      "evidence_location": "19-20",
+      "confidence": "high",
+      "reason": "Lists the specific evaluation metrics defined by the methodology."
+    },
+    {
+      "field": "datasets",
+      "value": "Meta-Reasoning-MATH, Meta-Reasoning-GSM8K, Perturbation",
+      "normalized_value": "Meta-Reasoning-MATH Meta-Reasoning-GSM8K Perturbation",
+      "evidence": "- **Meta-Reasoning-MATH**: This dataset is constructed as follows:\n- **Meta-Reasoning-GSM8K**: This dataset consists of 3000 solutions from problems in GSM8K, including variations of code solutions and backward reasoning. For more details, see the official repository for [MR-GSM8K](https://github.com/dvlab-research/MR-GSM8K).\n- **Perturbation**: We introduce 6 types of errors to one of the intermediate steps in the solutions from the test set of [PRM800K](https://github.com/openai/prm800k). Here is one annotated line",
+      "evidence_location": "101, 164, 165",
+      "confidence": "high",
+      "reason": "Lists the datasets provided for meta-evaluation."
+    }
+  ]
+}

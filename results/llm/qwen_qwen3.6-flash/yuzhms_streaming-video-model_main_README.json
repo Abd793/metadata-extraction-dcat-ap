@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Streaming Video Model",
+      "normalized_value": "Streaming Video Model",
+      "evidence": "# Streaming Video Model",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the name of the artifact in the main title."
+    },
+    {
+      "field": "artifact_description",
+      "value": "**Streaming video model** is a general video model, which is applicable to general video understanding tasks.",
+      "normalized_value": "**Streaming video model** is a general video model, which is applicable to general video understanding tasks.",
+      "evidence": "**Streaming video model** is a general video model, which is applicable to general video understanding tasks.",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Provides a concise summary of the model's purpose and scope."
+    },
+    {
+      "field": "authors",
+      "value": "Yucheng Zhao, Chong Luo, Chuanxin Tang, Dongdong Chen, Noel Codella, Zheng-Jun Zha",
+      "normalized_value": "Yucheng Zhao, Chong Luo, Chuanxin Tang, Dongdong Chen, Noel Codella, Zheng-Jun Zha",
+      "evidence": "Yucheng Zhao, Chong Luo, Chuanxin Tang, Dongdong Chen, Noel Codella, Zheng-Jun Zha",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Lists the full authorship of the work."
+    },
+    {
+      "field": "publication_venue",
+      "value": "CVPR 2023",
+      "normalized_value": "CVPR 2023",
+      "evidence": "*CVPR 2023*",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Indicates the conference and year where the work was published."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://openaccess.thecvf.com/content/CVPR2023/html/Zhao_Streaming_Video_Model_CVPR_2023_paper.html",
+      "normalized_value": "https://openaccess.thecvf.com/content/CVPR2023/html/Zhao_Streaming_Video_Model_CVPR_2023_paper.html",
+      "evidence": "[[Paper](https://openaccess.thecvf.com/content/CVPR2023/html/Zhao_Streaming_Video_Model_CVPR_2023_paper.html)]",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Direct link to the official published paper."
+    },
+    {
+      "field": "arxiv_url",
+      "value": "https://arxiv.org/abs/2303.17228",
+      "normalized_value": "https://arxiv.org/abs/2303.17228",
+      "evidence": "[[arXiv](https://arxiv.org/abs/2303.17228)]",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Direct link to the preprint version on arXiv."
+    },
+    {
+      "field": "model_checkpoint_url",
+      "value": "https://github.com/yuzhms/Streaming-Video-Model/releases/download/v1.0/svm_mot17-half-val.pth",
+      "normalized_value": "https://github.com/yuzhms/Streaming-Video-Model/releases/download/v1.0/svm_mot17-half-val.pth",
+      "evidence": "[model](https://github.com/yuzhms/Streaming-Video-Model/releases/download/v1.0/svm_mot17-half-val.pth)",
+      "evidence_location": "131",
+      "confidence": "high",
+      "reason": "Provides a direct download link for the trained model weights."
+    },
+    {
+      "field": "python_version",
+      "value": "3.7",
+      "normalized_value": "3.7",
+      "evidence": "conda create -n svm python=3.7 -y",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Specifies the required Python version for the environment."
+    },
+    {
+      "field": "pytorch_version",
+      "value": "1.12.0",
+      "normalized_value": "1.12.0",
+      "evidence": "conda install pytorch==1.12.0 torchvision==0.13.0 cudatoolkit=11.3 -c pytorch",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Specifies the exact PyTorch version required for compatibility."
+    },
+    {
+      "field": "cuda_version",
+      "value": "11.3",
+      "normalized_value": "11.3",
+      "evidence": "conda install pytorch==1.12.0 torchvision==0.13.0 cudatoolkit=11.3 -c pytorch",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Specifies the CUDA toolkit version required for GPU acceleration."
+    },
+    {
+      "field": "training_command",
+      "value": "bash ./tools/dist_train.sh configs/mot/svm/svm_base.py 8 --cfg-options \\\n   model.detector.backbone.pretrain=./pretrain/ViT-B-16.pt",
+      "normalized_value": "bash ./tools/dist_train.sh configs/mot/svm/svm_base.py 8 --cfg-options model.detector.backbone.pretrain=./pretrain/ViT-B-16.pt",
+      "evidence": "bash ./tools/dist_train.sh configs/mot/svm/svm_base.py 8 --cfg-options \\\n   model.detector.backbone.pretrain=./pretrain/ViT-B-16.pt",
+      "evidence_location": "118-120",
+      "confidence": "high",
+      "reason": "Provides the exact shell command to reproduce the training process."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "bash ./tools/dist_test.sh configs/mot/svm/svm_test.py 8 \\\n   --eval bbox track --checkpoint svm_motsync_ch_mot17half.pth",
+      "normalized_value": "bash ./tools/dist_test.sh configs/mot/svm/svm_test.py 8 --eval bbox track --checkpoint svm_motsync_ch_mot17half.pth",
+      "evidence": "bash ./tools/dist_test.sh configs/mot/svm/svm_test.py 8 \\\n   --eval bbox track --checkpoint svm_motsync_ch_mot17half.pth",
+      "evidence_location": "123-125",
+      "confidence": "high",
+      "reason": "Provides the exact shell command to reproduce the evaluation process."
+    },
+    {
+      "field": "datasets",
+      "value": "MOT17, crowdhuman, MOTSynth",
+      "normalized_value": "MOT17, crowdhuman, MOTSynth",
+      "evidence": "Download [MOT17](https://motchallenge.net/data/MOT17/), [crowdhuman](https://www.crowdhuman.org/), and [MOTSynth](https://motchallenge.net/) datasets",
+      "evidence_location": "37",
+      "confidence": "high",
+      "reason": "Lists the specific datasets required for training and evaluation."
+    },
+    {
+      "field": "mot17_mota",
+      "value": "79.7",
+      "normalized_value": "79.7",
+      "evidence": "| SVM | MOT17 | MOT17 half-train + crowdhuman + MOTSynth | 79.7 | 68.1 | 80.9 | [model](https://github.com/yuzhms/Streaming-Video-Model/releases/download/v1.0/svm_mot17-half-val.pth) |",
+      "evidence_location": "131",
+      "confidence": "high",
+      "reason": "Reports the primary tracking accuracy metric (MOTA) on the MOT17 benchmark."
+    },
+    {
+      "field": "mot17_hota",
+      "value": "68.1",
+      "normalized_value": "68.1",
+      "evidence": "| SVM | MOT17 | MOT17 half-train + crowdhuman + MOTSynth | 79.7 | 68.1 | 80.9 | [model](https://github.com/yuzhms/Streaming-Video-Model/releases/download/v1.0/svm_mot17-half-val.pth) |",
+      "evidence_location": "131",
+      "confidence": "high",
+      "reason": "Reports the tracking accuracy and consistency metric (HOTA) on the MOT17 benchmark."
+    },
+    {
+      "field": "mot17_idf1",
+      "value": "80.9",
+      "normalized_value": "80.9",
+      "evidence": "| SVM | MOT17 | MOT17 half-train + crowdhuman + MOTSynth | 79.7 | 68.1 | 80.9 | [model](https://github.com/yuzhms/Streaming-Video-Model/releases/download/v1.0/svm_mot17-half-val.pth) |",
+      "evidence_location": "131",
+      "confidence": "high",
+      "reason": "Reports the identification F1 score (IDF1) on the MOT17 benchmark."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@InProceedings{Zhao_2023_CVPR,\n    author    = {Zhao, Yucheng and Luo, Chong and Tang, Chuanxin and Chen, Dongdong and Codella, Noel and Zha, Zheng-Jun},\n    title     = {Streaming Video Model},\n    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n    month     = {June},\n    year      = {2023},\n    pages     = {14602-14612}\n}",
+      "normalized_value": "@InProceedings{Zhao_2023_CVPR, author = {Zhao, Yucheng and Luo, Chong and Tang, Chuanxin and Chen, Dongdong and Codella, Noel and Zha, Zheng-Jun}, title = {Streaming Video Model}, booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, month = {June}, year = {2023}, pages = {14602-14612}}",
+      "evidence": "@InProceedings{Zhao_2023_CVPR,\n    author    = {Zhao, Yucheng and Luo, Chong and Tang, Chuanxin and Chen, Dongdong and Codella, Noel and Zha, Zheng-Jun},\n    title     = {Streaming Video Model},\n    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n    month     = {June},\n    year      = {2023},\n    pages     = {14602-14612}\n}",
+      "evidence_location": "136-143",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for academic attribution."
+    },
+    {
+      "field": "base_frameworks",
+      "value": "MMTracking, CLIP",
+      "normalized_value": "MMTracking, CLIP",
+      "evidence": "Our code are built on top of [MMTracking](https://github.com/open-mmlab/mmtracking/) and [CLIP](https://github.com/openai/CLIP).",
+      "evidence_location": "146",
+      "confidence": "high",
+      "reason": "Identifies the foundational open-source projects the codebase extends."
+    }
+  ]
+}

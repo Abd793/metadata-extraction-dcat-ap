@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Visual Relation Grounding in Videos",
+      "normalized_value": "Visual Relation Grounding in Videos",
+      "evidence": "# [Visual Relation Grounding in Videos](https://arxiv.org/pdf/2007.08814.pdf)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit title of the project and associated paper."
+    },
+    {
+      "field": "description",
+      "value": "This is the pytorch implementation of our work at ECCV2020 (Spotlight).",
+      "normalized_value": "This is the pytorch implementation of our work at ECCV2020 (Spotlight).",
+      "evidence": "This is the pytorch implementation of our work at ECCV2020 (Spotlight).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Clearly states the purpose and framework of the repository."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/doc-doc/vRGV",
+      "normalized_value": "https://github.com/doc-doc/vRGV",
+      "evidence": "![teaser](https://github.com/doc-doc/vRGV/blob/master/introduction.png)",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Direct link to the GitHub repository hosting the code."
+    },
+    {
+      "field": "framework",
+      "value": "pytorch",
+      "normalized_value": "pytorch",
+      "evidence": "This is the pytorch implementation of our work at ECCV2020 (Spotlight).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the deep learning framework used for implementation."
+    },
+    {
+      "field": "programming_language",
+      "value": "python 3.6.5",
+      "normalized_value": "python 3.6.5",
+      "evidence": "Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0.",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Specifies the programming language and exact version required."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "cuda >= 9.0",
+      "normalized_value": "cuda >= 9.0",
+      "evidence": "Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0.",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Specifies the minimum CUDA version needed for GPU acceleration."
+    },
+    {
+      "field": "installation_commands",
+      "value": ">conda create -n envname python=3.6.5 # Create\n>conda activate envname # Enter\n>pip install -r requirements.txt # Install the provided libs\n>sh vRGV/lib/make.sh # Set the environment for detection, make sure you have nvcc",
+      "normalized_value": ">conda create -n envname python=3.6.5 # Create >conda activate envname # Enter >pip install -r requirements.txt # Install the provided libs >sh vRGV/lib/make.sh # Set the environment for detection, make sure you have nvcc",
+      "evidence": "```\n>conda create -n envname python=3.6.5 # Create\n>conda activate envname # Enter\n>pip install -r requirements.txt # Install the provided libs\n>sh vRGV/lib/make.sh # Set the environment for detection, make sure you have nvcc\n```",
+      "evidence_location": "16-21",
+      "confidence": "high",
+      "reason": "Provides exact shell commands to create the environment and install dependencies."
+    },
+    {
+      "field": "data_download_links",
+      "value": "https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing",
+      "evidence": "Please download the data [here](https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing).",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Direct link to the required dataset for the project."
+    },
+    {
+      "field": "video_download_link",
+      "value": "https://xdshang.github.io/docs/imagenet-vidvrd.html",
+      "normalized_value": "https://xdshang.github.io/docs/imagenet-vidvrd.html",
+      "evidence": "Please download the videos [here](https://xdshang.github.io/docs/imagenet-vidvrd.html) and extract the frames into ground_data.",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Direct link to the video dataset source."
+    },
+    {
+      "field": "feature_extraction_command",
+      "value": "./detection.sh 0 val #(or train)",
+      "normalized_value": "./detection.sh 0 val #(or train)",
+      "evidence": "```\n./detection.sh 0 val #(or train)\n```",
+      "evidence_location": "30-32",
+      "confidence": "high",
+      "reason": "Command to extract RoI features as outlined in the usage instructions."
+    },
+    {
+      "field": "sample_video_feature_command",
+      "value": "cd tools\npython sample_video_feature.py",
+      "normalized_value": "cd tools python sample_video_feature.py",
+      "evidence": "```\ncd tools\npython sample_video_feature.py\n```",
+      "evidence_location": "34-37",
+      "confidence": "high",
+      "reason": "Command to sample video features from the extracted data."
+    },
+    {
+      "field": "test_command",
+      "value": "./ground.sh 0 val # Output the relation-aware spatio-temporal attention\npython generate_track_link.py # Generate relation-aware trajectories with Viterbi algorithm.\npython eval_ground.py # Evaluate the performance",
+      "normalized_value": "./ground.sh 0 val # Output the relation-aware spatio-temporal attention python generate_track_link.py # Generate relation-aware trajectories with Viterbi algorithm. python eval_ground.py # Evaluate the performance",
+      "evidence": "```\n./ground.sh 0 val # Output the relation-aware spatio-temporal attention\npython generate_track_link.py # Generate relation-aware trajectories with Viterbi algorithm.\npython eval_ground.py # Evaluate the performance\n```",
+      "evidence_location": "39-43",
+      "confidence": "high",
+      "reason": "Commands to run inference, generate trajectories, and evaluate the model."
+    },
+    {
+      "field": "training_command",
+      "value": "./ground.sh 0 train # Train the model with GPU id 0",
+      "normalized_value": "./ground.sh 0 train # Train the model with GPU id 0",
+      "evidence": "```\n./ground.sh 0 train # Train the model with GPU id 0\n```",
+      "evidence_location": "47-49",
+      "confidence": "high",
+      "reason": "Command to train the model from scratch."
+    },
+    {
+      "field": "evaluation_metric",
+      "value": "accuracy Acc_R: 24.58%",
+      "normalized_value": "accuracy Acc_R: 24.58%",
+      "evidence": "You will get accuracy Acc_R: 24.58%.",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Reports the expected evaluation metric and result for environment verification."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{xiao2020visual,\n  title={Visual Relation Grounding in Videos},\n  author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng},\n  booktitle={European Conference on Computer Vision},\n  pages={447--464},\n  year={2020},\n  organization={Springer}\n}",
+      "normalized_value": "@inproceedings{xiao2020visual, title={Visual Relation Grounding in Videos}, author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng}, booktitle={European Conference on Computer Vision}, pages={447--464}, year={2020}, organization={Springer}}",
+      "evidence": "```\n@inproceedings{xiao2020visual,\n  title={Visual Relation Grounding in Videos},\n  author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng},\n  booktitle={European Conference on Computer Vision},\n  pages={447--464},\n  year={2020},\n  organization={Springer}\n}\n```",
+      "evidence_location": "60-69",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for the associated research paper."
+    },
+    {
+      "field": "license",
+      "value": "NUS © [NExT++](https://nextcenter.org/)",
+      "normalized_value": "NUS © [NExT++](https://nextcenter.org/)",
+      "evidence": "NUS © [NExT++](https://nextcenter.org/)",
+      "evidence_location": "73",
+      "confidence": "high",
+      "reason": "Indicates the copyright holder and licensing information."
+    }
+  ]
+}

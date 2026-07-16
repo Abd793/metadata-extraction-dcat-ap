@@ -1,0 +1,103 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Simple learning agents interacting with an agent-based market model",
+      "normalized_value": "Simple learning agents interacting with an agent-based market model",
+      "evidence": "# Simple learning agents interacting with an agent-based market model",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit project title identifying the artifact."
+    },
+    {
+      "field": "artifact_description",
+      "value": "We consider the learning dynamics of a single reinforcement learning optimal execution trading agent when it interacts with an event driven agent-based financial market model.",
+      "normalized_value": "We consider the learning dynamics of a single reinforcement learning optimal execution trading agent when it interacts with an event driven agent-based financial market model.",
+      "evidence": "We consider the learning dynamics of a single reinforcement learning optimal execution trading agent when it interacts with an event driven agent-based financial market model.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Directly states the project's purpose, methodology, and domain."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "normalized_value": "https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "evidence": "git clone https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Direct link to the source code repository for access and cloning."
+    },
+    {
+      "field": "programming_language",
+      "value": "Julia",
+      "normalized_value": "Julia",
+      "evidence": "1. Julia version 1.7.1.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Explicitly identifies the primary programming language and required version."
+    },
+    {
+      "field": "installation_command",
+      "value": "git clone https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "normalized_value": "git clone https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "evidence": "```\nconsole\ngit clone https://github.com/matthewdicks98/MDTG-MALABM.git\n```",
+      "evidence_location": "16-18",
+      "confidence": "high",
+      "reason": "Standard command to obtain the project source code."
+    },
+    {
+      "field": "package_installation_command",
+      "value": "using Pkg\nPkg.add(\" \")",
+      "normalized_value": "using Pkg Pkg.add(\" \")",
+      "evidence": "```\nconsole\nusing Pkg\nPkg.add(\" \")\n```",
+      "evidence_location": "22-25",
+      "confidence": "high",
+      "reason": "Command to install project dependencies via Julia's package manager."
+    },
+    {
+      "field": "branch_names",
+      "value": "Calibrated-ABM, RL-ABM",
+      "normalized_value": "Calibrated-ABM, RL-ABM",
+      "evidence": "The [Calibrated-ABM](https://github.com/matthewdicks98/MDTG-MALABM/tree/Calibrated-ABM) branch contains all the files needed to:\nThe [RL-ABM](https://github.com/matthewdicks98/MDTG-MALABM/tree/RL-ABM) branch extends the [Calibrated-ABM](https://github.com/matthewdicks98/MDTG-MALABM/tree/Calibrated-ABM) branch's functionality and contains additional files needed to:",
+      "evidence_location": "29, 36",
+      "confidence": "high",
+      "reason": "Identifies the specific git branches used to organize project stages and functionality."
+    },
+    {
+      "field": "key_files",
+      "value": "RunReactiveABM.jl, SensitivityAnalysis.jl, Calibration.jl, NMTA.jl, CoinTossX.jl, JSE.jl, StylisedFacts.jl, RLUtilities.jl, RLVisualizations.jl",
+      "normalized_value": "RunReactiveABM.jl, SensitivityAnalysis.jl, Calibration.jl, NMTA.jl, CoinTossX.jl, JSE.jl, StylisedFacts.jl, RLUtilities.jl, RLVisualizations.jl",
+      "evidence": "* [RunReactiveABM.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/RunReactiveABM.jl) runs the event-based simulation once for a given set of parameters.  \n* [SensitivityAnalysis.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/SensitivityAnalysis.jl) runs the sensitivity analysis for given ranges of parameter values.\n* [Calibration.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/Calibration.jl) uses [NMTA.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/NMTA.jl) to calibrate the ABM to a day of JSE data. [NMTA.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/NMTA.jl) implements the Nelder-Mead with threshold accepting optimisation algorithm.\n* [CoinTossX.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/CoinTossX.jl) and [JSE.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/JSE.jl) clean the ABM and JSE data into the L1LOB format respectively. [CoinTossX.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/CoinTossX.jl) also visualises the realised price path.\n* [StylisedFacts.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/StylisedFacts.jl) visualises the stylised facts found in the ABM and the JSE.\n* [RLUtilities.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/RLUtilities.jl) which contains functions that can simulate an RL agent in an ABM for one episode and train the RL agent to optimally liquidate a parent order. \n* [RLVisualizations.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/RLVisualizations.jl) which allows you to visualise different aspects of the RL agent's convergence as well as the learning dynamics and how the agent has affected the ABM.",
+      "evidence_location": "55-64",
+      "confidence": "high",
+      "reason": "Lists the core scripts required to run simulations, calibration, data cleaning, and RL training/visualization."
+    },
+    {
+      "field": "authors",
+      "value": "Matthew Dicks, Tim Gebbie",
+      "normalized_value": "Matthew Dicks, Tim Gebbie",
+      "evidence": "1. Matthew Dicks\n2. Tim Gebbie",
+      "evidence_location": "71-72",
+      "confidence": "high",
+      "reason": "Explicitly lists the project contributors for attribution."
+    },
+    {
+      "field": "publication_url",
+      "value": "https://arxiv.org/abs/2208.10434",
+      "normalized_value": "https://arxiv.org/abs/2208.10434",
+      "evidence": "The link to the arxiv paper can be found [here](https://arxiv.org/abs/2208.10434).",
+      "evidence_location": "76",
+      "confidence": "high",
+      "reason": "Provides the direct link to the associated academic paper for scientific context and citation."
+    },
+    {
+      "field": "related_repository",
+      "value": "https://github.com/IvanJericevich/IJPCTG-ABMCoinTossX",
+      "normalized_value": "https://github.com/IvanJericevich/IJPCTG-ABMCoinTossX",
+      "evidence": "Since this work extends previous work code was used from the repository [IJPCTG-ABMCoinTossX](https://github.com/IvanJericevich/IJPCTG-ABMCoinTossX).",
+      "evidence_location": "81",
+      "confidence": "high",
+      "reason": "Identifies the upstream repository that provided foundational code and context."
+    }
+  ]
+}

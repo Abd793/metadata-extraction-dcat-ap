@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PatchPerPix for Instance Segmentation",
+      "normalized_value": "PatchPerPix for Instance Segmentation",
+      "evidence": "# PatchPerPix for Instance Segmentation",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the main header."
+    },
+    {
+      "field": "artifact_description",
+      "value": "novel method for proposal free instance segmentation that can handle sophisticated object shapes that span large parts of an image and form dense object clusters with crossovers.",
+      "normalized_value": "novel method for proposal free instance segmentation that can handle sophisticated object shapes that span large parts of an image and form dense object clusters with crossovers.",
+      "evidence": "We present a novel method for proposal free instance segmentation that can handle sophisticated object shapes that span large parts of an image and form dense object clusters with crossovers.",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Describes the core purpose and capability of the method."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2001.07626",
+      "normalized_value": "https://arxiv.org/abs/2001.07626",
+      "evidence": "[PatchPerPix for Instance Segmentation](https://arxiv.org/abs/2001.07626)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides the official arXiv link to the associated research paper."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/Kainmueller-Lab/PatchPerPix.git",
+      "normalized_value": "https://github.com/Kainmueller-Lab/PatchPerPix.git",
+      "evidence": "git clone https://github.com/Kainmueller-Lab/PatchPerPix.git",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Direct clone URL for the source code repository."
+    },
+    {
+      "field": "authors",
+      "value": "Lisa Mais, Peter Hirsch, Dagmar Kainmueller",
+      "normalized_value": "Lisa Mais, Peter Hirsch, Dagmar Kainmueller",
+      "evidence": "**Lisa Mais<sup>1</sup>, Peter Hirsch<sup>1</sup>, Dagmar Kainmueller**, ECCV2020</br>",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Lists the primary authors of the work."
+    },
+    {
+      "field": "conference",
+      "value": "ECCV2020",
+      "normalized_value": "ECCV2020",
+      "evidence": "**Lisa Mais<sup>1</sup>, Peter Hirsch<sup>1</sup>, Dagmar Kainmueller**, ECCV2020</br>",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Indicates the publication venue and year."
+    },
+    {
+      "field": "license",
+      "value": "MIT license",
+      "normalized_value": "MIT license",
+      "evidence": "The content in this repository is licensed under the MIT license.",
+      "evidence_location": "188",
+      "confidence": "high",
+      "reason": "Specifies the open-source license governing reuse."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python 3",
+      "normalized_value": "Python 3",
+      "evidence": "This package requires Python 3 and PyTorch.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Specifies the required programming language version."
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "This package requires Python 3 and PyTorch.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Specifies the primary deep learning framework used."
+    },
+    {
+      "field": "installation_commands",
+      "value": "conda create --name ppp --yes\nconda activate ppp\nconda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes\ngit clone https://github.com/Kainmueller-Lab/PatchPerPix.git\ncd PatchPerPix\nPATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .",
+      "normalized_value": "conda create --name ppp --yes conda activate ppp conda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes git clone https://github.com/Kainmueller-Lab/PatchPerPix.git cd PatchPerPix PATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .",
+      "evidence": "```\nconda create --name ppp --yes\nconda activate ppp\nconda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes\ngit clone https://github.com/Kainmueller-Lab/PatchPerPix.git\ncd PatchPerPix\nPATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .\n```",
+      "evidence_location": "25-32",
+      "confidence": "high",
+      "reason": "Provides the exact shell commands to set up the environment and install the package."
+    },
+    {
+      "field": "main_script",
+      "value": "run_ppp.py",
+      "normalized_value": "run_ppp.py",
+      "evidence": "The main script `run_ppp.py` (in the experiments folder) can be used to control all aspects of the experiments.",
+      "evidence_location": "60",
+      "confidence": "high",
+      "reason": "Identifies the primary entry point for running experiments."
+    },
+    {
+      "field": "data_format",
+      "value": "zarr",
+      "normalized_value": "zarr",
+      "evidence": "The code expects the data to be in the *zarr* format",
+      "evidence_location": "54",
+      "confidence": "high",
+      "reason": "Specifies the required file format for input data."
+    },
+    {
+      "field": "example_command",
+      "value": "python run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments",
+      "normalized_value": "python run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments",
+      "evidence": "python run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Demonstrates a complete command to run the full training and evaluation pipeline."
+    },
+    {
+      "field": "benchmarks",
+      "value": "ISBI 2012 EM segmentation benchmark, BBBC010 C. elegans dataset, 2d fluorescence microscopy datasets of cell nuclei, 3d fluorescence microscopy datasets of cell nuclei, 3d light microscopy data of drosophila neurons, dsb2018, nuclei3d, FlyLight Instances Segmentation Benchmark Dataset",
+      "normalized_value": "ISBI 2012 EM segmentation benchmark, BBBC010 C. elegans dataset, 2d fluorescence microscopy datasets of cell nuclei, 3d fluorescence microscopy datasets of cell nuclei, 3d light microscopy data of drosophila neurons, dsb2018, nuclei3d, FlyLight Instances Segmentation Benchmark Dataset",
+      "evidence": "We evaluate our method on a diverse range of data domains, where it defines the new state of the art on four benchmarks, namely the ISBI 2012 EM segmentation benchmark, the BBBC010 C. elegans dataset, and 2d as well as 3d fluorescence microscopy datasets of cell nuclei. We show furthermore that our method also applies to 3d light microscopy data of drosophila neurons, which exhibit extreme cases of complex shape clusters.",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Lists the specific datasets and benchmarks used for evaluation."
+    },
+    {
+      "field": "metrics",
+      "value": "S, avS, rRAND, rINF, avF1, C, C_TP, FS, FM",
+      "normalized_value": "S, avS, rRAND, rINF, avF1, C, C_TP, FS, FM",
+      "evidence": "($S = \\frac{TP}{TP+FP+FN}$; TP, FP, FN computed per image; averaged across images; localized using IoU)\n\n\n| Metrik         | short description              |\n|----------------|--------------------------------|\n| S              | average of avF1 and C          |\n| avF1           | Multi-Threshold F1 Score       |\n| C              | Average ground Truth coverage  |\n| C<sub>TP</sub> | Average true positive coverage |\n| FS             | Number of false splits         |\n| FM             | Number of false merges         |",
+      "evidence_location": "99, 160-166",
+      "confidence": "high",
+      "reason": "Defines the quantitative evaluation metrics used to report results."
+    }
+  ]
+}

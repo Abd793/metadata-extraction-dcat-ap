@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Team DETR",
+      "normalized_value": "Team DETR",
+      "evidence": "Team DETR: Guide Queries as a Professional Team in Detection Transformers",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the title."
+    },
+    {
+      "field": "description",
+      "value": "To alleviate this issue, we propose Team DETR, which leverages query collaboration and position constraints to embrace objects of interest more precisely.",
+      "normalized_value": "To alleviate this issue, we propose Team DETR, which leverages query collaboration and position constraints to embrace objects of interest more precisely.",
+      "evidence": "To alleviate this issue, we propose Team DETR, which leverages query collaboration and position constraints to embrace objects of interest more precisely.",
+      "evidence_location": "19-21",
+      "confidence": "high",
+      "reason": "Directly describes the core contribution and purpose of the artifact."
+    },
+    {
+      "field": "authors",
+      "value": "Tian Qiu, Linyun Zhou, Wenxiang Xu, Lechao Cheng, Zunlei Feng, Mingli Song",
+      "normalized_value": "Tian Qiu, Linyun Zhou, Wenxiang Xu, Lechao Cheng, Zunlei Feng, Mingli Song",
+      "evidence": "Authors: Tian Qiu, Linyun Zhou, Wenxiang Xu, Lechao Cheng, Zunlei Feng, Mingli Song",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Lists the authors explicitly."
+    },
+    {
+      "field": "affiliation",
+      "value": "Zhejiang University",
+      "normalized_value": "Zhejiang University",
+      "evidence": "Affiliation: Zhejiang University",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Explicitly states the authors' affiliation."
+    },
+    {
+      "field": "license",
+      "value": "Apache 2.0",
+      "normalized_value": "Apache 2.0",
+      "evidence": "Team DETR is released under the Apache 2.0 license.",
+      "evidence_location": "222",
+      "confidence": "high",
+      "reason": "Explicitly states the license type."
+    },
+    {
+      "field": "conference",
+      "value": "IEEE International Conference on Image Processing (ICIP) 2023",
+      "normalized_value": "IEEE International Conference on Image Processing (ICIP) 2023",
+      "evidence": "IEEE International Conference on Image Processing (ICIP)",
+      "evidence_location": "240",
+      "confidence": "high",
+      "reason": "States the publication venue and year."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2302.07116",
+      "normalized_value": "https://arxiv.org/abs/2302.07116",
+      "evidence": "Paper Link: [[arXiv]](https://arxiv.org/abs/2302.07116)",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Provides the direct link to the paper."
+    },
+    {
+      "field": "dataset",
+      "value": "COCO2017",
+      "normalized_value": "COCO2017",
+      "evidence": "[COCO2017](https://cocodataset.org/) is used to validate our method.",
+      "evidence_location": "82",
+      "confidence": "high",
+      "reason": "Explicitly names the dataset used for validation."
+    },
+    {
+      "field": "environment",
+      "value": "python 3.7 & pytorch 1.11.0+cu113",
+      "normalized_value": "python 3.7 & pytorch 1.11.0+cu113",
+      "evidence": "Our experimental environment is `python 3.7 & pytorch 1.11.0+cu113`.",
+      "evidence_location": "77",
+      "confidence": "high",
+      "reason": "Specifies the exact software versions used for experiments."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python -m torch.distributed.launch --nproc_per_node=2 main.py \\\n  --coco_path /path/to/your/COCODIR \\\n  --resume /path/to/your/checkpoint \\\n  --output_dir /path/to/your/output/dir \\\n  --batch_size 8 \\\n  --matcher team \\\n  --q_splits 65 20 15 \\\n  --eval",
+      "normalized_value": "python -m torch.distributed.launch --nproc_per_node=2 main.py --coco_path /path/to/your/COCODIR --resume /path/to/your/checkpoint --output_dir /path/to/your/output/dir --batch_size 8 --matcher team --q_splits 65 20 15 --eval",
+      "evidence": "python -m torch.distributed.launch --nproc_per_node=2 main.py \\\n  --coco_path /path/to/your/COCODIR \\\n  --resume /path/to/your/checkpoint \\\n  --output_dir /path/to/your/output/dir \\\n  --batch_size 8 \\\n  --matcher team \\\n  --q_splits 65 20 15 \\\n  --eval",
+      "evidence_location": "111-118",
+      "confidence": "high",
+      "reason": "Provides a concrete command for evaluating the model."
+    },
+    {
+      "field": "training_command",
+      "value": "python -m torch.distributed.launch --nproc_per_node=2 main.py \\\n  --coco_path /path/to/your/COCODIR \\\n  --output_dir /path/to/your/output/dir \\\n  --batch_size 8 \\\n  --epochs 12 \\\n  --lr_drop 8 \\\n  --matcher team \\\n  --q_splits 65 20 15",
+      "normalized_value": "python -m torch.distributed.launch --nproc_per_node=2 main.py --coco_path /path/to/your/COCODIR --output_dir /path/to/your/output/dir --batch_size 8 --epochs 12 --lr_drop 8 --matcher team --q_splits 65 20 15",
+      "evidence": "python -m torch.distributed.launch --nproc_per_node=2 main.py \\\n  --coco_path /path/to/your/COCODIR \\\n  --output_dir /path/to/your/output/dir \\\n  --batch_size 8 \\\n  --epochs 12 \\\n  --lr_drop 8 \\\n  --matcher team \\\n  --q_splits 65 20 15",
+      "evidence_location": "149-156",
+      "confidence": "high",
+      "reason": "Provides a concrete command for training the model."
+    },
+    {
+      "field": "metrics",
+      "value": "AP, APs, APm, APl",
+      "normalized_value": "AP, APs, APm, APl",
+      "evidence": "| Model                  | w/ Team DETR | Epochs |    AP    | AP<font size=2>*s*</font> | AP<font size=2>*m*</font> | AP<font size=2>*l*</font> | Params |                                                                              checkpoint & log                                                                              |",
+      "evidence_location": "46",
+      "confidence": "high",
+      "reason": "Lists the evaluation metrics reported in the model zoo table."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{qiu2023teamdetr,\n  author={Qiu, Tian and Zhou, Linyun and Xu, Wenxiang and Cheng, Lechao and Feng, Zunlei and Song, Mingli},\n  booktitle={IEEE International Conference on Image Processing (ICIP)}, \n  title={Team DETR: Guide Queries as a Professional Team in Detection Transformers}, \n  year={2023},\n  pages={450-454},\n  doi={10.1109/ICIP49359.2023.10222890}\n}",
+      "normalized_value": "@inproceedings{qiu2023teamdetr, author={Qiu, Tian and Zhou, Linyun and Xu, Wenxiang and Cheng, Lechao and Feng, Zunlei and Song, Mingli}, booktitle={IEEE International Conference on Image Processing (ICIP)}, title={Team DETR: Guide Queries as a Professional Team in Detection Transformers}, year={2023}, pages={450-454}, doi={10.1109/ICIP49359.2023.10222890}}",
+      "evidence": "@inproceedings{qiu2023teamdetr,\n  author={Qiu, Tian and Zhou, Linyun and Xu, Wenxiang and Cheng, Lechao and Feng, Zunlei and Song, Mingli},\n  booktitle={IEEE International Conference on Image Processing (ICIP)}, \n  title={Team DETR: Guide Queries as a Professional Team in Detection Transformers}, \n  year={2023},\n  pages={450-454},\n  doi={10.1109/ICIP49359.2023.10222890}\n}",
+      "evidence_location": "238-245",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for the paper."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "MeanSum",
+      "normalized_value": "MeanSum",
+      "evidence": "# MeanSum: A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly stated as the title of the repository."
+    },
+    {
+      "field": "artifact_description",
+      "value": "A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "normalized_value": "A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence": "# MeanSum: A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Describes the purpose of the model as stated in the title."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/1810.05739",
+      "normalized_value": "https://arxiv.org/abs/1810.05739",
+      "evidence": "Corresponding paper, accepted to ICML 2019: [https://arxiv.org/abs/1810.05739](https://arxiv.org/abs/1810.05739).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Direct link to the corresponding research paper."
+    },
+    {
+      "field": "conference",
+      "value": "ICML 2019",
+      "normalized_value": "ICML 2019",
+      "evidence": "Corresponding paper, accepted to ICML 2019: [https://arxiv.org/abs/1810.05739](https://arxiv.org/abs/1810.05739).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the conference where the paper was accepted."
+    },
+    {
+      "field": "programming_language",
+      "value": "python 3",
+      "normalized_value": "python 3",
+      "evidence": "- python 3",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Explicitly listed as a main requirement."
+    },
+    {
+      "field": "framework",
+      "value": "torch 0.4.0",
+      "normalized_value": "torch 0.4.0",
+      "evidence": "- torch 0.4.0",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Explicitly listed as a main requirement."
+    },
+    {
+      "field": "docker_image",
+      "value": "pytorch/pytorch:0.4_cuda9_cudnn7",
+      "normalized_value": "pytorch/pytorch:0.4_cuda9_cudnn7",
+      "evidence": "Tested in Docker, image = ```pytorch/pytorch:0.4_cuda9_cudnn7```.",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Specifies the Docker image used for testing."
+    },
+    {
+      "field": "dataset",
+      "value": "Yelp",
+      "normalized_value": "Yelp",
+      "evidence": "1. Download Yelp data: https://www.yelp.com/dataset and place files in ```datasets/yelp_dataset/```",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "Identifies the dataset used for the project."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://www.yelp.com/dataset",
+      "normalized_value": "https://www.yelp.com/dataset",
+      "evidence": "1. Download Yelp data: https://www.yelp.com/dataset and place files in ```datasets/yelp_dataset/```",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "Provides the download link for the dataset."
+    },
+    {
+      "field": "pretrained_model_link",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt",
+      "evidence": "1. Download summarization model and place in \n```stable_checkpoints/sum/mlstm/yelp/batch_size_16-notes_cycloss_honly-sum_lr_0.0005-tau_2.0/```: \n[link](https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt)",
+      "evidence_location": "53-55",
+      "confidence": "high",
+      "reason": "Provides the link to download the pretrained summarization model."
+    },
+    {
+      "field": "inference_command",
+      "value": "python train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>",
+      "normalized_value": "python train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>",
+      "evidence": "```\npython train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>\n```",
+      "evidence_location": "78-80",
+      "confidence": "high",
+      "reason": "Command for testing with pretrained mode."
+    },
+    {
+      "field": "training_command",
+      "value": "python train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes>",
+      "normalized_value": "python train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes>",
+      "evidence": "```\npython train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes> \n```",
+      "evidence_location": "84-86",
+      "confidence": "high",
+      "reason": "Command for training the summarization model."
+    }
+  ]
+}

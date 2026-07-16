@@ -1,0 +1,85 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "prdc",
+      "normalized_value": "prdc",
+      "evidence": "pip3 install prdc",
+      "evidence_location": "87",
+      "confidence": "high",
+      "reason": "Package name used for installation via pip."
+    },
+    {
+      "field": "artifact_title",
+      "value": "Reliable Fidelity and Diversity Metrics for Generative Models (ICML 2020)",
+      "normalized_value": "Reliable Fidelity and Diversity Metrics for Generative Models (ICML 2020)",
+      "evidence": "## Reliable Fidelity and Diversity Metrics for Generative Models (ICML 2020)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Main title of the project and associated research paper."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2002.09797",
+      "normalized_value": "https://arxiv.org/abs/2002.09797",
+      "evidence": "[Paper: Reliable Fidelity and Diversity Metrics for Generative Models](https://arxiv.org/abs/2002.09797)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Direct link to the peer-reviewed paper on arXiv."
+    },
+    {
+      "field": "authors",
+      "value": "Muhammad Ferjad Naeem, Seong Joon Oh, Yunjey Choi, Youngjung Uh, Jaejun Yoo",
+      "normalized_value": "Muhammad Ferjad Naeem, Seong Joon Oh, Yunjey Choi, Youngjung Uh, Jaejun Yoo",
+      "evidence": "Muhammad Ferjad Naeem <sup>1,3*</sup>, Seong Joon Oh<sup>2*</sup>, Yunjey Choi<sup>1</sup>, \nYoungjung Uh<sup>1</sup>, Jaejun Yoo<sup>1,4</sup>",
+      "evidence_location": "9-10",
+      "confidence": "high",
+      "reason": "Lists the contributors and authors of the work."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "Copyright (c) 2020-present NAVER Corp.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.",
+      "evidence_location": "131-151",
+      "confidence": "high",
+      "reason": "Standard MIT license text explicitly grants permission to use, modify, and distribute the software."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip3 install prdc",
+      "normalized_value": "pip3 install prdc",
+      "evidence": "pip3 install prdc",
+      "evidence_location": "87",
+      "confidence": "high",
+      "reason": "Command to install the package from PyPI."
+    },
+    {
+      "field": "metrics_provided",
+      "value": "precision, recall, density, coverage",
+      "normalized_value": "precision, recall, density, coverage",
+      "evidence": "We compute precision, recall, density, and coverage estimates below.",
+      "evidence_location": "93",
+      "confidence": "high",
+      "reason": "Specifies the evaluation metrics implemented by the artifact for generative models."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{ferjad2020icml,\n  title = {Reliable Fidelity and Diversity Metrics for Generative Models},\n  author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},\n  year = {2020},\n  booktitle = {International Conference on Machine Learning},\n}",
+      "normalized_value": "@article{ferjad2020icml, title = {Reliable Fidelity and Diversity Metrics for Generative Models}, author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun}, year = {2020}, booktitle = {International Conference on Machine Learning},}",
+      "evidence": "@article{ferjad2020icml,\n  title = {Reliable Fidelity and Diversity Metrics for Generative Models},\n  author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},\n  year = {2020},\n  booktitle = {International Conference on Machine Learning},\n}",
+      "evidence_location": "156-161",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for academic referencing."
+    },
+    {
+      "field": "example_code",
+      "value": "import numpy as np\nfrom prdc import compute_prdc\n\n\nnum_real_samples = num_fake_samples = 10000\nfeature_dim = 1000\nnearest_k = 5\nreal_features = np.random.normal(loc=0.0, scale=1.0,\n                                 size=[num_real_samples, feature_dim])\n\nfake_features = np.random.normal(loc=0.0, scale=1.0,\n                                 size=[num_fake_samples, feature_dim])\n\nmetrics = compute_prdc(real_features=real_features,\n                       fake_features=fake_features,\n                       nearest_k=nearest_k)\n\nprint(metrics)",
+      "normalized_value": "import numpy as np from prdc import compute_prdc num_real_samples = num_fake_samples = 10000 feature_dim = 1000 nearest_k = 5 real_features = np.random.normal(loc=0.0, scale=1.0, size=[num_real_samples, feature_dim]) fake_features = np.random.normal(loc=0.0, scale=1.0, size=[num_fake_samples, feature_dim]) metrics = compute_prdc(real_features=real_features, fake_features=fake_features, nearest_k=nearest_k) print(metrics)",
+      "evidence": "import numpy as np\nfrom prdc import compute_prdc\n\n\nnum_real_samples = num_fake_samples = 10000\nfeature_dim = 1000\nnearest_k = 5\nreal_features = np.random.normal(loc=0.0, scale=1.0,\n                                 size=[num_real_samples, feature_dim])\n\nfake_features = np.random.normal(loc=0.0, scale=1.0,\n                                 size=[num_fake_samples, feature_dim])\n\nmetrics = compute_prdc(real_features=real_features,\n                       fake_features=fake_features,\n                       nearest_k=nearest_k)\n\nprint(metrics)",
+      "evidence_location": "96-113",
+      "confidence": "high",
+      "reason": "Demonstrates how to use the compute_prdc function with sample data to compute metrics."
+    }
+  ]
+}

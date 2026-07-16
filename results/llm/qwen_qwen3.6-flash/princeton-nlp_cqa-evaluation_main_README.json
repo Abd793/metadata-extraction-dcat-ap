@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "normalized_value": "Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "evidence": "# Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit title of the repository and associated research paper."
+    },
+    {
+      "field": "artifact_description",
+      "value": "This is the repository for our ACL'2022 paper [Ditch the Gold Standard: Re-evaluating Conversational Question Answering](https://arxiv.org/pdf/2112.08812.pdf).",
+      "normalized_value": "This is the repository for our ACL'2022 paper [Ditch the Gold Standard: Re-evaluating Conversational Question Answering](https://arxiv.org/pdf/2112.08812.pdf).",
+      "evidence": "This is the repository for our ACL'2022 paper [Ditch the Gold Standard: Re-evaluating Conversational Question Answering](https://arxiv.org/pdf/2112.08812.pdf).",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "States the primary purpose and context of the repository."
+    },
+    {
+      "field": "conference",
+      "value": "ACL'2022",
+      "normalized_value": "ACL'2022",
+      "evidence": "This is the repository for our ACL'2022 paper",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Identifies the publication venue and year for academic context."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2112.08812.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2112.08812.pdf",
+      "evidence": "[Ditch the Gold Standard: Re-evaluating Conversational Question Answering](https://arxiv.org/pdf/2112.08812.pdf)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper for reference."
+    },
+    {
+      "field": "task",
+      "value": "Conversational Question Answering",
+      "normalized_value": "Conversational Question Answering",
+      "evidence": "conversational QA systems",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Defines the core NLP task addressed by the work."
+    },
+    {
+      "field": "evaluation_protocols",
+      "value": "Auto-Pred, Auto-Replace, Auto-Rewrite",
+      "normalized_value": "Auto-Pred, Auto-Replace, Auto-Rewrite",
+      "evidence": "including Auto-Pred, Auto-Replace and our proposed evaluation protocol, Auto-Rewrite",
+      "evidence_location": "75",
+      "confidence": "high",
+      "reason": "Lists the specific evaluation methodologies implemented and compared in the codebase."
+    },
+    {
+      "field": "models_evaluated",
+      "value": "BERT, GraphFlow, HAM, ExCorD",
+      "normalized_value": "BERT, GraphFlow, HAM, ExCorD",
+      "evidence": "We provide our implementations for the four models that we used in our paper: BERT, GraphFlow, HAM, ExCorD.",
+      "evidence_location": "94",
+      "confidence": "high",
+      "reason": "Identifies the baseline models assessed and implemented in the repository."
+    },
+    {
+      "field": "datasets_used",
+      "value": "QuAC, CANARD",
+      "normalized_value": "QuAC, CANARD",
+      "evidence": "Our experiments use QuAC dataset for passages and conversations, and the test set of CANARD dataset for context-independent questions",
+      "evidence_location": "90",
+      "confidence": "high",
+      "reason": "Specifies the datasets required for running the experiments and evaluations."
+    },
+    {
+      "field": "human_annotation_dataset_path",
+      "value": "data/human_annotation_data.json",
+      "normalized_value": "data/human_annotation_data.json",
+      "evidence": "You can download the human annotation dataset from data/human_annotation_data.json.",
+      "evidence_location": "28",
+      "confidence": "high",
+      "reason": "Provides the exact file path for the released human evaluation dataset."
+    },
+    {
+      "field": "installation_command",
+      "value": "```bash\npip install -r requirements.txt\n```",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "```bash\npip install -r requirements.txt\n```",
+      "evidence_location": "84-86",
+      "confidence": "high",
+      "reason": "Standard command for setting up the Python environment and dependencies."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "```bibtex\n@inproceedings{li2022ditch,\n    title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\",\n    author = \"Li, Huihan  and\n      Gao, Tianyu  and\n      Goenka, Manan  and\n      Chen, Danqi\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.555\",\n    pages = \"8074--8085\",\n}\n```",
+      "normalized_value": "@inproceedings{li2022ditch, title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\", author = \"Li, Huihan and Gao, Tianyu and Goenka, Manan and Chen, Danqi\", booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\", year = \"2022\", url = \"https://aclanthology.org/2022.acl-long.555\", pages = \"8074--8085\", }",
+      "evidence": "```bibtex\n@inproceedings{li2022ditch,\n    title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\",\n    author = \"Li, Huihan  and\n      Gao, Tianyu  and\n      Goenka, Manan  and\n      Chen, Danqi\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.555\",\n    pages = \"8074--8085\",\n}\n```",
+      "evidence_location": "241-252",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for academic attribution and reproducibility."
+    },
+    {
+      "field": "evaluation_command_example",
+      "value": "```bash\n# Run Evaluation (Auto-Rewrite as example)\npython run_quac_eval.py \\\n  --type bert \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --rewrite \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive} \\\n```",
+      "normalized_value": "python run_quac_eval.py --type bert --output_dir ${directory-to-model-checkpoint} --write_dir ${directory-to-write-evaluation-result} --predict_file val_v0.2.json --max_seq_length 512 --doc_stride 128 --max_query_length 64 --match_metric f1 --add_background --skip_entity --rewrite --start_i ${index_of_first_passage_to_eval} --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence": "```bash\n# Run Evaluation (Auto-Rewrite as example)\npython run_quac_eval.py \\\n  --type bert \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --rewrite \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive} \\\n```",
+      "evidence_location": "117-132",
+      "confidence": "high",
+      "reason": "Demonstrates the exact command structure and key arguments for running model evaluation."
+    },
+    {
+      "field": "bert_checkpoint_source",
+      "value": "We implemented and trained our own BERT model.",
+      "normalized_value": "We implemented and trained our own BERT model.",
+      "evidence": "We implemented and trained our own BERT model.",
+      "evidence_location": "97",
+      "confidence": "high",
+      "reason": "Clarifies that the BERT checkpoint is not pre-hosted and must be trained locally."
+    },
+    {
+      "field": "graphflow_checkpoint_source",
+      "value": "We did not find an uploaded model checkpoint so we trained our own using [their training script](https://github.com/hugochan/GraphFlow).",
+      "normalized_value": "We did not find an uploaded model checkpoint so we trained our own using [their training script](https://github.com/hugochan/GraphFlow).",
+      "evidence": "We did not find an uploaded model checkpoint so we trained our own using [their training script](https://github.com/hugochan/GraphFlow).",
+      "evidence_location": "136",
+      "confidence": "high",
+      "reason": "Indicates the need to train GraphFlow from scratch and provides the reference script."
+    },
+    {
+      "field": "ham_checkpoint_source",
+      "value": "The orgininal model checkpoint can be downloaded from [CodaLab](https://worksheets.codalab.org/rest/bundles/0x5c08cb0fb90c4afd8a2811bb63023cce/contents/blob/)",
+      "normalized_value": "The orgininal model checkpoint can be downloaded from [CodaLab](https://worksheets.codalab.org/rest/bundles/0x5c08cb0fb90c4afd8a2811bb63023cce/contents/blob/)",
+      "evidence": "The orgininal model checkpoint can be downloaded from [CodaLab](https://worksheets.codalab.org/rest/bundles/0x5c08cb0fb90c4afd8a2811bb63023cce/contents/blob/)",
+      "evidence_location": "179",
+      "confidence": "high",
+      "reason": "Provides a direct download link for the pre-trained HAM checkpoint."
+    },
+    {
+      "field": "excord_checkpoint_source",
+      "value": "The original model checkpoint can be downloaded from [their repo](https://drive.google.com/file/d/1Xf0-XUvGi7jgiAAdA5BQLk7p5ikc_wOl/view?usp=sharing)",
+      "normalized_value": "The original model checkpoint can be downloaded from [their repo](https://drive.google.com/file/d/1Xf0-XUvGi7jgiAAdA5BQLk7p5ikc_wOl/view?usp=sharing)",
+      "evidence": "The original model checkpoint can be downloaded from [their repo](https://drive.google.com/file/d/1Xf0-XUvGi7jgiAAdA5BQLk7p5ikc_wOl/view?usp=sharing)",
+      "evidence_location": "216",
+      "confidence": "high",
+      "reason": "Provides a direct download link for the pre-trained ExCorD checkpoint."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "MAP-Elites for Constrained Optimization",
+      "normalized_value": "MAP-Elites for Constrained Optimization",
+      "evidence": "## MAP-Elites for Constrained Optimization",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit title of the project."
+    },
+    {
+      "field": "description",
+      "value": "Python implementation of the [MAP Elites algorithm](https://arxiv.org/abs/1504.04909) (originally devised for unconstrained optimization), for constrained optimization problems.",
+      "normalized_value": "Python implementation of the [MAP Elites algorithm](https://arxiv.org/abs/1504.04909) (originally devised for unconstrained optimization), for constrained optimization problems.",
+      "evidence": "Python implementation of the [MAP Elites algorithm](https://arxiv.org/abs/1504.04909) (originally devised for unconstrained optimization), for constrained optimization problems.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicit description of the artifact."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "Python implementation",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly stated in the description."
+    },
+    {
+      "field": "algorithm",
+      "value": "MAP Elites",
+      "normalized_value": "MAP Elites",
+      "evidence": "MAP Elites algorithm",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly stated as the algorithm implemented."
+    },
+    {
+      "field": "task",
+      "value": "Constrained Optimization",
+      "normalized_value": "Constrained Optimization",
+      "evidence": "Constrained Optimization",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly stated in the title."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://dl.acm.org/doi/10.1145/3319619.3321939",
+      "normalized_value": "https://dl.acm.org/doi/10.1145/3319619.3321939",
+      "evidence": "[GECCO paper](https://dl.acm.org/doi/10.1145/3319619.3321939)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicit link to the paper."
+    },
+    {
+      "field": "arxiv_link",
+      "value": "https://arxiv.org/abs/1902.00703",
+      "normalized_value": "https://arxiv.org/abs/1902.00703",
+      "evidence": "[extended arXiv version](https://arxiv.org/abs/1902.00703)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicit link to the arXiv version."
+    },
+    {
+      "field": "original_algorithm_link",
+      "value": "https://arxiv.org/abs/1504.04909",
+      "normalized_value": "https://arxiv.org/abs/1504.04909",
+      "evidence": "[MAP Elites algorithm](https://arxiv.org/abs/1504.04909)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicit link to the original algorithm paper."
+    },
+    {
+      "field": "authors",
+      "value": "Stefano Fioravanzo and Giovanni Iacca",
+      "normalized_value": "Stefano Fioravanzo and Giovanni Iacca",
+      "evidence": "Stefano Fioravanzo and Giovanni Iacca.",
+      "evidence_location": "97",
+      "confidence": "high",
+      "reason": "Explicitly listed in the reference section."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{fioravanzo2019evaluating,\n  title={Evaluating MAP-Elites on Constrained Optimization Problems},\n  author={Fioravanzo, Stefano and Iacca, Giovanni},\n  booktitle={Genetic and Evolutionary Computation Conference Companion},\n  pages={253--254},\n  year={2019},\n  organization={ACM}\n}",
+      "normalized_value": "@inproceedings{fioravanzo2019evaluating, title={Evaluating MAP-Elites on Constrained Optimization Problems}, author={Fioravanzo, Stefano and Iacca, Giovanni}, booktitle={Genetic and Evolutionary Computation Conference Companion}, pages={253--254}, year={2019}, organization={ACM}",
+      "evidence": "@inproceedings{fioravanzo2019evaluating,\n  title={Evaluating MAP-Elites on Constrained Optimization Problems},\n  author={Fioravanzo, Stefano and Iacca, Giovanni},\n  booktitle={Genetic and Evolutionary Computation Conference Companion},\n  pages={253--254},\n  year={2019},\n  organization={ACM}\n}",
+      "evidence_location": "103-110",
+      "confidence": "high",
+      "reason": "BibTeX citation provided for reuse."
+    },
+    {
+      "field": "configuration_file",
+      "value": "config.ini",
+      "normalized_value": "config.ini",
+      "evidence": "├── config.ini",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Explicitly listed in file structure and configuration section."
+    },
+    {
+      "field": "configuration_example",
+      "value": "[mapelites]\n; random seed\nseed = 54\n; number of initial random samples\nbootstrap_individuals = 100\n; numer of map elites iterations\niterations = 10000\n; True: solve a minimization problem. False: solve a maximization problem\nminimization = True\n\n[opt_function]\n; Define the optimization function.\n; This must be the name of a class subclassing the abstract class ConstrainedFunction. See functions.py for reference\nname = C16\n; Number of dimensions of the optimization function\ndimensions = 4\n; Define heatmap bins for feature dimensions\n; Name each bin as `bin_{name of constraint}` where `name_of_constraint` is the name of the constraint\n; function implemented in the specified optimization function class\n; If you want to define ONE bin for all constraints, name it `bin_all`\n; Note: The bins must be defined by numbers, except for the `inf` label which can be defined ether at the beginning\n; of at the end of the bins.\n; bin_all = inf,0.0,1.0,2.0,3.0,4.0,inf\nbin_g1 = inf,0.0,1.0,2.0,3.0,4.0,inf\nbin_g2 = inf,0.0,1.0,2.0,3.0,inf\nbin_h1 = inf,0.0,1.0,2.0,3.0,4.0,5.0,inf\nbin_h2 = inf,0.0,1.0,2.0,inf\n\n[crossover]\n; Crossover function taken from ea_operators.py file.\n; Name of called function is {type}_crossover(). If `type = UNIFORM` then the function call is `uniform_crossover()`\ntype = UNIFORM\n; list of arguments to the above function\nindpb = 0.5\n\n[mutation]\n; mutation function taken from ea_operators.py file.\n; name of called function is {type}_mutation(). If `type = GAUSSIAN` then the function call is `gaussian_mutation()`\ntype = GAUSSIAN\n; Define how to manage the boundaries during mutation, meaning how the algorithm should behave in case it mutates outside of the function domain.\n; There are three possible cases:\n; - `saturation`: x in [a,b], if after mutation x>b -> x=b; if x<a -> x=a\n; - `bounce`: if x is mutated outside [a, b] it is bounced back by the remaining delta\n; - `toroidal`: if x is mutated outside [a, b], x is bounced to the other bound by the remaining delta, 'pac-man' style\nboundary = saturation\n; list of arguments to the above function\nmu = 0\nsigma = 0.2\n; probability of each attribute to be mutated\nindpb = 0.5",
+      "normalized_value": "[mapelites] ; random seed seed = 54 ; number of initial random samples bootstrap_individuals = 100 ; numer of map elites iterations iterations = 10000 ; True: solve a minimization problem. False: solve a maximization problem minimization = True [opt_function] ; Define the optimization function. ; This must be the name of a class subclassing the abstract class ConstrainedFunction. See functions.py for reference name = C16 ; Number of dimensions of the optimization function dimensions = 4 ; Define heatmap bins for feature dimensions ; Name each bin as bin_{name of constraint} where name_of_constraint is the name of the constraint ; function implemented in the specified optimization function class ; If you want to define ONE bin for all constraints, name it bin_all ; Note: The bins must be defined by numbers, except for the inf label which can be defined ether at the beginning ; of at the end of the bins. ; bin_all = inf,0.0,1.0,2.0,3.0,4.0,inf bin_g1 = inf,0.0,1.0,2.0,3.0,4.0,inf bin_g2 = inf,0.0,1.0,2.0,3.0,inf bin_h1 = inf,0.0,1.0,2.0,3.0,4.0,5.0,inf bin_h2 = inf,0.0,1.0,2.0,inf [crossover] ; Crossover function taken from ea_operators.py file. ; Name of called function is {type}_crossover(). If type = UNIFORM then the function call is uniform_crossover() type = UNIFORM ; list of arguments to the above function indpb = 0.5 [mutation] ; mutation function taken from ea_operators.py file. ; name of called function is {type}_mutation(). If type = GAUSSIAN then the function call is gaussian_mutation() type = GAUSSIAN ; Define how to manage the boundaries during mutation, meaning how the algorithm should behave in case it mutates outside of the function domain. ; There are three possible cases: ; - saturation: x in [a,b], if after mutation x>b -> x=b; if x<a -> x=a ; - bounce: if x is mutated outside [a, b] it is bounced back by the remaining delta ; - toroidal: if x is mutated outside [a, b], x is bounced to the other bound by the remaining delta, 'pac-man' style boundary = saturation ; list of arguments to the above function mu = 0 sigma = 0.2 ; probability of each attribute to be mutated indpb = 0.5",
+      "evidence": "```ini\n[mapelites]\n; random seed\nseed = 54\n; number of initial random samples\nbootstrap_individuals = 100\n; numer of map elites iterations\niterations = 10000\n; True: solve a minimization problem. False: solve a maximization problem\nminimization = True\n\n[opt_function]\n; Define the optimization function.\n; This must be the name of a class subclassing the abstract class ConstrainedFunction. See functions.py for reference\nname = C16\n; Number of dimensions of the optimization function\ndimensions = 4\n; Define heatmap bins for feature dimensions\n; Name each bin as `bin_{name of constraint}` where `name_of_constraint` is the name of the constraint\n; function implemented in the specified optimization function class\n; If you want to define ONE bin for all constraints, name it `bin_all`\n; Note: The bins must be defined by numbers, except for the `inf` label which can be defined ether at the beginning\n; of at the end of the bins.\n; bin_all = inf,0.0,1.0,2.0,3.0,4.0,inf\nbin_g1 = inf,0.0,1.0,2.0,3.0,4.0,inf\nbin_g2 = inf,0.0,1.0,2.0,3.0,inf\nbin_h1 = inf,0.0,1.0,2.0,3.0,4.0,5.0,inf\nbin_h2 = inf,0.0,1.0,2.0,inf\n\n[crossover]\n; Crossover function taken from ea_operators.py file.\n; Name of called function is {type}_crossover(). If `type = UNIFORM` then the function call is `uniform_crossover()`\ntype = UNIFORM\n; list of arguments to the above function\nindpb = 0.5\n\n[mutation]\n; mutation function taken from ea_operators.py file.\n; name of called function is {type}_mutation(). If `type = GAUSSIAN` then the function call is `gaussian_mutation()`\ntype = GAUSSIAN\n; Define how to manage the boundaries during mutation, meaning how the algorithm should behave in case it mutates outside of the function domain.\n; There are three possible cases:\n; - `saturation`: x in [a,b], if after mutation x>b -> x=b; if x<a -> x=a\n; - `bounce`: if x is mutated outside [a, b] it is bounced back by the remaining delta\n; - `toroidal`: if x is mutated outside [a, b], x is bounced to the other bound by the remaining delta, 'pac-man' style\nboundary = saturation\n; list of arguments to the above function\nmu = 0\nsigma = 0.2\n; probability of each attribute to be mutated\nindpb = 0.5\n```",
+      "evidence_location": "35-86",
+      "confidence": "high",
+      "reason": "Provides concrete configuration parameters for running the algorithm."
+    }
+  ]
+}

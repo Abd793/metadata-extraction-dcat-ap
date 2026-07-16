@@ -1,0 +1,103 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "normalized_value": "Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "evidence": "# Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit title of the project and paper."
+    },
+    {
+      "field": "authors",
+      "value": "Damien LaRocque, William Guimont-Martin, David-Alexandre Duclos, Philippe Giguère, Francois Pomerleau",
+      "normalized_value": "Damien LaRocque, William Guimont-Martin, David-Alexandre Duclos, Philippe Giguère, Francois Pomerleau",
+      "evidence": "> Damien LaRocque, William Guimont-Martin, David-Alexandre Duclos, Philippe Giguère, Francois Pomerleau",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "List of authors explicitly stated in the header block."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2403.16877",
+      "normalized_value": "https://arxiv.org/abs/2403.16877",
+      "evidence": "> Paper: https://arxiv.org/abs/2403.16877",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Direct link to the paper on arXiv."
+    },
+    {
+      "field": "conference",
+      "value": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024)",
+      "normalized_value": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024)",
+      "evidence": "This repo contains the source code and the datasets used in our paper _Proprioception Is All You Need: Terrain Classification for Boreal Forests_ that was submitted to the 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024).",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Conference submission information explicitly stated."
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "normalized_value": "MIT",
+      "evidence": "This project is licensed under a [MIT](LICENSE) license.",
+      "evidence_location": "139",
+      "confidence": "high",
+      "reason": "License type explicitly stated in the License section."
+    },
+    {
+      "field": "citation",
+      "value": "@article{LaRocque2024BorealTC,\n    title={Proprioception Is All You Need: Terrain Classification for Boreal Forests},\n    author={Damien LaRocque and William Guimont-Martin and David-Alexandre Duclos and Philippe Giguère and François Pomerleau},\n    journal={arXiv preprint arXiv:2403.16877},\n    year={2024},\n    eprint={2403.16877},\n    archivePrefix={arXiv},\n    primaryClass={cs.RO}\n}",
+      "normalized_value": "@article{LaRocque2024BorealTC,\n    title={Proprioception Is All You Need: Terrain Classification for Boreal Forests},\n    author={Damien LaRocque and William Guimont-Martin and David-Alexandre Duclos and Philippe Giguère and François Pomerleau},\n    journal={arXiv preprint arXiv:2403.16877},\n    year={2024},\n    eprint={2403.16877},\n    archivePrefix={arXiv},\n    primaryClass={cs.RO}\n}",
+      "evidence": "```\nbibtex\n@article{LaRocque2024BorealTC,\n    title={Proprioception Is All You Need: Terrain Classification for Boreal Forests},\n    author={Damien LaRocque and William Guimont-Martin and David-Alexandre Duclos and Philippe Giguère and François Pomerleau},\n    journal={arXiv preprint arXiv:2403.16877},\n    year={2024},\n    eprint={2403.16877},\n    archivePrefix={arXiv},\n    primaryClass={cs.RO}\n}\n```",
+      "evidence_location": "126-136",
+      "confidence": "high",
+      "reason": "BibTeX citation block provided for academic reuse."
+    },
+    {
+      "field": "installation_command",
+      "value": "python3.10 -m venv .venv\n. .venv/bin/activate\npip install -r requirements.txt",
+      "normalized_value": "python3.10 -m venv .venv\n. .venv/bin/activate\npip install -r requirements.txt",
+      "evidence": "```\nsh\npython3.10 -m venv .venv\n. .venv/bin/activate\npip install -r requirements.txt\n```",
+      "evidence_location": "24-28",
+      "confidence": "high",
+      "reason": "Installation steps for dependencies and virtual environment."
+    },
+    {
+      "field": "docker_build_command",
+      "value": "docker build -t borealtc-gpu -f DockerfileGPU .",
+      "normalized_value": "docker build -t borealtc-gpu -f DockerfileGPU .",
+      "evidence": "```\nsh\n# Build the Docker image\ndocker build -t borealtc-gpu -f DockerfileGPU .",
+      "evidence_location": "32-34",
+      "confidence": "high",
+      "reason": "Command to build the Docker image with dependencies."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "NVIDIA GPU",
+      "normalized_value": "NVIDIA GPU",
+      "evidence": "Two dependencies, [`mamba-ssm`](https://github.com/state-spaces/mamba) and [`causal-conv1d`](https://github.com/Dao-AILab/causal-conv1d) require a NVIDIA GPU.",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Hardware requirement explicitly stated for specific dependencies."
+    },
+    {
+      "field": "dataset_names",
+      "value": "BorealTC, Vulpi",
+      "normalized_value": "BorealTC, Vulpi",
+      "evidence": "* the `BorealTC` dataset, our publicly available dataset\n* the `Vulpi` dataset, from the 2021 [paper](https://doi.org/10.1016/j.jterra.2020.12.002) of Vulpi et al.",
+      "evidence_location": "47-48",
+      "confidence": "high",
+      "reason": "Names of datasets included in the repository."
+    },
+    {
+      "field": "model_checkpoints",
+      "value": "mamba_vulpi.ckpt, mamba_borealtc.ckpt, mamba_combined.ckpt",
+      "normalized_value": "mamba_vulpi.ckpt, mamba_borealtc.ckpt, mamba_combined.ckpt",
+      "evidence": "|  `Vulpi`   |          Data Type           | 56 <br/> 56 | 3 <br/> 3 | 4 <br/> 4 | 56 <br/> 56 | 5e-3         | 5e-3       | 0.33                | 4                       | 60         | 64             | 8              | 2                  | 0.75                  | 2                     |    [mamba_vulpi.ckpt](checkpoints/mamba_vulpi.ckpt)    |\n| `BorealTC` | IMU <br/> Wheel&nbsp;service | 16 <br/> 16 | 4 <br/> 3 | 4 <br/> 6 | 32 <br/> 8  | 6.3e-6       | 1.5e-3     | 0.25                | 4                       | 60         | 16             | 8              | None               | 0.75                  | 2.25                  | [mamba_borealtc.ckpt](checkpoints/mamba_borealtc.ckpt) |\n|  Combined  | IMU <br/> Wheel&nbsp;service | 16 <br/> 16 | 4 <br/> 3 | 4 <br/> 6 | 32 <br/> 8  | 6.3e-6       | 1.5e-3     | 0.25                | 4                       | 60         | 16             | 8              | None               | 0.75                  | 2.25                  | [mamba_combined.ckpt](checkpoints/mamba_combined.ckpt) |",
+      "evidence_location": "93-95",
+      "confidence": "high",
+      "reason": "Links to trained model checkpoints provided in the hyperparameters table."
+    }
+  ]
+}

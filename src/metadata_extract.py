@@ -253,6 +253,9 @@ def main(args):
     result_dir = Path(f'./results/llm/{safe_model_name}')
     # 1. read all markdown files in the folder
     files = sorted([x for x in Path("results/readme_files").glob("*.md")])
+    if args.limit:
+        files = files[:args.limit]
+
     print(f"Found {len(files)} markdown files")
 
     # 2. initialize AsyncOpenAI client and semaphore for concurrency control
@@ -265,7 +268,6 @@ def main(args):
         api_key=api_key,
         timeout=120,
     )
-    files = files[:1]
     if args.parallel == 1:
         for file in files:
             extract_metadata(client, args.model, file, result_dir)
@@ -296,6 +298,7 @@ if __name__ == '__main__':
     ]
     parser.add_argument("--model", choices=model_choices, required=False, default="deepseek/deepseek-v4-flash")
     parser.add_argument("--parallel", type=int, required=False, default=1)
+    parser.add_argument("--limit", type=int, required=False, default=None)
 
     args = parser.parse_args()
 

@@ -1,0 +1,103 @@
+{
+  "metadata": [
+    {
+      "field": "repository_url",
+      "value": "https://github.com/dayu11/selective_pretraining_for_private_finetuning",
+      "normalized_value": "https://github.com/dayu11/selective_pretraining_for_private_finetuning",
+      "evidence": "[This repo](https://github.com/dayu11/selective_pretraining_for_private_finetuning)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly provides the GitHub repository URL hosting the code."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2305.13865",
+      "normalized_value": "https://arxiv.org/abs/2305.13865",
+      "evidence": "[this paper](https://arxiv.org/abs/2305.13865)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly provides the arXiv paper URL associated with the framework."
+    },
+    {
+      "field": "dataset",
+      "value": "SST-2",
+      "normalized_value": "SST-2",
+      "evidence": "on SST-2",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the specific dataset used for evaluation and fine-tuning."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "GPUs that support half-precision training",
+      "normalized_value": "GPUs that support half-precision training",
+      "evidence": "The code requires GPUs that support half-precision training.",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Specifies the hardware capability required to run the code."
+    },
+    {
+      "field": "dependencies",
+      "value": "torch==1.12.1\ndatasets\nevaluate\naccelerate\ntqdm",
+      "normalized_value": "torch==1.12.1 datasets evaluate accelerate tqdm",
+      "evidence": "```\ntorch==1.12.1\ndatasets\nevaluate\naccelerate\ntqdm\n```",
+      "evidence_location": "5-11",
+      "confidence": "high",
+      "reason": "Lists the exact Python package dependencies required for installation."
+    },
+    {
+      "field": "method",
+      "value": "DP fine-tuning",
+      "normalized_value": "DP fine-tuning",
+      "evidence": "## Implementation of DP fine-tuning",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Identifies the core differentially private fine-tuning technique implemented in the repository."
+    },
+    {
+      "field": "pretraining_data",
+      "value": "Wikipedia + BookCorpus",
+      "normalized_value": "Wikipedia + BookCorpus",
+      "evidence": "download Wikipedia + BookCorpus, and split the documents into natural sentences.",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Identifies the source data used for the first stage of selective pre-training."
+    },
+    {
+      "field": "optimizer",
+      "value": "DP-Adam",
+      "normalized_value": "DP-Adam",
+      "evidence": "Train the domain classifier with DP-Adam",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Specifies the optimizer used for training the domain classifier."
+    },
+    {
+      "field": "hyperparameters_domain_classifier",
+      "value": "noise_multiplier=1.4, clip=1, pergpu_bs=64, gradient accumulation steps=32, learning rate=1e-3",
+      "normalized_value": "noise_multiplier=1.4, clip=1, pergpu_bs=64, gradient accumulation steps=32, learning rate=1e-3",
+      "evidence": "bash scripts/train_domain_classifier.sh 1.4 1 64 32 1e-3\n\n> The arguments are: noise_multiplier, clip, pergpu_bs, gradient accumulation steps, and learning rate. We compute the logits in the function 'filter_pretraining_data' in 'run_glue_no_trainer.py'. In this implementation, only 1 GPU is used for training the domain classifier and computing the logits.",
+      "evidence_location": "46-48",
+      "confidence": "high",
+      "reason": "Provides the exact command and argument mapping for training the domain classifier."
+    },
+    {
+      "field": "hyperparameters_pretraining",
+      "value": "model size=tiny (5M), lr=3e-4, pre-training steps=1000000, per-gpu-bs=32, num_gpus=8, gradient accumulation=1",
+      "normalized_value": "model size=tiny (5M), lr=3e-4, pre-training steps=1000000, per-gpu-bs=32, num_gpus=8, gradient accumulation=1",
+      "evidence": "bash scripts/pretraining.sh pretraining_data_40m.ds tiny 3e-4 1000000 32 8 1\n\n> The arguments are: pre-training data path, model size (tiny=5M), lr, pre-training steps, per-gpu-bs, num_gpus, gradient accumulation.",
+      "evidence_location": "77-80",
+      "confidence": "high",
+      "reason": "Provides the exact command and argument mapping for the pre-training stage."
+    },
+    {
+      "field": "hyperparameters_finetuning",
+      "value": "noise_multiplier=1.4, clip=1, pergpu_bs=32, gradient accumulation=64, lr=1e-3, epochs=30, seed=0",
+      "normalized_value": "noise_multiplier=1.4, clip=1, pergpu_bs=32, gradient accumulation=64, lr=1e-3, epochs=30, seed=0",
+      "evidence": "> The argumentments are: pre-trained model path, noise_multiplier, clip, pergpu_bs, gradient accumulation, lr, epochs, seed. Replace checkpoint-XXXX with your checkpoint.\n\nbash scripts/train_sst2.sh ../pretraining/results/pretraining_data_random_40m.ds_lr3e-4_maxsteps1000000_tiny/checkpoint-XXXX 1.4 1 32 64 1e-3 30 0",
+      "evidence_location": "99-102",
+      "confidence": "high",
+      "reason": "Provides the exact command and argument mapping for the private fine-tuning stage."
+    }
+  ]
+}

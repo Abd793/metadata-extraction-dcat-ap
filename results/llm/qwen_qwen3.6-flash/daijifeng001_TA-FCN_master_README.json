@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "FCIS",
+      "normalized_value": "FCIS",
+      "evidence": "**FCIS** is a fully convolutional end-to-end solution for instance segmentation, which won the first place in COCO segmentation challenge 2016. ",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Explicitly states the artifact name and its primary purpose."
+    },
+    {
+      "field": "artifact_description",
+      "value": "fully convolutional end-to-end solution for instance segmentation",
+      "normalized_value": "fully convolutional end-to-end solution for instance segmentation",
+      "evidence": "**FCIS** is a fully convolutional end-to-end solution for instance segmentation, which won the first place in COCO segmentation challenge 2016. ",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Describes the core functionality and task addressed by the artifact."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/msracver/FCIS.git",
+      "normalized_value": "https://github.com/msracver/FCIS.git",
+      "evidence": "git clone https://github.com/msracver/FCIS.git",
+      "evidence_location": "84",
+      "confidence": "high",
+      "reason": "Provides the direct URL to clone the source code repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/1611.07709",
+      "normalized_value": "https://arxiv.org/abs/1611.07709",
+      "evidence": "FCIS is initially described in a [CVPR 2017 spotlight paper](https://arxiv.org/abs/1611.07709).",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Links to the official academic publication describing the method."
+    },
+    {
+      "field": "framework",
+      "value": "MXNet",
+      "normalized_value": "MXNet",
+      "evidence": "This is an official implementation for [Fully Convolutional Instance-aware Semantic Segmentation](https://arxiv.org/abs/1611.07709) (FCIS) based on MXNet.",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Identifies the deep learning framework used for the implementation."
+    },
+    {
+      "field": "framework_version",
+      "value": "commit 62ecb60",
+      "normalized_value": "commit 62ecb60",
+      "evidence": "The code is tested on official [MXNet@(commit 62ecb60)](https://github.com/dmlc/mxnet/tree/62ecb60) with the extra operators for FCIS.",
+      "evidence_location": "28",
+      "confidence": "high",
+      "reason": "Specifies the exact MXNet commit tested and recommended for compatibility."
+    },
+    {
+      "field": "license",
+      "value": "MIT license",
+      "normalized_value": "MIT license",
+      "evidence": "© Microsoft, 2017. Licensed under an MIT license.",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Clearly states the software license governing reuse and distribution."
+    },
+    {
+      "field": "copyright",
+      "value": "© Microsoft, 2017",
+      "normalized_value": "© Microsoft, 2017",
+      "evidence": "© Microsoft, 2017. Licensed under an MIT license.",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Provides copyright holder and year for proper attribution."
+    },
+    {
+      "field": "python_dependencies",
+      "value": "cython, opencv-python >= 3.2.0, easydict, hickle",
+      "normalized_value": "cython, opencv-python >= 3.2.0, easydict, hickle",
+      "evidence": "Python packages might missing: cython, opencv-python >= 3.2.0, easydict. If `pip` is set up on your system, those packages should be able to be fetched and installed by running\n\t```\n\tpip install Cython\n\tpip install opencv-python==3.2.0.6\n\tpip install easydict==1.6\n\tpip install hickle\n\t```",
+      "evidence_location": "66-72",
+      "confidence": "high",
+      "reason": "Lists required Python packages and their specific versions for environment setup."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "Any NVIDIA GPUs with at least 5GB memory",
+      "normalized_value": "Any NVIDIA GPUs with at least 5GB memory",
+      "evidence": "Any NVIDIA GPUs with at least 5GB memory should be OK",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Specifies the minimum hardware requirements for running the code."
+    },
+    {
+      "field": "tested_os",
+      "value": "Ubuntu 14.04, Windows Server 2012 R2",
+      "normalized_value": "Ubuntu 14.04, Windows Server 2012 R2",
+      "evidence": "- Ubuntu 14.04 with a Maxwell Titan X GPU and Intel Xeon CPU E5-2620 v2 @ 2.10GHz\n- Windows Server 2012 R2 with 8 K40 GPUs and Intel Xeon CPU E5-2650 v2 @ 2.60GHz\n- Windows Server 2012 R2 with 4 Pascal Titan X GPUs and Intel Xeon CPU E5-2650 v4 @ 2.30GHz",
+      "evidence_location": "179-181",
+      "confidence": "high",
+      "reason": "Lists operating systems where the code has been successfully tested."
+    },
+    {
+      "field": "training_command",
+      "value": "python experiments/fcis/fcis_end2end_train_test.py --cfg experiments/fcis/cfgs/resnet_v1_101_coco_fcis_end2end_ohem.yaml",
+      "normalized_value": "python experiments/fcis/fcis_end2end_train_test.py --cfg experiments/fcis/cfgs/resnet_v1_101_coco_fcis_end2end_ohem.yaml",
+      "evidence": "    ```\n    python experiments/fcis/fcis_end2end_train_test.py --cfg experiments/fcis/cfgs/resnet_v1_101_coco_fcis_end2end_ohem.yaml\n    ```",
+      "evidence_location": "169-171",
+      "confidence": "high",
+      "reason": "Provides the exact command to train and evaluate the model on the COCO dataset."
+    },
+    {
+      "field": "inference_command",
+      "value": "python ./fcis/demo.py",
+      "normalized_value": "python ./fcis/demo.py",
+      "evidence": "python ./fcis/demo.py",
+      "evidence_location": "137",
+      "confidence": "high",
+      "reason": "Provides the command to run the demo script for inference."
+    },
+    {
+      "field": "dataset_urls",
+      "value": "http://home.bharathh.info/pubs/codes/SBD/download.html, http://mscoco.org/dataset/#download, https://dl.dropboxusercontent.com/s/o43o90bna78omob/instances_minival2014.json.zip?dl=0, https://dl.dropboxusercontent.com/s/s3tw5zcg7395368/instances_valminusminival2014.json.zip?dl=0",
+      "normalized_value": "http://home.bharathh.info/pubs/codes/SBD/download.html, http://mscoco.org/dataset/#download, https://dl.dropboxusercontent.com/s/o43o90bna78omob/instances_minival2014.json.zip?dl=0, https://dl.dropboxusercontent.com/s/s3tw5zcg7395368/instances_valminusminival2014.json.zip?dl=0",
+      "evidence": "Please download VOC 2012 dataset with additional annotations from [SBD](http://home.bharathh.info/pubs/codes/SBD/download.html).\n\n2. Please download [COCO dataset](http://mscoco.org/dataset/#download) and annotations for the 5k image [minival](https://dl.dropboxusercontent.com/s/o43o90bna78omob/instances_minival2014.json.zip?dl=0) subset and [val2014 minus minival (val35k)](https://dl.dropboxusercontent.com/s/s3tw5zcg7395368/instances_valminusminival2014.json.zip?dl=0).",
+      "evidence_location": "142, 152",
+      "confidence": "high",
+      "reason": "Provides direct download links for the required training and evaluation datasets."
+    },
+    {
+      "field": "model_checkpoint_urls",
+      "value": "https://1drv.ms/u/s!Am-5JzdW2XHzhqMJZmVOEDgfde8_tg, https://pan.baidu.com/s/1geOHioV, https://1drv.ms/u/s!Am-5JzdW2XHzhqMEtxf1Ciym8uZ8sg",
+      "normalized_value": "https://1drv.ms/u/s!Am-5JzdW2XHzhqMJZmVOEDgfde8_tg, https://pan.baidu.com/s/1geOHioV, https://1drv.ms/u/s!Am-5JzdW2XHzhqMEtxf1Ciym8uZ8sg",
+      "evidence": "1. To run the demo with our trained model (on COCO trainval35k), please download the model manually from [OneDrive](https://1drv.ms/u/s!Am-5JzdW2XHzhqMJZmVOEDgfde8_tg) (Chinese users can also get it from [BaiduYun](https://pan.baidu.com/s/1geOHioV) with code `tmd4`), and put it under folder `model/`.\n\n3. Please download ImageNet-pretrained ResNet-v1-101 model manually from [OneDrive](https://1drv.ms/u/s!Am-5JzdW2XHzhqMEtxf1Ciym8uZ8sg), and put it under folder `./model`.",
+      "evidence_location": "129, 159",
+      "confidence": "high",
+      "reason": "Provides links to download trained model checkpoints and pretrained backbone weights."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{li2016fully,\n  Author = {Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji and Yichen Wei}\n  Title = {Fully Convolutional Instance-aware Semantic Segmentation},\n  Conference = {CVPR},\n  year = {2017}\n}",
+      "normalized_value": "@inproceedings{li2016fully,\n  Author = {Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji and Yichen Wei}\n  Title = {Fully Convolutional Instance-aware Semantic Segmentation},\n  Conference = {CVPR},\n  year = {2017}\n}",
+      "evidence": "```\n@inproceedings{li2016fully,\n  Author = {Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji and Yichen Wei}\n  Title = {Fully Convolutional Instance-aware Semantic Segmentation},\n  Conference = {CVPR},\n  year = {2017}\n}\n```",
+      "evidence_location": "40-47",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for academic attribution."
+    },
+    {
+      "field": "benchmark_results",
+      "value": "FCIS, ResNet-v1-101 on VOC 2012: mAP^r@0.5 = 66.0, mAP^r@0.7 = 51.9, time = 0.23s. FCIS, ResNet-v1-101, OHEM on COCO trainval35k/minival: mAP^r = 29.2, mAP^r@0.5 = 50.8, mAP^r@0.75 = 29.7, mAP^r@S = 7.9, mAP^r@M = 31.4, mAP^r@L = 51.1.",
+      "normalized_value": "FCIS, ResNet-v1-101 on VOC 2012: mAP^r@0.5 = 66.0, mAP^r@0.7 = 51.9, time = 0.23s. FCIS, ResNet-v1-101, OHEM on COCO trainval35k/minival: mAP^r = 29.2, mAP^r@0.5 = 50.8, mAP^r@0.75 = 29.7, mAP^r@S = 7.9, mAP^r@M = 31.4, mAP^r@L = 51.1.",
+      "evidence": "| FCIS, ResNet-v1-101             | VOC 2012 train | VOC 2012 val | 66.0      | 51.9      |   0.23s    |\n\n|                                 | <sub>training data</sub> | <sub>testing data</sub>  | <sub>mAP^r</sub>  | <sub>mAP^r@0.5</sub> | <sub>mAP^r@0.75</sub>| <sub>mAP^r@S</sub> | <sub>mAP^r@M</sub> | <sub>mAP^r@L</sub> |\n|:---------------------------------:|:---------------:|:---------------:|:------:|:---------:|:---------:|:-------:|:-------:|:-------:|\n| <sub>FCIS, ResNet-v1-101, OHEM </sub> | <sub>coco trainval35k</sub> | <sub>coco minival</sub> | 29.2 | 50.8 | 29.7 | 7.9 | 31.4 | 51.1 |\n| <sub>FCIS, ResNet-v1-101, OHEM </sub> | <sub>coco trainval35k</sub> | <sub>coco test-dev</sub>| 29.6 | 51.4 | 30.2 | 8.0 | 31.0 | 49.7 |",
+      "evidence_location": "53-59",
+      "confidence": "high",
+      "reason": "Summarizes key performance metrics on standard benchmarks for reproducibility and evaluation."
+    }
+  ]
+}

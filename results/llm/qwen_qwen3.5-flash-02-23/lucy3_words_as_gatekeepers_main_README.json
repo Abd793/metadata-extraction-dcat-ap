@@ -1,0 +1,94 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "# Words as Gatekeepers",
+      "normalized_value": "Words as Gatekeepers",
+      "evidence": "# Words as Gatekeepers",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the title of the project/artifact."
+    },
+    {
+      "field": "license",
+      "value": "[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)",
+      "normalized_value": "CC BY-NC 4.0",
+      "evidence": "License: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly states the license under which the artifact is distributed."
+    },
+    {
+      "field": "authors",
+      "value": "**Authors**: Li Lucy, Jesse Dodge, David Bamman, Katherine A. Keith",
+      "normalized_value": "Authors: Li Lucy, Jesse Dodge, David Bamman, Katherine A. Keith",
+      "evidence": "**Authors**: Li Lucy, Jesse Dodge, David Bamman, Katherine A. Keith",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Lists the authors of the work."
+    },
+    {
+      "field": "paper_url",
+      "value": "[Paper](https://arxiv.org/abs/2212.09676)",
+      "normalized_value": "https://arxiv.org/abs/2212.09676",
+      "evidence": "[Paper](https://arxiv.org/abs/2212.09676)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Provides a link to the associated academic paper."
+    },
+    {
+      "field": "description",
+      "value": "In this work, we develop and validate an interpretable approach for measuring scholarly jargon from text.",
+      "normalized_value": "In this work, we develop and validate an interpretable approach for measuring scholarly jargon from text.",
+      "evidence": "In this work, we develop and validate an interpretable approach for measuring scholarly jargon from text.",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Describes the core purpose and method of the artifact."
+    },
+    {
+      "field": "data_source",
+      "value": "S2ORC",
+      "normalized_value": "S2ORC",
+      "evidence": "Information on accessing S2ORC can be found [here](https://github.com/allenai/s2orc).",
+      "evidence_location": "30",
+      "confidence": "high",
+      "reason": "Identifies the primary dataset used for the project."
+    },
+    {
+      "field": "model",
+      "value": "scholarBERT",
+      "normalized_value": "scholarBERT",
+      "evidence": "--model scholarBERT",
+      "evidence_location": "71",
+      "confidence": "high",
+      "reason": "Specifies the pre-trained model used in the pipeline."
+    },
+    {
+      "field": "example_command",
+      "value": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset s2orc --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "normalized_value": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset s2orc --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "evidence": "```\npython write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset s2orc --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24\n```",
+      "evidence_location": "70-72",
+      "confidence": "high",
+      "reason": "Provides a concrete command for running the inference pipeline."
+    },
+    {
+      "field": "related_repo",
+      "value": "[WSIatScale repo](https://github.com/allenai/WSIatScale)",
+      "normalized_value": "https://github.com/allenai/WSIatScale",
+      "evidence": "[WSIatScale repo](https://github.com/allenai/WSIatScale)",
+      "evidence_location": "56",
+      "confidence": "high",
+      "reason": "Links to a related repository containing modified scripts."
+    },
+    {
+      "field": "software_dependency",
+      "value": "graph-tool",
+      "normalized_value": "graph-tool",
+      "evidence": "The below script supports the conversion of S2ORC data to a `graph-tool` network, where nodes are papers labeled with paper ID.",
+      "evidence_location": "149",
+      "confidence": "high",
+      "reason": "Identifies a specific software library required for citation graph analysis."
+    }
+  ]
+}

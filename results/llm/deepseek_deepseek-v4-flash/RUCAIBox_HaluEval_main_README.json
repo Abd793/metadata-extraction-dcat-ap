@@ -1,0 +1,292 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "HaluEval: A Hallucination Evaluation Benchmark for LLMs",
+      "normalized_value": "HaluEval: A Hallucination Evaluation Benchmark for LLMs",
+      "evidence": "# HaluEval: A Hallucination Evaluation Benchmark for LLMs",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the artifact name."
+    },
+    {
+      "field": "purpose",
+      "value": "evaluate the ability of LLMs to recognize hallucinations and analyze what type of contents/topics LLMs tend to hallucinate (or fail to recognize the contained hallucination).",
+      "normalized_value": "evaluate the ability of LLMs to recognize hallucinations and analyze what type of contents/topics LLMs tend to hallucinate (or fail to recognize the contained hallucination)",
+      "evidence": "evaluate the ability of LLMs to recognize hallucinations and analyze what type of contents/topics LLMs tend to hallucinate (or fail to recognize the contained hallucination).",
+      "evidence_location": "41",
+      "confidence": "high",
+      "reason": "Summarizes the goal of the benchmark."
+    },
+    {
+      "field": "description",
+      "value": "HaluEval includes 5,000 general user queries with ChatGPT responses and 30,000 task-specific examples from three tasks, i.e., question answering, knowledge-grounded dialogue, and text summarization.",
+      "normalized_value": "HaluEval includes 5,000 general user queries with ChatGPT responses and 30,000 task-specific examples from three tasks, i.e., question answering, knowledge-grounded dialogue, and text summarization",
+      "evidence": "HaluEval includes 5,000 general user queries with ChatGPT responses and 30,000 task-specific examples from three tasks, i.e., question answering, knowledge-grounded dialogue, and text summarization.",
+      "evidence_location": "12-13",
+      "confidence": "high",
+      "reason": "Describes the composition of the benchmark."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2305.11747",
+      "normalized_value": "https://arxiv.org/abs/2305.11747",
+      "evidence": "[HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models](https://arxiv.org/abs/2305.11747)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Link to the associated paper."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/RUCAIBox/HaluEval",
+      "normalized_value": "https://github.com/RUCAIBox/HaluEval",
+      "evidence": "<a href=\"https://github.com/RUCAIBox/HaluEval\" target=\"_blank\"><img src=\"assets/pipeline.png\" alt=\"HaluEval\" style=\"width: 90%; min-width: 300px; display: block; margin: auto;\"></a>",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Source code repository."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "HaluEval uses [MIT License](./LICENSE).",
+      "evidence_location": "103",
+      "confidence": "high",
+      "reason": "Legal reuse terms."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "python generate.py --seed_data hotpot_train_v1.1.json --task qa --strategy one-turn",
+      "evidence_location": "62",
+      "confidence": "high",
+      "reason": "Code examples use Python."
+    },
+    {
+      "field": "tasks",
+      "value": "question answering, knowledge-grounded dialogue, text summarization",
+      "normalized_value": "question answering, knowledge-grounded dialogue, text summarization",
+      "evidence": "HaluEval includes 5,000 general user queries with ChatGPT responses and 30,000 task-specific examples from three tasks, i.e., question answering, knowledge-grounded dialogue, and text summarization.",
+      "evidence_location": "12-13",
+      "confidence": "high",
+      "reason": "Core domains covered in the benchmark."
+    },
+    {
+      "field": "task_seed_datasets",
+      "value": "HotpotQA, OpenDialKG, CNN/Daily Mail",
+      "normalized_value": "HotpotQA, OpenDialKG, CNN/Daily Mail",
+      "evidence": "First, we download the training sets of HotpotQA, OpenDialKG, and CNN/Daily Mail.",
+      "evidence_location": "47",
+      "confidence": "high",
+      "reason": "Seed datasets used for generating task-specific hallucinated samples."
+    },
+    {
+      "field": "general_seed_dataset",
+      "value": "Alpaca",
+      "normalized_value": "Alpaca",
+      "evidence": "from [Alpaca](https://github.com/tatsu-lab/stanford_alpaca).",
+      "evidence_location": "38",
+      "confidence": "high",
+      "reason": "Seed dataset used for general user queries."
+    },
+    {
+      "field": "data_format",
+      "value": "JSON",
+      "normalized_value": "JSON",
+      "evidence": "There are four JSON files as follows:",
+      "evidence_location": "30",
+      "confidence": "high",
+      "reason": "Data files are in JSON format."
+    },
+    {
+      "field": "dataset_size",
+      "value": "35K",
+      "normalized_value": "35K",
+      "evidence": "The [35K data](#data-release) used for evaluating the LLM.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Total number of samples in the benchmark."
+    },
+    {
+      "field": "general_user_query_count",
+      "value": "5,000",
+      "normalized_value": "5,000",
+      "evidence": "HaluEval includes 5,000 general user queries with ChatGPT responses and 30,000 task-specific examples from three tasks",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Number of general user queries."
+    },
+    {
+      "field": "task_specific_example_count",
+      "value": "30,000",
+      "normalized_value": "30,000",
+      "evidence": "HaluEval includes 5,000 general user queries with ChatGPT responses and 30,000 task-specific examples from three tasks",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Number of task-specific examples total."
+    },
+    {
+      "field": "qa_sample_count",
+      "value": "10K",
+      "normalized_value": "10K",
+      "evidence": "10K hallucinated samples for QA based on HotpotQA as seed data.",
+      "evidence_location": "32",
+      "confidence": "high",
+      "reason": "Number of hallucinated QA samples."
+    },
+    {
+      "field": "dialogue_sample_count",
+      "value": "10K",
+      "normalized_value": "10K",
+      "evidence": "10K hallucinated samples for dialogue based on OpenDialKG as seed data.",
+      "evidence_location": "34",
+      "confidence": "high",
+      "reason": "Number of hallucinated dialogue samples."
+    },
+    {
+      "field": "summarization_sample_count",
+      "value": "10K",
+      "normalized_value": "10K",
+      "evidence": "10K hallucinated samples for summarization based on CNN/Daily Mail as seed data.",
+      "evidence_location": "36",
+      "confidence": "high",
+      "reason": "Number of hallucinated summarization samples."
+    },
+    {
+      "field": "models_evaluated",
+      "value": "ChatGPT (gpt-3.5-turbo), GPT-3 (davinci)",
+      "normalized_value": "ChatGPT (gpt-3.5-turbo), GPT-3 (davinci)",
+      "evidence": "- `model`: evaluated model, e.g., ChatGPT (`gpt-3.5-turbo`), GPT-3 (`davinci`).",
+      "evidence_location": "80",
+      "confidence": "high",
+      "reason": "Models used for evaluation in the paper."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python evaluate.py --task qa --model gpt-3.5-turbo",
+      "normalized_value": "python evaluate.py --task qa --model gpt-3.5-turbo",
+      "evidence": "python evaluate.py --task qa --model gpt-3.5-turbo",
+      "evidence_location": "84",
+      "confidence": "high",
+      "reason": "Command to run hallucination evaluation."
+    },
+    {
+      "field": "data_generation_command",
+      "value": "python generate.py --seed_data hotpot_train_v1.1.json --task qa --strategy one-turn",
+      "normalized_value": "python generate.py --seed_data hotpot_train_v1.1.json --task qa --strategy one-turn",
+      "evidence": "python generate.py --seed_data hotpot_train_v1.1.json --task qa --strategy one-turn",
+      "evidence_location": "62",
+      "confidence": "high",
+      "reason": "Command to generate hallucinated samples."
+    },
+    {
+      "field": "filtering_command",
+      "value": "python filtering.py --task qa",
+      "normalized_value": "python filtering.py --task qa",
+      "evidence": "python filtering.py --task qa",
+      "evidence_location": "70",
+      "confidence": "high",
+      "reason": "Command to filter generated hallucinated samples."
+    },
+    {
+      "field": "analysis_command",
+      "value": "python analyze.py --task qa --result ../evaluation/qa/qa_gpt-3.5-turbo_result.json --category all",
+      "normalized_value": "python analyze.py --task qa --result ../evaluation/qa/qa_gpt-3.5-turbo_result.json --category all",
+      "evidence": "python analyze.py --task qa --result ../evaluation/qa/qa_gpt-3.5-turbo_result.json --category all",
+      "evidence_location": "98",
+      "confidence": "high",
+      "reason": "Command to analyze recognition results."
+    },
+    {
+      "field": "seed_data_download_commands",
+      "value": "wget http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_train_v1.1.json\nwget https://raw.githubusercontent.com/facebookresearch/opendialkg/main/data/opendialkg.csv\nwget https://huggingface.co/datasets/ccdv/cnn_dailymail/blob/main/cnn_stories.tgz",
+      "normalized_value": "wget http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_train_v1.1.json wget https://raw.githubusercontent.com/facebookresearch/opendialkg/main/data/opendialkg.csv wget https://huggingface.co/datasets/ccdv/cnn_dailymail/blob/main/cnn_stories.tgz",
+      "evidence": "wget http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_train_v1.1.json\nwget https://raw.githubusercontent.com/facebookresearch/opendialkg/main/data/opendialkg.csv\nwget https://huggingface.co/datasets/ccdv/cnn_dailymail/blob/main/cnn_stories.tgz",
+      "evidence_location": "51-53",
+      "confidence": "high",
+      "reason": "Commands to download seed datasets for reproducibility."
+    },
+    {
+      "field": "data_generation_method",
+      "value": "Furthermore, for the task-specific examples in HaluEval, we design an automatic approach to generate hallucinated samples. \nFirst, based on existing task datasets (e.g., HotpotQA) as seed data, we design task-specific instructions for ChatGPT \nto generate hallucinated samples in two methods, i.e., one-pass and conversational. Second, to select \nthe most plausible and difficult hallucinated sample for LLMs evaluation, we elaborate the filtering instruction enhanced \nby ground-truth examples and leverage ChatGPT for sample selection.",
+      "normalized_value": "Furthermore, for the task-specific examples in HaluEval, we design an automatic approach to generate hallucinated samples. First, based on existing task datasets (e.g., HotpotQA) as seed data, we design task-specific instructions for ChatGPT to generate hallucinated samples in two methods, i.e., one-pass and conversational. Second, to select the most plausible and difficult hallucinated sample for LLMs evaluation, we elaborate the filtering instruction enhanced by ground-truth examples and leverage ChatGPT for sample selection",
+      "evidence": "Furthermore, for the task-specific examples in HaluEval, we design an automatic approach to generate hallucinated samples. \nFirst, based on existing task datasets (e.g., HotpotQA) as seed data, we design task-specific instructions for ChatGPT \nto generate hallucinated samples in two methods, i.e., one-pass and conversational. Second, to select \nthe most plausible and difficult hallucinated sample for LLMs evaluation, we elaborate the filtering instruction enhanced \nby ground-truth examples and leverage ChatGPT for sample selection.",
+      "evidence_location": "19-23",
+      "confidence": "high",
+      "reason": "Describes the process used to generate hallucinated samples."
+    },
+    {
+      "field": "sampling_strategies",
+      "value": "one-turn, multi-turn",
+      "normalized_value": "one-turn, multi-turn",
+      "evidence": "strategy: sampling strategy, i.e., `one-turn` or `multi-turn`. (one-pass and conversational in our paper)",
+      "evidence_location": "60",
+      "confidence": "high",
+      "reason": "Sampling strategies used in data generation."
+    },
+    {
+      "field": "analysis_method",
+      "value": "LDA",
+      "normalized_value": "LDA",
+      "evidence": "analyze the topics of these samples using LDA.",
+      "evidence_location": "90",
+      "confidence": "high",
+      "reason": "Topic modeling method used for analysis."
+    },
+    {
+      "field": "evaluation_task",
+      "value": "In evaluation, we randomly sample a ground-truth or a hallucinated output for each data. For example, if the text is a hallucinated answer, the LLM should recognize the hallucination and output \"Yes\", which means the text contains hallucinations. If the text is a ground-truth answer, the LLM should output \"No\" indicating that there is no hallucination.",
+      "normalized_value": "In evaluation, we randomly sample a ground-truth or a hallucinated output for each data. For example, if the text is a hallucinated answer, the LLM should recognize the hallucination and output \"Yes\", which means the text contains hallucinations. If the text is a ground-truth answer, the LLM should output \"No\" indicating that there is no hallucination",
+      "evidence": "In evaluation, we randomly sample a ground-truth or a hallucinated output for each data. For example, if the text is a hallucinated answer, the LLM should recognize the hallucination and output \"Yes\", which means the text contains hallucinations. If the text is a ground-truth answer, the LLM should output \"No\" indicating that there is no hallucination.",
+      "evidence_location": "77-78",
+      "confidence": "high",
+      "reason": "Describes the binary hallucination detection task."
+    },
+    {
+      "field": "annotation_type",
+      "value": "human-annotated",
+      "normalized_value": "human-annotated",
+      "evidence": "5K human-annotated samples",
+      "evidence_location": "38",
+      "confidence": "high",
+      "reason": "General user queries are human-annotated for hallucination labels."
+    },
+    {
+      "field": "citation_authors",
+      "value": "Junyi Li and Xiaoxue Cheng and Wayne Xin Zhao and Jian-Yun Nie and Ji-Rong Wen",
+      "normalized_value": "Junyi Li and Xiaoxue Cheng and Wayne Xin Zhao and Jian-Yun Nie and Ji-Rong Wen",
+      "evidence": "author = {Junyi Li and Xiaoxue Cheng and Wayne Xin Zhao and Jian-Yun Nie and Ji-Rong Wen },",
+      "evidence_location": "111",
+      "confidence": "high",
+      "reason": "Authors for citing the benchmark."
+    },
+    {
+      "field": "citation_title",
+      "value": "HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models",
+      "normalized_value": "HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models",
+      "evidence": "title = {HaluEval: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models},",
+      "evidence_location": "112",
+      "confidence": "high",
+      "reason": "Title of the associated paper."
+    },
+    {
+      "field": "citation_year",
+      "value": "2023",
+      "normalized_value": "2023",
+      "evidence": "year = {2023},",
+      "evidence_location": "113",
+      "confidence": "high",
+      "reason": "Year of publication."
+    },
+    {
+      "field": "citation_journal",
+      "value": "arXiv preprint arXiv:2305.11747",
+      "normalized_value": "arXiv preprint arXiv:2305.11747",
+      "evidence": "journal={arXiv preprint arXiv:2305.11747},",
+      "evidence_location": "114",
+      "confidence": "high",
+      "reason": "Publication venue."
+    }
+  ]
+}

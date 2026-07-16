@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "EORB-SLAM: An Event-based ORB-SLAM",
+      "normalized_value": "EORB-SLAM: An Event-based ORB-SLAM",
+      "evidence": "# EORB-SLAM: An Event-based ORB-SLAM",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the main header."
+    },
+    {
+      "field": "description",
+      "value": "This project is a feature-based odometry/SLAM algorithm that is used to estimate the 6DoF pose of a robot and reconstruct the 3D point cloud of the scene using a variety of sensors.",
+      "normalized_value": "This project is a feature-based odometry/SLAM algorithm that is used to estimate the 6DoF pose of a robot and reconstruct the 3D point cloud of the scene using a variety of sensors.",
+      "evidence": "This project is a feature-based odometry/SLAM algorithm that is used to estimate the 6DoF pose of a robot and reconstruct the 3D point cloud of the scene using a variety of sensors.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Clearly defines the purpose and core functionality of the artifact."
+    },
+    {
+      "field": "base_project",
+      "value": "ORB-SLAM",
+      "normalized_value": "ORB-SLAM",
+      "evidence": "This project is built on an older version of the [ORB-SLAM](https://github.com/UZ-SLAMLab/ORB_SLAM3) algorithm.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the foundational algorithm this project extends."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2301.00618",
+      "normalized_value": "https://arxiv.org/abs/2301.00618",
+      "evidence": "Please refer to [this article](https://arxiv.org/abs/2301.00618) for an explanation of the event-based configuration (no image).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides a direct link to the associated academic paper for scientific context and configuration details."
+    },
+    {
+      "field": "supported_sensors",
+      "value": "DAVIS event camera",
+      "normalized_value": "DAVIS event camera",
+      "evidence": "It extends ORB-SLAM, which allows simultaneous localization and mapping using a monocular [DAVIS event camera](https://en.wikipedia.org/wiki/Event_camera).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Specifies the primary hardware sensor supported by the algorithm."
+    },
+    {
+      "field": "supported_modes",
+      "value": "Event-only, Event-IMU, Event-Image, and Event-Image-IMU",
+      "normalized_value": "Event-only, Event-IMU, Event-Image, and Event-Image-IMU",
+      "evidence": "In addition to the configurations in the original work, this project supports Event-only, Event-IMU, Event-Image, and Event-Image-IMU modes.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Lists the specific operational modes and sensor fusion configurations available."
+    },
+    {
+      "field": "operating_system",
+      "value": "Ubuntu 20.04 LTS",
+      "normalized_value": "Ubuntu 20.04 LTS",
+      "evidence": "These instructions are for Ubuntu 20.04 LTS.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Specifies the target operating system for installation and execution."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "about 16 GB RAM",
+      "normalized_value": "about 16 GB RAM",
+      "evidence": "A successful build requires a stable internet connection (downloads more than 2 GB of data!) and a powerful machine with about 16 GB RAM.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Indicates minimum memory requirements for building the project."
+    },
+    {
+      "field": "compiler",
+      "value": "g++-7 and gcc-7",
+      "normalized_value": "g++-7 and gcc-7",
+      "evidence": "[Install g++-7 and gcc-7 along with version 9 on Ubuntu 20.04](https://vegastack.com/tutorials/how-to-install-gcc-compiler-on-ubuntu-20-04/)",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Specifies the required C++ compiler versions for building."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/m-dayani/EORB_SLAM.git",
+      "normalized_value": "https://github.com/m-dayani/EORB_SLAM.git",
+      "evidence": "git clone https://github.com/m-dayani/EORB_SLAM.git",
+      "evidence_location": "56",
+      "confidence": "high",
+      "reason": "Provides the direct URL to clone the source code repository."
+    },
+    {
+      "field": "installation_commands",
+      "value": "```bash\ngit clone https://github.com/m-dayani/EORB_SLAM.git\ncd EORB_SLAM\n\nmkdir build\ncd build\ncmake ..\nmake -j4\n```",
+      "normalized_value": "git clone https://github.com/m-dayani/EORB_SLAM.git cd EORB_SLAM mkdir build cd build cmake .. make -j4",
+      "evidence": "```bash\ngit clone https://github.com/m-dayani/EORB_SLAM.git\ncd EORB_SLAM\n\nmkdir build\ncd build\ncmake ..\nmake -j4\n```",
+      "evidence_location": "55-63",
+      "confidence": "high",
+      "reason": "Provides the exact shell commands needed to clone, configure, and build the project."
+    },
+    {
+      "field": "example_command",
+      "value": "./Examples/Event/fmt_ev_ethz ./Examples/Event/EvETHZ.yaml",
+      "normalized_value": "./Examples/Event/fmt_ev_ethz ./Examples/Event/EvETHZ.yaml",
+      "evidence": "`./Examples/Event/fmt_ev_ethz ./Examples/Event/EvETHZ.yaml`",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Shows a concrete example of how to run the algorithm with a specific configuration file."
+    },
+    {
+      "field": "dataset_links",
+      "value": "- [The Public Event dataset](https://rpg.ifi.uzh.ch/davis_data.html)\n- [The MVSEC dataset](https://daniilidis-group.github.io/mvsec/)\n- [The EuRoC dataset](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets)",
+      "normalized_value": "- [The Public Event dataset](https://rpg.ifi.uzh.ch/davis_data.html) - [The MVSEC dataset](https://daniilidis-group.github.io/mvsec/) - [The EuRoC dataset](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets)",
+      "evidence": "- [The Public Event dataset](https://rpg.ifi.uzh.ch/davis_data.html)\n- [The MVSEC dataset](https://daniilidis-group.github.io/mvsec/)\n- [The EuRoC dataset](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets)",
+      "evidence_location": "70-73",
+      "confidence": "high",
+      "reason": "Lists external dataset URLs recommended for testing, evaluation, and reproduction."
+    }
+  ]
+}
