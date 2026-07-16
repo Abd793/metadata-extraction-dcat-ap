@@ -215,6 +215,7 @@ def extract_metadata(client: OpenAI, model: str, file: Path, output_dir: Path):
     output_dir.mkdir(parents=True, exist_ok=True)
 
     if json_file.exists():
+        logging.info(f'[Cache Hit] {str(file)}')
         return json.loads(json_file.read_text(encoding="utf-8"))
 
     # if cache_file.exists():
@@ -224,6 +225,7 @@ def extract_metadata(client: OpenAI, model: str, file: Path, output_dir: Path):
     #     json_file.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     #     return result
 
+    logging.info(f'[Cache Miss] {str(file)}')
     doc_content = file.read_text(encoding="utf-8")
     numbered_doc_content = number_lines(doc_content)
     messages = [
