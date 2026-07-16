@@ -1,0 +1,211 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "Code search",
+      "normalized_value": "Code search",
+      "evidence": "# Code search",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Artifact name from the title."
+    },
+    {
+      "field": "description",
+      "value": "This project contains the code to reproduce the experiments in the paper [Neural Code Search Revisited: Enhancing Code Snippet Retrieval through Natural Language Intent](https://arxiv.org/abs/2008.12193). It implements retrieval systems for annotated code snippets: pairs of a code snippet and a short natural language description.",
+      "normalized_value": "This project contains the code to reproduce the experiments in the paper [Neural Code Search Revisited: Enhancing Code Snippet Retrieval through Natural Language Intent](https://arxiv.org/abs/2008.12193). It implements retrieval systems for annotated code snippets: pairs of a code snippet and a short natural language description.",
+      "evidence": "This project contains the code to reproduce the experiments in the paper [Neural Code Search Revisited: Enhancing Code Snippet Retrieval through Natural Language Intent](https://arxiv.org/abs/2008.12193). It implements retrieval systems for annotated code snippets: pairs of a code snippet and a short natural language description.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Describes the artifact's purpose and relation to the paper."
+    },
+    {
+      "field": "paper_title",
+      "value": "Neural Code Search Revisited: Enhancing Code Snippet Retrieval through Natural Language Intent",
+      "normalized_value": "Neural Code Search Revisited: Enhancing Code Snippet Retrieval through Natural Language Intent",
+      "evidence": "Neural Code Search Revisited: Enhancing Code Snippet Retrieval through Natural Language Intent",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Title of the associated paper."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2008.12193",
+      "normalized_value": "https://arxiv.org/abs/2008.12193",
+      "evidence": "https://arxiv.org/abs/2008.12193",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Direct link to the paper."
+    },
+    {
+      "field": "model_datasets_url",
+      "value": "https://zenodo.org/record/4001602",
+      "normalized_value": "https://zenodo.org/record/4001602",
+      "evidence": "https://zenodo.org/record/4001602",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Location of pretrained models and datasets."
+    },
+    {
+      "field": "package_name",
+      "value": "codesearch",
+      "normalized_value": "codesearch",
+      "evidence": "Install the codesearch library",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "The Python package name as used in imports and installation."
+    },
+    {
+      "field": "programming_languages",
+      "value": "Python, java, javascript, bash",
+      "normalized_value": "Python, java, javascript, bash",
+      "evidence": "The experiments in the paper are done on Python snippets, but the code preprocessing currently also supports java, javascript, and bash.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Languages supported for preprocessing."
+    },
+    {
+      "field": "baseline_models",
+      "value": "BM25, NCS, UNIF",
+      "normalized_value": "BM25, NCS, UNIF",
+      "evidence": "the project also implements some *code-only* retrieval models (BM25, NCS, UNIF) for snippet collections that do not come with descriptions.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Baseline retrieval models implemented for code-only search."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install .",
+      "normalized_value": "pip install .",
+      "evidence": "`pip install .`",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Command to install the codesearch library."
+    },
+    {
+      "field": "installation_command",
+      "value": "codesearch install_parsers",
+      "normalized_value": "codesearch install_parsers",
+      "evidence": "`codesearch install_parsers`",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Command to install tree-sitter parsers for all supported languages."
+    },
+    {
+      "field": "installation_command",
+      "value": "python -m spacy download en_core_web_md",
+      "normalized_value": "python -m spacy download en_core_web_md",
+      "evidence": "`python -m spacy download en_core_web_md`",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Command to download spacy model for preprocessing descriptions/comments."
+    },
+    {
+      "field": "pretrained_models",
+      "value": "ncs-embedder-so-ds-feb20, ncs-embedder-staqc-py, tnbow-embedder-so-ds-feb20, use-embedder-pacs, ensemble-embedder-pacs",
+      "normalized_value": "ncs-embedder-so-ds-feb20, ncs-embedder-staqc-py, tnbow-embedder-so-ds-feb20, use-embedder-pacs, ensemble-embedder-pacs",
+      "evidence": "| name                       | inputs             | training data                                          | notebook                    |\n|----------------------------|--------------------|--------------------------------------------------------|-----------------------------|\n| ncs-embedder-so-ds-feb20      | code               | so-ds-feb20                                            | nbs/ncs/ncs.ipynb           |\n| ncs-embedder-staqc-py      | code               | staqc-py-cleaned                              | nbs/ncs/ncs.ipynb           |\n| tnbow-embedder-so-ds-feb20 | description        | so-python-question-titles-feb20                        | nbs/tnbow/tnbow.ipynb       |\n| use-embedder-pacs          | description        | so-duplicates-pacsv1-train                             | nbs/tuse/tuse_tuned.ipynb   |\n| ensemble-embedder-pacs     | description + code | staqc-py-cleaned + so-duplicates-pacs-train | nbs/ensemble/ensemble.ipynb |",
+      "evidence_location": "73-79",
+      "confidence": "high",
+      "reason": "List of pretrained embedding models provided with their inputs and training data."
+    },
+    {
+      "field": "snippet_collections",
+      "value": "so-ds-feb20, staqc-py-cleaned, conala-curated, codesearchnet-{language}-{train|valid|test}, codesearchnet-{language}",
+      "normalized_value": "so-ds-feb20, staqc-py-cleaned, conala-curated, codesearchnet-{language}-{train|valid|test}, codesearchnet-{language}",
+      "evidence": "| name                                          | description                                                                                                                  |\n|-----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|\n| so-ds-feb20                                   | Mined from Python Stack Overflow posts related to data science. Stack Overflow dumps can be found here: https://archive.org/details/stackexchange, [LICENSE](https://creativecommons.org/licenses/by-sa/4.0/)                                                             |\n| staqc-py-cleaned                     | Derived from the Python StaQC snippets (additional cleaning was done as decribed in the paper). See https://github.com/LittleYUYU/StackOverflow-Question-Code-Dataset, [LICENSE](https://github.com/LittleYUYU/StackOverflow-Question-Code-Dataset/blob/master/LICENSE.txt)                               |\n| conala-curated                                | Derived from the curated snippets of the CoNaLa benchmark. See https://conala-corpus.github.io/ , [LICENSE](https://creativecommons.org/licenses/by-sa/4.0/)                                                                                         |\n| codesearchnet-{language}-{train\\|valid\\|test} | The CodeSearchNet snippet collections used for training/MRR validation/MRR testing. See https://github.com/github/CodeSearchNet. Licenses of the individial snippets can be found in pkl files.                                           |\n| codesearchnet-{language}                      | The CodeSearchNet snippet collections used for the weights and biases benchmark. See https://github.com/github/CodeSearchNet. Licenses of the individial snippets can be found in pkl files. **Note**: not all of these snippets have descriptions |",
+      "evidence_location": "100-106",
+      "confidence": "high",
+      "reason": "Available snippet collections that can be loaded."
+    },
+    {
+      "field": "evaluation_datasets",
+      "value": "so-ds-feb20-{valid|test}, staqc-py-cleaned-{valid|test}, conala-curated-0.5-test",
+      "normalized_value": "so-ds-feb20-{valid|test}, staqc-py-cleaned-{valid|test}, conala-curated-0.5-test",
+      "evidence": "| name                           | description                                                                     |\n|--------------------------------|---------------------------------------------------------------------------------|\n| so-ds-feb20-{valid\\|test}      | Queries paired to relevant snippets in the so-ds-feb20 snippet collection.      |\n| staqc-py-cleaned-{valid\\|test} | Queries paired to relevant snippets in the staqc-py-cleaned snippet collection. |\n| conala-curated-0.5-test        | Queries paired to relevant snippets in the CoNaLa benchmark                     |",
+      "evidence_location": "119-123",
+      "confidence": "high",
+      "reason": "Available evaluation datasets linking queries to relevant snippets."
+    },
+    {
+      "field": "demo_notebook",
+      "value": "nbs/demo/demo.ipynb",
+      "normalized_value": "nbs/demo/demo.ipynb",
+      "evidence": "`nbs/demo/demo.ipynb`",
+      "evidence_location": "156",
+      "confidence": "high",
+      "reason": "Notebook to quickly try out pretrained models."
+    },
+    {
+      "field": "benchmark_notebooks",
+      "value": "nbs/evaluate.ipynb, codesearch/benchmark.ipynb",
+      "normalized_value": "nbs/evaluate.ipynb, codesearch/benchmark.ipynb",
+      "evidence": "`nbs/evaluate.ipynb` and `codesearch/benchmark.ipynb`",
+      "evidence_location": "160",
+      "confidence": "high",
+      "reason": "Notebooks to replicate benchmark results or evaluate custom models."
+    },
+    {
+      "field": "benchmark_name",
+      "value": "PACS",
+      "normalized_value": "PACS",
+      "evidence": "## Benchmark on PACS",
+      "evidence_location": "158",
+      "confidence": "high",
+      "reason": "Name of the benchmark used in the paper."
+    },
+    {
+      "field": "benchmark_function",
+      "value": "benchmark_on_pacs",
+      "normalized_value": "benchmark_on_pacs",
+      "evidence": "from codesearch.benchmark import benchmark_on_pacs",
+      "evidence_location": "165",
+      "confidence": "high",
+      "reason": "Function to benchmark a model on the PACS benchmark."
+    },
+    {
+      "field": "api_function",
+      "value": "load_model",
+      "normalized_value": "load_model",
+      "evidence": "from codesearch.utils import load_model",
+      "evidence_location": "34",
+      "confidence": "high",
+      "reason": "Function to load pretrained embedding models."
+    },
+    {
+      "field": "api_function",
+      "value": "load_snippet_collection",
+      "normalized_value": "load_snippet_collection",
+      "evidence": "from codesearch.data import load_snippet_collection",
+      "evidence_location": "90",
+      "confidence": "high",
+      "reason": "Function to load a snippet collection."
+    },
+    {
+      "field": "api_function",
+      "value": "load_eval_dataset",
+      "normalized_value": "load_eval_dataset",
+      "evidence": "from codesearch.data import load_eval_dataset",
+      "evidence_location": "114",
+      "confidence": "high",
+      "reason": "Function to load an evaluation dataset."
+    },
+    {
+      "field": "api_function",
+      "value": "load_train_dataset",
+      "normalized_value": "load_train_dataset",
+      "evidence": "from codesearch.data import load_train_dataset",
+      "evidence_location": "141",
+      "confidence": "high",
+      "reason": "Function to load training data."
+    },
+    {
+      "field": "api_function",
+      "value": "EmbeddingRetrievalModel",
+      "normalized_value": "EmbeddingRetrievalModel",
+      "evidence": "from codesearch.embedding_retrieval import EmbeddingRetrievalModel",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Class to create a retrieval system from an embedding model."
+    }
+  ]
+}

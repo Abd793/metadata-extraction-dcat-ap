@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "package_name",
+      "value": "prdc",
+      "normalized_value": "prdc",
+      "evidence": "pip3 install prdc",
+      "evidence_location": "87",
+      "confidence": "high",
+      "reason": "Identifies the Python package name for installation."
+    },
+    {
+      "field": "paper_title",
+      "value": "Reliable Fidelity and Diversity Metrics for Generative Models (ICML 2020)",
+      "normalized_value": "Reliable Fidelity and Diversity Metrics for Generative Models (ICML 2020)",
+      "evidence": "## Reliable Fidelity and Diversity Metrics for Generative Models (ICML 2020)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Title of the associated paper, which is the core scientific contribution."
+    },
+    {
+      "field": "description",
+      "value": "We propose **density and coverage** metrics that solve the above issues.",
+      "normalized_value": "We propose **density and coverage** metrics that solve the above issues.",
+      "evidence": "We propose **density and coverage** metrics that solve the above issues.",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Summarizes the key contribution of the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2002.09797",
+      "normalized_value": "https://arxiv.org/abs/2002.09797",
+      "evidence": "[Paper: Reliable Fidelity and Diversity Metrics for Generative Models](https://arxiv.org/abs/2002.09797)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Direct link to the paper on arXiv."
+    },
+    {
+      "field": "video_url",
+      "value": "http://www.youtube.com/watch?feature=player_embedded&v=_XwsGkryVpk",
+      "normalized_value": "http://www.youtube.com/watch?feature=player_embedded&v=_XwsGkryVpk",
+      "evidence": "http://www.youtube.com/watch?feature=player_embedded&v=_XwsGkryVpk",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Link to a video presentation about the work."
+    },
+    {
+      "field": "pypi_url",
+      "value": "https://pypi.python.org/pypi/prdc/",
+      "normalized_value": "https://pypi.python.org/pypi/prdc/",
+      "evidence": "[![PyPI download month](https://img.shields.io/pypi/dm/prdc.svg)](https://pypi.python.org/pypi/prdc/)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Link to the Python package on PyPI."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip3 install prdc",
+      "normalized_value": "pip3 install prdc",
+      "evidence": "```bash\npip3 install prdc\n```",
+      "evidence_location": "86-88",
+      "confidence": "high",
+      "reason": "Command to install the package via pip."
+    },
+    {
+      "field": "example_code",
+      "value": "import numpy as np\nfrom prdc import compute_prdc\n\n\nnum_real_samples = num_fake_samples = 10000\nfeature_dim = 1000\nnearest_k = 5\nreal_features = np.random.normal(loc=0.0, scale=1.0,\n                                 size=[num_real_samples, feature_dim])\n\nfake_features = np.random.normal(loc=0.0, scale=1.0,\n                                  size=[num_fake_samples, feature_dim])\n\nmetrics = compute_prdc(real_features=real_features,\n                       fake_features=fake_features,\n                       nearest_k=nearest_k)\n\nprint(metrics)",
+      "normalized_value": "import numpy as np\nfrom prdc import compute_prdc\n\n\nnum_real_samples = num_fake_samples = 10000\nfeature_dim = 1000\nnearest_k = 5\nreal_features = np.random.normal(loc=0.0, scale=1.0,\n                                 size=[num_real_samples, feature_dim])\n\nfake_features = np.random.normal(loc=0.0, scale=1.0,\n                                  size=[num_fake_samples, feature_dim])\n\nmetrics = compute_prdc(real_features=real_features,\n                       fake_features=fake_features,\n                       nearest_k=nearest_k)\n\nprint(metrics)",
+      "evidence": "```python\nimport numpy as np\nfrom prdc import compute_prdc\n\n\nnum_real_samples = num_fake_samples = 10000\nfeature_dim = 1000\nnearest_k = 5\nreal_features = np.random.normal(loc=0.0, scale=1.0,\n                                 size=[num_real_samples, feature_dim])\n\nfake_features = np.random.normal(loc=0.0, scale=1.0,\n                                  size=[num_fake_samples, feature_dim])\n\nmetrics = compute_prdc(real_features=real_features,\n                       fake_features=fake_features,\n                       nearest_k=nearest_k)\n\nprint(metrics)\n```",
+      "evidence_location": "95-114",
+      "confidence": "high",
+      "reason": "Provides a complete usage example for the library."
+    },
+    {
+      "field": "metrics_computed",
+      "value": "precision, recall, density, coverage",
+      "normalized_value": "precision, recall, density, coverage",
+      "evidence": "```python\n{'precision': 0.4772,\n 'recall': 0.4705,\n 'density': 1.0555,\n 'coverage': 0.9735}\n```",
+      "evidence_location": "116-121",
+      "confidence": "high",
+      "reason": "Names of the metrics implemented by the library."
+    },
+    {
+      "field": "function_name",
+      "value": "compute_prdc",
+      "normalized_value": "compute_prdc",
+      "evidence": "from prdc import compute_prdc",
+      "evidence_location": "97",
+      "confidence": "high",
+      "reason": "Primary function provided by the package."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "```\nCopyright (c) 2020-present NAVER Corp.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n```",
+      "evidence_location": "131-151",
+      "confidence": "high",
+      "reason": "The license text corresponds to the MIT License."
+    },
+    {
+      "field": "citation",
+      "value": "@article{ferjad2020icml,\n  title = {Reliable Fidelity and Diversity Metrics for Generative Models},\n  author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},\n  year = {2020},\n  booktitle = {International Conference on Machine Learning},\n}",
+      "normalized_value": "@article{ferjad2020icml,\n  title = {Reliable Fidelity and Diversity Metrics for Generative Models},\n  author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},\n  year = {2020},\n  booktitle = {International Conference on Machine Learning},\n}",
+      "evidence": "```\n@article{ferjad2020icml,\n  title = {Reliable Fidelity and Diversity Metrics for Generative Models},\n  author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},\n  year = {2020},\n  booktitle = {International Conference on Machine Learning},\n}\n```",
+      "evidence_location": "156-161",
+      "confidence": "high",
+      "reason": "Standard citation for the paper."
+    },
+    {
+      "field": "authors",
+      "value": "Muhammad Ferjad Naeem, Seong Joon Oh, Yunjey Choi, Youngjung Uh, Jaejun Yoo",
+      "normalized_value": "Muhammad Ferjad Naeem, Seong Joon Oh, Yunjey Choi, Youngjung Uh, Jaejun Yoo",
+      "evidence": "Muhammad Ferjad Naeem <sup>1,3*</sup>, Seong Joon Oh<sup>2*</sup>, Yunjey Choi<sup>1</sup>, \nYoungjung Uh<sup>1</sup>, Jaejun Yoo<sup>1,4</sup>",
+      "evidence_location": "9-10",
+      "confidence": "high",
+      "reason": "List of authors of the paper."
+    },
+    {
+      "field": "conference",
+      "value": "ICML 2020",
+      "normalized_value": "ICML 2020",
+      "evidence": "## Reliable Fidelity and Diversity Metrics for Generative Models (ICML 2020)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Conference where the paper was accepted."
+    },
+    {
+      "field": "acceptance_date",
+      "value": "1 June 2020",
+      "normalized_value": "1 June 2020",
+      "evidence": "* **1 June 2020**: Paper accepted at ICML 2020.",
+      "evidence_location": "31",
+      "confidence": "high",
+      "reason": "Date of paper acceptance."
+    },
+    {
+      "field": "task",
+      "value": "image generation",
+      "normalized_value": "image generation",
+      "evidence": "Devising indicative evaluation metrics for the image generation task",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "The application domain of the metrics."
+    },
+    {
+      "field": "method",
+      "value": "density and coverage metrics",
+      "normalized_value": "density and coverage metrics",
+      "evidence": "We propose **density and coverage** metrics that solve the above issues.",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "The novel metrics proposed in the paper."
+    },
+    {
+      "field": "nearest_neighbor_k",
+      "value": "5",
+      "normalized_value": "5",
+      "evidence": "nearest_k = 5",
+      "evidence_location": "102",
+      "confidence": "high",
+      "reason": "Example value for the nearest neighbor parameter used in the metrics."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "pip3 install prdc",
+      "evidence_location": "87",
+      "confidence": "high",
+      "reason": "The language in which the package is written."
+    },
+    {
+      "field": "affiliations",
+      "value": "Clova AI Research, NAVER Corp.; Clova AI Research, LINE Plus Corp.; Technische Universität München; EPFL",
+      "normalized_value": "Clova AI Research, NAVER Corp.; Clova AI Research, LINE Plus Corp.; Technische Universität München; EPFL",
+      "evidence": "<sup>1</sup> <sub>Clova AI Research, NAVER Corp.</sub>\n<sup>2</sup> <sub>Clova AI Research, LINE Plus Corp.</sub>\n<sup>3</sup> <sub>Technische Universit&auml;t M&uuml;nchen</sub>\n<sup>4</sup> <sub>EPFL</sub>",
+      "evidence_location": "15-18",
+      "confidence": "high",
+      "reason": "Institutions where the work was conducted."
+    }
+  ]
+}

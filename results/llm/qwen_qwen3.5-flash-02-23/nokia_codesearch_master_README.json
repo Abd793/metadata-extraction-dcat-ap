@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Code search",
+      "normalized_value": "Code search",
+      "evidence": "# Code search",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly stated as the title of the project."
+    },
+    {
+      "field": "paper_title",
+      "value": "Neural Code Search Revisited: Enhancing Code Snippet Retrieval through Natural Language Intent",
+      "normalized_value": "Neural Code Search Revisited: Enhancing Code Snippet Retrieval through Natural Language Intent",
+      "evidence": "[Neural Code Search Revisited: Enhancing Code Snippet Retrieval through Natural Language Intent](https://arxiv.org/abs/2008.12193)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly stated as the paper the project reproduces."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2008.12193",
+      "normalized_value": "https://arxiv.org/abs/2008.12193",
+      "evidence": "https://arxiv.org/abs/2008.12193",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly stated as the link to the paper."
+    },
+    {
+      "field": "hosting_url",
+      "value": "https://zenodo.org/record/4001602",
+      "normalized_value": "https://zenodo.org/record/4001602",
+      "evidence": "https://zenodo.org/record/4001602",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly stated as the location for pretrained models and datasets."
+    },
+    {
+      "field": "affiliation",
+      "value": "Nokia Bell Labs",
+      "normalized_value": "Nokia Bell Labs",
+      "evidence": "[Nokia Bell Labs](https://www.bell-labs.com/)",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Explicitly stated as the organization developing the project."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install .",
+      "normalized_value": "pip install .",
+      "evidence": "1. Install the codesearch library: pip install .",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Explicitly stated as the installation command for the library."
+    },
+    {
+      "field": "supported_languages",
+      "value": "Python, java, javascript, bash",
+      "normalized_value": "Python, java, javascript, bash",
+      "evidence": "The experiments in the paper are done on Python snippets, but the code preprocessing currently also supports java, javascript, and bash.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Explicitly stated as the supported languages for code preprocessing."
+    },
+    {
+      "field": "pretrained_models",
+      "value": "ncs-embedder-so-ds-feb20, ncs-embedder-staqc-py, tnbow-embedder-so-ds-feb20, use-embedder-pacs, ensemble-embedder-pacs",
+      "normalized_value": "ncs-embedder-so-ds-feb20, ncs-embedder-staqc-py, tnbow-embedder-so-ds-feb20, use-embedder-pacs, ensemble-embedder-pacs",
+      "evidence": "| ncs-embedder-so-ds-feb20      | code               | so-ds-feb20                                            | nbs/ncs/ncs.ipynb           |\n| ncs-embedder-staqc-py      | code               | staqc-py-cleaned                              | nbs/ncs/ncs.ipynb           |\n| tnbow-embedder-so-ds-feb20 | description        | so-python-question-titles-feb20                        | nbs/tnbow/tnbow.ipynb       |\n| use-embedder-pacs          | description        | so-duplicates-pacsv1-train                             | nbs/tuse/tuse_tuned.ipynb   |\n| ensemble-embedder-pacs     | description + code | staqc-py-cleaned + so-duplicates-pacs-train | nbs/ensemble/ensemble.ipynb |",
+      "evidence_location": "75-79",
+      "confidence": "high",
+      "reason": "Explicitly listed in the table of available models."
+    },
+    {
+      "field": "dataset_collections",
+      "value": "so-ds-feb20, staqc-py-cleaned, conala-curated, codesearchnet-{language}-{train|valid|test}, codesearchnet-{language}",
+      "normalized_value": "so-ds-feb20, staqc-py-cleaned, conala-curated, codesearchnet-{language}-{train|valid|test}, codesearchnet-{language}",
+      "evidence": "| so-ds-feb20                                   | Mined from Python Stack Overflow posts related to data science. Stack Overflow dumps can be found here: https://archive.org/details/stackexchange, [LICENSE](https://creativecommons.org/licenses/by-sa/4.0/)                                                             |\n| staqc-py-cleaned                     | Derived from the Python StaQC snippets (additional cleaning was done as decribed in the paper). See https://github.com/LittleYUYU/StackOverflow-Question-Code-Dataset, [LICENSE](https://github.com/LittleYUYU/StackOverflow-Question-Code-Dataset/blob/master/LICENSE.txt)                               |\n| conala-curated                                | Derived from the curated snippets of the CoNaLa benchmark. See https://conala-corpus.github.io/ , [LICENSE](https://creativecommons.org/licenses/by-sa/4.0/)                                                                                         |\n| codesearchnet-{language}-{train\\|valid\\|test} | The CodeSearchNet snippet collections used for training/MRR validation/MRR testing. See https://github.com/github/CodeSearchNet. Licenses of the individial snippets can be found in pkl files.                                           |\n| codesearchnet-{language}                      | The CodeSearchNet snippet collections used for the weights and biases benchmark. See https://github.com/github/CodeSearchNet. Licenses of the individial snippets can be found in pkl files. **Note**: not all of these snippets have descriptions |",
+      "evidence_location": "102-106",
+      "confidence": "high",
+      "reason": "Explicitly listed in the table of available snippet collections."
+    },
+    {
+      "field": "evaluation_datasets",
+      "value": "so-ds-feb20-{valid|test}, staqc-py-cleaned-{valid|test}, conala-curated-0.5-test",
+      "normalized_value": "so-ds-feb20-{valid|test}, staqc-py-cleaned-{valid|test}, conala-curated-0.5-test",
+      "evidence": "| so-ds-feb20-{valid\\|test}      | Queries paired to relevant snippets in the so-ds-feb20 snippet collection.      |\n| staqc-py-cleaned-{valid\\|test} | Queries paired to relevant snippets in the staqc-py-cleaned snippet collection. |\n| conala-curated-0.5-test        | Queries paired to relevant snippets in the CoNaLa benchmark                     |",
+      "evidence_location": "121-123",
+      "confidence": "high",
+      "reason": "Explicitly listed in the table of available evaluation datasets."
+    },
+    {
+      "field": "license_info",
+      "value": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "normalized_value": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "evidence": "[LICENSE](https://creativecommons.org/licenses/by-sa/4.0/)",
+      "evidence_location": "102",
+      "confidence": "high",
+      "reason": "Explicitly stated as the license for the so-ds-feb20 dataset."
+    },
+    {
+      "field": "benchmark_name",
+      "value": "PACS",
+      "normalized_value": "PACS",
+      "evidence": "## Benchmark on PACS",
+      "evidence_location": "159",
+      "confidence": "high",
+      "reason": "Explicitly stated as the benchmark name for evaluation."
+    }
+  ]
+}

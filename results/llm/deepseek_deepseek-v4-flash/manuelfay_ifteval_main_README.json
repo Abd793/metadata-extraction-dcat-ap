@@ -1,0 +1,211 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications",
+      "normalized_value": "Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications",
+      "evidence": "# Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Explicit title of the artifact"
+    },
+    {
+      "field": "description",
+      "value": "Instruction Fine-Tuning (IFT) is a powerful paradigm that strengthens the zero-shot capabilities of Large Language Models (LLMs), but in doing so induces new evaluation metric requirements. We show LLM-based metrics to be well adapted to these requirements, and leverage them to conduct an investigation of task-specialization strategies, quantifying the trade-offs that emerge in practical industrial settings. Our findings offer practitioners actionable insights for real-world IFT model deployment.",
+      "normalized_value": "Instruction Fine-Tuning (IFT) is a powerful paradigm that strengthens the zero-shot capabilities of Large Language Models (LLMs), but in doing so induces new evaluation metric requirements. We show LLM-based metrics to be well adapted to these requirements, and leverage them to conduct an investigation of task-specialization strategies, quantifying the trade-offs that emerge in practical industrial settings. Our findings offer practitioners actionable insights for real-world IFT model deployment.",
+      "evidence": "Instruction Fine-Tuning (IFT) is a powerful paradigm that strengthens the zero-shot capabilities of Large Language Models (LLMs), but in doing so induces new evaluation metric requirements. We show LLM-based metrics to be well adapted to these requirements, and leverage them to conduct an investigation of task-specialization strategies, quantifying the trade-offs that emerge in practical industrial settings. Our findings offer practitioners actionable insights for real-world IFT model deployment.",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Abstract summarizing the work"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2310.14103",
+      "normalized_value": "https://arxiv.org/abs/2310.14103",
+      "evidence": "[Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications](https://arxiv.org/abs/2310.14103)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Direct link to the paper"
+    },
+    {
+      "field": "venue",
+      "value": "EMNLP 2023",
+      "normalized_value": "EMNLP 2023",
+      "evidence": "the EMNLP 2023 paper",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Publication venue"
+    },
+    {
+      "field": "authors",
+      "value": "Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo",
+      "normalized_value": "Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo",
+      "evidence": "      author={Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo},",
+      "evidence_location": "line 17",
+      "confidence": "high",
+      "reason": "Author list for attribution"
+    },
+    {
+      "field": "year",
+      "value": "2023",
+      "normalized_value": "2023",
+      "evidence": "      year={2023},",
+      "evidence_location": "line 18",
+      "confidence": "high",
+      "reason": "Year of publication"
+    },
+    {
+      "field": "arxiv_id",
+      "value": "2310.14103",
+      "normalized_value": "2310.14103",
+      "evidence": "      eprint={2310.14103},",
+      "evidence_location": "line 19",
+      "confidence": "high",
+      "reason": "arXiv identifier for the paper"
+    },
+    {
+      "field": "arxiv_class",
+      "value": "cs.LG",
+      "normalized_value": "cs.LG",
+      "evidence": "      primaryClass={cs.LG}",
+      "evidence_location": "line 22",
+      "confidence": "high",
+      "reason": "arXiv classification"
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@misc{faysse2023revisiting,\n      title={Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications}, \n      author={Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo},\n      year={2023},\n      eprint={2310.14103},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG}\n}",
+      "normalized_value": "@misc{faysse2023revisiting, title={Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications}, author={Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo}, year={2023}, eprint={2310.14103}, archivePrefix={arXiv}, primaryClass={cs.LG}}",
+      "evidence": "```\n@misc{faysse2023revisiting,\n      title={Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications}, \n      author={Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo},\n      year={2023},\n      eprint={2310.14103},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG}\n}\n```",
+      "evidence_location": "lines 14-23",
+      "confidence": "high",
+      "reason": "Citation in BibTeX format for referencing the paper"
+    },
+    {
+      "field": "training_script",
+      "value": "model_training/finetune.py",
+      "normalized_value": "model_training/finetune.py",
+      "evidence": "The `model_training/finetune.py` file contains finetuning results for running instruction finetuning training on \ncustom data with Lora adapters, and computing and storing model predictions on the test sets.",
+      "evidence_location": "lines 57-58",
+      "confidence": "high",
+      "reason": "Main training script file path"
+    },
+    {
+      "field": "training_framework",
+      "value": "tloen's Alpaca-Lora",
+      "normalized_value": "tloen's Alpaca-Lora",
+      "evidence": "It is heavily inspired by tloen's Alpaca-Lora.",
+      "evidence_location": "line 59",
+      "confidence": "high",
+      "reason": "Base framework used for instruction fine-tuning"
+    },
+    {
+      "field": "training_command",
+      "value": "sbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8     --output=frac_100u.out     --error=frac_100u.err     --wrap=\"python model_training/finetune.py       --train_data_path data/fractial_code/fractial_code_100_train.jsonl      --output_dir models/fractial_code_100       --micro_batch_size 32       --num_epochs 2       --cutoff_len 512       --val_data_path data/fractial_code/fractial_code_1000_validation.jsonl       --test_data_path data/fractial_code/fractial_code_only_test.jsonl\"",
+      "normalized_value": "sbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8 --output=frac_100u.out --error=frac_100u.err --wrap=\"python model_training/finetune.py --train_data_path data/fractial_code/fractial_code_100_train.jsonl --output_dir models/fractial_code_100 --micro_batch_size 32 --num_epochs 2 --cutoff_len 512 --val_data_path data/fractial_code/fractial_code_1000_validation.jsonl --test_data_path data/fractial_code/fractial_code_only_test.jsonl\"",
+      "evidence": "```bash\nsbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8     --output=frac_100u.out     --error=frac_100u.err     --wrap=\"python model_training/finetune.py       --train_data_path data/fractial_code/fractial_code_100_train.jsonl      --output_dir models/fractial_code_100       --micro_batch_size 32       --num_epochs 2       --cutoff_len 512       --val_data_path data/fractial_code/fractial_code_1000_validation.jsonl       --test_data_path data/fractial_code/fractial_code_only_test.jsonl\"\n```",
+      "evidence_location": "lines 62-64",
+      "confidence": "high",
+      "reason": "Example SLURM command for training, includes hyperparameters and resource requests"
+    },
+    {
+      "field": "training_hyperparameters",
+      "value": "--micro_batch_size 32 --num_epochs 2 --cutoff_len 512",
+      "normalized_value": "--micro_batch_size 32 --num_epochs 2 --cutoff_len 512",
+      "evidence": "```bash\nsbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8     --output=frac_100u.out     --error=frac_100u.err     --wrap=\"python model_training/finetune.py       --train_data_path data/fractial_code/fractial_code_100_train.jsonl      --output_dir models/fractial_code_100       --micro_batch_size 32       --num_epochs 2       --cutoff_len 512       --val_data_path data/fractial_code/fractial_code_1000_validation.jsonl       --test_data_path data/fractial_code/fractial_code_only_test.jsonl\"\n```",
+      "evidence_location": "lines 62-64",
+      "confidence": "high",
+      "reason": "Key training hyperparameters: micro batch size, number of epochs, cutoff length"
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "--nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8",
+      "normalized_value": "--nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8",
+      "evidence": "```bash\nsbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8     --output=frac_100u.out     --error=frac_100u.err     --wrap=\"python model_training/finetune.py       --train_data_path data/fractial_code/fractial_code_100_train.jsonl      --output_dir models/fractial_code_100       --micro_batch_size 32       --num_epochs 2       --cutoff_len 512       --val_data_path data/fractial_code/fractial_code_1000_validation.jsonl       --test_data_path data/fractial_code/fractial_code_only_test.jsonl\"\n```",
+      "evidence_location": "lines 62-64",
+      "confidence": "high",
+      "reason": "Hardware and resource requirements for training as SLURM directives"
+    },
+    {
+      "field": "target_tasks",
+      "value": "Xsum, SST2, Squad, CONLL",
+      "normalized_value": "Xsum, SST2, Squad, CONLL",
+      "evidence": "others are manually labeled more classic NLP tasks (Xsum, SST2, Squad, CONLL) and are used as target tasks",
+      "evidence_location": "line 38",
+      "confidence": "high",
+      "reason": "Dataset tasks used as targets in experiments"
+    },
+    {
+      "field": "evaluation_scorers",
+      "value": "Any scorer available through HuggingFace Evaluate, BertScore, SentenceBert, A Reward model trained by OpenAssistant, API-access LLMs like GPT4 or GPT3.5, Support for Custom heuristics on custom datasets",
+      "normalized_value": "Any scorer available through HuggingFace Evaluate, BertScore, SentenceBert, A Reward model trained by OpenAssistant, API-access LLMs like GPT4 or GPT3.5, Support for Custom heuristics on custom datasets",
+      "evidence": "Scorers include:\n- Any scorer available through HuggingFace Evaluate\n- BertScore\n- SentenceBert\n- A Reward model trained by OpenAssistant\n- API-access LLMs like GPT4 or GPT3.5\n- Support for Custom heuristics on custom datasets",
+      "evidence_location": "lines 71-77",
+      "confidence": "high",
+      "reason": "List of evaluation metrics/scorers used in the paper"
+    },
+    {
+      "field": "custom_package_note",
+      "value": "The `illuin_llm_tools` package is a proprietary package, which is simply a wrapper around the OpenAI API to enable easier parallelization and caching of the API requests. It is in the process of being open-sourced, in the meantime, simply replacing it's use with classic API calls with the OpenAI library yields the same results (lm-evaluator.py).",
+      "normalized_value": "The `illuin_llm_tools` package is a proprietary package, which is simply a wrapper around the OpenAI API to enable easier parallelization and caching of the API requests. It is in the process of being open-sourced, in the meantime, simply replacing it's use with classic API calls with the OpenAI library yields the same results (lm-evaluator.py).",
+      "evidence": "The `illuin_llm_tools` package is a proprietary package, which is simply a wrapper around the OpenAI API to \nenable easier parallelization and caching of the API requests.\nIt is in the process of being open-sourced, in the meantime, simply replacing it's use with classic API calls with the \nOpenAI library yields the same results (lm-evaluator.py).",
+      "evidence_location": "lines 88-91",
+      "confidence": "high",
+      "reason": "Note about a proprietary package and alternative implementation"
+    },
+    {
+      "field": "contact",
+      "value": "Github Issues or email",
+      "normalized_value": "Github Issues or email",
+      "evidence": "However, authors will be pleased to answer any implementation detail or questions about the work through Github Issues or email.",
+      "evidence_location": "line 83",
+      "confidence": "high",
+      "reason": "Means of contacting authors for questions"
+    },
+    {
+      "field": "maintenance_status",
+      "value": "not going to be further developped moving onwards",
+      "normalized_value": "not going to be further developped moving onwards",
+      "evidence": "it is not going\nto be further developped moving onwards.",
+      "evidence_location": "lines 81-82",
+      "confidence": "high",
+      "reason": "Indicates repository maintenance status"
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "python model_training/finetune.py",
+      "evidence_location": "line 63",
+      "confidence": "high",
+      "reason": "Primary programming language used for implementation"
+    },
+    {
+      "field": "experimental_results",
+      "value": "data/results (CSV files) and data/results/results_new.zip (raw JSON)",
+      "normalized_value": "data/results (CSV files) and data/results/results_new.zip (raw JSON)",
+      "evidence": "The experimental results are added in `data/results`, per experiment as CSV files.\nRaw JSON files for all models and experiments are also included in `data/results/results_new.zip`.",
+      "evidence_location": "lines 40-41",
+      "confidence": "high",
+      "reason": "Location of experimental results for reproducibility"
+    },
+    {
+      "field": "analysis_notebook",
+      "value": "scripts/result_aggregation/results_viz.ipynb",
+      "normalized_value": "scripts/result_aggregation/results_viz.ipynb",
+      "evidence": "To process them for further analysis, a notebook is contained in `scripts/result_aggregation/results_viz.ipynb`.",
+      "evidence_location": "line 42",
+      "confidence": "high",
+      "reason": "Jupyter notebook for processing and visualizing results"
+    },
+    {
+      "field": "data_directory",
+      "value": "data/fractial_mixes",
+      "normalized_value": "data/fractial_mixes",
+      "evidence": "In `data/fractial_mixes`, you will find the various instruction training sets used for both parts of the paper",
+      "evidence_location": "lines 33-34",
+      "confidence": "high",
+      "reason": "Location of training data mixes used in experiments"
+    }
+  ]
+}

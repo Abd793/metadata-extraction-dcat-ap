@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Thermometer",
+      "normalized_value": "Thermometer",
+      "evidence": "# Thermometer: Towards Universal Calibration for Large Language Models",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "The project name is explicitly given in the README title."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2403.08819",
+      "normalized_value": "https://arxiv.org/abs/2403.08819",
+      "evidence": "https://arxiv.org/abs/2403.08819",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Link to the research paper associated with this repository."
+    },
+    {
+      "field": "description",
+      "value": "#### This repository contains official implementation of the paper [Thermometer: Towards Universal Calibration for Large Language Models](https://arxiv.org/abs/2403.08819).",
+      "normalized_value": "This repository contains official implementation of the paper [Thermometer: Towards Universal Calibration for Large Language Models](https://arxiv.org/abs/2403.08819)",
+      "evidence": "#### This repository contains official implementation of the paper [Thermometer: Towards Universal Calibration for Large Language Models](https://arxiv.org/abs/2403.08819).",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Describes the purpose of the repository as the official implementation of the paper."
+    },
+    {
+      "field": "method",
+      "value": "Thermometer",
+      "normalized_value": "Thermometer",
+      "evidence": "Thermometer",
+      "evidence_location": "line 2 (within the link text)",
+      "confidence": "high",
+      "reason": "The name of the calibration method introduced in the paper."
+    },
+    {
+      "field": "task",
+      "value": "universal calibration for large language models",
+      "normalized_value": "universal calibration for large language models",
+      "evidence": "Universal Calibration for Large Language Models",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "The primary task addressed by the method, as described in the README title."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install torch==2.2.1 transformers==4.28.1 evaluate==0.4.1 tqdm pandas",
+      "normalized_value": "pip install torch==2.2.1 transformers==4.28.1 evaluate==0.4.1 tqdm pandas",
+      "evidence": "```bash\npip install torch==2.2.1 transformers==4.28.1 evaluate==0.4.1 tqdm pandas\n```",
+      "evidence_location": "lines 5-7 (## Requirements)",
+      "confidence": "high",
+      "reason": "Command to install required Python packages with specific versions."
+    },
+    {
+      "field": "reproduction_command",
+      "value": "exract.sh",
+      "normalized_value": "exract.sh",
+      "evidence": "- ### Step-1: extract the features and logits from pre-trained LLMs,\n    ```\n    exract.sh\n    ```",
+      "evidence_location": "lines 23-26 (## Usage)",
+      "confidence": "high",
+      "reason": "Script for extracting features and logits from pre-trained LLMs as part of reproduction."
+    },
+    {
+      "field": "reproduction_command",
+      "value": "train.sh",
+      "normalized_value": "train.sh",
+      "evidence": "- ### Step-2: train Thermometer model,\n    ```\n    train.sh\n    ```",
+      "evidence_location": "lines 27-30 (## Usage)",
+      "confidence": "high",
+      "reason": "Script to train the Thermometer model."
+    },
+    {
+      "field": "reproduction_command",
+      "value": "eval.sh",
+      "normalized_value": "eval.sh",
+      "evidence": "- ### Step-3: evaluate calibration of trained Thermometer model,\n    ```\n    eval.sh\n    ```",
+      "evidence_location": "lines 31-34 (## Usage)",
+      "confidence": "high",
+      "reason": "Script to evaluate calibration of the trained Thermometer model."
+    },
+    {
+      "field": "reproduction_command",
+      "value": "mrqa.sh",
+      "normalized_value": "mrqa.sh",
+      "evidence": "- ### Free-form QA task requires an additional step to pre-process the raw data, i.e., append the LLM's response to the prompts,\n    ```\n    mrqa.sh\n    ```",
+      "evidence_location": "lines 35-38 (## Usage)",
+      "confidence": "high",
+      "reason": "Script to preprocess MRQA dataset for free-form QA task."
+    },
+    {
+      "field": "model_configuration",
+      "value": "--model_type decoder_only --model_name Llama-2-7b-chat-hf",
+      "normalized_value": "--model_type decoder_only --model_name Llama-2-7b-chat-hf",
+      "evidence": "    --model_type decoder_only --model_name Llama-2-7b-chat-hf",
+      "evidence_location": "line 41 (## Usage, Choose different types of LLMs)",
+      "confidence": "high",
+      "reason": "Example configuration for using a decoder-only language model (Llama-2-7b-chat-hf)."
+    },
+    {
+      "field": "model_configuration",
+      "value": "--model_type encoder_decoder --model_name flan-t5-xl",
+      "normalized_value": "--model_type encoder_decoder --model_name flan-t5-xl",
+      "evidence": "    --model_type encoder_decoder --model_name flan-t5-xl",
+      "evidence_location": "line 42 (## Usage, Choose different types of LLMs)",
+      "confidence": "high",
+      "reason": "Example configuration for using an encoder-decoder language model (flan-t5-xl)."
+    },
+    {
+      "field": "dataset",
+      "value": "MRQA",
+      "normalized_value": "MRQA",
+      "evidence": "pre-process the raw data in free-form QA datasets MRQA",
+      "evidence_location": "line 15 (## File Structure)",
+      "confidence": "high",
+      "reason": "Identifies the MRQA dataset used in the free-form QA experiments."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@InProceedings{pmlr-v235-shen24c,\n  title = {Thermometer: Towards Universal Calibration for Large Language Models},\n  author =  {Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya},\n  booktitle = {Proceedings of the 41st International Conference on Machine Learning},\n  pages = {44687--44711},\n  year =  {2024},\n  editor =  {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix},\n  volume =  {235},\n  series =  {Proceedings of Machine Learning Research},\n  month = {21--27 Jul},\n  publisher = {PMLR}\n}",
+      "normalized_value": "@InProceedings{pmlr-v235-shen24c, title = {Thermometer: Towards Universal Calibration for Large Language Models}, author = {Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya}, booktitle = {Proceedings of the 41st International Conference on Machine Learning}, pages = {44687--44711}, year = {2024}, editor = {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix}, volume = {235}, series = {Proceedings of Machine Learning Research}, month = {21--27 Jul}, publisher = {PMLR}}",
+      "evidence": "```\n@InProceedings{pmlr-v235-shen24c,\n  title = {Thermometer: Towards Universal Calibration for Large Language Models},\n  author =  {Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya},\n  booktitle = {Proceedings of the 41st International Conference on Machine Learning},\n  pages = {44687--44711},\n  year =  {2024},\n  editor =  {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix},\n  volume =  {235},\n  series =  {Proceedings of Machine Learning Research},\n  month = {21--27 Jul},\n  publisher = {PMLR}\n}\n```",
+      "evidence_location": "lines 47-60 (## Citation)",
+      "confidence": "high",
+      "reason": "BibTeX citation for the Thermometer paper."
+    }
+  ]
+}

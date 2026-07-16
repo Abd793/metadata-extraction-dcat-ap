@@ -1,0 +1,274 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "ABIDES",
+      "normalized_value": "ABIDES",
+      "evidence": "# ABIDES: Agent-Based Interactive Discrete Event Simulation environment",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Artifact name as specified in the title"
+    },
+    {
+      "field": "description",
+      "value": "ABIDES (Agent Based Interactive Discrete Event Simulator) is a general purpose multi-agent discrete event simulator. Agents exclusively communicate through an advanced messaging system that supports latency models.",
+      "normalized_value": "ABIDES (Agent Based Interactive Discrete Event Simulator) is a general purpose multi-agent discrete event simulator. Agents exclusively communicate through an advanced messaging system that supports latency models.",
+      "evidence": "ABIDES (Agent Based Interactive Discrete Event Simulator) is a general purpose multi-agent discrete event simulator. Agents exclusively communicate through an advanced messaging system that supports latency models.",
+      "evidence_location": "line 34",
+      "confidence": "high",
+      "reason": "Defines the core purpose and functionality of the simulator"
+    },
+    {
+      "field": "repository",
+      "value": "https://github.com/jpmorganchase/abides-jpmc-public",
+      "normalized_value": "https://github.com/jpmorganchase/abides-jpmc-public",
+      "evidence": "    git clone https://github.com/jpmorganchase/abides-jpmc-public",
+      "evidence_location": "line 83",
+      "confidence": "high",
+      "reason": "Source code repository URL for cloning and accessing the code"
+    },
+    {
+      "field": "original_repository",
+      "value": "https://github.com/abides-sim/abides",
+      "normalized_value": "https://github.com/abides-sim/abides",
+      "evidence": "ABIDES was originally developed by David Byrd and Tucker Balch: https://github.com/abides-sim/abides",
+      "evidence_location": "line 184",
+      "confidence": "high",
+      "reason": "Original repository location for historical reference"
+    },
+    {
+      "field": "clone_command",
+      "value": "git clone https://github.com/jpmorganchase/abides-jpmc-public",
+      "normalized_value": "git clone https://github.com/jpmorganchase/abides-jpmc-public",
+      "evidence": "    ```bash\n    git clone https://github.com/jpmorganchase/abides-jpmc-public\n    ```",
+      "evidence_location": "lines 82-84",
+      "confidence": "high",
+      "reason": "Command to clone the repository for installation"
+    },
+    {
+      "field": "install_command",
+      "value": "sh install.sh",
+      "normalized_value": "sh install.sh",
+      "evidence": "    ```\n    sh install.sh\n    ```",
+      "evidence_location": "lines 90-92",
+      "confidence": "high",
+      "reason": "Command to install ABIDES packages and dependencies"
+    },
+    {
+      "field": "default_branch",
+      "value": "main",
+      "normalized_value": "main",
+      "evidence": "The latest stable version is contained within the `main` branch.",
+      "evidence_location": "line 86",
+      "confidence": "high",
+      "reason": "Indicates the default branch for stable releases"
+    },
+    {
+      "field": "usage_example_python",
+      "value": "from abides_markets.configs import rmsc04\nfrom abides_core import abides\n\nconfig_state = rmsc04.build_config(seed = 0, end_time = '10:00:00')\nend_state = abides.run(config_state)",
+      "normalized_value": "from abides_markets.configs import rmsc04\nfrom abides_core import abides\n\nconfig_state = rmsc04.build_config(seed = 0, end_time = '10:00:00')\nend_state = abides.run(config_state)",
+      "evidence": "    ```python\n    from abides_markets.configs import rmsc04\n    from abides_core import abides\n    \n    config_state = rmsc04.build_config(seed = 0, end_time = '10:00:00')\n    end_state = abides.run(config_state)\n    ```",
+      "evidence_location": "lines 105-111",
+      "confidence": "high",
+      "reason": "Example of running a simulation from a Python script"
+    },
+    {
+      "field": "usage_example_command_line",
+      "value": "abides abides-markets/abides_markets/configs/rmsc04.py --end_time \"10:00:00\"",
+      "normalized_value": "abides abides-markets/abides_markets/configs/rmsc04.py --end_time \"10:00:00\"",
+      "evidence": "    ```\n    $ abides abides-markets/abides_markets/configs/rmsc04.py --end_time \"10:00:00\"\n    ```",
+      "evidence_location": "lines 119-121",
+      "confidence": "high",
+      "reason": "Example of running a simulation from the command line"
+    },
+    {
+      "field": "usage_example_gym",
+      "value": "import gym\nimport abides_gym\n\nenv = gym.make(\n    \"markets-daily_investor-v0\",\n    background_config=\"rmsc04\",\n)\n\nenv.seed(0)\ninitial_state = env.reset()\nfor i in range(5):\n    state, reward, done, info = env.step(0)",
+      "normalized_value": "import gym\nimport abides_gym\n\nenv = gym.make(\n    \"markets-daily_investor-v0\",\n    background_config=\"rmsc04\",\n)\n\nenv.seed(0)\ninitial_state = env.reset()\nfor i in range(5):\n    state, reward, done, info = env.step(0)",
+      "evidence": "    ```python\n    import gym\n    import abides_gym\n    \n    env = gym.make(\n        \"markets-daily_investor-v0\",\n        background_config=\"rmsc04\",\n    )\n    \n    env.seed(0)\n    initial_state = env.reset()\n    for i in range(5):\n        state, reward, done, info = env.step(0)\n    ```",
+      "evidence_location": "lines 133-146",
+      "confidence": "high",
+      "reason": "Example of using ABIDES through a Gym interface for reinforcement learning"
+    },
+    {
+      "field": "config_rmsc03",
+      "value": "RMSC03: 1 Exchange Agent, 1 POV Market Maker Agent, 100 Value Agents, 25 Momentum Agents, 5000 Noise Agents",
+      "normalized_value": "RMSC03: 1 Exchange Agent, 1 POV Market Maker Agent, 100 Value Agents, 25 Momentum Agents, 5000 Noise Agents",
+      "evidence": "* RMSC03: 1 Exchange Agent, 1 POV Market Maker Agent, 100 Value Agents, 25 Momentum Agents, 5000 Noise Agents",
+      "evidence_location": "line 152",
+      "confidence": "high",
+      "reason": "Predefined market simulation configuration with agent counts"
+    },
+    {
+      "field": "config_rmsc04",
+      "value": "RMSC04: 1 Exchange Agent, 2 Market Maker Agents, 102 Value Agents, 12 Momentum Agents, 1000  Noise Agents",
+      "normalized_value": "RMSC04: 1 Exchange Agent, 2 Market Maker Agents, 102 Value Agents, 12 Momentum Agents, 1000 Noise Agents",
+      "evidence": "* RMSC04: 1 Exchange Agent, 2 Market Maker Agents, 102 Value Agents, 12 Momentum Agents, 1000  Noise Agents",
+      "evidence_location": "line 154",
+      "confidence": "high",
+      "reason": "Predefined market simulation configuration with agent counts"
+    },
+    {
+      "field": "license",
+      "value": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "normalized_value": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "evidence": "Distributed under the BSD 3-Clause \"New\" or \"Revised\" License. See `LICENSE` for more information.",
+      "evidence_location": "line 178",
+      "confidence": "high",
+      "reason": "License governing use and distribution of the artifact"
+    },
+    {
+      "field": "paper_abides_gym",
+      "value": "ABIDES-Gym: Gym Environments for Multi-Agent Discrete Event Simulation and Application to Financial Markets",
+      "normalized_value": "ABIDES-Gym: Gym Environments for Multi-Agent Discrete Event Simulation and Application to Financial Markets",
+      "evidence": "[ABIDES-Gym: Gym Environments for Multi-Agent Discrete Event Simulation and Application to Financial Markets](https://arxiv.org/pdf/2110.14771.pdf)",
+      "evidence_location": "line 47",
+      "confidence": "high",
+      "reason": "Scientific paper describing the ABIDES-Gym extension"
+    },
+    {
+      "field": "paper_abides",
+      "value": "ABIDES: Towards High-Fidelity Market Simulation for AI Research",
+      "normalized_value": "ABIDES: Towards High-Fidelity Market Simulation for AI Research",
+      "evidence": "[ABIDES: Towards High-Fidelity Market Simulation for AI Research](https://arxiv.org/abs/1904.12066)",
+      "evidence_location": "line 61",
+      "confidence": "high",
+      "reason": "Original paper describing the ABIDES simulator"
+    },
+    {
+      "field": "bibtex_abides_gym",
+      "value": "@misc{amrouni2021abidesgym,\n      title={ABIDES-Gym: Gym Environments for Multi-Agent Discrete Event Simulation and Application to Financial Markets}, \n      author={Selim Amrouni and Aymeric Moulin and Jared Vann and Svitlana Vyetrenko and Tucker Balch and Manuela Veloso},\n      year={2021},\n      eprint={2110.14771},\n      archivePrefix={arXiv},\n      primaryClass={cs.MA}\n}",
+      "normalized_value": "@misc{amrouni2021abidesgym,\n      title={ABIDES-Gym: Gym Environments for Multi-Agent Discrete Event Simulation and Application to Financial Markets}, \n      author={Selim Amrouni and Aymeric Moulin and Jared Vann and Svitlana Vyetrenko and Tucker Balch and Manuela Veloso},\n      year={2021},\n      eprint={2110.14771},\n      archivePrefix={arXiv},\n      primaryClass={cs.MA}\n}",
+      "evidence": "```\n@misc{amrouni2021abidesgym,\n      title={ABIDES-Gym: Gym Environments for Multi-Agent Discrete Event Simulation and Application to Financial Markets}, \n      author={Selim Amrouni and Aymeric Moulin and Jared Vann and Svitlana Vyetrenko and Tucker Balch and Manuela Veloso},\n      year={2021},\n      eprint={2110.14771},\n      archivePrefix={arXiv},\n      primaryClass={cs.MA}\n}\n```",
+      "evidence_location": "lines 50-59",
+      "confidence": "high",
+      "reason": "BibTeX citation for the ABIDES-Gym paper"
+    },
+    {
+      "field": "bibtex_abides",
+      "value": "@misc{byrd2019abides,\n      title={ABIDES: Towards High-Fidelity Market Simulation for AI Research}, \n      author={David Byrd and Maria Hybinette and Tucker Hybinette Balch},\n      year={2019},\n      eprint={1904.12066},\n      archivePrefix={arXiv},\n      primaryClass={cs.MA}\n}",
+      "normalized_value": "@misc{byrd2019abides,\n      title={ABIDES: Towards High-Fidelity Market Simulation for AI Research}, \n      author={David Byrd and Maria Hybinette and Tucker Hybinette Balch},\n      year={2019},\n      eprint={1904.12066},\n      archivePrefix={arXiv},\n      primaryClass={cs.MA}\n}",
+      "evidence": "```\n@misc{byrd2019abides,\n      title={ABIDES: Towards High-Fidelity Market Simulation for AI Research}, \n      author={David Byrd and Maria Hybinette and Tucker Hybinette Balch},\n      year={2019},\n      eprint={1904.12066},\n      archivePrefix={arXiv},\n      primaryClass={cs.MA}\n}\n```",
+      "evidence_location": "lines 64-73",
+      "confidence": "high",
+      "reason": "BibTeX citation for the original ABIDES paper"
+    },
+    {
+      "field": "original_developers",
+      "value": "David Byrd and Tucker Balch",
+      "normalized_value": "David Byrd and Tucker Balch",
+      "evidence": "ABIDES was originally developed by David Byrd and Tucker Balch: https://github.com/abides-sim/abides",
+      "evidence_location": "line 184",
+      "confidence": "high",
+      "reason": "Original creators of the ABIDES project"
+    },
+    {
+      "field": "current_maintainers",
+      "value": "Jared Vann, Selim Amrouni, Aymeric Moulin",
+      "normalized_value": "Jared Vann, Selim Amrouni, Aymeric Moulin",
+      "evidence": "ABIDES is currently developed and maintained by [Jared Vann](https://github.com/jaredvann) (aka @jaredvann), [Selim Amrouni](https://github.com/selimamrouni) (aka @selimamrouni), and [Aymeric Moulin](https://github.com/AymericCAMoulin) (@AymericCAMoulin).",
+      "evidence_location": "line 185",
+      "confidence": "high",
+      "reason": "Current maintainers of the project"
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "Using a Python Script:",
+      "evidence_location": "line 103",
+      "confidence": "high",
+      "reason": "The primary language used for the project, indicated by usage instructions"
+    },
+    {
+      "field": "domain",
+      "value": "financial markets",
+      "normalized_value": "financial markets",
+      "evidence": "Extension of ABIDES-Core to financial markets.",
+      "evidence_location": "line 39",
+      "confidence": "high",
+      "reason": "Specific application domain of the ABIDES-Markets extension"
+    },
+    {
+      "field": "application_area",
+      "value": "reinforcement learning",
+      "normalized_value": "reinforcement learning",
+      "evidence": "Extra layer to wrap the simulator into an OpenAI Gym environment for reinforcement learning use.",
+      "evidence_location": "line 40",
+      "confidence": "high",
+      "reason": "ABIDES-Gym enables reinforcement learning applications"
+    },
+    {
+      "field": "method",
+      "value": "multi-agent discrete event simulation, agent-based modeling",
+      "normalized_value": "multi-agent discrete event simulation, agent-based modeling",
+      "evidence": "ABIDES (Agent Based Interactive Discrete Event Simulator) is a general purpose multi-agent discrete event simulator.",
+      "evidence_location": "line 34",
+      "confidence": "high",
+      "reason": "Core methodology used by the simulator"
+    },
+    {
+      "field": "component_core",
+      "value": "ABIDES-Core: Core general purpose simulator that be used as a base to build simulations of various systems.",
+      "normalized_value": "ABIDES-Core: Core general purpose simulator that be used as a base to build simulations of various systems.",
+      "evidence": "* ABIDES-Core: Core general purpose simulator that be used as a base to build simulations of various systems.",
+      "evidence_location": "line 38",
+      "confidence": "high",
+      "reason": "Description of the core ABIDES component"
+    },
+    {
+      "field": "component_markets",
+      "value": "ABIDES-Markets: Extension of ABIDES-Core to financial markets. Contains implementation of an exchange mimicking NASDAQ, stylised trading agents and configurations.",
+      "normalized_value": "ABIDES-Markets: Extension of ABIDES-Core to financial markets. Contains implementation of an exchange mimicking NASDAQ, stylised trading agents and configurations.",
+      "evidence": "* ABIDES-Markets: Extension of ABIDES-Core to financial markets. Contains implementation of an exchange mimicking NASDAQ, stylised trading agents and configurations.",
+      "evidence_location": "line 39",
+      "confidence": "high",
+      "reason": "Description of the financial markets extension"
+    },
+    {
+      "field": "component_gym",
+      "value": "ABIDES-Gym: Extra layer to wrap the simulator into an OpenAI Gym environment for reinforcement learning use. 2 ready to use trading environments available. Possibility to build other financial markets environments easily.",
+      "normalized_value": "ABIDES-Gym: Extra layer to wrap the simulator into an OpenAI Gym environment for reinforcement learning use. 2 ready to use trading environments available. Possibility to build other financial markets environments easily.",
+      "evidence": "* ABIDES-Gym: Extra layer to wrap the simulator into an OpenAI Gym environment for reinforcement learning use. 2 ready to use trading environments available. Possibility to build other financial markets environments easily.",
+      "evidence_location": "line 40",
+      "confidence": "high",
+      "reason": "Description of the Gym interface component"
+    },
+    {
+      "field": "gym_environment_id",
+      "value": "markets-daily_investor-v0",
+      "normalized_value": "markets-daily_investor-v0",
+      "evidence": "\"markets-daily_investor-v0\"",
+      "evidence_location": "line 138",
+      "confidence": "high",
+      "reason": "Identifier for one of the provided Gym environments"
+    },
+    {
+      "field": "example_background_config",
+      "value": "rmsc04",
+      "normalized_value": "rmsc04",
+      "evidence": "background_config=\"rmsc04\"",
+      "evidence_location": "line 139",
+      "confidence": "high",
+      "reason": "Configuration used in the Gym usage example"
+    },
+    {
+      "field": "support_policy",
+      "value": "We do not do technical support, nor consulting",
+      "normalized_value": "We do not do technical support, nor consulting",
+      "evidence": "**Important Note: We do not do technical support, nor consulting**",
+      "evidence_location": "line 186",
+      "confidence": "high",
+      "reason": "Official policy on technical support and consulting"
+    },
+    {
+      "field": "dependency_gym",
+      "value": "gym",
+      "normalized_value": "gym",
+      "evidence": "import gym",
+      "evidence_location": "line 134",
+      "confidence": "high",
+      "reason": "OpenAI Gym is a required dependency for the Gym interface"
+    }
+  ]
+}

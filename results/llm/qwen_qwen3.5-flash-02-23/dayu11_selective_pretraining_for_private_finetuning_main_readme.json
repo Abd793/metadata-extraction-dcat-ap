@@ -1,0 +1,103 @@
+{
+  "metadata": [
+    {
+      "field": "repository_url",
+      "value": "https://github.com/dayu11/selective_pretraining_for_private_finetuning",
+      "normalized_value": "https://github.com/dayu11/selective_pretraining_for_private_finetuning",
+      "evidence": "[This repo](https://github.com/dayu11/selective_pretraining_for_private_finetuning)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly states the repository URL in a markdown link."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2305.13865",
+      "normalized_value": "https://arxiv.org/abs/2305.13865",
+      "evidence": "[this paper](https://arxiv.org/abs/2305.13865)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly states the paper URL in a markdown link."
+    },
+    {
+      "field": "task",
+      "value": "SST-2",
+      "normalized_value": "SST-2",
+      "evidence": "on SST-2",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly mentions the dataset/task the framework is implemented on."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "GPUs that support half-precision training",
+      "normalized_value": "GPUs that support half-precision training",
+      "evidence": "The code requires GPUs that support half-precision training.",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Explicitly states the hardware requirement for the code."
+    },
+    {
+      "field": "dependencies",
+      "value": "torch==1.12.1\ndatasets\nevaluate\naccelerate\ntqdm",
+      "normalized_value": "torch==1.12.1 datasets evaluate accelerate tqdm",
+      "evidence": "```\ntorch==1.12.1\ndatasets\nevaluate\naccelerate\ntqdm\n```",
+      "evidence_location": "5-11",
+      "confidence": "high",
+      "reason": "Lists required python packages in a code block."
+    },
+    {
+      "field": "model_architecture",
+      "value": "gpt2",
+      "normalized_value": "gpt2",
+      "evidence": "src/transformers/models/gpt2.py",
+      "evidence_location": "18",
+      "confidence": "medium",
+      "reason": "Inferred from file path indicating model implementation."
+    },
+    {
+      "field": "data_source",
+      "value": "Wikipedia + BookCorpus",
+      "normalized_value": "Wikipedia + BookCorpus",
+      "evidence": "download Wikipedia + BookCorpus",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Explicitly states the data sources for pre-training."
+    },
+    {
+      "field": "training_command_domain_classifier",
+      "value": "bash scripts/train_domain_classifier.sh 1.4 1 64 32 1e-3",
+      "normalized_value": "bash scripts/train_domain_classifier.sh 1.4 1 64 32 1e-3",
+      "evidence": "bash scripts/train_domain_classifier.sh 1.4 1 64 32 1e-3",
+      "evidence_location": "46",
+      "confidence": "high",
+      "reason": "Explicit command for training the domain classifier."
+    },
+    {
+      "field": "training_command_pretraining",
+      "value": "bash scripts/pretraining.sh pretraining_data_40m.ds tiny 3e-4 1000000 32 8 1",
+      "normalized_value": "bash scripts/pretraining.sh pretraining_data_40m.ds tiny 3e-4 1000000 32 8 1",
+      "evidence": "bash scripts/pretraining.sh pretraining_data_40m.ds tiny 3e-4 1000000 32 8 1",
+      "evidence_location": "77",
+      "confidence": "high",
+      "reason": "Explicit command for pre-training on selected data."
+    },
+    {
+      "field": "training_command_finetuning",
+      "value": "bash scripts/train_sst2.sh ../pretraining/results/pretraining_data_random_40m.ds_lr3e-4_maxsteps1000000_tiny/checkpoint-XXXX 1.4 1 32 64 1e-3 30 0",
+      "normalized_value": "bash scripts/train_sst2.sh ../pretraining/results/pretraining_data_random_40m.ds_lr3e-4_maxsteps1000000_tiny/checkpoint-XXXX 1.4 1 32 64 1e-3 30 0",
+      "evidence": "bash scripts/train_sst2.sh ../pretraining/results/pretraining_data_random_40m.ds_lr3e-4_maxsteps1000000_tiny/checkpoint-XXXX 1.4 1 32 64 1e-3 30 0",
+      "evidence_location": "102",
+      "confidence": "high",
+      "reason": "Explicit command for private fine-tuning on sst-2."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install --editable .",
+      "normalized_value": "pip install --editable .",
+      "evidence": "pip install --editable .",
+      "evidence_location": "40",
+      "confidence": "high",
+      "reason": "Explicit command for installing the local transformers directory."
+    }
+  ]
+}

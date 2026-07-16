@@ -1,0 +1,247 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "selective_pretraining_for_private_finetuning",
+      "normalized_value": "selective_pretraining_for_private_finetuning",
+      "evidence": "https://github.com/dayu11/selective_pretraining_for_private_finetuning",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "The GitHub repository name identifies the artifact."
+    },
+    {
+      "field": "repository",
+      "value": "https://github.com/dayu11/selective_pretraining_for_private_finetuning",
+      "normalized_value": "https://github.com/dayu11/selective_pretraining_for_private_finetuning",
+      "evidence": "[This repo](https://github.com/dayu11/selective_pretraining_for_private_finetuning) implements the framework in [this paper](https://arxiv.org/abs/2305.13865) on SST-2.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Direct link to the code repository for access."
+    },
+    {
+      "field": "paper",
+      "value": "https://arxiv.org/abs/2305.13865",
+      "normalized_value": "https://arxiv.org/abs/2305.13865",
+      "evidence": "[This repo](https://github.com/dayu11/selective_pretraining_for_private_finetuning) implements the framework in [this paper](https://arxiv.org/abs/2305.13865) on SST-2.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper."
+    },
+    {
+      "field": "task",
+      "value": "SST-2",
+      "normalized_value": "SST-2",
+      "evidence": "on SST-2",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "The framework is demonstrated on the SST-2 sentiment analysis task."
+    },
+    {
+      "field": "dataset_fine_tuning",
+      "value": "SST-2",
+      "normalized_value": "SST-2",
+      "evidence": "Private fine-tuning on sst-2.",
+      "evidence_location": "line 90",
+      "confidence": "high",
+      "reason": "SST-2 is the dataset used for the final private fine-tuning stage."
+    },
+    {
+      "field": "dataset_pretraining_selection",
+      "value": "Wikipedia + BookCorpus",
+      "normalized_value": "Wikipedia + BookCorpus",
+      "evidence": "download Wikipedia + BookCorpus, and split the documents into natural sentences.",
+      "evidence_location": "line 22",
+      "confidence": "high",
+      "reason": "These are the corpora used for selecting pre-training data."
+    },
+    {
+      "field": "hardware_requirement",
+      "value": "GPUs that support half-precision training",
+      "normalized_value": "GPUs that support half-precision training",
+      "evidence": "The code requires GPUs that support half-precision training.",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Specifies the necessary hardware for running the code."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "Please first install the following python packages.",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "The project is written in Python, as indicated by package installations and scripts."
+    },
+    {
+      "field": "dependencies",
+      "value": "torch==1.12.1\ndatasets\nevaluate\naccelerate\ntqdm",
+      "normalized_value": "torch==1.12.1\ndatasets\nevaluate\naccelerate\ntqdm",
+      "evidence": "```\ntorch==1.12.1\ndatasets\nevaluate\naccelerate\ntqdm\n```",
+      "evidence_location": "lines 5-11",
+      "confidence": "high",
+      "reason": "List of core Python dependencies required to run the code."
+    },
+    {
+      "field": "privacy_technique",
+      "value": "DP (Differential Privacy)",
+      "normalized_value": "DP (Differential Privacy)",
+      "evidence": "Implementation of DP fine-tuning",
+      "evidence_location": "line 13",
+      "confidence": "high",
+      "reason": "The method uses differential privacy for fine-tuning and domain classifier training."
+    },
+    {
+      "field": "model_size",
+      "value": "tiny (5M parameters)",
+      "normalized_value": "tiny (5M parameters)",
+      "evidence": "model size (tiny=5M)",
+      "evidence_location": "line 80",
+      "confidence": "high",
+      "reason": "Specifies the size of the pre-trained model used in the example."
+    },
+    {
+      "field": "pretraining_tokens",
+      "value": "40 million tokens",
+      "normalized_value": "40 million tokens",
+      "evidence": "4. Use the logits to select pre-training sentences. The argument is target number of pre-training tokens (in M). **In this simple implementation, we directly select natural sentences instead of fixed-length sequences.** We found that this simple implementation is enough to achieve good performance on SST-2. \n\n```\ncd ../pretraining_data_selection\npython sampling_with_logits.py --num_tokens 40\n```",
+      "evidence_location": "lines 52-57",
+      "confidence": "high",
+      "reason": "Number of tokens selected for pre-training in the example command."
+    },
+    {
+      "field": "pretraining_steps",
+      "value": "1000000",
+      "normalized_value": "1000000",
+      "evidence": "bash scripts/pretraining.sh pretraining_data_40m.ds tiny 3e-4 1000000 32 8 1",
+      "evidence_location": "lines 76-78",
+      "confidence": "high",
+      "reason": "Number of pre-training steps used in the example."
+    },
+    {
+      "field": "domain_classifier_gpu_count",
+      "value": "1",
+      "normalized_value": "1",
+      "evidence": "only 1 GPU is used for training the domain classifier and computing the logits.",
+      "evidence_location": "line 49",
+      "confidence": "high",
+      "reason": "Number of GPUs used for training the domain classifier."
+    },
+    {
+      "field": "pretraining_gpu_count",
+      "value": "8",
+      "normalized_value": "8",
+      "evidence": "bash scripts/pretraining.sh pretraining_data_40m.ds tiny 3e-4 1000000 32 8 1",
+      "evidence_location": "lines 76-78",
+      "confidence": "high",
+      "reason": "Number of GPUs specified for pre-training."
+    },
+    {
+      "field": "dp_finetuning_gpu_support",
+      "value": "single GPU only",
+      "normalized_value": "single GPU only",
+      "evidence": "This implementation only supports single GPU training for dp fine-tuning.",
+      "evidence_location": "line 35",
+      "confidence": "high",
+      "reason": "Constraint that DP fine-tuning is limited to a single GPU."
+    },
+    {
+      "field": "preprocessing_command_download_split",
+      "value": "cd pretraining_data_selection\npython splitting_into_sentences.py",
+      "normalized_value": "cd pretraining_data_selection\npython splitting_into_sentences.py",
+      "evidence": "```\ncd pretraining_data_selection\npython splitting_into_sentences.py\n```",
+      "evidence_location": "lines 24-27",
+      "confidence": "high",
+      "reason": "Command to download and split Wikipedia + BookCorpus into sentences."
+    },
+    {
+      "field": "command_build_classifier_data",
+      "value": "python build_classifier_data_for_sst2.py",
+      "normalized_value": "python build_classifier_data_for_sst2.py",
+      "evidence": "```\npython build_classifier_data_for_sst2.py\n```",
+      "evidence_location": "lines 31-33",
+      "confidence": "high",
+      "reason": "Command to prepare data for domain classifier training."
+    },
+    {
+      "field": "installation_command_dp_transformers",
+      "value": "cd ../dp_finetuning\ncd transformers\npip install --editable .\ncd ..",
+      "normalized_value": "cd ../dp_finetuning\ncd transformers\npip install --editable .\ncd ..",
+      "evidence": "```\ncd ../dp_finetuning\ncd transformers\npip install --editable .\ncd ..\n```",
+      "evidence_location": "lines 37-42",
+      "confidence": "high",
+      "reason": "Installation of the local transformers package with per-example gradient hooks for DP training."
+    },
+    {
+      "field": "command_train_domain_classifier",
+      "value": "bash scripts/train_domain_classifier.sh 1.4 1 64 32 1e-3",
+      "normalized_value": "bash scripts/train_domain_classifier.sh 1.4 1 64 32 1e-3",
+      "evidence": "```\nbash scripts/train_domain_classifier.sh 1.4 1 64 32 1e-3\n```",
+      "evidence_location": "lines 45-47",
+      "confidence": "high",
+      "reason": "Command to train the domain classifier with DP-Adam and specified hyperparameters."
+    },
+    {
+      "field": "domain_classifier_training_arguments",
+      "value": "noise_multiplier, clip, pergpu_bs, gradient accumulation steps, learning rate",
+      "normalized_value": "noise_multiplier, clip, pergpu_bs, gradient accumulation steps, learning rate",
+      "evidence": "The arguments are: noise_multiplier, clip, pergpu_bs, gradient accumulation steps, and learning rate.",
+      "evidence_location": "line 49",
+      "confidence": "high",
+      "reason": "Defines the meaning of each positional argument in the domain classifier training command."
+    },
+    {
+      "field": "command_select_pretraining_data",
+      "value": "cd ../pretraining_data_selection\npython sampling_with_logits.py --num_tokens 40",
+      "normalized_value": "cd ../pretraining_data_selection\npython sampling_with_logits.py --num_tokens 40",
+      "evidence": "```\ncd ../pretraining_data_selection\npython sampling_with_logits.py --num_tokens 40\n```",
+      "evidence_location": "lines 54-57",
+      "confidence": "high",
+      "reason": "Command to select pre-training sentences using domain classifier logits with a target of 40M tokens."
+    },
+    {
+      "field": "installation_command_standard_transformers",
+      "value": "cd ../pretraining\ncd transformers\npip install --editable .\ncd ..",
+      "normalized_value": "cd ../pretraining\ncd transformers\npip install --editable .\ncd ..",
+      "evidence": "```\ncd ../pretraining\ncd transformers\npip install --editable .\ncd ..\n```",
+      "evidence_location": "lines 67-71",
+      "confidence": "high",
+      "reason": "Installation of standard transformers package (without per-example gradients) for multi-GPU pre-training."
+    },
+    {
+      "field": "command_pretraining",
+      "value": "bash scripts/pretraining.sh pretraining_data_40m.ds tiny 3e-4 1000000 32 8 1",
+      "normalized_value": "bash scripts/pretraining.sh pretraining_data_40m.ds tiny 3e-4 1000000 32 8 1",
+      "evidence": "```\nbash scripts/pretraining.sh pretraining_data_40m.ds tiny 3e-4 1000000 32 8 1\n```",
+      "evidence_location": "lines 76-78",
+      "confidence": "high",
+      "reason": "Command to pre-train the model on selected data with specified hyperparameters."
+    },
+    {
+      "field": "pretraining_arguments",
+      "value": "pre-training data path, model size (tiny=5M), lr, pre-training steps, per-gpu-bs, num_gpus, gradient accumulation",
+      "normalized_value": "pre-training data path, model size (tiny=5M), lr, pre-training steps, per-gpu-bs, num_gpus, gradient accumulation",
+      "evidence": "The arguments are: pre-training data path, model size (tiny=5M), lr, pre-training steps, per-gpu-bs, num_gpus, gradient accumulation.",
+      "evidence_location": "line 80",
+      "confidence": "high",
+      "reason": "Defines the meaning of each positional argument in the pre-training command."
+    },
+    {
+      "field": "command_finetuning",
+      "value": "bash scripts/train_sst2.sh ../pretraining/results/pretraining_data_random_40m.ds_lr3e-4_maxsteps1000000_tiny/checkpoint-XXXX 1.4 1 32 64 1e-3 30 0",
+      "normalized_value": "bash scripts/train_sst2.sh ../pretraining/results/pretraining_data_random_40m.ds_lr3e-4_maxsteps1000000_tiny/checkpoint-XXXX 1.4 1 32 64 1e-3 30 0",
+      "evidence": "```\nbash scripts/train_sst2.sh ../pretraining/results/pretraining_data_random_40m.ds_lr3e-4_maxsteps1000000_tiny/checkpoint-XXXX 1.4 1 32 64 1e-3 30 0\n```",
+      "evidence_location": "lines 101-103",
+      "confidence": "high",
+      "reason": "Command to perform private fine-tuning on SST-2 with DP and specified hyperparameters."
+    },
+    {
+      "field": "finetuning_arguments",
+      "value": "pre-trained model path, noise_multiplier, clip, pergpu_bs, gradient accumulation, lr, epochs, seed",
+      "normalized_value": "pre-trained model path, noise_multiplier, clip, pergpu_bs, gradient accumulation, lr, epochs, seed",
+      "evidence": "The argumentments are: pre-trained model path, noise_multiplier, clip, pergpu_bs, gradient accumulation, lr, epochs, seed. Replace checkpoint-XXXX with your checkpoint.",
+      "evidence_location": "line 99",
+      "confidence": "high",
+      "reason": "Defines the meaning of each positional argument in the fine-tuning command."
+    }
+  ]
+}

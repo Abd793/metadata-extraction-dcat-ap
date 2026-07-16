@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "paper_title",
+      "value": "Trainable Highly-expressive Activation Functions",
+      "normalized_value": "Trainable Highly-expressive Activation Functions",
+      "evidence": "# Trainable Highly-expressive Activation Functions [ECCV 2024]",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Identifies the paper and hence the core research contribution."
+    },
+    {
+      "field": "authors",
+      "value": "[Irit Chelly*](https://irita42.wixsite.com/mysite), [Shahaf E. Finder*](https://shahaffind.github.io/), [Shira Ifergane](https://www.linkedin.com/in/shira-ifergane/), and [Oren Freifeld](https://www.cs.bgu.ac.il/~orenfr/).",
+      "normalized_value": "[Irit Chelly*](https://irita42.wixsite.com/mysite), [Shahaf E. Finder*](https://shahaffind.github.io/), [Shira Ifergane](https://www.linkedin.com/in/shira-ifergane/), and [Oren Freifeld](https://www.cs.bgu.ac.il/~orenfr/).",
+      "evidence": "[Irit Chelly*](https://irita42.wixsite.com/mysite), [Shahaf E. Finder*](https://shahaffind.github.io/), [Shira Ifergane](https://www.linkedin.com/in/shira-ifergane/), and [Oren Freifeld](https://www.cs.bgu.ac.il/~orenfr/).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Lists authors for attribution and citation."
+    },
+    {
+      "field": "arxiv_link",
+      "value": "https://arxiv.org/abs/2407.07564",
+      "normalized_value": "https://arxiv.org/abs/2407.07564",
+      "evidence": "[![arXiv](https://img.shields.io/badge/arXiv-2407.07564-b31b1b.svg?style=flat)](https://arxiv.org/abs/2407.07564)",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Direct link to the paper version on arXiv."
+    },
+    {
+      "field": "conference",
+      "value": "European Conference on Computer Vision",
+      "normalized_value": "European Conference on Computer Vision",
+      "evidence": "  booktitle = {European Conference on Computer Vision},",
+      "evidence_location": "line 52 (citation bibtex)",
+      "confidence": "high",
+      "reason": "Publication venue, important for scientific credit and context."
+    },
+    {
+      "field": "method",
+      "value": "DiTAC",
+      "normalized_value": "DiTAC",
+      "evidence": "from ditac import DiTAC",
+      "evidence_location": "line 27 (### How to use code block)",
+      "confidence": "high",
+      "reason": "Name of the proposed activation function, central to the artifact."
+    },
+    {
+      "field": "programming_language",
+      "value": "python 3.12",
+      "normalized_value": "python 3.12",
+      "evidence": "- python 3.12",
+      "evidence_location": "line 8 (### Requirements)",
+      "confidence": "high",
+      "reason": "Specifies the required programming language and version for reproducibility."
+    },
+    {
+      "field": "dependency",
+      "value": "torch 2.2.2",
+      "normalized_value": "torch 2.2.2",
+      "evidence": "- torch 2.2.2",
+      "evidence_location": "line 9 (### Requirements)",
+      "confidence": "high",
+      "reason": "Core deep learning framework with version."
+    },
+    {
+      "field": "dependency",
+      "value": "difw 0.0.29",
+      "normalized_value": "difw 0.0.29",
+      "evidence": "- difw 0.0.29",
+      "evidence_location": "line 10 (### Requirements)",
+      "confidence": "high",
+      "reason": "Required package for diffeomorphic transformations."
+    },
+    {
+      "field": "dependency",
+      "value": "scikit-learn 1.5.1",
+      "normalized_value": "scikit-learn 1.5.1",
+      "evidence": "- scikit-learn 1.5.1",
+      "evidence_location": "line 11 (### Requirements)",
+      "confidence": "high",
+      "reason": "Machine learning library dependency."
+    },
+    {
+      "field": "cuda_version",
+      "value": "12.2",
+      "normalized_value": "12.2",
+      "evidence": "We've successfully compiled it with cuda version 12.2.",
+      "evidence_location": "line 13 (### Requirements)",
+      "confidence": "high",
+      "reason": "CUDA version required for GPU compilation and execution."
+    },
+    {
+      "field": "installation_commands",
+      "value": "conda install cxx-compiler -c conda-forge\nexport CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH\nexport LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH\nexport PATH=/usr/local/cuda-12/bin:$PATH",
+      "normalized_value": "conda install cxx-compiler -c conda-forge export CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH export LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH export PATH=/usr/local/cuda-12/bin:$PATH",
+      "evidence": "conda install cxx-compiler -c conda-forge\nexport CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH\nexport LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH\nexport PATH=/usr/local/cuda-12/bin:$PATH",
+      "evidence_location": "lines 17-20 (### Requirements, shell code block)",
+      "confidence": "high",
+      "reason": "Concrete commands to set up compilation environment for the difw dependency."
+    },
+    {
+      "field": "usage_code",
+      "value": "import torch\nfrom ditac import DiTAC\n\nact = DiTAC()\nx = torch.randn(8,32,20,20).to('cuda')\n\nact(x)",
+      "normalized_value": "import torch from ditac import DiTAC act = DiTAC() x = torch.randn(8,32,20,20).to('cuda') act(x)",
+      "evidence": "import torch\nfrom ditac import DiTAC\n\nact = DiTAC()\nx = torch.randn(8,32,20,20).to('cuda')\n\nact(x)",
+      "evidence_location": "lines 26-32 (### How to use, python code block)",
+      "confidence": "high",
+      "reason": "Demonstrates how to import and use the DiTAC activation layer in a model."
+    },
+    {
+      "field": "reproduction_command",
+      "value": "python run_regression.py",
+      "normalized_value": "python run_regression.py",
+      "evidence": "python run_regression.py",
+      "evidence_location": "line 37 (### How to use)",
+      "confidence": "high",
+      "reason": "Command to reproduce Figure 1 from the paper."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "This project is released under the MIT license.",
+      "evidence_location": "line 43 (## License)",
+      "confidence": "high",
+      "reason": "Legal terms for reuse."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{Chelly:ECCV:2024DiTAC,\n  title     = {Trainable Highly-expressive Activation Functions},\n  author    = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren},\n  booktitle = {European Conference on Computer Vision},\n  year      = {2024},\n}",
+      "normalized_value": "@inproceedings{Chelly:ECCV:2024DiTAC, title     = {Trainable Highly-expressive Activation Functions}, author    = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren}, booktitle = {European Conference on Computer Vision}, year      = {2024},}",
+      "evidence": "@inproceedings{Chelly:ECCV:2024DiTAC,\n  title     = {Trainable Highly-expressive Activation Functions},\n  author    = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren},\n  booktitle = {European Conference on Computer Vision},\n  year      = {2024},\n}",
+      "evidence_location": "lines 49-54 (## Citation)",
+      "confidence": "high",
+      "reason": "Standard citation entry for the paper, allowing proper credit."
+    },
+    {
+      "field": "code_availability_status",
+      "value": "Other experiments' code will be uploaded soon",
+      "normalized_value": "Other experiments' code will be uploaded soon",
+      "evidence": "**Other experiments' code will be uploaded soon**",
+      "evidence_location": "line 40 (### How to use)",
+      "confidence": "high",
+      "reason": "Indicates that code for other experiments is not yet available, affecting reproducibility expectations."
+    },
+    {
+      "field": "installation_note",
+      "value": "`difw` can be fragile, make sure that it compiles successfully.",
+      "normalized_value": "`difw` can be fragile, make sure that it compiles successfully.",
+      "evidence": "`difw` can be fragile, make sure that it compiles successfully.",
+      "evidence_location": "line 13 (### Requirements, first sentence)",
+      "confidence": "high",
+      "reason": "Warns users about potential compilation issues with the difw package, important for successful installation."
+    }
+  ]
+}

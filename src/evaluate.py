@@ -4,7 +4,7 @@ import math
 import re
 from itertools import combinations
 from pathlib import Path
-from statistics import mean
+from statistics import mean, median
 from typing import Any
 
 from sklearn.metrics import cohen_kappa_score
@@ -21,6 +21,10 @@ AGREEMENT_VIEWS = ("fields", "values", "field_value_pairs")
 
 def safe_mean(values: list[float]) -> float:
     return mean(values) if values else 0.0
+
+
+def safe_median(values: list[float]) -> float:
+    return median(values) if values else 0.0
 
 
 def safe_model_name(model: str) -> str:
@@ -216,10 +220,16 @@ def view_metrics(items_a: set[str], items_b: set[str], universe: list[str]) -> d
 
 
 def summarize_rows(rows: list[dict[str, Any]], view: str) -> dict[str, float]:
+    jaccards = [row[view]["jaccard"] for row in rows]
+    kappas = [row[view]["cohen_kappa"] for row in rows]
+    positive_agreements = [row[view]["positive_agreement"] for row in rows]
     return {
-        "average_jaccard": safe_mean([row[view]["jaccard"] for row in rows]),
-        "average_cohen_kappa": safe_mean([row[view]["cohen_kappa"] for row in rows]),
-        "average_positive_agreement": safe_mean([row[view]["positive_agreement"] for row in rows]),
+        "average_jaccard": safe_mean(jaccards),
+        "median_jaccard": safe_median(jaccards),
+        "average_cohen_kappa": safe_mean(kappas),
+        "median_cohen_kappa": safe_median(kappas),
+        "average_positive_agreement": safe_mean(positive_agreements),
+        "median_positive_agreement": safe_median(positive_agreements),
     }
 
 
@@ -239,13 +249,19 @@ def multimodel_view_metrics(item_sets: list[set[str]], universe: list[str]) -> d
 
 
 def summarize_multimodel_rows(rows: list[dict[str, Any]], view: str) -> dict[str, float]:
+    multiway_jaccards = [row[view]["multiway_jaccard"] for row in rows]
+    fleiss_kappas = [row[view]["fleiss_kappa"] for row in rows]
+    krippendorff_alphas = [row[view]["krippendorff_alpha"] for row in rows]
+    unanimous_positive_agreements = [row[view]["unanimous_positive_agreement"] for row in rows]
     return {
-        "average_multiway_jaccard": safe_mean([row[view]["multiway_jaccard"] for row in rows]),
-        "average_fleiss_kappa": safe_mean([row[view]["fleiss_kappa"] for row in rows]),
-        "average_krippendorff_alpha": safe_mean([row[view]["krippendorff_alpha"] for row in rows]),
-        "average_unanimous_positive_agreement": safe_mean(
-            [row[view]["unanimous_positive_agreement"] for row in rows]
-        ),
+        "average_multiway_jaccard": safe_mean(multiway_jaccards),
+        "median_multiway_jaccard": safe_median(multiway_jaccards),
+        "average_fleiss_kappa": safe_mean(fleiss_kappas),
+        "median_fleiss_kappa": safe_median(fleiss_kappas),
+        "average_krippendorff_alpha": safe_mean(krippendorff_alphas),
+        "median_krippendorff_alpha": safe_median(krippendorff_alphas),
+        "average_unanimous_positive_agreement": safe_mean(unanimous_positive_agreements),
+        "median_unanimous_positive_agreement": safe_median(unanimous_positive_agreements),
     }
 
 
@@ -334,19 +350,25 @@ def evaluate(results: dict[str, dict[str, dict[str, set[str]]]]) -> dict[str, An
 def print_view(prefix: str, metrics: dict[str, float]) -> None:
     print(
         f"{prefix}: "
-        f"Jaccard={metrics['average_jaccard']:.4f}, "
-        f"Cohen's kappa={metrics['average_cohen_kappa']:.4f}, "
-        f"Positive agreement={metrics['average_positive_agreement']:.4f}"
+        f"Jaccard mean/median={metrics['average_jaccard']:.4f}/{metrics['median_jaccard']:.4f}, "
+        f"Cohen's kappa mean/median={metrics['average_cohen_kappa']:.4f}/{metrics['median_cohen_kappa']:.4f}, "
+        f"Positive agreement mean/median="
+        f"{metrics['average_positive_agreement']:.4f}/{metrics['median_positive_agreement']:.4f}"
     )
 
 
 def print_multimodel_view(prefix: str, metrics: dict[str, float]) -> None:
     print(
         f"{prefix}: "
-        f"Multiway Jaccard={metrics['average_multiway_jaccard']:.4f}, "
-        f"Fleiss' kappa={metrics['average_fleiss_kappa']:.4f}, "
-        f"Krippendorff's alpha={metrics['average_krippendorff_alpha']:.4f}, "
-        f"Unanimous positive agreement={metrics['average_unanimous_positive_agreement']:.4f}"
+        f"Multiway Jaccard mean/median="
+        f"{metrics['average_multiway_jaccard']:.4f}/{metrics['median_multiway_jaccard']:.4f}, "
+        f"Fleiss' kappa mean/median="
+        f"{metrics['average_fleiss_kappa']:.4f}/{metrics['median_fleiss_kappa']:.4f}, "
+        f"Krippendorff's alpha mean/median="
+        f"{metrics['average_krippendorff_alpha']:.4f}/{metrics['median_krippendorff_alpha']:.4f}, "
+        f"Unanimous positive agreement mean/median="
+        f"{metrics['average_unanimous_positive_agreement']:.4f}/"
+        f"{metrics['median_unanimous_positive_agreement']:.4f}"
     )
 
 

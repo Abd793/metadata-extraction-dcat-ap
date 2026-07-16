@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "# BLEBeacon Dataset",
+      "normalized_value": "# BLEBeacon Dataset",
+      "evidence": "# BLEBeacon Dataset",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the name of the artifact in the main header."
+    },
+    {
+      "field": "description",
+      "value": "The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month. A network of Raspberry Pi 3 (RPi)-based edge devices were deployed inside a multi-floor facility continuously gathering BLE advertisement packets and storing them in a cloud-based environment. The focus is on presenting a real-life realization of a location-aware sensing infrastructure, that can provide insights for smart sensing platforms, crowd-based applications, building management, and user-localization frameworks.",
+      "normalized_value": "The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE) advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month. A network of Raspberry Pi 3 (RPi)-based edge devices were deployed inside a multi-floor facility continuously gathering BLE advertisement packets and storing them in a cloud-based environment. The focus is on presenting a real-life realization of a location-aware sensing infrastructure, that can provide insights for smart sensing platforms, crowd-based applications, building management, and user-localization frameworks.",
+      "evidence": "The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month. A network of Raspberry Pi 3 (RPi)-based edge devices were deployed inside a multi-floor facility continuously gathering BLE advertisement packets and storing them in a cloud-based environment. The focus is on presenting a real-life realization of a location-aware sensing infrastructure, that can provide insights for smart sensing platforms, crowd-based applications, building management, and user-localization frameworks.",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Provides a comprehensive summary of the dataset's content, origin, and purpose."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://crawdad.org/unm/blebeacon/20190312/",
+      "normalized_value": "https://crawdad.org/unm/blebeacon/20190312/",
+      "evidence": "Since 2019, the BLEBeacon dataset is part of the Community Resource for Archiving Wireless Data At Dartmouth (CRAWDAD): https://crawdad.org/unm/blebeacon/20190312/",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Direct link to the archived dataset repository."
+    },
+    {
+      "field": "citation",
+      "value": "> Dimitrios Sikeridis, Ioannis Papapanagiotou, Michael Devetsikiotis, CRAWDAD dataset unm/blebeacon (v. 2019‑03‑12), downloaded from https://crawdad.org/unm/blebeacon/20190312, Mar 2019.",
+      "normalized_value": "Dimitrios Sikeridis, Ioannis Papapanagiotou, Michael Devetsikiotis, CRAWDAD dataset unm/blebeacon (v. 2019‑03‑12), downloaded from https://crawdad.org/unm/blebeacon/20190312, Mar 2019.",
+      "evidence": "> Dimitrios Sikeridis, Ioannis Papapanagiotou, Michael Devetsikiotis, CRAWDAD dataset unm/blebeacon (v. 2019‑03‑12), downloaded from https://crawdad.org/unm/blebeacon/20190312, Mar 2019.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Provides the recommended citation format for the dataset."
+    },
+    {
+      "field": "hardware",
+      "value": "Users carried off-the-shelf Gimbal Series 10 iBeacons that continuously transmit BLE advertisement packets. The periodic transmission rate for each beacon is set to 1 Hz, with omni-directional antenna propagation setting, and transmission power of 0 dBm. The backbone of the system is a network of Raspberry Pi 3 (RPi), able to collect all generated packets.",
+      "normalized_value": "Users carried off-the-shelf Gimbal Series 10 iBeacons that continuously transmit BLE advertisement packets. The periodic transmission rate for each beacon is set to 1 Hz, with omni-directional antenna propagation setting, and transmission power of 0 dBm. The backbone of the system is a network of Raspberry Pi 3 (RPi), able to collect all generated packets.",
+      "evidence": "Users carried off-the-shelf Gimbal Series 10 iBeacons that continuously transmit BLE advertisement packets. The periodic transmission rate for each beacon is set to 1 Hz, with omni-directional antenna propagation setting, and transmission power of 0 dBm. The backbone of the system is a network of Raspberry Pi 3 (RPi), able to collect all generated packets.",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Details the specific hardware used for data collection (beacons and scanners)."
+    },
+    {
+      "field": "transmission_rate",
+      "value": "1 Hz",
+      "normalized_value": "1 Hz",
+      "evidence": "The periodic transmission rate for each beacon is set to 1 Hz, with omni-directional antenna propagation setting, and transmission power of 0 dBm.",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Specifies the beacon transmission frequency, critical for data analysis."
+    },
+    {
+      "field": "transmission_power",
+      "value": "0 dBm",
+      "normalized_value": "0 dBm",
+      "evidence": "The periodic transmission rate for each beacon is set to 1 Hz, with omni-directional antenna propagation setting, and transmission power of 0 dBm.",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Specifies the beacon transmission power, relevant for signal strength analysis."
+    },
+    {
+      "field": "dataset_fields",
+      "value": "* Entry_id: unique identifier of a packet in the dataset.\n* Beacon_id: unique identifier of the occupant/beacon.\n* RSSI: the Received Signal Strength Indicator (RSSI) in dB.\n* Timestamp: Date (Month/Day/Year) and Unix time (Hour:Second) of the advertisement packet reception moment from the Rpi.\n* RPi_id: RPi that received the packet.\n\n\nThe Check-In/Check-Out Report file contains Entry_id, Beacon_id, and RPi_id as described above with the addition of two entries namely:\n* In_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the moment a user enters the RPi's vicinity and the first advertisement packet is received.\n* Out_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the last advertisement packet received from the same user by the specific RPi.",
+      "normalized_value": "* Entry_id: unique identifier of a packet in the dataset.\n* Beacon_id: unique identifier of the occupant/beacon.\n* RSSI: the Received Signal Strength Indicator (RSSI) in dB.\n* Timestamp: Date (Month/Day/Year) and Unix time (Hour:Second) of the advertisement packet reception moment from the Rpi.\n* RPi_id: RPi that received the packet.\n\nThe Check-In/Check-Out Report file contains Entry_id, Beacon_id, and RPi_id as described above with the addition of two entries namely:\n* In_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the moment a user enters the RPi's vicinity and the first advertisement packet is received.\n* Out_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the last advertisement packet received from the same user by the specific RPi.",
+      "evidence": "* Entry_id: unique identifier of a packet in the dataset.\n* Beacon_id: unique identifier of the occupant/beacon.\n* RSSI: the Received Signal Strength Indicator (RSSI) in dB.\n* Timestamp: Date (Month/Day/Year) and Unix time (Hour:Second) of the advertisement packet reception moment from the Rpi.\n* RPi_id: RPi that received the packet.\n\n\nThe Check-In/Check-Out Report file contains Entry_id, Beacon_id, and RPi_id as described above with the addition of two entries namely:\n* In_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the moment a user enters the RPi's vicinity and the first advertisement packet is received.\n* Out_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the last advertisement packet received from the same user by the specific RPi.",
+      "evidence_location": "36-45",
+      "confidence": "high",
+      "reason": "Lists the specific data columns available in the dataset files."
+    },
+    {
+      "field": "related_paper_title",
+      "value": "BLEBeacon: A Real-Subject Trial Dataset from Mobile Bluetooth Low Energy Beacons",
+      "normalized_value": "BLEBeacon: A Real-Subject Trial Dataset from Mobile Bluetooth Low Energy Beacons",
+      "evidence": "Further information and a detailed description of the sensing infrastructure setup, the real-subject trial, and the BLEBeacon dataset can be found in: D. Sikeridis, I. Papapanagiotou, M. Devetsikiotis,  [\"BLEBeacon: A Real-Subject Trial Dataset from Mobile Bluetooth Low Energy Beacons\"](https://arxiv.org/abs/1802.08782), arXiv preprint arXiv:1802.08782, 2018.",
+      "evidence_location": "50",
+      "confidence": "high",
+      "reason": "Identifies the primary research paper describing the dataset."
+    },
+    {
+      "field": "related_paper_url",
+      "value": "https://arxiv.org/abs/1802.08782",
+      "normalized_value": "https://arxiv.org/abs/1802.08782",
+      "evidence": "Further information and a detailed description of the sensing infrastructure setup, the real-subject trial, and the BLEBeacon dataset can be found in: D. Sikeridis, I. Papapanagiotou, M. Devetsikiotis,  [\"BLEBeacon: A Real-Subject Trial Dataset from Mobile Bluetooth Low Energy Beacons\"](https://arxiv.org/abs/1802.08782), arXiv preprint arXiv:1802.08782, 2018.",
+      "evidence_location": "50",
+      "confidence": "high",
+      "reason": "Direct link to the related research paper."
+    },
+    {
+      "field": "collection_duration",
+      "value": "a whole month",
+      "normalized_value": "a whole month",
+      "evidence": "The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month.",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Specifies the time span over which data was collected."
+    },
+    {
+      "field": "collection_location",
+      "value": "inside a university building",
+      "normalized_value": "inside a university building",
+      "evidence": "The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month.",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Specifies the physical environment where data collection occurred."
+    }
+  ]
+}

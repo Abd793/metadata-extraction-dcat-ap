@@ -1,0 +1,229 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "story-distiller",
+      "normalized_value": "story-distiller",
+      "evidence": "# story-distiller",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Project name in main heading."
+    },
+    {
+      "field": "description",
+      "value": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc. The music tracks are fitted to a fixed narrative template based on the output of a machine learning model, which itself distills each track down to its narrative essence. For more information on narrative essence and how it generalizes to other forms of media, see *On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media* by Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber.",
+      "normalized_value": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc. The music tracks are fitted to a fixed narrative template based on the output of a machine learning model, which itself distills each track down to its narrative essence. For more information on narrative essence and how it generalizes to other forms of media, see *On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media* by Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber.",
+      "evidence": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc. The music tracks are fitted to a fixed narrative template based on the output of a machine learning model, which itself distills each track down to its narrative essence. For more information on narrative essence and how it generalizes to other forms of media, see *On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media* by Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber.",
+      "evidence_location": "5-6",
+      "confidence": "high",
+      "reason": "Full description of the project's goal and reference."
+    },
+    {
+      "field": "purpose",
+      "value": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc.",
+      "normalized_value": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc.",
+      "evidence": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Core purpose of the project."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "This project is implemented in [Python](https://www.python.org/) and uses models learned with [PyTorch](https://pytorch.org).",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Explicitly states implementation language."
+    },
+    {
+      "field": "deep_learning_framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "This project is implemented in [Python](https://www.python.org/) and uses models learned with [PyTorch](https://pytorch.org).",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Explicitly states deep learning framework."
+    },
+    {
+      "field": "repository_url",
+      "value": "git@github.com:dylanashley/story-distiller.git",
+      "normalized_value": "git@github.com:dylanashley/story-distiller.git",
+      "evidence": "git clone --sparse git@github.com:dylanashley/story-distiller.git",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "SSH URL for cloning the repository."
+    },
+    {
+      "field": "clone_command",
+      "value": "git clone --sparse git@github.com:dylanashley/story-distiller.git",
+      "normalized_value": "git clone --sparse git@github.com:dylanashley/story-distiller.git",
+      "evidence": "git clone --sparse git@github.com:dylanashley/story-distiller.git",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Command to clone the repository with sparse checkout."
+    },
+    {
+      "field": "install_dependencies_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Command to install Python dependencies."
+    },
+    {
+      "field": "additional_dependency",
+      "value": "ffmpeg",
+      "normalized_value": "ffmpeg",
+      "evidence": "To use the full suite of file types supported by the tool, it is also necessary to separately install the ffmpeg tool",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "External dependency for audio file support."
+    },
+    {
+      "field": "build_and_install_command",
+      "value": "make all\nsudo make install",
+      "normalized_value": "make all\nsudo make install",
+      "evidence": "make all\nsudo make install",
+      "evidence_location": "26-27",
+      "confidence": "high",
+      "reason": "Commands to build and install via makefile (Linux/macOS)."
+    },
+    {
+      "field": "usage_command",
+      "value": "sdistil files [files ...] >> playlist.txt",
+      "normalized_value": "sdistil files [files ...] >> playlist.txt",
+      "evidence": "sdistil files [files ...] >> playlist.txt",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Command-line usage syntax."
+    },
+    {
+      "field": "web_app_command",
+      "value": "./app.py",
+      "normalized_value": "./app.py",
+      "evidence": "./app.py",
+      "evidence_location": "49",
+      "confidence": "high",
+      "reason": "Command to run the web app."
+    },
+    {
+      "field": "audio_processing_library",
+      "value": "librosa",
+      "normalized_value": "librosa",
+      "evidence": "librosa is used to process the audio files",
+      "evidence_location": "38",
+      "confidence": "high",
+      "reason": "Library for audio processing."
+    },
+    {
+      "field": "template_argument",
+      "value": "-t",
+      "normalized_value": "-t",
+      "evidence": "pass the `-t` argument to the program with the template file as an argument",
+      "evidence_location": "40",
+      "confidence": "high",
+      "reason": "Command-line option to specify template file."
+    },
+    {
+      "field": "templates_directory",
+      "value": "templates directory",
+      "normalized_value": "templates directory",
+      "evidence": "Several learned templates are included in the templates directory",
+      "evidence_location": "40",
+      "confidence": "high",
+      "reason": "Location of template files."
+    },
+    {
+      "field": "paper_title",
+      "value": "On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media",
+      "normalized_value": "On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media",
+      "evidence": "*On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media*",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Title of the associated research paper."
+    },
+    {
+      "field": "authors",
+      "value": "Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber",
+      "normalized_value": "Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber",
+      "evidence": "Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Authors of the associated paper."
+    },
+    {
+      "field": "reproducibility_scripts",
+      "value": "album_extractor.py, movie_extractor.py, template_learner.py, fit_values in __main__.py",
+      "normalized_value": "album_extractor.py, movie_extractor.py, template_learner.py, fit_values in __main__.py",
+      "evidence": "- the scripts needed to learn the PyTorch models for extracting the narrative essence from either music albums (`album_extractor.py`) or movie frames (`movie_extractor.py`) and compute the lower bounds for the mutual information of the different features,\n- the scripts for learning a set of template curves from scalar descriptions of items in a set of collections (`template_learner.py`),\n- the code that can fit the scalar descriptions of items in a collection to a given template curve (`fit_values` in `__main__.py`),",
+      "evidence_location": "56-58",
+      "confidence": "high",
+      "reason": "Scripts included for reproducing results."
+    },
+    {
+      "field": "data_directory",
+      "value": "data/",
+      "normalized_value": "data/",
+      "evidence": "- the preprocessed album data used to train the original PyTorch models for the music albums (`data/`),",
+      "evidence_location": "59",
+      "confidence": "high",
+      "reason": "Location of preprocessed training data."
+    },
+    {
+      "field": "results_directory",
+      "value": "results/",
+      "normalized_value": "results/",
+      "evidence": "- the learned PyTorch models and template curves (`results/`).",
+      "evidence_location": "60",
+      "confidence": "high",
+      "reason": "Location of learned models and templates."
+    },
+    {
+      "field": "full_clone_command",
+      "value": "git clone git@github.com:dylanashley/story-distiller.git",
+      "normalized_value": "git clone git@github.com:dylanashley/story-distiller.git",
+      "evidence": "git clone git@github.com:dylanashley/story-distiller.git",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Command to clone full repository for data and models."
+    },
+    {
+      "field": "movie_data_limitation",
+      "value": "raw data used to train the movie frame extractor is not possible to release due to copyright issues",
+      "normalized_value": "raw data used to train the movie frame extractor is not possible to release due to copyright issues",
+      "evidence": "At this time, the raw data used to train the movie frame extractor is not possible to release due to copyright issues.",
+      "evidence_location": "67",
+      "confidence": "high",
+      "reason": "Important limitation for reproducibility of movie extractor."
+    },
+    {
+      "field": "movie_extractor_compatibility",
+      "value": "movie_extractor.py should work on any similar collection with minimal changes",
+      "normalized_value": "movie_extractor.py should work on any similar collection with minimal changes",
+      "evidence": "However, `movie_extractor.py` should work on any similar collection with minimal changes.",
+      "evidence_location": "67",
+      "confidence": "high",
+      "reason": "Suggests adaptability of the extractor."
+    },
+    {
+      "field": "image_features_extraction",
+      "value": "CLIP features from images can be done straightforwardly using the official implementation",
+      "normalized_value": "CLIP features from images can be done straightforwardly using the official implementation",
+      "evidence": "Preprocessing to extract CLIP features from images can be done straightforwardly using the [official implementation](https://github.com/openai/CLIP).",
+      "evidence_location": "67",
+      "confidence": "high",
+      "reason": "Method for extracting image features."
+    },
+    {
+      "field": "code_style",
+      "value": "black",
+      "normalized_value": "black",
+      "evidence": "[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Code formatting standard used."
+    }
+  ]
+}

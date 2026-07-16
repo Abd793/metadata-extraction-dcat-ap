@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "CS-TGN",
+      "normalized_value": "CS-TGN",
+      "evidence": "# CS-TGN",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "The top-level header gives the name of the repository and artifact."
+    },
+    {
+      "field": "description",
+      "value": "This repository contains the implementation of algorithms, and used datasets of paper ``CS-TGN: Community Search via Temporal Graph Neural Networks`` (ACM The Web Conference Companion 2023  (WWW)).",
+      "normalized_value": "This repository contains the implementation of algorithms, and used datasets of paper ``CS-TGN: Community Search via Temporal Graph Neural Networks`` (ACM The Web Conference Companion 2023 (WWW)).",
+      "evidence": "This repository contains the implementation of algorithms, and used datasets of paper ``CS-TGN: Community Search via Temporal Graph Neural Networks`` (ACM The Web Conference Companion 2023  (WWW)).",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Directly describes what the repository provides."
+    },
+    {
+      "field": "authors",
+      "value": "Farnoosh Hashemi, Ali Behrouz, Milad Rezaei Hajidehi",
+      "normalized_value": "Farnoosh Hashemi, Ali Behrouz, Milad Rezaei Hajidehi",
+      "evidence": "#### Authors: [Farnoosh Hashemi](https://farnooshha.github.io//), [Ali Behrouz](https://abehrouz.github.io/), [Milad Rezaei Hajidehi](https://www.linkedin.com/in/milad-rezaei-hajidehi-63013773/)",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Identifies the people who created the artifact and paper."
+    },
+    {
+      "field": "paper_title",
+      "value": "CS-TGN: Community Search via Temporal Graph Neural Networks",
+      "normalized_value": "CS-TGN: Community Search via Temporal Graph Neural Networks",
+      "evidence": "``CS-TGN: Community Search via Temporal Graph Neural Networks``",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "The title of the scientific paper associated with this implementation."
+    },
+    {
+      "field": "conference",
+      "value": "ACM The Web Conference Companion 2023 (WWW)",
+      "normalized_value": "ACM The Web Conference Companion 2023 (WWW)",
+      "evidence": "ACM The Web Conference Companion 2023  (WWW)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Identifies the venue where the paper was published."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://doi.org/10.1145/3543873.3587654",
+      "normalized_value": "https://doi.org/10.1145/3543873.3587654",
+      "evidence": "[Link to the paper](https://doi.org/10.1145/3543873.3587654)",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Direct link to the published paper."
+    },
+    {
+      "field": "arxiv_url",
+      "value": "https://arxiv.org/abs/2303.08964",
+      "normalized_value": "https://arxiv.org/abs/2303.08964",
+      "evidence": "[Arxiv](https://arxiv.org/abs/2303.08964)",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Link to the preprint version on arXiv."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "python3 train.py",
+      "evidence_location": "line 106 under section Training the Models & Execution",
+      "confidence": "high",
+      "reason": "The training command uses python3, indicating that the implementation language is Python."
+    },
+    {
+      "field": "package_requirements",
+      "value": "torch==1.13.0\ntorch-geometric==2.2.0\ntorch-scatter==2.1.0\ntorch-sparse==0.6.15\ntorch-spline-conv==1.2.1\ntorchmetrics==0.11.0",
+      "normalized_value": "torch==1.13.0\ntorch-geometric==2.2.0\ntorch-scatter==2.1.0\ntorch-sparse==0.6.15\ntorch-spline-conv==1.2.1\ntorchmetrics==0.11.0",
+      "evidence": "```\ntorch==1.13.0\ntorch-geometric==2.2.0\ntorch-scatter==2.1.0\ntorch-sparse==0.6.15\ntorch-spline-conv==1.2.1\ntorchmetrics==0.11.0\n```",
+      "evidence_location": "lines 24-31 under section Dependecies & Hardware",
+      "confidence": "high",
+      "reason": "Lists exact package versions needed to set up the environment."
+    },
+    {
+      "field": "hardware_requirement",
+      "value": "A single GPU should be enough to train models. For large datasets we capped at most 5GBs of GPU memory.",
+      "normalized_value": "A single GPU should be enough to train models. For large datasets we capped at most 5GBs of GPU memory.",
+      "evidence": "A single GPU should be enough to train models. For large datasets we capped at most 5GBs of GPU memory.",
+      "evidence_location": "line 33",
+      "confidence": "high",
+      "reason": "Specifies the GPU requirement and memory limit for training."
+    },
+    {
+      "field": "training_command_template",
+      "value": "python3 train.py <DATASET_NAME> <MAX_VERTICES> <START_SNAPSHOT_ID> <END_SNAPSHOT_ID> <THRESHOLD> <HIDDEN_DIM_SIZE> <EPOCHS> <LEARNING_RATE> <REGULARIZATION>",
+      "normalized_value": "python3 train.py <DATASET_NAME> <MAX_VERTICES> <START_SNAPSHOT_ID> <END_SNAPSHOT_ID> <THRESHOLD> <HIDDEN_DIM_SIZE> <EPOCHS> <LEARNING_RATE> <REGULARIZATION>",
+      "evidence": "```\npython3 train.py <DATASET_NAME> <MAX_VERTICES> <START_SNAPSHOT_ID> <END_SNAPSHOT_ID> <THRESHOLD> <HIDDEN_DIM_SIZE> <EPOCHS> <LEARNING_RATE> <REGULARIZATION>\n```",
+      "evidence_location": "lines 105-107 under section Training the Models & Execution",
+      "confidence": "high",
+      "reason": "Exact command template for training the model, needed for reproduction."
+    },
+    {
+      "field": "example_command",
+      "value": "python3 train.py football 200 1 4 0.4 64 100 0.001 0.00001",
+      "normalized_value": "python3 train.py football 200 1 4 0.4 64 100 0.001 0.00001",
+      "evidence": "```\npython3 train.py football 200 1 4 0.4 64 100 0.001 0.00001\n```",
+      "evidence_location": "lines 110-112 under section Training the Models & Execution",
+      "confidence": "high",
+      "reason": "Concrete example of how to run the training script with a specific dataset and parameters."
+    },
+    {
+      "field": "dataset_structure",
+      "value": "data/\n    dataset_name/\n        graph_{snapshot_id}.txt\n        graph_{snapshot_id}.txt\n        queries_{snapshot_id}.txt\n        queries_{snapshot_id}.txt",
+      "normalized_value": "data/\n    dataset_name/\n        graph_{snapshot_id}.txt\n        graph_{snapshot_id}.txt\n        queries_{snapshot_id}.txt\n        queries_{snapshot_id}.txt",
+      "evidence": "```\ndata/\n    dataset_name/\n        graph_{snapshot_id}.txt\n        graph_{snapshot_id}.txt\n        queries_{snapshot_id}.txt\n        queries_{snapshot_id}.txt\n```",
+      "evidence_location": "lines 56-63 under section File Structure",
+      "confidence": "high",
+      "reason": "Defines the required directory and file layout for datasets."
+    },
+    {
+      "field": "graph_file_format",
+      "value": "node_id1 node_id2\n..\n..",
+      "normalized_value": "node_id1 node_id2\n..\n..",
+      "evidence": "```\nnode_id1 node_id2\n..\n..\n```",
+      "evidence_location": "lines 85-89 under section Graph file and QueryFiles",
+      "confidence": "high",
+      "reason": "Specifies the format of graph edge files."
+    },
+    {
+      "field": "query_file_format",
+      "value": "q1_node1,q1_node2,...\nanswer1_node1,answer1_node2,...\nq2_node1,q2_node2,...\nanswer2_node1,answer2_node2",
+      "normalized_value": "q1_node1,q1_node2,...\nanswer1_node1,answer1_node2,...\nq2_node1,q2_node2,...\nanswer2_node1,answer2_node2",
+      "evidence": "```\nq1_node1,q1_node2,...\nanswer1_node1,answer1_node2,...\nq2_node1,q2_node2,...\nanswer2_node1,answer2_node2\n```",
+      "evidence_location": "lines 93-98 under section Graph file and QueryFiles",
+      "confidence": "high",
+      "reason": "Specifies the format of query and ground-truth community files."
+    },
+    {
+      "field": "bibtex_citation",
+      "value": "@inproceedings{CS-TGN,\nauthor = {Hashemi, Farnoosh and Behrouz, Ali and Rezaei Hajidehi, Milad},\ntitle = {CS-TGN: Community Search via Temporal Graph Neural Networks},\nyear = {2023},\npublisher = {Association for Computing Machinery},\naddress = {New York, NY, USA},\nurl = {https://doi.org/10.1145/3543873.3587654},\ndoi = {10.1145/3543873.3587654},\nbooktitle = {Companion Proceedings of the Web Conference 2023},\nnumpages = {8},\nlocation = {AUSTIN, TEXAS, USA},\nseries = {WWW '23}\n}",
+      "normalized_value": "@inproceedings{CS-TGN,\nauthor = {Hashemi, Farnoosh and Behrouz, Ali and Rezaei Hajidehi, Milad},\ntitle = {CS-TGN: Community Search via Temporal Graph Neural Networks},\nyear = {2023},\npublisher = {Association for Computing Machinery},\naddress = {New York, NY, USA},\nurl = {https://doi.org/10.1145/3543873.3587654},\ndoi = {10.1145/3543873.3587654},\nbooktitle = {Companion Proceedings of the Web Conference 2023},\nnumpages = {8},\nlocation = {AUSTIN, TEXAS, USA},\nseries = {WWW '23}\n}",
+      "evidence": "```\n@inproceedings{CS-TGN,\nauthor = {Hashemi, Farnoosh and Behrouz, Ali and Rezaei Hajidehi, Milad},\ntitle = {CS-TGN: Community Search via Temporal Graph Neural Networks},\nyear = {2023},\npublisher = {Association for Computing Machinery},\naddress = {New York, NY, USA},\nurl = {https://doi.org/10.1145/3543873.3587654},\ndoi = {10.1145/3543873.3587654},\nbooktitle = {Companion Proceedings of the Web Conference 2023},\nnumpages = {8},\nlocation = {AUSTIN, TEXAS, USA},\nseries = {WWW '23}\n}\n```",
+      "evidence_location": "lines 118-131 under section Reference",
+      "confidence": "high",
+      "reason": "Official BibTeX citation for the paper, required for proper attribution."
+    },
+    {
+      "field": "task",
+      "value": "Community Search",
+      "normalized_value": "Community Search",
+      "evidence": "Community Search",
+      "evidence_location": "line 14 in Abstract",
+      "confidence": "high",
+      "reason": "Names the problem addressed by the artifact, useful for search and categorization."
+    }
+  ]
+}

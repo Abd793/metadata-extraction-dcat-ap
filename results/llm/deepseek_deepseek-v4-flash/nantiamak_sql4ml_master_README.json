@@ -1,0 +1,328 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "sql4ml",
+      "normalized_value": "sql4ml",
+      "evidence": "# sql4ml",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "The heading explicitly names the project."
+    },
+    {
+      "field": "description",
+      "value": "Sql4ml is a Haskell project that takes as input SQL code which defines the objective/cost/loss function of a\nsupervised machine learning model (ML), as well as a set of parameters, and generates TensorFlow (Python API) code\nthat trains this model.",
+      "normalized_value": "Sql4ml is a Haskell project that takes as input SQL code which defines the objective/cost/loss function of a supervised machine learning model (ML), as well as a set of parameters, and generates TensorFlow (Python API) code that trains this model",
+      "evidence": "Sql4ml is a Haskell project that takes as input SQL code which defines the objective/cost/loss function of a\nsupervised machine learning model (ML), as well as a set of parameters, and generates TensorFlow (Python API) code\nthat trains this model.",
+      "evidence_location": "3-5",
+      "confidence": "high",
+      "reason": "Provides a concise description of the project's purpose."
+    },
+    {
+      "field": "programming_language",
+      "value": "Haskell",
+      "normalized_value": "Haskell",
+      "evidence": "Sql4ml is a Haskell project",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "The project is written in Haskell."
+    },
+    {
+      "field": "generated_code_language",
+      "value": "TensorFlow (Python API)",
+      "normalized_value": "TensorFlow (Python API)",
+      "evidence": "generates TensorFlow (Python API) code",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "The output is TensorFlow Python code."
+    },
+    {
+      "field": "paper_title",
+      "value": "sql4ml: a declarative end-to-end workflow for machine learning.",
+      "normalized_value": "sql4ml: a declarative end-to-end workflow for machine learning",
+      "evidence": "sql4ml: a declarative end-to-end workflow for machine learning.",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "The paper title is explicitly referenced."
+    },
+    {
+      "field": "paper_authors",
+      "value": "Nantia Makrynioti, Ruy Ley-Wild and Vasilis Vassalos",
+      "normalized_value": "Nantia Makrynioti, Ruy Ley-Wild and Vasilis Vassalos",
+      "evidence": "Nantia Makrynioti, Ruy Ley-Wild and Vasilis Vassalos",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Authors are explicitly listed."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/1907.12415",
+      "normalized_value": "https://arxiv.org/abs/1907.12415",
+      "evidence": "https://arxiv.org/abs/1907.12415",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Direct link to the paper."
+    },
+    {
+      "field": "tested_operating_systems",
+      "value": "macOS High Sierra and Ubuntu 16.04.",
+      "normalized_value": "macOS High Sierra and Ubuntu 16.04",
+      "evidence": "The software has been tested on macOS High Sierra and Ubuntu 16.04.",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Specifies platforms the software has been tested on."
+    },
+    {
+      "field": "dependency",
+      "value": "Haskell Platform",
+      "normalized_value": "Haskell Platform",
+      "evidence": "To compile it you need to install the Haskell Platform (https://www.haskell.org/platform/).",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Required to compile the project."
+    },
+    {
+      "field": "dependency",
+      "value": "queryparser",
+      "normalized_value": "queryparser",
+      "evidence": "Sql4ml uses the open source project queryparser (https://github.com/uber/queryparser), also in Haskell.",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Dependent Haskell project needed to build sql4ml."
+    },
+    {
+      "field": "dependency",
+      "value": "MySQL",
+      "normalized_value": "MySQL",
+      "evidence": "Sql4ml uses the MySQL database (https://www.mysql.com/) for storing data. To run the generated TensorFlow code, you need to install MySQL.",
+      "evidence_location": "32-33",
+      "confidence": "high",
+      "reason": "Required database for storing data and running generated TensorFlow code."
+    },
+    {
+      "field": "build_command",
+      "value": "ghc -o main main.hs",
+      "normalized_value": "ghc -o main main.hs",
+      "evidence": "To compile main.hs, run in a terminal:\n\n    ghc -o main main.hs",
+      "evidence_location": "28-30",
+      "confidence": "high",
+      "reason": "Command to compile the main executable."
+    },
+    {
+      "field": "usage_command",
+      "value": "./main linear",
+      "normalized_value": "./main linear",
+      "evidence": "./main linear //To generate TensorFlow code for the Linear Regression model in working_examples/linear_regression.sql",
+      "evidence_location": "77",
+      "confidence": "high",
+      "reason": "Command to run linear regression example."
+    },
+    {
+      "field": "usage_command",
+      "value": "./main logistic",
+      "normalized_value": "./main logistic",
+      "evidence": "./main logistic //To generate TensorFlow code for the Logistic Regression model in working_examples/logistic_regression.sql",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Command to run logistic regression example."
+    },
+    {
+      "field": "function_name",
+      "value": "endToEndTranslate",
+      "normalized_value": "endToEndTranslate",
+      "evidence": "endToEndTranslate",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "Main function for end-to-end SQL to TensorFlow translation."
+    },
+    {
+      "field": "end_to_end_translate_parameters",
+      "value": "* A list of SQL queries defining the objective function of a supervised ML model.\nYou can find two examples of SQL code defining Linear and Logistic Regression in directory working_examples.\n* A list of names of the tables storing the features of the model.\n* A list of columns in the aforementioned tables that store names of features.\n* A list of lists, each of which has the actual names of features stored in each table.\n* The name of the table storing the training observations.\n* The name of the table storing the labels/targets of training observations.\n* The name of the view computing the objective function of the ML model.\n* The username of a user to connect to the database where training data are stored.\n* The password of the same user.\n* The name of the database storing training data.\n* A list of names of the tables storing the weights of the model.\n* A map whose elements consist of the name of a weight table and its dimenions as a list.\n* The number of gradient descent iterations.\n* The learning rate used in gradient descent.",
+      "normalized_value": "A list of SQL queries defining the objective function of a supervised ML model. You can find two examples of SQL code defining Linear and Logistic Regression in directory working_examples. * A list of names of the tables storing the features of the model. * A list of columns in the aforementioned tables that store names of features. * A list of lists, each of which has the actual names of features stored in each table. * The name of the table storing the training observations. * The name of the table storing the labels/targets of training observations. * The name of the view computing the objective function of the ML model. * The username of a user to connect to the database where training data are stored. * The password of the same user. * The name of the database storing training data. * A list of names of the tables storing the weights of the model. * A map whose elements consist of the name of a weight table and its dimenions as a list. * The number of gradient descent iterations. * The learning rate used in gradient descent",
+      "evidence": "* A list of SQL queries defining the objective function of a supervised ML model.\nYou can find two examples of SQL code defining Linear and Logistic Regression in directory working_examples.\n* A list of names of the tables storing the features of the model.\n* A list of columns in the aforementioned tables that store names of features.\n* A list of lists, each of which has the actual names of features stored in each table.\n* The name of the table storing the training observations.\n* The name of the table storing the labels/targets of training observations.\n* The name of the view computing the objective function of the ML model.\n* The username of a user to connect to the database where training data are stored.\n* The password of the same user.\n* The name of the database storing training data.\n* A list of names of the tables storing the weights of the model.\n* A map whose elements consist of the name of a weight table and its dimenions as a list.\n* The number of gradient descent iterations.\n* The learning rate used in gradient descent.",
+      "evidence_location": "44-58",
+      "confidence": "high",
+      "reason": "Describes all input parameters required to call the end-to-end translation function."
+    },
+    {
+      "field": "function_name",
+      "value": "translateToTensorFlowCommand",
+      "normalized_value": "translateToTensorFlowCommand",
+      "evidence": "translateToTensorFlowCommand",
+      "evidence_location": "84",
+      "confidence": "high",
+      "reason": "Function to translate a single SQL create view query to TensorFlow."
+    },
+    {
+      "field": "function_signature",
+      "value": "    translateToTensorFlowCommand :: L.Text -> [String] -> [String] -> [[String]] -> String",
+      "normalized_value": "translateToTensorFlowCommand :: L.Text -> [String] -> [String] -> [[String]] -> String",
+      "evidence": "    translateToTensorFlowCommand :: L.Text -> [String] -> [String] -> [[String]] -> String",
+      "evidence_location": "88",
+      "confidence": "high",
+      "reason": "Type signature of the translation function for individual SQL queries."
+    },
+    {
+      "field": "translate_to_tensorflow_command_parameters",
+      "value": "* sql_statement: a SQL create view query in type Text\n* feature_tables: a list of names of the tables storing the features of the model.\n* variable_tables: a list of names of the tables storing the weights of the model.\n* feature_names: a list of lists, each of which has the actual names of features stored in each table.",
+      "normalized_value": "sql_statement: a SQL create view query in type Text * feature_tables: a list of names of the tables storing the features of the model. * variable_tables: a list of names of the tables storing the weights of the model. * feature_names: a list of lists, each of which has the actual names of features stored in each table",
+      "evidence": "* sql_statement: a SQL create view query in type Text\n* feature_tables: a list of names of the tables storing the features of the model.\n* variable_tables: a list of names of the tables storing the weights of the model.\n* feature_names: a list of lists, each of which has the actual names of features stored in each table.",
+      "evidence_location": "92-95",
+      "confidence": "high",
+      "reason": "Parameters for translateToTensorFlowCommand."
+    },
+    {
+      "field": "supported_input_sql_format",
+      "value": "    CREATE VIEW $(name) AS\n    SELECT $(columns), $(numericExpr)\n    FROM $(tables)\n    WHERE $(joinElement)\n    GROUP BY $(groupingElement)",
+      "normalized_value": "CREATE VIEW $(name) AS SELECT $(columns), $(numericExpr) FROM $(tables) WHERE $(joinElement) GROUP BY $(groupingElement)",
+      "evidence": "    CREATE VIEW $(name) AS\n    SELECT $(columns), $(numericExpr)\n    FROM $(tables)\n    WHERE $(joinElement)\n    GROUP BY $(groupingElement)",
+      "evidence_location": "62-66",
+      "confidence": "high",
+      "reason": "Form of SQL create view queries that can be translated."
+    },
+    {
+      "field": "output_expression_format",
+      "value": "    $(name) = $(translateNumericExpr(numericExpr))",
+      "normalized_value": "$(name) = $(translateNumericExpr(numericExpr))",
+      "evidence": "    $(name) = $(translateNumericExpr(numericExpr))",
+      "evidence_location": "70",
+      "confidence": "high",
+      "reason": "Pattern of generated TensorFlow expression from SQL query."
+    },
+    {
+      "field": "example_dataset",
+      "value": "Boston Housing dataset",
+      "normalized_value": "Boston Housing dataset",
+      "evidence": "Boston Housing dataset (https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html)",
+      "evidence_location": "37",
+      "confidence": "high",
+      "reason": "Example dataset used in toy database."
+    },
+    {
+      "field": "example_dataset",
+      "value": "Iris dataset",
+      "normalized_value": "Iris dataset",
+      "evidence": "Iris dataset (https://archive.ics.uci.edu/ml/datasets/iris)",
+      "evidence_location": "38",
+      "confidence": "high",
+      "reason": "Example dataset used in toy database."
+    },
+    {
+      "field": "example_model_type",
+      "value": "Linear Regression",
+      "normalized_value": "Linear Regression",
+      "evidence": "Linear Regression",
+      "evidence_location": "45",
+      "confidence": "high",
+      "reason": "One of the supervised learning models supported."
+    },
+    {
+      "field": "example_model_type",
+      "value": "Logistic Regression",
+      "normalized_value": "Logistic Regression",
+      "evidence": "Logistic Regression",
+      "evidence_location": "45",
+      "confidence": "high",
+      "reason": "One of the supervised learning models supported."
+    },
+    {
+      "field": "source_file",
+      "value": "sql4ml_translator.hs",
+      "normalized_value": "sql4ml_translator.hs",
+      "evidence": "The sql4ml module is in file sql4ml_translator.hs.",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Main source file containing the sql4ml module."
+    },
+    {
+      "field": "example_file",
+      "value": "main.hs",
+      "normalized_value": "main.hs",
+      "evidence": "File main.hs containts two examples on how to translate SQL to TensorFlow code end-to-end.",
+      "evidence_location": "26",
+      "confidence": "high",
+      "reason": "Example file demonstrating usage."
+    },
+    {
+      "field": "example_directory",
+      "value": "/working_examples",
+      "normalized_value": "/working_examples",
+      "evidence": "directory /working_examples",
+      "evidence_location": "72",
+      "confidence": "high",
+      "reason": "Contains SQL example files."
+    },
+    {
+      "field": "database_setup_directory",
+      "value": "/db_setups",
+      "normalized_value": "/db_setups",
+      "evidence": "the directory /db_setups",
+      "evidence_location": "36",
+      "confidence": "high",
+      "reason": "Contains SQL scripts to create toy databases."
+    },
+    {
+      "field": "dataset_directory",
+      "value": "/data",
+      "normalized_value": "/data",
+      "evidence": "the directory /data",
+      "evidence_location": "38",
+      "confidence": "high",
+      "reason": "Contains dataset files."
+    },
+    {
+      "field": "hyperparameter",
+      "value": "number of gradient descent iterations",
+      "normalized_value": "number of gradient descent iterations",
+      "evidence": "The number of gradient descent iterations.",
+      "evidence_location": "57",
+      "confidence": "high",
+      "reason": "Hyperparameter for gradient descent optimization."
+    },
+    {
+      "field": "hyperparameter",
+      "value": "learning rate",
+      "normalized_value": "learning rate",
+      "evidence": "The learning rate used in gradient descent.",
+      "evidence_location": "58",
+      "confidence": "high",
+      "reason": "Hyperparameter for gradient descent optimization."
+    },
+    {
+      "field": "project_status",
+      "value": "prototype",
+      "normalized_value": "prototype",
+      "evidence": "It is the prototype that is used in the paper",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Describes the project as a prototype."
+    },
+    {
+      "field": "generated_code_execution",
+      "value": "The files with the generated TensorFlow/Python code can be executed like any other TensorFlow program.",
+      "normalized_value": "The files with the generated TensorFlow/Python code can be executed like any other TensorFlow program",
+      "evidence": "The files with the generated TensorFlow/Python code can be executed like any other TensorFlow program.",
+      "evidence_location": "80",
+      "confidence": "high",
+      "reason": "Indicates how to run the generated code."
+    },
+    {
+      "field": "example_function_call",
+      "value": "    translateToTensorFlowCommand (L.pack \"CREATE VIEW squaredErrors AS SELECT POW(errors.errorValue, 2) AS squaredErrorValue, errors.observationID AS observationID FROM errors;\") [\"features\"] [\"weights\"] [[\"f1\", \"f2\"]]",
+      "normalized_value": "translateToTensorFlowCommand (L.pack \"CREATE VIEW squaredErrors AS SELECT POW(errors.errorValue, 2) AS squaredErrorValue, errors.observationID AS observationID FROM errors;\") [\"features\"] [\"weights\"] [[\"f1\", \"f2\"]]",
+      "evidence": "    translateToTensorFlowCommand (L.pack \"CREATE VIEW squaredErrors AS SELECT POW(errors.errorValue, 2) AS squaredErrorValue, errors.observationID AS observationID FROM errors;\") [\"features\"] [\"weights\"] [[\"f1\", \"f2\"]]",
+      "evidence_location": "84",
+      "confidence": "high",
+      "reason": "Example of calling translateToTensorFlowCommand with sample arguments."
+    },
+    {
+      "field": "loading_command",
+      "value": "load the module via ghci",
+      "normalized_value": "load the module via ghci",
+      "evidence": "You can load the module via ghci.",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "How to load the sql4ml module interactively."
+    }
+  ]
+}

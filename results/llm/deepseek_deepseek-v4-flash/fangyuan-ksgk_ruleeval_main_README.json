@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "RuleAlign Dataset",
+      "normalized_value": "RuleAlign Dataset",
+      "evidence": "<b>RuleAlign Dataset</b>",
+      "evidence_location": "line 3 (in header section)",
+      "confidence": "high",
+      "reason": "Clearly identifies the dataset name in the title."
+    },
+    {
+      "field": "alternative_name",
+      "value": "RuleEval Dataset",
+      "normalized_value": "RuleEval Dataset",
+      "evidence": "## :books: RuleEval Dataset",
+      "evidence_location": "line 22 (section header)",
+      "confidence": "high",
+      "reason": "The document uses this name in later sections, possibly as an alternative or derived name."
+    },
+    {
+      "field": "description",
+      "value": "RuleAlign is a dataset designed to evaluate rule-based alignment of language models. It accompanies the paper \"Iterative Graph Reasoning\" and contains:\n\n- 5 distinct rule-based scenarios\n- 200 training queries per scenario (low-data learning scenario)\n- 100 test queries per scenario\n- Weak annotations provided for each query",
+      "normalized_value": "RuleAlign is a dataset designed to evaluate rule-based alignment of language models. It accompanies the paper \"Iterative Graph Reasoning\" and contains: - 5 distinct rule-based scenarios - 200 training queries per scenario (low-data learning scenario) - 100 test queries per scenario - Weak annotations provided for each query",
+      "evidence": "RuleAlign is a dataset designed to evaluate rule-based alignment of language models. It accompanies the paper \"Iterative Graph Reasoning\" and contains:\n\n- 5 distinct rule-based scenarios\n- 200 training queries per scenario (low-data learning scenario)\n- 100 test queries per scenario\n- Weak annotations provided for each query",
+      "evidence_location": "lines 24-29 (under ## :books: RuleEval Dataset)",
+      "confidence": "high",
+      "reason": "Provides the purpose and composition of the dataset."
+    },
+    {
+      "field": "task",
+      "value": "rule-based alignment",
+      "normalized_value": "rule-based alignment",
+      "evidence": "RuleAlign is a dataset designed to evaluate rule-based alignment of language models.",
+      "evidence_location": "line 24 (part of description)",
+      "confidence": "high",
+      "reason": "Concrete task that the dataset evaluates."
+    },
+    {
+      "field": "num_scenarios",
+      "value": "5",
+      "normalized_value": "5",
+      "evidence": "- 5 distinct rule-based scenarios",
+      "evidence_location": "line 26",
+      "confidence": "high",
+      "reason": "Concrete count of scenarios in the dataset."
+    },
+    {
+      "field": "training_queries_per_scenario",
+      "value": "200",
+      "normalized_value": "200",
+      "evidence": "- 200 training queries per scenario (low-data learning scenario)",
+      "evidence_location": "line 27",
+      "confidence": "high",
+      "reason": "Number of training queries per scenario."
+    },
+    {
+      "field": "test_queries_per_scenario",
+      "value": "100",
+      "normalized_value": "100",
+      "evidence": "- 100 test queries per scenario",
+      "evidence_location": "line 28",
+      "confidence": "high",
+      "reason": "Number of test queries per scenario."
+    },
+    {
+      "field": "weak_annotations",
+      "value": "Weak annotations provided for each query",
+      "normalized_value": "Weak annotations provided for each query",
+      "evidence": "- Weak annotations provided for each query",
+      "evidence_location": "line 29",
+      "confidence": "high",
+      "reason": "States that weak annotations are supplied for each query."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2408.16667",
+      "normalized_value": "https://arxiv.org/abs/2408.16667",
+      "evidence": "    <a href=\"https://arxiv.org/abs/2408.16667\" target=\"_blank\">",
+      "evidence_location": "line 15 (in header section)",
+      "confidence": "high",
+      "reason": "Explicit link to the associated paper on arXiv."
+    },
+    {
+      "field": "eprint_id",
+      "value": "2408.03615",
+      "normalized_value": "2408.03615",
+      "evidence": "      eprint={2408.03615},",
+      "evidence_location": "line 53 (in citation block)",
+      "confidence": "high",
+      "reason": "Identifier of the paper on arXiv, as provided in the citation."
+    },
+    {
+      "field": "paper_title",
+      "value": "Iterative Graph Reasoning",
+      "normalized_value": "Iterative Graph Reasoning",
+      "evidence": "      title={Iterative Graph Reasoning},",
+      "evidence_location": "line 52 (in citation block)",
+      "confidence": "high",
+      "reason": "Title of the paper associated with the dataset."
+    },
+    {
+      "field": "primary_class",
+      "value": "cs.AI",
+      "normalized_value": "cs.AI",
+      "evidence": "      primaryClass={cs.AI}",
+      "evidence_location": "line 55",
+      "confidence": "high",
+      "reason": "arXiv primary classification of the paper."
+    },
+    {
+      "field": "archive_prefix",
+      "value": "arXiv",
+      "normalized_value": "arXiv",
+      "evidence": "      archivePrefix={arXiv},",
+      "evidence_location": "line 54 (in citation block)",
+      "confidence": "high",
+      "reason": "Archive prefix for the paper, indicating it is an arXiv preprint."
+    },
+    {
+      "field": "author",
+      "value": "Fangyuan Yu",
+      "normalized_value": "Fangyuan Yu",
+      "evidence": "Fangyuan&#160;Yu</a>",
+      "evidence_location": "line 6 (in author line)",
+      "confidence": "high",
+      "reason": "Identifies the author of the dataset/paper."
+    },
+    {
+      "field": "affiliation",
+      "value": "Temus",
+      "normalized_value": "Temus",
+      "evidence": "<sup>1</sup>Temus&#160&#160&#160</span>",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Affiliation of the author."
+    },
+    {
+      "field": "affiliation",
+      "value": "Stanford University",
+      "normalized_value": "Stanford University",
+      "evidence": "<sup>2</sup>Stanford University</span>",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Affiliation of the author."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python -m script.eval --model_name xxx",
+      "normalized_value": "python -m script.eval --model_name xxx",
+      "evidence": "```shell\npython -m script.eval --model_name xxx\n```",
+      "evidence_location": "lines 39-41 (code block under ## :gear: Evaluation)",
+      "confidence": "high",
+      "reason": "Provides the command to run evaluation on the dataset."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@misc{yu2024iterativegraphreasoning,\n      title={Iterative Graph Reasoning},\n      author={Fangyuan Yu},\n      year={2024},\n      eprint={2408.03615},\n      archivePrefix={arXiv},\n      primaryClass={cs.AI}\n}",
+      "normalized_value": "@misc{yu2024iterativegraphreasoning, title={Iterative Graph Reasoning}, author={Fangyuan Yu}, year={2024}, eprint={2408.03615}, archivePrefix={arXiv}, primaryClass={cs.AI}}",
+      "evidence": "```\n@misc{yu2024iterativegraphreasoning,\n      title={Iterative Graph Reasoning},\n      author={Fangyuan Yu},\n      year={2024},\n      eprint={2408.03615},\n      archivePrefix={arXiv},\n      primaryClass={cs.AI}\n}\n```",
+      "evidence_location": "lines 48-57 (citation block under ## :hugs: Citation)",
+      "confidence": "high",
+      "reason": "Full bibtex entry for citing the associated paper."
+    },
+    {
+      "field": "code_release_status",
+      "value": "Code will be released soon",
+      "normalized_value": "Code will be released soon",
+      "evidence": "<b>:fire: Code will be released soon</b>",
+      "evidence_location": "line 19 (in header section)",
+      "confidence": "high",
+      "reason": "Indicates that the source code is not yet public but planned."
+    },
+    {
+      "field": "paper_release_date",
+      "value": "08/2024",
+      "normalized_value": "08/2024",
+      "evidence": "- [08/2024] [Arxiv paper](https://arxiv.org/abs/2408.16667) released.",
+      "evidence_location": "line 32 (under ## :new: Updates)",
+      "confidence": "high",
+      "reason": "Date of the paper release on arXiv."
+    },
+    {
+      "field": "dataset_announcement_date",
+      "value": "08/2024",
+      "normalized_value": "08/2024",
+      "evidence": "- [08/2024] RuleAlign dataset announced.",
+      "evidence_location": "line 33 (under ## :new: Updates)",
+      "confidence": "high",
+      "reason": "Date when the dataset was announced."
+    }
+  ]
+}

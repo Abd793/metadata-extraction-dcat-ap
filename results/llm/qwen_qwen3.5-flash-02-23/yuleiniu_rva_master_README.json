@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Recursive Visual Attention in Visual Dialog",
+      "normalized_value": "Recursive Visual Attention in Visual Dialog",
+      "evidence": "Recursive Visual Attention in Visual Dialog",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly stated as the title of the repository and paper."
+    },
+    {
+      "field": "authors",
+      "value": "Yulei Niu, Hanwang Zhang, Manli Zhang, Jianhong Zhang, Zhiwu Lu, Ji-Rong Wen",
+      "normalized_value": "Yulei Niu, Hanwang Zhang, Manli Zhang, Jianhong Zhang, Zhiwu Lu, Ji-Rong Wen",
+      "evidence": "* Yulei Niu, Hanwang Zhang, Manli Zhang, Jianhong Zhang, Zhiwu Lu, Ji-Rong Wen, *Recursive Visual Attention in Visual Dialog*. In CVPR, 2019. ([PDF](https://arxiv.org/pdf/1812.02664.pdf))",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "List of authors explicitly provided in the paper citation line."
+    },
+    {
+      "field": "venue",
+      "value": "CVPR, 2019",
+      "normalized_value": "CVPR, 2019",
+      "evidence": "* Yulei Niu, Hanwang Zhang, Manli Zhang, Jianhong Zhang, Zhiwu Lu, Ji-Rong Wen, *Recursive Visual Attention in Visual Dialog*. In CVPR, 2019. ([PDF](https://arxiv.org/pdf/1812.02664.pdf))",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Conference and year explicitly stated in the paper citation line."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://www.github.com/yuleiniu/rva",
+      "normalized_value": "https://www.github.com/yuleiniu/rva",
+      "evidence": "git clone https://www.github.com/yuleiniu/rva",
+      "evidence_location": "33",
+      "confidence": "high",
+      "reason": "Repository URL explicitly provided in the clone command."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/1812.02664.pdf",
+      "normalized_value": "https://arxiv.org/pdf/1812.02664.pdf",
+      "evidence": "([PDF](https://arxiv.org/pdf/1812.02664.pdf))",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "PDF link explicitly provided in the paper citation line."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@InProceedings{niu2019recursive,\n    author = {Niu, Yulei and Zhang, Hanwang and Zhang, Manli and Zhang, Jianhong and Lu, Zhiwu and Wen, Ji-Rong},\n    title = {Recursive Visual Attention in Visual Dialog},\n    booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n    month = {June},\n    year = {2019}\n}",
+      "normalized_value": "@InProceedings{niu2019recursive,\n    author = {Niu, Yulei and Zhang, Hanwang and Zhang, Manli and Zhang, Jianhong and Lu, Zhiwu and Wen, Ji-Rong},\n    title = {Recursive Visual Attention in Visual Dialog},\n    booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n    month = {June},\n    year = {2019}\n}",
+      "evidence": "```\n@InProceedings{niu2019recursive,\n    author = {Niu, Yulei and Zhang, Hanwang and Zhang, Manli and Zhang, Jianhong and Lu, Zhiwu and Wen, Ji-Rong},\n    title = {Recursive Visual Attention in Visual Dialog},\n    booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n    month = {June},\n    year = {2019}\n}\n\n```",
+      "evidence_location": "8-17",
+      "confidence": "high",
+      "reason": "BibTeX citation block explicitly provided for the paper."
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch v1.0",
+      "normalized_value": "PyTorch v1.0",
+      "evidence": "This code is implemented using PyTorch v1.0, and provides out of the box support with CUDA 9 and CuDNN 7.",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Framework explicitly stated in the Setup and Dependencies section."
+    },
+    {
+      "field": "training_command",
+      "value": "python train.py --config-yml configs/rva.yml --gpu-ids 0 # provide more ids for multi-GPU execution other args...",
+      "normalized_value": "python train.py --config-yml configs/rva.yml --gpu-ids 0 # provide more ids for multi-GPU execution other args...",
+      "evidence": " python train.py --config-yml configs/rva.yml --gpu-ids 0 # provide more ids for multi-GPU execution other args...",
+      "evidence_location": "100",
+      "confidence": "high",
+      "reason": "Training command explicitly provided in the Training section."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python evaluate.py --config-yml /path/to/config.yml --load-pthpath /path/to/checkpoint.pth --split val --gpu-ids 0",
+      "normalized_value": "python evaluate.py --config-yml /path/to/config.yml --load-pthpath /path/to/checkpoint.pth --split val --gpu-ids 0",
+      "evidence": " python evaluate.py --config-yml /path/to/config.yml --load-pthpath /path/to/checkpoint.pth --split val --gpu-ids 0",
+      "evidence_location": "118",
+      "confidence": "high",
+      "reason": "Evaluation command explicitly provided in the Evaluation section."
+    },
+    {
+      "field": "metrics",
+      "value": "Mean reciprocal rank, R@{1, 5, 10}, Mean rank, Normalized Discounted Cumulative Gain (NDCG)",
+      "normalized_value": "Mean reciprocal rank, R@{1, 5, 10}, Mean rank, Normalized Discounted Cumulative Gain (NDCG)",
+      "evidence": "(Mean reciprocal rank, R@{1, 5, 10}, Mean rank), and Normalized Discounted Cumulative Gain (NDCG)",
+      "evidence_location": "121",
+      "confidence": "high",
+      "reason": "Metrics explicitly listed in the Evaluation section."
+    },
+    {
+      "field": "base_repository",
+      "value": "batra-mlp-lab/visdial-challenge-starter-pytorch",
+      "normalized_value": "batra-mlp-lab/visdial-challenge-starter-pytorch",
+      "evidence": "This code is reimplemented as a fork of [batra-mlp-lab/visdial-challenge-starter-pytorch][6].",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Base repository explicitly mentioned as the fork source."
+    },
+    {
+      "field": "data_name",
+      "value": "VisDial v1.0",
+      "normalized_value": "VisDial v1.0",
+      "evidence": "1. Download the VisDial v1.0 dialog json files from [here][3] and keep it under `$PROJECT_ROOT/data` directory, for default arguments to work effectively.",
+      "evidence_location": "49",
+      "confidence": "high",
+      "reason": "Dataset name explicitly mentioned in the Download Data section."
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "title",
+      "value": "XPert: Peripheral Circuit & Neural Architecture Co-search for Area and Energy-efficient Xbar-based Computing (Design & Automation Conference, 2023)",
+      "normalized_value": "XPert: Peripheral Circuit & Neural Architecture Co-search for Area and Energy-efficient Xbar-based Computing (Design & Automation Conference, 2023)",
+      "evidence": "# XPert: Peripheral Circuit & Neural Architecture Co-search for Area and Energy-efficient Xbar-based Computing (Design & Automation Conference, 2023)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Artifact identity and project title."
+    },
+    {
+      "field": "conference",
+      "value": "Design & Automation Conference, 2023",
+      "normalized_value": "Design & Automation Conference, 2023",
+      "evidence": "(Design & Automation Conference, 2023)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit publication venue."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2303.17646",
+      "normalized_value": "https://arxiv.org/abs/2303.17646",
+      "evidence": "The paper is available at https://arxiv.org/abs/2303.17646",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Direct link to the published paper."
+    },
+    {
+      "field": "description",
+      "value": "XPert co-searches network architecture in tandem with peripheral parameters such as the type and precision of analog-to-digital converters, crossbar column sharing and the layer-specific input precision using an optimization-based design space exploration.",
+      "normalized_value": "XPert co-searches network architecture in tandem with peripheral parameters such as the type and precision of analog-to-digital converters, crossbar column sharing and the layer-specific input precision using an optimization-based design space exploration.",
+      "evidence": "To this end, we propose XPert, which co-searches network architecture in tandem with peripheral parameters such as the type and precision of analog-to-digital converters, crossbar column sharing and the layer-specific input precision using an optimization-based design space exploration.",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Core purpose and methodology of the artifact."
+    },
+    {
+      "field": "results",
+      "value": "Compared to VGG16 baselines, XPert achieves 10.24x (4.7x) lower EDAP, 1.72x (1.62x) higher TOPS/W,1.93x (3x) higher TOPS/mm2 at 92.46% (56.7%) accuracy for CIFAR10 (TinyImagenet) datasets.",
+      "normalized_value": "Compared to VGG16 baselines, XPert achieves 10.24x (4.7x) lower EDAP, 1.72x (1.62x) higher TOPS/W,1.93x (3x) higher TOPS/mm2 at 92.46% (56.7%) accuracy for CIFAR10 (TinyImagenet) datasets.",
+      "evidence": "Compared to VGG16 baselines, XPert achieves 10.24x (4.7x) lower EDAP, 1.72x (1.62x) higher TOPS/W,1.93x (3x) higher TOPS/mm2 at 92.46% (56.7%) accuracy for CIFAR10 (TinyImagenet) datasets.",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Summary of quantitative results, essential for evaluation."
+    },
+    {
+      "field": "baseline",
+      "value": "VGG16",
+      "normalized_value": "VGG16",
+      "evidence": "Compared to VGG16 baselines, XPert achieves",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Identifies the DNN architecture used as a starting point and comparison baseline."
+    },
+    {
+      "field": "dataset",
+      "value": "CIFAR10",
+      "normalized_value": "CIFAR10",
+      "evidence": "CIFAR10 (TinyImagenet) datasets",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Evaluation dataset used for benchmarking."
+    },
+    {
+      "field": "dataset",
+      "value": "TinyImagenet",
+      "normalized_value": "TinyImagenet",
+      "evidence": "CIFAR10 (TinyImagenet) datasets",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Evaluation dataset used for benchmarking."
+    },
+    {
+      "field": "search_command",
+      "value": "```\npython Phase1_VGG16_backbone.py with the variables described below.\n```",
+      "normalized_value": "python Phase1_VGG16_backbone.py with the variables described below.",
+      "evidence": "```\npython Phase1_VGG16_backbone.py with the variables described below.\n```",
+      "evidence_location": "8-10",
+      "confidence": "high",
+      "reason": "Explicit command to run the co-search phase."
+    },
+    {
+      "field": "search_hyperparameters",
+      "value": "```\n--lr: Learning Rate\n--hw_params: Tuple of #PEs per Tile, #Crossbars per PE, #Tiles, Crossbar Size\n--target_latency: Target Latency\n--target_area: Target Area Constraint (mm^2)\n--epochs: Total Number of Search Epochs\n--wt_prec: Weight Precision\n--cellbit: Number of bits per NVM device\n--area_tolerance: The uncerainity in the on-chip area tolerated in the searched model.\n```",
+      "normalized_value": "--lr: Learning Rate --hw_params: Tuple of #PEs per Tile, #Crossbars per PE, #Tiles, Crossbar Size --target_latency: Target Latency --target_area: Target Area Constraint (mm^2) --epochs: Total Number of Search Epochs --wt_prec: Weight Precision --cellbit: Number of bits per NVM device --area_tolerance: The uncerainity in the on-chip area tolerated in the searched model.",
+      "evidence": "```\n--lr: Learning Rate\n--hw_params: Tuple of #PEs per Tile, #Crossbars per PE, #Tiles, Crossbar Size\n--target_latency: Target Latency\n--target_area: Target Area Constraint (mm^2)\n--epochs: Total Number of Search Epochs\n--wt_prec: Weight Precision\n--cellbit: Number of bits per NVM device\n--area_tolerance: The uncerainity in the on-chip area tolerated in the searched model.\n```",
+      "evidence_location": "13-22",
+      "confidence": "high",
+      "reason": "Comprehensive list of search parameters required for reproducing the co-search procedure."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python inference.py --model custom",
+      "normalized_value": "python inference.py --model custom",
+      "evidence": "Run the inference.py using \"python inference.py --model custom\"",
+      "evidence_location": "43",
+      "confidence": "high",
+      "reason": "Explicit command to evaluate a model."
+    },
+    {
+      "field": "evaluation_file_format",
+      "value": "feature size, feature size, input channels, kernel size, kernel size, output channels, max-pool flag, padding, column sharing, ADC type (1: Flash ADC, 0: SAR ADC), Input Precision, ADC Precision.",
+      "normalized_value": "feature size, feature size, input channels, kernel size, kernel size, output channels, max-pool flag, padding, column sharing, ADC type (1: Flash ADC, 0: SAR ADC), Input Precision, ADC Precision.",
+      "evidence": "Each row has the following format:\n\nfeature size, feature size, input channels, kernel size, kernel size, output channels, max-pool flag, padding, column sharing, ADC type (1: Flash ADC, 0: SAR ADC), Input Precision, ADC Precision.",
+      "evidence_location": "27-29",
+      "confidence": "high",
+      "reason": "Specification for creating the network evaluation file required by XPertSim."
+    },
+    {
+      "field": "model_configuration_format",
+      "value": "(Layer Type: ('C': Convolutional layer, 'L': Linear Layer), input channels, output channels, kernel size, output size ('same': if output feature size is same as input feature size), scaling factor.",
+      "normalized_value": "(Layer Type: ('C': Convolutional layer, 'L': Linear Layer), input channels, output channels, kernel size, output size ('same': if output feature size is same as input feature size), scaling factor.",
+      "evidence": "The model can be defined inside the cfg_list by using the following format:\n\n(Layer Type: ('C': Convolutional layer, 'L': Linear Layer), input channels, output channels, kernel size, output size ('same': if output feature size is same as input feature size), scaling factor.",
+      "evidence_location": "35-37",
+      "confidence": "high",
+      "reason": "Format for defining model layer configurations in the VGG.py file."
+    },
+    {
+      "field": "model_architecture",
+      "value": "VGG8",
+      "normalized_value": "VGG8",
+      "evidence": "Add the desired model configurations to the cfg_list and make sure to add the cfg variable in the \"def VGG8()\" function.",
+      "evidence_location": "33",
+      "confidence": "high",
+      "reason": "Specific model architecture provided in the code repository."
+    },
+    {
+      "field": "adapted_from",
+      "value": "Neurosim platform https://github.com/neurosim/DNN_NeuroSim_V1.3",
+      "normalized_value": "Neurosim platform https://github.com/neurosim/DNN_NeuroSim_V1.3",
+      "evidence": "This repository is adapted from the Neurosim platform https://github.com/neurosim/DNN_NeuroSim_V1.3.",
+      "evidence_location": "47",
+      "confidence": "high",
+      "reason": "Acknowledged source codebase from which this repository is derived."
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_type",
+      "value": "dataset",
+      "normalized_value": "dataset",
+      "evidence": "This directory contains two datasets",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Establishes that this is a dataset artifact."
+    },
+    {
+      "field": "name",
+      "value": "UI understanding datasets for UIBert",
+      "normalized_value": "UI understanding datasets for UIBert",
+      "evidence": "# UI understanding datasets for UIBert",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "The title provides a clear name for the overall artifact."
+    },
+    {
+      "field": "description",
+      "value": "This directory contains two datasets that are used in the downstream tasks for evaluating [UIBert: Learning Generic Multimodal Representations for UI Understanding](https://arxiv.org/abs/2107.13731): app similar UI component retrieval data (AppSim) and referring expression component retrieval data (RefExp).",
+      "normalized_value": "This directory contains two datasets that are used in the downstream tasks for evaluating [UIBert: Learning Generic Multimodal Representations for UI Understanding](https://arxiv.org/abs/2107.13731): app similar UI component retrieval data (AppSim) and referring expression component retrieval data (RefExp).",
+      "evidence": "This directory contains two datasets that are used in the downstream tasks for\nevaluating\n[UIBert: Learning Generic Multimodal Representations for UI Understanding](https://arxiv.org/abs/2107.13731):\napp similar UI component retrieval data (AppSim) and referring expression\ncomponent retrieval data (RefExp).",
+      "evidence_location": "lines 3-7",
+      "confidence": "high",
+      "reason": "High-level description of the artifact purpose and included datasets."
+    },
+    {
+      "field": "dataset",
+      "value": "AppSim",
+      "normalized_value": "AppSim",
+      "evidence": "AppSim",
+      "evidence_location": "line 12",
+      "confidence": "high",
+      "reason": "Names one of the two datasets included."
+    },
+    {
+      "field": "dataset",
+      "value": "RefExp",
+      "normalized_value": "RefExp",
+      "evidence": "RefExp",
+      "evidence_location": "line 46",
+      "confidence": "high",
+      "reason": "Names one of the two datasets included."
+    },
+    {
+      "field": "task",
+      "value": "app similar UI component retrieval",
+      "normalized_value": "app similar UI component retrieval",
+      "evidence": "app similar UI component retrieval",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Identifies the retrieval task for AppSim dataset."
+    },
+    {
+      "field": "task",
+      "value": "referring expression component retrieval",
+      "normalized_value": "referring expression component retrieval",
+      "evidence": "referring expression\ncomponent retrieval",
+      "evidence_location": "lines 6-7",
+      "confidence": "high",
+      "reason": "Identifies the retrieval task for RefExp dataset."
+    },
+    {
+      "field": "paper_title",
+      "value": "UIBert: Learning Generic Multimodal Representations for UI Understanding",
+      "normalized_value": "UIBert: Learning Generic Multimodal Representations for UI Understanding",
+      "evidence": "UIBert: Learning Generic Multimodal Representations for UI Understanding",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Provides the title of the associated research paper."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2107.13731",
+      "normalized_value": "https://arxiv.org/abs/2107.13731",
+      "evidence": "https://arxiv.org/abs/2107.13731",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Link to the paper describing the models that use these datasets."
+    },
+    {
+      "field": "base_dataset",
+      "value": "Both datasets are extended from the public Rico dataset, which contains 72k mobile app UI data.",
+      "normalized_value": "Both datasets are extended from the public Rico dataset, which contains 72k mobile app UI data.",
+      "evidence": "Both datasets are extended from the public Rico dataset, which contains 72k\nmobile app UI data.",
+      "evidence_location": "lines 9-10",
+      "confidence": "high",
+      "reason": "Identifies the source dataset and its size, crucial for origin attribution."
+    },
+    {
+      "field": "rico_url",
+      "value": "https://interactionmining.org/rico",
+      "normalized_value": "https://interactionmining.org/rico",
+      "evidence": "https://interactionmining.org/rico",
+      "evidence_location": "line 20",
+      "confidence": "high",
+      "reason": "URL to access the original Rico dataset."
+    },
+    {
+      "field": "data_format",
+      "value": "TFRecords",
+      "normalized_value": "TFRecords",
+      "evidence": "Both data are saved as TFRecords",
+      "evidence_location": "line 24",
+      "confidence": "high",
+      "reason": "Specifies the file format, important for data loading."
+    },
+    {
+      "field": "appsim_schema",
+      "value": "1.  AppSim: Each TFRecord contains unique image ids of an anchor UI and a search\n    UI. The anchor UI has one anchor UI element and the search UI has 10 UI\n    elements, one of which is semantically similar to the anchor UI element.\n    Detailed features are itemized as below.\n\n    -   `anchor/image/anchor/bbox/{xmax|xmin|ymax|ymin}`: float_list[1].\n        Bounding box of the anchor UIelement on the anchor UI.\n\n    -   `{anchor|search}/image/id`: bytes_list[1]. Image id of the anchor and\n        search UIs.\n\n    -   `search/image/candidate/bbox/{xmax|xmin|ymax|ymin}`: float_list[10]. 10\n        candidate UI elements on the search UI. One of them is semantically\n        similar to the anchor UI element of the anchor UI. Its index is saved in\n        `search/correct/index`.\n\n    -   `search/correct/index`: int64_list[1]. Index of the semantically simialr\n        UI element in the search UI candidates list.",
+      "normalized_value": "1. AppSim: Each TFRecord contains unique image ids of an anchor UI and a search UI. The anchor UI has one anchor UI element and the search UI has 10 UI elements, one of which is semantically similar to the anchor UI element. Detailed features are itemized as below. - `anchor/image/anchor/bbox/{xmax|xmin|ymax|ymin}`: float_list[1]. Bounding box of the anchor UIelement on the anchor UI. - `{anchor|search}/image/id`: bytes_list[1]. Image id of the anchor and search UIs. - `search/image/candidate/bbox/{xmax|xmin|ymax|ymin}`: float_list[10]. 10 candidate UI elements on the search UI. One of them is semantically similar to the anchor UI element of the anchor UI. Its index is saved in `search/correct/index`. - `search/correct/index`: int64_list[1]. Index of the semantically simialr UI element in the search UI candidates list.",
+      "evidence": "1.  AppSim: Each TFRecord contains unique image ids of an anchor UI and a search\n    UI. The anchor UI has one anchor UI element and the search UI has 10 UI\n    elements, one of which is semantically similar to the anchor UI element.\n    Detailed features are itemized as below.\n\n    -   `anchor/image/anchor/bbox/{xmax|xmin|ymax|ymin}`: float_list[1].\n        Bounding box of the anchor UIelement on the anchor UI.\n\n    -   `{anchor|search}/image/id`: bytes_list[1]. Image id of the anchor and\n        search UIs.\n\n    -   `search/image/candidate/bbox/{xmax|xmin|ymax|ymin}`: float_list[10]. 10\n        candidate UI elements on the search UI. One of them is semantically\n        similar to the anchor UI element of the anchor UI. Its index is saved in\n        `search/correct/index`.\n\n    -   `search/correct/index`: int64_list[1]. Index of the semantically simialr\n        UI element in the search UI candidates list.",
+      "evidence_location": "lines 27-44",
+      "confidence": "high",
+      "reason": "Provides the detailed TFRecord schema for the AppSim dataset, essential for data loading and interpretation."
+    },
+    {
+      "field": "refexp_schema",
+      "value": "2.  RefExp: Each TFRecord has the following features. Values under\n    `image/view_hierarchy` are information extracted from UI's view hierarchy\n    file.\n\n    -   `image/id`: bytes_list[1]. Image id.\n    -   `image/ref_exp/label`: int64_list[1]. Index of the UI element that is\n        referred to by the referring expression in the `image/object/bbox/…`\n        list.\n    -   `image/ref_exp/text`: bytes_list[1]. Referring expression.\n    -   `image/object/bbox/{xmax|xmin|ymax|ymin}`: float_list of variable\n        length. UI elements on the UI. The number of elements is denoted in\n        `image/object/num`.\n    -   `image/object/num`: float_list[1]. Number of UI elements.\n\n    -   `image/view_hierarchy/bbox/{xmax|xmin|ymax|ymin}`: float list of\n        variable length. Bounding boxes of leaf nodes in the view hierarchy.\n\n    -   `image/view_hierarchy/class/label`: int64_list. Label of the class name.\n\n    -   `image/view_hierarchy/class/name`: bytes_list. Processed class name\n        string in the view hierarchy.\n\n    -   `image/view_hierarchy/description` bytes_list. Content description\n        string in the view hierarchy.\n\n    -   `image/view_hierarchy/id/name`: bytes_list. Processed source id string\n        in the view hierarchy.\n\n    -   `image/view_hierarchy/text`: byte_list[1]. Text string in the view\n        hierarchy.",
+      "normalized_value": "2. RefExp: Each TFRecord has the following features. Values under `image/view_hierarchy` are information extracted from UI's view hierarchy file. - `image/id`: bytes_list[1]. Image id. - `image/ref_exp/label`: int64_list[1]. Index of the UI element that is referred to by the referring expression in the `image/object/bbox/…` list. - `image/ref_exp/text`: bytes_list[1]. Referring expression. - `image/object/bbox/{xmax|xmin|ymax|ymin}`: float_list of variable length. UI elements on the UI. The number of elements is denoted in `image/object/num`. - `image/object/num`: float_list[1]. Number of UI elements. - `image/view_hierarchy/bbox/{xmax|xmin|ymax|ymin}`: float list of variable length. Bounding boxes of leaf nodes in the view hierarchy. - `image/view_hierarchy/class/label`: int64_list. Label of the class name. - `image/view_hierarchy/class/name`: bytes_list. Processed class name string in the view hierarchy. - `image/view_hierarchy/description` bytes_list. Content description string in the view hierarchy. - `image/view_hierarchy/id/name`: bytes_list. Processed source id string in the view hierarchy. - `image/view_hierarchy/text`: byte_list[1]. Text string in the view hierarchy.",
+      "evidence": "2.  RefExp: Each TFRecord has the following features. Values under\n    `image/view_hierarchy` are information extracted from UI's view hierarchy\n    file.\n\n    -   `image/id`: bytes_list[1]. Image id.\n    -   `image/ref_exp/label`: int64_list[1]. Index of the UI element that is\n        referred to by the referring expression in the `image/object/bbox/…`\n        list.\n    -   `image/ref_exp/text`: bytes_list[1]. Referring expression.\n    -   `image/object/bbox/{xmax|xmin|ymax|ymin}`: float_list of variable\n        length. UI elements on the UI. The number of elements is denoted in\n        `image/object/num`.\n    -   `image/object/num`: float_list[1]. Number of UI elements.\n\n    -   `image/view_hierarchy/bbox/{xmax|xmin|ymax|ymin}`: float list of\n        variable length. Bounding boxes of leaf nodes in the view hierarchy.\n\n    -   `image/view_hierarchy/class/label`: int64_list. Label of the class name.\n\n    -   `image/view_hierarchy/class/name`: bytes_list. Processed class name\n        string in the view hierarchy.\n\n    -   `image/view_hierarchy/description` bytes_list. Content description\n        string in the view hierarchy.\n\n    -   `image/view_hierarchy/id/name`: bytes_list. Processed source id string\n        in the view hierarchy.\n\n    -   `image/view_hierarchy/text`: byte_list[1]. Text string in the view\n        hierarchy.",
+      "evidence_location": "lines 46-75",
+      "confidence": "high",
+      "reason": "Provides the detailed TFRecord schema for the RefExp dataset, essential for data loading and interpretation."
+    },
+    {
+      "field": "citation",
+      "value": "@misc{bai2021uibert,\n      title={UIBert: Learning Generic Multimodal Representations for UI Understanding},\n      author={Chongyang Bai and Xiaoxue Zang and Ying Xu and Srinivas Sunkara and Abhinav Rastogi and Jindong Chen and Blaise Aguera y Arcas},\n      year={2021},\n      eprint={2107.13731},\n      archivePrefix={arXiv},\n      primaryClass={cs.CV}\n}",
+      "normalized_value": "@misc{bai2021uibert, title={UIBert: Learning Generic Multimodal Representations for UI Understanding}, author={Chongyang Bai and Xiaoxue Zang and Ying Xu and Srinivas Sunkara and Abhinav Rastogi and Jindong Chen and Blaise Aguera y Arcas}, year={2021}, eprint={2107.13731}, archivePrefix={arXiv}, primaryClass={cs.CV}}",
+      "evidence": "```\n@misc{bai2021uibert,\n      title={UIBert: Learning Generic Multimodal Representations for UI Understanding},\n      author={Chongyang Bai and Xiaoxue Zang and Ying Xu and Srinivas Sunkara and Abhinav Rastogi and Jindong Chen and Blaise Aguera y Arcas},\n      year={2021},\n      eprint={2107.13731},\n      archivePrefix={arXiv},\n      primaryClass={cs.CV}\n}\n```",
+      "evidence_location": "lines 81-90",
+      "confidence": "high",
+      "reason": "Official citation for the paper, required for scholarly attribution."
+    },
+    {
+      "field": "license",
+      "value": "CC BY 4.0",
+      "normalized_value": "CC BY 4.0",
+      "evidence": "Datasets are licensed under\n[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).",
+      "evidence_location": "lines 94-95",
+      "confidence": "high",
+      "reason": "Specifies the legal license for using the datasets."
+    },
+    {
+      "field": "contact",
+      "value": "please create an issue in this repository.",
+      "normalized_value": "please create an issue in this repository.",
+      "evidence": "If you have a technical question regarding the dataset or publication, please\ncreate an issue in this repository.",
+      "evidence_location": "lines 99-100",
+      "confidence": "high",
+      "reason": "Provides the recommended channel for questions and support."
+    },
+    {
+      "field": "related_framework",
+      "value": "TensorFlow",
+      "normalized_value": "TensorFlow",
+      "evidence": "Both data are saved as TFRecords, which makes it easy to be loaded in\nTensorflow.",
+      "evidence_location": "lines 24-25",
+      "confidence": "low",
+      "reason": "Mentions TensorFlow for data loading, implying potential dependency; confidence low because not explicitly stated as required."
+    }
+  ]
+}

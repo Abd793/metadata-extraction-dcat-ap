@@ -1,0 +1,238 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "ALTA",
+      "normalized_value": "ALTA",
+      "evidence": "# ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the artifact by its acronym and expanded name."
+    },
+    {
+      "field": "description",
+      "value": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "normalized_value": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "evidence": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Concise one-sentence description of the project's purpose."
+    },
+    {
+      "field": "task",
+      "value": "Automatic Lyrics Transcription",
+      "normalized_value": "Automatic Lyrics Transcription",
+      "evidence": "Automatic Lyrics Transcription is the task of translating singing voice into text.",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Defines the core scientific task addressed by the artifact."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/emirdemirel/ALTA",
+      "normalized_value": "https://github.com/emirdemirel/ALTA",
+      "evidence": "https://github.com/emirdemirel/ALTA/blob/master/img/img-git1.png",
+      "evidence_location": "30",
+      "confidence": "high",
+      "reason": "Provides access to the source code repository, inferred from the image URL path."
+    },
+    {
+      "field": "framework",
+      "value": "Kaldi",
+      "normalized_value": "Kaldi",
+      "evidence": "This framework is built as a [Kaldi](http://kaldi-asr.org/)[1] recipe",
+      "evidence_location": "63",
+      "confidence": "high",
+      "reason": "Identifies the core speech recognition framework the artifact is built upon."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "69",
+      "confidence": "high",
+      "reason": "Direct command to install Python dependencies."
+    },
+    {
+      "field": "training_command",
+      "value": "./run_singlestream.sh $audiopath",
+      "normalized_value": "./run_singlestream.sh $audiopath",
+      "evidence": "./run_singlestream.sh $audiopath",
+      "evidence_location": "130",
+      "confidence": "high",
+      "reason": "Command to execute the single-stream acoustic model training pipeline."
+    },
+    {
+      "field": "training_command",
+      "value": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} \\\n    --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo} \\",
+      "normalized_value": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} \\     --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo} \\",
+      "evidence": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} \\\n    --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo} \\",
+      "evidence_location": "137-138",
+      "confidence": "high",
+      "reason": "Command to run the primary MStreNet training pipeline with all required dataset paths."
+    },
+    {
+      "field": "help_command",
+      "value": "./run_mstrenet.sh --help true",
+      "normalized_value": "./run_mstrenet.sh --help true",
+      "evidence": "./run_mstrenet.sh --help true",
+      "evidence_location": "142",
+      "confidence": "high",
+      "reason": "Command to view the help menu for the MStreNet training script."
+    },
+    {
+      "field": "extraction_command",
+      "value": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "normalized_value": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "evidence": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "evidence_location": "175",
+      "confidence": "high",
+      "reason": "Command to reproduce the frame-level phoneme posteriorgram extraction step."
+    },
+    {
+      "field": "output_format",
+      "value": "numpy arrays (.npy)",
+      "normalized_value": "numpy arrays (.npy)",
+      "evidence": "The output posteriorgrams are saved as numpy arrays (.npy).",
+      "evidence_location": "178",
+      "confidence": "high",
+      "reason": "Specifies the format of the posteriors for reuse in downstream tasks."
+    },
+    {
+      "field": "audio_parameters",
+      "value": "Note that we have used 16kHz for the sample rate and 10ms of hop size.",
+      "normalized_value": "Note that we have used 16kHz for the sample rate and 10ms of hop size",
+      "evidence": "Note that we have used 16kHz for the sample rate and 10ms of hop size.",
+      "evidence_location": "180",
+      "confidence": "high",
+      "reason": "Specifies the audio processing parameters for reproducibility of feature extraction."
+    },
+    {
+      "field": "acoustic_model",
+      "value": "**Acoustic Model**: Sequence discriminative training on LF-MMI criteria[2] (Kaldi-chain recipe). MStre-Net[3] proposes three improvements over the standard Kaldi-chain recipe:\n - The neural network is based on the multistream TDNN architecture with distinct TDNN streams.",
+      "normalized_value": "**Acoustic Model**: Sequence discriminative training on LF-MMI criteria[2] (Kaldi-chain recipe). MStre-Net[3] proposes three improvements over the standard Kaldi-chain recipe: - The neural network is based on the multistream TDNN architecture with distinct TDNN streams.",
+      "evidence": "**Acoustic Model**: Sequence discriminative training on LF-MMI criteria[2] (Kaldi-chain recipe). MStre-Net[3] proposes three improvements over the standard Kaldi-chain recipe:\n - The neural network is based on the multistream TDNN architecture with distinct TDNN streams.",
+      "evidence_location": "33-34",
+      "confidence": "high",
+      "reason": "Details the core acoustic modeling architecture used in the system."
+    },
+    {
+      "field": "language_model",
+      "value": "**Language Model**: The LM is a 4-gram MaxEnt trained using the SRILM toolkit, where Kneser-Ney smoothing applied. The corpus consists of lyrics of the data from DAMP and DALI datasets and artists from Billboard (2015-2018) [4]",
+      "normalized_value": "**Language Model**: The LM is a 4-gram MaxEnt trained using the SRILM toolkit, where Kneser-Ney smoothing applied. The corpus consists of lyrics of the data from DAMP and DALI datasets and artists from Billboard (2015-2018) [4]",
+      "evidence": "**Language Model**: The LM is a 4-gram MaxEnt trained using the SRILM toolkit, where Kneser-Ney smoothing applied. The corpus consists of lyrics of the data from DAMP and DALI datasets and artists from Billboard (2015-2018) [4]",
+      "evidence_location": "52",
+      "confidence": "high",
+      "reason": "Details the language model component, crucial for reproduction and understanding the text decoder."
+    },
+    {
+      "field": "pronunciation_model",
+      "value": "**Pronunciation Model**: A predefined lexicon that provides a mapping between words and their phonemic representations. We use the singing adapted version presented here[5].",
+      "normalized_value": "**Pronunciation Model**: A predefined lexicon that provides a mapping between words and their phonemic representations. We use the singing adapted version presented here[5].",
+      "evidence": "**Pronunciation Model**: A predefined lexicon that provides a mapping between words and their phonemic representations. We use the singing adapted version presented here[5].",
+      "evidence_location": "54",
+      "confidence": "high",
+      "reason": "Details the pronunciation model component, which is specifically adapted for singing."
+    },
+    {
+      "field": "pretrained_model_path",
+      "value": "models/ijcnn",
+      "normalized_value": "models/ijcnn",
+      "evidence": "--pretrained_model <model>                       # directory to a pretrained model (if specificed, i.e. models/ijcnn).",
+      "evidence_location": "161",
+      "confidence": "high",
+      "reason": "Provides an example path for loading a pretrained model, enabling inference or evaluation without full training."
+    },
+    {
+      "field": "dataset",
+      "value": "DAMP (Sing!300x30x2)",
+      "normalized_value": "DAMP",
+      "evidence": "We use the Sing!300x30x2 data within the DAMP repository[6]. To retrieve the data, you need to apply for authorization from https://ccrma.stanford.edu/damp/ .",
+      "evidence_location": "82-83",
+      "confidence": "high",
+      "reason": "Identifies the primary training dataset with access instructions."
+    },
+    {
+      "field": "dataset",
+      "value": "DALI_v2.0",
+      "normalized_value": "DALI",
+      "evidence": "DALI_v2.0 is used to train the polyphonic and cross-domain lyrics transcription models. To retrieve the data, please refer to the relevant Github repository at:\n\nhttps://github.com/gabolsgabs/DALI",
+      "evidence_location": "91-93",
+      "confidence": "high",
+      "reason": "Identifies the dataset used for polyphonic and cross-domain training with access link."
+    },
+    {
+      "field": "dataset",
+      "value": "DALI-TALT",
+      "normalized_value": "DALI-TALT",
+      "evidence": "This dataset is a subset of DALI, presented in [7] It is the largest test set used for evaluating polyphonic ALT models. The data can be retrieved via the tutorial at: https://github.com/emirdemirel/DALI-TestSet4ALT .",
+      "evidence_location": "102",
+      "confidence": "high",
+      "reason": "Identifies the test set for evaluating polyphonic ALT models with access link."
+    },
+    {
+      "field": "dataset",
+      "value": "Jamendo(lyrics)",
+      "normalized_value": "Jamendo",
+      "evidence": "Jamendo(lyrics) is a benchmark evaluation set for both lyrics transcription and audio-to-lyrics alignment tasks[8]. It is also used in MIREX challenges. Data can be retrieved at https://github.com/f90/jamendolyrics .",
+      "evidence_location": "109",
+      "confidence": "high",
+      "reason": "Identifies the benchmark evaluation set for lyrics transcription and alignment."
+    },
+    {
+      "field": "state_of_the_art_claim",
+      "value": "state-of-the-art model for automatic lyrics transcription",
+      "normalized_value": "state-of-the-art model for automatic lyrics transcription",
+      "evidence": "If you use the MStreNet recipe, which is the state-of-the-art model for automatic lyrics transcription, please cite following paper:",
+      "evidence_location": "188",
+      "confidence": "high",
+      "reason": "Indicates the model's claimed status, useful for establishing relevance and evaluation context."
+    },
+    {
+      "field": "paper_citation",
+      "value": "Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon. MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription. In proceedings of ISMIR2021, 2021.",
+      "normalized_value": "Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon. MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription. In proceedings of ISMIR2021, 2021.",
+      "evidence": "  @article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\\\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}",
+      "evidence_location": "190-195",
+      "confidence": "high",
+      "reason": "Provides the official citation for the MStreNet model, essential for academic attribution."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/pdf/2108.02625.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2108.02625.pdf",
+      "evidence": "Link to paper : https://arxiv.org/pdf/2108.02625.pdf",
+      "evidence_location": "197",
+      "confidence": "high",
+      "reason": "Direct link to the MStreNet paper on arXiv."
+    },
+    {
+      "field": "paper_citation",
+      "value": "Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon. Automatic lyrics transcription using dilated convolutional neural networks with self-attention. International Joint Conference on Neural Networks, IEEE, 2020.",
+      "normalized_value": "Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon. Automatic lyrics transcription using dilated convolutional neural networks with self-attention. International Joint Conference on Neural Networks, IEEE, 2020.",
+      "evidence": "@inproceedings{demirel2020,\n  title={Automatic lyrics transcription using dilated convolutional neural networks with self-attention},\n  author={Demirel, Emir and Ahlb{\\\"a}ck, Sven and Dixon, Simon},\n  booktitle={International Joint Conference on Neural Networks},\n  publisher={IEEE},\n  year={2020}\n}",
+      "evidence_location": "202-209",
+      "confidence": "high",
+      "reason": "Provides the official citation for the single-stream model, essential for academic attribution."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2007.06486",
+      "normalized_value": "https://arxiv.org/abs/2007.06486",
+      "evidence": "Link to paper : https://arxiv.org/abs/2007.06486",
+      "evidence_location": "211",
+      "confidence": "high",
+      "reason": "Direct link to the single-stream paper on arXiv."
+    },
+    {
+      "field": "license",
+      "value": "Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International",
+      "normalized_value": "Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International",
+      "evidence": "This work is licensed under Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International, which means that the reusers can copy, distribute, remix, transform and build upon the material in any media providing the appropriate credits to this repository and to be used for non-commercial purposes.",
+      "evidence_location": "234-235",
+      "confidence": "high",
+      "reason": "Legal license governing the use, distribution, and modification of the work."
+    }
+  ]
+}

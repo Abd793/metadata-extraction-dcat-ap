@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "PSTR",
+      "normalized_value": "PSTR",
+      "evidence": "# PSTR (CVPR2022)",
+      "evidence_location": "Line 1",
+      "confidence": "high",
+      "reason": "Project name stated in header"
+    },
+    {
+      "field": "title",
+      "value": "PSTR: End-to-End One-Step Person Search With Transformers",
+      "normalized_value": "PSTR: End-to-End One-Step Person Search With Transformers",
+      "evidence": "title = {PSTR: End-to-End One-Step Person Search With Transformers},",
+      "evidence_location": "Line 90",
+      "confidence": "high",
+      "reason": "Paper title from citation bibtex"
+    },
+    {
+      "field": "description",
+      "value": "End-to-end one-step person search with Transformers, which does not requre NMS post-processing.",
+      "normalized_value": "End-to-end one-step person search with Transformers, which does not requre NMS post-processing.",
+      "evidence": "- **End-to-end one-step person search** with Transformers, which does not requre NMS post-processing.",
+      "evidence_location": "Line 5",
+      "confidence": "high",
+      "reason": "Core description of the method"
+    },
+    {
+      "field": "publication_venue",
+      "value": "CVPR2022",
+      "normalized_value": "CVPR2022",
+      "evidence": "# PSTR (CVPR2022)",
+      "evidence_location": "Line 1",
+      "confidence": "high",
+      "reason": "Venue specified in header"
+    },
+    {
+      "field": "publication_year",
+      "value": "2022",
+      "normalized_value": "2022",
+      "evidence": "year = {2022}",
+      "evidence_location": "Line 92",
+      "confidence": "high",
+      "reason": "Year from citation bibtex"
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2204.03340",
+      "normalized_value": "https://arxiv.org/abs/2204.03340",
+      "evidence": "https://arxiv.org/abs/2204.03340",
+      "evidence_location": "Line 4",
+      "confidence": "high",
+      "reason": "Direct link to paper on arXiv"
+    },
+    {
+      "field": "code_repository",
+      "value": "https://github.com/JialeCao001/PSTR.git",
+      "normalized_value": "https://github.com/JialeCao001/PSTR.git",
+      "evidence": "git clone https://github.com/JialeCao001/PSTR.git",
+      "evidence_location": "Line 21",
+      "confidence": "high",
+      "reason": "Clone URL for source code"
+    },
+    {
+      "field": "backbones",
+      "value": "ResNet50, ResNet50-DCN, and PVTv2b2",
+      "normalized_value": "ResNet50, ResNet50-DCN, and PVTv2b2",
+      "evidence": "- **Pre-trained models** with ResNet50, ResNet50-DCN, and PVTv2b2.",
+      "evidence_location": "Line 6",
+      "confidence": "high",
+      "reason": "Available backbone architectures for pretrained models"
+    },
+    {
+      "field": "datasets",
+      "value": "PRW and CUHK-SYSU",
+      "normalized_value": "PRW and CUHK-SYSU",
+      "evidence": "- Download PRW and CUHK-SYSU datasets.",
+      "evidence_location": "Line 47",
+      "confidence": "high",
+      "reason": "Datasets used for training and evaluation"
+    },
+    {
+      "field": "python_version",
+      "value": "python=3.7",
+      "normalized_value": "python=3.7",
+      "evidence": "conda create -n pstr python=3.7 -y",
+      "evidence_location": "Line 24",
+      "confidence": "high",
+      "reason": "Python version specified for conda environment"
+    },
+    {
+      "field": "cuda_version",
+      "value": "cuda11.1",
+      "normalized_value": "cuda11.1",
+      "evidence": "using cuda11.1 and PyTorch1.8.0 (or PyTorch1.9.0) as follows.",
+      "evidence_location": "Line 16",
+      "confidence": "high",
+      "reason": "CUDA version required for installation"
+    },
+    {
+      "field": "pytorch_version",
+      "value": "PyTorch1.8.0 (or PyTorch1.9.0)",
+      "normalized_value": "PyTorch1.8.0 (or PyTorch1.9.0)",
+      "evidence": "using cuda11.1 and PyTorch1.8.0 (or PyTorch1.9.0) as follows.",
+      "evidence_location": "Line 16",
+      "confidence": "high",
+      "reason": "PyTorch version requirement"
+    },
+    {
+      "field": "installation_commands",
+      "value": " ```bash\n# Download this project\ngit clone https://github.com/JialeCao001/PSTR.git\n\n# Create a new conda enviroment for PSTR\nconda create -n pstr python=3.7 -y\nconda activate pstr\npip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html\n#conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge\n\n# Comiple mmcv, which has been included in this project\ncd PSTR/mmcv\nMMCV_WITH_OPS=1 pip install -e .\n\n# Comiple this project \ncd PSTR\npip install -r requirements/build.txt\npip install -v -e .  # or \"python setup.py develop\"\npip install sklearn\n```",
+      "normalized_value": "```bash # Download this project git clone https://github.com/JialeCao001/PSTR.git # Create a new conda enviroment for PSTR conda create -n pstr python=3.7 -y conda activate pstr pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html #conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge # Comiple mmcv, which has been included in this project cd PSTR/mmcv MMCV_WITH_OPS=1 pip install -e . # Comiple this project cd PSTR pip install -r requirements/build.txt pip install -v -e .  # or \"python setup.py develop\" pip install sklearn ```",
+      "evidence": " ```bash\n# Download this project\ngit clone https://github.com/JialeCao001/PSTR.git\n\n# Create a new conda enviroment for PSTR\nconda create -n pstr python=3.7 -y\nconda activate pstr\npip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html\n#conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge\n\n# Comiple mmcv, which has been included in this project\ncd PSTR/mmcv\nMMCV_WITH_OPS=1 pip install -e .\n\n# Comiple this project \ncd PSTR\npip install -r requirements/build.txt\npip install -v -e .  # or \"python setup.py develop\"\npip install sklearn\n```",
+      "evidence_location": "Lines 19-38",
+      "confidence": "high",
+      "reason": "Complete installation commands for setting up environment and compiling code"
+    },
+    {
+      "field": "training_command",
+      "value": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "normalized_value": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "evidence": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "evidence_location": "Line 53",
+      "confidence": "high",
+      "reason": "Command to train a model"
+    },
+    {
+      "field": "inference_commands",
+      "value": "```shell\nPRW: sh run_test_prw.sh \nCUHK: sh run_test_cuhk.sh  \n```",
+      "normalized_value": "```shell PRW: sh run_test_prw.sh CUHK: sh run_test_cuhk.sh ```",
+      "evidence": "```shell\nPRW: sh run_test_prw.sh \nCUHK: sh run_test_cuhk.sh  \n```",
+      "evidence_location": "Lines 59-62",
+      "confidence": "high",
+      "reason": "Commands to run inference on PRW and CUHK-SYSU datasets"
+    },
+    {
+      "field": "dataset_annotations_link",
+      "value": "https://drive.google.com/file/d/1J2YAU7n954TiSwqopJCWdK25IaF6Mb9_/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1J2YAU7n954TiSwqopJCWdK25IaF6Mb9_/view?usp=sharing",
+      "evidence": "https://drive.google.com/file/d/1J2YAU7n954TiSwqopJCWdK25IaF6Mb9_/view?usp=sharing",
+      "evidence_location": "Line 48",
+      "confidence": "high",
+      "reason": "Link to JSON annotations for datasets"
+    },
+    {
+      "field": "results_table",
+      "value": "|    name  | dataset  | backbone |  mAP  | top-1 |  mAP+ | top-1+  | download|\n| :-------------: | :-----: | :-----: | :-------------------: | :-----: | :-----: | :------: | :-----------------: |\n|     PSTR | PRW    | PVTv2-B2  |   57.46  |   90.57   |58.07   |    92.03     |          [model](https://drive.google.com/file/d/1hrmyvS9f8fzflpoIlEhWQ-XDyNp_qCGq/view?usp=sharing)         |\n|     PSTR |  PRW   | ResNet50  |   50.03   | 88.04   | 50.64   |    89.94   |        [model](https://drive.google.com/file/d/12j71smXyc3QAyCvIPRlQCbyhSXZENBIX/view?usp=sharing)         |\n|     PSTR |  PRW   | ResNet50-DCN  |   51.09   | 88.33   | 51.62   |    90.13   |        [model](https://drive.google.com/file/d/111f_efZOYMFkz9i76TgqcO7a88npoJV5/view?usp=sharing)         |\n|     PSTR | CUHK-SYSU     | PVTv2-B2    |   95.31  |   96.28   |95.78   |    96.83      |       [model](https://drive.google.com/file/d/1vrQdZTVgJ2D6ty_XJAYmsJgziW9TZHHW/view?usp=sharing)         |\n|     PSTR | CUHK-SYSU    | ResNet50|   93.55   | 94.93   | 94.16   | 95.48   |          [model](https://drive.google.com/file/d/1U4r_WaTfODmuhslL_15u5bXdFwLLBC5m/view?usp=sharing)         |\n|     PSTR | CUHK-SYSU    | ResNet50-DCN|   94.22   | 95.28   | 94.90   | 95.97   |          [model](https://drive.google.com/file/d/1cCbpAGrldxQaRrF7FCZXqx4VaNP-C278/view?usp=sharing)         |",
+      "normalized_value": "| name | dataset | backbone | mAP | top-1 | mAP+ | top-1+ | download | :-------------: | :-----: | :-----: | :-------------------: | :-----: | :-----: | :------: | :-----------------: | PSTR | PRW | PVTv2-B2 | 57.46 | 90.57 | 58.07 | 92.03 | [model](https://drive.google.com/file/d/1hrmyvS9f8fzflpoIlEhWQ-XDyNp_qCGq/view?usp=sharing) | PSTR | PRW | ResNet50 | 50.03 | 88.04 | 50.64 | 89.94 | [model](https://drive.google.com/file/d/12j71smXyc3QAyCvIPRlQCbyhSXZENBIX/view?usp=sharing) | PSTR | PRW | ResNet50-DCN | 51.09 | 88.33 | 51.62 | 90.13 | [model](https://drive.google.com/file/d/111f_efZOYMFkz9i76TgqcO7a88npoJV5/view?usp=sharing) | PSTR | CUHK-SYSU | PVTv2-B2 | 95.31 | 96.28 | 95.78 | 96.83 | [model](https://drive.google.com/file/d/1vrQdZTVgJ2D6ty_XJAYmsJgziW9TZHHW/view?usp=sharing) | PSTR | CUHK-SYSU | ResNet50 | 93.55 | 94.93 | 94.16 | 95.48 | [model](https://drive.google.com/file/d/1U4r_WaTfODmuhslL_15u5bXdFwLLBC5m/view?usp=sharing) | PSTR | CUHK-SYSU | ResNet50-DCN | 94.22 | 95.28 | 94.90 | 95.97 | [model](https://drive.google.com/file/d/1cCbpAGrldxQaRrF7FCZXqx4VaNP-C278/view?usp=sharing)",
+      "evidence": "|    name  | dataset  | backbone |  mAP  | top-1 |  mAP+ | top-1+  | download|\n| :-------------: | :-----: | :-----: | :-------------------: | :-----: | :-----: | :------: | :-----------------: |\n|     PSTR | PRW    | PVTv2-B2  |   57.46  |   90.57   |58.07   |    92.03     |          [model](https://drive.google.com/file/d/1hrmyvS9f8fzflpoIlEhWQ-XDyNp_qCGq/view?usp=sharing)         |\n|     PSTR |  PRW   | ResNet50  |   50.03   | 88.04   | 50.64   |    89.94   |        [model](https://drive.google.com/file/d/12j71smXyc3QAyCvIPRlQCbyhSXZENBIX/view?usp=sharing)         |\n|     PSTR |  PRW   | ResNet50-DCN  |   51.09   | 88.33   | 51.62   |    90.13   |        [model](https://drive.google.com/file/d/111f_efZOYMFkz9i76TgqcO7a88npoJV5/view?usp=sharing)         |\n|     PSTR | CUHK-SYSU     | PVTv2-B2    |   95.31  |   96.28   |95.78   |    96.83      |       [model](https://drive.google.com/file/d/1vrQdZTVgJ2D6ty_XJAYmsJgziW9TZHHW/view?usp=sharing)         |\n|     PSTR | CUHK-SYSU    | ResNet50|   93.55   | 94.93   | 94.16   | 95.48   |          [model](https://drive.google.com/file/d/1U4r_WaTfODmuhslL_15u5bXdFwLLBC5m/view?usp=sharing)         |\n|     PSTR | CUHK-SYSU    | ResNet50-DCN|   94.22   | 95.28   | 94.90   | 95.97   |          [model](https://drive.google.com/file/d/1cCbpAGrldxQaRrF7FCZXqx4VaNP-C278/view?usp=sharing)         |",
+      "evidence_location": "Lines 71-78",
+      "confidence": "high",
+      "reason": "Table with performance metrics (mAP, top-1) and pretrained model download links"
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}",
+      "normalized_value": "@article{Cao_PSTR_CVPR_2022, author = {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan}, title = {PSTR: End-to-End One-Step Person Search With Transformers}, journal = {Proc. IEEE Conference on Computer Vision and Pattern Recognition}, year = {2022}}",
+      "evidence": "```\n@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}\n```",
+      "evidence_location": "Lines 87-94",
+      "confidence": "high",
+      "reason": "BibTeX citation for the paper"
+    }
+  ]
+}

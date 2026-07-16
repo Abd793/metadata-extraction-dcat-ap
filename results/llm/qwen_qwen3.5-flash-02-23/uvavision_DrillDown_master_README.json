@@ -1,0 +1,103 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries.",
+      "normalized_value": "Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries.",
+      "evidence": "# [Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries.](https://arxiv.org/abs/1911.03826)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the name of the project/paper in the title."
+    },
+    {
+      "field": "authors",
+      "value": "Fuwen Tan, Paola Cascante-Bonilla, Xiaoxiao Guo, Hui Wu, Song Feng, Vicente Ordonez.",
+      "normalized_value": "Fuwen Tan, Paola Cascante-Bonilla, Xiaoxiao Guo, Hui Wu, Song Feng, Vicente Ordonez.",
+      "evidence": "Fuwen Tan, Paola Cascante-Bonilla, Xiaoxiao Guo, Hui Wu, Song Feng, Vicente Ordonez. NeurIPS 2019",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Lists the authors of the work explicitly."
+    },
+    {
+      "field": "publication_venue",
+      "value": "NeurIPS 2019",
+      "normalized_value": "NeurIPS 2019",
+      "evidence": "Fuwen Tan, Paola Cascante-Bonilla, Xiaoxiao Guo, Hui Wu, Song Feng, Vicente Ordonez. NeurIPS 2019",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Identifies the conference and year of publication."
+    },
+    {
+      "field": "description",
+      "value": "This paper explores the task of interactive image retrieval using natural language queries, where a user progressively provides input queries to refine a set of retrieval results. Moreover, our work explores this problem in the context of complex image scenes containing multiple objects. We propose Drill-down, an effective framework for encoding multiple queries with an efficient compact state representation that significantly extends current methods for single-round image retrieval. We show that using multiple rounds of natural language queries as input can be surprisingly effective to find arbitrarily specific images of complex scenes. Furthermore, we find that existing image datasets with textual captions can provide a surprisingly effective form of weak supervision for this task. We compare our method with existing sequential encoding and embedding networks, demonstrating superior performance on two proposed benchmarks: automatic image retrieval on a simulated scenario that uses region captions as queries, and interactive image retrieval using real queries from human evaluators.",
+      "normalized_value": "This paper explores the task of interactive image retrieval using natural language queries, where a user progressively provides input queries to refine a set of retrieval results. Moreover, our work explores this problem in the context of complex image scenes containing multiple objects. We propose Drill-down, an effective framework for encoding multiple queries with an efficient compact state representation that significantly extends current methods for single-round image retrieval. We show that using multiple rounds of natural language queries as input can be surprisingly effective to find arbitrarily specific images of complex scenes. Furthermore, we find that existing image datasets with textual captions can provide a surprisingly effective form of weak supervision for this task. We compare our method with existing sequential encoding and embedding networks, demonstrating superior performance on two proposed benchmarks: automatic image retrieval on a simulated scenario that uses region captions as queries, and interactive image retrieval using real queries from human evaluators.",
+      "evidence": "This paper explores the task of interactive image retrieval using natural language queries, where a user progressively provides input queries to refine a set of retrieval results. Moreover, our work explores this problem in the context of complex image scenes containing multiple objects. We propose Drill-down, an effective framework for encoding multiple queries with an efficient compact state representation that significantly extends current methods for single-round image retrieval. We show that using multiple rounds of natural language queries as input can be surprisingly effective to find arbitrarily specific images of complex scenes. Furthermore, we find that existing image datasets with textual captions can provide a surprisingly effective form of weak supervision for this task. We compare our method with existing sequential encoding and embedding networks, demonstrating superior performance on two proposed benchmarks: automatic image retrieval on a simulated scenario that uses region captions as queries, and interactive image retrieval using real queries from human evaluators.",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Provides a comprehensive summary of the paper's purpose and contributions."
+    },
+    {
+      "field": "dependencies",
+      "value": "jupyter scikit-image cython opencv seaborn nltk pycairo h5py pytorch 1.0 (or higher) torchVision torchtext",
+      "normalized_value": "jupyter scikit-image cython opencv seaborn nltk pycairo h5py pytorch 1.0 (or higher) torchVision torchtext",
+      "evidence": "conda install jupyter scikit-image cython opencv seaborn nltk pycairo h5py  # Install dependencies\npython -m nltk.downloader all\t\t\t\t\t\t# Install NLTK data\n```\n- Please also install [pytorch](http://pytorch.org/) 1.0 (or higher), torchVision, and torchtext",
+      "evidence_location": "13-16",
+      "confidence": "high",
+      "reason": "Lists the required software packages and versions for the environment."
+    },
+    {
+      "field": "data_source",
+      "value": "Visual Genome dataset",
+      "normalized_value": "Visual Genome dataset",
+      "evidence": "- Download the images of the Visual Genome dataset if you have not done so",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Identifies the primary dataset used for the project."
+    },
+    {
+      "field": "training_command",
+      "value": "./experiments/scripts/train_drill_down_3x128_reinforce.sh",
+      "normalized_value": "./experiments/scripts/train_drill_down_3x128_reinforce.sh",
+      "evidence": "./experiments/scripts/train_drill_down_3x128_reinforce.sh",
+      "evidence_location": "50",
+      "confidence": "high",
+      "reason": "Provides a specific command for training the model."
+    },
+    {
+      "field": "pretrained_model_path",
+      "value": "DrillDown/caches/region_ckpts/vg_f128_i3_sl_ckpt.pkl",
+      "normalized_value": "DrillDown/caches/region_ckpts/vg_f128_i3_sl_ckpt.pkl",
+      "evidence": "the default pretrained model is `DrillDown/caches/region_ckpts/vg_f128_i3_sl_ckpt.pkl`.",
+      "evidence_location": "52",
+      "confidence": "high",
+      "reason": "Specifies the path to the default pretrained model checkpoint."
+    },
+    {
+      "field": "citation",
+      "value": "\t@InProceedings{drilldown,\n    author={Fuwen Tan and Paola Cascante-Bonilla and Xiaoxiao Guo and Hui Wu and Song Feng and Vicente Ordonez},\n    title={Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries},\n    booktitle = {Neural Information Processing Systems (NeurIPS)},\n    month = {December},\n    year = {2019}\n    }",
+      "normalized_value": "@InProceedings{drilldown, author={Fuwen Tan and Paola Cascante-Bonilla and Xiaoxiao Guo and Hui Wu and Song Feng and Vicente Ordonez}, title={Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries}, booktitle = {Neural Information Processing Systems (NeurIPS)}, month = {December}, year = {2019} }",
+      "evidence": "\t@InProceedings{drilldown,\n    author={Fuwen Tan and Paola Cascante-Bonilla and Xiaoxiao Guo and Hui Wu and Song Feng and Vicente Ordonez},\n    title={Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries},\n    booktitle = {Neural Information Processing Systems (NeurIPS)},\n    month = {December},\n    year = {2019}\n    }",
+      "evidence_location": "60-66",
+      "confidence": "high",
+      "reason": "Provides the BibTeX citation for the paper."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "This project is licensed under the [MIT license](https://opensource.org/licenses/MIT):",
+      "evidence_location": "72",
+      "confidence": "high",
+      "reason": "Specifies the license under which the project is distributed."
+    },
+    {
+      "field": "framework",
+      "value": "pytorch",
+      "normalized_value": "pytorch",
+      "evidence": "- Please also install [pytorch](http://pytorch.org/) 1.0 (or higher), torchVision, and torchtext",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Identifies the deep learning framework used."
+    }
+  ]
+}
