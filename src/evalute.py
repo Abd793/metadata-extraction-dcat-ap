@@ -21,9 +21,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 def main(args):
     model_choices = [
         "deepseek/deepseek-v4-flash",
-        "qwen/qwen3.5-flash",
-        "openai/gpt-oss-120b",
-        "google/gemma-4-31b-it:free",
+        "qwen/qwen3.5-flash-02-23",
+        "qwen/qwen3.6-flash",
     ]
     model_to_metadata_files = {}
     for model in model_choices:
