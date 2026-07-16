@@ -7,6 +7,7 @@ from pathlib import Path
 from statistics import mean, median
 from typing import Any
 
+import numpy as np
 from sklearn.metrics import cohen_kappa_score
 
 
@@ -17,6 +18,8 @@ DEFAULT_MODELS = [
 ]
 
 AGREEMENT_VIEWS = ("fields", "values", "field_value_pairs")
+SEMANTIC_EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
+SEMANTIC_SIMILARITY_CHUNK_SIZE = 512
 
 
 def safe_mean(values: list[float]) -> float:
@@ -33,6 +36,12 @@ def safe_model_name(model: str) -> str:
 
 def normalize_text(value: Any) -> str:
     return re.sub(r"\s+", " ", str(value).strip())
+
+
+def item_text_for_embedding(item: str, view: str) -> str:
+    if view == "field_value_pairs":
+        return item.replace("\t", ": ")
+    return item
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -110,14 +119,6 @@ def jaccard(set_a: set[str], set_b: set[str]) -> float:
     return len(set_a & set_b) / len(union)
 
 
-def positive_agreement(vec_a: list[int], vec_b: list[int]) -> float:
-    both_positive = sum(a == 1 and b == 1 for a, b in zip(vec_a, vec_b))
-    positives = sum(vec_a) + sum(vec_b)
-    if positives == 0:
-        return 1.0
-    return 2 * both_positive / positives
-
-
 def multiway_jaccard(item_sets: list[set[str]]) -> float:
     if not item_sets:
         return 0.0
@@ -126,16 +127,6 @@ def multiway_jaccard(item_sets: list[set[str]]) -> float:
         return 1.0
     intersection = set.intersection(*item_sets)
     return len(intersection) / len(union)
-
-
-def multiway_positive_agreement(item_sets: list[set[str]]) -> float:
-    if not item_sets:
-        return 0.0
-    total_positive = sum(len(items) for items in item_sets)
-    if total_positive == 0:
-        return 1.0
-    intersection = set.intersection(*item_sets)
-    return len(item_sets) * len(intersection) / total_positive
 
 
 def cohen_kappa(vec_a: list[int], vec_b: list[int]) -> float:
@@ -148,33 +139,6 @@ def cohen_kappa(vec_a: list[int], vec_b: list[int]) -> float:
     if math.isnan(score):
         return 1.0 if vec_a == vec_b else 0.0
     return score
-
-
-def fleiss_kappa(item_sets: list[set[str]], universe: list[str]) -> float:
-    if not item_sets or not universe:
-        return 0.0
-
-    n_raters = len(item_sets)
-    if n_raters < 2:
-        return 0.0
-
-    category_totals = [0, 0]
-    item_agreements = []
-    for item in universe:
-        present = sum(item in items for items in item_sets)
-        absent = n_raters - present
-        category_totals[0] += absent
-        category_totals[1] += present
-        item_agreements.append(
-            (present * (present - 1) + absent * (absent - 1)) / (n_raters * (n_raters - 1))
-        )
-
-    observed = safe_mean(item_agreements)
-    total_assignments = len(universe) * n_raters
-    expected = sum((count / total_assignments) ** 2 for count in category_totals)
-    if expected == 1.0:
-        return 1.0 if observed == 1.0 else 0.0
-    return (observed - expected) / (1.0 - expected)
 
 
 def krippendorff_alpha(item_sets: list[set[str]], universe: list[str]) -> float:
@@ -212,7 +176,6 @@ def view_metrics(items_a: set[str], items_b: set[str], universe: list[str]) -> d
     return {
         "jaccard": jaccard(items_a, items_b),
         "cohen_kappa": cohen_kappa(vec_a, vec_b),
-        "positive_agreement": positive_agreement(vec_a, vec_b),
         "count_a": len(items_a),
         "count_b": len(items_b),
         "shared_count": len(items_a & items_b),
@@ -222,14 +185,11 @@ def view_metrics(items_a: set[str], items_b: set[str], universe: list[str]) -> d
 def summarize_rows(rows: list[dict[str, Any]], view: str) -> dict[str, float]:
     jaccards = [row[view]["jaccard"] for row in rows]
     kappas = [row[view]["cohen_kappa"] for row in rows]
-    positive_agreements = [row[view]["positive_agreement"] for row in rows]
     return {
         "average_jaccard": safe_mean(jaccards),
         "median_jaccard": safe_median(jaccards),
         "average_cohen_kappa": safe_mean(kappas),
         "median_cohen_kappa": safe_median(kappas),
-        "average_positive_agreement": safe_mean(positive_agreements),
-        "median_positive_agreement": safe_median(positive_agreements),
     }
 
 
@@ -238,9 +198,7 @@ def multimodel_view_metrics(item_sets: list[set[str]], universe: list[str]) -> d
     union = set.union(*item_sets) if item_sets else set()
     return {
         "multiway_jaccard": multiway_jaccard(item_sets),
-        "fleiss_kappa": fleiss_kappa(item_sets, universe),
         "krippendorff_alpha": krippendorff_alpha(item_sets, universe),
-        "unanimous_positive_agreement": multiway_positive_agreement(item_sets),
         "min_count": min((len(items) for items in item_sets), default=0),
         "max_count": max((len(items) for items in item_sets), default=0),
         "shared_by_all_count": len(intersection),
@@ -250,18 +208,12 @@ def multimodel_view_metrics(item_sets: list[set[str]], universe: list[str]) -> d
 
 def summarize_multimodel_rows(rows: list[dict[str, Any]], view: str) -> dict[str, float]:
     multiway_jaccards = [row[view]["multiway_jaccard"] for row in rows]
-    fleiss_kappas = [row[view]["fleiss_kappa"] for row in rows]
     krippendorff_alphas = [row[view]["krippendorff_alpha"] for row in rows]
-    unanimous_positive_agreements = [row[view]["unanimous_positive_agreement"] for row in rows]
     return {
         "average_multiway_jaccard": safe_mean(multiway_jaccards),
         "median_multiway_jaccard": safe_median(multiway_jaccards),
-        "average_fleiss_kappa": safe_mean(fleiss_kappas),
-        "median_fleiss_kappa": safe_median(fleiss_kappas),
         "average_krippendorff_alpha": safe_mean(krippendorff_alphas),
         "median_krippendorff_alpha": safe_median(krippendorff_alphas),
-        "average_unanimous_positive_agreement": safe_mean(unanimous_positive_agreements),
-        "median_unanimous_positive_agreement": safe_median(unanimous_positive_agreements),
     }
 
 
@@ -347,13 +299,147 @@ def evaluate(results: dict[str, dict[str, dict[str, set[str]]]]) -> dict[str, An
     }
 
 
+class UnionFind:
+    def __init__(self, size: int):
+        self.parent = list(range(size))
+
+    def find(self, index: int) -> int:
+        while self.parent[index] != index:
+            self.parent[index] = self.parent[self.parent[index]]
+            index = self.parent[index]
+        return index
+
+    def union(self, left: int, right: int) -> None:
+        root_left = self.find(left)
+        root_right = self.find(right)
+        if root_left != root_right:
+            self.parent[root_right] = root_left
+
+
+def common_docs_for_results(results: dict[str, dict[str, dict[str, set[str]]]]) -> list[str]:
+    model_names = sorted(results)
+    if not model_names:
+        return []
+    return sorted(set.intersection(*(set(results[model]) for model in model_names)))
+
+
+def load_embedding_model() -> Any:
+    from sentence_transformers import SentenceTransformer
+
+    return SentenceTransformer(SEMANTIC_EMBEDDING_MODEL, local_files_only=True)
+
+
+def semantic_cluster_map(
+    items: list[str],
+    view: str,
+    threshold: float,
+    embedding_model: Any,
+) -> tuple[dict[str, str], list[list[str]]]:
+    if not items:
+        return {}, []
+
+    texts = [item_text_for_embedding(item, view) for item in items]
+    embeddings = embedding_model.encode(
+        texts,
+        batch_size=128,
+        convert_to_numpy=True,
+        normalize_embeddings=True,
+        show_progress_bar=True,
+    )
+    union_find = UnionFind(len(items))
+
+    for start in range(0, len(items), SEMANTIC_SIMILARITY_CHUNK_SIZE):
+        end = min(start + SEMANTIC_SIMILARITY_CHUNK_SIZE, len(items))
+        similarities = np.matmul(embeddings[start:end], embeddings.T)
+        row_indices, col_indices = np.where(similarities >= threshold)
+        for local_row_index, col_index in zip(row_indices.tolist(), col_indices.tolist()):
+            row_index = start + local_row_index
+            if col_index <= row_index:
+                continue
+            union_find.union(row_index, col_index)
+
+    clusters_by_root: dict[int, list[str]] = {}
+    for index, item in enumerate(items):
+        clusters_by_root.setdefault(union_find.find(index), []).append(item)
+
+    clusters = [sorted(cluster) for cluster in clusters_by_root.values()]
+    clusters.sort(key=lambda cluster: (cluster[0], len(cluster)))
+
+    item_to_cluster = {}
+    for cluster_index, cluster in enumerate(clusters):
+        cluster_id = f"{view}_cluster_{cluster_index:05d}"
+        for item in cluster:
+            item_to_cluster[item] = cluster_id
+
+    return item_to_cluster, clusters
+
+
+def build_semantic_cluster_maps(
+    results: dict[str, dict[str, dict[str, set[str]]]],
+    threshold: float,
+) -> tuple[dict[str, dict[str, str]], dict[str, Any]]:
+    model_names = sorted(results)
+    common_docs = common_docs_for_results(results)
+    cluster_maps = {}
+    cluster_report = {}
+    embedding_model = load_embedding_model()
+
+    for view in AGREEMENT_VIEWS:
+        items = sorted(
+            {
+                item
+                for model in model_names
+                for doc in common_docs
+                for item in results[model][doc][view]
+            }
+        )
+        item_to_cluster, clusters = semantic_cluster_map(items, view, threshold, embedding_model)
+        cluster_maps[view] = item_to_cluster
+        cluster_report[view] = {
+            "raw_item_count": len(items),
+            "cluster_count": len(clusters),
+            "merged_cluster_count": sum(1 for cluster in clusters if len(cluster) > 1),
+            "examples": [cluster for cluster in clusters if len(cluster) > 1][:10],
+        }
+
+    return cluster_maps, cluster_report
+
+
+def apply_semantic_clusters(
+    results: dict[str, dict[str, dict[str, set[str]]]],
+    cluster_maps: dict[str, dict[str, str]],
+) -> dict[str, dict[str, dict[str, set[str]]]]:
+    transformed: dict[str, dict[str, dict[str, set[str]]]] = {}
+    for model, docs in results.items():
+        transformed[model] = {}
+        for doc, item_sets in docs.items():
+            transformed[model][doc] = {
+                view: {cluster_maps[view].get(item, item) for item in items}
+                for view, items in item_sets.items()
+            }
+    return transformed
+
+
+def evaluate_semantic(
+    results: dict[str, dict[str, dict[str, set[str]]]],
+    threshold: float,
+) -> dict[str, Any]:
+    cluster_maps, cluster_report = build_semantic_cluster_maps(results, threshold)
+    semantic_results = apply_semantic_clusters(results, cluster_maps)
+    report = evaluate(semantic_results)
+    report["semantic"] = {
+        "backend": SEMANTIC_EMBEDDING_MODEL,
+        "threshold": threshold,
+        "clusters": cluster_report,
+    }
+    return report
+
+
 def print_view(prefix: str, metrics: dict[str, float]) -> None:
     print(
         f"{prefix}: "
         f"Jaccard mean/median={metrics['average_jaccard']:.4f}/{metrics['median_jaccard']:.4f}, "
-        f"Cohen's kappa mean/median={metrics['average_cohen_kappa']:.4f}/{metrics['median_cohen_kappa']:.4f}, "
-        f"Positive agreement mean/median="
-        f"{metrics['average_positive_agreement']:.4f}/{metrics['median_positive_agreement']:.4f}"
+        f"Cohen's kappa mean/median={metrics['average_cohen_kappa']:.4f}/{metrics['median_cohen_kappa']:.4f}"
     )
 
 
@@ -362,13 +448,8 @@ def print_multimodel_view(prefix: str, metrics: dict[str, float]) -> None:
         f"{prefix}: "
         f"Multiway Jaccard mean/median="
         f"{metrics['average_multiway_jaccard']:.4f}/{metrics['median_multiway_jaccard']:.4f}, "
-        f"Fleiss' kappa mean/median="
-        f"{metrics['average_fleiss_kappa']:.4f}/{metrics['median_fleiss_kappa']:.4f}, "
         f"Krippendorff's alpha mean/median="
-        f"{metrics['average_krippendorff_alpha']:.4f}/{metrics['median_krippendorff_alpha']:.4f}, "
-        f"Unanimous positive agreement mean/median="
-        f"{metrics['average_unanimous_positive_agreement']:.4f}/"
-        f"{metrics['median_unanimous_positive_agreement']:.4f}"
+        f"{metrics['average_krippendorff_alpha']:.4f}/{metrics['median_krippendorff_alpha']:.4f}"
     )
 
 
@@ -402,20 +483,47 @@ def print_report(report: dict[str, Any]) -> None:
         print_multimodel_view(f"  {view}", report["overall_multimodel"]["averages"][view])
 
 
+def print_semantic_summary(report: dict[str, Any]) -> None:
+    semantic = report["semantic"]
+    print(f"\nSemantic clustering: backend={semantic['backend']}, threshold={semantic['threshold']}")
+    for view in AGREEMENT_VIEWS:
+        clusters = semantic["clusters"][view]
+        print(
+            f"  {view}: raw items={clusters['raw_item_count']}, "
+            f"clusters={clusters['cluster_count']}, merged clusters={clusters['merged_cluster_count']}"
+        )
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Evaluate metadata extraction agreement across model outputs.")
     parser.add_argument("--results-dir", type=Path, default=Path("results/llm"))
     parser.add_argument("--models", nargs="*", default=None, help="Optional model ids.")
     parser.add_argument("--limit", type=int, default=None, help="Optional maximum JSON files per model.")
     parser.add_argument("--output", type=Path, default=Path("results/evaluation_report.json"), help="JSON report path.")
+    parser.add_argument("--semantic", action="store_true", help="Also evaluate thresholded semantic agreement.")
+    parser.add_argument("--semantic-threshold", type=float, default=0.85)
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
     results = load_results(args.results_dir, args.models, args.limit)
-    report = evaluate(results)
-    print_report(report)
+    exact_report = evaluate(results)
+
+    if args.semantic:
+        semantic_report = evaluate_semantic(results, args.semantic_threshold)
+        report = {
+            "exact": exact_report,
+            "semantic": semantic_report,
+        }
+        print("Exact agreement")
+        print_report(exact_report)
+        print("\nSemantic agreement")
+        print_report(semantic_report)
+        print_semantic_summary(semantic_report)
+    else:
+        report = exact_report
+        print_report(report)
 
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
