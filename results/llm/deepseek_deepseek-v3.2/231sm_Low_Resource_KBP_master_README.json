@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "project_title",
+      "value": "Low_Resource_KBP",
+      "normalized_value": "Low_Resource_KBP",
+      "evidence": "# Low_Resource_KBP",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Project name from README title."
+    },
+    {
+      "field": "project_description",
+      "value": "knowledge graph population in low resource conditions",
+      "normalized_value": "knowledge graph population in low resource conditions",
+      "evidence": "knowledge graph population in low resource conditions",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Brief description of project focus."
+    },
+    {
+      "field": "dataset_name",
+      "value": "FewEvent",
+      "normalized_value": "FewEvent",
+      "evidence": "***FewEvent***",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Name of the dataset provided."
+    },
+    {
+      "field": "dataset_file",
+      "value": "Few-Shot_ED.json.zip",
+      "normalized_value": "Few-Shot_ED.json.zip",
+      "evidence": "*Few-Shot_ED.json.zip*",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Filename of the dataset."
+    },
+    {
+      "field": "paper_title",
+      "value": "Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection",
+      "normalized_value": "Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection",
+      "evidence": "\"Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection\"",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Title of the associated research paper."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/1910.11621",
+      "normalized_value": "https://arxiv.org/abs/1910.11621",
+      "evidence": "https://arxiv.org/abs/1910.11621",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "URL to access the paper."
+    },
+    {
+      "field": "conference",
+      "value": "WSDM 2020",
+      "normalized_value": "WSDM 2020",
+      "evidence": "WSDM 2020",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Conference where the paper was accepted."
+    },
+    {
+      "field": "task",
+      "value": "Few-Shot Event Detection",
+      "normalized_value": "Few-Shot Event Detection",
+      "evidence": "Few-Shot Event Detection",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Task addressed by the dataset and paper."
+    },
+    {
+      "field": "data_sources",
+      "value": "ACE-2005 corpus, TAC-KBP-2017 Event Track Data, automatically-labeled event data from Freebase and Wikipedia",
+      "normalized_value": "ACE-2005 corpus, TAC-KBP-2017 Event Track Data, automatically-labeled event data from Freebase and Wikipedia",
+      "evidence": "* We first scale up the number of event types in existing datasets, including the [ACE-2005 corpus](http://projects.ldc.upenn.edu/ace/), and [TAC-KBP-2017 Event Track Data](https://tac.nist.gov/2017/KBP/Event/index.html).\n\n* We then import and extend some new event types based on an [automatically-labeled event data](https://github.com/acl2017submission/event-data), from Freebase and Wikipedia, constrained to specific domains such as music, film, sports, education, etc.",
+      "evidence_location": "9-11",
+      "confidence": "high",
+      "reason": "Lists the sources used to create the dataset."
+    },
+    {
+      "field": "data_structure",
+      "value": "key: event type label, value: event instances in JSON format",
+      "normalized_value": "key: event type label, value: event instances in JSON format",
+      "evidence": "In \"*Few-Shot_ED.json.zip*\", the key is \"*event type label*\", the value is the event instances.\n\n{event_type_label1: [instance1, instance2, ...], event_type_label2: ...}",
+      "evidence_location": "14-16",
+      "confidence": "high",
+      "reason": "Describes the structure of the dataset file."
+    },
+    {
+      "field": "example_instance",
+      "value": "[\"In trucks and on foot they came to the town of Safwan\", \"came\", [7, 6, 12]]",
+      "normalized_value": "[\"In trucks and on foot they came to the town of Safwan\", \"came\", [7, 6, 12]]",
+      "evidence": "\\[\"In trucks and on foot they came to the town of Safwan\", \"came\", [7, 6, 12]\\]",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Example of an event instance in the dataset."
+    },
+    {
+      "field": "instance_interpretation",
+      "value": "event mention: sentence, trigger: word, distances: [distance to start, distance to end, sentence length]",
+      "normalized_value": "event mention: sentence, trigger: word, distances: [distance to start, distance to end, sentence length]",
+      "evidence": "* \"In trucks and on foot they came to the town of Safwan\" is an event mention\n* \"came\" is trigger\n* 7 means the distance from trigger \"came\" to the beginning of the sentence\n* 6 means the distance from trigger \"came\" to the ending of the sentence\n* 12 means the sentence length",
+      "evidence_location": "23-27",
+      "confidence": "high",
+      "reason": "Explains the components of an event instance for reuse."
+    },
+    {
+      "field": "preprocessing_note",
+      "value": "Note that the sentence should be cleaned, e.g., To expand abbreviations",
+      "normalized_value": "Note that the sentence should be cleaned, e.g., To expand abbreviations",
+      "evidence": "(Note that the sentence should be cleaned, e.g., To expand abbreviations)",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Important note for data preprocessing."
+    },
+    {
+      "field": "domains",
+      "value": "music, film, sports, education, etc.",
+      "normalized_value": "music, film, sports, education, etc.",
+      "evidence": "constrained to specific domains such as music, film, sports, education, etc.",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Indicates the domains covered by the dataset."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "AltEntities (Alternative Entities) dataset",
+      "normalized_value": "AltEntities (Alternative Entities) dataset",
+      "evidence": "# AltEntities (Alternative Entities) dataset: Resolving Indirect Referring Expressions for Entity Selection",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the primary identifier of the dataset in the repository title."
+    },
+    {
+      "field": "purpose",
+      "value": "Resolving Indirect Referring Expressions for Entity Selection",
+      "normalized_value": "Resolving Indirect Referring Expressions for Entity Selection",
+      "evidence": "# AltEntities (Alternative Entities) dataset: Resolving Indirect Referring Expressions for Entity Selection",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Clearly defines the core NLP task the dataset is designed to support."
+    },
+    {
+      "field": "license",
+      "value": "CC-BY SA 3.0 License",
+      "normalized_value": "CC-BY SA 3.0 License",
+      "evidence": "This is the work of *Mohammad Javad Hosseini*, *Filip Radlinski*, *Silvia Pareti*, and *Annie Louis* from Google LLC, made available under the CC-BY SA 3.0 License.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Specifies the exact open license governing redistribution and reuse."
+    },
+    {
+      "field": "authors",
+      "value": "Mohammad Javad Hosseini, Filip Radlinski, Silvia Pareti, and Annie Louis",
+      "normalized_value": "Mohammad Javad Hosseini, Filip Radlinski, Silvia Pareti, and Annie Louis",
+      "evidence": "This is the work of *Mohammad Javad Hosseini*, *Filip Radlinski*, *Silvia Pareti*, and *Annie Louis* from Google LLC, made available under the CC-BY SA 3.0 License.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Lists the creators required for proper academic and technical attribution."
+    },
+    {
+      "field": "affiliation",
+      "value": "Google LLC",
+      "normalized_value": "Google LLC",
+      "evidence": "This is the work of *Mohammad Javad Hosseini*, *Filip Radlinski*, *Silvia Pareti*, and *Annie Louis* from Google LLC, made available under the CC-BY SA 3.0 License.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Identifies the institutional origin of the dataset."
+    },
+    {
+      "field": "dataset_size",
+      "value": "6,247 alternative questions in three domains--books, songs (music), and recipes--and 42,529 referring expressions",
+      "normalized_value": "6,247 alternative questions in three domains--books, songs (music), and recipes--and 42,529 referring expressions",
+      "evidence": "The dataset contains **6,247 alternative questions in three domains--books, songs (music), and recipes--and 42,529 referring expressions**.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Provides concrete scale metrics essential for assessing dataset coverage and suitability for training/evaluation."
+    },
+    {
+      "field": "data_format",
+      "value": "json",
+      "normalized_value": "json",
+      "evidence": "The data is released in a json format with each example (json object) representing one alternative question along with its referring expressions.",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Indicates the file format needed to programmatically load and parse the data."
+    },
+    {
+      "field": "schema_fields",
+      "value": "* domain: The domain of the example: “BOOKS”, “RECIPES”, or “SONGS”.\n* question: An alternative question providing two choices.\n* target: The URL of the target entity.\n* target_index: The index (position) of the target entity in the question (0 or 1).\n* sampling_method: The sampling method used to sample the entities in the question (e.g., SAME_NAME, SIMILAR_NAME, or SIMILAR_DESCRIPTION).\n* description_section: The title of the Wikipedia section shown to crowd workers. If empty, indicates the first section. This does not apply to the \"SONGS\" domain.\n* choices: Information about the two choices. See below fields for more information.\n* choice/name: The name of the choice.\n* choice/wikipedia_url: The Wikipedia URL of the choice.\n* choice/description: The choice description shown to crowd workers.\n* choice/infobox: Textual representation of the choice’s Wikipedia infobox.\n* choice/unshown_background: The choice/infobox above concatenated with Wikipedia sections that were *not* shown to crowd workers.\n* expressions: Referring expressions written by crowd workers to select the target entity.",
+      "normalized_value": "* domain: The domain of the example: “BOOKS”, “RECIPES”, or “SONGS”. * question: An alternative question providing two choices. * target: The URL of the target entity. * target_index: The index (position) of the target entity in the question (0 or 1). * sampling_method: The sampling method used to sample the entities in the question (e.g., SAME_NAME, SIMILAR_NAME, or SIMILAR_DESCRIPTION). * description_section: The title of the Wikipedia section shown to crowd workers. If empty, indicates the first section. This does not apply to the \"SONGS\" domain. * choices: Information about the two choices. See below fields for more information. * choice/name: The name of the choice. * choice/wikipedia_url: The Wikipedia URL of the choice. * choice/description: The choice description shown to crowd workers. * choice/infobox: Textual representation of the choice’s Wikipedia infobox. * choice/unshown_background: The choice/infobox above concatenated with Wikipedia sections that were *not* shown to crowd workers. * expressions: Referring expressions written by crowd workers to select the target entity.",
+      "evidence": "* domain: The domain of the example: “BOOKS”, “RECIPES”, or “SONGS”.\n* question: An alternative question providing two choices.\n* target: The URL of the target entity.\n* target_index: The index (position) of the target entity in the question (0 or 1).\n* sampling_method: The sampling method used to sample the entities in the question (e.g., SAME_NAME, SIMILAR_NAME, or SIMILAR_DESCRIPTION).\n* description_section: The title of the Wikipedia section shown to crowd workers. If empty, indicates the first section. This does not apply to the \"SONGS\" domain.\n* choices: Information about the two choices. See below fields for more information.\n* choice/name: The name of the choice.\n* choice/wikipedia_url: The Wikipedia URL of the choice.\n* choice/description: The choice description shown to crowd workers.\n* choice/infobox: Textual representation of the choice’s Wikipedia infobox.\n* choice/unshown_background: The choice/infobox above concatenated with Wikipedia sections that were *not* shown to crowd workers.\n* expressions: Referring expressions written by crowd workers to select the target entity.",
+      "evidence_location": "25-37",
+      "confidence": "high",
+      "reason": "Details the exact keys and structure of each record, enabling correct data parsing and feature extraction."
+    },
+    {
+      "field": "dataset_domains",
+      "value": "BOOKS, RECIPES, SONGS",
+      "normalized_value": "BOOKS, RECIPES, SONGS",
+      "evidence": "* domain: The domain of the example: “BOOKS”, “RECIPES”, or “SONGS”.",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Identifies the specific categorical scopes covered by the dataset."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2212.10933",
+      "normalized_value": "https://arxiv.org/abs/2212.10933",
+      "evidence": "A full description of the data collection methodology, analyses, human rater instructions, and the performance of the SOTA LLMs can be found in the associated research [paper](https://arxiv.org/abs/2212.10933).",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Provides direct access to the academic publication detailing methodology and benchmarks."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "```\n@article{hosseini2022resolving,\n  title={Resolving Indirect Referring Expressions for Entity Selection},\n  author={Hosseini, Mohammad Javad and Radlinski, Filip and Pareti, Silvia and Louis, Annie},\n  journal={arXiv preprint arXiv:2212.10933},\n  year={2022}\n}\n```",
+      "normalized_value": "@article{hosseini2022resolving, title={Resolving Indirect Referring Expressions for Entity Selection}, author={Hosseini, Mohammad Javad and Radlinski, Filip and Pareti, Silvia and Louis, Annie}, journal={arXiv preprint arXiv:2212.10933}, year={2022}}",
+      "evidence": "```\n@article{hosseini2022resolving,\n  title={Resolving Indirect Referring Expressions for Entity Selection},\n  author={Hosseini, Mohammad Javad and Radlinski, Filip and Pareti, Silvia and Louis, Annie},\n  journal={arXiv preprint arXiv:2212.10933},\n  year={2022}\n}\n```",
+      "evidence_location": "44-50",
+      "confidence": "high",
+      "reason": "Standardized BibTeX entry for accurate academic citation and reference management."
+    },
+    {
+      "field": "data_splits",
+      "value": "For each domain (*books*, *recipes*, and *songs*), a subdirectory contains all its examples which are split into *train.json*, *dev.json*, and *test.json*. In addition, the mixed subdirectory contains the mix of examples in the three domains.",
+      "normalized_value": "For each domain (*books*, *recipes*, and *songs*), a subdirectory contains all its examples which are split into *train.json*, *dev.json*, and *test.json*. In addition, the mixed subdirectory contains the mix of examples in the three domains.",
+      "evidence": "For each domain (*books*, *recipes*, and *songs*), a subdirectory contains all its examples which are split into *train.json*, *dev.json*, and *test.json*. In addition, the mixed subdirectory contains the mix of examples in the three domains.",
+      "evidence_location": "39",
+      "confidence": "high",
+      "reason": "Describes the official train/validation/test partitioning and directory layout for reproducible evaluation."
+    }
+  ]
+}

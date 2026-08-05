@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Simple learning agents interacting with an agent-based market model",
+      "normalized_value": "Simple learning agents interacting with an agent-based market model",
+      "evidence": "# Simple learning agents interacting with an agent-based market model",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Project title/name explicitly stated"
+    },
+    {
+      "field": "description",
+      "value": "We consider the learning dynamics of a single reinforcement learning optimal execution trading agent when it interacts with an event driven agent-based financial market model. Trading takes place asynchronously through a matching engine in event time. The optimal execution agent is considered at different levels of initial order-sizes and differently sized state spaces. The resulting impact on the agent-based model and market are considered using a calibration approach that explores changes in the empirical stylised facts and price impact curves. Convergence, volume trajectory and action trace plots are used to visualise the learning dynamics.",
+      "normalized_value": "We consider the learning dynamics of a single reinforcement learning optimal execution trading agent when it interacts with an event driven agent-based financial market model. Trading takes place asynchronously through a matching engine in event time. The optimal execution agent is considered at different levels of initial order-sizes and differently sized state spaces. The resulting impact on the agent-based model and market are considered using a calibration approach that explores changes in the empirical stylised facts and price impact curves. Convergence, volume trajectory and action trace plots are used to visualise the learning dynamics.",
+      "evidence": "We consider the learning dynamics of a single reinforcement learning optimal execution trading agent when it interacts with an event driven agent-based financial market model. Trading takes place asynchronously through a matching engine in event time. The optimal execution agent is considered at different levels of initial order-sizes and differently sized state spaces. The resulting impact on the agent-based model and market are considered using a calibration approach that explores changes in the empirical stylised facts and price impact curves. Convergence, volume trajectory and action trace plots are used to visualise the learning dynamics.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Detailed description of project purpose and methodology"
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "normalized_value": "https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "evidence": "git clone https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "evidence_location": "16-18",
+      "confidence": "high",
+      "reason": "Primary repository URL for cloning the project"
+    },
+    {
+      "field": "programming_language",
+      "value": "Julia version 1.7.1",
+      "normalized_value": "Julia version 1.7.1",
+      "evidence": "Julia version 1.7.1.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Primary programming language and version requirement"
+    },
+    {
+      "field": "prerequisites",
+      "value": "Julia version 1.7.1, A text editor such as VS Code or Atom, Git, The matching engine used is a fork from the official release of version v1.1.0 of CoinTossX",
+      "normalized_value": "Julia version 1.7.1, A text editor such as VS Code or Atom, Git, The matching engine used is a fork from the official release of version v1.1.0 of CoinTossX",
+      "evidence": "1. Julia version 1.7.1.\n2. A text editor such as [VS Code](https://code.visualstudio.com/) or [Atom](https://atom.io/).\n4. [Git](https://git-scm.com/)\n3. The matching engine used is a fork from the official release of version [v1.1.0](https://github.com/dharmeshsing/CoinTossX/tree/v1.1.0) of [CoinTossX](https://github.com/dharmeshsing/CoinTossX).",
+      "evidence_location": "7-10",
+      "confidence": "high",
+      "reason": "Complete list of software prerequisites for running the project"
+    },
+    {
+      "field": "branch_names",
+      "value": "Calibrated-ABM, RL-ABM",
+      "normalized_value": "Calibrated-ABM, RL-ABM",
+      "evidence": "The [Calibrated-ABM](https://github.com/matthewdicks98/MDTG-MALABM/tree/Calibrated-ABM) branch... The [RL-ABM](https://github.com/matthewdicks98/MDTG-MALABM/tree/RL-ABM) branch...",
+      "evidence_location": "29, 36",
+      "confidence": "high",
+      "reason": "Key repository branches with different functionality"
+    },
+    {
+      "field": "branch_functionality",
+      "value": "Calibrated-ABM: Simulate the event-based ABM, Perform sensitivity analysis and calibration, Clean JSE L1LOB TAQ data and ABM simulation data, Generate price path and stylised fact visualisations; RL-ABM: Simulate event-based ABM with RL agent for one episode, Train RL agent inside ABM, Visualise convergence and learning dynamics, Visualise effect of RL agent on ABM",
+      "normalized_value": "Calibrated-ABM: Simulate the event-based ABM, Perform sensitivity analysis and calibration, Clean JSE L1LOB TAQ data and ABM simulation data, Generate price path and stylised fact visualisations; RL-ABM: Simulate event-based ABM with RL agent for one episode, Train RL agent inside ABM, Visualise convergence and learning dynamics, Visualise effect of RL agent on ABM",
+      "evidence": "* Simulate the event-based ABM.\n* Perform the sensitivity analysis and calibration of the ABM.\n* Clean JSE L1LOB TAQ data as well as clean raw message data from the ABM simulation.\n* Generate price path and stylised fact visualisations.\n\n...contains additional files needed to:\n\n* Simulate the event-based ABM with an RL agent included for one episode.\n* Train an RL agent inside the ABM.\n* Visualise the convergence and learning dynamics of the RL agent.\n* Visualise the effect the RL agent had on the ABM.",
+      "evidence_location": "31-35, 38-42",
+      "confidence": "high",
+      "reason": "Detailed functionality available in each branch"
+    },
+    {
+      "field": "git_checkout_command",
+      "value": "git checkout <branch_name>",
+      "normalized_value": "git checkout <branch_name>",
+      "evidence": "git checkout <branch_name>",
+      "evidence_location": "45-47",
+      "confidence": "high",
+      "reason": "Command for switching between branches"
+    },
+    {
+      "field": "key_files_calibrated_abm",
+      "value": "RunReactiveABM.jl: runs the event-based simulation once for a given set of parameters; SensitivityAnalysis.jl: runs the sensitivity analysis for given ranges of parameter values; Calibration.jl: uses NMTA.jl to calibrate the ABM to a day of JSE data; NMTA.jl: implements the Nelder-Mead with threshold accepting optimisation algorithm; CoinTossX.jl and JSE.jl: clean the ABM and JSE data into the L1LOB format respectively; StylisedFacts.jl: visualises the stylised facts found in the ABM and the JSE",
+      "normalized_value": "RunReactiveABM.jl: runs the event-based simulation once for a given set of parameters; SensitivityAnalysis.jl: runs the sensitivity analysis for given ranges of parameter values; Calibration.jl: uses NMTA.jl to calibrate the ABM to a day of JSE data; NMTA.jl: implements the Nelder-Mead with threshold accepting optimisation algorithm; CoinTossX.jl and JSE.jl: clean the ABM and JSE data into the L1LOB format respectively; StylisedFacts.jl: visualises the stylised facts found in the ABM and the JSE",
+      "evidence": "* [RunReactiveABM.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/RunReactiveABM.jl) runs the event-based simulation once for a given set of parameters.  \n* [SensitivityAnalysis.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/SensitivityAnalysis.jl) runs the sensitivity analysis for given ranges of parameter values.\n* [Calibration.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/Calibration.jl) uses [NMTA.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/NMTA.jl) to calibrate the ABM to a day of JSE data. [NMTA.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/NMTA.jl) implements the Nelder-Mead with threshold accepting optimisation algorithm.\n* [CoinTossX.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/CoinTossX.jl) and [JSE.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/JSE.jl) clean the ABM and JSE data into the L1LOB format respectively. [CoinTossX.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/CoinTossX.jl) also visualises the realised price path.\n* [StylisedFacts.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/StylisedFacts.jl) visualises the stylised facts found in the ABM and the JSE.",
+      "evidence_location": "53-59",
+      "confidence": "high",
+      "reason": "Key files and their purposes for the Calibrated-ABM branch"
+    },
+    {
+      "field": "key_files_rl_abm",
+      "value": "RLUtilities.jl: contains functions that can simulate an RL agent in an ABM for one episode and train the RL agent to optimally liquidate a parent order; RLVisualizations.jl: allows you to visualise different aspects of the RL agent's convergence as well as the learning dynamics and how the agent has affected the ABM; StylisedFacts.jl: includes extra functionality that allows you to visualise stylised facts for the RL agent",
+      "normalized_value": "RLUtilities.jl: contains functions that can simulate an RL agent in an ABM for one episode and train the RL agent to optimally liquidate a parent order; RLVisualizations.jl: allows you to visualise different aspects of the RL agent's convergence as well as the learning dynamics and how the agent has affected the ABM; StylisedFacts.jl: includes extra functionality that allows you to visualise stylised facts for the RL agent",
+      "evidence": "* [RLUtilities.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/RLUtilities.jl) which contains functions that can simulate an RL agent in an ABM for one episode and train the RL agent to optimally liquidate a parent order. \n* [RLVisualizations.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/RLVisualizations.jl) which allows you to visualise different aspects of the RL agent's convergence as well as the learning dynamics and how the agent has affected the ABM.\n* The [StylisedFacts.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/StylisedFacts.jl) file includes extra functionality that allows you to visualise stylised facts for the RL agent.",
+      "evidence_location": "63-66",
+      "confidence": "high",
+      "reason": "Additional key files for the RL-ABM branch"
+    },
+    {
+      "field": "authors",
+      "value": "Matthew Dicks, Tim Gebbie",
+      "normalized_value": "Matthew Dicks, Tim Gebbie",
+      "evidence": "1. Matthew Dicks\n2. Tim Gebbie",
+      "evidence_location": "71-72",
+      "confidence": "high",
+      "reason": "Project authors"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2208.10434",
+      "normalized_value": "https://arxiv.org/abs/2208.10434",
+      "evidence": "The link to the arxiv paper can be found [here](https://arxiv.org/abs/2208.10434).",
+      "evidence_location": "76",
+      "confidence": "high",
+      "reason": "Link to associated research paper"
+    },
+    {
+      "field": "related_repository",
+      "value": "IJPCTG-ABMCoinTossX: https://github.com/IvanJericevich/IJPCTG-ABMCoinTossX",
+      "normalized_value": "IJPCTG-ABMCoinTossX: https://github.com/IvanJericevich/IJPCTG-ABMCoinTossX",
+      "evidence": "the implementation found in this repository: [IJPCTG-ABMCoinTossX](https://github.com/IvanJericevich/IJPCTG-ABMCoinTossX).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Related repository that this project extends"
+    },
+    {
+      "field": "dependency_repository",
+      "value": "CoinTossX fork: https://github.com/IvanJericevich/CoinTossX (version v1.1.0)",
+      "normalized_value": "CoinTossX fork: https://github.com/IvanJericevich/CoinTossX (version v1.1.0)",
+      "evidence": "The matching engine used is a fork from the official release of version [v1.1.0](https://github.com/dharmeshsing/CoinTossX/tree/v1.1.0) of [CoinTossX](https://github.com/dharmeshsing/CoinTossX). This fork was used because it contains a UDP socket on which market data updates can be received from the matching engine. The fork can be found [here](https://github.com/IvanJericevich/CoinTossX).",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Dependency repository with specific version requirement"
+    }
+  ]
+}

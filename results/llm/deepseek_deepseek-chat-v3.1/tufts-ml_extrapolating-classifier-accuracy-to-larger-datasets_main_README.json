@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "extrapolating-classifier-accuracy-to-larger-datasets",
+      "normalized_value": "extrapolating-classifier-accuracy-to-larger-datasets",
+      "evidence": "# extrapolating-classifier-accuracy-to-larger-datasets",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the name of the artifact/repository"
+    },
+    {
+      "field": "paper_title",
+      "value": "A Probabilistic Method to Predict Classifier Accuracy on Larger Datasets given Small Pilot Data",
+      "normalized_value": "A Probabilistic Method to Predict Classifier Accuracy on Larger Datasets given Small Pilot Data",
+      "evidence": "A Probabilistic Method to Predict Classifier Accuracy on Larger Datasets given Small Pilot Data",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides the title of the associated research paper"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2311.18025",
+      "normalized_value": "https://arxiv.org/abs/2311.18025",
+      "evidence": "https://arxiv.org/abs/2311.18025",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Direct link to the paper for reference and citation"
+    },
+    {
+      "field": "authors",
+      "value": "Ethan Harvey, Wansu Chen, David M. Kent, and Michael C. Hughes",
+      "normalized_value": "Ethan Harvey, Wansu Chen, David M. Kent, and Michael C. Hughes",
+      "evidence": "Ethan Harvey, Wansu Chen, David M. Kent, and Michael C. Hughes",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Lists authors for proper attribution and citation"
+    },
+    {
+      "field": "method_name",
+      "value": "APEx-GP",
+      "normalized_value": "APEx-GP",
+      "evidence": "APEx-GP",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Names the specific method (Gaussian process-based accuracy probabilistic extrapolator)"
+    },
+    {
+      "field": "problem_statement",
+      "value": "given that the classifier's accuracy is y% at the current size x, how much better might the model do at 2x, 10x, or 50x images?",
+      "normalized_value": "given that the classifier's accuracy is y% at the current size x, how much better might the model do at 2x, 10x, or 50x images?",
+      "evidence": "given that the classifier's accuracy is y% at the current size x, how much better might the model do at 2x, 10x, or 50x images?",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Clearly states the core problem the method addresses"
+    },
+    {
+      "field": "usage_notebook",
+      "value": "notebooks/demo.ipynb",
+      "normalized_value": "notebooks/demo.ipynb",
+      "evidence": "notebooks/demo.ipynb",
+      "evidence_location": "30",
+      "confidence": "high",
+      "reason": "Provides direct path to usage demonstration notebook"
+    },
+    {
+      "field": "initialization_code",
+      "value": "likelihood = gpytorch.likelihoods.GaussianLikelihood()\n# Note: If you want to use the Gaussian process with an arctan mean function use models.GPArctan() instead.\nmodel = models.GPPowerLaw(X_train, y_train, likelihood, epsilon_min=0.05, with_priors=True)",
+      "normalized_value": "likelihood = gpytorch.likelihoods.GaussianLikelihood() # Note: If you want to use the Gaussian process with an arctan mean function use models.GPArctan() instead. model = models.GPPowerLaw(X_train, y_train, likelihood, epsilon_min=0.05, with_priors=True)",
+      "evidence": "```python\nlikelihood = gpytorch.likelihoods.GaussianLikelihood()\n# Note: If you want to use the Gaussian process with an arctan mean function use models.GPArctan() instead.\nmodel = models.GPPowerLaw(X_train, y_train, likelihood, epsilon_min=0.05, with_priors=True)\n```",
+      "evidence_location": "34-38",
+      "confidence": "high",
+      "reason": "Provides code for initializing the Gaussian process model"
+    },
+    {
+      "field": "extrapolation_code",
+      "value": "with torch.no_grad(): predictions = likelihood(model(X_test))\nloc = predictions.mean.numpy()\nscale = predictions.stddev.numpy()\n# Note: If you want to forecast with 20%-80% change lower and upper percentile.\nlower, upper = priors.truncated_normal_uncertainty(a=0.0, b=1.0, loc=loc, scale=scale, lower_percentile=0.025, upper_percentile=0.975)",
+      "normalized_value": "with torch.no_grad(): predictions = likelihood(model(X_test)) loc = predictions.mean.numpy() scale = predictions.stddev.numpy() # Note: If you want to forecast with 20%-80% change lower and upper percentile. lower, upper = priors.truncated_normal_uncertainty(a=0.0, b=1.0, loc=loc, scale=scale, lower_percentile=0.025, upper_percentile=0.975)",
+      "evidence": "```python\nwith torch.no_grad(): predictions = likelihood(model(X_test))\nloc = predictions.mean.numpy()\nscale = predictions.stddev.numpy()\n# Note: If you want to forecast with 20%-80% change lower and upper percentile.\nlower, upper = priors.truncated_normal_uncertainty(a=0.0, b=1.0, loc=loc, scale=scale, lower_percentile=0.025, upper_percentile=0.975)\n```",
+      "evidence_location": "42-48",
+      "confidence": "high",
+      "reason": "Provides code for making predictions and uncertainty estimation"
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{harvey2023probabilistic,\n  author={Harvey, Ethan and Chen, Wansu and Kent, David M. and Hughes, Michael C.},\n  title={A Probabilistic Method to Predict Classifier Accuracy on Larger Datasets given Small Pilot Data},\n  booktitle={Machine Learning for Health (ML4H)},\n  year={2023}\n}",
+      "normalized_value": "@inproceedings{harvey2023probabilistic, author={Harvey, Ethan and Chen, Wansu and Kent, David M. and Hughes, Michael C.}, title={A Probabilistic Method to Predict Classifier Accuracy on Larger Datasets given Small Pilot Data}, booktitle={Machine Learning for Health (ML4H)}, year={2023}}",
+      "evidence": "```bibtex\n@inproceedings{harvey2023probabilistic,\n  author={Harvey, Ethan and Chen, Wansu and Kent, David M. and Hughes, Michael C.},\n  title={A Probabilistic Method to Predict Classifier Accuracy on Larger Datasets given Small Pilot Data},\n  booktitle={Machine Learning for Health (ML4H)},\n  year={2023}\n}\n```",
+      "evidence_location": "52-58",
+      "confidence": "high",
+      "reason": "Provides complete BibTeX citation for proper attribution"
+    },
+    {
+      "field": "reproduction_steps",
+      "value": "To reproduce model performance at varying dataset sizes 1) download datasets (see `encode_images/README.md` and `label_images/README.md` for more details) and 2) fit classifiers to each dataset (see `src/finetune_2D.py` and `src/finetune_3D.py`). The results from our paper are saved in `experiments/`.",
+      "normalized_value": "To reproduce model performance at varying dataset sizes 1) download datasets (see `encode_images/README.md` and `label_images/README.md` for more details) and 2) fit classifiers to each dataset (see `src/finetune_2D.py` and `src/finetune_3D.py`). The results from our paper are saved in `experiments/`.",
+      "evidence": "To reproduce model performance at varying dataset sizes 1) download datasets (see `encode_images/README.md` and `label_images/README.md` for more details) and 2) fit classifiers to each dataset (see `src/finetune_2D.py` and `src/finetune_3D.py`). The results from our paper are saved in `experiments/`.",
+      "evidence_location": "63",
+      "confidence": "high",
+      "reason": "Provides specific steps and file paths for reproducing results"
+    },
+    {
+      "field": "reproduction_notebooks",
+      "value": "notebooks/figures.ipynb and notebooks/tables.ipynb",
+      "normalized_value": "notebooks/figures.ipynb and notebooks/tables.ipynb",
+      "evidence": "notebooks/figures.ipynb and notebooks/tables.ipynb",
+      "evidence_location": "65",
+      "confidence": "high",
+      "reason": "Lists notebooks for reproducing figures and tables from the paper"
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "area under the receiver operating characteristic (AUROC)",
+      "normalized_value": "area under the receiver operating characteristic (AUROC)",
+      "evidence": "area under the receiver operating characteristic (AUROC)",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Specifies the evaluation metric used in the research"
+    },
+    {
+      "field": "compared_method",
+      "value": "power law (Rosenfeld et al., 2020)",
+      "normalized_value": "power law (Rosenfeld et al., 2020)",
+      "evidence": "power law (Rosenfeld et al., 2020)",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Identifies the baseline method used for comparison"
+    }
+  ]
+}

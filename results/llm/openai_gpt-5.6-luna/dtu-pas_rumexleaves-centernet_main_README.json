@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "RumexLeaves-CenterNet",
+      "normalized_value": "RumexLeaves-CenterNet",
+      "evidence": "# RumexLeaves-CenterNet",
+      "evidence_location": "1; header",
+      "confidence": "high",
+      "reason": "Names the repository artifact."
+    },
+    {
+      "field": "artifact_purpose",
+      "value": "This repository contains the official implementation for",
+      "normalized_value": "This repository contains the official implementation for",
+      "evidence": "This repository contains the official implementation for",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Explicitly identifies the repository as the official implementation of the associated work."
+    },
+    {
+      "field": "paper",
+      "value": "Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances.",
+      "normalized_value": "Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances.",
+      "evidence": "[Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances.](https://ieeexplore.ieee.org/document/10373101) Ronja Güldenring, Rasmus Eckholdt Andersen and Lazaros Nalpantidis, IEEE Robotics and Automation Letters (RA-L), 2023",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Provides the associated paper title, authors, venue, year, and publication link."
+    },
+    {
+      "field": "task",
+      "value": "extract fine-grained phenotypic information, such as leaf-, stem-, and vein instances",
+      "normalized_value": "extract fine-grained phenotypic information, such as leaf-, stem-, and vein instances",
+      "evidence": "We develop a model to extract fine-grained phenotypic information, such as leaf-, stem-, and vein instances.",
+      "evidence_location": "12; Abstract",
+      "confidence": "high",
+      "reason": "Describes the central prediction and analysis task supported by the artifact."
+    },
+    {
+      "field": "dataset",
+      "value": "RumexLeaves",
+      "normalized_value": "RumexLeaves",
+      "evidence": "The underlying dataset \\textit{RumexLeaves} is made publicly available and is the first of its kind with keypoint-guided polyline annotations leading along the line from the lowest stem point along the leaf basal to the leaf apex.",
+      "evidence_location": "12; Abstract",
+      "confidence": "high",
+      "reason": "Identifies the dataset used by the project and describes its annotation format."
+    },
+    {
+      "field": "evaluation_metric",
+      "value": "POKS",
+      "normalized_value": "POKS",
+      "evidence": "Furthermore, we introduce an adapted metric POKS complying with the concept of keypoint-guided polylines.",
+      "evidence_location": "12; Abstract",
+      "confidence": "high",
+      "reason": "Names the adapted evaluation metric introduced for keypoint-guided polylines."
+    },
+    {
+      "field": "dataset_link",
+      "value": "https://data.dtu.dk/articles/dataset/_strong_RumexLeaves_Dataset_introduced_by_Paper_Fine-grained_Leaf_Analysis_for_Efficient_Weeding_Robots_strong_/23659524",
+      "normalized_value": "https://data.dtu.dk/articles/dataset/_strong_RumexLeaves_Dataset_introduced_by_Paper_Fine-grained_Leaf_Analysis_for_Efficient_Weeding_Robots_strong_/23659524",
+      "evidence": "* [Dataset](https://data.dtu.dk/articles/dataset/_strong_RumexLeaves_Dataset_introduced_by_Paper_Fine-grained_Leaf_Analysis_for_Efficient_Weeding_Robots_strong_/23659524)",
+      "evidence_location": "18; Sources",
+      "confidence": "high",
+      "reason": "Provides a direct access link to the dataset."
+    },
+    {
+      "field": "project_links",
+      "value": "RumexLeaves Website; Publication; Arxiv",
+      "normalized_value": "RumexLeaves Website; Publication; Arxiv",
+      "evidence": "* [RumexLeaves Website](https://dtu-pas.github.io/RumexLeaves/)\n* [Publication](https://ieeexplore.ieee.org/document/10373101)\n* [Arxiv](https://arxiv.org/abs/2312.08805)",
+      "evidence_location": "15-17; Sources",
+      "confidence": "high",
+      "reason": "Collects the project website and publication access points."
+    },
+    {
+      "field": "local_setup_commands",
+      "value": "make create_environment\nmake requirements",
+      "normalized_value": "make create_environment make requirements",
+      "evidence": "    ```\n    make create_environment\n    make requirements\n    ```",
+      "evidence_location": "20-25; Getting started locally",
+      "confidence": "high",
+      "reason": "Defines the documented environment creation and dependency installation steps."
+    },
+    {
+      "field": "data_preparation_command",
+      "value": "make data",
+      "normalized_value": "make data",
+      "evidence": "    ```\n    make data\n    ```",
+      "evidence_location": "26-28; Getting started locally",
+      "confidence": "high",
+      "reason": "Provides the documented command for downloading and preparing data."
+    },
+    {
+      "field": "model_weights_command",
+      "value": "make download_weights",
+      "normalized_value": "make download_weights",
+      "evidence": "    ```\n    make download_weights\n    ```",
+      "evidence_location": "34-36; Getting started locally",
+      "confidence": "high",
+      "reason": "Provides the command for obtaining pretrained model weights."
+    },
+    {
+      "field": "inference_command",
+      "value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/inference.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth -img data/processed/RumexLeaves/iNaturalist/4150.jpg",
+      "normalized_value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/inference.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth -img data/processed/RumexLeaves/iNaturalist/4150.jpg",
+      "evidence": "    ```\n    conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/inference.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth -img data/processed/RumexLeaves/iNaturalist/4150.jpg\n    ```",
+      "evidence_location": "38-41; Getting started locally",
+      "confidence": "high",
+      "reason": "Provides a reproducible example inference invocation, configuration, checkpoint, and input image."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/evaluate.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth",
+      "normalized_value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/evaluate.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth",
+      "evidence": "    ```\n    conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/evaluate.py --exp_file exp_files/eval_inat.py -ckpt models/final_model.pth\n    ```",
+      "evidence_location": "42-45; Getting started locally",
+      "confidence": "high",
+      "reason": "Defines validation of the final model on iNaturalist data."
+    },
+    {
+      "field": "training_command",
+      "value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/train.py --exp_file exp_files/train_final_model.py",
+      "normalized_value": "conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/train.py --exp_file exp_files/train_final_model.py",
+      "evidence": "    ```\n    conda run -n rumexleaves_centernet python rumexleaves_centernet/tools/train.py --exp_file exp_files/train_final_model.py\n    ```",
+      "evidence_location": "46-49; Getting started locally",
+      "confidence": "high",
+      "reason": "Provides the command for training the final model from scratch."
+    },
+    {
+      "field": "docker_build_command",
+      "value": "docker build -f dockerfiles/train_model.dockerfile . -t train_model:latest",
+      "normalized_value": "docker build -f dockerfiles/train_model.dockerfile . -t train_model:latest",
+      "evidence": "     ```\n     docker build -f dockerfiles/train_model.dockerfile . -t train_model:latest\n     ```",
+      "evidence_location": "60-63; Getting started with Docker",
+      "confidence": "high",
+      "reason": "Defines how to build the Docker image used for training."
+    },
+    {
+      "field": "docker_training_command",
+      "value": "docker run --gpus all -v \"$(pwd)/data/processed:/data/processed\" -v \"$(pwd)/log:/log\" -v \"$(pwd)/exp_files/train_final_model.py:/exp_file.py\" -e WANDB_API_KEY=<your-api-key> --shm-size=500m train_model",
+      "normalized_value": "docker run --gpus all -v \"$(pwd)/data/processed:/data/processed\" -v \"$(pwd)/log:/log\" -v \"$(pwd)/exp_files/train_final_model.py:/exp_file.py\" -e WANDB_API_KEY=<your-api-key> --shm-size=500m train_model",
+      "evidence": "     ```\n     docker run --gpus all -v \"$(pwd)/data/processed:/data/processed\" -v \"$(pwd)/log:/log\" -v \"$(pwd)/exp_files/train_final_model.py:/exp_file.py\" -e WANDB_API_KEY=<your-api-key> --shm-size=500m train_model\n     ```",
+      "evidence_location": "64-67; Getting started with Docker",
+      "confidence": "high",
+      "reason": "Documents GPU-enabled container execution, mounted paths, API key configuration, and shared-memory setting for training."
+    },
+    {
+      "field": "required_submodules_command",
+      "value": "git submodule update --init --recursive",
+      "normalized_value": "git submodule update --init --recursive",
+      "evidence": "     ```\n     git submodule update --init --recursive\n     ```",
+      "evidence_location": "56-59; Getting started with Docker",
+      "confidence": "high",
+      "reason": "Provides the required command for initializing project submodules."
+    },
+    {
+      "field": "dependency_files",
+      "value": "requirements.txt; requirements_dev.txt; pyproject.toml",
+      "normalized_value": "requirements.txt; requirements_dev.txt; pyproject.toml",
+      "evidence": "├── pyproject.toml       <- Project configuration file\n│\n├── requirements.txt     <- The requirements file for reproducing the analysis environment\n│\n├── requirements_dev.txt <- The requirements file for reproducing the analysis environment",
+      "evidence_location": "86-90; Project structure",
+      "confidence": "high",
+      "reason": "Identifies the project configuration and dependency files relevant to environment reproduction."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "└── LICENSE              <- MIT License",
+      "evidence_location": "98; Project structure",
+      "confidence": "high",
+      "reason": "States the artifact's license."
+    },
+    {
+      "field": "citation",
+      "value": "@article{RumexLeaves-CenterNet,\nauthor = {Güldenring, Ronja and Andersen, Rasmus Eckholdt and Nalpantidis, Lazaros},\ntitle = {Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances},\njournal = {IEEE Robotics and Automation Letters (RA-L)},\nyear = {2024}\n}",
+      "normalized_value": "@article{RumexLeaves-CenterNet, author = {Güldenring, Ronja and Andersen, Rasmus Eckholdt and Nalpantidis, Lazaros}, title = {Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances}, journal = {IEEE Robotics and Automation Letters (RA-L)}, year = {2024} }",
+      "evidence": "```\n@article{RumexLeaves-CenterNet,\nauthor = {Güldenring, Ronja and Andersen, Rasmus Eckholdt and Nalpantidis, Lazaros},\ntitle = {Zoom in on the Plant: Fine-grained Analysis of Leaf, Stem and Vein Instances},\njournal = {IEEE Robotics and Automation Letters (RA-L)},\nyear = {2024}\n}\n```",
+      "evidence_location": "104-114; Citation",
+      "confidence": "high",
+      "reason": "Provides the recommended BibTeX citation for reuse and attribution."
+    },
+    {
+      "field": "code_bases",
+      "value": "CenterNet; YOLOX; Deformabel Convolutions v2 (pytorch)",
+      "normalized_value": "CenterNet; YOLOX; Deformabel Convolutions v2 (pytorch)",
+      "evidence": "* [CenterNet](https://github.com/xingyizhou/CenterNet)\n* [YOLOX](https://raw.githubusercontent.com/Megvii-BaseDetection/YOLOX)\n* [Deformabel Convolutions v2 (pytorch)](https://github.com/developer0hye/PyTorch-Deformable-Convolution-v2)",
+      "evidence_location": "116-120; References",
+      "confidence": "high",
+      "reason": "Identifies upstream code bases on which the project is partially based."
+    }
+  ]
+}

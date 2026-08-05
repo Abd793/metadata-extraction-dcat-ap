@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "Highway",
+      "normalized_value": "Highway",
+      "evidence": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "evidence_location": "Line 5",
+      "confidence": "high",
+      "reason": "Explicitly names the project and its purpose"
+    },
+    {
+      "field": "description",
+      "value": "C++ library that provides portable SIMD/vector intrinsics",
+      "normalized_value": "C++ library that provides portable SIMD/vector intrinsics",
+      "evidence": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "evidence_location": "Line 5",
+      "confidence": "high",
+      "reason": "Core description of what the artifact does"
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://google.github.io/highway/en/master/",
+      "normalized_value": "https://google.github.io/highway/en/master/",
+      "evidence": "[Documentation](https://google.github.io/highway/en/master/)",
+      "evidence_location": "Line 7",
+      "confidence": "high",
+      "reason": "Primary documentation link for the project"
+    },
+    {
+      "field": "license",
+      "value": "Apache 2 / BSD-3",
+      "normalized_value": "Apache 2 / BSD-3",
+      "evidence": "Previously licensed under Apache 2, now dual-licensed as Apache 2 / BSD-3.",
+      "evidence_location": "Line 9",
+      "confidence": "high",
+      "reason": "License information critical for reuse"
+    },
+    {
+      "field": "programming_language",
+      "value": "C++",
+      "normalized_value": "C++",
+      "evidence": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "evidence_location": "Line 5",
+      "confidence": "high",
+      "reason": "Primary programming language used"
+    },
+    {
+      "field": "minimum_cpp_version",
+      "value": "C++11",
+      "normalized_value": "C++11",
+      "evidence": "Highway only requires C++11 and supports four families of compilers.",
+      "evidence_location": "Line 34",
+      "confidence": "high",
+      "reason": "Minimum C++ version requirement for compatibility"
+    },
+    {
+      "field": "supported_architectures",
+      "value": "five architectures",
+      "normalized_value": "five architectures",
+      "evidence": "Highway supports five architectures; the same application code can target various instruction sets, including those with 'scalable' vectors (size unknown at compile time).",
+      "evidence_location": "Line 32",
+      "confidence": "high",
+      "reason": "Information about platform support for portability"
+    },
+    {
+      "field": "supported_targets_count",
+      "value": "24 targets",
+      "normalized_value": "24 targets",
+      "evidence": "Highway supports 24 targets, listed in alphabetical order of platform:",
+      "evidence_location": "Line 146",
+      "confidence": "high",
+      "reason": "Quantitative measure of platform support"
+    },
+    {
+      "field": "build_system",
+      "value": "CMake",
+      "normalized_value": "CMake",
+      "evidence": "This project uses CMake to generate and build.",
+      "evidence_location": "Line 220",
+      "confidence": "high",
+      "reason": "Primary build system for compilation"
+    },
+    {
+      "field": "alternative_build_system",
+      "value": "Bazel",
+      "normalized_value": "Bazel",
+      "evidence": "Bazel is also supported for building, but it is not as widely used/tested.",
+      "evidence_location": "Line 253",
+      "confidence": "high",
+      "reason": "Alternative build system option"
+    },
+    {
+      "field": "dependencies",
+      "value": "googletest",
+      "normalized_value": "googletest",
+      "evidence": "Highway's unit tests use [googletest](https://github.com/google/googletest).",
+      "evidence_location": "Line 227",
+      "confidence": "high",
+      "reason": "Testing dependency required for unit tests"
+    },
+    {
+      "field": "installation_command",
+      "value": "sudo apt install cmake",
+      "normalized_value": "sudo apt install cmake",
+      "evidence": "sudo apt install cmake",
+      "evidence_location": "Line 224",
+      "confidence": "high",
+      "reason": "Command to install build dependency on Debian-based systems"
+    },
+    {
+      "field": "installation_command",
+      "value": "sudo apt install libgtest-dev",
+      "normalized_value": "sudo apt install libgtest-dev",
+      "evidence": "sudo apt install libgtest-dev",
+      "evidence_location": "Line 233",
+      "confidence": "high",
+      "reason": "Command to install testing dependency"
+    },
+    {
+      "field": "build_commands",
+      "value": "mkdir -p build && cd build\ncmake ..\nmake -j && make test",
+      "normalized_value": "mkdir -p build && cd build cmake .. make -j && make test",
+      "evidence": "mkdir -p build && cd build\ncmake ..\nmake -j && make test",
+      "evidence_location": "Lines 246-248",
+      "confidence": "high",
+      "reason": "Standard build commands for the project"
+    },
+    {
+      "field": "vcpkg_installation",
+      "value": "vcpkg install highway",
+      "normalized_value": "vcpkg install highway",
+      "evidence": "vcpkg install highway",
+      "evidence_location": "Line 272",
+      "confidence": "high",
+      "reason": "Package manager installation command"
+    },
+    {
+      "field": "versioning_scheme",
+      "value": "semver.org system (MAJOR.MINOR.PATCH)",
+      "normalized_value": "semver.org system (MAJOR.MINOR.PATCH)",
+      "evidence": "Highway releases aim to follow the semver.org system (MAJOR.MINOR.PATCH), incrementing MINOR after backward-compatible additions and PATCH after backward-compatible fixes.",
+      "evidence_location": "Line 183",
+      "confidence": "high",
+      "reason": "Versioning policy for compatibility management"
+    },
+    {
+      "field": "current_version",
+      "value": "1.0",
+      "normalized_value": "1.0",
+      "evidence": "The current version 1.0 signals an increased focus on backwards compatibility.",
+      "evidence_location": "Line 188",
+      "confidence": "high",
+      "reason": "Current version number for identification"
+    },
+    {
+      "field": "ci_environment",
+      "value": "Clang (running on native x86, or QEMU for RISC-V and Arm) and MSVC 2019 (v19.28, running on native x86)",
+      "normalized_value": "Clang (running on native x86, or QEMU for RISC-V and Arm) and MSVC 2019 (v19.28, running on native x86)",
+      "evidence": "Continuous integration tests build with a recent version of Clang (running on native x86, or QEMU for RISC-V and Arm) and MSVC 2019 (v19.28, running on native x86).",
+      "evidence_location": "Lines 194-196",
+      "confidence": "high",
+      "reason": "CI environment details for reproducibility"
+    },
+    {
+      "field": "contact_email",
+      "value": "janwas@google.com",
+      "normalized_value": "janwas@google.com",
+      "evidence": "Contact: janwas@google.com",
+      "evidence_location": "Line 496",
+      "confidence": "high",
+      "reason": "Contact information for project maintainers"
+    },
+    {
+      "field": "compiler_flags_recommendation",
+      "value": "-O2",
+      "normalized_value": "-O2",
+      "evidence": "For clang and GCC, `-O2` is generally sufficient.",
+      "evidence_location": "Line 372",
+      "confidence": "high",
+      "reason": "Recommended compiler optimization flags for performance"
+    },
+    {
+      "field": "msvc_compiler_flags",
+      "value": "/Gv and /arch:AVX2",
+      "normalized_value": "/Gv and /arch:AVX2",
+      "evidence": "For MSVC, we recommend compiling with `/Gv` to allow non-inlined functions to pass vector arguments in registers. If intending to use the AVX2 target together with half-width vectors (e.g. for `PromoteTo`), it is also important to compile with `/arch:AVX2`.",
+      "evidence_location": "Lines 374-377",
+      "confidence": "high",
+      "reason": "MSVC-specific compiler flags for optimal performance"
+    }
+  ]
+}

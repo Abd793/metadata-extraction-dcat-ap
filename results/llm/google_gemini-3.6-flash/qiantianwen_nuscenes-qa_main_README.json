@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "NuScenes-QA",
+      "normalized_value": "NuScenes-QA",
+      "evidence": "# [AAAI 2024] NuScenes-QA",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the main repository/benchmark name."
+    },
+    {
+      "field": "paper_title",
+      "value": "NuScenes-QA: A Multi-modal Visual Question Answering Benchmark for Autonomous Driving Scenario",
+      "normalized_value": "NuScenes-QA: A Multi-modal Visual Question Answering Benchmark for Autonomous Driving Scenario",
+      "evidence": "NuScenes-QA: A Multi-modal Visual Question Answering Benchmark for Autonomous Driving Scenario",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Specifies the official title of the paper associated with the project."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2305.14836.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2305.14836.pdf",
+      "evidence": "https://arxiv.org/pdf/2305.14836.pdf",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides the direct PDF URL for the arXiv publication."
+    },
+    {
+      "field": "publication_venue",
+      "value": "AAAI 2024",
+      "normalized_value": "AAAI 2024",
+      "evidence": "Our paper is accepted by AAAI 2024!",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Identifies the academic conference where the paper was accepted."
+    },
+    {
+      "field": "dataset_download_url",
+      "value": "https://drive.google.com/drive/folders/1jIkICT23wZWZYPrWCa0x-ubjpClSzOuU?usp=sharing",
+      "normalized_value": "https://drive.google.com/drive/folders/1jIkICT23wZWZYPrWCa0x-ubjpClSzOuU?usp=sharing",
+      "evidence": "https://drive.google.com/drive/folders/1jIkICT23wZWZYPrWCa0x-ubjpClSzOuU?usp=sharing",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Direct link to download the question-answer annotations dataset."
+    },
+    {
+      "field": "feature_download_url",
+      "value": "https://drive.google.com/file/d/1TNsK6cpQ4pd9fH1s7WFxTSXilrT2uNYb/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1TNsK6cpQ4pd9fH1s7WFxTSXilrT2uNYb/view?usp=sharing",
+      "evidence": "https://drive.google.com/file/d/1TNsK6cpQ4pd9fH1s7WFxTSXilrT2uNYb/view?usp=sharing",
+      "evidence_location": "26",
+      "confidence": "high",
+      "reason": "Direct link to download the pre-extracted CenterPoint visual features."
+    },
+    {
+      "field": "nuscenes_dataset_url",
+      "value": "https://www.nuscenes.org/download",
+      "normalized_value": "https://www.nuscenes.org/download",
+      "evidence": "https://www.nuscenes.org/download",
+      "evidence_location": "26",
+      "confidence": "high",
+      "reason": "Provides the URL to download the original nuScenes dataset."
+    },
+    {
+      "field": "dependencies",
+      "value": "python >= 3.5\nCUDA >= 9.0\nPyTorch >= 1.4.0\nSpaCy == 2.1.0",
+      "normalized_value": "python >= 3.5 CUDA >= 9.0 PyTorch >= 1.4.0 SpaCy == 2.1.0",
+      "evidence": "```bash\npython >= 3.5\nCUDA >= 9.0\nPyTorch >= 1.4.0\nSpaCy == 2.1.0\n```",
+      "evidence_location": "57-62",
+      "confidence": "high",
+      "reason": "Lists the software and library dependencies required to build and run the project."
+    },
+    {
+      "field": "installation_commands",
+      "value": "wget https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-2.1.0/en_core_web_lg-2.1.0.tar.gz\npip install en_core_web_lg-2.1.0.tar.gz",
+      "normalized_value": "wget https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-2.1.0/en_core_web_lg-2.1.0.tar.gz pip install en_core_web_lg-2.1.0.tar.gz",
+      "evidence": "```bash\nwget https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-2.1.0/en_core_web_lg-2.1.0.tar.gz\npip install en_core_web_lg-2.1.0.tar.gz\n```",
+      "evidence_location": "66-69",
+      "confidence": "high",
+      "reason": "Provides commands for installing the required SpaCy model dependency."
+    },
+    {
+      "field": "training_command",
+      "value": "python3 run.py --RUN='train' --MODEL='mcan_small' --VIS_FEAT='CenterPoint' --GPU='0, 1'",
+      "normalized_value": "python3 run.py --RUN='train' --MODEL='mcan_small' --VIS_FEAT='CenterPoint' --GPU='0, 1'",
+      "evidence": "```bash\npython3 run.py --RUN='train' --MODEL='mcan_small' --VIS_FEAT='CenterPoint' --GPU='0, 1'\n```",
+      "evidence_location": "75-77",
+      "confidence": "high",
+      "reason": "Provides the command required to start model training."
+    },
+    {
+      "field": "testing_command",
+      "value": "python3 run.py --RUN='val' --MODEL='mcan_small' --VIS_FEAT='CenterPoint' --CKPT_PATH'path/to/ckpt.pkl'",
+      "normalized_value": "python3 run.py --RUN='val' --MODEL='mcan_small' --VIS_FEAT='CenterPoint' --CKPT_PATH'path/to/ckpt.pkl'",
+      "evidence": "```bash\npython3 run.py --RUN='val' --MODEL='mcan_small' --VIS_FEAT='CenterPoint' --CKPT_PATH'path/to/ckpt.pkl'\n```",
+      "evidence_location": "90-92",
+      "confidence": "high",
+      "reason": "Provides the command required to evaluate/test the model."
+    },
+    {
+      "field": "contact_email",
+      "value": "twqian19@fudan.edu.cn",
+      "normalized_value": "twqian19@fudan.edu.cn",
+      "evidence": "twqian19@fudan.edu.cn",
+      "evidence_location": "102",
+      "confidence": "high",
+      "reason": "Identifies the author's contact email for questions about the project."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{qian2023nuscenes,\n  title={NuScenes-QA: A Multi-modal Visual Question Answering Benchmark for Autonomous Driving Scenario},\n  author={Qian, Tianwen and Chen, Jingjing and Zhuo, Linhai and Jiao, Yang and Jiang, Yu-Gang},\n  journal={arXiv preprint arXiv:2305.14836},\n  year={2023}\n}",
+      "normalized_value": "@article{qian2023nuscenes, title={NuScenes-QA: A Multi-modal Visual Question Answering Benchmark for Autonomous Driving Scenario}, author={Qian, Tianwen and Chen, Jingjing and Zhuo, Linhai and Jiao, Yang and Jiang, Yu-Gang}, journal={arXiv preprint arXiv:2305.14836}, year={2023} }",
+      "evidence": "```bibtex\n@article{qian2023nuscenes,\n  title={NuScenes-QA: A Multi-modal Visual Question Answering Benchmark for Autonomous Driving Scenario},\n  author={Qian, Tianwen and Chen, Jingjing and Zhuo, Linhai and Jiao, Yang and Jiang, Yu-Gang},\n  journal={arXiv preprint arXiv:2305.14836},\n  year={2023}\n}\n```",
+      "evidence_location": "107-114",
+      "confidence": "high",
+      "reason": "BibTeX entry for citing the paper and project."
+    }
+  ]
+}

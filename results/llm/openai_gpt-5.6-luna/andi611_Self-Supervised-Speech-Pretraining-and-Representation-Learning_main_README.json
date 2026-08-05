@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "s3prl",
+      "normalized_value": "s3prl",
+      "evidence": "This is an open source toolkit called **s3prl**, which stands for **S**elf-**S**upervised **S**peech **P**re-training and **R**epresentation **L**earning.",
+      "evidence_location": "76-79, Introduction and Usages",
+      "confidence": "high",
+      "reason": "Provides the toolkit's name and expansion for identification and search."
+    },
+    {
+      "field": "artifact_description",
+      "value": "Self-supervised speech pre-trained models are called **upstream** in this toolkit, and are utilized in various **downstream** tasks.",
+      "normalized_value": "Self-supervised speech pre-trained models are called **upstream** in this toolkit, and are utilized in various **downstream** tasks.",
+      "evidence": "Self-supervised speech pre-trained models are called **upstream** in this toolkit, and are utilized in various **downstream** tasks.",
+      "evidence_location": "78-79, Introduction and Usages",
+      "confidence": "high",
+      "reason": "Summarizes the toolkit's central model and task organization."
+    },
+    {
+      "field": "primary_usages",
+      "value": "Pretrain; Upstream; Downstream",
+      "normalized_value": "Pretrain; Upstream; Downstream",
+      "evidence": "The toolkit has **three major usages**:\n\n### Pretrain\n\n- Pretrain upstream models, including Mockingjay, Audio ALBERT and TERA.\n- Document: [**pretrain/README.md**](./s3prl/pretrain/README.md)\n\n### Upstream\n\n- Easily load most of the existing upstream models with pretrained weights in a unified I/O interface.\n- Pretrained models are registered through **torch.hub**, which means you can use these models in your own project by one-line plug-and-play without depending on this toolkit's coding style.\n- Document: [**upstream/README.md**](./s3prl/upstream/README.md)\n\n### Downstream\n\n- Utilize upstream models in lots of downstream tasks\n- Benchmark upstream models with [**SUPERB Benchmark**](./s3prl/downstream/docs/superb.md)\n- Document: [**downstream/README.md**](./s3prl/downstream/README.md)",
+      "evidence_location": "81-98, Introduction and Usages",
+      "confidence": "high",
+      "reason": "Identifies the three documented workflows supported by the artifact."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/s3prl/s3prl",
+      "normalized_value": "https://github.com/s3prl/s3prl",
+      "evidence": "We support to leverage numerous SSL representations on numerous speech processing tasks in our [GitHub codebase](https://github.com/s3prl/s3prl):",
+      "evidence_location": "102, Introduction and Usages",
+      "confidence": "high",
+      "reason": "Provides the project's GitHub repository for access and reuse."
+    },
+    {
+      "field": "pypi_package_url",
+      "value": "https://pypi.org/project/s3prl/",
+      "normalized_value": "https://pypi.org/project/s3prl/",
+      "evidence": "We also modularize all the SSL models into a standalone [PyPi package](https://pypi.org/project/s3prl/) so that you can easily install it and use it without depending on our entire codebase.",
+      "evidence_location": "108, Introduction and Usages",
+      "confidence": "high",
+      "reason": "Provides the standalone package location for installation and reuse."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install s3prl",
+      "normalized_value": "pip install s3prl",
+      "evidence": "```sh\npip install s3prl\n```",
+      "evidence_location": "110-114, Introduction and Usages",
+      "confidence": "high",
+      "reason": "Defines the documented package installation command."
+    },
+    {
+      "field": "editable_installation_command",
+      "value": "pip install -e \".[all]\"",
+      "normalized_value": "pip install -e \".[all]\"",
+      "evidence": "3. Install s3prl: [Read doc](https://s3prl.github.io/s3prl/tutorial/installation.html#) or `pip install -e \".[all]\"`",
+      "evidence_location": "155-160, Installation",
+      "confidence": "high",
+      "reason": "Provides the repository-oriented editable installation option."
+    },
+    {
+      "field": "installation_requirements",
+      "value": "Python >= 3.6; sox",
+      "normalized_value": "Python >= 3.6; sox",
+      "evidence": "1. **Python** >= 3.6\n2. Install **sox** on your OS",
+      "evidence_location": "155-159, Installation",
+      "confidence": "high",
+      "reason": "Names the required runtime version and operating-system dependency."
+    },
+    {
+      "field": "supported_operating_systems",
+      "value": "ubuntu-18.04, ubuntu-20.04",
+      "normalized_value": "ubuntu-18.04, ubuntu-20.04",
+      "evidence": "| os  | `ubuntu-18.04`, `ubuntu-20.04` |",
+      "evidence_location": "41-45, Environment compatibilities",
+      "confidence": "high",
+      "reason": "Specifies tested operating-system environments for reproducibility."
+    },
+    {
+      "field": "supported_python_versions",
+      "value": "3.7, 3.8, 3.9, 3.10",
+      "normalized_value": "3.7, 3.8, 3.9, 3.10",
+      "evidence": "| python | `3.7`, `3.8`, `3.9`, `3.10` |",
+      "evidence_location": "41-45, Environment compatibilities",
+      "confidence": "high",
+      "reason": "Lists the Python versions used in compatibility testing."
+    },
+    {
+      "field": "supported_pytorch_versions",
+      "value": "1.8.1, 1.9.1, 1.10.2, 1.11.0, 1.12.1, 1.13.1, 2.0.1, 2.1.0",
+      "normalized_value": "1.8.1, 1.9.1, 1.10.2, 1.11.0, 1.12.1, 1.13.1, 2.0.1, 2.1.0",
+      "evidence": "| pytorch | `1.8.1`, `1.9.1`, `1.10.2`, `1.11.0`, `1.12.1` , `1.13.1` , `2.0.1` , `2.1.0` |",
+      "evidence_location": "41-45, Environment compatibilities",
+      "confidence": "high",
+      "reason": "Lists the PyTorch versions used in compatibility testing."
+    },
+    {
+      "field": "compatibility_testing",
+      "value": "tox locally and github action",
+      "normalized_value": "tox locally and github action",
+      "evidence": "We support the following environments. The test cases are ran with **[tox](./tox.ini)** locally and on **[github action](.github/workflows/ci.yml)**:",
+      "evidence_location": "37-39, Environment compatibilities",
+      "confidence": "high",
+      "reason": "Documents the automation mechanisms used to test supported environments."
+    },
+    {
+      "field": "representation_extraction_example",
+      "value": "import torch\nfrom s3prl.nn import S3PRLUpstream\n\nmodel = S3PRLUpstream(\"hubert\")\nmodel.eval()\n\nwith torch.no_grad():\n    wavs = torch.randn(2, 16000 * 2)\n    wavs_len = torch.LongTensor([16000 * 1, 16000 * 2])\n    all_hs, all_hs_len = model(wavs, wavs_len)\n\nfor hs, hs_len in zip(all_hs, all_hs_len):\n    assert isinstance(hs, torch.FloatTensor)\n    assert isinstance(hs_len, torch.LongTensor)\n\n    batch_size, max_seq_len, hidden_size = hs.shape\n    assert hs_len.dim() == 1",
+      "normalized_value": "import torch from s3prl.nn import S3PRLUpstream model = S3PRLUpstream(\"hubert\") model.eval() with torch.no_grad(): wavs = torch.randn(2, 16000 * 2) wavs_len = torch.LongTensor([16000 * 1, 16000 * 2]) all_hs, all_hs_len = model(wavs, wavs_len) for hs, hs_len in zip(all_hs, all_hs_len): assert isinstance(hs, torch.FloatTensor) assert isinstance(hs_len, torch.LongTensor) batch_size, max_seq_len, hidden_size = hs.shape assert hs_len.dim() == 1",
+      "evidence": "```python\nimport torch\nfrom s3prl.nn import S3PRLUpstream\n\nmodel = S3PRLUpstream(\"hubert\")\nmodel.eval()\n\nwith torch.no_grad():\n    wavs = torch.randn(2, 16000 * 2)\n    wavs_len = torch.LongTensor([16000 * 1, 16000 * 2])\n    all_hs, all_hs_len = model(wavs, wavs_len)\n\nfor hs, hs_len in zip(all_hs, all_hs_len):\n    assert isinstance(hs, torch.FloatTensor)\n    assert isinstance(hs_len, torch.LongTensor)\n\n    batch_size, max_seq_len, hidden_size = hs.shape\n    assert hs_len.dim() == 1\n```",
+      "evidence_location": "116-136, Introduction and Usages",
+      "confidence": "high",
+      "reason": "Provides a directly reproducible example for extracting representations from audio tensors."
+    },
+    {
+      "field": "benchmark",
+      "value": "SUPERB Benchmark",
+      "normalized_value": "SUPERB Benchmark",
+      "evidence": "- Benchmark upstream models with [**SUPERB Benchmark**](./s3prl/downstream/docs/superb.md)",
+      "evidence_location": "94-98, Introduction and Usages",
+      "confidence": "high",
+      "reason": "Identifies the documented benchmark for evaluating upstream models."
+    },
+    {
+      "field": "integration",
+      "value": "ESPNet",
+      "normalized_value": "ESPNet",
+      "evidence": "With this modularization, we have achieved close integration with the general speech processing toolkit [ESPNet](https://github.com/espnet/espnet), enabling the use of SSL models for a broader range of speech processing tasks and corpora to achieve state-of-the-art (SOTA) results",
+      "evidence_location": "140, Introduction and Usages",
+      "confidence": "high",
+      "reason": "Names a concrete external toolkit integration relevant to reuse."
+    },
+    {
+      "field": "license",
+      "value": "The majority of S3PRL Toolkit is licensed under the Apache License version 2.0, however all the files authored by Facebook, Inc. (which have explicit copyright statement on the top) are licensed under CC-BY-NC.",
+      "normalized_value": "The majority of S3PRL Toolkit is licensed under the Apache License version 2.0, however all the files authored by Facebook, Inc. (which have explicit copyright statement on the top) are licensed under CC-BY-NC.",
+      "evidence": "The majority of S3PRL Toolkit is licensed under the Apache License version 2.0, however all the files authored by Facebook, Inc. (which have explicit copyright statement on the top) are licensed under CC-BY-NC.",
+      "evidence_location": "181-183, License",
+      "confidence": "high",
+      "reason": "Describes the applicable licenses and the exception for Facebook-authored files."
+    },
+    {
+      "field": "maintenance_status",
+      "value": "S3PRL has transitioned into pure maintenance mode, ensuring the long-term maintenance of all existing functions.",
+      "normalized_value": "S3PRL has transitioned into pure maintenance mode, ensuring the long-term maintenance of all existing functions.",
+      "evidence": "- S3PRL has transitioned into pure maintenance mode, ensuring the long-term maintenance of all existing functions.",
+      "evidence_location": "24-30, Contribution (pull request)",
+      "confidence": "high",
+      "reason": "Communicates the project's current development and maintenance status."
+    },
+    {
+      "field": "recommended_citation_for_upstream_interface",
+      "value": "A Large-Scale Evaluation of Speech Foundation Models",
+      "normalized_value": "A Large-Scale Evaluation of Speech Foundation Models",
+      "evidence": "- If you use our organized upstream interface and features, or the *SUPERB* downstream benchmark, please consider citing the following:\n```\n@article{yang2024large,\n  title={A Large-Scale Evaluation of Speech Foundation Models},\n  author={Yang, Shu-wen and Chang, Heng-Jui and Huang, Zili and Liu, Andy T and Lai, Cheng-I and Wu, Haibin and Shi, Jiatong and Chang, Xuankai and Tsai, Hsiang-Sheng and Huang, Wen-Chin and others},\n  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  year={2024},\n  publisher={IEEE}\n}\n```",
+      "evidence_location": "338-347, Citation",
+      "confidence": "high",
+      "reason": "Provides the project's stated citation for its upstream interface, features, and SUPERB benchmark."
+    }
+  ]
+}

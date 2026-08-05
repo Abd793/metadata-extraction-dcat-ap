@@ -1,0 +1,238 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Representing Rule-based Chatbots with Transformers",
+      "normalized_value": "Representing Rule-based Chatbots with Transformers",
+      "evidence": "# Representing Rule-based Chatbots with Transformers",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly identifies the artifact by name."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2407.10949",
+      "normalized_value": "https://arxiv.org/abs/2407.10949",
+      "evidence": "https://arxiv.org/abs/2407.10949",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides the paper associated with the repository."
+    },
+    {
+      "field": "purpose",
+      "value": "The code can be used to generate synthetic ELIZA training data, train and evaluate Transformers on ELIZA transcripts, and conduct some analysis of the learned mechanisms.",
+      "normalized_value": "The code can be used to generate synthetic ELIZA training data, train and evaluate Transformers on ELIZA transcripts, and conduct some analysis of the learned mechanisms.",
+      "evidence": "The code can be used to generate synthetic ELIZA training data, train and evaluate Transformers on ELIZA transcripts, and conduct some analysis of the learned mechanisms.",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Explicitly states the repository's main capabilities and intended uses."
+    },
+    {
+      "field": "installation",
+      "value": "Install [PyTorch](https://pytorch.org/get-started/locally/) and then install the remaining requirements: `pip install -r requirements.txt`.",
+      "normalized_value": "Install [PyTorch](https://pytorch.org/get-started/locally/) and then install the remaining requirements: `pip install -r requirements.txt`.",
+      "evidence": "Install [PyTorch](https://pytorch.org/get-started/locally/) and then install the remaining requirements: `pip install -r requirements.txt`.",
+      "evidence_location": "19 — Setup",
+      "confidence": "high",
+      "reason": "Provides explicit setup instructions and the dependency installation command."
+    },
+    {
+      "field": "python_version",
+      "value": "Python 3.12",
+      "normalized_value": "Python 3.12",
+      "evidence": "This code was tested using Python 3.12 and PyTorch version 2.2.2.",
+      "evidence_location": "20 — Setup",
+      "confidence": "high",
+      "reason": "Names the Python version used for testing."
+    },
+    {
+      "field": "pytorch_version",
+      "value": "PyTorch version 2.2.2",
+      "normalized_value": "PyTorch version 2.2.2",
+      "evidence": "This code was tested using Python 3.12 and PyTorch version 2.2.2.",
+      "evidence_location": "20 — Setup",
+      "confidence": "high",
+      "reason": "Names the PyTorch version used for testing."
+    },
+    {
+      "field": "data_generation_entrypoint",
+      "value": "src/generate_data.py",
+      "normalized_value": "src/generate_data.py",
+      "evidence": "[src/generate_data.py](src/generate_data.py)",
+      "evidence_location": "24 — Generating data",
+      "confidence": "high",
+      "reason": "Identifies the code used to generate the data."
+    },
+    {
+      "field": "multi_turn_data_script",
+      "value": "scripts/generate_multi_turn_data.sh",
+      "normalized_value": "scripts/generate_multi_turn_data.sh",
+      "evidence": "- Multi-turn conversations: [scripts/generate_multi_turn_data.sh](scripts/generate_multi_turn_data.sh)",
+      "evidence_location": "26 — Generating data",
+      "confidence": "high",
+      "reason": "Provides the reproducible script for generating multi-turn conversations."
+    },
+    {
+      "field": "single_turn_data_script",
+      "value": "scripts/generate_single_turn_data.sh",
+      "normalized_value": "scripts/generate_single_turn_data.sh",
+      "evidence": "- Single-turn conversations, varying the amount of repetition in the copying segments: [scripts/generate_single_turn_data.sh](scripts/generate_single_turn_data.sh)",
+      "evidence_location": "27 — Generating data",
+      "confidence": "high",
+      "reason": "Provides the script for generating single-turn data with varied copying-segment repetition."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://huggingface.co/datasets/danf0/eliza",
+      "normalized_value": "https://huggingface.co/datasets/danf0/eliza",
+      "evidence": "https://huggingface.co/datasets/danf0/eliza",
+      "evidence_location": "29 — Generating data",
+      "confidence": "high",
+      "reason": "Provides a direct download location for the datasets used in the experiments."
+    },
+    {
+      "field": "training_entrypoint",
+      "value": "src/run.py",
+      "normalized_value": "src/run.py",
+      "evidence": "[src/run.py](src/run.py)",
+      "evidence_location": "33 — Training models",
+      "confidence": "high",
+      "reason": "Identifies the code used to train Transformers on ELIZA conversations."
+    },
+    {
+      "field": "multi_turn_training_script",
+      "value": "scripts/train_multi_turn.sh",
+      "normalized_value": "scripts/train_multi_turn.sh",
+      "evidence": "[multi-turn conversations](scripts/train_multi_turn.sh)",
+      "evidence_location": "34 — Training models",
+      "confidence": "high",
+      "reason": "Provides the training configuration script for multi-turn conversations."
+    },
+    {
+      "field": "single_turn_training_script",
+      "value": "scripts/train_single_turn.sh",
+      "normalized_value": "scripts/train_single_turn.sh",
+      "evidence": "[single-turn conversations](scripts/train_single_turn.sh)",
+      "evidence_location": "34 — Training models",
+      "confidence": "high",
+      "reason": "Provides the training configuration script for single-turn conversations."
+    },
+    {
+      "field": "training_hardware",
+      "value": "NVIDIA GeForce RTX 2080 Ti GPUs with 11GB of memory",
+      "normalized_value": "NVIDIA GeForce RTX 2080 Ti GPUs with 11GB of memory",
+      "evidence": "We ran our experiments on NVIDIA GeForce RTX 2080 Ti GPUs with 11GB of memory.",
+      "evidence_location": "35 — Training models",
+      "confidence": "high",
+      "reason": "Documents the GPU hardware and memory used for the experiments."
+    },
+    {
+      "field": "single_turn_training_duration",
+      "value": "approximately 12 hours each",
+      "normalized_value": "approximately 12 hours each",
+      "evidence": "The single-turn models were trained for approximately 12 hours each",
+      "evidence_location": "36 — Training models",
+      "confidence": "high",
+      "reason": "Provides an approximate runtime for training each single-turn model."
+    },
+    {
+      "field": "multi_turn_training_duration",
+      "value": "approximately 48 hours",
+      "normalized_value": "approximately 48 hours",
+      "evidence": "and the multi-turn models were trained for approximately 48 hours.",
+      "evidence_location": "36 — Training models",
+      "confidence": "high",
+      "reason": "Provides the approximate runtime for training multi-turn models."
+    },
+    {
+      "field": "prediction_analysis_utility",
+      "value": "src/utils/analysis_utils.py",
+      "normalized_value": "src/utils/analysis_utils.py",
+      "evidence": "[src/utils/analysis_utils.py](src/utils/analysis_utils.py)",
+      "evidence_location": "43 — Error analysis",
+      "confidence": "high",
+      "reason": "Identifies the utilities for analyzing validation-set predictions."
+    },
+    {
+      "field": "analysis_performance_dimensions",
+      "value": "the turn type, the template, and the state of the memory queue",
+      "normalized_value": "the turn type, the template, and the state of the memory queue",
+      "evidence": "These can be used to measure performance as a function of various properties of the prediction, such as the turn type, the template, and the state of the memory queue.",
+      "evidence_location": "44 — Error analysis",
+      "confidence": "high",
+      "reason": "Names concrete properties along which prediction performance can be analyzed."
+    },
+    {
+      "field": "attention_probe_code",
+      "value": "src/probing.py",
+      "normalized_value": "src/probing.py",
+      "evidence": "[src/probing.py](src/probing.py)",
+      "evidence_location": "48 — Probing copying mechanisms",
+      "confidence": "high",
+      "reason": "Identifies the code for probing attention embeddings."
+    },
+    {
+      "field": "attention_probe_target",
+      "value": "whether attentions scores are influenced more by content or position",
+      "normalized_value": "whether attentions scores are influenced more by content or position",
+      "evidence": "to investigate whether attentions scores are influenced more by content or position.",
+      "evidence_location": "48 — Probing copying mechanisms",
+      "confidence": "high",
+      "reason": "States the specific research question examined by the attention probe."
+    },
+    {
+      "field": "attention_probe_script",
+      "value": "scripts/run_attention_probe.sh",
+      "normalized_value": "scripts/run_attention_probe.sh",
+      "evidence": "[scripts/run_attention_probe.sh](scripts/run_attention_probe.sh)",
+      "evidence_location": "49 — Probing copying mechanisms",
+      "confidence": "high",
+      "reason": "Provides the script for running the paper's attention-probing configuration."
+    },
+    {
+      "field": "counterfactual_generation_code",
+      "value": "src/counterfactuals.py",
+      "normalized_value": "src/counterfactuals.py",
+      "evidence": "[src/counterfactuals.py](src/counterfactuals.py)",
+      "evidence_location": "54 — Counterfactual data",
+      "confidence": "high",
+      "reason": "Identifies the code for generating counterfactual datasets."
+    },
+    {
+      "field": "counterfactual_dataset_purpose",
+      "value": "examine the memory mechanisms learned by the models we trained",
+      "normalized_value": "examine the memory mechanisms learned by the models we trained",
+      "evidence": "We generated counterfactual datasets to examine the memory mechanisms learned by the models we trained.",
+      "evidence_location": "53 — Counterfactual data",
+      "confidence": "high",
+      "reason": "Explains why the counterfactual datasets were generated."
+    },
+    {
+      "field": "evaluation_flag",
+      "value": "--eval_only",
+      "normalized_value": "--eval_only",
+      "evidence": "After generating a counterfactual dataset, a model can be evaluated using [src/run.py](src/run.py), using the `--eval_only` flag.",
+      "evidence_location": "56 — Counterfactual data",
+      "confidence": "high",
+      "reason": "Provides the explicit flag for evaluating a model without further training."
+    },
+    {
+      "field": "contact_email",
+      "value": "dfriedman@cs.princeton.edu",
+      "normalized_value": "dfriedman@cs.princeton.edu",
+      "evidence": "Dan (dfriedman@cs.princeton.edu)",
+      "evidence_location": "60 — Questions?",
+      "confidence": "high",
+      "reason": "Provides a direct contact for questions about the code or paper."
+    },
+    {
+      "field": "citation",
+      "value": "@article{friedman2024representing,\n  title={Representing Rule-based Chatbots with Transformers},\n  author={Friedman, Dan and Panigrahi, Abhishek and Chen, Danqi},\n  year={2024}\n}",
+      "normalized_value": "@article{friedman2024representing, title={Representing Rule-based Chatbots with Transformers}, author={Friedman, Dan and Panigrahi, Abhishek and Chen, Danqi}, year={2024} }",
+      "evidence": "```bibtex\n@article{friedman2024representing,\n  title={Representing Rule-based Chatbots with Transformers},\n  author={Friedman, Dan and Panigrahi, Abhishek and Chen, Danqi},\n  year={2024}\n}\n```",
+      "evidence_location": "63-69 — Citation",
+      "confidence": "high",
+      "reason": "Provides the repository's explicit BibTeX citation, including title, authors, and year."
+    }
+  ]
+}

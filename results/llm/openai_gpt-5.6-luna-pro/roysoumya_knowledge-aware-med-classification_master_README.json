@@ -1,0 +1,283 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "knowledge-aware-med-classification",
+      "normalized_value": "knowledge-aware-med-classification",
+      "evidence": "# knowledge-aware-med-classification",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Names the documented artifact."
+    },
+    {
+      "field": "artifact_type",
+      "value": "codebase",
+      "normalized_value": "codebase",
+      "evidence": "codebase",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Identifies the artifact as source code accompanying the paper."
+    },
+    {
+      "field": "paper_title",
+      "value": "Knowledge-Aware Neural Networks for Medical Forum Question Classification",
+      "normalized_value": "Knowledge-Aware Neural Networks for Medical Forum Question Classification",
+      "evidence": "**Knowledge-Aware Neural Networks for Medical Forum Question Classification**",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Provides the title of the associated research paper."
+    },
+    {
+      "field": "publication_status",
+      "value": "accepted for publication",
+      "normalized_value": "accepted for publication",
+      "evidence": "accepted for publication",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "States the publication status of the associated paper."
+    },
+    {
+      "field": "publication_venue",
+      "value": "30th ACM International Conference on Information and Knowledge Management (CIKM 2021)",
+      "normalized_value": "30th ACM International Conference on Information and Knowledge Management (CIKM 2021)",
+      "evidence": "the 30th ACM International Conference on Information and Knowledge Management (CIKM 2021)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Identifies the conference and edition associated with the paper."
+    },
+    {
+      "field": "arxiv_url",
+      "value": "https://arxiv.org/abs/2109.13141",
+      "normalized_value": "https://arxiv.org/abs/2109.13141",
+      "evidence": "[arXiv](https://arxiv.org/abs/2109.13141)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Provides an openly accessible paper link."
+    },
+    {
+      "field": "doi",
+      "value": "10.1145/3459637.3482128",
+      "normalized_value": "10.1145/3459637.3482128",
+      "evidence": "doi = {10.1145/3459637.3482128},",
+      "evidence_location": "38",
+      "confidence": "high",
+      "reason": "Provides the persistent identifier for the paper."
+    },
+    {
+      "field": "base_codebase",
+      "value": "huggingface transformers",
+      "normalized_value": "huggingface transformers",
+      "evidence": "The codebase is based on huggingface transformers",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Identifies the primary upstream software codebase."
+    },
+    {
+      "field": "base_codebase_url",
+      "value": "https://github.com/huggingface/transformers",
+      "normalized_value": "https://github.com/huggingface/transformers",
+      "evidence": "[Github codebase](https://github.com/huggingface/transformers)",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Provides the upstream codebase URL needed for reuse or reproduction."
+    },
+    {
+      "field": "lcf_codebase",
+      "value": "ABSA-Pytorch",
+      "normalized_value": "ABSA-Pytorch",
+      "evidence": "The LCF-BERT and LCF-associated codes is based on ABSA-Pytorch",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Identifies the source codebase for the LCF-BERT-related implementation."
+    },
+    {
+      "field": "lcf_codebase_url",
+      "value": "https://github.com/songyouwei/ABSA-PyTorch/blob/master/models/lcf_bert.py",
+      "normalized_value": "https://github.com/songyouwei/ABSA-PyTorch/blob/master/models/lcf_bert.py",
+      "evidence": "[Github codebase](https://github.com/songyouwei/ABSA-PyTorch/blob/master/models/lcf_bert.py)",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Provides the specific upstream LCF-BERT implementation reference."
+    },
+    {
+      "field": "notebook_path",
+      "value": "src/ProposedKnowledgeAwareModel/",
+      "normalized_value": "src/ProposedKnowledgeAwareModel/",
+      "evidence": "**src/ProposedKnowledgeAwareModel/**",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Locates the self-contained notebooks used to inspect and reproduce the model code."
+    },
+    {
+      "field": "notebook_format",
+      "value": "self-contained Jupyter notebooks",
+      "normalized_value": "self-contained Jupyter notebooks",
+      "evidence": "The code files in the form of self-contained Jupyter notebooks",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Describes the format of the provided implementation files."
+    },
+    {
+      "field": "generated_script",
+      "value": "run_ichi.py",
+      "normalized_value": "run_ichi.py",
+      "evidence": "which produces at the end a 'run_ichi.py'.",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Identifies the script generated from the notebook workflow."
+    },
+    {
+      "field": "training_evaluation_command",
+      "value": "python ./examples/ichi/run_ichi.py --model_type bert --model_name_or_path bert-base-uncased --do_lower_case --do_train --do_eval --data_dir ./data/ichi_dataset --max_seq_length 256 --per_gpu_eval_batch_size=16 --per_gpu_train_batch_size=16 --learning_rate 1e-4 --num_train_epochs 2 --output_dir ./tmp/ichi_bert_base_new --overwrite_output_dir",
+      "normalized_value": "python ./examples/ichi/run_ichi.py --model_type bert --model_name_or_path bert-base-uncased --do_lower_case --do_train --do_eval --data_dir ./data/ichi_dataset --max_seq_length 256 --per_gpu_eval_batch_size=16 --per_gpu_train_batch_size=16 --learning_rate 1e-4 --num_train_epochs 2 --output_dir ./tmp/ichi_bert_base_new --overwrite_output_dir",
+      "evidence": "```\npython ./examples/ichi/run_ichi.py --model_type bert --model_name_or_path bert-base-uncased --do_lower_case --do_train --do_eval --data_dir ./data/ichi_dataset --max_seq_length 256 --per_gpu_eval_batch_size=16 --per_gpu_train_batch_size=16 --learning_rate 1e-4 --num_train_epochs 2 --output_dir ./tmp/ichi_bert_base_new --overwrite_output_dir\n```",
+      "evidence_location": "13-15; Running Bert-plus models",
+      "confidence": "high",
+      "reason": "Defines an explicit command for training and evaluating the ICHI BERT model."
+    },
+    {
+      "field": "evaluated_models",
+      "value": "BERT and MedBERT",
+      "normalized_value": "BERT and MedBERT",
+      "evidence": "The BERT and MedBERT models were trained and evaluated on two datasets",
+      "evidence_location": "18; Experiments and Results",
+      "confidence": "high",
+      "reason": "Identifies the models covered by the reported experiments."
+    },
+    {
+      "field": "evaluation_datasets",
+      "value": "CADEC (multi-label) and ICHI (multi-class)",
+      "normalized_value": "CADEC (multi-label) and ICHI (multi-class)",
+      "evidence": "CADEC (multi-label) and ICHI (multi-class)",
+      "evidence_location": "18; Experiments and Results",
+      "confidence": "high",
+      "reason": "Identifies the datasets and their classification settings used for evaluation."
+    },
+    {
+      "field": "research_task",
+      "value": "Medical Forum Question Classification",
+      "normalized_value": "Medical Forum Question Classification",
+      "evidence": "for the task of \"Medical Forum Question Classification\".",
+      "evidence_location": "21; Annotated CADEC, a multi-label medical forum question classificaton dataset",
+      "confidence": "high",
+      "reason": "Names the central classification task addressed by the artifact."
+    },
+    {
+      "field": "cadec_dataset_type",
+      "value": "multi-label multi-class dataset",
+      "normalized_value": "multi-label multi-class dataset",
+      "evidence": "We annotate CADEC as a multi-label multi-class dataset",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Describes the label structure of the annotated CADEC dataset."
+    },
+    {
+      "field": "cadec_label_scheme",
+      "value": "0 and 1, across five information need categories",
+      "normalized_value": "0 and 1, across five information need categories",
+      "evidence": "Each data point is annotated by 0 and 1, across five information need categories.",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Specifies the annotation encoding and number of information-need categories."
+    },
+    {
+      "field": "cadec_medical_concepts",
+      "value": "extracted medical concepts using QuickUMLS tool",
+      "normalized_value": "extracted medical concepts using QuickUMLS tool",
+      "evidence": "We also have an additional column, containing the extracted medical concepts using QuickUMLS tool.",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Identifies the additional medical-concept information included with CADEC."
+    },
+    {
+      "field": "cadec_annotations_path",
+      "value": "CADEC-Annotations/",
+      "normalized_value": "CADEC-Annotations/",
+      "evidence": "**CADEC-Annotations/**",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Locates the annotated CADEC files in the artifact."
+    },
+    {
+      "field": "ichi_source_url",
+      "value": "https://github.com/rakshajalan/ECIR-2018/tree/master/ECIR-18_medical_question_classification/Dataset",
+      "normalized_value": "https://github.com/rakshajalan/ECIR-2018/tree/master/ECIR-18_medical_question_classification/Dataset",
+      "evidence": "[Github codebase](https://github.com/rakshajalan/ECIR-2018/tree/master/ECIR-18_medical_question_classification/Dataset)",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Provides the external source location for the ICHI dataset."
+    },
+    {
+      "field": "ichi_data_split",
+      "value": "same train-test data split",
+      "normalized_value": "same train-test data split",
+      "evidence": "and maintain the same train-test data split.",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Documents the split policy used for the ICHI data."
+    },
+    {
+      "field": "model_method",
+      "value": "Here, we develop a novel medical\nknowledge-aware BERT-based model (MedBERT) that explicitly gives more weightage to\nmedical concept-bearing words, and utilize domain-specific side information obtained\nfrom a popular medical knowledge base.",
+      "normalized_value": "Here, we develop a novel medical knowledge-aware BERT-based model (MedBERT) that explicitly gives more weightage to medical concept-bearing words, and utilize domain-specific side information obtained from a popular medical knowledge base",
+      "evidence": "Here, we develop a novel medical\nknowledge-aware BERT-based model (MedBERT) that explicitly gives more weightage to\nmedical concept-bearing words, and utilize domain-specific side information obtained\nfrom a popular medical knowledge base.",
+      "evidence_location": "43-46",
+      "confidence": "high",
+      "reason": "Summarizes the stated architecture and use of medical knowledge in MedBERT."
+    },
+    {
+      "field": "citation_requirement",
+      "value": "If you use the labeled CADEC dataset or use MedBERT, please cite the paper",
+      "normalized_value": "If you use the labeled CADEC dataset or use MedBERT, please cite the paper",
+      "evidence": "If you use the labeled CADEC dataset or use MedBERT, please cite the paper:",
+      "evidence_location": "26-27; Citing MedBERT",
+      "confidence": "high",
+      "reason": "States the attribution requirement for reuse of the dataset or model."
+    },
+    {
+      "field": "citation_authors",
+      "value": "Roy, Soumyadeep and Chakraborty, Sudip and Mandal, Aishik and Balde, Gunjan and Sharma, Prakhar and Natarajan, Anandhavelu and Khosla, Megha and Sural, Shamik and Ganguly, Niloy",
+      "normalized_value": "Roy, Soumyadeep and Chakraborty, Sudip and Mandal, Aishik and Balde, Gunjan and Sharma, Prakhar and Natarajan, Anandhavelu and Khosla, Megha and Sural, Shamik and Ganguly, Niloy",
+      "evidence": "author = {Roy, Soumyadeep and Chakraborty, Sudip and Mandal, Aishik and Balde, Gunjan and Sharma, Prakhar and Natarajan, Anandhavelu and Khosla, Megha and Sural, Shamik and Ganguly, Niloy},",
+      "evidence_location": "31",
+      "confidence": "high",
+      "reason": "Provides the complete author list for citation."
+    },
+    {
+      "field": "publication_year",
+      "value": "2021",
+      "normalized_value": "2021",
+      "evidence": "year = {2021},",
+      "evidence_location": "33",
+      "confidence": "high",
+      "reason": "Provides the publication year for bibliographic indexing."
+    },
+    {
+      "field": "publisher",
+      "value": "Association for Computing Machinery",
+      "normalized_value": "Association for Computing Machinery",
+      "evidence": "publisher = {Association for Computing Machinery},",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Identifies the publisher in the supplied citation."
+    },
+    {
+      "field": "paper_pages",
+      "value": "3398–3402",
+      "normalized_value": "3398–3402",
+      "evidence": "pages = {3398–3402},",
+      "evidence_location": "50",
+      "confidence": "high",
+      "reason": "Provides page information for precise citation."
+    },
+    {
+      "field": "citation_keywords",
+      "value": "online health communities, clinical text classification",
+      "normalized_value": "online health communities, clinical text classification",
+      "evidence": "keywords = {online health communities, clinical text classification},",
+      "evidence_location": "52",
+      "confidence": "high",
+      "reason": "Supplies searchable topical terms for indexing the paper and artifact."
+    }
+  ]
+}

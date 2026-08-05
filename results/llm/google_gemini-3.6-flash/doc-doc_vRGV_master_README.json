@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Visual Relation Grounding in Videos",
+      "normalized_value": "Visual Relation Grounding in Videos",
+      "evidence": "Visual Relation Grounding in Videos",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Identifies the title/name of the artifact as specified in the main title header."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2007.08814.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2007.08814.pdf",
+      "evidence": "https://arxiv.org/pdf/2007.08814.pdf",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Direct link to the published arXiv PDF paper for the artifact."
+    },
+    {
+      "field": "publication_venue",
+      "value": "ECCV2020 (Spotlight)",
+      "normalized_value": "ECCV2020 (Spotlight)",
+      "evidence": "ECCV2020 (Spotlight)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Identifies the academic conference where the research was presented."
+    },
+    {
+      "field": "environment_requirements",
+      "value": "Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0. For others libs, please refer to the file requirements.txt.",
+      "normalized_value": "Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0. For others libs, please refer to the file requirements.txt.",
+      "evidence": "Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0. For others libs, please refer to the file requirements.txt.",
+      "evidence_location": "line 12, ## Environment",
+      "confidence": "high",
+      "reason": "Details the required runtime software environment, python, framework, and CUDA versions."
+    },
+    {
+      "field": "programming_language",
+      "value": "python 3.6.5",
+      "normalized_value": "python 3.6.5",
+      "evidence": "python 3.6.5",
+      "evidence_location": "line 12, ## Environment",
+      "confidence": "high",
+      "reason": "Explicitly names Python and its version requirement."
+    },
+    {
+      "field": "framework",
+      "value": "pytorch 0.4.1",
+      "normalized_value": "pytorch 0.4.1",
+      "evidence": "pytorch 0.4.1",
+      "evidence_location": "line 12, ## Environment",
+      "confidence": "high",
+      "reason": "Identifies PyTorch as the deep learning framework."
+    },
+    {
+      "field": "installation_commands",
+      "value": ">conda create -n envname python=3.6.5 # Create\n>conda activate envname # Enter\n>pip install -r requirements.txt # Install the provided libs\n>sh vRGV/lib/make.sh # Set the environment for detection, make sure you have nvcc",
+      "normalized_value": ">conda create -n envname python=3.6.5 # Create >conda activate envname # Enter >pip install -r requirements.txt # Install the provided libs >sh vRGV/lib/make.sh # Set the environment for detection, make sure you have nvcc",
+      "evidence": "```\n>conda create -n envname python=3.6.5 # Create\n>conda activate envname # Enter\n>pip install -r requirements.txt # Install the provided libs\n>sh vRGV/lib/make.sh # Set the environment for detection, make sure you have nvcc\n```",
+      "evidence_location": "lines 16-21, ## Install",
+      "confidence": "high",
+      "reason": "Contains verbatim shell commands to install dependencies and configure the project environment."
+    },
+    {
+      "field": "data_download_url",
+      "value": "https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing",
+      "evidence": "https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing",
+      "evidence_location": "line 23, ## Data Preparation",
+      "confidence": "high",
+      "reason": "Direct Google Drive URL to download the project's ground_data."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://xdshang.github.io/docs/imagenet-vidvrd.html",
+      "normalized_value": "https://xdshang.github.io/docs/imagenet-vidvrd.html",
+      "evidence": "https://xdshang.github.io/docs/imagenet-vidvrd.html",
+      "evidence_location": "line 25, ## Data Preparation",
+      "confidence": "high",
+      "reason": "Direct URL to download the original video dataset."
+    },
+    {
+      "field": "feature_extraction_command",
+      "value": "./detection.sh 0 val #(or train)",
+      "normalized_value": "./detection.sh 0 val #(or train)",
+      "evidence": "```\n./detection.sh 0 val #(or train)\n```",
+      "evidence_location": "lines 30-32, ## Usage",
+      "confidence": "high",
+      "reason": "Shell command to run visual feature extraction."
+    },
+    {
+      "field": "evaluation_commands",
+      "value": "./ground.sh 0 val # Output the relation-aware spatio-temporal attention\npython generate_track_link.py # Generate relation-aware trajectories with Viterbi algorithm.\npython eval_ground.py # Evaluate the performance",
+      "normalized_value": "./ground.sh 0 val # Output the relation-aware spatio-temporal attention python generate_track_link.py # Generate relation-aware trajectories with Viterbi algorithm. python eval_ground.py # Evaluate the performance",
+      "evidence": "```\n./ground.sh 0 val # Output the relation-aware spatio-temporal attention\npython generate_track_link.py # Generate relation-aware trajectories with Viterbi algorithm.\npython eval_ground.py # Evaluate the performance\n```",
+      "evidence_location": "lines 39-43, ## Usage",
+      "confidence": "high",
+      "reason": "Sequential shell and Python commands for evaluating the model."
+    },
+    {
+      "field": "evaluation_accuracy",
+      "value": "Acc_R: 24.58%",
+      "normalized_value": "Acc_R: 24.58%",
+      "evidence": "Acc_R: 24.58%",
+      "evidence_location": "line 44, ## Usage",
+      "confidence": "high",
+      "reason": "Provides the quantitative performance score achieved during model verification."
+    },
+    {
+      "field": "training_command",
+      "value": "./ground.sh 0 train # Train the model with GPU id 0",
+      "normalized_value": "./ground.sh 0 train # Train the model with GPU id 0",
+      "evidence": "```\n./ground.sh 0 train # Train the model with GPU id 0\n```",
+      "evidence_location": "lines 47-49, ## Usage",
+      "confidence": "high",
+      "reason": "Command used to trigger model training."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{xiao2020visual,\n  title={Visual Relation Grounding in Videos},\n  author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng},\n  booktitle={European Conference on Computer Vision},\n  pages={447--464},\n  year={2020},\n  organization={Springer}\n}",
+      "normalized_value": "@inproceedings{xiao2020visual, title={Visual Relation Grounding in Videos}, author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng}, booktitle={European Conference on Computer Vision}, pages={447--464}, year={2020}, organization={Springer} }",
+      "evidence": "```\n@inproceedings{xiao2020visual,\n  title={Visual Relation Grounding in Videos},\n  author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng},\n  booktitle={European Conference on Computer Vision},\n  pages={447--464},\n  year={2020},\n  organization={Springer}\n}\n```",
+      "evidence_location": "lines 60-69, ## Citation",
+      "confidence": "high",
+      "reason": "Full BibTeX entry provided for citing this work."
+    },
+    {
+      "field": "license",
+      "value": "NUS © [NExT++](https://nextcenter.org/)",
+      "normalized_value": "NUS © [NExT++](https://nextcenter.org/)",
+      "evidence": "NUS © [NExT++](https://nextcenter.org/)",
+      "evidence_location": "line 73, ## License",
+      "confidence": "high",
+      "reason": "Copyright and license holder entity stated in the License section."
+    }
+  ]
+}

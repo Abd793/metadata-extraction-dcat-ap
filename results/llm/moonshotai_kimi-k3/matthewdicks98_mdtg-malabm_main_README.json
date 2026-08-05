@@ -1,0 +1,202 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Simple learning agents interacting with an agent-based market model",
+      "normalized_value": "Simple learning agents interacting with an agent-based market model",
+      "evidence": "# Simple learning agents interacting with an agent-based market model",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "The document title identifies the artifact/project."
+    },
+    {
+      "field": "description",
+      "value": "We consider the learning dynamics of a single reinforcement learning optimal execution trading agent when it interacts with an event driven agent-based financial market model. Trading takes place asynchronously through a matching engine in event time.",
+      "normalized_value": "We consider the learning dynamics of a single reinforcement learning optimal execution trading agent when it interacts with an event driven agent-based financial market model. Trading takes place asynchronously through a matching engine in event time.",
+      "evidence": "We consider the learning dynamics of a single reinforcement learning optimal execution trading agent when it interacts with an event driven agent-based financial market model. Trading takes place asynchronously through a matching engine in event time.",
+      "evidence_location": "line 3, introductory paragraph",
+      "confidence": "high",
+      "reason": "States the purpose and scope of the artifact: studying RL optimal execution agent learning dynamics in an event-driven agent-based market model."
+    },
+    {
+      "field": "task",
+      "value": "optimal execution trading with a reinforcement learning agent in an agent-based financial market model",
+      "normalized_value": "optimal execution trading with a reinforcement learning agent in an agent-based financial market model",
+      "evidence": "a single reinforcement learning optimal execution trading agent when it interacts with an event driven agent-based financial market model",
+      "evidence_location": "line 3, introductory paragraph",
+      "confidence": "high",
+      "reason": "Identifies the scientific task addressed by the artifact."
+    },
+    {
+      "field": "programming_language",
+      "value": "Julia version 1.7.1",
+      "normalized_value": "Julia version 1.7.1",
+      "evidence": "1. Julia version 1.7.1.",
+      "evidence_location": "line 7, '## Prerequisites' section",
+      "confidence": "high",
+      "reason": "Names the required programming language and exact version needed to run the code."
+    },
+    {
+      "field": "dependency",
+      "value": "Git",
+      "normalized_value": "Git",
+      "evidence": "4. [Git](https://git-scm.com/)",
+      "evidence_location": "line 9, '## Prerequisites' section",
+      "confidence": "high",
+      "reason": "Lists Git as a prerequisite tool for using the repository."
+    },
+    {
+      "field": "matching_engine_dependency",
+      "value": "Fork of CoinTossX v1.1.0 (https://github.com/IvanJericevich/CoinTossX)",
+      "normalized_value": "Fork of CoinTossX v1.1.0 (https://github.com/IvanJericevich/CoinTossX)",
+      "evidence": "3. The matching engine used is a fork from the official release of version [v1.1.0](https://github.com/dharmeshsing/CoinTossX/tree/v1.1.0) of [CoinTossX](https://github.com/dharmeshsing/CoinTossX). This fork was used because it contains a UDP socket on which market data updates can be received from the matching engine. The fork can be found [here](https://github.com/IvanJericevich/CoinTossX).",
+      "evidence_location": "line 10, '## Prerequisites' section",
+      "confidence": "high",
+      "reason": "Identifies the external matching engine dependency, its version, and the specific fork required, which is essential for reproduction."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "normalized_value": "https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "evidence": "git clone https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "evidence_location": "lines 16-18, '## Usage' section code block",
+      "confidence": "high",
+      "reason": "Provides the canonical repository URL for accessing the artifact."
+    },
+    {
+      "field": "installation_command",
+      "value": "git clone https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "normalized_value": "git clone https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "evidence": "To clone this repository:\n\n```console\ngit clone https://github.com/matthewdicks98/MDTG-MALABM.git\n```",
+      "evidence_location": "lines 14-18, '## Usage' section",
+      "confidence": "high",
+      "reason": "Defines the setup step to obtain the artifact."
+    },
+    {
+      "field": "package_installation_command",
+      "value": "using Pkg\nPkg.add(\" \")",
+      "normalized_value": "using Pkg\nPkg.add(\" \")",
+      "evidence": "Julia packages can be installed from the Julia REPL using:\n\n```console\nusing Pkg\nPkg.add(\" \")\n```",
+      "evidence_location": "lines 20-25, '## Usage' section code block",
+      "confidence": "high",
+      "reason": "Shows how Julia package dependencies are installed from the REPL."
+    },
+    {
+      "field": "branch_structure",
+      "value": "Calibrated-ABM and RL-ABM branches",
+      "normalized_value": "Calibrated-ABM and RL-ABM branches",
+      "evidence": "Given that there are multiple stages to the project it was decided that each stage will be published on its own branch. The [Calibrated-ABM](https://github.com/matthewdicks98/MDTG-MALABM/tree/Calibrated-ABM) branch contains all the files needed to:",
+      "evidence_location": "lines 27-29, '### Branch structure' section",
+      "confidence": "high",
+      "reason": "Explains that project stages are split across named branches, which is needed to locate the correct code."
+    },
+    {
+      "field": "calibrated_abm_branch_functionality",
+      "value": "Simulate the event-based ABM; perform sensitivity analysis and calibration; clean JSE L1LOB TAQ data and raw ABM message data; generate price path and stylised fact visualisations",
+      "normalized_value": "Simulate the event-based ABM; perform sensitivity analysis and calibration; clean JSE L1LOB TAQ data and raw ABM message data; generate price path and stylised fact visualisations",
+      "evidence": "* Simulate the event-based ABM.\n* Perform the sensitivity analysis and calibration of the ABM.\n* Clean JSE L1LOB TAQ data as well as clean raw message data from the ABM simulation.\n* Generate price path and stylised fact visualisations.",
+      "evidence_location": "lines 31-34, '### Branch structure' section",
+      "confidence": "high",
+      "reason": "Describes the capabilities of the Calibrated-ABM branch, helping users choose the right branch."
+    },
+    {
+      "field": "rl_abm_branch_functionality",
+      "value": "Simulate the event-based ABM with an RL agent for one episode; train an RL agent inside the ABM; visualise convergence, learning dynamics, and the agent's effect on the ABM",
+      "normalized_value": "Simulate the event-based ABM with an RL agent for one episode; train an RL agent inside the ABM; visualise convergence, learning dynamics, and the agent's effect on the ABM",
+      "evidence": "* Simulate the event-based ABM with an RL agent included for one episode.\n* Train an RL agent inside the ABM.\n* Visualise the convergence and learning dynamics of the RL agent.\n* Visualise the effect the RL agent had on the ABM.",
+      "evidence_location": "lines 38-41, '### Branch structure' section",
+      "confidence": "high",
+      "reason": "Describes the RL training and evaluation capabilities of the RL-ABM branch."
+    },
+    {
+      "field": "branch_switch_command",
+      "value": "git checkout <branch_name>",
+      "normalized_value": "git checkout <branch_name>",
+      "evidence": "Once the repository has been cloned you can switch between branches using:\n\n```console\ngit checkout <branch_name>\n```",
+      "evidence_location": "lines 43-47, '### Branch structure' section",
+      "confidence": "high",
+      "reason": "Command needed to select the appropriate project stage branch."
+    },
+    {
+      "field": "simulation_entry_point",
+      "value": "RunReactiveABM.jl runs the event-based simulation once for a given set of parameters",
+      "normalized_value": "RunReactiveABM.jl runs the event-based simulation once for a given set of parameters",
+      "evidence": "* [RunReactiveABM.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/RunReactiveABM.jl) runs the event-based simulation once for a given set of parameters.",
+      "evidence_location": "line 55, '### Key files' section",
+      "confidence": "high",
+      "reason": "Identifies the main script for running the simulation, key for reproduction."
+    },
+    {
+      "field": "calibration_method",
+      "value": "Nelder-Mead with threshold accepting optimisation algorithm",
+      "normalized_value": "Nelder-Mead with threshold accepting optimisation algorithm",
+      "evidence": "[NMTA.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/NMTA.jl) implements the Nelder-Mead with threshold accepting optimisation algorithm.",
+      "evidence_location": "line 57, '### Key files' section",
+      "confidence": "high",
+      "reason": "Names the optimisation method used to calibrate the ABM, important scientific context."
+    },
+    {
+      "field": "calibration_data",
+      "value": "JSE data (JSE L1LOB TAQ data)",
+      "normalized_value": "JSE data (JSE L1LOB TAQ data)",
+      "evidence": "* [Calibration.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/Calibration.jl) uses [NMTA.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/NMTA.jl) to calibrate the ABM to a day of JSE data.",
+      "evidence_location": "line 57, '### Key files' section",
+      "confidence": "high",
+      "reason": "Identifies the empirical dataset (Johannesburg Stock Exchange data) used for calibration."
+    },
+    {
+      "field": "rl_training_script",
+      "value": "RLUtilities.jl contains functions that can simulate an RL agent in an ABM for one episode and train the RL agent to optimally liquidate a parent order",
+      "normalized_value": "RLUtilities.jl contains functions that can simulate an RL agent in an ABM for one episode and train the RL agent to optimally liquidate a parent order",
+      "evidence": "* [RLUtilities.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/RLUtilities.jl) which contains functions that can simulate an RL agent in an ABM for one episode and train the RL agent to optimally liquidate a parent order.",
+      "evidence_location": "line 63, '### Key files' section",
+      "confidence": "high",
+      "reason": "Identifies the script implementing RL agent training, key for reproducing the learning experiments."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "empirical stylised facts and price impact curves; convergence, volume trajectory and action trace plots",
+      "normalized_value": "empirical stylised facts and price impact curves; convergence, volume trajectory and action trace plots",
+      "evidence": "The resulting impact on the agent-based model and market are considered using a calibration approach that explores changes in the empirical stylised facts and price impact curves. Convergence, volume trajectory and action trace plots are used to visualise the learning dynamics.",
+      "evidence_location": "line 3, introductory paragraph",
+      "confidence": "high",
+      "reason": "Names the evaluation measures and visualisations used to assess the agent's impact and learning."
+    },
+    {
+      "field": "authors",
+      "value": "Matthew Dicks, Tim Gebbie",
+      "normalized_value": "Matthew Dicks, Tim Gebbie",
+      "evidence": "## Authors\n\n1. Matthew Dicks\n2. Tim Gebbie",
+      "evidence_location": "lines 69-72, '## Authors' section",
+      "confidence": "high",
+      "reason": "Identifies the creators of the artifact for attribution and citation."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2208.10434",
+      "normalized_value": "https://arxiv.org/abs/2208.10434",
+      "evidence": "The link to the arxiv paper can be found [here](https://arxiv.org/abs/2208.10434).",
+      "evidence_location": "lines 74-76, '## Publications' section",
+      "confidence": "high",
+      "reason": "Links to the associated publication describing this work."
+    },
+    {
+      "field": "related_paper_url",
+      "value": "https://arxiv.org/abs/2108.07806",
+      "normalized_value": "https://arxiv.org/abs/2108.07806",
+      "evidence": "The event-time ABM is an extension of the hybrid stochastic time ABM with the description found [here](https://arxiv.org/abs/2108.07806)",
+      "evidence_location": "line 3, introductory paragraph",
+      "confidence": "high",
+      "reason": "Links to the prior paper describing the base ABM that this work extends."
+    },
+    {
+      "field": "related_repository",
+      "value": "https://github.com/IvanJericevich/IJPCTG-ABMCoinTossX",
+      "normalized_value": "https://github.com/IvanJericevich/IJPCTG-ABMCoinTossX",
+      "evidence": "Since this work extends previous work code was used from the repository [IJPCTG-ABMCoinTossX](https://github.com/IvanJericevich/IJPCTG-ABMCoinTossX).",
+      "evidence_location": "lines 78-80, '## References' section",
+      "confidence": "high",
+      "reason": "Identifies the predecessor repository from which code was reused, relevant for attribution and provenance."
+    }
+  ]
+}

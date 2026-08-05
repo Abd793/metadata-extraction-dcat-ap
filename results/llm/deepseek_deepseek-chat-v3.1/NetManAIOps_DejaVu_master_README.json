@@ -1,0 +1,202 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "DejaVu",
+      "normalized_value": "DejaVu",
+      "evidence": "# DejaVu",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Primary name of the artifact"
+    },
+    {
+      "field": "paper_preprint_url",
+      "value": "https://arxiv.org/abs/2207.09021",
+      "normalized_value": "https://arxiv.org/abs/2207.09021",
+      "evidence": "A preprint version: https://arxiv.org/abs/2207.09021",
+      "evidence_location": "line 15",
+      "confidence": "high",
+      "reason": "Link to associated research paper"
+    },
+    {
+      "field": "code_repository",
+      "value": "https://github.com/NetManAIOps/DejaVu.git",
+      "normalized_value": "https://github.com/NetManAIOps/DejaVu.git",
+      "evidence": "git pull https://github.com/NetManAIOps/DejaVu.git DejaVu",
+      "evidence_location": "lines 23-25",
+      "confidence": "high",
+      "reason": "Primary code repository URL"
+    },
+    {
+      "field": "docker_image",
+      "value": "lizytalk/dejavu",
+      "normalized_value": "lizytalk/dejavu",
+      "evidence": "docker pull lizytalk/dejavu",
+      "evidence_location": "lines 19-21",
+      "confidence": "high",
+      "reason": "Docker image for reproducible environment"
+    },
+    {
+      "field": "requirements_files",
+      "value": "requirements.txt and requirements-dev.txt",
+      "normalized_value": "requirements.txt and requirements-dev.txt",
+      "evidence": "The requirements are also listed in `requirements.txt` and `requirements-dev.txt`.",
+      "evidence_location": "line 18",
+      "confidence": "high",
+      "reason": "Files containing dependency specifications"
+    },
+    {
+      "field": "dgl_version",
+      "value": "DGL 0.8",
+      "normalized_value": "DGL 0.8",
+      "evidence": "Note that `DGL 0.8` is not released yet when I did this work, so I installed `DGL 0.8` manually from the source code.",
+      "evidence_location": "line 18",
+      "confidence": "high",
+      "reason": "Specific version requirement for DGL library"
+    },
+    {
+      "field": "pytorch_version",
+      "value": "PyTorch version should be equal to or greater than 1.11.0",
+      "normalized_value": "PyTorch version should be equal to or greater than 1.11.0",
+      "evidence": "PyTorch version should be equal to or greater than 1.11.0.",
+      "evidence_location": "line 18",
+      "confidence": "high",
+      "reason": "Minimum version requirement for PyTorch"
+    },
+    {
+      "field": "docker_run_command",
+      "value": "docker run -it --rm -v $(realpath DejaVu):/workspace lizytalk/dejavu bash",
+      "normalized_value": "docker run -it --rm -v $(realpath DejaVu):/workspace lizytalk/dejavu bash",
+      "evidence": "docker run -it --rm -v $(realpath DejaVu):/workspace lizytalk/dejavu bash",
+      "evidence_location": "lines 29-31",
+      "confidence": "high",
+      "reason": "Command to start Docker container for experiments"
+    },
+    {
+      "field": "dejavu_command",
+      "value": "python exp/run_GAT_node_classification.py -H=4 -L=8 -fe=GRU -bal=True --data_dir=data/A1",
+      "normalized_value": "python exp/run_GAT_node_classification.py -H=4 -L=8 -fe=GRU -bal=True --data_dir=data/A1",
+      "evidence": "Run for dataset A1: `python exp/run_GAT_node_classification.py -H=4 -L=8 -fe=GRU -bal=True --data_dir=data/A1`",
+      "evidence_location": "line 39",
+      "confidence": "high",
+      "reason": "Command to run main DejaVu algorithm"
+    },
+    {
+      "field": "jss20_command",
+      "value": "python exp/DejaVu/run_JSS20.py --data_dir=data/A1",
+      "normalized_value": "python exp/DejaVu/run_JSS20.py --data_dir=data/A1",
+      "evidence": "Run for dataset A1: `python exp/DejaVu/run_JSS20.py --data_dir=data/A1`",
+      "evidence_location": "line 40",
+      "confidence": "high",
+      "reason": "Command to run JSS'20 baseline"
+    },
+    {
+      "field": "isquad_command",
+      "value": "python exp/DejaVu/run_iSQ.py --data_dir=data/A1",
+      "normalized_value": "python exp/DejaVu/run_iSQ.py --data_dir=data/A1",
+      "evidence": "Run for dataset A1: `python exp/DejaVu/run_iSQ.py --data_dir=data/A1`",
+      "evidence_location": "line 41",
+      "confidence": "high",
+      "reason": "Command to run iSQUAD baseline"
+    },
+    {
+      "field": "decision_tree_command",
+      "value": "python exp/run_DT_node_classification.py --data_dir=data/A1",
+      "normalized_value": "python exp/run_DT_node_classification.py --data_dir=data/A1",
+      "evidence": "Run for dataset A1: `python exp/run_DT_node_classification.py --data_dir=data/A1`",
+      "evidence_location": "line 42",
+      "confidence": "high",
+      "reason": "Command to run Decision Tree baseline"
+    },
+    {
+      "field": "random_walk_metric_command",
+      "value": "python exp/DejaVu/run_random_walk_single_metric.py --data_dir=data/A1 --window_size 60 10 --score_aggregation_method=min",
+      "normalized_value": "python exp/DejaVu/run_random_walk_single_metric.py --data_dir=data/A1 --window_size 60 10 --score_aggregation_method=min",
+      "evidence": "Run for dataset A1: `python exp/DejaVu/run_random_walk_single_metric.py --data_dir=data/A1 --window_size 60 10 --score_aggregation_method=min`",
+      "evidence_location": "line 43",
+      "confidence": "high",
+      "reason": "Command to run RandomWalk@Metric baseline"
+    },
+    {
+      "field": "random_walk_fi_command",
+      "value": "python exp/DejaVu/run_random_walk_failure_instance.py --data_dir=data/A1 --window_size 60 10 --anomaly_score_aggregation_method=min --corr_aggregation_method=max",
+      "normalized_value": "python exp/DejaVu/run_random_walk_failure_instance.py --data_dir=data/A1 --window_size 60 10 --anomaly_score_aggregation_method=min --corr_aggregation_method=max",
+      "evidence": "Run for dataset A1: `python exp/DejaVu/run_random_walk_failure_instance.py --data_dir=data/A1 --window_size 60 10 --anomaly_score_aggregation_method=min --corr_aggregation_method=max`",
+      "evidence_location": "line 44",
+      "confidence": "high",
+      "reason": "Command to run RandomWalk@FI baseline"
+    },
+    {
+      "field": "global_interpretation_command",
+      "value": "Run `notebooks/explain.py` as a jupyter notebook with `jupytext`",
+      "normalized_value": "Run `notebooks/explain.py` as a jupyter notebook with `jupytext`",
+      "evidence": "Run `notebooks/explain.py` as a jupyter notebook with `jupytext`",
+      "evidence_location": "line 45",
+      "confidence": "high",
+      "reason": "Command for global interpretation analysis"
+    },
+    {
+      "field": "local_interpretation_command",
+      "value": "DejaVu/explanability/similar_faults.py",
+      "normalized_value": "DejaVu/explanability/similar_faults.py",
+      "evidence": "`DejaVu/explanability/similar_faults.py`",
+      "evidence_location": "line 46",
+      "confidence": "high",
+      "reason": "Script for local interpretation analysis"
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "A@1, A@2, A@3, A@5, MAR, Time, Epoch, Valid Epoch, output_dir, val_loss, val_MAR, val_A@1, command, git_commit_url",
+      "normalized_value": "A@1, A@2, A@3, A@5, MAR, Time, Epoch, Valid Epoch, output_dir, val_loss, val_MAR, val_A@1, command, git_commit_url",
+      "evidence": "The commands would print a `one-line summary` in the end, including the following fields: `A@1`, `A@2`, `A@3`, `A@5`, `MAR`, `Time`, `Epoch`, `Valid Epoch`, `output_dir`, `val_loss`, `val_MAR`, `val_A@1`, `command`, `git_commit_url`",
+      "evidence_location": "line 48",
+      "confidence": "high",
+      "reason": "List of evaluation metrics reported by the system"
+    },
+    {
+      "field": "datasets_url",
+      "value": "https://www.dropbox.com/sh/ist4ojr03e2oeuw/AAD5NkpAFg1nOI2Ttug3h2qja?dl=0",
+      "normalized_value": "https://www.dropbox.com/sh/ist4ojr03e2oeuw/AAD5NkpAFg1nOI2Ttug3h2qja?dl=0",
+      "evidence": "- https://www.dropbox.com/sh/ist4ojr03e2oeuw/AAD5NkpAFg1nOI2Ttug3h2qja?dl=0",
+      "evidence_location": "line 64",
+      "confidence": "high",
+      "reason": "Primary dataset download URL"
+    },
+    {
+      "field": "datasets_url",
+      "value": "https://doi.org/10.5281/zenodo.6955909",
+      "normalized_value": "https://doi.org/10.5281/zenodo.6955909",
+      "evidence": "- https://doi.org/10.5281/zenodo.6955909 (including the raw data of the Train-Ticket dataset)",
+      "evidence_location": "line 65",
+      "confidence": "high",
+      "reason": "Alternative dataset download URL with DOI"
+    },
+    {
+      "field": "dataset_description",
+      "value": "In each dataset, `graph.yml` or `graphs/*.yml` are FDGs, `metrics.csv` is metrics, and `faults.csv` is failures (including ground truths). `FDG.pkl` is a pickle of the FDG object, which contains all the above data.",
+      "normalized_value": "In each dataset, `graph.yml` or `graphs/*.yml` are FDGs, `metrics.csv` is metrics, and `faults.csv` is failures (including ground truths). `FDG.pkl` is a pickle of the FDG object, which contains all the above data.",
+      "evidence": "In each dataset, `graph.yml` or `graphs/*.yml` are FDGs, `metrics.csv` is metrics, and `faults.csv` is failures (including ground truths). `FDG.pkl` is a pickle of the FDG object, which contains all the above data.",
+      "evidence_location": "lines 66-67",
+      "confidence": "high",
+      "reason": "Description of dataset file structure and contents"
+    },
+    {
+      "field": "train_ticket_repository",
+      "value": "https://github.com/lizeyan/train-ticket",
+      "normalized_value": "https://github.com/lizeyan/train-ticket",
+      "evidence": "https://github.com/lizeyan/train-ticket",
+      "evidence_location": "line 71",
+      "confidence": "high",
+      "reason": "Repository for deployment and failure injection scripts"
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{li2022actionable,\n  title = {Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems},\n  booktitle = {Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}},\n  author = {Li, Zeyan and Zhao, Nengwen and Li, Mingjie and Lu, Xianglin and Wang, Lixin and Chang, Dongdong and Nie, Xiaohui and Cao, Li and Zhang, Wenchi and Sui, Kaixin and Wang, Yanhua and Du, Xu and Duan, Guoqing and Pei, Dan},\n  year = {2022},\n  month = nov,\n  series = {{{ESEC}}/{{FSE}} 2022}\n}",
+      "normalized_value": "@inproceedings{li2022actionable,\n  title = {Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems},\n  booktitle = {Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}},\n  author = {Li, Zeyan and Zhao, Nengwen and Li, Mingjie and Lu, Xianglin and Wang, Lixin and Chang, Dongdong and Nie, Xiaohui and Cao, Li and Zhang, Wenchi and Sui, Kaixin and Wang, Yanhua and Du, Xu and Duan, Guoqing and Pei, Dan},\n  year = {2022},\n  month = nov,\n  series = {{{ESEC}}/{{FSE}} 2022}\n}",
+      "evidence": "@inproceedings{li2022actionable,\n  title = {Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems},\n  booktitle = {Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}},\n  author = {Li, Zeyan and Zhao, Nengwen and Li, Mingjie and Lu, Xianglin and Wang, Lixin and Chang, Dongdong and Nie, Xiaohui and Cao, Li and Zhang, Wenchi and Sui, Kaixin and Wang, Yanhua and Du, Xu and Duan, Guoqing and Pei, Dan},\n  year = {2022},\n  month = nov,\n  series = {{{ESEC}}/{{FSE}} 2022}\n}",
+      "evidence_location": "lines 74-83",
+      "confidence": "high",
+      "reason": "BibTeX citation for the associated research paper"
+    }
+  ]
+}

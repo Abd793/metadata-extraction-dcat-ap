@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "SGDLibrary : Stochastic Optimization Algorithm Library in MATLAB/Octave",
+      "normalized_value": "SGDLibrary : Stochastic Optimization Algorithm Library in MATLAB/Octave",
+      "evidence": "# SGDLibrary : Stochastic Optimization Algorithm Library in MATLAB/Octave",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Explicit title of the artifact."
+    },
+    {
+      "field": "artifact_description",
+      "value": "The SGDLibrary is a **pure-MATLAB** library or toolbox of a collection of **stochastic optimization algorithms**. This solves an unconstrained minimization problem of the form, min f(x) = sum_i f_i(x).",
+      "normalized_value": "The SGDLibrary is a pure-MATLAB library or toolbox of a collection of stochastic optimization algorithms. This solves an unconstrained minimization problem of the form, min f(x) = sum_i f_i(x).",
+      "evidence": "The SGDLibrary is a **pure-MATLAB** library or toolbox of a collection of **stochastic optimization algorithms**. This solves an unconstrained minimization problem of the form, min f(x) = sum_i f_i(x).",
+      "evidence_location": "line 22",
+      "confidence": "high",
+      "reason": "Clear statement of the artifact's purpose and type."
+    },
+    {
+      "field": "author",
+      "value": "Hiroyuki Kasai",
+      "normalized_value": "Hiroyuki Kasai",
+      "evidence": "Authors: [Hiroyuki Kasai](http://kasai.comm.waseda.ac.jp/kasai/)",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Primary author is named."
+    },
+    {
+      "field": "last_update_date",
+      "value": "November 20, 2020",
+      "normalized_value": "November 20, 2020",
+      "evidence": "Last page update: November 20, 2020",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Explicit date of last update."
+    },
+    {
+      "field": "latest_version",
+      "value": "1.0.20",
+      "normalized_value": "1.0.20",
+      "evidence": "Latest library version: 1.0.20 (see Release notes for more info)",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Explicit version number."
+    },
+    {
+      "field": "compatible_platforms",
+      "value": "MATLAB, GNU Octave",
+      "normalized_value": "MATLAB, GNU Octave",
+      "evidence": "The SGDLibrary is also operable on [GNU Octave](https://www.gnu.org/software/octave/) (Free software compatible with many MATLAB scripts).",
+      "evidence_location": "line 23",
+      "confidence": "high",
+      "reason": "States platforms the library can run on, important for reproducibility."
+    },
+    {
+      "field": "documentation_reference",
+      "value": "H. Kasai, \"[SGDLibrary: A MATLAB library for stochastic optimization algorithms](http://www.jmlr.org/papers/v18/17-632.html),\" Journal of Machine Learning Research (JMLR), vol.18, no.215, communication 2018 (arXiv preprint [arXiv:1710.10951](https://arxiv.org/abs/1710.10951)).",
+      "normalized_value": "H. Kasai, \"SGDLibrary: A MATLAB library for stochastic optimization algorithms,\" Journal of Machine Learning Research (JMLR), vol.18, no.215, 2018 (arXiv preprint arXiv:1710.10951).",
+      "evidence": "- H. Kasai, \"[SGDLibrary: A MATLAB library for stochastic optimization algorithms](http://www.jmlr.org/papers/v18/17-632.html),\" Journal of Machine Learning Research (JMLR), vol.18, no.215, 2018 (arXiv preprint [arXiv:1710.10951](https://arxiv.org/abs/1710.10951)).",
+      "evidence_location": "lines 32-33",
+      "confidence": "high",
+      "reason": "Primary citation for the library, provides scientific context."
+    },
+    {
+      "field": "setup_command",
+      "value": "run_me_first;",
+      "normalized_value": "run_me_first;",
+      "evidence": "run_me_first;",
+      "evidence_location": "lines 183-183",
+      "confidence": "high",
+      "reason": "First command to run for path configuration, essential for setup."
+    },
+    {
+      "field": "demo_command",
+      "value": "demo;",
+      "normalized_value": "demo;",
+      "evidence": "demo;",
+      "evidence_location": "lines 195-195",
+      "confidence": "high",
+      "reason": "Command to run a simple demonstration to understand the package."
+    },
+    {
+      "field": "algorithm_configuration_table",
+      "value": "|Algorithm name in example codes| function | `options.sub_mode` | other `options` |\n|---|---|---|---|\n|SGD|`sgd`|||\n|SGD-CM|`sgd_cm`|`'CM'`||\n|SGD-CM-NAG|`sgd_cm`|`'CM-NAG'`||\n|AdaGrad|`adagrad`|`'AdaGrad'`||\n|RMSProp|`adagrad`|`'RMSProp'`||\n|AdaDelta|`adagrad`|`'AdaDelta'`||\n|Adam|`adam`|`'Adam'`||\n|AdaMax|`adam`|`'AdaMax'`||\n|SVRG|`svrg`|||\n|SAG|`sag`|`'SAG'`||\n|SAGA|`sag`|`'SAGA'`||\n|SARAH|`sarah`|||\n|SQN|`slbfg`s|`'SQN'`||\n|SVRG-SQN|`slbfgs`|`'SVRG-SQN'`||\n|SVRG-LBFGS|`slbfgs`|`'SVRG-LBFGS'`||\n|SS-SVRG|`subsamp_svrg`|||\n|oBFGS-Inf|`obfgs`|`'Inf-mem'`||\n|oLBFGS-Lim|`obfgs`|`'Lim-mem'`||\n|Reg-oBFGS-Inf|`obfgs`|`'Inf-mem'`|`regularized=true`|\n|Damp-oBFGS-Inf|`obfgs`|`'Inf-mem'`|`regularized=true` & `damped=true`|\n|IQN|`iqn`|||\n|SCR|`scr`|| `gradient_sampling=1` & `Hessian_sampling=1`|\n|Subsampled-TR|`subsamp_tr`|| `gradient_sampling=1` & `Hessian_sampling=1`|\n|SVRG-BB|`svrg_bb`|||",
+      "normalized_value": "|Algorithm name in example codes| function | `options.sub_mode` | other `options` ||---|---|---|---||SGD|`sgd`||||SGD-CM|`sgd_cm`|`'CM'`||||SGD-CM-NAG|`sgd_cm`|`'CM-NAG'`||||AdaGrad|`adagrad`|`'AdaGrad'`||||RMSProp|`adagrad`|`'RMSProp'`||||AdaDelta|`adagrad`|`'AdaDelta'`||||Adam|`adam`|`'Adam'`||||AdaMax|`adam`|`'AdaMax'`||||SVRG|`svrg`||||SAG|`sag`|`'SAG'`||||SAGA|`sag`|`'SAGA'`||||SARAH|`sarah`||||SQN|`slbfg`s|`'SQN'`||||SVRG-SQN|`slbfgs`|`'SVRG-SQN'`||||SVRG-LBFGS|`slbfgs`|`'SVRG-LBFGS'`||||SS-SVRG|`subsamp_svrg`||||oBFGS-Inf|`obfgs`|`'Inf-mem'`||||oLBFGS-Lim|`obfgs`|`'Lim-mem'`||||Reg-oBFGS-Inf|`obfgs`|`'Inf-mem'`|`regularized=true`|||Damp-oBFGS-Inf|`obfgs`|`'Inf-mem'`|`regularized=true` & `damped=true`|||IQN|`iqn`||||SCR|`scr`|| `gradient_sampling=1` & `Hessian_sampling=1`|||Subsampled-TR|`subsamp_tr`|| `gradient_sampling=1` & `Hessian_sampling=1`|||SVRG-BB|`svrg_bb`|||",
+      "evidence": "|Algorithm name in example codes| function | `options.sub_mode` | other `options` |\n|---|---|---|---|\n|SGD|`sgd`|||\n|SGD-CM|`sgd_cm`|`'CM'`||\n|SGD-CM-NAG|`sgd_cm`|`'CM-NAG'`||\n|AdaGrad|`adagrad`|`'AdaGrad'`||\n|RMSProp|`adagrad`|`'RMSProp'`||\n|AdaDelta|`adagrad`|`'AdaDelta'`||\n|Adam|`adam`|`'Adam'`||\n|AdaMax|`adam`|`'AdaMax'`||\n|SVRG|`svrg`|||\n|SAG|`sag`|`'SAG'`||\n|SAGA|`sag`|`'SAGA'`||\n|SARAH|`sarah`|||\n|SQN|`slbfg`s|`'SQN'`||\n|SVRG-SQN|`slbfgs`|`'SVRG-SQN'`||\n|SVRG-LBFGS|`slbfgs`|`'SVRG-LBFGS'`||\n|SS-SVRG|`subsamp_svrg`|||\n|oBFGS-Inf|`obfgs`|`'Inf-mem'`||\n|oLBFGS-Lim|`obfgs`|`'Lim-mem'`||\n|Reg-oBFGS-Inf|`obfgs`|`'Inf-mem'`|`regularized=true`|\n|Damp-oBFGS-Inf|`obfgs`|`'Inf-mem'`|`regularized=true` & `damped=true`|\n|IQN|`iqn`|||\n|SCR|`scr`|| `gradient_sampling=1` & `Hessian_sampling=1`|\n|Subsampled-TR|`subsamp_tr`|| `gradient_sampling=1` & `Hessian_sampling=1`|\n|SVRG-BB|`svrg_bb`|||",
+      "evidence_location": "lines 109-135",
+      "confidence": "high",
+      "reason": "Table mapping algorithm names to function calls and configuration options, crucial for usage."
+    },
+    {
+      "field": "supported_problems",
+      "value": "* L2-norm regularized multidimensional linear regression\n* L2-norm regularized linear SVM\n* L2-norm regularized logistic regression\n* Softmax classification (multinomial logistic regression)\n    - Note that softmax classification problem does not support Hessian-vector product type algorithms, i.e., SQN, SVRG-SQN and SVRG-LBFGS.\n* L1-norm regularized multidimensional linear regression\n* L1-norm regularized logistic regression\n* Sum quadratic problem",
+      "normalized_value": "* L2-norm regularized multidimensional linear regression * L2-norm regularized linear SVM * L2-norm regularized logistic regression * Softmax classification (multinomial logistic regression) - Note that softmax classification problem does not support Hessian-vector product type algorithms, i.e., SQN, SVRG-SQN and SVRG-LBFGS. * L1-norm regularized multidimensional linear regression * L1-norm regularized logistic regression * Sum quadratic problem",
+      "evidence": "* L2-norm regularized multidimensional linear regression\n* L2-norm regularized linear SVM\n* L2-norm regularized logistic regression\n* Softmax classification (multinomial logistic regression)\n    - Note that softmax classification problem does not support Hessian-vector product type algorithms, i.e., SQN, SVRG-SQN and SVRG-LBFGS.\n* L1-norm regularized multidimensional linear regression\n* L1-norm regularized logistic regression\n* Sum quadratic problem",
+      "evidence_location": "lines 144-152",
+      "confidence": "high",
+      "reason": "List of optimization problems the library can solve, essential for application context."
+    },
+    {
+      "field": "folder_structure",
+      "value": "./                      - Top directory.\n./README.md             - This readme file.\n./run_me_first.m        - The scipt that you need to run first.\n./demo.m                - Demonstration script to check and understand this package easily. \n|plotter/               - Contains plotting tools to show convergence results and various plots.\n|tool/                  - Some auxiliary tools for this project.\n|problem/               - Problem definition files to be solved.\n|sgd_solver/            - Contains various stochastic optimization algorithms.\n|sgd_test/              - Some helpful test scripts to use this package.\n|gd_solver/             - Contains various gradient descent optimization algorithms.\n|gd_test/               - Some helpful test scripts using gradient descent algorithms to use this package.",
+      "normalized_value": "./ - Top directory. ./README.md - This readme file. ./run_me_first.m - The scipt that you need to run first. ./demo.m - Demonstration script to check and understand this package easily. |plotter/ - Contains plotting tools to show convergence results and various plots. |tool/ - Some auxiliary tools for this project. |problem/ - Problem definition files to be solved. |sgd_solver/ - Contains various stochastic optimization algorithms. |sgd_test/ - Some helpful test scripts to use this package. |gd_solver/ - Contains various gradient descent optimization algorithms. |gd_test/ - Some helpful test scripts using gradient descent algorithms to use this package.",
+      "evidence": "./                      - Top directory.\n./README.md             - This readme file.\n./run_me_first.m        - The scipt that you need to run first.\n./demo.m                - Demonstration script to check and understand this package easily. \n|plotter/               - Contains plotting tools to show convergence results and various plots.\n|tool/                  - Some auxiliary tools for this project.\n|problem/               - Problem definition files to be solved.\n|sgd_solver/            - Contains various stochastic optimization algorithms.\n|sgd_test/              - Some helpful test scripts to use this package.\n|gd_solver/             - Contains various gradient descent optimization algorithms.\n|gd_test/               - Some helpful test scripts using gradient descent algorithms to use this package.",
+      "evidence_location": "lines128165-176",
+      "confidence": "high",
+      "reason": "Overview of the repository's directory structure, helpful for navigation and understanding the codebase."
+    },
+    {
+      "field": "license_terms",
+      "value": "The SGDLibrary is **free** and **open** source.\n- The code provided iin SGDLibrary should only be used for **academic/research purposes**.",
+      "normalized_value": "The SGDLibrary is free and open source. - The code provided iin SGDLibrary should only be used for academic/research purposes.",
+      "evidence": "The SGDLibrary is **free** and **open** source.\n- The code provided iin SGDLibrary should only be used for **academic/research purposes**.",
+      "evidence_location": "lines 386-387",
+      "confidence": "high",
+      "reason": "Key license and usage restrictions for the artifact."
+    },
+    {
+      "field": "contact_information",
+      "value": "Hiroyuki Kasai (email: hiroyuki **dot** kasai **at** waseda **dot** jp)",
+      "normalized_value": "Hiroyuki Kasai (email: hiroyuki **dot** kasai **at** waseda **dot** jp)",
+      "evidence": "Hiroyuki Kasai (email: hiroyuki **dot** kasai **at** waseda **dot** jp)",
+      "evidence_location": "line 408",
+      "confidence": "high",
+      "reason": "Contact details for questions or problems, important for support."
+    },
+    {
+      "field": "internal_dependency",
+      "value": "This SGDLibrary internally contains the GDLibrary.",
+      "normalized_value": "This SGDLibrary internally contains the GDLibrary.",
+      "evidence": "Note that this SGDLibrary internally contains the [GDLibrary](https://github.com/hiroyuki-kasai/GDLibrary).",
+      "evidence_location": "line 24",
+      "confidence": "high",
+      "reason": "Mentions an internal dependency (GDLibrary), which is important for understanding the library's composition."
+    },
+    {
+      "field": "usage_example_code",
+      "value": "%% generate synthetic data        \n% set number of dimensions\nd = 3;\n% set number of samples    \nn = 300;\n% generate data\ndata = logistic_regression_data_generator(n, d);\n\n\n%% define problem definitions\nproblem = logistic_regression(data.x_train, data.y_train, data.x_test, data.y_test); \n\n\n%% perform algorithms SGD and SVRG \noptions.w_init = data.w_init;\noptions.step_init = 0.01;       \n[w_sgd, info_sgd] = sgd(problem, options);  \n[w_svrg, info_svrg] = svrg(problem, options);\n\n\n%% display cost/optimality gap vs number of gradient evaluations\ndisplay_graph('grad_calc_count','cost', {'SGD', 'SVRG'}, {w_sgd, w_svrg}, {info_sgd, info_svrg});",
+      "normalized_value": "%% generate synthetic data % set number of dimensions d = 3; % set number of samples n = 300; % generate data data = logistic_regression_data_generator(n, d); %% define problem definitions problem = logistic_regression(data.x_train, data.y_train, data.x_test, data.y_test); %% perform algorithms SGD and SVRG options.w_init = data.w_init; options.step_init = 0.01; [w_sgd, info_sgd] = sgd(problem, options); [w_svrg, info_svrg] = svrg(problem, options); %% display cost/optimality gap vs number of gradient evaluations display_graph('grad_calc_count','cost', {'SGD', 'SVRG'}, {w_sgd, w_svrg}, {info_sgd, info_svrg});",
+      "evidence": "%% generate synthetic data        \n% set number of dimensions\nd = 3;\n% set number of samples    \nn = 300;\n% generate data\ndata = logistic_regression_data_generator(n, d);\n\n\n%% define problem definitions\nproblem = logistic_regression(data.x_train, data.y_train, data.x_test, data.y_test); \n\n\n%% perform algorithms SGD and SVRG \noptions.w_init = data.w_init;\noptions.step_init = 0.01;       \n[w_sgd, info_sgd] = sgd(problem, options);  \n[w_svrginfo_svrg] = svrg(problem, options);\n\n\n%% display cost/optimality gap vs number of gradient evaluations\ndisplay_graph('grad_calc_count','cost', {'SGD', 'SVRG'}, {w_sgd, w_svrg}, {info_sgd, info_svrg});",
+      "evidence_location": "lines 200-223",
+      "confidence": "medium",
+      "reason": "A complete example code block showing data generation, problem definition, algorithm execution, and result visualization. Small typo in line 217 (missing comma) but overall a coherent reproduction step."
+    },
+    {
+      "field": "algorithm_variants_list_section",
+      "value": "List of the algorithms available in SGDLibrary",
+      "normalized_value": "List of the algorithms available in SGDLibrary",
+      "evidence": "## <a name=\"supp_solver\"> List of the algorithms available in SGDLibrary </a>",
+      "evidence_location": "line 37",
+      "confidence": "high",
+      "reason": "Section header indicating where the list of implemented algorithms is found, useful for indexing."
+    },
+    {
+      "field": "release_notes_section",
+      "value": "Release Notes",
+      "normalized_value": "Release Notes",
+      "evidence": "Release Notes",
+      "evidence_location": "line 412",
+      "confidence": "high",
+      "reason": "Section header for version history, useful for tracking updates."
+    }
+  ]
+}

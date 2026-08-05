@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "paper_title",
+      "value": "Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries.",
+      "normalized_value": "Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries.",
+      "evidence": "[Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries.](https://arxiv.org/abs/1911.03826)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the research paper title and provides direct link to paper"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/1911.03826",
+      "normalized_value": "https://arxiv.org/abs/1911.03826",
+      "evidence": "[Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries.](https://arxiv.org/abs/1911.03826)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Direct link to the research paper on arXiv"
+    },
+    {
+      "field": "authors",
+      "value": "Fuwen Tan, Paola Cascante-Bonilla, Xiaoxiao Guo, Hui Wu, Song Feng, Vicente Ordonez",
+      "normalized_value": "Fuwen Tan, Paola Cascante-Bonilla, Xiaoxiao Guo, Hui Wu, Song Feng, Vicente Ordonez",
+      "evidence": "Fuwen Tan, Paola Cascante-Bonilla, Xiaoxiao Guo, Hui Wu, Song Feng, Vicente Ordonez. NeurIPS 2019",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Lists all authors of the paper"
+    },
+    {
+      "field": "conference",
+      "value": "NeurIPS 2019",
+      "normalized_value": "NeurIPS 2019",
+      "evidence": "Fuwen Tan, Paola Cascante-Bonilla, Xiaoxiao Guo, Hui Wu, Song Feng, Vicente Ordonez. NeurIPS 2019",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Identifies the conference and year where paper was published"
+    },
+    {
+      "field": "task_description",
+      "value": "interactive image retrieval using natural language queries, where a user progressively provides input queries to refine a set of retrieval results in the context of complex image scenes containing multiple objects",
+      "normalized_value": "interactive image retrieval using natural language queries, where a user progressively provides input queries to refine a set of retrieval results in the context of complex image scenes containing multiple objects",
+      "evidence": "This paper explores the task of interactive image retrieval using natural language queries, where a user progressively provides input queries to refine a set of retrieval results. Moreover, our work explores this problem in the context of complex image scenes containing multiple objects.",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Describes the core research task and problem domain"
+    },
+    {
+      "field": "method_name",
+      "value": "Drill-down",
+      "normalized_value": "Drill-down",
+      "evidence": "We propose Drill-down, an effective framework for encoding multiple queries with an efficient compact state representation that significantly extends current methods for single-round image retrieval.",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Names the proposed method/framework"
+    },
+    {
+      "field": "python_version",
+      "value": "python=3.6",
+      "normalized_value": "python=3.6",
+      "evidence": "conda create -n retrieval python=3.6    # Create a virtual environment",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Specifies required Python version for environment setup"
+    },
+    {
+      "field": "dependencies",
+      "value": "jupyter scikit-image cython opencv seaborn nltk pycairo h5py",
+      "normalized_value": "jupyter scikit-image cython opencv seaborn nltk pycairo h5py",
+      "evidence": "conda install jupyter scikit-image cython opencv seaborn nltk pycairo h5py  # Install dependencies",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Lists prerequisite packages needed for the project"
+    },
+    {
+      "field": "framework_dependencies",
+      "value": "pytorch 1.0 (or higher), torchVision, and torchtext",
+      "normalized_value": "pytorch 1.0 (or higher), torchVision, and torchtext",
+      "evidence": "Please also install [pytorch](http://pytorch.org/) 1.0 (or higher), torchVision, and torchtext",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Specifies deep learning framework and version requirements"
+    },
+    {
+      "field": "dataset",
+      "value": "Visual Genome dataset",
+      "normalized_value": "Visual Genome dataset",
+      "evidence": "Download the images of the Visual Genome dataset if you have not done so",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Identifies the primary dataset used in the project"
+    },
+    {
+      "field": "data_download_commands",
+      "value": "./experiments/scripts/fetch_images.sh\n./experiments/scripts/fetch_annotations.sh\n./experiments/scripts/fetch_features.sh\n./experiments/scripts/fetch_pretrained_models.sh",
+      "normalized_value": "./experiments/scripts/fetch_images.sh ./experiments/scripts/fetch_annotations.sh ./experiments/scripts/fetch_features.sh ./experiments/scripts/fetch_pretrained_models.sh",
+      "evidence": "./experiments/scripts/fetch_images.sh\n./experiments/scripts/fetch_annotations.sh\n./experiments/scripts/fetch_features.sh\n./experiments/scripts/fetch_pretrained_models.sh",
+      "evidence_location": "22,28,34,40",
+      "confidence": "high",
+      "reason": "Commands to download required data and models for reproduction"
+    },
+    {
+      "field": "feature_extraction_models",
+      "value": "pretrained ResNet101 model for global features, pretrained FasterRCNN model for region features",
+      "normalized_value": "pretrained ResNet101 model for global features, pretrained FasterRCNN model for region features",
+      "evidence": "The global features were extracted from a pretrained ResNet101 model. The region features were extracted from a pretrained FasterRCNN model provided by https://github.com/peteanderson80/bottom-up-attention.",
+      "evidence_location": "36",
+      "confidence": "high",
+      "reason": "Specifies models used for feature extraction"
+    },
+    {
+      "field": "training_script",
+      "value": "./experiments/scripts/train_drill_down_3x128_reinforce.sh",
+      "normalized_value": "./experiments/scripts/train_drill_down_3x128_reinforce.sh",
+      "evidence": "./experiments/scripts/train_drill_down_3x128_reinforce.sh",
+      "evidence_location": "50",
+      "confidence": "high",
+      "reason": "Specific training script for the main model"
+    },
+    {
+      "field": "pretrained_model_path",
+      "value": "DrillDown/caches/region_ckpts/vg_f128_i3_sl_ckpt.pkl",
+      "normalized_value": "DrillDown/caches/region_ckpts/vg_f128_i3_sl_ckpt.pkl",
+      "evidence": "the default pretrained model is `DrillDown/caches/region_ckpts/vg_f128_i3_sl_ckpt.pkl`.",
+      "evidence_location": "52",
+      "confidence": "high",
+      "reason": "Path to default pretrained model for finetuning"
+    },
+    {
+      "field": "citation",
+      "value": "@InProceedings{drilldown,\n    author={Fuwen Tan and Paola Cascante-Bonilla and Xiaoxiao Guo and Hui Wu and Song Feng and Vicente Ordonez},\n    title={Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries},\n    booktitle = {Neural Information Processing Systems (NeurIPS)},\n    month = {December},\n    year = {2019}\n    }",
+      "normalized_value": "@InProceedings{drilldown, author={Fuwen Tan and Paola Cascante-Bonilla and Xiaoxiao Guo and Hui Wu and Song Feng and Vicente Ordonez}, title={Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries}, booktitle = {Neural Information Processing Systems (NeurIPS)}, month = {December}, year = {2019} }",
+      "evidence": "@InProceedings{drilldown,\n    author={Fuwen Tan and Paola Cascante-Bonilla and Xiaoxiao Guo and Hui Wu and Song Feng and Vicente Ordonez},\n    title={Drill-down: Interactive Retrieval of Complex Scenes using Natural Language Queries},\n    booktitle = {Neural Information Processing Systems (NeurIPS)},\n    month = {December},\n    year = {2019}\n    }",
+      "evidence_location": "60-66",
+      "confidence": "high",
+      "reason": "Complete BibTeX citation for the paper"
+    },
+    {
+      "field": "license",
+      "value": "MIT license",
+      "normalized_value": "MIT license",
+      "evidence": "This project is licensed under the [MIT license](https://opensource.org/licenses/MIT):",
+      "evidence_location": "72",
+      "confidence": "high",
+      "reason": "Specifies the software license for reuse"
+    },
+    {
+      "field": "copyright",
+      "value": "Copyright (c) 2019 University of Virginia, Fuwen Tan, Paola Cascante-Bonilla, Xiaoxiao Guo, Hui Wu, Song Feng, Vicente Ordonez.",
+      "normalized_value": "Copyright (c) 2019 University of Virginia, Fuwen Tan, Paola Cascante-Bonilla, Xiaoxiao Guo, Hui Wu, Song Feng, Vicente Ordonez.",
+      "evidence": "Copyright (c) 2019 University of Virginia, Fuwen Tan, Paola Cascante-Bonilla, Xiaoxiao Guo, Hui Wu, Song Feng, Vicente Ordonez.",
+      "evidence_location": "74",
+      "confidence": "high",
+      "reason": "Copyright information for attribution"
+    }
+  ]
+}

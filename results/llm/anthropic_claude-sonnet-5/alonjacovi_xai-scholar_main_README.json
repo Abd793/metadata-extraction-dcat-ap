@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "XAI-Scholar",
+      "normalized_value": "XAI-Scholar",
+      "evidence": "# XAI-Scholar",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Title of the repository/artifact"
+    },
+    {
+      "field": "description",
+      "value": "Code and data for deriving empirical trends in XAI.",
+      "normalized_value": "Code and data for deriving empirical trends in XAI.",
+      "evidence": "Code and data for deriving empirical trends in XAI.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "States the purpose of the artifact"
+    },
+    {
+      "field": "related_blogpost",
+      "value": "https://medium.com/@alonjacovi/trends-in-explainable-ai-xai-literature-a1db485e871",
+      "normalized_value": "https://medium.com/@alonjacovi/trends-in-explainable-ai-xai-literature-a1db485e871",
+      "evidence": "Please check the accompanying [Medium blogpost](https://medium.com/@alonjacovi/trends-in-explainable-ai-xai-literature-a1db485e871) and [Arxiv report](http://arxiv.org/abs/2301.05433).",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Link to accompanying blog explaining the work, useful for understanding context"
+    },
+    {
+      "field": "paper",
+      "value": "http://arxiv.org/abs/2301.05433",
+      "normalized_value": "http://arxiv.org/abs/2301.05433",
+      "evidence": "Please check the accompanying [Medium blogpost](https://medium.com/@alonjacovi/trends-in-explainable-ai-xai-literature-a1db485e871) and [Arxiv report](http://arxiv.org/abs/2301.05433).",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Link to the associated arxiv report/paper for citation and further detail"
+    },
+    {
+      "field": "dataset_size",
+      "value": "5199 papers as of December 31st 2022",
+      "normalized_value": "5199 papers as of December 31st 2022",
+      "evidence": "The final collection has 5199 papers as of December 31st 2022.",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Specifies the size and cutoff date of the collected dataset"
+    },
+    {
+      "field": "data_collection_method",
+      "value": "a mix of keyword search via SemanticScholar, and manual curation",
+      "normalized_value": "a mix of keyword search via SemanticScholar, and manual curation",
+      "evidence": "To recap, it is a mix of keyword search via SemanticScholar, and manual curation.",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Describes how the dataset was collected, useful for reproducibility and understanding methodology"
+    },
+    {
+      "field": "dependency",
+      "value": "semanticscholar",
+      "normalized_value": "semanticscholar",
+      "evidence": "The code used to interface with SemanticScholar uses the unofficial [semanticscholar](https://github.com/danielnsilva/semanticscholar) python library. Install with `pip install semanticscholar`.",
+      "evidence_location": "line 10",
+      "confidence": "high",
+      "reason": "Names the required Python library dependency and its repository"
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install semanticscholar",
+      "normalized_value": "pip install semanticscholar",
+      "evidence": "Install with `pip install semanticscholar`.",
+      "evidence_location": "line 10",
+      "confidence": "high",
+      "reason": "Explicit installation command for the dependency"
+    },
+    {
+      "field": "dependency",
+      "value": "Seaborn",
+      "normalized_value": "Seaborn",
+      "evidence": "The plots and graphs use [Seaborn](https://seaborn.pydata.org/) and [GraphOnline](http://graphonline.ru/en/).",
+      "evidence_location": "line 10",
+      "confidence": "high",
+      "reason": "Tool used for generating plots, relevant for reproducing figures"
+    },
+    {
+      "field": "dependency",
+      "value": "GraphOnline",
+      "normalized_value": "GraphOnline",
+      "evidence": "The plots and graphs use [Seaborn](https://seaborn.pydata.org/) and [GraphOnline](http://graphonline.ru/en/).",
+      "evidence_location": "line 10",
+      "confidence": "high",
+      "reason": "Tool used for generating graphs, relevant for reproducing figures"
+    },
+    {
+      "field": "code_file",
+      "value": "XAI-Scholar_analysis.ipynb",
+      "normalized_value": "XAI-Scholar_analysis.ipynb",
+      "evidence": "`XAI-Scholar_analysis.ipynb` is a Jupyter Notebook with the code necessary to reproduce the results in the medium/arxiv reports.",
+      "evidence_location": "line 13",
+      "confidence": "high",
+      "reason": "Identifies the notebook file used to reproduce the reported results"
+    },
+    {
+      "field": "data_file",
+      "value": "xai-scholar.json",
+      "normalized_value": "xai-scholar.json",
+      "evidence": "`xai-scholar.json` is a json dictionary with 5199 SemanticScholar `paperId` keys.",
+      "evidence_location": "line 15",
+      "confidence": "high",
+      "reason": "Identifies the main dataset file and its structure"
+    },
+    {
+      "field": "data_schema_fields",
+      "value": "paperId, externalIds, url, title, abstract, venue, year, referenceCount, citationCount, influentialCitationCount, isOpenAccess, fieldsOfStudy, s2FieldsOfStudy, tldr, publicationTypes, publicationDate, journal, authors",
+      "normalized_value": "paperId, externalIds, url, title, abstract, venue, year, referenceCount, citationCount, influentialCitationCount, isOpenAccess, fieldsOfStudy, s2FieldsOfStudy, tldr, publicationTypes, publicationDate, journal, authors",
+      "evidence": "* `paperId`\n* `externalIds`\n* `url`\n* `title`\n* `abstract`\n* `venue`\n* `year`\n* `referenceCount`\n* `citationCount`\n* `influentialCitationCount`\n* `isOpenAccess`\n* `fieldsOfStudy`\n* `s2FieldsOfStudy`\n* `tldr`\n* `publicationTypes`\n* `publicationDate`\n* `journal`\n* `authors`",
+      "evidence_location": "lines 18-35",
+      "confidence": "high",
+      "reason": "Lists the standard fields provided by the SemanticScholar API included in the dataset, useful for understanding data schema"
+    },
+    {
+      "field": "missing_fields",
+      "value": "embedding, citations, references",
+      "normalized_value": "embedding, citations, references",
+      "evidence": "The following fields are missing in `xai-scholar.json` and need to be retrieved from SemanticScholar due to their large size (expect around 1 GB without `embedding`):\n* `embedding`\n* `citations`\n* `references`",
+      "evidence_location": "lines 39-42",
+      "confidence": "high",
+      "reason": "Identifies data fields excluded from the provided dataset due to size, relevant for reproducibility and full data retrieval"
+    },
+    {
+      "field": "data_size_note",
+      "value": "expect around 1 GB without `embedding`",
+      "normalized_value": "expect around 1 GB without embedding",
+      "evidence": "The following fields are missing in `xai-scholar.json` and need to be retrieved from SemanticScholar due to their large size (expect around 1 GB without `embedding`):",
+      "evidence_location": "line 39",
+      "confidence": "high",
+      "reason": "Gives concrete size estimate for the full dataset including missing fields"
+    },
+    {
+      "field": "retrieval_command",
+      "value": "semanticscholar.get_paper(paperId)",
+      "normalized_value": "semanticscholar.get_paper(paperId)",
+      "evidence": "The code to do so is in the jupyter notebook - but it simply calls `semanticscholar.get_paper(paperId)` for each `paperId`.",
+      "evidence_location": "line 44",
+      "confidence": "high",
+      "reason": "Command used to retrieve the missing large fields for each paper, useful for reproduction"
+    }
+  ]
+}

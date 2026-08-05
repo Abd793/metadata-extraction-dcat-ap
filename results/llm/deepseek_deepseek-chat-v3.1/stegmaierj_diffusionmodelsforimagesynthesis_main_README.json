@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Denoising Diffusion Probabilistic Models for Generation of Realistic Fully-Annotated Microscopy Image Data Sets",
+      "normalized_value": "Denoising Diffusion Probabilistic Models for Generation of Realistic Fully-Annotated Microscopy Image Data Sets",
+      "evidence": "# Denoising Diffusion Probabilistic Models for Generation of Realistic Fully-Annotated Microscopy Image Data Sets",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Explicit title of the project/artifact"
+    },
+    {
+      "field": "description",
+      "value": "This repository contains code to simulated 2D/3D cellular structures and synthesize corresponding microscopy image data based on Denoising Diffusion Probabilistic Models (DDPM). Sketches are generated to indicate cell shapes and structural characteristics, and they serve as a basis for the diffusion process to ultimately allow for the generation of fully-annotated microscopy image data sets without the need for human annotation effort.",
+      "normalized_value": "This repository contains code to simulated 2D/3D cellular structures and synthesize corresponding microscopy image data based on Denoising Diffusion Probabilistic Models (DDPM). Sketches are generated to indicate cell shapes and structural characteristics, and they serve as a basis for the diffusion process to ultimately allow for the generation of fully-annotated microscopy image data sets without the need for human annotation effort.",
+      "evidence": "This repository contains code to simulated 2D/3D cellular structures and synthesize corresponding microscopy image data based on Denoising Diffusion Probabilistic Models (DDPM). Sketches are generated to indicate cell shapes and structural characteristics, and they serve as a basis for the diffusion process to ultimately allow for the generation of fully-annotated microscopy image data sets without the need for human annotation effort.",
+      "evidence_location": "lines 3-4",
+      "confidence": "high",
+      "reason": "Clear description of the artifact's purpose and functionality"
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://osf.io/dnp65/",
+      "normalized_value": "https://osf.io/dnp65/",
+      "evidence": "<a href=https://osf.io/dnp65/>OSF</a>",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Link to generated datasets"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011890",
+      "normalized_value": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011890",
+      "evidence": "<a href=https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011890>PLOS CB</a>",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Link to associated research paper"
+    },
+    {
+      "field": "model_showcase_url",
+      "value": "https://transfer.lfb.rwth-aachen.de/CellDiffusion",
+      "normalized_value": "https://transfer.lfb.rwth-aachen.de/CellDiffusion",
+      "evidence": "<a href=https://transfer.lfb.rwth-aachen.de/CellDiffusion>website</a>",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Link to trained models and data showcase"
+    },
+    {
+      "field": "citation",
+      "value": "@article{eschweiler2024celldiffusion,\n  title={Denoising diffusion probabilistic models for generation of realistic fully-annotated microscopy image datasets},\n  author={Eschweiler, Dennis and Yilmaz, R{\"u}veyda and Baumann, Matisse and Laube, Ina and Roy, Rijo and Jose, Abin and Br{\"u}ckner, Daniel and Stegmaier, Johannes},\n  journal={PLOS Computational Biology},\n  volume={20},\n  number={2},\n  pages={e1011890},\n  year={2024}\n}",
+      "normalized_value": "@article{eschweiler2024celldiffusion, title={Denoising diffusion probabilistic models for generation of realistic fully-annotated microscopy image datasets}, author={Eschweiler, Dennis and Yilmaz, R{\"u}veyda and Baumann, Matisse and Laube, Ina and Roy, Rijo and Jose, Abin and Br{\"u}ckner, Daniel and Stegmaier, Johannes}, journal={PLOS Computational Biology}, volume={20}, number={2}, pages={e1011890}, year={2024}}",
+      "evidence": "```\n@article{eschweiler2024celldiffusion,\n  title={Denoising diffusion probabilistic models for generation of realistic fully-annotated microscopy image datasets},\n  author={Eschweiler, Dennis and Yilmaz, R{\"u}veyda and Baumann, Matisse and Laube, Ina and Roy, Rijo and Jose, Abin and Br{\"u}ckner, Daniel and Stegmaier, Johannes},\n  journal={PLOS Computational Biology},\n  volume={20},\n  number={2},\n  pages={e1011890},\n  year={2024}\n}\n```",
+      "evidence_location": "lines 13-23",
+      "confidence": "high",
+      "reason": "BibTeX citation for proper attribution"
+    },
+    {
+      "field": "method",
+      "value": "Denoising Diffusion Probabilistic Models (DDPM)",
+      "normalized_value": "Denoising Diffusion Probabilistic Models (DDPM)",
+      "evidence": "based on Denoising Diffusion Probabilistic Models (DDPM)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Core methodology used in the artifact"
+    },
+    {
+      "field": "data_format",
+      "value": "hdf5",
+      "normalized_value": "hdf5",
+      "evidence": "The presented pipelines require the hdf5 file format for processing.",
+      "evidence_location": "line 28",
+      "confidence": "high",
+      "reason": "Required data format for processing"
+    },
+    {
+      "field": "preprocessing_scripts",
+      "value": "utils.h5_converter.prepare_images and utils.csv_generator.create_csv",
+      "normalized_value": "utils.h5_converter.prepare_images and utils.csv_generator.create_csv",
+      "evidence": "Therefore, each image file has to be converted to hdf5, which can be done by using `utils.h5_converter.prepare_images`. Once all files have been converted, a list of those files has to be stored as a csv file to make them accessible by the processing pipelines. This can be done by using `utils.csv_generator.create_csv`.",
+      "evidence_location": "line 28",
+      "confidence": "high",
+      "reason": "Tools for data preparation and conversion"
+    },
+    {
+      "field": "training_script",
+      "value": "train_script.py",
+      "normalized_value": "train_script.py",
+      "evidence": "the training script `train_script.py`",
+      "evidence_location": "line 32",
+      "confidence": "high",
+      "reason": "Main training script"
+    },
+    {
+      "field": "application_script",
+      "value": "apply_script_diffusion.py",
+      "normalized_value": "apply_script_diffusion.py",
+      "evidence": "application script `apply_script_diffusion.py`",
+      "evidence_location": "line 32",
+      "confidence": "high",
+      "reason": "Main script for model application/inference"
+    },
+    {
+      "field": "configuration_files",
+      "value": "models/DiffusionModel3D or models/DiffusionModel2D",
+      "normalized_value": "models/DiffusionModel3D or models/DiffusionModel2D",
+      "evidence": "make sure to adapt all parameters in the pipeline files `models/DiffusionModel3D` or `models/DiffusionModel2D`",
+      "evidence_location": "line 32",
+      "confidence": "high",
+      "reason": "Configuration files for model parameters"
+    },
+    {
+      "field": "gpu_models",
+      "value": "GTX 1080 to RTX 6000",
+      "normalized_value": "GTX 1080 to RTX 6000",
+      "evidence": "including GPUs ranging from GTX 1080 to RTX 6000.",
+      "evidence_location": "line 40",
+      "confidence": "high",
+      "reason": "GPU models used for training and inference"
+    },
+    {
+      "field": "training_memory_requirements",
+      "value": "2-8 GB of RAM and 4-8 GB of GPU memory",
+      "normalized_value": "2-8 GB of RAM and 4-8 GB of GPU memory",
+      "evidence": "requiring 2-8 GB of RAM and 4-8 GB of GPU memory.",
+      "evidence_location": "line 43",
+      "confidence": "high",
+      "reason": "Memory requirements for training"
+    },
+    {
+      "field": "inference_memory_requirements",
+      "value": "2-80 GB of RAM and 4-8 GB of GPU memory",
+      "normalized_value": "2-80 GB of RAM and 4-8 GB of GPU memory",
+      "evidence": "ranging between 2-80 GB of RAM and 4-8 GB of GPU memory.",
+      "evidence_location": "line 46",
+      "confidence": "high",
+      "reason": "Memory requirements for inference/prediction"
+    },
+    {
+      "field": "training_time",
+      "value": "one day for 2D models to roughly a week for 3D models",
+      "normalized_value": "one day for 2D models to roughly a week for 3D models",
+      "evidence": "Training times varied between one day for 2D models to roughly a week for 3D models",
+      "evidence_location": "line 43",
+      "confidence": "high",
+      "reason": "Estimated training time requirements"
+    },
+    {
+      "field": "inference_time",
+      "value": "less than a minute for 2D image data of size 1024x1024 pixel to roughly one hour for image data of size 512x512x180 voxel or 1700x2450x13 voxel",
+      "normalized_value": "less than a minute for 2D image data of size 1024x1024 pixel to roughly one hour for image data of size 512x512x180 voxel or 1700x2450x13 voxel",
+      "evidence": "image generation times ranged between less than a minute for 2D image data of size 1024x1024 pixel to roughly one hour for image data of size 512x512x180 voxel or 1700x2450x13 voxel.",
+      "evidence_location": "line 45",
+      "confidence": "high",
+      "reason": "Estimated inference/generation time requirements"
+    },
+    {
+      "field": "sketch_generation_utilities",
+      "value": "utils.synthetic_cell_membrane_masks and utils.synthetic_cell_nuclei_masks",
+      "normalized_value": "utils.synthetic_cell_membrane_masks and utils.synthetic_cell_nuclei_masks",
+      "evidence": "the functionality used in this work can be found in `utils.synthetic_cell_membrane_masks` and `utils.synthetic_cell_nuclei_masks` for cellular membranes and nuclei, respectively.",
+      "evidence_location": "line 36",
+      "confidence": "high",
+      "reason": "Tools for generating synthetic cellular structures"
+    }
+  ]
+}

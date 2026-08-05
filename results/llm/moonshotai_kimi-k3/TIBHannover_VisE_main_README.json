@@ -1,0 +1,238 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Ontology-driven Event Type Classification in Images",
+      "normalized_value": "Ontology-driven Event Type Classification in Images",
+      "evidence": "# Ontology-driven Event Type Classification in Images",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Identifies the artifact/paper title, which is the primary name for indexing and search."
+    },
+    {
+      "field": "paper_authors",
+      "value": "Eric Müller-Budack, Matthias Springstein, Sherzod Hakimov, Kevin Mrutzek, and Ralph Ewerth",
+      "normalized_value": "Eric Müller-Budack, Matthias Springstein, Sherzod Hakimov, Kevin Mrutzek, and Ralph Ewerth",
+      "evidence": "> Eric Müller-Budack, Matthias Springstein, Sherzod Hakimov, Kevin Mrutzek, and Ralph Ewerth:",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Author list is needed for citation and attribution of the paper and code."
+    },
+    {
+      "field": "publication_venue",
+      "value": "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), pages 2928-2938, IEEE, Virtual Conference, 2021",
+      "normalized_value": "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), pages 2928-2938, IEEE, Virtual Conference, 2021",
+      "evidence": "In: *Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)*, pages 2928-2938, IEEE, Virtual Conference, 2021.",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Venue, year, and page numbers support citation and bibliographic indexing."
+    },
+    {
+      "field": "paper_url_cvf",
+      "value": "https://openaccess.thecvf.com/content/WACV2021/html/Muller-Budack_Ontology-Driven_Event_Type_Classification_in_Images_WACV_2021_paper.html",
+      "normalized_value": "https://openaccess.thecvf.com/content/WACV2021/html/Muller-Budack_Ontology-Driven_Event_Type_Classification_in_Images_WACV_2021_paper.html",
+      "evidence": "- *Computer Vision Foundation (CVF)*: https://openaccess.thecvf.com/content/WACV2021/html/Muller-Budack_Ontology-Driven_Event_Type_Classification_in_Images_WACV_2021_paper.html",
+      "evidence_location": "line 10",
+      "confidence": "high",
+      "reason": "Direct open-access link to the published paper."
+    },
+    {
+      "field": "paper_url_arxiv",
+      "value": "https://arxiv.org/pdf/2011.04714.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2011.04714.pdf",
+      "evidence": "- *arXiv*: https://arxiv.org/pdf/2011.04714.pdf",
+      "evidence_location": "line 11",
+      "confidence": "high",
+      "reason": "arXiv preprint link provides an alternative access point to the paper."
+    },
+    {
+      "field": "project_website",
+      "value": "http://eventkg.l3s.uni-hannover.de/VisE",
+      "normalized_value": "http://eventkg.l3s.uni-hannover.de/VisE",
+      "evidence": "Further information can be found on the **EventKG** website: http://eventkg.l3s.uni-hannover.de/VisE",
+      "evidence_location": "line 13",
+      "confidence": "high",
+      "reason": "External project page with additional information about the artifact."
+    },
+    {
+      "field": "deep_learning_framework",
+      "value": "pytorch",
+      "normalized_value": "pytorch",
+      "evidence": "The singularity image is built with an optimized pytorch implementation on arch linux, which we used for training and testing.",
+      "evidence_location": "line 37, section 'Setup'",
+      "confidence": "high",
+      "reason": "Names the deep learning framework used for training and testing, relevant for reproduction and environment setup."
+    },
+    {
+      "field": "singularity_image_download",
+      "value": "https://tib.eu/cloud/s/fPMwLMWo3wCmMRy/download (Filesize is 5 GB)",
+      "normalized_value": "https://tib.eu/cloud/s/fPMwLMWo3wCmMRy/download (Filesize is 5 GB)",
+      "evidence": "Download our singularity image from: [link](https://tib.eu/cloud/s/fPMwLMWo3wCmMRy/download) (Filesize is 5 GB)",
+      "evidence_location": "line 46, section 'Setup with Singularity (for Reproducibility)'",
+      "confidence": "high",
+      "reason": "Provides the reproducible environment image and its size, required to exactly reproduce paper results."
+    },
+    {
+      "field": "singularity_run_command",
+      "value": "singularity exec -B </PATH/TO/REPOSITORY>:/src --nv </PATH/TO/SINGULARITY/IMAGE>.sif bash; cd /src",
+      "normalized_value": "singularity exec -B </PATH/TO/REPOSITORY>:/src --nv </PATH/TO/SINGULARITY/IMAGE>.sif bash; cd /src",
+      "evidence": "```shell script\nsingularity exec \\\n  -B </PATH/TO/REPOSITORY>:/src \\\n  --nv </PATH/TO/SINGULARITY/IMAGE>.sif \\\n  bash\n\ncd /src\n```",
+      "evidence_location": "lines 50-57, section 'Setup with Singularity (for Reproducibility)'",
+      "confidence": "high",
+      "reason": "Command to launch the reproducible Singularity environment (with GPU flag --nv)."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "```shell script\npip install -r requirements.txt\n```",
+      "evidence_location": "lines 64-66, section 'Setup with Virtual Environment'",
+      "confidence": "high",
+      "reason": "Dependency installation command for the virtual environment setup."
+    },
+    {
+      "field": "docker_build_command",
+      "value": "docker build <PATH/TO/REPOSITORY> -t <DOCKER_NAME>",
+      "normalized_value": "docker build <PATH/TO/REPOSITORY> -t <DOCKER_NAME>",
+      "evidence": "```shell script\ndocker build <PATH/TO/REPOSITORY> -t <DOCKER_NAME>\n```",
+      "evidence_location": "lines 75-77, section 'Setup with Docker'",
+      "confidence": "high",
+      "reason": "Command to build the provided Docker container for running the code."
+    },
+    {
+      "field": "docker_run_command",
+      "value": "docker run --volume <PATH/TO/REPOSITORY>:/src --shm-size=256m -u $(id -u):$(id -g) -it <DOCKER_NAME> bash; cd /src",
+      "normalized_value": "docker run --volume <PATH/TO/REPOSITORY>:/src --shm-size=256m -u $(id -u):$(id -g) -it <DOCKER_NAME> bash; cd /src",
+      "evidence": "```shell script\ndocker run \\\n  --volume <PATH/TO/REPOSITORY>:/src \\\n  --shm-size=256m \\\n  -u $(id -u):$(id -g) \\\n  -it <DOCKER_NAME> bash \n\ncd /src\n```",
+      "evidence_location": "lines 81-89, section 'Setup with Docker'",
+      "confidence": "high",
+      "reason": "Command to start the Docker container with the repository mounted."
+    },
+    {
+      "field": "resource_download_command",
+      "value": "python download_resources.py",
+      "normalized_value": "python download_resources.py",
+      "evidence": "```shell script\npython download_resources.py\n```",
+      "evidence_location": "lines 98-100, section 'Download Ontology, Dataset and Models'",
+      "confidence": "high",
+      "reason": "Command to automatically download ontologies, models, and other files required for inference and testing."
+    },
+    {
+      "field": "trained_models",
+      "value": "Classification baseline (C), best ontology driven approach using the cross-entropy loss (CO_cel), best ontology driven approach (CO_cos)",
+      "normalized_value": "Classification baseline (C), best ontology driven approach using the cross-entropy loss (CO_cel), best ontology driven approach (CO_cos)",
+      "evidence": "We provide the trained models for the following approaches:\n\n- Classification baseline (denoted as ```C```): [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/727c3ee1-4107-4996-878d-1caf537730e8/download/vise_c.tar.gz)\n- Best ontology driven approach using the cross-entropy loss (denoted as ```CO_cel```): [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/7c672f2b-f45e-40aa-b6bb-01fb2e9bf5e7/download/vise_co_cel.tar.gz)\n- Best ontology driven approach using the cross-entropy loss (denoted as ```CO_cos```): [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/b105c1aa-3bc4-4233-8103-8f4616948d85/download/vise_co_cos.tar.gz)",
+      "evidence_location": "lines 107-111, section 'Models'",
+      "confidence": "high",
+      "reason": "Lists the available pretrained model checkpoints with download links, enabling reuse and evaluation. Note: the CO_cos description repeats 'cross-entropy loss' verbatim from the document."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "top-k accuracy, jaccard similarity coefficient (JSC), and cosine similarity (CS)",
+      "normalized_value": "top-k accuracy, jaccard similarity coefficient (JSC), and cosine similarity (CS)",
+      "evidence": "The performance of these models regarding the top-k accuracy, jaccard similarity coefficient (JSC), and cosine similarity (CS) on the *VisE-Bing* and *VisE-Wiki* testsets is listed below using the provided [singularity image](#setup-with-singularity-for-reproducibility):",
+      "evidence_location": "line 113, section 'Models'",
+      "confidence": "high",
+      "reason": "Names the evaluation metrics and testsets used to report model performance."
+    },
+    {
+      "field": "results_vise_bing",
+      "value": "C: Top-1 77.4, Top-3 89.8, Top-5 93.6, JSC 84.7, CS 87.7; CO_cel: Top-1 81.5, Top-3 91.8, Top-5 94.3, JSC 87.5, CS 90.0; CO_cos: Top-1 81.9, Top-3 90.8, Top-5 93.2, JSC 87.9, CS 90.4",
+      "normalized_value": "C: Top-1 77.4, Top-3 89.8, Top-5 93.6, JSC 84.7, CS 87.7; CO_cel: Top-1 81.5, Top-3 91.8, Top-5 94.3, JSC 87.5, CS 90.0; CO_cos: Top-1 81.9, Top-3 90.8, Top-5 93.2, JSC 87.9, CS 90.4",
+      "evidence": "**VisE-Bing**\n| Model  |  Top-1   |  Top-3   |  Top-5   |   JSC    |    CS    |\n| :----- | :------: | :------: | :------: | :------: | :------: |\n| C      |   77.4   |   89.8   |   93.6   |   84.7   |   87.7   |\n| CO_cel |   81.5   | **91.8** | **94.3** |   87.5   |   90.0   |\n| CO_cos | **81.9** |   90.8   |   93.2   | **87.9** | **90.4** |",
+      "evidence_location": "lines 116-121, section 'Models'",
+      "confidence": "high",
+      "reason": "Quantitative benchmark results on the VisE-Bing testset for all provided models."
+    },
+    {
+      "field": "results_vise_wiki",
+      "value": "C: Top-1 61.7, Top-3 74.6, Top-5 79.2, JSC 72.7, CS 77.8; CO_cel: Top-1 63.4, Top-3 74.7, Top-5 78.8, JSC 73.9, CS 78.7; CO_cos: Top-1 63.5, Top-3 74.3, Top-5 78.8, JSC 74.1, CS 79.0",
+      "normalized_value": "C: Top-1 61.7, Top-3 74.6, Top-5 79.2, JSC 72.7, CS 77.8; CO_cel: Top-1 63.4, Top-3 74.7, Top-5 78.8, JSC 73.9, CS 78.7; CO_cos: Top-1 63.5, Top-3 74.3, Top-5 78.8, JSC 74.1, CS 79.0",
+      "evidence": "**VisE-Wiki**\n| Model  |  Top-1   |  Top-3   |  Top-5   |   JSC    |    CS    |\n| :----- | :------: | :------: | :------: | :------: | :------: |\n| C      |   61.7   |   74.6   | **79.2** |   72.7   |   77.8   |\n| CO_cel |   63.4   | **74.7** |   78.8   |   73.9   |   78.7   |\n| CO_cos | **63.5** |   74.3   |   78.8   | **74.1** | **79.0** |",
+      "evidence_location": "lines 124-129, section 'Models'",
+      "confidence": "high",
+      "reason": "Quantitative benchmark results on the VisE-Wiki testset for all provided models."
+    },
+    {
+      "field": "inference_command",
+      "value": "python infer.py -c </path/to/model.yml> -i </path/to/image(s)>",
+      "normalized_value": "python infer.py -c </path/to/model.yml> -i </path/to/image(s)>",
+      "evidence": "```shell script\npython infer.py -c </path/to/model.yml> -i </path/to/image(s)>\n```",
+      "evidence_location": "lines 136-138, section 'Inference'",
+      "confidence": "high",
+      "reason": "Command to apply the trained models to an image or list of images."
+    },
+    {
+      "field": "image_download_command",
+      "value": "python download_images.py -d </path/to/dataset.jsonl> -o </path/to/output/root_directory/>",
+      "normalized_value": "python download_images.py -d </path/to/dataset.jsonl> -o </path/to/output/root_directory/>",
+      "evidence": "```shell script\npython download_images.py -d </path/to/dataset.jsonl> -o </path/to/output/root_directory/>\n```",
+      "evidence_location": "lines 157-159, section 'Test'",
+      "confidence": "high",
+      "reason": "Command to download test (or training/validation) images for the VisE-Bing or VisE-Wiki datasets, required before evaluation."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python test.py -c </path/to/model.yml> -i </path/to/image/root_directory> -t </path/to/testset.jsonl> -o </path/to/output.json>",
+      "normalized_value": "python test.py -c </path/to/model.yml> -i </path/to/image/root_directory> -t </path/to/testset.jsonl> -o </path/to/output.json>",
+      "evidence": "```shell script\npython test.py \\\n    -c </path/to/model.yml> \\\n    -i </path/to/image/root_directory> \\\n    -t </path/to/testset.jsonl>\n    -o </path/to/output.json>\n```",
+      "evidence_location": "lines 178-184, section 'Test'",
+      "confidence": "high",
+      "reason": "Command to compute evaluation results on a testset after downloading images."
+    },
+    {
+      "field": "dataset",
+      "value": "Visual Event Classification Dataset (VisE-D), https://data.uni-hannover.de/de/dataset/vise",
+      "normalized_value": "Visual Event Classification Dataset (VisE-D), https://data.uni-hannover.de/de/dataset/vise",
+      "evidence": "The *Visual Event Classification Dataset (VisE-D)* is available on: https://data.uni-hannover.de/de/dataset/vise",
+      "evidence_location": "line 196, section 'VisE-D: Visual Event Classification Dataset'",
+      "confidence": "high",
+      "reason": "Names and links the dataset introduced by the paper, enabling data reuse."
+    },
+    {
+      "field": "ontology_resource",
+      "value": "Visual Event Ontology (VisE-O)",
+      "normalized_value": "Visual Event Ontology (VisE-O)",
+      "evidence": "Different versions of the *Visual Event Ontology (VisE-O)* can be downloaded here: [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/99ce7e4d-df5b-40f6-afb4-16085dbf697d/download/vise-d.tar.gz)",
+      "evidence_location": "line 217, section 'VisE-O: Visual Event Ontology'",
+      "confidence": "high",
+      "reason": "Names the ontology artifact central to the method and provides its download link."
+    },
+    {
+      "field": "benchmark_ontologies",
+      "value": "WIDER Ontology, SocEID Ontology, RED Ontology (classes manually linked to the Wikidata knowledge base)",
+      "normalized_value": "WIDER Ontology, SocEID Ontology, RED Ontology (classes manually linked to the Wikidata knowledge base)",
+      "evidence": "In order to evaluate the presented ontology-diven approach on other benchmark datasets, we have manually linked classes of the *Web Images for Event Recognition (WIDER)*, *Social Event Dataset (SocEID)*, and the *Rare Event Dataset (RED)* to the *Wikidata* knowledge base according to Section 5.3.3.",
+      "evidence_location": "line 230, section 'Benchmark Ontologies'",
+      "confidence": "high",
+      "reason": "Identifies additional benchmark datasets (WIDER, SocEID, RED) with derived ontologies for cross-dataset evaluation."
+    },
+    {
+      "field": "supplemental_material",
+      "value": "vise_supplemental.pdf",
+      "normalized_value": "vise_supplemental.pdf",
+      "evidence": "Detailed information on the sampling strategy to gather event images, statistics for the training and testing datasets presented in Section 3.3, and results using different inference strategies (Section 4.2.3) are available in the [vise_supplemental.pdf](vise_supplemental.pdf).",
+      "evidence_location": "line 237, section 'Supplemental Material'",
+      "confidence": "high",
+      "reason": "Points to supplemental material with dataset statistics and additional results, aiding reproduction."
+    },
+    {
+      "field": "license",
+      "value": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007",
+      "normalized_value": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007",
+      "evidence": "This work is published under the GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007. For details please check the LICENSE file in the repository.",
+      "evidence_location": "line 242, section 'LICENSE'",
+      "confidence": "high",
+      "reason": "States the legal terms (GPLv3) under which the work can be reused."
+    },
+    {
+      "field": "reproducibility_note",
+      "value": "Virtual environment and Docker setups produce the same result on the testsets but slightly differ from the results reported in the paper (deviation around 0.1%); the Singularity image fully reproduces the results",
+      "normalized_value": "Virtual environment and Docker setups produce the same result on the testsets but slightly differ from the results reported in the paper (deviation around 0.1%); the Singularity image fully reproduces the results",
+      "evidence": "While the other two setups using a [virtual environment](#setup-with-virtual-environment) or [docker](#setup-with-docker) produce the same result on our testsets, they slightly differ from the results reported in the paper (deviation around 0.1%).",
+      "evidence_location": "line 39, section 'Setup'",
+      "confidence": "high",
+      "reason": "Documents expected numerical deviation between setups, which is important for anyone attempting to reproduce the reported results."
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "EORB-SLAM: An Event-based ORB-SLAM",
+      "normalized_value": "EORB-SLAM: An Event-based ORB-SLAM",
+      "evidence": "# EORB-SLAM: An Event-based ORB-SLAM",
+      "evidence_location": "1 (title)",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its relationship to ORB-SLAM."
+    },
+    {
+      "field": "artifact_purpose",
+      "value": "This project is a feature-based odometry/SLAM algorithm that is used to estimate the 6DoF pose of a robot and reconstruct the 3D point cloud of the scene using a variety of sensors.",
+      "normalized_value": "This project is a feature-based odometry/SLAM algorithm that is used to estimate the 6DoF pose of a robot and reconstruct the 3D point cloud of the scene using a variety of sensors",
+      "evidence": "This project is a feature-based odometry/SLAM algorithm that is used to estimate the 6DoF pose of a robot and reconstruct the 3D point cloud of the scene using a variety of sensors.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Describes the algorithm's purpose and its pose-estimation and mapping outputs."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/m-dayani/EORB_SLAM.git",
+      "normalized_value": "https://github.com/m-dayani/EORB_SLAM.git",
+      "evidence": "git clone https://github.com/m-dayani/EORB_SLAM.git",
+      "evidence_location": "55-63 (Installation)",
+      "confidence": "high",
+      "reason": "Provides the repository address needed to obtain the artifact."
+    },
+    {
+      "field": "base_algorithm",
+      "value": "ORB-SLAM",
+      "normalized_value": "ORB-SLAM",
+      "evidence": "This project is built on an older version of the [ORB-SLAM](https://github.com/UZ-SLAMLab/ORB_SLAM3) algorithm.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the upstream algorithm lineage."
+    },
+    {
+      "field": "event_camera_support",
+      "value": "DAVIS event cameras",
+      "normalized_value": "DAVIS event cameras",
+      "evidence": "- Support for DAVIS event cameras",
+      "evidence_location": "7 (Contributions)",
+      "confidence": "high",
+      "reason": "Identifies the event-camera hardware supported by the project."
+    },
+    {
+      "field": "supported_modes",
+      "value": "Event-only, Event-Image (monocular), Event-Image-Inertial (monocular), Event-Inertial (monocular)",
+      "normalized_value": "Event-only, Event-Image (monocular), Event-Image-Inertial (monocular), Event-Inertial (monocular)",
+      "evidence": "- Added these modes to the original algorithm: Event-only, Event-Image (monocular), Event-Image-Inertial (monocular), Event-Inertial (monocular)",
+      "evidence_location": "8 (Contributions)",
+      "confidence": "high",
+      "reason": "Enumerates the sensor and modality configurations implemented by the artifact."
+    },
+    {
+      "field": "dataset_loader_capability",
+      "value": "automatically load different datasets and configuration parameters",
+      "normalized_value": "automatically load different datasets and configuration parameters",
+      "evidence": "- Dataset loader can automatically load different datasets and configuration parameters",
+      "evidence_location": "9 (Contributions)",
+      "confidence": "high",
+      "reason": "Describes an automation feature relevant to configuring and reproducing runs."
+    },
+    {
+      "field": "feature_tracking_methods",
+      "value": "AKAZE and ORB features",
+      "normalized_value": "AKAZE and ORB features",
+      "evidence": "- Mixed key point tracking (in addition to ORB features, the proposed algorithm can use both the AKAZE and ORB features for image-based SLAM)",
+      "evidence_location": "11 (Contributions)",
+      "confidence": "high",
+      "reason": "Identifies the image feature types available for image-based SLAM."
+    },
+    {
+      "field": "event_configuration_article_url",
+      "value": "https://arxiv.org/abs/2301.00618",
+      "normalized_value": "https://arxiv.org/abs/2301.00618",
+      "evidence": "[this article](https://arxiv.org/abs/2301.00618)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Links to the article explaining the event-based, no-image configuration."
+    },
+    {
+      "field": "operating_system",
+      "value": "Ubuntu 20.04 LTS",
+      "normalized_value": "Ubuntu 20.04 LTS",
+      "evidence": "These instructions are for Ubuntu 20.04 LTS.",
+      "evidence_location": "15 (Dependencies)",
+      "confidence": "high",
+      "reason": "Specifies the operating system targeted by the dependency instructions."
+    },
+    {
+      "field": "build_requirements",
+      "value": "a stable internet connection (downloads more than 2 GB of data!) and a powerful machine with about 16 GB RAM",
+      "normalized_value": "a stable internet connection (downloads more than 2 GB of data!) and a powerful machine with about 16 GB RAM",
+      "evidence": "A successful build requires a stable internet connection (downloads more than 2 GB of data!) and a powerful machine with about 16 GB RAM.",
+      "evidence_location": "15 (Dependencies)",
+      "confidence": "high",
+      "reason": "Provides concrete network and hardware requirements for building the project."
+    },
+    {
+      "field": "cpp_compiler_standard",
+      "value": "C++11 or C++0x Compiler",
+      "normalized_value": "C++11 or C++0x Compiler",
+      "evidence": "### C++11 or C++0x Compiler",
+      "evidence_location": "17 (Dependencies)",
+      "confidence": "high",
+      "reason": "States the required C++ compiler standard."
+    },
+    {
+      "field": "compiler_versions",
+      "value": "g++ 7.5 and gcc 7.5",
+      "normalized_value": "g++ 7.5 and gcc 7.5",
+      "evidence": "Do you use `g++ 7.5` and `gcc 7.5` to compile packages?",
+      "evidence_location": "84 (Troubleshooting)",
+      "confidence": "medium",
+      "reason": "The troubleshooting checklist identifies these compiler versions as relevant to successful compilation."
+    },
+    {
+      "field": "tools_install_command",
+      "value": "sudo apt install -y make cmake pkg-config unzip yasm git gfortran nano wget curl",
+      "normalized_value": "sudo apt install -y make cmake pkg-config unzip yasm git gfortran nano wget curl",
+      "evidence": "```bash\nsudo apt install -y make cmake pkg-config unzip yasm git gfortran nano wget curl\n```",
+      "evidence_location": "21-25 (Install the necessary tools)",
+      "confidence": "high",
+      "reason": "Provides the documented command for installing core build and utility tools."
+    },
+    {
+      "field": "pangolin_project_url",
+      "value": "https://github.com/stevenlovegrove/Pangolin",
+      "normalized_value": "https://github.com/stevenlovegrove/Pangolin",
+      "evidence": "[Pangolin project page](https://github.com/stevenlovegrove/Pangolin)",
+      "evidence_location": "27-29 (Pangolin)",
+      "confidence": "high",
+      "reason": "Provides the referenced Pangolin dependency project page."
+    },
+    {
+      "field": "eigen3_install_command",
+      "value": "sudo apt install libeigen3-dev",
+      "normalized_value": "sudo apt install libeigen3-dev",
+      "evidence": "`sudo apt install libeigen3-dev`",
+      "evidence_location": "31-33 (Eigen3)",
+      "confidence": "high",
+      "reason": "Provides the package installation command for Eigen3."
+    },
+    {
+      "field": "ceres_version_requirement",
+      "value": "Ceres-solver 1.14",
+      "normalized_value": "Ceres-solver 1.14",
+      "evidence": "### Ceres-solver 1.14",
+      "evidence_location": "35 (Ceres-solver 1.14)",
+      "confidence": "high",
+      "reason": "Identifies the exact Ceres Solver version required by the project."
+    },
+    {
+      "field": "ceres_version_constraint",
+      "value": "Note the version; it won't work with newer versions!",
+      "normalized_value": "Note the version; it won't work with newer versions",
+      "evidence": "Note the version; it won't work with newer versions!",
+      "evidence_location": "37 (Ceres-solver 1.14)",
+      "confidence": "high",
+      "reason": "Warns that using a newer Ceres version is unsupported."
+    },
+    {
+      "field": "ceres_installation_url",
+      "value": "http://ceres-solver.org/installation.html",
+      "normalized_value": "http://ceres-solver.org/installation.html",
+      "evidence": "[these steps](http://ceres-solver.org/installation.html)",
+      "evidence_location": "37 (Ceres-solver 1.14)",
+      "confidence": "high",
+      "reason": "Links to the documented Ceres installation instructions."
+    },
+    {
+      "field": "boost_install_command",
+      "value": "sudo apt-get install -y libboost-all-dev",
+      "normalized_value": "sudo apt-get install -y libboost-all-dev",
+      "evidence": "`sudo apt-get install -y libboost-all-dev`",
+      "evidence_location": "39-41 (Boost)",
+      "confidence": "high",
+      "reason": "Provides the package installation command for Boost."
+    },
+    {
+      "field": "opencv_version_requirement",
+      "value": "OpenCV 3.4.1",
+      "normalized_value": "OpenCV 3.4.1",
+      "evidence": "to install `OpenCV 3.4.1` on your machine.",
+      "evidence_location": "43-45 (The OpenCV hell!)",
+      "confidence": "high",
+      "reason": "Specifies the OpenCV version expected by the documented setup."
+    },
+    {
+      "field": "ros_compatibility",
+      "value": "ROS `noetic` is supported on Ubuntu 20.04.",
+      "normalized_value": "ROS `noetic` is supported on Ubuntu 20.04",
+      "evidence": "However, ROS `noetic` is supported on Ubuntu 20.04.",
+      "evidence_location": "49 (ROS (optional))",
+      "confidence": "high",
+      "reason": "States the ROS distribution and operating-system combination supported by the README."
+    },
+    {
+      "field": "installation_commands",
+      "value": "git clone https://github.com/m-dayani/EORB_SLAM.git\ncd EORB_SLAM\n\nmkdir build\ncd build\ncmake ..\nmake -j4",
+      "normalized_value": "git clone https://github.com/m-dayani/EORB_SLAM.git cd EORB_SLAM mkdir build cd build cmake .. make -j4",
+      "evidence": "```bash\ngit clone https://github.com/m-dayani/EORB_SLAM.git\ncd EORB_SLAM\n\nmkdir build\ncd build\ncmake ..\nmake -j4\n```",
+      "evidence_location": "55-63 (Installation)",
+      "confidence": "high",
+      "reason": "Provides the documented clone, configure, and build sequence."
+    },
+    {
+      "field": "build_automation_files",
+      "value": "a bash script (`build_eorb_slam.sh`) and a Docker file",
+      "normalized_value": "a bash script (`build_eorb_slam.sh`) and a Docker file",
+      "evidence": "To make life easier for you, I included a bash script (`build_eorb_slam.sh`) and a Docker file that contains all the necessary commands to download and install the required packages.",
+      "evidence_location": "65 (Installation)",
+      "confidence": "high",
+      "reason": "Identifies provided automation artifacts for dependency installation and setup."
+    },
+    {
+      "field": "public_event_dataset_url",
+      "value": "https://rpg.ifi.uzh.ch/davis_data.html",
+      "normalized_value": "https://rpg.ifi.uzh.ch/davis_data.html",
+      "evidence": "- [The Public Event dataset](https://rpg.ifi.uzh.ch/davis_data.html)",
+      "evidence_location": "69-70 (Usage)",
+      "confidence": "high",
+      "reason": "Provides a recommended event-based dataset for running the project."
+    },
+    {
+      "field": "mvsec_dataset_url",
+      "value": "https://daniilidis-group.github.io/mvsec/",
+      "normalized_value": "https://daniilidis-group.github.io/mvsec/",
+      "evidence": "- [The MVSEC dataset](https://daniilidis-group.github.io/mvsec/)",
+      "evidence_location": "69-71 (Usage)",
+      "confidence": "high",
+      "reason": "Provides a second recommended event-based dataset."
+    },
+    {
+      "field": "euroc_dataset_url",
+      "value": "https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets",
+      "normalized_value": "https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets",
+      "evidence": "- [The EuRoC dataset](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets)",
+      "evidence_location": "72-73 (Usage)",
+      "confidence": "high",
+      "reason": "Provides the non-event dataset recommended for visual and inertial modes."
+    },
+    {
+      "field": "orb_vocabulary_step",
+      "value": "Extract the ORB Vocabulary file in the Vocabulary directory",
+      "normalized_value": "Extract the ORB Vocabulary file in the Vocabulary directory",
+      "evidence": "3. Extract the ORB Vocabulary file in the Vocabulary directory",
+      "evidence_location": "74 (Usage)",
+      "confidence": "high",
+      "reason": "States a required preparation step before running examples."
+    },
+    {
+      "field": "configuration_file_location",
+      "value": "Examples/Event/*.yaml",
+      "normalized_value": "Examples/Event/*.yaml",
+      "evidence": "4. Edit a configuration file (listed in `Examples/Event/*.yaml`)",
+      "evidence_location": "75 (Usage)",
+      "confidence": "high",
+      "reason": "Identifies where runnable configuration files are located."
+    },
+    {
+      "field": "docker_visualization_requirement",
+      "value": "Disable the visualization mode in the configuration file if running a Docker container.",
+      "normalized_value": "Disable the visualization mode in the configuration file if running a Docker container",
+      "evidence": "5. Disable the visualization mode in the configuration file if running a Docker container.",
+      "evidence_location": "76 (Usage)",
+      "confidence": "high",
+      "reason": "Provides a container-specific runtime configuration requirement."
+    },
+    {
+      "field": "example_run_command",
+      "value": "./Examples/Event/fmt_ev_ethz ./Examples/Event/EvETHZ.yaml",
+      "normalized_value": "./Examples/Event/fmt_ev_ethz ./Examples/Event/EvETHZ.yaml",
+      "evidence": "`./Examples/Event/fmt_ev_ethz ./Examples/Event/EvETHZ.yaml`",
+      "evidence_location": "77-78 (Usage)",
+      "confidence": "high",
+      "reason": "Provides a concrete command for running an example."
+    },
+    {
+      "field": "opencv_build_order",
+      "value": "build and install the OpenCV last",
+      "normalized_value": "build and install the OpenCV last",
+      "evidence": "5. Did you build and install the OpenCV last so that it compiles the library with the necessary packages (`sfm::reconstruct`)?",
+      "evidence_location": "86 (Troubleshooting)",
+      "confidence": "medium",
+      "reason": "The troubleshooting checklist identifies the OpenCV build order as relevant to obtaining required packages."
+    },
+    {
+      "field": "stability_warning",
+      "value": "this app is not stable",
+      "normalized_value": "this app is not stable",
+      "evidence": "- Generally, __this app is not stable__. There are some issues in the ORB-SLAM3 algorithm itself.",
+      "evidence_location": "93 (Issues)",
+      "confidence": "high",
+      "reason": "Communicates an explicit overall stability limitation."
+    },
+    {
+      "field": "small_image_backend_failure",
+      "value": "If you try to run it on small images of an event-based dataset (especially the hdr_boxes of The Public Event dataset) the backend (optimizer) throws unhandled exceptions.",
+      "normalized_value": "If you try to run it on small images of an event-based dataset (especially the hdr_boxes of The Public Event dataset) the backend (optimizer) throws unhandled exceptions",
+      "evidence": "If you try to run it on small images of an event-based dataset (especially the hdr_boxes of The Public Event dataset) the backend (optimizer) throws unhandled exceptions.",
+      "evidence_location": "93 (Issues)",
+      "confidence": "high",
+      "reason": "Documents a concrete failure condition affecting event-dataset runs."
+    },
+    {
+      "field": "concurrency_issues",
+      "value": "Unexpected race conditions and deadlocks",
+      "normalized_value": "Unexpected race conditions and deadlocks",
+      "evidence": "Unexpected race conditions and deadlocks are other issues of this algorithm.",
+      "evidence_location": "94 (Issues)",
+      "confidence": "high",
+      "reason": "Warns about concurrency-related runtime problems caused by parallel execution."
+    },
+    {
+      "field": "usage_disclaimer",
+      "value": "Use it at your own risk!",
+      "normalized_value": "Use it at your own risk",
+      "evidence": "Although this app is tested on various emulated and physical devices, some specific hardware or unpredicted practical situations might affect its performance. Use it at your own risk!",
+      "evidence_location": "90-91 (DISCLAIMER)",
+      "confidence": "high",
+      "reason": "Provides an explicit risk and performance disclaimer for reuse."
+    }
+  ]
+}

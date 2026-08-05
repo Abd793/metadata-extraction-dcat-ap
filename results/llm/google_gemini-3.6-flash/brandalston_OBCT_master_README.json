@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "copyright",
+      "value": "Copyright 2023 Brandon C. Alston, Hamidreza Validi",
+      "normalized_value": "Copyright 2023 Brandon C. Alston, Hamidreza Validi",
+      "evidence": "Copyright 2023 Brandon C. Alston, Hamidreza Validi",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the copyright ownership and publication year."
+    },
+    {
+      "field": "artifact_name",
+      "value": "Optimal Binary Classification Trees",
+      "normalized_value": "Optimal Binary Classification Trees",
+      "evidence": "# Optimal Binary Classification Trees",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the title/name of the project."
+    },
+    {
+      "field": "paper_title",
+      "value": "Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees",
+      "normalized_value": "Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees",
+      "evidence": "Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Identifies the academic research paper associated with this repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "http://arxiv.org/abs/2206.04857",
+      "normalized_value": "http://arxiv.org/abs/2206.04857",
+      "evidence": "http://arxiv.org/abs/2206.04857",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Provides the direct link to the associated publication on arXiv."
+    },
+    {
+      "field": "authors",
+      "value": "Brandon Alston, Hamidreza Validi, and Illya V. Hicks",
+      "normalized_value": "Brandon Alston, Hamidreza Validi, and Illya V. Hicks",
+      "evidence": "Brandon Alston, Hamidreza Validi, and Illya V. Hicks",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Lists the authors of the paper and developers of the code."
+    },
+    {
+      "field": "programming_language",
+      "value": "python3.x (version 3.6 and higher)",
+      "normalized_value": "python3.x (version 3.6 and higher)",
+      "evidence": "[python3.x](https://www.python.org/downloads/) (version 3.6 and higher)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Specifies the required programming language environment and version."
+    },
+    {
+      "field": "required_solver",
+      "value": "Gurobi",
+      "normalized_value": "Gurobi",
+      "evidence": "requires the [Gurobi](https://www.gurobi.com/) solver",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Specifies the required optimization solver dependency."
+    },
+    {
+      "field": "dependency_file",
+      "value": "requirements.txt",
+      "normalized_value": "requirements.txt",
+      "evidence": "Required python3.x packages are outlined in `requirements.txt`.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Identifies the file listing required Python package dependencies."
+    },
+    {
+      "field": "target_column_name",
+      "value": "'target'",
+      "normalized_value": "target",
+      "evidence": "- We assume the target column is labeled `'target'`.",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "Specifies the expected default column name for the target variable in input datasets."
+    },
+    {
+      "field": "execution_command_main",
+      "value": "python3 import model_runs; model_runs.main -d ['soybean-small','monk3','car','iris','climate'] -h [3,4,5] -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -e ['max_features-25'] -r [13, 58, 94, None] -c None -f 'test_results.csv' -l False",
+      "normalized_value": "python3 import model_runs; model_runs.main -d ['soybean-small','monk3','car','iris','climate'] -h [3,4,5] -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -e ['max_features-25'] -r [13, 58, 94, None] -c None -f 'test_results.csv' -l False",
+      "evidence": "```bash\npython3 import model_runs; model_runs.main -d ['soybean-small','monk3','car','iris','climate'] -h [3,4,5] -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -e ['max_features-25'] -r [13, 58, 94, None] -c None -f 'test_results.csv' -l False\n```",
+      "evidence_location": "66-68",
+      "confidence": "high",
+      "reason": "Provides terminal command to run the main model execution pipeline."
+    },
+    {
+      "field": "execution_command_biobjective",
+      "value": "python3 import model_runs; model_runs.biobjective -d ['ionosphere', 'monk2', 'breat_cancer', 'climate'] -h 5 -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -p ['data','equal'] -r [13, 58, 94, None] -f 'biobj_example.csv' -l False",
+      "normalized_value": "python3 import model_runs; model_runs.biobjective -d ['ionosphere', 'monk2', 'breat_cancer', 'climate'] -h 5 -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -p ['data','equal'] -r [13, 58, 94, None] -f 'biobj_example.csv' -l False",
+      "evidence": "```bash\npython3 import model_runs; model_runs.biobjective -d ['ionosphere', 'monk2', 'breat_cancer', 'climate'] -h 5 -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -p ['data','equal'] -r [13, 58, 94, None] -f 'biobj_example.csv' -l False\n```",
+      "evidence_location": "90-92",
+      "confidence": "high",
+      "reason": "Provides terminal command to run bi-objective model optimizations."
+    },
+    {
+      "field": "execution_command_pareto",
+      "value": "python3 import model_runs; model_runs.pareto -d ['hayes_roth', 'house_votes_84'] -h 4 -m ['FOCT', 'MCF1', 'MCF2', 'CUT1', 'CUT2'] -t 3600 -r [15, 78, 0] -f 'pareto_example.csv'",
+      "normalized_value": "python3 import model_runs; model_runs.pareto -d ['hayes_roth', 'house_votes_84'] -h 4 -m ['FOCT', 'MCF1', 'MCF2', 'CUT1', 'CUT2'] -t 3600 -r [15, 78, 0] -f 'pareto_example.csv'",
+      "evidence": "```bash\npython3 import model_runs; model_runs.pareto -d ['hayes_roth', 'house_votes_84'] -h 4 -m ['FOCT', 'MCF1', 'MCF2', 'CUT1', 'CUT2'] -t 3600 -r [15, 78, 0] -f 'pareto_example.csv'\n```",
+      "evidence_location": "123-125",
+      "confidence": "high",
+      "reason": "Provides terminal command to run and generate Pareto frontier evaluations."
+    },
+    {
+      "field": "documentation_file",
+      "value": "USAGE.md",
+      "normalized_value": "USAGE.md",
+      "evidence": "please refer to the `USAGE.md` file.",
+      "evidence_location": "130",
+      "confidence": "high",
+      "reason": "Points to detailed usage documentation for model functionality and parameter tuning."
+    },
+    {
+      "field": "reused_code_repository_strongtree",
+      "value": "https://github.com/pashew94/StrongTree/",
+      "normalized_value": "https://github.com/pashew94/StrongTree/",
+      "evidence": "[Strong Tree](https://github.com/pashew94/StrongTree/)",
+      "evidence_location": "137",
+      "confidence": "high",
+      "reason": "Provides attribution and link to the StrongTree repository from which several Python files were reused."
+    },
+    {
+      "field": "reused_code_repository_quant_bnb",
+      "value": "https://github.com/mengxianglgal/Quant-BnB",
+      "normalized_value": "https://github.com/mengxianglgal/Quant-BnB",
+      "evidence": "[Quant-BnB](https://github.com/mengxianglgal/Quant-BnB)",
+      "evidence_location": "138",
+      "confidence": "high",
+      "reason": "Provides attribution and link to the Quant-BnB repository from which several Julia files were reused."
+    }
+  ]
+}

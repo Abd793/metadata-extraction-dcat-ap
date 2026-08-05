@@ -1,0 +1,94 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "XAI-Scholar",
+      "normalized_value": "XAI-Scholar",
+      "evidence": "# XAI-Scholar",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the primary name of the artifact"
+    },
+    {
+      "field": "purpose",
+      "value": "Code and data for deriving empirical trends in XAI.",
+      "normalized_value": "Code and data for deriving empirical trends in XAI.",
+      "evidence": "Code and data for deriving empirical trends in XAI.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Describes the artifact's primary purpose"
+    },
+    {
+      "field": "related_publication",
+      "value": "Arxiv report",
+      "normalized_value": "Arxiv report",
+      "evidence": "[Arxiv report](http://arxiv.org/abs/2301.05433)",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Provides link to academic paper explaining the work"
+    },
+    {
+      "field": "dataset_size",
+      "value": "5199 papers as of December 31st 2022",
+      "normalized_value": "5199 papers as of December 31st 2022",
+      "evidence": "The final collection has 5199 papers as of December 31st 2022.",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Quantifies the dataset size with specific date reference"
+    },
+    {
+      "field": "primary_dependency",
+      "value": "semanticscholar",
+      "normalized_value": "semanticscholar",
+      "evidence": "`pip install semanticscholar`",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Specifies the main Python dependency and installation command"
+    },
+    {
+      "field": "visualization_dependency",
+      "value": "Seaborn",
+      "normalized_value": "Seaborn",
+      "evidence": "The plots and graphs use [Seaborn](https://seaborn.pydata.org/)",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Identifies the visualization library used for analysis"
+    },
+    {
+      "field": "main_analysis_file",
+      "value": "XAI-Scholar_analysis.ipynb",
+      "normalized_value": "XAI-Scholar_analysis.ipynb",
+      "evidence": "`XAI-Scholar_analysis.ipynb` is a Jupyter Notebook with the code necessary to reproduce the results",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Names the primary executable file for reproduction"
+    },
+    {
+      "field": "data_file",
+      "value": "xai-scholar.json",
+      "normalized_value": "xai-scholar.json",
+      "evidence": "`xai-scholar.json` is a json dictionary with 5199 SemanticScholar `paperId` keys.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Identifies the main data file and its structure"
+    },
+    {
+      "field": "data_retrieval_method",
+      "value": "semanticscholar.get_paper(paperId)",
+      "normalized_value": "semanticscholar.get_paper(paperId)",
+      "evidence": "it simply calls `semanticscholar.get_paper(paperId)` for each `paperId`.",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Specifies the API method used to retrieve missing paper data"
+    },
+    {
+      "field": "missing_data_fields",
+      "value": "embedding, citations, references",
+      "normalized_value": "embedding, citations, references",
+      "evidence": "* `embedding`\n* `citations`\n* `references`",
+      "evidence_location": "40-42",
+      "confidence": "high",
+      "reason": "Lists the fields not included in the provided dataset that need to be retrieved"
+    }
+  ]
+}

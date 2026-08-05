@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Simple learning agents interacting with an agent-based market model",
+      "normalized_value": "Simple learning agents interacting with an agent-based market model",
+      "evidence": "# Simple learning agents interacting with an agent-based market model",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the project title directly from the main header."
+    },
+    {
+      "field": "description",
+      "value": "We consider the learning dynamics of a single reinforcement learning optimal execution trading agent when it interacts with an event driven agent-based financial market model. Trading takes place asynchronously through a matching engine in event time. The optimal execution agent is considered at different levels of initial order-sizes and differently sized state spaces. The resulting impact on the agent-based model and market are considered using a calibration approach that explores changes in the empirical stylised facts and price impact curves. Convergence, volume trajectory and action trace plots are used to visualise the learning dynamics.",
+      "normalized_value": "We consider the learning dynamics of a single reinforcement learning optimal execution trading agent when it interacts with an event driven agent-based financial market model. Trading takes place asynchronously through a matching engine in event time. The optimal execution agent is considered at different levels of initial order-sizes and differently sized state spaces. The resulting impact on the agent-based model and market are considered using a calibration approach that explores changes in the empirical stylised facts and price impact curves. Convergence, volume trajectory and action trace plots are used to visualise the learning dynamics.",
+      "evidence": "We consider the learning dynamics of a single reinforcement learning optimal execution trading agent when it interacts with an event driven agent-based financial market model. Trading takes place asynchronously through a matching engine in event time. The optimal execution agent is considered at different levels of initial order-sizes and differently sized state spaces. The resulting impact on the agent-based model and market are considered using a calibration approach that explores changes in the empirical stylised facts and price impact curves. Convergence, volume trajectory and action trace plots are used to visualise the learning dynamics.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides a comprehensive summary of the project's scope, methodology, and visualization techniques."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "normalized_value": "https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "evidence": "git clone https://github.com/matthewdicks98/MDTG-MALABM.git",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Direct installation command providing the exact source code repository URL."
+    },
+    {
+      "field": "programming_language",
+      "value": "Julia",
+      "normalized_value": "Julia",
+      "evidence": "1. Julia version 1.7.1.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Explicitly states the primary programming environment required."
+    },
+    {
+      "field": "software_version",
+      "value": "1.7.1",
+      "normalized_value": "1.7.1",
+      "evidence": "1. Julia version 1.7.1.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Specifies the exact version of Julia required for reproducibility."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2208.10434",
+      "normalized_value": "https://arxiv.org/abs/2208.10434",
+      "evidence": "The link to the arxiv paper can be found [here](https://arxiv.org/abs/2208.10434).",
+      "evidence_location": "76",
+      "confidence": "high",
+      "reason": "Links to the associated academic publication for scientific context and citation."
+    },
+    {
+      "field": "authors",
+      "value": "1. Matthew Dicks\n2. Tim Gebbie",
+      "normalized_value": "1. Matthew Dicks 2. Tim Gebbie",
+      "evidence": "1. Matthew Dicks\n2. Tim Gebbie",
+      "evidence_location": "71-72",
+      "confidence": "high",
+      "reason": "Lists the creators of the artifact for attribution and contact purposes."
+    },
+    {
+      "field": "task",
+      "value": "reinforcement learning optimal execution trading agent interacting with an event driven agent-based financial market model",
+      "normalized_value": "reinforcement learning optimal execution trading agent interacting with an event driven agent-based financial market model",
+      "evidence": "We consider the learning dynamics of a single reinforcement learning optimal execution trading agent when it interacts with an event driven agent-based financial market model.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Clearly defines the specific machine learning task and simulation environment."
+    },
+    {
+      "field": "dataset",
+      "value": "JSE L1LOB TAQ data",
+      "normalized_value": "JSE L1LOB TAQ data",
+      "evidence": "Clean JSE L1LOB TAQ data as well as clean raw message data from the ABM simulation.",
+      "evidence_location": "33",
+      "confidence": "high",
+      "reason": "Identifies the real-world financial dataset used for calibration and comparison."
+    },
+    {
+      "field": "optimization_algorithm",
+      "value": "Nelder-Mead with threshold accepting optimisation algorithm",
+      "normalized_value": "Nelder-Mead with threshold accepting optimisation algorithm",
+      "evidence": "implements the Nelder-Mead with threshold accepting optimisation algorithm.",
+      "evidence_location": "57",
+      "confidence": "high",
+      "reason": "Specifies the exact optimization method used for calibrating the agent-based model."
+    },
+    {
+      "field": "key_scripts_calibrated_abm",
+      "value": "* [RunReactiveABM.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/RunReactiveABM.jl) runs the event-based simulation once for a given set of parameters.  \n* [SensitivityAnalysis.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/SensitivityAnalysis.jl) runs the sensitivity analysis for given ranges of parameter values.\n* [Calibration.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/Calibration.jl) uses [NMTA.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/NMTA.jl) to calibrate the ABM to a day of JSE data. [NMTA.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/NMTA.jl) implements the Nelder-Mead with threshold accepting optimisation algorithm.\n* [CoinTossX.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/CoinTossX.jl) and [JSE.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/JSE.jl) clean the ABM and JSE data into the L1LOB format respectively. [CoinTossX.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/CoinTossX.jl) also visualises the realised price path.\n* [StylisedFacts.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/StylisedFacts.jl) visualises the stylised facts found in the ABM and the JSE.",
+      "normalized_value": "* [RunReactiveABM.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/RunReactiveABM.jl) runs the event-based simulation once for a given set of parameters. * [SensitivityAnalysis.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/SensitivityAnalysis.jl) runs the sensitivity analysis for given ranges of parameter values. * [Calibration.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/Calibration.jl) uses [NMTA.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/NMTA.jl) to calibrate the ABM to a day of JSE data. [NMTA.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/NMTA.jl) implements the Nelder-Mead with threshold accepting optimisation algorithm. * [CoinTossX.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/CoinTossX.jl) and [JSE.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/JSE.jl) clean the ABM and JSE data into the L1LOB format respectively. [CoinTossX.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/CoinTossX.jl) also visualises the realised price path. * [StylisedFacts.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/StylisedFacts.jl) visualises the stylised facts found in the ABM and the JSE.",
+      "evidence": "* [RunReactiveABM.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/RunReactiveABM.jl) runs the event-based simulation once for a given set of parameters.  \n* [SensitivityAnalysis.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/SensitivityAnalysis.jl) runs the sensitivity analysis for given ranges of parameter values.\n* [Calibration.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/Calibration.jl) uses [NMTA.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/NMTA.jl) to calibrate the ABM to a day of JSE data. [NMTA.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/NMTA.jl) implements the Nelder-Mead with threshold accepting optimisation algorithm.\n* [CoinTossX.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/CoinTossX.jl) and [JSE.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/JSE.jl) clean the ABM and JSE data into the L1LOB format respectively. [CoinTossX.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/DataCleaning/CoinTossX.jl) also visualises the realised price path.\n* [StylisedFacts.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/Calibrated-ABM/Scripts/StylisedFacts.jl) visualises the stylised facts found in the ABM and the JSE.",
+      "evidence_location": "55-59",
+      "confidence": "high",
+      "reason": "Lists the core executable scripts required to run simulations, calibration, and data cleaning on the Calibrated-ABM branch."
+    },
+    {
+      "field": "key_scripts_rl_abm",
+      "value": "* [RLUtilities.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/RLUtilities.jl) which contains functions that can simulate an RL agent in an ABM for one episode and train the RL agent to optimally liquidate a parent order. \n* [RLVisualizations.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/RLVisualizations.jl) which allows you to visualise different aspects of the RL agent's convergence as well as the learning dynamics and how the agent has affected the ABM.\n* The [StylisedFacts.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/StylisedFacts.jl) file includes extra functionality that allows you to visualise stylised facts for the RL agent.",
+      "normalized_value": "* [RLUtilities.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/RLUtilities.jl) which contains functions that can simulate an RL agent in an ABM for one episode and train the RL agent to optimally liquidate a parent order. * [RLVisualizations.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/RLVisualizations.jl) which allows you to visualise different aspects of the RL agent's convergence as well as the learning dynamics and how the agent has affected the ABM. * The [StylisedFacts.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/StylisedFacts.jl) file includes extra functionality that allows you to visualise stylised facts for the RL agent.",
+      "evidence": "* [RLUtilities.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/RLUtilities.jl) which contains functions that can simulate an RL agent in an ABM for one episode and train the RL agent to optimally liquidate a parent order. \n* [RLVisualizations.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/RLVisualizations.jl) which allows you to visualise different aspects of the RL agent's convergence as well as the learning dynamics and how the agent has affected the ABM.\n* The [StylisedFacts.jl](https://github.com/matthewdicks98/MDTG-MALABM/blob/RL-ABM/Scripts/StylisedFacts.jl) file includes extra functionality that allows you to visualise stylised facts for the RL agent.",
+      "evidence_location": "63-65",
+      "confidence": "high",
+      "reason": "Lists the additional scripts needed to train and visualize the reinforcement learning agent on the RL-ABM branch."
+    },
+    {
+      "field": "data_directory",
+      "value": "Data",
+      "normalized_value": "Data",
+      "evidence": "<Data structure To replicate the data analysis the following file paths hold the required information: Data>",
+      "evidence_location": "67",
+      "confidence": "high",
+      "reason": "Indicates the directory path where required data files are stored for replication."
+    },
+    {
+      "field": "related_repository",
+      "value": "https://github.com/IvanJericevich/IJPCTG-ABMCoinTossX",
+      "normalized_value": "https://github.com/IvanJericevich/IJPCTG-ABMCoinTossX",
+      "evidence": "the implementation found in this repository: [IJPCTG-ABMCoinTossX](https://github.com/IvanJericevich/IJPCTG-ABMCoinTossX).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Points to the upstream repository containing the base agent-based market model implementation."
+    }
+  ]
+}

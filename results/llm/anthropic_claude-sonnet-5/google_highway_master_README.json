@@ -1,0 +1,319 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Highway",
+      "normalized_value": "Highway",
+      "evidence": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "States the name and purpose of the artifact"
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://google.github.io/highway/en/master/",
+      "normalized_value": "https://google.github.io/highway/en/master/",
+      "evidence": "[Documentation](https://google.github.io/highway/en/master/)",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Link to official documentation for the artifact"
+    },
+    {
+      "field": "license",
+      "value": "Previously licensed under Apache 2, now dual-licensed as Apache 2 / BSD-3.",
+      "normalized_value": "Apache 2 / BSD-3",
+      "evidence": "Previously licensed under Apache 2, now dual-licensed as Apache 2 / BSD-3.",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "States current and previous licensing terms for reuse"
+    },
+    {
+      "field": "supported_targets",
+      "value": "Highway supports 24 targets, listed in alphabetical order of platform",
+      "normalized_value": "24 targets",
+      "evidence": "Highway supports 24 targets, listed in alphabetical order of platform:",
+      "evidence_location": "line 146",
+      "confidence": "high",
+      "reason": "Specifies scope of hardware/platform support relevant to reproducibility"
+    },
+    {
+      "field": "supported_architectures",
+      "value": "Any: EMU128, SCALAR; Armv7+: NEON_WITHOUT_AES, NEON, NEON_BF16, SVE, SVE2, SVE_256, SVE2_128; IBM Z: Z14, Z15; POWER: PPC8 (v2.07), PPC9 (v3.0), PPC10 (v3.1B, not yet supported due to compiler bugs, see #1207; also requires QEMU 7.2); RISC-V: RVV (1.0); WebAssembly: WASM, WASM_EMU256; x86: SSE2, SSSE3, SSE4, AVX2, AVX3, AVX3_DL, AVX3_ZEN4, AVX3_SPR",
+      "normalized_value": "EMU128, SCALAR, NEON_WITHOUT_AES, NEON, NEON_BF16, SVE, SVE2, SVE_256, SVE2_128, Z14, Z15, PPC8, PPC9, PPC10, RVV, WASM, WASM_EMU256, SSE2, SSSE3, SSE4, AVX2, AVX3, AVX3_DL, AVX3_ZEN4, AVX3_SPR",
+      "evidence": "-   Any: `EMU128`, `SCALAR`;\n-   Armv7+: `NEON_WITHOUT_AES`, `NEON`, `NEON_BF16`, `SVE`, `SVE2`, `SVE_256`,\n    `SVE2_128`;\n-   IBM Z: `Z14`, `Z15`;\n-   POWER: `PPC8` (v2.07), `PPC9` (v3.0), `PPC10` (v3.1B, not yet supported due\n    to compiler bugs, see #1207; also requires QEMU 7.2);\n-   RISC-V: `RVV` (1.0);\n-   WebAssembly: `WASM`, `WASM_EMU256` (a 2x unrolled version of wasm128,\n    enabled if `HWY_WANT_WASM2` is defined. This will remain supported until it\n    is potentially superseded by a future version of WASM.);\n-   x86:\n    -   `SSE2`\n    -   `SSSE3` (~Intel Core)\n    -   `SSE4` (~Nehalem, also includes AES + CLMUL).\n    -   `AVX2` (~Haswell, also includes BMI2 + F16 + FMA)\n    -   `AVX3` (~Skylake, AVX-512F/BW/CD/DQ/VL)\n    -   `AVX3_DL` (~Icelake, includes BitAlg + CLMUL + GFNI + VAES + VBMI +\n        VBMI2 + VNNI + VPOPCNT; requires opt-in by defining `HWY_WANT_AVX3_DL`\n        unless compiling for static dispatch),\n    -   `AVX3_ZEN4` (like AVX3_DL but optimized for AMD Zen4; requires opt-in by\n        defining `HWY_WANT_AVX3_ZEN4` if compiling for static dispatch, but\n        enabled by default for runtime dispatch),\n    -   `AVX3_SPR` (~Sapphire Rapids, includes AVX-512FP16)",
+      "evidence_location": "lines 148-170",
+      "confidence": "high",
+      "reason": "Detailed list of supported instruction set targets, key for reproducibility and platform compatibility"
+    },
+    {
+      "field": "minimum_language_standard",
+      "value": "Highway only requires C++11",
+      "normalized_value": "C++11",
+      "evidence": "Highway only requires C++11\nand supports four families of compilers.",
+      "evidence_location": "lines 34-35",
+      "confidence": "high",
+      "reason": "States the minimum required C++ standard for using the library"
+    },
+    {
+      "field": "current_version",
+      "value": "The current version 1.0 signals an increased focus on backwards compatibility.",
+      "normalized_value": "1.0",
+      "evidence": "The current version 1.0 signals an increased focus on backwards compatibility.",
+      "evidence_location": "line 188",
+      "confidence": "high",
+      "reason": "States the current release version of the artifact"
+    },
+    {
+      "field": "versioning_scheme",
+      "value": "Highway releases aim to follow the semver.org system (MAJOR.MINOR.PATCH)",
+      "normalized_value": "semver.org (MAJOR.MINOR.PATCH)",
+      "evidence": "Highway releases aim to follow the semver.org system (MAJOR.MINOR.PATCH),\nincrementing MINOR after backward-compatible additions and PATCH after\nbackward-compatible fixes.",
+      "evidence_location": "lines 183-185",
+      "confidence": "high",
+      "reason": "Describes the version numbering convention used for releases"
+    },
+    {
+      "field": "continuous_integration_environment",
+      "value": "Continuous integration tests build with a recent version of Clang (running on native x86, or QEMU for RISC-V and Arm) and MSVC 2019 (v19.28, running on native x86).",
+      "normalized_value": "Clang (native x86 or QEMU for RISC-V/Arm), MSVC 2019 v19.28 (native x86)",
+      "evidence": "Continuous integration tests build with a recent version of Clang (running on\nnative x86, or QEMU for RISC-V and Arm) and MSVC 2019 (v19.28, running on native\nx86).",
+      "evidence_location": "lines 194-196",
+      "confidence": "high",
+      "reason": "Specifies the compilers and test environment used for CI, relevant for reproducibility"
+    },
+    {
+      "field": "dependency",
+      "value": "Highway's unit tests use [googletest](https://github.com/google/googletest).",
+      "normalized_value": "googletest",
+      "evidence": "Highway's unit tests use [googletest](https://github.com/google/googletest).\nBy default, Highway's CMake downloads this dependency at configuration time.",
+      "evidence_location": "lines 227-228",
+      "confidence": "high",
+      "reason": "Names a required dependency for running unit tests"
+    },
+    {
+      "field": "installation_command",
+      "value": "sudo apt install cmake",
+      "normalized_value": "sudo apt install cmake",
+      "evidence": "```bash\nsudo apt install cmake\n```",
+      "evidence_location": "lines 223-225",
+      "confidence": "high",
+      "reason": "Command to install the build tool CMake required for building the project"
+    },
+    {
+      "field": "installation_command",
+      "value": "sudo apt install libgtest-dev",
+      "normalized_value": "sudo apt install libgtest-dev",
+      "evidence": "```bash\nsudo apt install libgtest-dev\n```",
+      "evidence_location": "lines 232-234",
+      "confidence": "high",
+      "reason": "Command to install gtest separately as an alternative dependency setup"
+    },
+    {
+      "field": "build_command",
+      "value": "mkdir -p build && cd build\ncmake ..\nmake -j && make test",
+      "normalized_value": "mkdir -p build && cd build; cmake ..; make -j && make test",
+      "evidence": "```bash\nmkdir -p build && cd build\ncmake ..\nmake -j && make test\n```",
+      "evidence_location": "lines 246-249",
+      "confidence": "high",
+      "reason": "Standard CMake build and test workflow commands for building the library and running tests"
+    },
+    {
+      "field": "test_script",
+      "value": "run_tests.sh (run_tests.bat on Windows)",
+      "normalized_value": "run_tests.sh / run_tests.bat",
+      "evidence": "Or you can run `run_tests.sh` (`run_tests.bat` on Windows).",
+      "evidence_location": "line 251",
+      "confidence": "high",
+      "reason": "Alternative script for running tests, useful for reproducibility"
+    },
+    {
+      "field": "build_system",
+      "value": "This project uses CMake to generate and build.",
+      "normalized_value": "CMake",
+      "evidence": "This project uses CMake to generate and build. In a Debian-based system you can\ninstall it via:",
+      "evidence_location": "lines 220-221",
+      "confidence": "high",
+      "reason": "Identifies the primary build system used"
+    },
+    {
+      "field": "alternative_build_system",
+      "value": "Bazel is also supported for building, but it is not as widely used/tested.",
+      "normalized_value": "Bazel",
+      "evidence": "Bazel is also supported for building, but it is not as widely used/tested.",
+      "evidence_location": "line 253",
+      "confidence": "high",
+      "reason": "Names an alternative supported build system"
+    },
+    {
+      "field": "package_manager_install",
+      "value": "vcpkg install highway",
+      "normalized_value": "vcpkg install highway",
+      "evidence": "```bash\nvcpkg install highway\n```",
+      "evidence_location": "lines 271-273",
+      "confidence": "high",
+      "reason": "Command to install the artifact via the vcpkg package manager"
+    },
+    {
+      "field": "package_managers",
+      "value": "alpinelinux, conan-io, conda-forge, DragonFlyBSD, fd00/yacp, freebsd, getsolus/packages, ghostbsd, microsoft/vcpkg, MidnightBSD, MSYS2, NetBSD, openSUSE, opnsense, Xilinx/Vitis_Libraries, xmake-io/xmake-repo",
+      "normalized_value": "alpinelinux, conan-io, conda-forge, DragonFlyBSD, fd00/yacp, freebsd, getsolus/packages, ghostbsd, microsoft/vcpkg, MidnightBSD, MSYS2, NetBSD, openSUSE, opnsense, Xilinx/Vitis_Libraries, xmake-io/xmake-repo",
+      "evidence": "*   alpinelinux\n*   conan-io\n*   conda-forge\n*   DragonFlyBSD,\n*   fd00/yacp\n*   freebsd\n*   getsolus/packages\n*   ghostbsd\n*   microsoft/vcpkg\n*   MidnightBSD\n*   MSYS2\n*   NetBSD\n*   openSUSE\n*   opnsense\n*   Xilinx/Vitis_Libraries\n*   xmake-io/xmake-repo",
+      "evidence_location": "lines 122-137",
+      "confidence": "high",
+      "reason": "Lists distribution channels for obtaining the artifact, useful for reuse/access"
+    },
+    {
+      "field": "repology_page",
+      "value": "https://repology.org/project/highway-simd-library/versions",
+      "normalized_value": "https://repology.org/project/highway-simd-library/versions",
+      "evidence": "See also the list at https://repology.org/project/highway-simd-library/versions\n.",
+      "evidence_location": "lines 139-140",
+      "confidence": "high",
+      "reason": "External link tracking package availability across distributions"
+    },
+    {
+      "field": "related_module",
+      "value": "The `contrib` directory contains SIMD-related utilities: an image class with aligned rows, a math library (16 functions already implemented, mostly trigonometry), and functions for computing dot products and sorting.",
+      "normalized_value": "contrib directory",
+      "evidence": "The `contrib` directory contains SIMD-related utilities: an image class with\naligned rows, a math library (16 functions already implemented, mostly\ntrigonometry), and functions for computing dot products and sorting.",
+      "evidence_location": "lines 204-206",
+      "confidence": "high",
+      "reason": "Describes a bundled sub-module with additional utilities relevant to usage"
+    },
+    {
+      "field": "related_paper",
+      "value": "[vectorized Quicksort](https://github.com/google/highway/tree/master/hwy/contrib/sort) ([paper](https://arxiv.org/abs/2205.05982))",
+      "normalized_value": "https://arxiv.org/abs/2205.05982",
+      "evidence": "*   [vectorized Quicksort](https://github.com/google/highway/tree/master/hwy/contrib/sort) ([paper](https://arxiv.org/abs/2205.05982))",
+      "evidence_location": "line 116",
+      "confidence": "high",
+      "reason": "Links to an associated academic paper describing a component (vectorized quicksort) built with the artifact"
+    },
+    {
+      "field": "external_evaluation",
+      "value": "[Evaluation of C++ SIMD Libraries](https://www.mnm-team.org/pub/Fopras/rock23/): \"Highway excelled with a strong performance across multiple SIMD extensions [..]. Thus, Highway may currently be the most suitable SIMD library for many software projects.\"",
+      "normalized_value": "https://www.mnm-team.org/pub/Fopras/rock23/",
+      "evidence": "*   [Evaluation of C++ SIMD Libraries](https://www.mnm-team.org/pub/Fopras/rock23/):\n    \"Highway excelled with a strong performance across multiple SIMD extensions\n    [..]. Thus, Highway may currently be the most suitable SIMD library for many\n    software projects.\"",
+      "evidence_location": "lines 111-114",
+      "confidence": "high",
+      "reason": "External benchmark/evaluation result citing the artifact's performance, relevant scientific context"
+    },
+    {
+      "field": "alternative_library",
+      "value": "Agner Fog's [VCL vector class library](https://github.com/vectorclass)",
+      "normalized_value": "VCL vector class library",
+      "evidence": "If you only require x86 support, you may also use Agner Fog's\n[VCL vector class library](https://github.com/vectorclass). It includes many\nfunctions including a complete math library.",
+      "evidence_location": "lines 210-212",
+      "confidence": "high",
+      "reason": "Names an alternative library for x86-only SIMD usage"
+    },
+    {
+      "field": "alternative_library",
+      "value": "[SIMDe](https://github.com/simd-everywhere/simde)",
+      "normalized_value": "SIMDe",
+      "evidence": "If you have existing code using x86/NEON intrinsics, you may be interested in\n[SIMDe](https://github.com/simd-everywhere/simde), which emulates those\nintrinsics using other platforms' intrinsics or autovectorization.",
+      "evidence_location": "lines 214-216",
+      "confidence": "high",
+      "reason": "Names another related/alternative library for intrinsic emulation"
+    },
+    {
+      "field": "quick_reference_doc",
+      "value": "[quick-reference page](g3doc/quick_reference.md)",
+      "normalized_value": "g3doc/quick_reference.md",
+      "evidence": "A [quick-reference page](g3doc/quick_reference.md) briefly lists all operations\nand their parameters, and the [instruction_matrix](g3doc/instruction_matrix.pdf)\nindicates the number of instructions per operation.",
+      "evidence_location": "lines 281-283",
+      "confidence": "high",
+      "reason": "Points to internal documentation describing available operations/parameters, useful for usage"
+    },
+    {
+      "field": "faq_doc",
+      "value": "[FAQ](g3doc/faq.md)",
+      "normalized_value": "g3doc/faq.md",
+      "evidence": "The [FAQ](g3doc/faq.md) answers questions about portability, API design and\nwhere to find more information.",
+      "evidence_location": "lines 285-286",
+      "confidence": "high",
+      "reason": "Points to FAQ documentation relevant to understanding the artifact"
+    },
+    {
+      "field": "compiler_flags",
+      "value": "Applications should be compiled with optimizations enabled... For clang and GCC, `-O2` is generally sufficient.",
+      "normalized_value": "-O2 (clang/GCC)",
+      "evidence": "Applications should be compiled with optimizations enabled. Without inlining\nSIMD code may slow down by factors of 10 to 100. For clang and GCC, `-O2` is\ngenerally sufficient.",
+      "evidence_location": "lines 370-372",
+      "confidence": "high",
+      "reason": "Specifies recommended compiler flags needed to correctly build/run the artifact for performance"
+    },
+    {
+      "field": "compiler_flags",
+      "value": "For MSVC, we recommend compiling with `/Gv` ... it is also important to compile with `/arch:AVX2`.",
+      "normalized_value": "/Gv /arch:AVX2 (MSVC)",
+      "evidence": "For MSVC, we recommend compiling with `/Gv` to allow non-inlined functions to\npass vector arguments in registers. If intending to use the AVX2 target together\nwith half-width vectors (e.g. for `PromoteTo`), it is also important to compile\nwith `/arch:AVX2`.",
+      "evidence_location": "lines 374-377",
+      "confidence": "high",
+      "reason": "Specifies recommended MSVC compiler flags for correct code generation"
+    },
+    {
+      "field": "arm7_build_flag",
+      "value": "When building for Armv7, a limitation of current compilers requires you to add `-DHWY_CMAKE_ARM7:BOOL=ON` to the CMake command line",
+      "normalized_value": "-DHWY_CMAKE_ARM7:BOOL=ON",
+      "evidence": "When building for Armv7, a limitation of current compilers requires you to add\n`-DHWY_CMAKE_ARM7:BOOL=ON` to the CMake command line; see #834 and #1032.",
+      "evidence_location": "lines 255-257",
+      "confidence": "high",
+      "reason": "Specific build configuration flag required for a supported platform"
+    },
+    {
+      "field": "acknowledgment",
+      "value": "We have used [farm-sve](https://gitlab.inria.fr/bramas/farm-sve) by Berenger Bramas; it has proved useful for checking the SVE port on an x86 development machine.",
+      "normalized_value": "farm-sve by Berenger Bramas",
+      "evidence": "We have used [farm-sve](https://gitlab.inria.fr/bramas/farm-sve) by Berenger\nBramas; it has proved useful for checking the SVE port on an x86 development\nmachine.",
+      "evidence_location": "lines 491-493",
+      "confidence": "high",
+      "reason": "Credits an external resource used in development, relevant attribution information"
+    },
+    {
+      "field": "contact_email",
+      "value": "janwas@google.com",
+      "normalized_value": "janwas@google.com",
+      "evidence": "Contact: janwas@google.com",
+      "evidence_location": "line 496",
+      "confidence": "high",
+      "reason": "Provides contact information for the maintainers of the artifact"
+    },
+    {
+      "field": "disclaimer",
+      "value": "This is not an officially supported Google product.",
+      "normalized_value": "This is not an officially supported Google product.",
+      "evidence": "This is not an officially supported Google product.",
+      "evidence_location": "line 495",
+      "confidence": "high",
+      "reason": "Legal/status disclaimer relevant to understanding official support status"
+    },
+    {
+      "field": "example_usage_location",
+      "value": "You can use the `benchmark` inside examples/ as a starting point.",
+      "normalized_value": "examples/benchmark",
+      "evidence": "You can use the `benchmark` inside examples/ as a starting point.",
+      "evidence_location": "line 279",
+      "confidence": "high",
+      "reason": "Points to example code location for getting started with usage"
+    },
+    {
+      "field": "notable_downstream_project",
+      "value": "[gemma.cpp](https://github.com/google/gemma.cpp)",
+      "normalized_value": "gemma.cpp",
+      "evidence": "*   Machine learning: [gemma.cpp](https://github.com/google/gemma.cpp),\n    Tensorflow, Numpy, zpye/SimpleInfer",
+      "evidence_location": "lines 104-105",
+      "confidence": "medium",
+      "reason": "Lists a notable machine learning project using this artifact, useful for understanding real-world usage"
+    },
+    {
+      "field": "release_testing_doc",
+      "value": "See the [testing process](g3doc/release_testing_process.md) for details.",
+      "normalized_value": "g3doc/release_testing_process.md",
+      "evidence": "Before releases, we also test on x86 with Clang and GCC, and Armv7/8 via GCC\ncross-compile. See the [testing process](g3doc/release_testing_process.md) for\ndetails.",
+      "evidence_location": "lines 198-200",
+      "confidence": "high",
+      "reason": "Points to documentation describing the release testing process, relevant for reproducibility"
+    }
+  ]
+}

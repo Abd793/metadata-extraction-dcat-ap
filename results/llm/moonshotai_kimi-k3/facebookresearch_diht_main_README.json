@@ -1,0 +1,202 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "DiHT",
+      "normalized_value": "DiHT",
+      "evidence": "# DiHT",
+      "evidence_location": "line 1, header '# DiHT'",
+      "confidence": "high",
+      "reason": "Identifies the name of the artifact/project."
+    },
+    {
+      "field": "paper_title",
+      "value": "Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training",
+      "normalized_value": "Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training",
+      "evidence": "\"Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training\" [[Paper](https://arxiv.org/abs/2301.02280)]",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Names the associated research paper, useful for citation and scientific context."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2301.02280",
+      "normalized_value": "https://arxiv.org/abs/2301.02280",
+      "evidence": "[[Paper](https://arxiv.org/abs/2301.02280)]",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Direct link to the paper describing the method."
+    },
+    {
+      "field": "task",
+      "value": "Vision-Language Pre-Training",
+      "normalized_value": "Vision-Language Pre-Training",
+      "evidence": "\"Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training\"",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "States the research task/domain of the artifact."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/facebookresearch/diht",
+      "normalized_value": "https://github.com/facebookresearch/diht",
+      "evidence": "git clone https://github.com/facebookresearch/diht",
+      "evidence_location": "line 7, '## Installation' code block",
+      "confidence": "high",
+      "reason": "Source repository URL needed to obtain the code."
+    },
+    {
+      "field": "installation_commands",
+      "value": "git clone https://github.com/facebookresearch/diht; cd diht; pip install -r requirements.txt; pip install -e .",
+      "normalized_value": "git clone https://github.com/facebookresearch/diht; cd diht; pip install -r requirements.txt; pip install -e .",
+      "evidence": "```bash\ngit clone https://github.com/facebookresearch/diht\ncd diht\npip install -r requirements.txt\npip install -e .  # To install as an editable package\n```",
+      "evidence_location": "lines 6-11, '## Installation' code block",
+      "confidence": "high",
+      "reason": "Defines the steps to install the codebase, required for reproduction."
+    },
+    {
+      "field": "alternative_installation",
+      "value": "pip install .",
+      "normalized_value": "pip install .",
+      "evidence": "You can use `pip install .` to install the codebase as a non-editable package.",
+      "evidence_location": "line 13, '## Installation' section",
+      "confidence": "high",
+      "reason": "Alternative non-editable installation command."
+    },
+    {
+      "field": "model_loading_api",
+      "value": "text_tokenizer, image_transform, model = model_zoo.load_model(\"diht_vitl14_336px\", is_train=False)",
+      "normalized_value": "text_tokenizer, image_transform, model = model_zoo.load_model(\"diht_vitl14_336px\", is_train=False)",
+      "evidence": "from diht import model_zoo\nfrom PIL import Image\n\n\ntext_tokenizer, image_transform, model = model_zoo.load_model(\n    \"diht_vitl14_336px\", is_train=False\n)",
+      "evidence_location": "lines 20-26, '## Example' code block",
+      "confidence": "high",
+      "reason": "Shows how to load a pretrained model via the model_zoo API, key usage information."
+    },
+    {
+      "field": "gpu_execution",
+      "value": "model = model.to(torch.device(\"cuda\"))",
+      "normalized_value": "model = model.to(torch.device(\"cuda\"))",
+      "evidence": "By default the model runs on CPU, to run on GPU you can do `model = model.to(torch.device(\"cuda\"))`. The image and text tensors will also have to be transferred accordingly.",
+      "evidence_location": "line 50, '## Running on GPU/CPU' section",
+      "confidence": "high",
+      "reason": "Explains default CPU execution and how to run on GPU, relevant for hardware/environment setup."
+    },
+    {
+      "field": "list_models_command",
+      "value": "print(diht.available_models())",
+      "normalized_value": "print(diht.available_models())",
+      "evidence": "```python\nimport diht\n\n\nprint(diht.available_models())\n```",
+      "evidence_location": "lines 54-59, '## Available Models' code block",
+      "confidence": "high",
+      "reason": "Command to enumerate available pretrained model variants."
+    },
+    {
+      "field": "imagenet_evaluation_command",
+      "value": "python example_imagenet_eval.py",
+      "normalized_value": "python example_imagenet_eval.py",
+      "evidence": "```\npython example_imagenet_eval.py\n```",
+      "evidence_location": "lines 65-67, '## Example ImageNet-1K zero-shot evaluation' code block",
+      "confidence": "high",
+      "reason": "Command to run the zero-shot ImageNet-1K evaluation, needed for reproduction of results."
+    },
+    {
+      "field": "imagenet_evaluation_prerequisite",
+      "value": "Download ImageNet-1K dataset from the original website. Edit `IMAGENET_ROOT` in `example_imagenet_eval.py` to match the location on your machine.",
+      "normalized_value": "Download ImageNet-1K dataset from the original website. Edit `IMAGENET_ROOT` in `example_imagenet_eval.py` to match the location on your machine.",
+      "evidence": "> **Note**: Download ImageNet-1K dataset from the original website. Edit `IMAGENET_ROOT` in `example_imagenet_eval.py` to match the location on your machine.",
+      "evidence_location": "line 64, '## Example ImageNet-1K zero-shot evaluation' section",
+      "confidence": "high",
+      "reason": "Prerequisite dataset and configuration step for running the ImageNet evaluation."
+    },
+    {
+      "field": "retrieval_evaluation_command",
+      "value": "python example_retrieval_eval.py",
+      "normalized_value": "python example_retrieval_eval.py",
+      "evidence": "```\npython example_retrieval_eval.py\n```",
+      "evidence_location": "lines 77-79, '## Example retrieval zero-shot evaluation' code block",
+      "confidence": "high",
+      "reason": "Command to run the zero-shot retrieval evaluation."
+    },
+    {
+      "field": "retrieval_evaluation_prerequisite",
+      "value": "Download COCO and Flickr30K datasets from the original websites. Json files (`coco_test.json` and `flickr30k_test.json`) can be downloaded from https://github.com/salesforce/ALBEF#download. Edit `COCO_ROOT` and `FLICKR30K_ROOT` in `example_retrieval_eval.py` to match the locations on your machine.",
+      "normalized_value": "Download COCO and Flickr30K datasets from the original websites. Json files (`coco_test.json` and `flickr30k_test.json`) can be downloaded from https://github.com/salesforce/ALBEF#download. Edit `COCO_ROOT` and `FLICKR30K_ROOT` in `example_retrieval_eval.py` to match the locations on your machine.",
+      "evidence": "> **Note**: Download COCO and Flickr30K datasets from the original websites. Json files (`coco_test.json` and `flickr30k_test.json`) can be downloaded from https://github.com/salesforce/ALBEF#download. Edit `COCO_ROOT` and `FLICKR30K_ROOT` in `example_retrieval_eval.py` to match the locations on your machine.",
+      "evidence_location": "line 76, '## Example retrieval zero-shot evaluation' section",
+      "confidence": "high",
+      "reason": "Prerequisite datasets and configuration for the retrieval evaluation, including a download link for annotation files."
+    },
+    {
+      "field": "available_model_variants",
+      "value": "diht_vitb32_224px, diht_vitb16_224px, diht_vitl14_224px, diht_vitl14_336px",
+      "normalized_value": "diht_vitb32_224px, diht_vitb16_224px, diht_vitl14_224px, diht_vitl14_336px",
+      "evidence": "| diht_vitb32_224px      | 68.0 | 40.6 | 59.3 | 68.6 | 84.4 |\n| diht_vitb16_224px      | 72.2 | 43.3 | 60.3 | 72.9 | 89.8 |\n| diht_vitl14_224px      | 77.0 | 48.0 | 65.1 | 76.7 | 92.0 |\n| diht_vitl14_336px      | 77.9 | 49.3 | 65.3 | 78.2 | 91.1 |",
+      "evidence_location": "lines 94-97, '## Zero-shot model performance' table",
+      "confidence": "high",
+      "reason": "Lists the released pretrained model checkpoint names, needed to select and load models."
+    },
+    {
+      "field": "benchmark_results",
+      "value": "diht_vitb32_224px: ImageNet-1K 68.0, COCO T2I 40.6, COCO I2T 59.3, Flickr30K T2I 68.6, Flickr30K I2T 84.4; diht_vitb16_224px: 72.2, 43.3, 60.3, 72.9, 89.8; diht_vitl14_224px: 77.0, 48.0, 65.1, 76.7, 92.0; diht_vitl14_336px: 77.9, 49.3, 65.3, 78.2, 91.1",
+      "normalized_value": "diht_vitb32_224px: ImageNet-1K 68.0, COCO T2I 40.6, COCO I2T 59.3, Flickr30K T2I 68.6, Flickr30K I2T 84.4; diht_vitb16_224px: 72.2, 43.3, 60.3, 72.9, 89.8; diht_vitl14_224px: 77.0, 48.0, 65.1, 76.7, 92.0; diht_vitl14_336px: 77.9, 49.3, 65.3, 78.2, 91.1",
+      "evidence": "| Model | ImageNet-1K | COCO T2I | COCO I2T | Flickr30K T2I | Flickr30K I2T |\n| :---  |    :----:   |  :----:  |  :----:  |     :----:    |     :----:    |\n|       |  Accuracy@1 | Recall@1 | Recall@1 |    Recall@1   |    Recall@1   |\n| diht_vitb32_224px      | 68.0 | 40.6 | 59.3 | 68.6 | 84.4 |\n| diht_vitb16_224px      | 72.2 | 43.3 | 60.3 | 72.9 | 89.8 |\n| diht_vitl14_224px      | 77.0 | 48.0 | 65.1 | 76.7 | 92.0 |\n| diht_vitl14_336px      | 77.9 | 49.3 | 65.3 | 78.2 | 91.1 |",
+      "evidence_location": "lines 91-97, '## Zero-shot model performance' table",
+      "confidence": "high",
+      "reason": "Zero-shot benchmark results per model variant on ImageNet-1K, COCO, and Flickr30K, key for evaluation and comparison."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "Accuracy@1 (ImageNet-1K), Recall@1 (COCO T2I, COCO I2T, Flickr30K T2I, Flickr30K I2T)",
+      "normalized_value": "Accuracy@1 (ImageNet-1K), Recall@1 (COCO T2I, COCO I2T, Flickr30K T2I, Flickr30K I2T)",
+      "evidence": "|       |  Accuracy@1 | Recall@1 | Recall@1 |    Recall@1   |    Recall@1   |",
+      "evidence_location": "line 93, '## Zero-shot model performance' table",
+      "confidence": "high",
+      "reason": "Names the metrics used for each benchmark, needed to interpret reported results."
+    },
+    {
+      "field": "expected_imagenet_result",
+      "value": "ImageNet1K acc@1 for diht_vitl14_336px: 77.9",
+      "normalized_value": "ImageNet1K acc@1 for diht_vitl14_336px: 77.9",
+      "evidence": "For DiHT-L/14@336 the output should look like:\n```\nImageNet1K acc@1 for diht_vitl14_336px: 77.9\n```",
+      "evidence_location": "lines 68-71, '## Example ImageNet-1K zero-shot evaluation' section",
+      "confidence": "high",
+      "reason": "Expected output of the ImageNet evaluation, useful for verifying reproduction."
+    },
+    {
+      "field": "expected_retrieval_result",
+      "value": "COCO T2I r@1: 49.3; COCO I2T r@1: 65.3; Flickr30K T2I r@1: 78.2; Flickr30K I2T r@1: 91.1 (for diht_vitl14_336px)",
+      "normalized_value": "COCO T2I r@1: 49.3; COCO I2T r@1: 65.3; Flickr30K T2I r@1: 78.2; Flickr30K I2T r@1: 91.1 (for diht_vitl14_336px)",
+      "evidence": "COCO T2I r@1 for diht_vitl14_336px: 49.3\nCOCO I2T r@1 for diht_vitl14_336px: 65.3\n\nFlickr30K T2I r@1 for diht_vitl14_336px: 78.2\nFlickr30K I2T r@1 for diht_vitl14_336px: 91.1",
+      "evidence_location": "lines 82-86, '## Example retrieval zero-shot evaluation' code block",
+      "confidence": "high",
+      "reason": "Expected retrieval evaluation output, useful for verifying reproduction."
+    },
+    {
+      "field": "citation",
+      "value": "@article{rdk+23,\n  title = {Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training},\n  author = {Radenovic, Filip and Dubey, Abhimanyu and Kadian, Abhishek and Mihaylov, Todor and Vandenhende, Simon and Patel, Yash and Wen, Yi and Ramanathan, Vignesh and Mahajan, Dhruv},\n  journal = {arXiv:2301.02280},\n  year = {2023}\n}",
+      "normalized_value": "@article{rdk+23, title = {Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training}, author = {Radenovic, Filip and Dubey, Abhimanyu and Kadian, Abhishek and Mihaylov, Todor and Vandenhende, Simon and Patel, Yash and Wen, Yi and Ramanathan, Vignesh and Mahajan, Dhruv}, journal = {arXiv:2301.02280}, year = {2023} }",
+      "evidence": "```\n@article{rdk+23,\n  title = {Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training},\n  author = {Radenovic, Filip and Dubey, Abhimanyu and Kadian, Abhishek and Mihaylov, Todor and Vandenhende, Simon and Patel, Yash and Wen, Yi and Ramanathan, Vignesh and Mahajan, Dhruv},\n  journal = {arXiv:2301.02280},\n  year = {2023}\n}\n```",
+      "evidence_location": "lines 102-109, '## Citation' code block",
+      "confidence": "high",
+      "reason": "BibTeX citation for attributing the work."
+    },
+    {
+      "field": "copyright_holder",
+      "value": "Meta Platforms, Inc. and affiliates",
+      "normalized_value": "Meta Platforms, Inc. and affiliates",
+      "evidence": "Copyright (c) Meta Platforms, Inc. and affiliates.\nAll rights reserved.",
+      "evidence_location": "lines 113-114, '## License' code block",
+      "confidence": "high",
+      "reason": "Identifies the copyright holder, relevant for legal/reuse information."
+    },
+    {
+      "field": "license",
+      "value": "Licensed under the license found in the LICENSE file in the root directory of this source tree",
+      "normalized_value": "Licensed under the license found in the LICENSE file in the root directory of this source tree",
+      "evidence": "This source code is licensed under the license found in the\nLICENSE file in the root directory of this source tree.",
+      "evidence_location": "lines 115-116, '## License' code block",
+      "confidence": "medium",
+      "reason": "States that a license exists but does not name the specific license type in the README; the actual terms are in an external LICENSE file."
+    }
+  ]
+}

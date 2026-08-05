@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Slideflow",
+      "normalized_value": "Slideflow",
+      "evidence": "**Slideflow is a deep learning library for digital pathology, offering a user-friendly interface for model development.**",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Explicitly identifies the project name at the start of the description."
+    },
+    {
+      "field": "artifact_description",
+      "value": "deep learning library for digital pathology, offering a user-friendly interface for model development.",
+      "normalized_value": "deep learning library for digital pathology, offering a user-friendly interface for model development.",
+      "evidence": "**Slideflow is a deep learning library for digital pathology, offering a user-friendly interface for model development.**",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Clearly states the purpose and target domain of the software."
+    },
+    {
+      "field": "license",
+      "value": "Apache-2.0",
+      "normalized_value": "Apache-2.0",
+      "evidence": "This code is made available under the Apache-2.0 license.",
+      "evidence_location": "214",
+      "confidence": "high",
+      "reason": "Specifies the legal terms under which the code can be reused."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python >= 3.7 (<3.10 if using cuCIM)",
+      "normalized_value": "Python >= 3.7 (<3.10 if using cuCIM)",
+      "evidence": "- Python >= 3.7 (<3.10 if using [cuCIM](https://docs.rapids.ai/api/cucim/stable/))",
+      "evidence_location": "39",
+      "confidence": "high",
+      "reason": "Indicates the primary programming language and required version constraints."
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch >= 1.9 or Tensorflow 2.5-2.11",
+      "normalized_value": "PyTorch >= 1.9 or Tensorflow 2.5-2.11",
+      "evidence": "- [PyTorch](https://pytorch.org/) >= 1.9 _or_ [Tensorflow](https://www.tensorflow.org/) 2.5-2.11",
+      "evidence_location": "40",
+      "confidence": "high",
+      "reason": "Lists the supported deep learning backends and their minimum versions."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip3 install --upgrade setuptools pip wheel\npip3 install slideflow[cucim] cupy-cuda11x",
+      "normalized_value": "pip3 install --upgrade setuptools pip wheel pip3 install slideflow[cucim] cupy-cuda11x",
+      "evidence": "```\npip3 install --upgrade setuptools pip wheel\npip3 install slideflow[cucim] cupy-cuda11x\n```",
+      "evidence_location": "54-57",
+      "confidence": "high",
+      "reason": "Provides the standard command to install the package via PyPI."
+    },
+    {
+      "field": "docker_images",
+      "value": "jamesdolezal/slideflow:latest-tf, jamesdolezal/slideflow:latest-torch",
+      "normalized_value": "jamesdolezal/slideflow:latest-tf jamesdolezal/slideflow:latest-torch",
+      "evidence": "docker pull jamesdolezal/slideflow:latest-tf\ndocker run -it --gpus all jamesdolezal/slideflow:latest-tf\n...\ndocker pull jamesdolezal/slideflow:latest-torch\ndocker run -it --shm-size=2g --gpus all jamesdolezal/slideflow:latest-torch",
+      "evidence_location": "66-75",
+      "confidence": "high",
+      "reason": "Identifies pre-configured container images for quick deployment with different backends."
+    },
+    {
+      "field": "environment_variables",
+      "value": "SF_BACKEND, SF_SLIDE_BACKEND",
+      "normalized_value": "SF_BACKEND SF_SLIDE_BACKEND",
+      "evidence": "You can specify the backend to use with the environmental variable `SF_BACKEND`.\n...\nYou can set the active slide backend with the environmental variable `SF_SLIDE_BACKEND`:",
+      "evidence_location": "102, 110",
+      "confidence": "high",
+      "reason": "Documents configuration flags needed to switch between supported backends."
+    },
+    {
+      "field": "arxiv_link",
+      "value": "https://arxiv.org/abs/2304.04142",
+      "normalized_value": "https://arxiv.org/abs/2304.04142",
+      "evidence": "[ArXiv](https://arxiv.org/abs/2304.04142)",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper for scientific context."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://slideflow.dev",
+      "normalized_value": "https://slideflow.dev",
+      "evidence": "[Docs](https://slideflow.dev)",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Points to the official project documentation and tutorials."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/slideflow/slideflow",
+      "normalized_value": "https://github.com/slideflow/slideflow",
+      "evidence": "git clone https://github.com/slideflow/slideflow",
+      "evidence_location": "82",
+      "confidence": "high",
+      "reason": "Provides the source code host for cloning and contributing."
+    },
+    {
+      "field": "citation_text",
+      "value": "Dolezal, J.M., Kochanny, S., Dyer, E. et al. Slideflow: deep learning for digital histopathology with real-time whole-slide visualization. BMC Bioinformatics 25, 134 (2024). https://doi.org/10.1186/s12859-024-05758-x",
+      "normalized_value": "Dolezal, J.M., Kochanny, S., Dyer, E. et al. Slideflow: deep learning for digital histopathology with real-time whole-slide visualization. BMC Bioinformatics 25, 134 (2024). https://doi.org/10.1186/s12859-024-05758-x",
+      "evidence": "Dolezal, J.M., Kochanny, S., Dyer, E. et al. Slideflow: deep learning for digital histopathology with real-time whole-slide visualization. BMC Bioinformatics 25, 134 (2024). https://doi.org/10.1186/s12859-024-05758-x",
+      "evidence_location": "219",
+      "confidence": "high",
+      "reason": "Provides the recommended human-readable citation for academic work."
+    },
+    {
+      "field": "bibtex_citation",
+      "value": "@Article{Dolezal2024,\n    author={Dolezal, James M. and Kochanny, Sara and Dyer, Emma and Ramesh, Siddhi and Srisuwananukorn, Andrew and Sacco, Matteo and Howard, Frederick M. and Li, Anran and Mohan, Prajval and Pearson, Alexander T.},\n    title={Slideflow: deep learning for digital histopathology with real-time whole-slide visualization},\n    journal={BMC Bioinformatics},\n    year={2024},\n    month={Mar},\n    day={27},\n    volume={25},\n    number={1},\n    pages={134},\n    doi={10.1186/s12859-024-05758-x},\n    url={https://doi.org/10.1186/s12859-024-05758-x}\n}",
+      "normalized_value": "@Article{Dolezal2024, author={Dolezal, James M. and Kochanny, Sara and Dyer, Emma and Ramesh, Siddhi and Srisuwananukorn, Andrew and Sacco, Matteo and Howard, Frederick M. and Li, Anran and Mohan, Prajval and Pearson, Alexander T.}, title={Slideflow: deep learning for digital histopathology with real-time whole-slide visualization}, journal={BMC Bioinformatics}, year={2024}, month={Mar}, day={27}, volume={25}, number={1}, pages={134}, doi={10.1186/s12859-024-05758-x}, url={https://doi.org/10.1186/s12859-024-05758-x}",
+      "evidence": "```\n@Article{Dolezal2024,\n    author={Dolezal, James M. and Kochanny, Sara and Dyer, Emma and Ramesh, Siddhi and Srisuwananukorn, Andrew and Sacco, Matteo and Howard, Frederick M. and Li, Anran and Mohan, Prajval and Pearson, Alexander T.},\n    title={Slideflow: deep learning for digital histopathology with real-time whole-slide visualization},\n    journal={BMC Bioinformatics},\n    year={2024},\n    month={Mar},\n    day={27},\n    volume={25},\n    number={1},\n    pages={134},\n    doi={10.1186/s12859-024-05758-x},\n    url={https://doi.org/10.1186/s12859-024-05758-x}\n}\n```",
+      "evidence_location": "221-235",
+      "confidence": "high",
+      "reason": "Provides a machine-readable BibTeX entry for easy integration into reference managers."
+    }
+  ]
+}

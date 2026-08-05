@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "DejaVu",
+      "normalized_value": "DejaVu",
+      "evidence": "# DejaVu",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the name of the artifact project."
+    },
+    {
+      "field": "paper_preprint_url",
+      "value": "https://arxiv.org/abs/2207.09021",
+      "normalized_value": "https://arxiv.org/abs/2207.09021",
+      "evidence": "https://arxiv.org/abs/2207.09021",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Direct link to the arXiv preprint of the associated paper."
+    },
+    {
+      "field": "dgl_version_requirement",
+      "value": "DGL 0.8",
+      "normalized_value": "DGL 0.8",
+      "evidence": "DGL 0.8",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Specifies the required version of the DGL software library."
+    },
+    {
+      "field": "pytorch_version_requirement",
+      "value": "equal to or greater than 1.11.0",
+      "normalized_value": "equal to or greater than 1.11.0",
+      "evidence": "PyTorch version should be equal to or greater than 1.11.0.",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Defines the required PyTorch version dependency for running the artifact."
+    },
+    {
+      "field": "docker_image",
+      "value": "lizytalk/dejavu",
+      "normalized_value": "lizytalk/dejavu",
+      "evidence": "docker pull lizytalk/dejavu",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Names the official pre-configured Docker image containing the software requirements."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/NetManAIOps/DejaVu.git",
+      "normalized_value": "https://github.com/NetManAIOps/DejaVu.git",
+      "evidence": "https://github.com/NetManAIOps/DejaVu.git",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "URL for pulling/cloning the artifact source code repository from GitHub."
+    },
+    {
+      "field": "docker_run_command",
+      "value": "docker run -it --rm -v $(realpath DejaVu):/workspace lizytalk/dejavu bash",
+      "normalized_value": "docker run -it --rm -v $(realpath DejaVu):/workspace lizytalk/dejavu bash",
+      "evidence": "docker run -it --rm -v $(realpath DejaVu):/workspace lizytalk/dejavu bash",
+      "evidence_location": "30",
+      "confidence": "high",
+      "reason": "Command used to spin up the container environment for running experiments."
+    },
+    {
+      "field": "execution_command_dejavu",
+      "value": "python exp/run_GAT_node_classification.py -H=4 -L=8 -fe=GRU -bal=True --data_dir=data/A1",
+      "normalized_value": "python exp/run_GAT_node_classification.py -H=4 -L=8 -fe=GRU -bal=True --data_dir=data/A1",
+      "evidence": "python exp/run_GAT_node_classification.py -H=4 -L=8 -fe=GRU -bal=True --data_dir=data/A1",
+      "evidence_location": "39",
+      "confidence": "high",
+      "reason": "Specific command to execute the main DejaVu algorithm on dataset A1."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "A@1, A@2, A@3, A@5, MAR",
+      "normalized_value": "A@1, A@2, A@3, A@5, MAR",
+      "evidence": "`A@1`, `A@2`, `A@3`, `A@5`, `MAR`",
+      "evidence_location": "48",
+      "confidence": "high",
+      "reason": "Identifies the evaluation metric names output by the experiment scripts."
+    },
+    {
+      "field": "dataset_download_url",
+      "value": "https://www.dropbox.com/sh/ist4ojr03e2oeuw/AAD5NkpAFg1nOI2Ttug3h2qja?dl=0",
+      "normalized_value": "https://www.dropbox.com/sh/ist4ojr03e2oeuw/AAD5NkpAFg1nOI2Ttug3h2qja?dl=0",
+      "evidence": "https://www.dropbox.com/sh/ist4ojr03e2oeuw/AAD5NkpAFg1nOI2Ttug3h2qja?dl=0",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Provides access link for downloading public datasets A, B, C, D."
+    },
+    {
+      "field": "dataset_doi",
+      "value": "https://doi.org/10.5281/zenodo.6955909",
+      "normalized_value": "https://doi.org/10.5281/zenodo.6955909",
+      "evidence": "https://doi.org/10.5281/zenodo.6955909",
+      "evidence_location": "65",
+      "confidence": "high",
+      "reason": "DOI link pointing to the Zenodo repository containing the raw Train-Ticket dataset."
+    },
+    {
+      "field": "deployment_scripts_repository",
+      "value": "https://github.com/lizeyan/train-ticket",
+      "normalized_value": "https://github.com/lizeyan/train-ticket",
+      "evidence": "https://github.com/lizeyan/train-ticket",
+      "evidence_location": "71",
+      "confidence": "high",
+      "reason": "Points to the external repository containing deployment and failure injection scripts for Train-Ticket."
+    },
+    {
+      "field": "paper_title",
+      "value": "Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems",
+      "normalized_value": "Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems",
+      "evidence": "title = {Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems},",
+      "evidence_location": "76",
+      "confidence": "high",
+      "reason": "Title of the scientific paper associated with this artifact."
+    },
+    {
+      "field": "publication_venue",
+      "value": "Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}",
+      "normalized_value": "Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}",
+      "evidence": "booktitle = {Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}},",
+      "evidence_location": "77",
+      "confidence": "high",
+      "reason": "Conference proceedings where the scientific paper was published."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{li2022actionable,\n  title = {Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems},\n  booktitle = {Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}},\n  author = {Li, Zeyan and Zhao, Nengwen and Li, Mingjie and Lu, Xianglin and Wang, Lixin and Chang, Dongdong and Nie, Xiaohui and Cao, Li and Zhang, Wenchi and Sui, Kaixin and Wang, Yanhua and Du, Xu and Duan, Guoqing and Pei, Dan},\n  year = {2022},\n  month = nov,\n  series = {{{ESEC}}/{{FSE}} 2022}\n}",
+      "normalized_value": "@inproceedings{li2022actionable, title = {Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems}, booktitle = {Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}}, author = {Li, Zeyan and Zhao, Nengwen and Li, Mingjie and Lu, Xianglin and Wang, Lixin and Chang, Dongdong and Nie, Xiaohui and Cao, Li and Zhang, Wenchi and Sui, Kaixin and Wang, Yanhua and Du, Xu and Duan, Guoqing and Pei, Dan}, year = {2022}, month = nov, series = {{{ESEC}}/{{FSE}} 2022} }",
+      "evidence": "@inproceedings{li2022actionable,\n  title = {Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems},\n  booktitle = {Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}},\n  author = {Li, Zeyan and Zhao, Nengwen and Li, Mingjie and Lu, Xianglin and Wang, Lixin and Chang, Dongdong and Nie, Xiaohui and Cao, Li and Zhang, Wenchi and Sui, Kaixin and Wang, Yanhua and Du, Xu and Duan, Guoqing and Pei, Dan},\n  year = {2022},\n  month = nov,\n  series = {{{ESEC}}/{{FSE}} 2022}\n}",
+      "evidence_location": "75-82",
+      "confidence": "high",
+      "reason": "Complete BibTeX entry for citing the paper associated with the artifact."
+    }
+  ]
+}

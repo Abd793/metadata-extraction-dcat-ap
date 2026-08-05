@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "AltEntities (Alternative Entities) dataset",
+      "normalized_value": "AltEntities (Alternative Entities) dataset",
+      "evidence": "AltEntities (Alternative Entities) dataset",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Identifies the artifact by name for search and reference."
+    },
+    {
+      "field": "purpose",
+      "value": "Resolving Indirect Referring Expressions for Entity Selection",
+      "normalized_value": "Resolving Indirect Referring Expressions for Entity Selection",
+      "evidence": "Resolving Indirect Referring Expressions for Entity Selection",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Describes the primary goal of the artifact for understanding its use case."
+    },
+    {
+      "field": "authors",
+      "value": "Mohammad Javad Hosseini, Filip Radlinski, Silvia Pareti, and Annie Louis",
+      "normalized_value": "Mohammad Javad Hosseini, Filip Radlinski, Silvia Pareti, and Annie Louis",
+      "evidence": "Mohammad Javad Hosseini, Filip Radlinski, Silvia Pareti, and Annie Louis",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Credits the creators for attribution and citation purposes."
+    },
+    {
+      "field": "affiliation",
+      "value": "Google LLC",
+      "normalized_value": "Google LLC",
+      "evidence": "Google LLC",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Indicates the organization behind the artifact for context and credibility."
+    },
+    {
+      "field": "license",
+      "value": "CC-BY SA 3.0 License",
+      "normalized_value": "CC-BY SA 3.0 License",
+      "evidence": "CC-BY SA 3.0 License",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Specifies the terms of use for legal reuse and distribution."
+    },
+    {
+      "field": "license_url",
+      "value": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "normalized_value": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "evidence": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Provides direct access to the license details for verification."
+    },
+    {
+      "field": "dataset_size",
+      "value": "6,247 alternative questions in three domains--books, songs (music), and recipes--and 42,529 referring expressions",
+      "normalized_value": "6,247 alternative questions in three domains--books, songs (music), and recipes--and 42,529 referring expressions",
+      "evidence": "6,247 alternative questions in three domains--books, songs (music), and recipes--and 42,529 referring expressions",
+      "evidence_location": "line 15",
+      "confidence": "high",
+      "reason": "Quantifies the scale of the dataset for assessment and planning."
+    },
+    {
+      "field": "domains",
+      "value": "books, songs (music), and recipes",
+      "normalized_value": "books, songs (music), and recipes",
+      "evidence": "books, songs (music), and recipes",
+      "evidence_location": "line 15",
+      "confidence": "high",
+      "reason": "Indicates the subject areas covered by the dataset for relevance checking."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2212.10933",
+      "normalized_value": "https://arxiv.org/abs/2212.10933",
+      "evidence": "https://arxiv.org/abs/2212.10933",
+      "evidence_location": "line 17",
+      "confidence": "high",
+      "reason": "Links to the associated research paper for scientific context and details."
+    },
+    {
+      "field": "data_description_file",
+      "value": "Data-Description.pdf",
+      "normalized_value": "Data-Description.pdf",
+      "evidence": "Data-Description.pdf",
+      "evidence_location": "line 19",
+      "confidence": "high",
+      "reason": "Provides additional documentation about the data for deeper understanding."
+    },
+    {
+      "field": "data_format",
+      "value": "json format",
+      "normalized_value": "json format",
+      "evidence": "json format",
+      "evidence_location": "line 23",
+      "confidence": "high",
+      "reason": "Specifies the file format for data access and processing."
+    },
+    {
+      "field": "data_splits",
+      "value": "The *data* directory contains the full set of examples (*all.json*). For each domain (*books*, *recipes*, and *songs*), a subdirectory contains all its examples which are split into *train.json*, *dev.json*, and *test.json*. In addition, the mixed subdirectory contains the mix of examples in the three domains.",
+      "normalized_value": "The *data* directory contains the full set of examples (*all.json*). For each domain (*books*, *recipes*, and *songs*), a subdirectory contains all its examples which are split into *train.json*, *dev.json*, and *test.json*. In addition, the mixed subdirectory contains the mix of examples in the three domains.",
+      "evidence": "The *data* directory contains the full set of examples (*all.json*). For each domain (*books*, *recipes*, and *songs*), a subdirectory contains all its examples which are split into *train.json*, *dev.json*, and *test.json*. In addition, the mixed subdirectory contains the mix of examples in the three domains.",
+      "evidence_location": "line 39",
+      "confidence": "high",
+      "reason": "Describes how the data is organized into splits for machine learning workflows."
+    },
+    {
+      "field": "data_schema",
+      "value": "* domain: The domain of the example: “BOOKS”, “RECIPES”, or “SONGS”.\n* question: An alternative question providing two choices.\n* target: The URL of the target entity.\n* target_index: The index (position) of the target entity in the question (0 or 1).\n* sampling_method: The sampling method used to sample the entities in the question (e.g., SAME_NAME, SIMILAR_NAME, or SIMILAR_DESCRIPTION).\n* description_section: The title of the Wikipedia section shown to crowd workers. If empty, indicates the first section. This does not apply to the \"SONGS\" domain.\n* choices: Information about the two choices. See below fields for more information.\n* choice/name: The name of the choice.\n* choice/wikipedia_url: The Wikipedia URL of the choice.\n* choice/description: The choice description shown to crowd workers.\n* choice/infobox: Textual representation of the choice’s Wikipedia infobox.\n* choice/unshown_background: The choice/infobox above concatenated with Wikipedia sections that were *not* shown to crowd workers.\n* expressions: Referring expressions written by crowd workers to select the target entity.",
+      "normalized_value": "* domain: The domain of the example: “BOOKS”, “RECIPES”, or “SONGS”. * question: An alternative question providing two choices. * target: The URL of the target entity. * target_index: The index (position) of the target entity in the question (0 or 1). * sampling_method: The sampling method used to sample the entities in the question (e.g., SAME_NAME, SIMILAR_NAME, or SIMILAR_DESCRIPTION). * description_section: The title of the Wikipedia section shown to crowd workers. If empty, indicates the first section. This does not apply to the \"SONGS\" domain. * choices: Information about the two choices. See below fields for more information. * choice/name: The name of the choice. * choice/wikipedia_url: The Wikipedia URL of the choice. * choice/description: The choice description shown to crowd workers. * choice/infobox: Textual representation of the choice’s Wikipedia infobox. * choice/unshown_background: The choice/infobox above concatenated with Wikipedia sections that were *not* shown to crowd workers. * expressions: Referring expressions written by crowd workers to select the target entity.",
+      "evidence": "* domain: The domain of the example: “BOOKS”, “RECIPES”, or “SONGS”.\n* question: An alternative question providing two choices.\n* target: The URL of the target entity.\n* target_index: The index (position) of the target entity in the question (0 or 1).\n* sampling_method: The sampling method used to sample the entities in the question (e.g., SAME_NAME, SIMILAR_NAME, or SIMILAR_DESCRIPTION).\n* description_section: The title of the Wikipedia section shown to crowd workers. If empty, indicates the first section. This does not apply to the \"SONGS\" domain.\n* choices: Information about the two choices. See below fields for more information.\n* choice/name: The name of the choice.\n* choice/wikipedia_url: The Wikipedia URL of the choice.\n* choice/description: The choice description shown to crowd workers.\n* choice/infobox: Textual representation of the choice’s Wikipedia infobox.\n* choice/unshown_background: The choice/infobox above concatenated with Wikipedia sections that were *not* shown to crowd workers.\n* expressions: Referring expressions written by crowd workers to select the target entity.",
+      "evidence_location": "lines 25-37",
+      "confidence": "high",
+      "reason": "Describes the structure of each data example for proper usage and interpretation."
+    },
+    {
+      "field": "citation",
+      "value": "```\n@article{hosseini2022resolving,\n  title={Resolving Indirect Referring Expressions for Entity Selection},\n  author={Hosseini, Mohammad Javad and Radlinski, Filip and Pareti, Silvia and Louis, Annie},\n  journal={arXiv preprint arXiv:2212.10933},\n  year={2022}\n}\n```",
+      "normalized_value": "``` @article{hosseini2022resolving, title={Resolving Indirect Referring Expressions for Entity Selection}, author={Hosseini, Mohammad Javad and Radlinski, Filip and Pareti, Silvia and Louis, Annie}, journal={arXiv preprint arXiv:2212.10933}, year={2022} } ```",
+      "evidence": "```\n@article{hosseini2022resolving,\n  title={Resolving Indirect Referring Expressions for Entity Selection},\n  author={Hosseini, Mohammad Javad and Radlinski, Filip and Pareti, Silvia and Louis, Annie},\n  journal={arXiv preprint arXiv:2212.10933},\n  year={2022}\n}\n```",
+      "evidence_location": "lines 44-51",
+      "confidence": "high",
+      "reason": "Provides the formal citation for academic use and attribution."
+    }
+  ]
+}

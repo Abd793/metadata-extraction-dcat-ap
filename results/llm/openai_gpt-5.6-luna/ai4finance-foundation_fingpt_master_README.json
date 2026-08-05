@@ -1,0 +1,146 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "FinGPT",
+      "normalized_value": "FinGPT",
+      "evidence": "# FinGPT: Open-Source Financial Large Language Models",
+      "evidence_location": "5, title",
+      "confidence": "high",
+      "reason": "Identifies the artifact by name."
+    },
+    {
+      "field": "artifact_purpose",
+      "value": "Open-Source Financial Large Language Models",
+      "normalized_value": "Open-Source Financial Large Language Models",
+      "evidence": "# FinGPT: Open-Source Financial Large Language Models",
+      "evidence_location": "5, title",
+      "confidence": "high",
+      "reason": "States the artifact's primary focus and purpose."
+    },
+    {
+      "field": "blueprint_paper",
+      "value": "https://arxiv.org/abs/2306.06031",
+      "normalized_value": "https://arxiv.org/abs/2306.06031",
+      "evidence": "[Blueprint of FinGPT](https://arxiv.org/abs/2306.06031)",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Provides the linked blueprint paper for the artifact."
+    },
+    {
+      "field": "model_hub",
+      "value": "https://huggingface.co/FinGPT",
+      "normalized_value": "https://huggingface.co/FinGPT",
+      "evidence": "<https://huggingface.co/FinGPT>",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Provides access to the FinGPT models on Hugging Face."
+    },
+    {
+      "field": "featured_demo",
+      "value": "https://huggingface.co/spaces/FinGPT/FinGPT-Forecaster",
+      "normalized_value": "https://huggingface.co/spaces/FinGPT/FinGPT-Forecaster",
+      "evidence": "Try the latest released FinGPT-Forecaster demo at our [HuggingFace Space](https://huggingface.co/spaces/FinGPT/FinGPT-Forecaster)",
+      "evidence_location": "51-53, Milestone of AI Robo-Advisor: FinGPT-Forecaster",
+      "confidence": "high",
+      "reason": "Links to an interactive demo for the released forecaster."
+    },
+    {
+      "field": "forecaster_dataset",
+      "value": "https://huggingface.co/datasets/FinGPT/fingpt-forecaster-dow30-202305-202405",
+      "normalized_value": "https://huggingface.co/datasets/FinGPT/fingpt-forecaster-dow30-202305-202405",
+      "evidence": "The dataset for FinGPT-Forecaster: https://huggingface.co/datasets/FinGPT/fingpt-forecaster-dow30-202305-202405",
+      "evidence_location": "55, Milestone of AI Robo-Advisor: FinGPT-Forecaster",
+      "confidence": "high",
+      "reason": "Identifies the dataset used for the forecaster."
+    },
+    {
+      "field": "forecaster_inputs",
+      "value": "1) ticker symbol (e.g. AAPL, MSFT, NVDA)\n2) the day from which you want the prediction to happen (yyyy-mm-dd)\n3) the number of past weeks where market news are retrieved\n4) whether to add the latest basic financials as additional information",
+      "normalized_value": "1) ticker symbol (e.g. AAPL, MSFT, NVDA) 2) the day from which you want the prediction to happen (yyyy-mm-dd) 3) the number of past weeks where market news are retrieved 4) whether to add the latest basic financials as additional information",
+      "evidence": "1) ticker symbol (e.g. AAPL, MSFT, NVDA)\n2) the day from which you want the prediction to happen (yyyy-mm-dd)\n3) the number of past weeks where market news are retrieved\n4) whether to add the latest basic financials as additional information",
+      "evidence_location": "59-64, Milestone of AI Robo-Advisor: FinGPT-Forecaster",
+      "confidence": "high",
+      "reason": "Documents the required inputs for reproducing or using the forecaster demo."
+    },
+    {
+      "field": "fine_tuning_method",
+      "value": "LoRA",
+      "normalized_value": "LoRA",
+      "evidence": "79:   * [FinGPT v3](https://huggingface.co/FinGPT/fingpt-sentiment_llama2-13b_lora) series are LLMs finetuned with the LoRA method on the News and Tweets sentiment analysis dataset which achieve the best scores on most of the financial sentiment analysis datasets with low cost.",
+      "evidence_location": "79, Current State-of-the-arts for Financial Sentiment Analysis",
+      "confidence": "high",
+      "reason": "Specifies the fine-tuning technique used for the FinGPT v3 series."
+    },
+    {
+      "field": "supported_tasks",
+      "value": "Financial Sentiment Analysis\nFinancial Relation Extraction\nFinancial Headline Classification\nFinancial Named Entity Recognition",
+      "normalized_value": "Financial Sentiment Analysis Financial Relation Extraction Financial Headline Classification Financial Named Entity Recognition",
+      "evidence": "  demo_tasks = [\n      'Financial Sentiment Analysis',\n      'Financial Relation Extraction',\n      'Financial Headline Classification',\n      'Financial Named Entity Recognition',]",
+      "evidence_location": "120-126, Instruction Tuning Datasets and Models",
+      "confidence": "high",
+      "reason": "Lists concrete financial NLP tasks supported by the multi-task models."
+    },
+    {
+      "field": "instruction_tuning_datasets",
+      "value": "| [fingpt-sentiment-train](https://huggingface.co/datasets/FinGPT/fingpt-sentiment-train) | 76.8K | N/A|Sentiment Analysis Training Instructions |\n   | [fingpt-finred](https://huggingface.co/datasets/FinGPT/fingpt-finred)| 27.6k | 5.11k | Financial Relation Extraction Instructions |\n   | [fingpt-headline](https://huggingface.co/datasets/FinGPT/fingpt-headline) | 82.2k | 20.5k | Financial Headline Analysis Instructions|\n   | [fingpt-ner](https://huggingface.co/datasets/FinGPT/fingpt-ner) | 511   | 98  | Financial Named-Entity Recognition Instructions|\n   | [fingpt-fiqa_qa](https://huggingface.co/datasets/FinGPT/fingpt-fiqa_qa) | 17.1k   | N/A  | Financial Q&A Instructions|\n   | [fingpt-fineval](https://huggingface.co/datasets/FinGPT/fingpt-fineval) | 1.06k   | 265  | Chinese Multiple-Choice Questions Instructions|",
+      "normalized_value": "| [fingpt-sentiment-train](https://huggingface.co/datasets/FinGPT/fingpt-sentiment-train) | 76.8K | N/A|Sentiment Analysis Training Instructions | | [fingpt-finred](https://huggingface.co/datasets/FinGPT/fingpt-finred)| 27.6k | 5.11k | Financial Relation Extraction Instructions | | [fingpt-headline](https://huggingface.co/datasets/FinGPT/fingpt-headline) | 82.2k | 20.5k | Financial Headline Analysis Instructions| | [fingpt-ner](https://huggingface.co/datasets/FinGPT/fingpt-ner) | 511 | 98 | Financial Named-Entity Recognition Instructions| | [fingpt-fiqa_qa](https://huggingface.co/datasets/FinGPT/fingpt-fiqa_qa) | 17.1k | N/A | Financial Q&A Instructions| | [fingpt-fineval](https://huggingface.co/datasets/FinGPT/fingpt-fineval) | 1.06k | 265 | Chinese Multiple-Choice Questions Instructions|",
+      "evidence_location": "111-118, Instruction Tuning Datasets and Models",
+      "confidence": "high",
+      "reason": "Provides reusable dataset links, sizes, and task descriptions."
+    },
+    {
+      "field": "available_models",
+      "value": "[fingpt-mt_llama2-7b_lora](https://huggingface.co/FinGPT/fingpt-mt_llama2-7b_lora)| Fine-tuned Llama2-7b model with LoRA | Multi-Task |\n   | [fingpt-mt_falcon-7b_lora](https://huggingface.co/FinGPT/fingpt-mt_falcon-7b_lora) | Fine-tuned falcon-7b model with LoRA  | Multi-Task |\n   | [fingpt-mt_bloom-7b1_lora](https://huggingface.co/FinGPT/fingpt-mt_bloom-7b1_lora) | Fine-tuned bloom-7b1 model with LoRA | Multi-Task |\n   | [fingpt-mt_mpt-7b_lora](https://huggingface.co/FinGPT/fingpt-mt_mpt-7b_lora) | Fine-tuned mpt-7b model with LoRA | Multi-Task |\n   | [fingpt-mt_chatglm2-6b_lora](https://huggingface.co/FinGPT/fingpt-mt_chatglm2-6b_lora) | Fine-tuned chatglm-6b model with LoRA | Multi-Task |\n   | [fingpt-mt_qwen-7b_lora](https://huggingface.co/FinGPT/fingpt-mt_qwen-7b_lora) | Fine-tuned qwen-7b model with LoRA | Multi-Task |\n   | [fingpt-sentiment_llama2-13b_lora](https://huggingface.co/FinGPT/fingpt-sentiment_llama2-13b_lora) | Fine-tuned llama2-13b model with LoRA | Single-Task |\n   | [fingpt-forecaster_dow30_llama2-7b_lora](https://huggingface.co/FinGPT/fingpt-forecaster_dow30_llama2-7b_lora) | Fine-tuned llama2-7b model with LoRA | Single-Task |",
+      "normalized_value": "[fingpt-mt_llama2-7b_lora](https://huggingface.co/FinGPT/fingpt-mt_llama2-7b_lora)| Fine-tuned Llama2-7b model with LoRA | Multi-Task | | [fingpt-mt_falcon-7b_lora](https://huggingface.co/FinGPT/fingpt-mt_falcon-7b_lora) | Fine-tuned falcon-7b model with LoRA | Multi-Task | | [fingpt-mt_bloom-7b1_lora](https://huggingface.co/FinGPT/fingpt-mt_bloom-7b1_lora) | Fine-tuned bloom-7b1 model with LoRA | Multi-Task | | [fingpt-mt_mpt-7b_lora](https://huggingface.co/FinGPT/fingpt-mt_mpt-7b_lora) | Fine-tuned mpt-7b model with LoRA | Multi-Task | | [fingpt-mt_chatglm2-6b_lora](https://huggingface.co/FinGPT/fingpt-mt_chatglm2-6b_lora) | Fine-tuned chatglm-6b model with LoRA | Multi-Task | | [fingpt-mt_qwen-7b_lora](https://huggingface.co/FinGPT/fingpt-mt_qwen-7b_lora) | Fine-tuned qwen-7b model with LoRA | Multi-Task | | [fingpt-sentiment_llama2-13b_lora](https://huggingface.co/FinGPT/fingpt-sentiment_llama2-13b_lora) | Fine-tuned llama2-13b model with LoRA | Single-Task | | [fingpt-forecaster_dow30_llama2-7b_lora](https://huggingface.co/FinGPT/fingpt-forecaster_dow30-llama2-7b_lora) | Fine-tuned llama2-7b model with LoRA | Single-Task |",
+      "evidence_location": "139-148, Instruction Tuning Datasets and Models",
+      "confidence": "high",
+      "reason": "Enumerates downloadable model variants and their task scope."
+    },
+    {
+      "field": "benchmark_result",
+      "value": "FinGPT v3.3: 0.882 FPB, 0.874 FiQA-SA, 0.903 TFNS, 0.643 NWGI; 1 × RTX 3090; 17.25 hours; $17.25",
+      "normalized_value": "FinGPT v3.3: 0.882 FPB, 0.874 FiQA-SA, 0.903 TFNS, 0.643 NWGI; 1 × RTX 3090; 17.25 hours; $17.25",
+      "evidence": "    | [FinGPT v3.3](https://huggingface.co/FinGPT/fingpt-sentiment_llama2-13b_lora)| **0.882** |   0.874   | **0.903** | **0.643** |    1 × RTX 3090    | 17.25 hours |     $17.25     |",
+      "evidence_location": "87, Current State-of-the-arts for Financial Sentiment Analysis",
+      "confidence": "high",
+      "reason": "Provides concrete evaluation scores, hardware, runtime, and cost for a named model."
+    },
+    {
+      "field": "reproduction_resources",
+      "value": "Reproduce the results by running [benchmarks](./fingpt/FinGPT_Sentiment_Analysis_v3/benchmark/benchmarks.ipynb), and the detailed tutorial is on the way.\n   * Finetune your own FinGPT v3 model with the LoRA method on only an RTX 3090 with this [notebook](./fingpt/FinGPT_Sentiment_Analysis_v3/training_8bit/train_Llama2_13B.ipynb) in 8bit or this [notebook](./fingpt/FinGPT_Sentiment_Analysis_v3/training_int4/train.ipynb) in int4 (QLoRA)",
+      "normalized_value": "Reproduce the results by running [benchmarks](./fingpt/FinGPT_Sentiment_Analysis_v3/benchmark/benchmarks.ipynb), and the detailed tutorial is on the way. * Finetune your own FinGPT v3 model with the LoRA method on only an RTX 3090 with this [notebook](./fingpt/FinGPT_Sentiment_Analysis_v3/training_8bit/train_Llama2_13B.ipynb) in 8bit or this [notebook](./fingpt/FinGPT_Sentiment_Analysis_v3/training_int4/train.ipynb) in int4 (QLoRA)",
+      "evidence": "  * Reproduce the results by running [benchmarks](./fingpt/FinGPT_Sentiment_Analysis_v3/benchmark/benchmarks.ipynb), and the detailed tutorial is on the way.\n   * Finetune your own FinGPT v3 model with the LoRA method on only an RTX 3090 with this [notebook](./fingpt/FinGPT_Sentiment_Analysis_v3/training_8bit/train_Llama2_13B.ipynb) in 8bit or this [notebook](./fingpt/FinGPT_Sentiment_Analysis_v3/training_int4/train.ipynb) in int4 (QLoRA)",
+      "evidence_location": "100-101, Current State-of-the-arts for Financial Sentiment Analysis",
+      "confidence": "high",
+      "reason": "Links directly to benchmark and fine-tuning notebooks and specifies supported quantization modes."
+    },
+    {
+      "field": "citation",
+      "value": "@article{yang2023fingpt,\n  title={FinGPT: Open-Source Financial Large Language Models},\n  author={Yang, Hongyang and Liu, Xiao-Yang and Wang, Christina Dan},\n  journal={FinLLM Symposium at IJCAI 2023},\n  year={2023}\n}",
+      "normalized_value": "@article{yang2023fingpt, title={FinGPT: Open-Source Financial Large Language Models}, author={Yang, Hongyang and Liu, Xiao-Yang and Wang, Christina Dan}, journal={FinLLM Symposium at IJCAI 2023}, year={2023} }",
+      "evidence": "```\n@article{yang2023fingpt,\n  title={FinGPT: Open-Source Financial Large Language Models},\n  author={Yang, Hongyang and Liu, Xiao-Yang and Wang, Christina Dan},\n  journal={FinLLM Symposium at IJCAI 2023},\n  year={2023}\n}",
+      "evidence_location": "337-344, Citing FinGPT",
+      "confidence": "high",
+      "reason": "Supplies a ready-to-use citation for the artifact."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "## LICENSE\n\nMIT License",
+      "evidence_location": "379-381, LICENSE",
+      "confidence": "high",
+      "reason": "States the artifact's license for reuse and attribution."
+    },
+    {
+      "field": "usage_disclaimer",
+      "value": "We are sharing codes for academic purposes under the MIT education license. Nothing herein is financial advice, and NOT a recommendation to trade real money.",
+      "normalized_value": "We are sharing codes for academic purposes under the MIT education license. Nothing herein is financial advice, and NOT a recommendation to trade real money.",
+      "evidence": "**Disclaimer: We are sharing codes for academic purposes under the MIT education license. Nothing herein is financial advice, and NOT a recommendation to trade real money. Please use common sense and always first consult a professional before trading or investing.**",
+      "evidence_location": "383, LICENSE",
+      "confidence": "high",
+      "reason": "Defines important restrictions and safety context for reuse."
+    }
+  ]
+}

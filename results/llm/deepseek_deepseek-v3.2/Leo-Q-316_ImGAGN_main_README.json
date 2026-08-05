@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "ImGAGN: Imbalanced Networks Embedding via Generative Adversarial Graph Networks",
+      "normalized_value": "ImGAGN: Imbalanced Networks Embedding via Generative Adversarial Graph Networks",
+      "evidence": "# ImGAGN: Imbalanced Networks Embedding via Generative Adversarial Graph Networks",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Identifies the artifact name and title."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2106.02817",
+      "normalized_value": "https://arxiv.org/abs/2106.02817",
+      "evidence": "[paper](https://arxiv.org/abs/2106.02817)",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "URL to the associated research paper."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@misc{qu2021imgagnimbalanced,\n      title={ImGAGN:Imbalanced Network Embedding via Generative Adversarial Graph Networks}, \n      author={Liang Qu and Huaisheng Zhu and Ruiqi Zheng and Yuhui Shi and Hongzhi Yin},\n      year={2021},\n      eprint={2106.02817},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG}\n}",
+      "normalized_value": "@misc{qu2021imgagnimbalanced, title={ImGAGN:Imbalanced Network Embedding via Generative Adversarial Graph Networks}, author={Liang Qu and Huaisheng Zhu and Ruiqi Zheng and Yuhui Shi and Hongzhi Yin}, year={2021}, eprint={2106.02817}, archivePrefix={arXiv}, primaryClass={cs.LG} }",
+      "evidence": "```\n@misc{qu2021imgagnimbalanced,\n      title={ImGAGN:Imbalanced Network Embedding via Generative Adversarial Graph Networks}, \n      author={Liang Qu and Huaisheng Zhu and Ruiqi Zheng and Yuhui Shi and Hongzhi Yin},\n      year={2021},\n      eprint={2106.02817},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG}\n}\n```",
+      "evidence_location": "lines 71-79",
+      "confidence": "high",
+      "reason": "Citation in BibTeX format for academic reuse."
+    },
+    {
+      "field": "purpose",
+      "value": "address the imbalanced classification problem on graphs",
+      "normalized_value": "address the imbalanced classification problem on graphs",
+      "evidence": "This work presents a generative adversarial graph network model, called ImGAGN to address the imbalanced classification problem on graphs.",
+      "evidence_location": "line 10",
+      "confidence": "high",
+      "reason": "Describes the main purpose of the artifact."
+    },
+    {
+      "field": "implementation_framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "This is our Pytorch implementation for the [paper](https://arxiv.org/abs/2106.02817):",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Specifies the framework used for implementation."
+    },
+    {
+      "field": "requirements",
+      "value": "PyTorch >= 0.4, Python >= 3.6",
+      "normalized_value": "PyTorch >= 0.4, Python >= 3.6",
+      "evidence": "+ PyTorch >= 0.4\n+ Python >= 3.6",
+      "evidence_location": "lines 14-15",
+      "confidence": "high",
+      "reason": "Lists software dependencies for installation."
+    },
+    {
+      "field": "dataset_url_cora",
+      "value": "https://relational.fit.cvut.cz/dataset/CORA",
+      "normalized_value": "https://relational.fit.cvut.cz/dataset/CORA",
+      "evidence": "[Cora](https://relational.fit.cvut.cz/dataset/CORA)",
+      "evidence_location": "line 21",
+      "confidence": "high",
+      "reason": "Source URL for the Cora dataset."
+    },
+    {
+      "field": "dataset_url_citeseer",
+      "value": "https://linqs.soe.ucsc.edu/data",
+      "normalized_value": "https://linqs.soe.ucsc.edu/data",
+      "evidence": "[Citeseer](https://linqs.soe.ucsc.edu/data)",
+      "evidence_location": "line 21",
+      "confidence": "high",
+      "reason": "Source URL for the Citeseer dataset."
+    },
+    {
+      "field": "dataset_url_pubmed",
+      "value": "https://linqs.soe.ucsc.edu/data",
+      "normalized_value": "https://linqs.soe.ucsc.edu/data",
+      "evidence": "[Pubmed](https://linqs.soe.ucsc.edu/data)",
+      "evidence_location": "line 21",
+      "confidence": "high",
+      "reason": "Source URL for the Pubmed dataset."
+    },
+    {
+      "field": "dataset_url_dblp",
+      "value": "https://www.aminer.cn/citation#b541",
+      "normalized_value": "https://www.aminer.cn/citation#b541",
+      "evidence": "[DBLP](https://www.aminer.cn/citation#b541)",
+      "evidence_location": "line 21",
+      "confidence": "high",
+      "reason": "Source URL for the DBLP dataset."
+    },
+    {
+      "field": "run_command",
+      "value": "cd ImGAGN\npython train.py",
+      "normalized_value": "cd ImGAGN python train.py",
+      "evidence": "```\ncd ImGAGN\npython train.py\n```",
+      "evidence_location": "lines 64-66",
+      "confidence": "high",
+      "reason": "Commands to execute the training script."
+    },
+    {
+      "field": "dataset_preparation",
+      "value": "make a folder called dataset at root directory. make a folder called cora in dataset directory.",
+      "normalized_value": "make a folder called dataset at root directory. make a folder called cora in dataset directory.",
+      "evidence": "- make a folder called **dataset** at root directory.\n\n- make a folder called **cora** in **dataset** directory.",
+      "evidence_location": "lines 23-25",
+      "confidence": "high",
+      "reason": "Instructions for setting up the dataset directory structure."
+    },
+    {
+      "field": "dataset_files_cora",
+      "value": "**Cora** folder contains four files:\n\n  - \"edge.cora\": each line represents a edge between two nodes with the follwing format:\n\n    ```\n    1397 1470\n    1397 362\n    ... ...\n    ```\n\n  - \"feature.cora\": each line represents the features (e.g., one-hot feature) of nodes with the following format:\n\n    ```\n    0 0 0 0 1 0 0 0,...,0\n    0 1 0 1 0 0 0 0,...,0\n    ...\n    ```\n\n  - \"train.cora\": each line represents the node ID in training set with the following format:\n\n    ```\n    0\n    2\n    ...\n    ```\n\n  - \"test.cora\": each line represents the node ID in test set with the following format:\n\n    ```\n    2159\n    2160\n    ...\n    ```",
+      "normalized_value": "**Cora** folder contains four files: - \"edge.cora\": each line represents a edge between two nodes with the follwing format: ``` 1397 1470 1397 362 ... ... ``` - \"feature.cora\": each line represents the features (e.g., one-hot feature) of nodes with the following format: ``` 0 0 0 0 1 0 0 0,...,0 0 1 0 1 0 0 0 0,...,0 ... ``` - \"train.cora\": each line represents the node ID in training set with the following format: ``` 0 2 ... ``` - \"test.cora\": each line represents the node ID in test set with the following format: ``` 2159 2160 ... ```",
+      "evidence": "**Cora** folder contains four files:\n\n  - \"edge.cora\": each line represents a edge between two nodes with the follwing format:\n\n    ```\n    1397 1470\n    1397 362\n    ... ...\n    ```\n\n  - \"feature.cora\": each line represents the features (e.g., one-hot feature) of nodes with the following format:\n\n    ```\n    0 0 0 0 1 0 0 0,...,0\n    0 1 0 1 0 0 0 0,...,0\n    ...\n    ```\n\n  - \"train.cora\": each line represents the node ID in training set with the following format:\n\n    ```\n    0\n    2\n    ...\n    ```\n\n  - \"test.cora\": each line represents the node ID in test set with the following format:\n\n    ```\n    2159\n    2160\n    ...\n    ```",
+      "evidence_location": "lines 27-59",
+      "confidence": "high",
+      "reason": "Describes the file structure and formats for the Cora dataset."
+    },
+    {
+      "field": "project_directory",
+      "value": "ImGAGN",
+      "normalized_value": "ImGAGN",
+      "evidence": "cd ImGAGN",
+      "evidence_location": "line 64",
+      "confidence": "high",
+      "reason": "Specifies the directory name for the project, useful for navigation."
+    }
+  ]
+}

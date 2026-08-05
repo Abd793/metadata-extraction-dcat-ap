@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Ref-NMS",
+      "normalized_value": "Ref-NMS",
+      "evidence": "# Ref-NMS",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Identifies the artifact/codebase name."
+    },
+    {
+      "field": "description",
+      "value": "Official codebase for AAAI 2021 paper \"Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding\"",
+      "normalized_value": "Official codebase for AAAI 2021 paper \"Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding\"",
+      "evidence": "Official codebase for AAAI 2021 paper [\"Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding\"](https://arxiv.org/abs/2009.01449).",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "States the artifact's purpose and its associated publication."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2009.01449",
+      "normalized_value": "https://arxiv.org/abs/2009.01449",
+      "evidence": "[\"Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding\"](https://arxiv.org/abs/2009.01449)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Direct link to the associated arXiv paper."
+    },
+    {
+      "field": "publication_venue",
+      "value": "AAAI 2021",
+      "normalized_value": "AAAI 2021",
+      "evidence": "Official codebase for AAAI 2021 paper",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Names the conference and year of the associated paper."
+    },
+    {
+      "field": "task",
+      "value": "Two-Stage Referring Expression Grounding",
+      "normalized_value": "Two-Stage Referring Expression Grounding",
+      "evidence": "Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Identifies the scientific task addressed by the artifact."
+    },
+    {
+      "field": "dependencies",
+      "value": "python 3.7.6, pytorch 1.1.0, torchvision 0.3.0, tensorboard 2.1.0, spacy 2.2.3",
+      "normalized_value": "python 3.7.6, pytorch 1.1.0, torchvision 0.3.0, tensorboard 2.1.0, spacy 2.2.3",
+      "evidence": "- python 3.7.6\n- pytorch 1.1.0\n- torchvision 0.3.0\n- tensorboard 2.1.0\n- spacy 2.2.3",
+      "evidence_location": "lines 6-10, Prerequisites section",
+      "confidence": "high",
+      "reason": "Lists the core software dependencies with exact versions needed to run the code."
+    },
+    {
+      "field": "environment_file",
+      "value": "environment.yml",
+      "normalized_value": "environment.yml",
+      "evidence": "See [environment.yml](environment.yml) for complete environment settings.",
+      "evidence_location": "line 5, Prerequisites section",
+      "confidence": "high",
+      "reason": "Points to a file with complete environment settings for reproduction."
+    },
+    {
+      "field": "data_preparation_command",
+      "value": "sh scripts/prepare_data.sh",
+      "normalized_value": "sh scripts/prepare_data.sh",
+      "evidence": "Run following script to setup `cache` directory:\n```\nsh scripts/prepare_data.sh\n```",
+      "evidence_location": "lines 15-18, Data Preparation section",
+      "confidence": "high",
+      "reason": "Setup command that generates the cache files required for training/evaluation."
+    },
+    {
+      "field": "training_command_binary_xe_loss",
+      "value": "PYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc",
+      "normalized_value": "PYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc",
+      "evidence": "**Train with binary XE loss:**\n```\nPYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc\n```",
+      "evidence_location": "lines 27-30, Train section",
+      "confidence": "high",
+      "reason": "Command to train the model with binary cross-entropy loss."
+    },
+    {
+      "field": "training_command_ranking_loss",
+      "value": "PYTHONPATH=$PWD python tools/train_att_rank.py --dataset refcoco --split-by unc",
+      "normalized_value": "PYTHONPATH=$PWD python tools/train_att_rank.py --dataset refcoco --split-by unc",
+      "evidence": "**Train with ranking loss:**\n```\nPYTHONPATH=$PWD python tools/train_att_rank.py --dataset refcoco --split-by unc\n```",
+      "evidence_location": "lines 32-35, Train section",
+      "confidence": "high",
+      "reason": "Command to train the model with ranking loss."
+    },
+    {
+      "field": "training_monitoring",
+      "value": "tensorboard, logs in `tb` folder",
+      "normalized_value": "tensorboard, logs in `tb` folder",
+      "evidence": "We use tensorboard to monitor the training process. The log file can be found in `tb` folder.",
+      "evidence_location": "line 37, Train section",
+      "confidence": "high",
+      "reason": "Explains how to monitor training and where logs are stored."
+    },
+    {
+      "field": "proposal_saving_command",
+      "value": "PYTHONPATH=$PWD python tools/save_ref_nms_proposals.py --dataset refcoco --split-by unc --tid <tid> --m <loss_type>",
+      "normalized_value": "PYTHONPATH=$PWD python tools/save_ref_nms_proposals.py --dataset refcoco --split-by unc --tid <tid> --m <loss_type>",
+      "evidence": "**Save Ref-NMS proposals:**\n```\nPYTHONPATH=$PWD python tools/save_ref_nms_proposals.py --dataset refcoco --split-by unc --tid <tid> --m <loss_type>\n```",
+      "evidence_location": "lines 40-43, Evaluate Recall section",
+      "confidence": "high",
+      "reason": "Command to generate and save Ref-NMS proposals, a prerequisite for recall evaluation."
+    },
+    {
+      "field": "referent_recall_evaluation_command",
+      "value": "PYTHONPATH=$PWD python tools/eval_proposal_hit_rate.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>",
+      "normalized_value": "PYTHONPATH=$PWD python tools/eval_proposal_hit_rate.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>",
+      "evidence": "**Evaluate recall on referent object:**\n```\nPYTHONPATH=$PWD python tools/eval_proposal_hit_rate.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>\n```",
+      "evidence_location": "lines 46-49, Evaluate Recall section",
+      "confidence": "high",
+      "reason": "Command to evaluate recall on the referent object."
+    },
+    {
+      "field": "critical_objects_recall_evaluation_command",
+      "value": "PYTHONPATH=$PWD python tools/eval_proposal_ctx_recall.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>",
+      "normalized_value": "PYTHONPATH=$PWD python tools/eval_proposal_ctx_recall.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>",
+      "evidence": "**Evaluate recall on critical objects:**\n```\nPYTHONPATH=$PWD python tools/eval_proposal_ctx_recall.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>\n```",
+      "evidence_location": "lines 52-55, Evaluate Recall section",
+      "confidence": "high",
+      "reason": "Command to evaluate recall on critical objects."
+    },
+    {
+      "field": "conf_parameter_guidance",
+      "value": "score threshold used to filter Ref-NMS proposals; should be picked so that the recall of the referent is high while the number of proposals per expression is around 8-10",
+      "normalized_value": "score threshold used to filter Ref-NMS proposals; should be picked so that the recall of the referent is high while the number of proposals per expression is around 8-10",
+      "evidence": "`conf` parameter is the score threshold used to filter Ref-NMS proposals. It should be picked properly so that the recall of the referent is high while the number of proposals per expression is around 8-10.",
+      "evidence_location": "line 50, Evaluate Recall section",
+      "confidence": "high",
+      "reason": "Provides concrete guidance for choosing a key evaluation hyperparameter."
+    },
+    {
+      "field": "reg_evaluation_commands",
+      "value": "python tools/extract_mrcn_ref_feats.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>; python tools/eval_ref.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>; python tools/run_propose_to_mask.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>; python tools/eval_ref_masks.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type> --save",
+      "normalized_value": "python tools/extract_mrcn_ref_feats.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>; python tools/eval_ref.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>; python tools/run_propose_to_mask.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>; python tools/eval_ref_masks.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type> --save",
+      "evidence": "```\n# Evaluate REC performance\npython tools/extract_mrcn_ref_feats.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>\npython tools/eval_ref.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>\n# Evaluate RES performance\npython tools/run_propose_to_mask.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>\npython tools/eval_ref_masks.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type> --save\n```",
+      "evidence_location": "lines 67-74, Evaluate REG Performance section",
+      "confidence": "high",
+      "reason": "Commands for downstream REC and RES task evaluation."
+    },
+    {
+      "field": "downstream_evaluation_repositories",
+      "value": "MAttNet (https://github.com/ChopinSharp/MAttNet) and CM-A-E (https://github.com/ChopinSharp/CM-Erase-REG)",
+      "normalized_value": "MAttNet (https://github.com/ChopinSharp/MAttNet) and CM-A-E (https://github.com/ChopinSharp/CM-Erase-REG)",
+      "evidence": "We provide altered version of [MAttNet](https://github.com/ChopinSharp/MAttNet) and [CM-A-E](https://github.com/ChopinSharp/CM-Erase-REG) for downstream REG task evaluation.",
+      "evidence_location": "line 64, Evaluate REG Performance section",
+      "confidence": "high",
+      "reason": "Links to companion repositories required for downstream REG evaluation."
+    },
+    {
+      "field": "pretrained_models_url",
+      "value": "https://drive.google.com/drive/folders/1BPqWW0LrAEBFna7b-ORF2TcrY7K_DDvM?usp=sharing",
+      "normalized_value": "https://drive.google.com/drive/folders/1BPqWW0LrAEBFna7b-ORF2TcrY7K_DDvM?usp=sharing",
+      "evidence": "[[Google Drive]](https://drive.google.com/drive/folders/1BPqWW0LrAEBFna7b-ORF2TcrY7K_DDvM?usp=sharing)",
+      "evidence_location": "line 79, Pretrained Models section",
+      "confidence": "high",
+      "reason": "Download link for pre-trained model weights and detection files."
+    },
+    {
+      "field": "pretrained_models_mirror",
+      "value": "https://pan.baidu.com/s/1G4k7APKSUs-_5StXoYaNrA (extraction code: 5a9r)",
+      "normalized_value": "https://pan.baidu.com/s/1G4k7APKSUs-_5StXoYaNrA (extraction code: 5a9r)",
+      "evidence": "[[Baidu Disk]](https://pan.baidu.com/s/1G4k7APKSUs-_5StXoYaNrA) (extraction code: 5a9r)",
+      "evidence_location": "line 79, Pretrained Models section",
+      "confidence": "high",
+      "reason": "Mirror download link with extraction code for pre-trained weights."
+    },
+    {
+      "field": "dataset",
+      "value": "refcoco",
+      "normalized_value": "refcoco",
+      "evidence": "PYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc",
+      "evidence_location": "line 29, Train section",
+      "confidence": "high",
+      "reason": "Names the dataset used in the example training and evaluation commands."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{chen2021ref,\n  title={Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding},\n  author={Chen, Long and Ma, Wenbo and Xiao, Jun and Zhang, Hanwang and Chang, Shih-Fu},\n  booktitle={AAAI},\n  year={2021}\n}",
+      "normalized_value": "@inproceedings{chen2021ref, title={Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding}, author={Chen, Long and Ma, Wenbo and Xiao, Jun and Zhang, Hanwang and Chang, Shih-Fu}, booktitle={AAAI}, year={2021} }",
+      "evidence": "```\n@inproceedings{chen2021ref,\n  title={Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding},\n  author={Chen, Long and Ma, Wenbo and Xiao, Jun and Zhang, Hanwang and Chang, Shih-Fu},\n  booktitle={AAAI},\n  year={2021}\n}\n```",
+      "evidence_location": "lines 82-89, Citation section",
+      "confidence": "high",
+      "reason": "BibTeX entry for citing the associated paper."
+    }
+  ]
+}

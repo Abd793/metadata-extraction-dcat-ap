@@ -1,0 +1,301 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Accurate 3D Face Reconstruction with Weakly-Supervised Learning: From Single Image to Image Set",
+      "normalized_value": "Accurate 3D Face Reconstruction with Weakly-Supervised Learning: From Single Image to Image Set",
+      "evidence": "Accurate 3D Face Reconstruction with Weakly-Supervised Learning: From Single Image to Image Set",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Provides the name/title of the project, essential for identification."
+    },
+    {
+      "field": "paper_citation",
+      "value": "Y. Deng, J. Yang, S. Xu, D. Chen, Y. Jia, and X. Tong, [Accurate 3D Face Reconstruction with Weakly-Supervised Learning: From Single Image to Image Set](https://arxiv.org/abs/1903.08527), IEEE Computer Vision and Pattern Recognition Workshop (CVPRW) on Analysis and Modeling of Faces and Gestures (AMFG), 2019. (Best Paper Award!)",
+      "normalized_value": "Y. Deng, J. Yang, S. Xu, D. Chen, Y. Jia, and X. Tong, [Accurate 3D Face Reconstruction with Weakly-Supervised Learning: From Single Image to Image Set](https://arxiv.org/abs/1903.08527), IEEE Computer Vision and Pattern Recognition Workshop (CVPRW) on Analysis and Modeling of Faces and Gestures (AMFG), 2019. (Best Paper Award!)",
+      "evidence": "Y. Deng, J. Yang, S. Xu, D. Chen, Y. Jia, and X. Tong, [Accurate 3D Face Reconstruction with Weakly-Supervised Learning: From Single Image to Image Set](https://arxiv.org/abs/1903.08527), IEEE Computer Vision and Pattern Recognition Workshop (CVPRW) on Analysis and Modeling of Faces and Gestures (AMFG), 2019. (**_Best Paper Award!**_)",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Provides the scientific paper that this artifact implements, including authors, title, conference, and award, essential for attribution and understanding the research context."
+    },
+    {
+      "field": "repository_clone_url",
+      "value": "https://github.com/Microsoft/Deep3DFaceReconstruction",
+      "normalized_value": "https://github.com/Microsoft/Deep3DFaceReconstruction",
+      "evidence": "git clone https://github.com/Microsoft/Deep3DFaceReconstruction --recursive",
+      "evidence_location": "80",
+      "confidence": "high",
+      "reason": "Direct URL to clone the repository, essential for accessing the code."
+    },
+    {
+      "field": "implementation_language_framework",
+      "value": "tensorflow implementation",
+      "normalized_value": "tensorflow implementation",
+      "evidence": "This is a tensorflow implementation of the following paper:",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Specifies the framework used (TensorFlow) for the implementation, important for runtime environment."
+    },
+    {
+      "field": "method_description",
+      "value": "The method enforces a hybrid-level weakly-supervised training for CNN-based 3D face reconstruction. It is fast, accurate, and robust to pose and occlussions.",
+      "normalized_value": "The method enforces a hybrid-level weakly-supervised training for CNN-based 3D face reconstruction. It is fast, accurate, and robust to pose and occlussions.",
+      "evidence": "The method enforces a hybrid-level weakly-supervised training for CNN-based 3D face reconstruction. It is fast, accurate, and robust to pose and occlussions.",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Describes the core method and its advantages, helps understand the artifact's purpose and capabilities."
+    },
+    {
+      "field": "benchmark_results",
+      "value": "FaceWareHouse: 1.81±0.50, Florence: 1.67±0.50, BU3DFE: 1.40±0.31",
+      "normalized_value": "FaceWareHouse: 1.81±0.50, Florence: 1.67±0.50, BU3DFE: 1.40±0.31",
+      "evidence": "|Ours|**1.81±0.50**|**1.67±0.50**|**1.40±0.31**|",
+      "evidence_location": "32",
+      "confidence": "high",
+      "reason": "Quantitative performance results on specific benchmarks (FaceWarehouse, MICC Florence, BU-3DFE), essential for evaluating the method's accuracy."
+    },
+    {
+      "field": "benchmark_aflw_results",
+      "value": "[0°,30°]: 2.56, [30°,60°]: 3.11, [60°,90°]: 4.45, Overall: 3.37",
+      "normalized_value": "[0°,30°]: 2.56, [30°,60°]: 3.11, [60°,90°]: 4.45, Overall: 3.37",
+      "evidence": "|Ours|2.56|3.11|4.45|3.37|",
+      "evidence_location": "60",
+      "confidence": "high",
+      "reason": "Quantitative alignment performance (NME) on AFLW_2000 dataset, important for evaluating landmark estimation."
+    },
+    {
+      "field": "testing_requirements",
+      "value": "Reconstructions can be done on both Windows and Linux. However, we suggest running on Linux because the rendering process is only supported on Linux. Python 3.6 (numpy, scipy, pillow, argparse). Tensorflow 1.12. Basel Face Model 2009 (BFM09). Expression Basis (transferred from Facewarehouse by Guo et al.). tf mesh renderer.",
+      "normalized_value": "Reconstructions can be done on both Windows and Linux. However, we suggest running on Linux because the rendering process is only supported on Linux. Python 3.6 (numpy, scipy, pillow, argparse). Tensorflow 1.12. Basel Face Model 2009 (BFM09). Expression Basis (transferred from Facewarehouse by Guo et al.). tf mesh renderer.",
+      "evidence": "- Reconstructions can be done on both Windows and Linux. However, we suggest running on Linux because the rendering process is only supported on Linux.\n- Python 3.6 (numpy, scipy, pillow, argparse).\n- Tensorflow 1.12.\n- [Basel Face Model 2009 (BFM09)](https://faces.dmi.unibas.ch/bfm/main.php?nav=1-0&id=basel_face_model). \n- [Expression Basis (transferred from Facewarehouse by Guo et al.)](https://github.com/Juyong/3DFace). The original BFM09 model does not handle expression variations so extra expression basis are needed. \n- [tf mesh renderer](https://github.com/google/tf_mesh_renderer/tree/ba27ea1798f6ee8d03ddbc52f42ab4241f9328bb).  We use the library to render reconstruction images. **Note that the rendering tool can only be used on Linux.**",
+      "evidence_location": "70-76",
+      "confidence": "high",
+      "reason": "Lists the required operating systems, Python version, dependencies, and external assets needed for testing/reconstruction, critical for environment setup."
+    },
+    {
+      "field": "installation_commands",
+      "value": "git clone https://github.com/Microsoft/Deep3DFaceReconstruction --recursive\ncd Deep3DFaceReconstruction",
+      "normalized_value": "git clone https://github.com/Microsoft/Deep3DFaceReconstruction --recursive\ncd Deep3DFaceReconstruction",
+      "evidence": "git clone https://github.com/Microsoft/Deep3DFaceReconstruction --recursive\ncd Deep3DFaceReconstruction",
+      "evidence_location": "80-82",
+      "confidence": "high",
+      "reason": "Step-by-step command to clone the repository, essential for obtaining the code."
+    },
+    {
+      "field": "conda_environment_setup",
+      "value": "conda create -n deep3d python=3.6\nsource activate deep3d\nconda install tensorflow-gpu==1.12.0 scipy\npip install pillow argparse",
+      "normalized_value": "conda create -n deep3d python=3.6\nsource activate deep3d\nconda install tensorflow-gpu==1.12.0 scipy\npip install pillow argparse",
+      "evidence": "conda create -n deep3d python=3.6\nsource activate deep3d\nconda install tensorflow-gpu==1.12.0 scipy\npip install pillow argparse",
+      "evidence_location": "87-91",
+      "confidence": "high",
+      "reason": "Commands to create a Conda environment and install dependencies, necessary for reproduction."
+    },
+    {
+      "field": "pip_tensorflow_install",
+      "value": "pip install tensorflow-gpu==1.12.0",
+      "normalized_value": "pip install tensorflow-gpu==1.12.0",
+      "evidence": "pip install tensorflow-gpu==1.12.0",
+      "evidence_location": "95",
+      "confidence": "high",
+      "reason": "Alternative TensorFlow installation command, useful for environment setup."
+    },
+    {
+      "field": "tf_mesh_renderer_compilation_steps",
+      "value": "cd tf_mesh_renderer\ngit checkout ba27ea1798\ngit checkout master WORKSPACE\nbazel test ...\ncd ..",
+      "normalized_value": "cd tf_mesh_renderer\ngit checkout ba27ea1798\ngit checkout master WORKSPACE\nbazel test ...\ncd ..",
+      "evidence": "cd tf_mesh_renderer\ngit checkout ba27ea1798\ngit checkout master WORKSPACE\nbazel test ...\ncd ..",
+      "evidence_location": "104-108",
+      "confidence": "high",
+      "reason": "Commands to compile the required rendering library, needed for the Linux rendering component."
+    },
+    {
+      "field": "pre_trained_model_url",
+      "value": "https://drive.google.com/file/d/176LCdUDxAj7T2awQ5knPMPawq5Q2RUWM/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/176LCdUDxAj7T2awQ5knPMPawq5Q2RUWM/view?usp=sharing",
+      "evidence": "Download the pre-trained [reconstruction network](https://drive.google.com/file/d/176LCdUDxAj7T2awQ5knPMPawq5Q2RUWM/view?usp=sharing)",
+      "evidence_location": "131",
+      "confidence": "high",
+      "reason": "URL to download the pre-trained model, essential for running inference without training."
+    },
+    {
+      "field": "demo_command",
+      "value": "python demo.py",
+      "normalized_value": "python demo.py",
+      "evidence": "python demo.py",
+      "evidence_location": "136",
+      "confidence": "high",
+      "reason": "Command to run the demo/test inference, primary usage instruction."
+    },
+    {
+      "field": "output_file_description",
+      "value": "\"xxx.mat\" : cropped_img: an RGB image after alignment, which is the input to the R-Net; recon_img: an RGBA reconstruction image aligned with the input image (only on Linux).; coeff: output coefficients of R-Net.; face_shape: vertex positions of 3D face in the world coordinate.; face_texture: vertex texture of 3D face, which excludes lighting effect.; face_color: vertex color of 3D face, which takes lighting into consideration.; lm_68p: 68 2D facial landmarks derived from the reconstructed 3D face. The landmarks are aligned with cropped_img.; lm_5p: 5 detected landmarks aligned with cropped_img. \"xxx_mesh.obj\" : 3D face mesh in the world coordinate (best viewed in MeshLab).",
+      "normalized_value": "\"xxx.mat\" : cropped_img: an RGB image after alignment, which is the input to the R-Net; recon_img: an RGBA reconstruction image aligned with the input image (only on Linux).; coeff: output coefficients of R-Net.; face_shape: vertex positions of 3D face in the world coordinate.; face_texture: vertex texture of 3D face, which excludes lighting effect.; face_color: vertex color of 3D face, which takes lighting into consideration.; lm_68p: 68 2D facial landmarks derived from the reconstructed 3D face. The landmarks are aligned with cropped_img.; lm_5p: 5 detected landmarks aligned with cropped_img. \"xxx_mesh.obj\" : 3D face mesh in the world coordinate (best viewed in MeshLab).",
+      "evidence": "\t- \"xxx.mat\" : \n\t\t- cropped_img: an RGB image after alignment, which is the input to the R-Net\n\t\t- recon_img: an RGBA reconstruction image aligned with the input image (only on Linux).\n\t\t- coeff: output coefficients of R-Net.\n\t\t- face_shape: vertex positions of 3D face in the world coordinate.\n\t\t- face_texture: vertex texture of 3D face, which excludes lighting effect.\n\t\t- face_color: vertex color of 3D face, which takes lighting into consideration.\n\t\t- lm\\_68p: 68 2D facial landmarks derived from the reconstructed 3D face. The landmarks are aligned with cropped_img.\n\t\t- lm\\_5p: 5 detected landmarks aligned with cropped_img. \n\t- \"xxx_mesh.obj\" : 3D face mesh in the world coordinate (best viewed in MeshLab).",
+      "evidence_location": "140-149",
+      "confidence": "high",
+      "reason": "Describes the output files and their contents, important for understanding the artifact's outputs and using them."
+    },
+    {
+      "field": "training_requirements",
+      "value": "Training is only supported on Linux. Facenet (version 20170512-110547). Resnet50-v1 pre-trained on ImageNet from Tensorflow Slim (version resnet_v1_50_2016_08_28.tar.gz). 68-facial-landmark detector.",
+      "normalized_value": "Training is only supported on Linux. Facenet (version 20170512-110547). Resnet50-v1 pre-trained on ImageNet from Tensorflow Slim (version resnet_v1_50_2016_08_28.tar.gz). 68-facial-landmark detector.",
+      "evidence": "- Training is only supported on Linux. To train new model from scratch, more requirements are needed on top of the requirements listed in the testing stage.\n- [Facenet](https://github.com/davidsandberg/facenet) provided by \nSandberg et al. In our paper, we use a network to exrtact perceptual face features. This network model cannot be publicly released. As an alternative, we recommend using the Facenet from Sandberg et al. This repo uses the version [20170512-110547](https://github.com/davidsandberg/facenet/blob/529c3b0b5fc8da4e0f48d2818906120f2e5687e6/README.md) trained on MS-Celeb-1M. Training process has been tested with this model to ensure similar results.\n- [Resnet50-v1](https://github.com/tensorflow/models/blob/master/research/slim/README.md) pre-trained on ImageNet from Tensorflow Slim. We use the version resnet_v1_50_2016_08_28.tar.gz as an initialization of the face reconstruction network.\n- [68-facial-landmark detector](https://drive.google.com/file/d/1KYFeTb963jg0F47sTiwqDdhBIvRlUkPa/view?usp=sharing). We use 68 facial landmarks for loss calculation during training.",
+      "evidence_location": "153-158",
+      "confidence": "high",
+      "reason": "Lists additional external models and specific versions needed for training, critical for reproducing the training process."
+    },
+    {
+      "field": "data_preprocessing_command",
+      "value": "python preprocess_img.py",
+      "normalized_value": "python preprocess_img.py",
+      "evidence": "python preprocess_img.py",
+      "evidence_location": "171",
+      "confidence": "high",
+      "reason": "Command to pre-process images for training, essential step for data preparation."
+    },
+    {
+      "field": "training_command",
+      "value": "python train.py",
+      "normalized_value": "python train.py",
+      "evidence": "python train.py",
+      "evidence_location": "182",
+      "confidence": "high",
+      "reason": "Command to start training, primary instruction for model training."
+    },
+    {
+      "field": "training_command_with_custom_paths",
+      "value": "python train.py --data_path <custom_data_path> --val_data_path <custom_val_data_path> --model_name <custom_model_name>",
+      "normalized_value": "python train.py --data_path <custom_data_path> --val_data_path <custom_val_data_path> --model_name <custom_model_name>",
+      "evidence": "python train.py --data_path <custom_data_path> --val_data_path <custom_val_data_path> --model_name <custom_model_name>",
+      "evidence_location": "185",
+      "confidence": "high",
+      "reason": "Command to train with custom data, useful for custom training setups."
+    },
+    {
+      "field": "tensorboard_monitoring_command",
+      "value": "tensorboard --logdir=result/<custom_model_name> --port=10001",
+      "normalized_value": "tensorboard --logdir=result/<custom_model_name> --port=10001",
+      "evidence": "tensorboard --logdir=result/<custom_model_name> --port=10001",
+      "evidence_location": "190",
+      "confidence": "high",
+      "reason": "Command to monitor training via TensorBoard, helps with training visualization and debugging."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python demo.py --use_pb 0 --pretrain_weights <custom_weights>.ckpt",
+      "normalized_value": "python demo.py --use_pb 0 --pretrain_weights <custom_weights>.ckpt",
+      "evidence": "python demo.py --use_pb 0 --pretrain_weights <custom_weights>.ckpt",
+      "evidence_location": "194",
+      "confidence": "high",
+      "reason": "Command to evaluate a trained model, important for validating training results."
+    },
+    {
+      "field": "training_hardware_performance",
+      "value": "Training a model with a batchsize of 16 and 200K iterations takes 20 hours on a single Tesla M40 GPU.",
+      "normalized_value": "Training a model with a batchsize of 16 and 200K iterations takes 20 hours on a single Tesla M40 GPU.",
+      "evidence": "Training a model with a batchsize of 16 and 200K iterations takes 20 hours on a single Tesla M40 GPU.",
+      "evidence_location": "196",
+      "confidence": "high",
+      "reason": "Provides expected training time and hardware, useful for planning computational resources."
+    },
+    {
+      "field": "inference_hardware_performance",
+      "value": "over 50 fps (on GTX 1080) for reconstructions.",
+      "normalized_value": "over 50 fps (on GTX 1080) for reconstructions.",
+      "evidence": "ResNet-50 is used as backbone network to achieve over 50 fps (on GTX 1080) for reconstructions.",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Specifies inference speed and GPU model, useful for deployment expectations."
+    },
+    {
+      "field": "model_architecture",
+      "value": "ResNet-50",
+      "normalized_value": "ResNet-50",
+      "evidence": "ResNet-50 is used as backbone network",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Names the backbone network architecture, important for understanding the model design."
+    },
+    {
+      "field": "face_model",
+      "value": "Basel Face Model 2009 (BFM09)",
+      "normalized_value": "Basel Face Model 2009 (BFM09)",
+      "evidence": "Faces are represented with Basel Face Model 2009",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Specifies the underlying 3D face model used, essential for understanding the output format and method."
+    },
+    {
+      "field": "camera_model",
+      "value": "pinhole camera model",
+      "normalized_value": "pinhole camera model",
+      "evidence": "We assume a [pinhole camera model](https://en.wikipedia.org/wiki/Pinhole_camera_model) for face projection.",
+      "evidence_location": "213",
+      "confidence": "high",
+      "reason": "Describes the camera model used for projection, important for understanding the reconstruction geometry."
+    },
+    {
+      "field": "camera_parameters",
+      "value": "The camera is positioned at (0,0,10) (dm) in the world coordinate and points to the negative z axis. We set the camera fov to 12.6 empirically and fix it during training and inference time.",
+      "normalized_value": "The camera is positioned at (0,0,10) (dm) in the world coordinate and points to the negative z axis. We set the camera fov to 12.6 empirically and fix it during training and inference time.",
+      "evidence": "The camera is positioned at (0,0,10) (dm) in the world coordinate and points to the negative z axis. We set the camera fov to 12.6 empirically and fix it during training and inference time.",
+      "evidence_location": "213",
+      "confidence": "high",
+      "reason": "Provides specific camera parameters, necessary for reproducing the projection and understanding coordinate systems."
+    },
+    {
+      "field": "update_202004",
+      "value": "The face reconstruction process is totally transferred to tensorflow version while the old version uses numpy. We have also integrated the rendering process into the framework. As a result, reconstruction images aligned with the input can be easily obtained without extra efforts. The whole process is tensorflow-based which allows gradient back-propagation for other tasks.",
+      "normalized_value": "The face reconstruction process is totally transferred to tensorflow version while the old version uses numpy. We have also integrated the rendering process into the framework. As a result, reconstruction images aligned with the input can be easily obtained without extra efforts. The whole process is tensorflow-based which allows gradient back-propagation for other tasks.",
+      "evidence": "The face reconstruction process is totally transferred to tensorflow version while the old version uses numpy. We have also integrated the rendering process into the framework. As a result, reconstruction images aligned with the input can be easily obtained without extra efforts. The whole process is tensorflow-based which allows gradient back-propagation for other tasks.",
+      "evidence_location": "201",
+      "confidence": "high",
+      "reason": "Describes a major update to the codebase, important for users to understand the current implementation and its capabilities."
+    },
+    {
+      "field": "update_202006",
+      "value": "Upload a pre-trained model with white light assumption as described in the paper.",
+      "normalized_value": "Upload a pre-trained model with white light assumption as described in the paper.",
+      "evidence": "Upload a [pre-trained model](https://drive.google.com/file/d/1fPsvLKghlCK8rknb9GPiKwIq9HIqWWwV/view?usp=sharing) with white light assumption as described in the paper.",
+      "evidence_location": "203",
+      "confidence": "high",
+      "reason": "Indicates availability of another pre-trained model with different lighting assumption, useful for users."
+    },
+    {
+      "field": "update_202012",
+      "value": "Upload the training code for single image face reconstruction.",
+      "normalized_value": "Upload the training code for single image face reconstruction.",
+      "evidence": "Upload the training code for single image face reconstruction.",
+      "evidence_location": "206",
+      "confidence": "high",
+      "reason": "Announces availability of training code, important for users who want to train the model."
+    },
+    {
+      "field": "pytorch_implementation_note",
+      "value": "A [PyTorch implementation](https://github.com/sicxu/Deep3DFaceRecon_pytorch) which has much better performance and is much easier to use is available now. This repo will not be maintained in future.",
+      "normalized_value": "A [PyTorch implementation](https://github.com/sicxu/Deep3DFaceRecon_pytorch) which has much better performance and is much easier to use is available now. This repo will not be maintained in future.",
+      "evidence": "A [PyTorch implementation](https://github.com/sicxu/Deep3DFaceRecon_pytorch) which has much better performance and is much easier to use is available now. This repo will not be maintained in future.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Critical note about a newer, recommended implementation and the maintenance status of this repository."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{deng2019accurate, title={Accurate 3D Face Reconstruction with Weakly-Supervised Learning: From Single Image to Image Set}, author={Yu Deng and Jiaolong Yang and Sicheng Xu and Dong Chen and Yunde Jia and Xin Tong}, booktitle={IEEE Computer Vision and Pattern Recognition Workshops}, year={2019} }",
+      "normalized_value": "@inproceedings{deng2019accurate, title={Accurate 3D Face Reconstruction with Weakly-Supervised Learning: From Single Image to Image Set}, author={Yu Deng and Jiaolong Yang and Sicheng Xu and Dong Chen and Yunde Jia and Xin Tong}, booktitle={IEEE Computer Vision and Pattern Recognition Workshops}, year={2019} }",
+      "evidence": "\t@inproceedings{deng2019accurate,\n\t    title={Accurate 3D Face Reconstruction with Weakly-Supervised Learning: From Single Image to Image Set},\n\t    author={Yu Deng and Jiaolong Yang and Sicheng Xu and Dong Chen and Yunde Jia and Xin Tong},\n\t    booktitle={IEEE Computer Vision and Pattern Recognition Workshops},\n\t    year={2019}\n\t}",
+      "evidence_location": "231-236",
+      "confidence": "high",
+      "reason": "BibTeX citation for the paper, essential for academic attribution."
+    },
+    {
+      "field": "contact_email",
+      "value": "Yu Deng (dengyu2008@hotmail.com) and Jiaolong Yang (jiaoyan@microsoft.com).",
+      "normalized_value": "Yu Deng (dengyu2008@hotmail.com) and Jiaolong Yang (jiaoyan@microsoft.com).",
+      "evidence": "If you have any further questions, please contact Yu Deng (dengyu2008@hotmail.com) and Jiaolong Yang (jiaoyan@microsoft.com).",
+      "evidence_location": "224",
+      "confidence": "high",
+      "reason": "Provides contact information for the authors, useful for questions and collaboration."
+    }
+  ]
+}

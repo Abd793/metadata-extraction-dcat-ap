@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PatchPerPix for Instance Segmentation",
+      "normalized_value": "PatchPerPix for Instance Segmentation",
+      "evidence": "# PatchPerPix for Instance Segmentation",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Primary name of the artifact from the main header"
+    },
+    {
+      "field": "paper_title",
+      "value": "PatchPerPix for Instance Segmentation",
+      "normalized_value": "PatchPerPix for Instance Segmentation",
+      "evidence": "This repository is the official implementation of [PatchPerPix for Instance Segmentation](https://arxiv.org/abs/2001.07626).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly states the paper title that this implements"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2001.07626",
+      "normalized_value": "https://arxiv.org/abs/2001.07626",
+      "evidence": "This repository is the official implementation of [PatchPerPix for Instance Segmentation](https://arxiv.org/abs/2001.07626).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper"
+    },
+    {
+      "field": "authors",
+      "value": "Lisa Mais<sup>1</sup>, Peter Hirsch<sup>1</sup>, Dagmar Kainmueller",
+      "normalized_value": "Lisa Mais, Peter Hirsch, Dagmar Kainmueller",
+      "evidence": " **Lisa Mais<sup>1</sup>, Peter Hirsch<sup>1</sup>, Dagmar Kainmueller**, ECCV2020</br>",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Lists the authors of the work"
+    },
+    {
+      "field": "conference",
+      "value": "ECCV2020",
+      "normalized_value": "ECCV2020",
+      "evidence": " **Lisa Mais<sup>1</sup>, Peter Hirsch<sup>1</sup>, Dagmar Kainmueller**, ECCV2020</br>",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Identifies the conference where the work was presented"
+    },
+    {
+      "field": "implementation_language",
+      "value": "Python 3",
+      "normalized_value": "Python 3",
+      "evidence": "This package requires Python 3 and PyTorch.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Specifies the programming language requirement"
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "This package requires Python 3 and PyTorch.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Specifies the deep learning framework used"
+    },
+    {
+      "field": "previous_framework",
+      "value": "TensorFlow 1.x",
+      "normalized_value": "TensorFlow 1.x",
+      "evidence": "Previous versions (e.g., for the experiments published in our ECCV 2020 paper) require TensorFlow 1.x.",
+      "evidence_location": "17-18",
+      "confidence": "high",
+      "reason": "Documents framework used in previous versions for reproducibility"
+    },
+    {
+      "field": "installation_commands",
+      "value": "conda create --name ppp --yes\nconda activate ppp\nconda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes\ngit clone https://github.com/Kainmueller-Lab/PatchPerPix.git\ncd PatchPerPix\nPATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .",
+      "normalized_value": "conda create --name ppp --yes\nconda activate ppp\nconda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes\ngit clone https://github.com/Kainmueller-Lab/PatchPerPix.git\ncd PatchPerPix\nPATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .",
+      "evidence": "conda create --name ppp --yes\nconda activate ppp\nconda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes\ngit clone https://github.com/Kainmueller-Lab/PatchPerPix.git\ncd PatchPerPix\nPATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .",
+      "evidence_location": "25-32",
+      "confidence": "high",
+      "reason": "Complete installation commands for setting up the environment"
+    },
+    {
+      "field": "data_format",
+      "value": "zarr",
+      "normalized_value": "zarr",
+      "evidence": "The code expects the data to be in the *zarr* format ([https://zarr.readthedocs.io/en/stable/](https://zarr.readthedocs.io/en/stable/)).",
+      "evidence_location": "54",
+      "confidence": "high",
+      "reason": "Specifies the required data format for input data"
+    },
+    {
+      "field": "main_script",
+      "value": "run_ppp.py",
+      "normalized_value": "run_ppp.py",
+      "evidence": "The main script `run_ppp.py` (in the experiments folder) can be used to control all aspects of the experiments.",
+      "evidence_location": "60",
+      "confidence": "high",
+      "reason": "Identifies the main entry point for running experiments"
+    },
+    {
+      "field": "command_example",
+      "value": "python run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments",
+      "normalized_value": "python run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments",
+      "evidence": "python run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Example command showing how to run the full pipeline"
+    },
+    {
+      "field": "available_tasks",
+      "value": "all, infer, mknet, train, validate_checkpoints, validate, predict, decode, label, postprocess, evaluate",
+      "normalized_value": "all, infer, mknet, train, validate_checkpoints, validate, predict, decode, label, postprocess, evaluate",
+      "evidence": "| `all`                  | equal to `mknet train validate_checkpoints predict decode label postprocess evaluate`                  |\n| `infer`                | equal to `predict decode label evaluate`                                                               |\n| `mknet`                | creates a graph of the network (only for tensorflow 1)                                                 |\n| `train`                | executes the training of the network                                                                   |\n| `validate_checkpoints` | performs validation (over stored model checkpoints and a set of hyperparameters)                       |\n| `validate`             | performs validation (for a specific model checkpoint and over a set of hyperparameters)                |\n| `predict`              | executes the trained network in inference mode and computes predictions                                |\n| `decode`               | decodes predicted patch encodings to full patches (only if model was trained to output encodings)      |\n| `label`                | computes final instances based on predicted patches                                                    |\n| `postprocess`          | post-processes predictions and predicted instances (optional, mostly for manual inspection of results) |\n| `evaluate`             | compares predicted instances to ground truth instances and computes quantitative evaluation            |",
+      "evidence_location": "79-90",
+      "confidence": "high",
+      "reason": "Lists all available sub-tasks for running the pipeline"
+    },
+    {
+      "field": "benchmarks",
+      "value": "ISBI 2012 EM segmentation benchmark, BBBC010 C. elegans dataset, 2d fluorescence microscopy datasets of cell nuclei, 3d fluorescence microscopy datasets of cell nuclei, 3d light microscopy data of drosophila neurons",
+      "normalized_value": "ISBI 2012 EM segmentation benchmark, BBBC010 C. elegans dataset, 2d fluorescence microscopy datasets of cell nuclei, 3d fluorescence microscopy datasets of cell nuclei, 3d light microscopy data of drosophila neurons",
+      "evidence": "We evaluate our method on a diverse range of data domains, where it defines the new state of the art on four benchmarks, namely the ISBI 2012 EM segmentation benchmark, the BBBC010 C. elegans dataset, and 2d as well as 3d fluorescence microscopy datasets of cell nuclei. We show furthermore that our method also applies to 3d light microscopy data of drosophila neurons, which exhibit extreme cases of complex shape clusters.",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Lists the benchmarks used for evaluation"
+    },
+    {
+      "field": "license",
+      "value": "MIT license",
+      "normalized_value": "MIT license",
+      "evidence": "All contributions  are welcome! The content in this repository is licensed under the MIT license.",
+      "evidence_location": "188",
+      "confidence": "high",
+      "reason": "Specifies the license for reuse and distribution"
+    }
+  ]
+}

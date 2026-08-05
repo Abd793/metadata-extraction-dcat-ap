@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Swin Transformer for Semantic Segmentation of satellite images",
+      "normalized_value": "Swin Transformer for Semantic Segmentation of satellite images",
+      "evidence": "# Swin Transformer for Semantic Segmentation of satellite images",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Names the title and core topic of the repository artifact."
+    },
+    {
+      "field": "base_framework",
+      "value": "mmsegmentaion",
+      "normalized_value": "mmsegmentaion",
+      "evidence": "It is based on [mmsegmentaion](https://github.com/open-mmlab/mmsegmentation/tree/v0.11.0).",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Identifies the underlying software framework used to implement the codebase."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2110.05812",
+      "normalized_value": "https://arxiv.org/abs/2110.05812",
+      "evidence": "The full description of this work is [available on arXiv](https://arxiv.org/abs/2110.05812).",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Provides the direct arXiv publication URL describing this work."
+    },
+    {
+      "field": "project_page_url",
+      "value": "https://projet.liris.cnrs.fr/ampli/",
+      "normalized_value": "https://projet.liris.cnrs.fr/ampli/",
+      "evidence": "This repo was used as part of the [Ampli ANR projet](https://projet.liris.cnrs.fr/ampli/).",
+      "evidence_location": "line 10",
+      "confidence": "high",
+      "reason": "Provides the web link to the associated Ampli ANR project page."
+    },
+    {
+      "field": "dataset_source",
+      "value": "IGN",
+      "normalized_value": "IGN",
+      "evidence": "To train and test the model, we used data provided by [IGN](https://geoservices.ign.fr/) which concerns French departments (Hautes-Alpes in our case).",
+      "evidence_location": "line 15",
+      "confidence": "high",
+      "reason": "Identifies the dataset provider for training and testing images."
+    },
+    {
+      "field": "spatial_resolution",
+      "value": "50cm per pixel",
+      "normalized_value": "50cm per pixel",
+      "evidence": "Important: note that the *data precision is 50cm per pixel.*",
+      "evidence_location": "line 21",
+      "confidence": "high",
+      "reason": "Specifies the spatial resolution of the satellite image dataset."
+    },
+    {
+      "field": "target_classes",
+      "value": "Dense forest, Sparse forest, Moor, Herbaceous formation, Building, Road",
+      "normalized_value": "Dense forest, Sparse forest, Moor, Herbaceous formation, Building, Road",
+      "evidence": "* Dense forest\n* Sparse forest\n* Moor\n* Herbaceous formation\n* Building\n* Road",
+      "evidence_location": "lines 24-29",
+      "confidence": "high",
+      "reason": "Lists the retained target segmentation classes."
+    },
+    {
+      "field": "dataset_download_url",
+      "value": "https://drive.google.com/file/d/1y73mUPzS5Hhq1RjPXc9bxch-Nv6HlJem/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1y73mUPzS5Hhq1RjPXc9bxch-Nv6HlJem/view?usp=sharing",
+      "evidence": "The dataset is available on download [here](https://drive.google.com/file/d/1y73mUPzS5Hhq1RjPXc9bxch-Nv6HlJem/view?usp=sharing).",
+      "evidence_location": "line 56",
+      "confidence": "high",
+      "reason": "Direct download link for the training and validation dataset tiles."
+    },
+    {
+      "field": "pretrained_backbone_url",
+      "value": "https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_large_patch4_window12_384_22k.pth",
+      "normalized_value": "https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_large_patch4_window12_384_22k.pth",
+      "evidence": "During the training, a ImageNet-22K pretrained model was used (available [here](https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_large_patch4_window12_384_22k.pth))",
+      "evidence_location": "line 59",
+      "confidence": "high",
+      "reason": "Direct download link for the ImageNet-22K pretrained Swin Transformer backbone weights."
+    },
+    {
+      "field": "miou_score",
+      "value": "54.22",
+      "normalized_value": "54.22",
+      "evidence": "| Swin-L | UPerNet | 384x384 | 60K | 54.22 | [config](configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py) | [model](https://drive.google.com/file/d/1EarMOBHx6meawa6izNXJUfXRCTzhKT2M/view) |",
+      "evidence_location": "line 70",
+      "confidence": "high",
+      "reason": "Reports the mean Intersection over Union evaluation score for the trained model."
+    },
+    {
+      "field": "model_checkpoint_url",
+      "value": "https://drive.google.com/file/d/1EarMOBHx6meawa6izNXJUfXRCTzhKT2M/view",
+      "normalized_value": "https://drive.google.com/file/d/1EarMOBHx6meawa6izNXJUfXRCTzhKT2M/view",
+      "evidence": "| Swin-L | UPerNet | 384x384 | 60K | 54.22 | [config](configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py) | [model](https://drive.google.com/file/d/1EarMOBHx6meawa6izNXJUfXRCTzhKT2M/view) |",
+      "evidence_location": "line 70",
+      "confidence": "high",
+      "reason": "Direct download link for the trained semantic segmentation model checkpoint."
+    },
+    {
+      "field": "installation_command",
+      "value": "git clone https://github.com/open-mmlab/mmsegmentation.git\ncd mmsegmentation\npip install -e .",
+      "normalized_value": "git clone https://github.com/open-mmlab/mmsegmentation.git cd mmsegmentation pip install -e .",
+      "evidence": "```\ngit clone https://github.com/open-mmlab/mmsegmentation.git\ncd mmsegmentation\npip install -e .\n```",
+      "evidence_location": "lines 111-115",
+      "confidence": "high",
+      "reason": "Provides shell commands to clone and install the required library version."
+    },
+    {
+      "field": "inference_command",
+      "value": "python tools/test.py configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py checkpoints/ign_60k_swin_large_patch4_window12_384.pth --eval mIoU\n\n# Display segmentation results\npython tools/test.py configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py checkpoints/ign_60k_swin_large_patch4_window12_384.pth --show",
+      "normalized_value": "python tools/test.py configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py checkpoints/ign_60k_swin_large_patch4_window12_384.pth --eval mIoU # Display segmentation results python tools/test.py configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py checkpoints/ign_60k_swin_large_patch4_window12_384.pth --show",
+      "evidence": "```\n# Evaluate checkpoint on a single GPU\npython tools/test.py configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py checkpoints/ign_60k_swin_large_patch4_window12_384.pth --eval mIoU\n\n# Display segmentation results\npython tools/test.py configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py checkpoints/ign_60k_swin_large_patch4_window12_384.pth --show\n```",
+      "evidence_location": "lines 133-139",
+      "confidence": "high",
+      "reason": "Provides concrete evaluation/inference commands for testing pre-trained checkpoints on single GPU."
+    },
+    {
+      "field": "training_command",
+      "value": "python tools/train.py configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py --options model.pretrained=\"./model/swin_large_patch4_window12_384_22k.pth\"",
+      "normalized_value": "python tools/train.py configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py --options model.pretrained=\"./model/swin_large_patch4_window12_384_22k.pth\"",
+      "evidence": "```\npython tools/train.py configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py --options model.pretrained=\"./model/swin_large_patch4_window12_384_22k.pth\"\n```",
+      "evidence_location": "lines 153-155",
+      "confidence": "high",
+      "reason": "Provides the command to initiate training using the pre-trained backbone checkpoint."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@misc{guerin2021satellite,\n      title={Satellite Image Semantic Segmentation}, \n      author={Eric Guérin and Killian Oechslin and Christian Wolf and Benoît Martinez},\n      year={2021},\n      eprint={2110.05812},\n      archivePrefix={arXiv},\n      primaryClass={cs.CV}\n}",
+      "normalized_value": "@misc{guerin2021satellite, title={Satellite Image Semantic Segmentation}, author={Eric Guérin and Killian Oechslin and Christian Wolf and Benoît Martinez}, year={2021}, eprint={2110.05812}, archivePrefix={arXiv}, primaryClass={cs.CV} }",
+      "evidence": "```\n@misc{guerin2021satellite,\n      title={Satellite Image Semantic Segmentation}, \n      author={Eric Guérin and Killian Oechslin and Christian Wolf and Benoît Martinez},\n      year={2021},\n      eprint={2110.05812},\n      archivePrefix={arXiv},\n      primaryClass={cs.CV}\n}\n```",
+      "evidence_location": "lines 174-183",
+      "confidence": "high",
+      "reason": "BibTeX snippet for citing this specific work."
+    }
+  ]
+}

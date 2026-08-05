@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "s3prl",
+      "normalized_value": "s3prl",
+      "evidence": "This is an open source toolkit called **s3prl**, which stands for **S**elf-**S**upervised **S**peech **P**re-training and **R**epresentation **L**earning.",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Identifies the artifact name from the toolkit introduction."
+    },
+    {
+      "field": "artifact_description",
+      "value": "This is an open source toolkit called **s3prl**, which stands for **S**elf-**S**upervised **S**peech **P**re-training and **R**epresentation **L**earning.\nSelf-supervised speech pre-trained models are called **upstream** in this toolkit, and are utilized in various **downstream** tasks.",
+      "normalized_value": "This is an open source toolkit called **s3prl**, which stands for **S**elf-**S**upervised **S**peech **P**re-training and **R**epresentation **L**earning. Self-supervised speech pre-trained models are called **upstream** in this toolkit, and are utilized in various **downstream** tasks.",
+      "evidence": "This is an open source toolkit called **s3prl**, which stands for **S**elf-**S**upervised **S**peech **P**re-training and **R**epresentation **L**earning.\nSelf-supervised speech pre-trained models are called **upstream** in this toolkit, and are utilized in various **downstream** tasks.",
+      "evidence_location": "78-79",
+      "confidence": "high",
+      "reason": "Describes the core functionality and scope of the speech pre-training toolkit."
+    },
+    {
+      "field": "license",
+      "value": "The majority of S3PRL Toolkit is licensed under the Apache License version 2.0, however all the files authored by Facebook, Inc. (which have explicit copyright statement on the top) are licensed under CC-BY-NC.",
+      "normalized_value": "The majority of S3PRL Toolkit is licensed under the Apache License version 2.0, however all the files authored by Facebook, Inc. (which have explicit copyright statement on the top) are licensed under CC-BY-NC.",
+      "evidence": "The majority of S3PRL Toolkit is licensed under the Apache License version 2.0, however all the files authored by Facebook, Inc. (which have explicit copyright statement on the top) are licensed under CC-BY-NC.",
+      "evidence_location": "183",
+      "confidence": "high",
+      "reason": "Specifies the licensing terms governing reuse and distribution."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://s3prl.github.io/s3prl/",
+      "normalized_value": "https://s3prl.github.io/s3prl/",
+      "evidence": "See our [online doc](https://s3prl.github.io/s3prl/) for more information.",
+      "evidence_location": "58",
+      "confidence": "high",
+      "reason": "Provides link to the project's official online documentation."
+    },
+    {
+      "field": "supported_operating_systems",
+      "value": "`ubuntu-18.04`, `ubuntu-20.04`",
+      "normalized_value": "`ubuntu-18.04`, `ubuntu-20.04`",
+      "evidence": "| os  | `ubuntu-18.04`, `ubuntu-20.04` |",
+      "evidence_location": "43",
+      "confidence": "high",
+      "reason": "Lists operating system environments supported and tested in CI."
+    },
+    {
+      "field": "supported_python_versions",
+      "value": "`3.7`, `3.8`, `3.9`, `3.10`",
+      "normalized_value": "`3.7`, `3.8`, `3.9`, `3.10`",
+      "evidence": "| python | `3.7`, `3.8`, `3.9`, `3.10` |",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Lists Python versions supported and tested in CI."
+    },
+    {
+      "field": "supported_pytorch_versions",
+      "value": "`1.8.1`, `1.9.1`, `1.10.2`, `1.11.0`, `1.12.1` , `1.13.1` , `2.0.1` , `2.1.0`",
+      "normalized_value": "`1.8.1`, `1.9.1`, `1.10.2`, `1.11.0`, `1.12.1` , `1.13.1` , `2.0.1` , `2.1.0`",
+      "evidence": "| pytorch | `1.8.1`, `1.9.1`, `1.10.2`, `1.11.0`, `1.12.1` , `1.13.1` , `2.0.1` , `2.1.0` |",
+      "evidence_location": "45",
+      "confidence": "high",
+      "reason": "Lists PyTorch framework versions supported and tested in CI."
+    },
+    {
+      "field": "python_version_requirement",
+      "value": ">= 3.6",
+      "normalized_value": ">= 3.6",
+      "evidence": "1. **Python** >= 3.6",
+      "evidence_location": "157",
+      "confidence": "high",
+      "reason": "Specifies minimum required Python version for installing the toolkit."
+    },
+    {
+      "field": "system_dependencies",
+      "value": "sox",
+      "normalized_value": "sox",
+      "evidence": "2. Install **sox** on your OS",
+      "evidence_location": "158",
+      "confidence": "high",
+      "reason": "Identifies OS-level software dependency required for setup."
+    },
+    {
+      "field": "package_installation_command",
+      "value": "pip install s3prl",
+      "normalized_value": "pip install s3prl",
+      "evidence": "```sh\npip install s3prl\n```",
+      "evidence_location": "112-114",
+      "confidence": "high",
+      "reason": "Provides shell command to install the PyPI package."
+    },
+    {
+      "field": "source_installation_command",
+      "value": "pip install -e \".[all]\"",
+      "normalized_value": "pip install -e \".[all]\"",
+      "evidence": "3. Install s3prl: [Read doc](https://s3prl.github.io/s3prl/tutorial/installation.html#) or `pip install -e \".[all]\"`",
+      "evidence_location": "159",
+      "confidence": "high",
+      "reason": "Provides shell command for installing the package in editable mode from source."
+    },
+    {
+      "field": "usage_code_example",
+      "value": "```python\nimport torch\nfrom s3prl.nn import S3PRLUpstream\n\nmodel = S3PRLUpstream(\"hubert\")\nmodel.eval()\n\nwith torch.no_grad():\n    wavs = torch.randn(2, 16000 * 2)\n    wavs_len = torch.LongTensor([16000 * 1, 16000 * 2])\n    all_hs, all_hs_len = model(wavs, wavs_len)\n\nfor hs, hs_len in zip(all_hs, all_hs_len):\n    assert isinstance(hs, torch.FloatTensor)\n    assert isinstance(hs_len, torch.LongTensor)\n\n    batch_size, max_seq_len, hidden_size = hs.shape\n    assert hs_len.dim() == 1\n```",
+      "normalized_value": "```python import torch from s3prl.nn import S3PRLUpstream model = S3PRLUpstream(\"hubert\") model.eval() with torch.no_grad(): wavs = torch.randn(2, 16000 * 2) wavs_len = torch.LongTensor([16000 * 1, 16000 * 2]) all_hs, all_hs_len = model(wavs, wavs_len) for hs, hs_len in zip(all_hs, all_hs_len): assert isinstance(hs, torch.FloatTensor) assert isinstance(hs_len, torch.LongTensor) batch_size, max_seq_len, hidden_size = hs.shape assert hs_len.dim() == 1 ```",
+      "evidence": "```python\nimport torch\nfrom s3prl.nn import S3PRLUpstream\n\nmodel = S3PRLUpstream(\"hubert\")\nmodel.eval()\n\nwith torch.no_grad():\n    wavs = torch.randn(2, 16000 * 2)\n    wavs_len = torch.LongTensor([16000 * 1, 16000 * 2])\n    all_hs, all_hs_len = model(wavs, wavs_len)\n\nfor hs, hs_len in zip(all_hs, all_hs_len):\n    assert isinstance(hs, torch.FloatTensor)\n    assert isinstance(hs_len, torch.LongTensor)\n\n    batch_size, max_seq_len, hidden_size = hs.shape\n    assert hs_len.dim() == 1\n```",
+      "evidence_location": "118-136",
+      "confidence": "high",
+      "reason": "Provides Python code demonstrating model initialization and feature extraction."
+    },
+    {
+      "field": "citation",
+      "value": "```\n@article{yang2024large,\n  title={A Large-Scale Evaluation of Speech Foundation Models},\n  author={Yang, Shu-wen and Chang, Heng-Jui and Huang, Zili and Liu, Andy T and Lai, Cheng-I and Wu, Haibin and Shi, Jiatong and Chang, Xuankai and Tsai, Hsiang-Sheng and Huang, Wen-Chin and others},\n  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  year={2024},\n  publisher={IEEE}\n}\n```",
+      "normalized_value": "``` @article{yang2024large, title={A Large-Scale Evaluation of Speech Foundation Models}, author={Yang, Shu-wen and Chang, Heng-Jui and Huang, Zili and Liu, Andy T and Lai, Cheng-I and Wu, Haibin and Shi, Jiatong and Chang, Xuankai and Tsai, Hsiang-Sheng and Huang, Wen-Chin and others}, journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing}, year={2024}, publisher={IEEE} } ```",
+      "evidence": "```\n@article{yang2024large,\n  title={A Large-Scale Evaluation of Speech Foundation Models},\n  author={Yang, Shu-wen and Chang, Heng-Jui and Huang, Zili and Liu, Andy T and Lai, Cheng-I and Wu, Haibin and Shi, Jiatong and Chang, Xuankai and Tsai, Hsiang-Sheng and Huang, Wen-Chin and others},\n  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  year={2024},\n  publisher={IEEE}\n}\n```",
+      "evidence_location": "340-348",
+      "confidence": "high",
+      "reason": "BibTeX citation entry for referencing the artifact in academic work."
+    }
+  ]
+}

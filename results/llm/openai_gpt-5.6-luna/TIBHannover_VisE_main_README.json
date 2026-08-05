@@ -1,0 +1,175 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Ontology-driven Event Type Classification in Images",
+      "normalized_value": "Ontology-driven Event Type Classification in Images",
+      "evidence": "# Ontology-driven Event Type Classification in Images",
+      "evidence_location": "1, title",
+      "confidence": "high",
+      "reason": "Identifies the artifact and the subject of the associated work."
+    },
+    {
+      "field": "paper_citation",
+      "value": "Eric Müller-Budack, Matthias Springstein, Sherzod Hakimov, Kevin Mrutzek, and Ralph Ewerth:\n\"Ontology-driven Event Type Classification in Images\".\nIn: *Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)*, pages 2928-2938, IEEE, Virtual Conference, 2021.",
+      "normalized_value": "Eric Müller-Budack, Matthias Springstein, Sherzod Hakimov, Kevin Mrutzek, and Ralph Ewerth: \"Ontology-driven Event Type Classification in Images\". In: *Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)*, pages 2928-2938, IEEE, Virtual Conference, 2021.",
+      "evidence": "> Eric Müller-Budack, Matthias Springstein, Sherzod Hakimov, Kevin Mrutzek, and Ralph Ewerth:\n> \"Ontology-driven Event Type Classification in Images\".\n> In: *Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)*, pages 2928-2938, IEEE, Virtual Conference, 2021.",
+      "evidence_location": "5-7, paper citation",
+      "confidence": "high",
+      "reason": "Provides authorship, title, venue, page range, publisher, location, and year for citation and indexing."
+    },
+    {
+      "field": "paper_links",
+      "value": "*Computer Vision Foundation (CVF)*: https://openaccess.thecvf.com/content/WACV2021/html/Muller-Budack_Ontology-Driven_Event_Type_Classification_in_Images_WACV_2021_paper.html\n*arXiv*: https://arxiv.org/pdf/2011.04714.pdf",
+      "normalized_value": "*Computer Vision Foundation (CVF)*: https://openaccess.thecvf.com/content/WACV2021/html/Muller-Budack_Ontology-Driven_Event_Type_Classification_in_Images_WACV_2021_paper.html *arXiv*: https://arxiv.org/pdf/2011.04714.pdf",
+      "evidence": "- *Computer Vision Foundation (CVF)*: https://openaccess.thecvf.com/content/WACV2021/html/Muller-Budack_Ontology-Driven_Event_Type_Classification_in_Images_WACV_2021_paper.html\n- *arXiv*: https://arxiv.org/pdf/2011.04714.pdf",
+      "evidence_location": "9-11, paper links",
+      "confidence": "high",
+      "reason": "Provides direct access to the paper through CVF and arXiv."
+    },
+    {
+      "field": "project_website",
+      "value": "http://eventkg.l3s.uni-hannover.de/VisE",
+      "normalized_value": "http://eventkg.l3s.uni-hannover.de/VisE",
+      "evidence": "Further information can be found on the **EventKG** website: http://eventkg.l3s.uni-hannover.de/VisE",
+      "evidence_location": "13, project website",
+      "confidence": "high",
+      "reason": "Provides the associated project website for further information."
+    },
+    {
+      "field": "reproducibility_environment",
+      "value": "The singularity image is built with an optimized pytorch implementation on arch linux, which we used for training and testing.",
+      "normalized_value": "The singularity image is built with an optimized pytorch implementation on arch linux, which we used for training and testing.",
+      "evidence": "We provide three different ways to setup the project. The results can be reproduced using the [setup with singularity](#setup-with-singularity-for-reproducibility). The singularity image is built with an optimized pytorch implementation on arch linux, which we used for training and testing.",
+      "evidence_location": "35-37, Setup",
+      "confidence": "high",
+      "reason": "Specifies the environment recommended for reproducing the reported training and testing results."
+    },
+    {
+      "field": "singularity_image",
+      "value": "https://tib.eu/cloud/s/fPMwLMWo3wCmMRy/download (Filesize is 5 GB)",
+      "normalized_value": "https://tib.eu/cloud/s/fPMwLMWo3wCmMRy/download (Filesize is 5 GB)",
+      "evidence": "Download our singularity image from: [link](https://tib.eu/cloud/s/fPMwLMWo3wCmMRy/download) (Filesize is 5 GB)",
+      "evidence_location": "42-46, Setup with Singularity (for Reproducibility)",
+      "confidence": "high",
+      "reason": "Provides the downloadable reproducibility environment and its stated size."
+    },
+    {
+      "field": "singularity_run_command",
+      "value": "singularity exec \\\n  -B </PATH/TO/REPOSITORY>:/src \\\n  --nv </PATH/TO/SINGULARITY/IMAGE>.sif \\\n  bash\n\ncd /src",
+      "normalized_value": "singularity exec \\ -B </PATH/TO/REPOSITORY>:/src \\ --nv </PATH/TO/SINGULARITY/IMAGE>.sif \\ bash cd /src",
+      "evidence": "```shell script\nsingularity exec \\\n  -B </PATH/TO/REPOSITORY>:/src \\\n  --nv </PATH/TO/SINGULARITY/IMAGE>.sif \\\n  bash\n\ncd /src\n```",
+      "evidence_location": "48-57, Setup with Singularity (for Reproducibility)",
+      "confidence": "high",
+      "reason": "Defines how to launch the supplied Singularity environment and enter the repository."
+    },
+    {
+      "field": "virtual_environment_installation",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "```shell script\npip install -r requirements.txt\n```",
+      "evidence_location": "60-66, Setup with Virtual Environment",
+      "confidence": "high",
+      "reason": "Provides the dependency installation command for a virtual environment."
+    },
+    {
+      "field": "resource_download_command",
+      "value": "python download_resources.py",
+      "normalized_value": "python download_resources.py",
+      "evidence": "```shell script\npython download_resources.py\n```",
+      "evidence_location": "94-100, Download Ontology, Dataset and Models",
+      "confidence": "high",
+      "reason": "Downloads the ontologies, models, and other files required for inference and testing."
+    },
+    {
+      "field": "resource_directory",
+      "value": "resources/",
+      "normalized_value": "resources/",
+      "evidence": "The files will be stored in a folder called ```resources/``` relative to the repository path.",
+      "evidence_location": "102, Download Ontology, Dataset and Models",
+      "confidence": "high",
+      "reason": "Identifies the expected location of downloaded resources."
+    },
+    {
+      "field": "available_models",
+      "value": "- Classification baseline (denoted as ```C```): [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/727c3ee1-4107-4996-878d-1caf537730e8/download/vise_c.tar.gz)\n- Best ontology driven approach using the cross-entropy loss (denoted as ```CO_cel```): [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/7c672f2b-f45e-40aa-b6bb-01fb2e9bf5e7/download/vise_co_cel.tar.gz)\n- Best ontology driven approach using the cross-entropy loss (denoted as ```CO_cos```): [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/b105c1aa-3bc4-4233-8103-8f4616948d85/download/vise_co_cos.tar.gz)",
+      "normalized_value": "- Classification baseline (denoted as ```C```): [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/727c3ee1-4107-4996-878d-1caf537730e8/download/vise_c.tar.gz) - Best ontology driven approach using the cross-entropy loss (denoted as ```CO_cel```): [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/7c672f2b-f45e-40aa-b6bb-01fb2e9bf5e7/download/vise_co_cel.tar.gz) - Best ontology driven approach using the cross-entropy loss (denoted as ```CO_cos```): [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/b105c1aa-3bc4-4233-8103-8f4616948d85/download/vise_co_cos.tar.gz)",
+      "evidence": "- Classification baseline (denoted as ```C```): [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/727c3ee1-4107-4996-878d-1caf537730e8/download/vise_c.tar.gz)\n- Best ontology driven approach using the cross-entropy loss (denoted as ```CO_cel```): [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/7c672f2b-f45e-40aa-b6bb-01fb2e9bf5e7/download/vise_co_cel.tar.gz)\n- Best ontology driven approach using the cross-entropy loss (denoted as ```CO_cos```): [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/b105c1aa-3bc4-4233-8103-8f4616948d85/download/vise_co_cos.tar.gz)",
+      "evidence_location": "105-111, Models",
+      "confidence": "high",
+      "reason": "Lists the trained baseline and ontology-driven model archives available for reuse."
+    },
+    {
+      "field": "reported_benchmark_results",
+      "value": "**VisE-Bing**\n| Model  |  Top-1   |   Top-3   |   Top-5   |   JSC    |    CS    |\n| :----- |   :------: | :------: | :------: | :------: | :------: |\n| C      |   77.4   |   89.8   |   93.6   |   84.7   |   87.7   |\n| CO_cel |   81.5   | **91.8** | **94.3** |   87.5   |   90.0   |\n| CO_cos | **81.9** |   90.8   |   93.2   | **87.9** | **90.4**",
+      "normalized_value": "**VisE-Bing** | Model | Top-1 | Top-3 | Top-5 | JSC | CS | | :----- | :------: | :------: | :------: | :------: | :------: | | C | 77.4 | 89.8 | 93.6 | 84.7 | 87.7 | | CO_cel | 81.5 | **91.8** | **94.3** | 87.5 | 90.0 | | CO_cos | **81.9** | 90.8 | 93.2 | **87.9** | **90.4**",
+      "evidence": "**VisE-Bing**\n| Model  |  Top-1   |   Top-3   |   Top-5   |   JSC    |    CS    |\n| :----- |   :------: | :------: | :------: | :------: | :------: |\n| C      |   77.4   |   89.8   |   93.6   |   84.7   |   87.7   |\n| CO_cel |   81.5   | **91.8** | **94.3** |   87.5   |   90.0   |\n| CO_cos | **81.9** |   90.8   |   93.2   | **87.9** | **90.4** |",
+      "evidence_location": "113-121, Models",
+      "confidence": "high",
+      "reason": "Records the reported Top-k accuracy, Jaccard similarity coefficient, and cosine similarity on VisE-Bing."
+    },
+    {
+      "field": "inference_command",
+      "value": "python infer.py -c </path/to/model.yml> -i </path/to/image(s)>",
+      "normalized_value": "python infer.py -c </path/to/model.yml> -i </path/to/image(s)>",
+      "evidence": "```shell script\npython infer.py -c </path/to/model.yml> -i </path/to/image(s)>\n```",
+      "evidence_location": "132-138, Inference",
+      "confidence": "high",
+      "reason": "Defines how to apply a supplied model to one image or a list of images."
+    },
+    {
+      "field": "inference_options",
+      "value": "--batch_size <int> (default ```16```); --num_predictions <int> (default ```3```); --s2l_strategy [leafprob, cossim, leafprob*cossim] (default ```leafprob*cossim```)",
+      "normalized_value": "--batch_size <int> (default ```16```); --num_predictions <int> (default ```3```); --s2l_strategy [leafprob, cossim, leafprob*cossim] (default ```leafprob*cossim```)",
+      "evidence": "```--batch_size <int>``` specifies the batch size (default ```16```)\n\n```--num_predictions <int>``` sets the number of top predictions printed on the console (default ```3```) \n\n```--s2l_strategy [leafprob, cossim, leafprob*cossim]``` specifies the strategies to retrieve the leaf node vector from a subgraph vector (default ```leafprob*cossim```) ",
+      "evidence_location": "146-150, Inference",
+      "confidence": "high",
+      "reason": "Documents configurable inference behavior and defaults needed to reproduce or adapt predictions."
+    },
+    {
+      "field": "test_command",
+      "value": "python test.py \\\n    -c </path/to/model.yml> \\\n    -i </path/to/image/root_directory> \\\n    -t </path/to/testset.jsonl>\n    -o </path/to/output.json>",
+      "normalized_value": "python test.py \\ -c </path/to/model.yml> \\ -i </path/to/image/root_directory> \\ -t </path/to/testset.jsonl> -o </path/to/output.json>",
+      "evidence": "```shell script\npython test.py \\\n    -c </path/to/model.yml> \\\n    -i </path/to/image/root_directory> \\\n    -t </path/to/testset.jsonl>\n    -o </path/to/output.json>\n```",
+      "evidence_location": "175-184, Test",
+      "confidence": "high",
+      "reason": "Defines the evaluation command and its model, image, test-set, and output inputs."
+    },
+    {
+      "field": "dataset",
+      "value": "The *Visual Event Classification Dataset (VisE-D)* is available on: https://data.uni-hannover.de/de/dataset/vise",
+      "normalized_value": "The *Visual Event Classification Dataset (VisE-D)* is available on: https://data.uni-hannover.de/de/dataset/vise",
+      "evidence": "The *Visual Event Classification Dataset (VisE-D)* is available on: https://data.uni-hannover.de/de/dataset/vise",
+      "evidence_location": "194-196, VisE-D: Visual Event Classification Dataset",
+      "confidence": "high",
+      "reason": "Identifies the dataset and provides its access URL."
+    },
+    {
+      "field": "visual_event_ontology",
+      "value": "Different versions of the *Visual Event Ontology (VisE-O)* can be downloaded here: [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/99ce7e4d-df5b-40f6-afb4-16085dbf697d/download/vise-d.tar.gz)",
+      "normalized_value": "Different versions of the *Visual Event Ontology (VisE-O)* can be downloaded here: [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/99ce7e4d-df5b-40f6-afb4-16085dbf697d/download/vise-d.tar.gz)",
+      "evidence": "Different versions of the *Visual Event Ontology (VisE-O)* can be downloaded here: [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/99ce7e4d-df5b-40f6-afb4-16085dbf697d/download/vise-d.tar.gz)",
+      "evidence_location": "213-217, VisE-O: Visual Event Ontology",
+      "confidence": "high",
+      "reason": "Identifies and links the ontology resource used for visual event types."
+    },
+    {
+      "field": "benchmark_ontologies",
+      "value": "WIDER Ontology; SocEID Ontology; RED Ontology",
+      "normalized_value": "WIDER Ontology; SocEID Ontology; RED Ontology",
+      "evidence": "- **WIDER Ontology**: [download](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/b1c2f92b-4b69-46fc-9282-16acc7a1c9aa/download/wider.tar.gz) | [explore](https://tibhannover.github.io/VisE/WIDER/index.html)\n- **SocEID Ontology**: [download](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/a8373c98-32a8-408c-b8e9-51e6b1e01777/download/soceid.tar.gz) | [explore](https://tibhannover.github.io/VisE/SocEID/index.html)\n- **RED Ontology**: [download](https://data.uni-hannover.de/dataset/3afb333d-230f-4825-9810-f9cba2b69a33/download/red.tar.gz) | [explore](https://tibhannover.github.io/VisE/RED/index.html)",
+      "evidence_location": "228-233, Benchmark Ontologies",
+      "confidence": "high",
+      "reason": "Lists ontology resources for three external benchmark datasets and their exploration links."
+    },
+    {
+      "field": "license",
+      "value": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007",
+      "normalized_value": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007",
+      "evidence": "This work is published under the GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007. For details please check the LICENSE file in the repository.",
+      "evidence_location": "240-242, LICENSE",
+      "confidence": "high",
+      "reason": "States the legal terms governing reuse of the work."
+    }
+  ]
+}

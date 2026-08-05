@@ -1,0 +1,220 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "CADET",
+      "normalized_value": "CADET",
+      "evidence": "# CADET",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "artifact name explicitly stated"
+    },
+    {
+      "field": "description",
+      "value": "solver for _quantified Boolean formulas_ with a forall-exists quantifier alternation (2QBF)",
+      "normalized_value": "solver for quantified Boolean formulas with a forall-exists quantifier alternation (2QBF)",
+      "evidence": "CADET is a solver for _quantified Boolean formulas_ with a forall-exists quantifier alternation (2QBF).",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "purpose of the artifact"
+    },
+    {
+      "field": "author",
+      "value": "Markus N. Rabe",
+      "normalized_value": "Markus N. Rabe",
+      "evidence": "written by [Markus N. Rabe](https://people.eecs.berkeley.edu/~rabe/).",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "creator of the artifact"
+    },
+    {
+      "field": "algorithm",
+      "value": "Incremental Determinization",
+      "normalized_value": "Incremental Determinization",
+      "evidence": "based on the _Incremental Determinization_ algorithm",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "core method used"
+    },
+    {
+      "field": "performance",
+      "value": "one of the fastest and most reliable solvers for 2QBF formulas. It won second price in the 2QBF track of QBFEval",
+      "normalized_value": "one of the fastest and most reliable solvers for 2QBF formulas. It won second price in the 2QBF track of QBFEval",
+      "evidence": "As of 2018, CADET is one of the fastest and most reliable solvers for 2QBF formulas. It won second price in the 2QBF track of [QBFEval](http://www.qbflib.org/qbfeval17.php)",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "benchmark results and reliability claims"
+    },
+    {
+      "field": "capability",
+      "value": "can also _prove_ its results little overhead",
+      "normalized_value": "can also prove its results little overhead",
+      "evidence": "and can also _prove_ its results little overhead",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "unique feature for certification"
+    },
+    {
+      "field": "input_formats",
+      "value": "QDIMACS and QAIGER",
+      "normalized_value": "QDIMACS and QAIGER",
+      "evidence": "CADET reads files in both [QDIMACS](http://www.qbflib.org/qdimacs.html) and [QAIGER](https://github.com/ltentrup/QAIGER) format.",
+      "evidence_location": "line 109",
+      "confidence": "high",
+      "reason": "supported input formats for usage"
+    },
+    {
+      "field": "installation_command",
+      "value": "./configure && make",
+      "normalized_value": "./configure && make",
+      "evidence": "```bash\n$ ./configure && make\n```",
+      "evidence_location": "lines 80-82",
+      "confidence": "high",
+      "reason": "command to build from source"
+    },
+    {
+      "field": "test_command",
+      "value": "make test",
+      "normalized_value": "make test",
+      "evidence": "```bash\n$ make test\n```",
+      "evidence_location": "lines 86-88",
+      "confidence": "high",
+      "reason": "command to verify installation"
+    },
+    {
+      "field": "usage_command",
+      "value": "./cadet file.qdimacs",
+      "normalized_value": "./cadet file.qdimacs",
+      "evidence": "```bash\n$ ./cadet file.qdimacs\n```",
+      "evidence_location": "lines 97-99",
+      "confidence": "high",
+      "reason": "basic command to use the solver"
+    },
+    {
+      "field": "certificate_command",
+      "value": "./cadet -c result.aig formula.qdimacs",
+      "normalized_value": "./cadet -c result.aig formula.qdimacs",
+      "evidence": "```bash\n$ ./cadet -c result.aig formula.qdimacs\n```",
+      "evidence_location": "lines 47-49",
+      "confidence": "high",
+      "reason": "command to output certificates"
+    },
+    {
+      "field": "minimization_command",
+      "value": "abc -c \"read result.aig; dc2; write result.aig\"",
+      "normalized_value": "abc -c \"read result.aig; dc2; write result.aig\"",
+      "evidence": "```bash\n$ abc -c \"read result.aig; dc2; write result.aig\"\n```",
+      "evidence_location": "lines 53-55",
+      "confidence": "high",
+      "reason": "command to minimize output circuits"
+    },
+    {
+      "field": "dependencies",
+      "value": "clang, gcc, Python 3",
+      "normalized_value": "clang, gcc, Python 3",
+      "evidence": "CADET can be built from source with both clang and gcc. The testing scripts require Python 3.",
+      "evidence_location": "line 75",
+      "confidence": "high",
+      "reason": "software required for building and testing"
+    },
+    {
+      "field": "platforms",
+      "value": "Linux and OSX",
+      "normalized_value": "Linux and OSX",
+      "evidence": "pre-built binaries of CADET for Linux and OSX.",
+      "evidence_location": "line 75",
+      "confidence": "high",
+      "reason": "supported operating systems"
+    },
+    {
+      "field": "publication",
+      "value": "[Learning Heuristics for 2QBF through Deep Reinforcement Learning](https://arxiv.org/abs/1807.08058). Gil Lederman, Markus N. Rabe, Edward A. Lee, Sanjit A. Seshia. arXiv preprint, 2018.",
+      "normalized_value": "[Learning Heuristics for 2QBF through Deep Reinforcement Learning](https://arxiv.org/abs/1807.08058). Gil Lederman, Markus N. Rabe, Edward A. Lee, Sanjit A. Seshia. arXiv preprint, 2018.",
+      "evidence": "[Learning Heuristics for 2QBF through Deep Reinforcement Learning](https://arxiv.org/abs/1807.08058). Gil Lederman, Markus N. Rabe, Edward A. Lee, Sanjit A. Seshia. arXiv preprint, 2018.",
+      "evidence_location": "line 136",
+      "confidence": "high",
+      "reason": "related research paper"
+    },
+    {
+      "field": "publication",
+      "value": "[Understanding and Extending Incremental Determinization for 2QBF](https://people.eecs.berkeley.edu/~sseshia/pubdir/id-cav18.pdf). Markus N. Rabe, Leander Tentrup, Cameron Rasmussen, and Sanjit Seshia. CAV, 2018.",
+      "normalized_value": "[Understanding and Extending Incremental Determinization for 2QBF](https://people.eecs.berkeley.edu/~sseshia/pubdir/id-cav18.pdf). Markus N. Rabe, Leander Tentrup, Cameron Rasmussen, and Sanjit Seshia. CAV, 2018.",
+      "evidence": "[Understanding and Extending Incremental Determinization for 2QBF](https://people.eecs.berkeley.edu/~sseshia/pubdir/id-cav18.pdf). Markus N. Rabe, Leander Tentrup, Cameron Rasmussen, and Sanjit Seshia. CAV, 2018.",
+      "evidence_location": "line 138",
+      "confidence": "high",
+      "reason": "related research paper"
+    },
+    {
+      "field": "publication",
+      "value": "[Encodings of Bounded Synthesis](https://www.react.uni-saarland.de/publications/FFRT17.html) Faymonville, Finkbeiner, Rabe, Tentrup. TACAS, 2017.",
+      "normalized_value": "[Encodings of Bounded Synthesis](https://www.react.uni-saarland.de/publications/FFRT17.html) Faymonville, Finkbeiner, Rabe, Tentrup. TACAS, 2017.",
+      "evidence": "[Encodings of Bounded Synthesis](https://www.react.uni-saarland.de/publications/FFRT17.html) Faymonville, Finkbeiner, Rabe, Tentrup. TACAS, 2017.",
+      "evidence_location": "line 140",
+      "confidence": "high",
+      "reason": "related research paper"
+    },
+    {
+      "field": "publication",
+      "value": "[Incremental Determinization](https://www.eecs.berkeley.edu/~rabe/IncrementalDeterminizationSAT2016.pdf). Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "normalized_value": "[Incremental Determinization](https://www.eecs.berkeley.edu/~rabe/IncrementalDeterminizationSAT2016.pdf). Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "evidence": "[Incremental Determinization](https://www.eecs.berkeley.edu/~rabe/IncrementalDeterminizationSAT2016.pdf). Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "evidence_location": "line 142",
+      "confidence": "high",
+      "reason": "related research paper"
+    },
+    {
+      "field": "certificate_file_formats",
+      "value": ".aag or .aig",
+      "normalized_value": ".aag or .aig",
+      "evidence": "ending in `.aag` or `.aig`",
+      "evidence_location": "line 118",
+      "confidence": "high",
+      "reason": "file formats for output certificates"
+    },
+    {
+      "field": "certificate_checking_tools",
+      "value": "Certcheck and QBFcert",
+      "normalized_value": "Certcheck and QBFcert",
+      "evidence": "By default CADET produces certificates that can be checked by Certcheck, which was written by [Leander Tentrup](https://www.react.uni-saarland.de/people/tentrup.html). Certcheck comes with the distribution of [CAQE](https://www.react.uni-saarland.de/tools/caqe/). To produce certificates that are compatible with [QBFcert](http://fmv.jku.at/qbfcert/) add `--qbfcert` option to the command line.",
+      "evidence_location": "lines 130-131",
+      "confidence": "high",
+      "reason": "tools for verifying certificates"
+    },
+    {
+      "field": "minimization_tool",
+      "value": "ABC",
+      "normalized_value": "ABC",
+      "evidence": "minimize circuits with [ABC](https://people.eecs.berkeley.edu/~alanmi/abc/)",
+      "evidence_location": "line 54",
+      "confidence": "high",
+      "reason": "tool for minimizing output circuits"
+    },
+    {
+      "field": "related_tool",
+      "value": "AIGER toolset",
+      "normalized_value": "AIGER toolset",
+      "evidence": "available in the [AIGER toolset](http://fmv.jku.at/aiger/aiger-1.9.9.tar.gz).",
+      "evidence_location": "line 70",
+      "confidence": "high",
+      "reason": "tool for handling AIGER formats"
+    },
+    {
+      "field": "ci_build_link",
+      "value": "https://travis-ci.org/MarkusRabe/cadet",
+      "normalized_value": "https://travis-ci.org/MarkusRabe/cadet",
+      "evidence": "[![Build Status](https://travis-ci.org/MarkusRabe/cadet.svg?branch=master)](https://travis-ci.org/MarkusRabe/cadet)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "continuous integration status link"
+    },
+    {
+      "field": "code_quality_link",
+      "value": "https://www.codacy.com/app/MarkusRabe/cadet?utm_source=github.com&utm_medium=referral&utm_content=MarkusRabe/cadet&utm_campaign=badger",
+      "normalized_value": "https://www.codacy.com/app/MarkusRabe/cadet?utm_source=github.com&utm_medium=referral&utm_content=MarkusRabe/cadet&utm_campaign=badger",
+      "evidence": "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bfd02d3e1f7540d0ac920e4812bef953)](https://www.codacy.com/app/MarkusRabe/cadet?utm_source=github.com&utm_medium=referral&utm_content=MarkusRabe/cadet&utm_campaign=badger)",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "code quality assessment link"
+    }
+  ]
+}

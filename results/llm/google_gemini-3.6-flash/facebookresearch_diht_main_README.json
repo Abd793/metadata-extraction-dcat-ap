@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "DiHT",
+      "normalized_value": "DiHT",
+      "evidence": "# DiHT",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the project name from the main document header."
+    },
+    {
+      "field": "paper_title",
+      "value": "Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training",
+      "normalized_value": "Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training",
+      "evidence": "\"Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training\"",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Directly provides the title of the associated research paper."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2301.02280",
+      "normalized_value": "https://arxiv.org/abs/2301.02280",
+      "evidence": "[Paper](https://arxiv.org/abs/2301.02280)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Direct link to the arXiv paper page."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/facebookresearch/diht",
+      "normalized_value": "https://github.com/facebookresearch/diht",
+      "evidence": "git clone https://github.com/facebookresearch/diht",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Specifies the Git repository URL for cloning the project."
+    },
+    {
+      "field": "installation_commands",
+      "value": "git clone https://github.com/facebookresearch/diht\ncd diht\npip install -r requirements.txt\npip install -e .  # To install as an editable package",
+      "normalized_value": "git clone https://github.com/facebookresearch/diht cd diht pip install -r requirements.txt pip install -e . # To install as an editable package",
+      "evidence": "```bash\ngit clone https://github.com/facebookresearch/diht\ncd diht\npip install -r requirements.txt\npip install -e .  # To install as an editable package\n```",
+      "evidence_location": "6-11",
+      "confidence": "high",
+      "reason": "Commands required to clone and install the codebase."
+    },
+    {
+      "field": "default_execution_device",
+      "value": "CPU",
+      "normalized_value": "CPU",
+      "evidence": "By default the model runs on CPU",
+      "evidence_location": "50",
+      "confidence": "high",
+      "reason": "Specifies the default hardware device used for running the model."
+    },
+    {
+      "field": "imagenet_evaluation_command",
+      "value": "python example_imagenet_eval.py",
+      "normalized_value": "python example_imagenet_eval.py",
+      "evidence": "python example_imagenet_eval.py",
+      "evidence_location": "66",
+      "confidence": "high",
+      "reason": "Command used to execute zero-shot evaluation on ImageNet-1K."
+    },
+    {
+      "field": "retrieval_evaluation_command",
+      "value": "python example_retrieval_eval.py",
+      "normalized_value": "python example_retrieval_eval.py",
+      "evidence": "python example_retrieval_eval.py",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Command used to execute zero-shot retrieval evaluation."
+    },
+    {
+      "field": "dataset_annotations_url",
+      "value": "https://github.com/salesforce/ALBEF#download",
+      "normalized_value": "https://github.com/salesforce/ALBEF#download",
+      "evidence": "https://github.com/salesforce/ALBEF#download",
+      "evidence_location": "76",
+      "confidence": "high",
+      "reason": "URL from which evaluation JSON split files (coco_test.json and flickr30k_test.json) can be downloaded."
+    },
+    {
+      "field": "zero_shot_performance",
+      "value": "| Model | ImageNet-1K | COCO T2I | COCO I2T | Flickr30K T2I | Flickr30K I2T |\n| :---  |    :----:   |  :----:  |  :----:  |     :----:    |     :----:    |\n|       |  Accuracy@1 | Recall@1 | Recall@1 |    Recall@1   |    Recall@1   |\n| diht_vitb32_224px      | 68.0 | 40.6 | 59.3 | 68.6 | 84.4 |\n| diht_vitb16_224px      | 72.2 | 43.3 | 60.3 | 72.9 | 89.8 |\n| diht_vitl14_224px      | 77.0 | 48.0 | 65.1 | 76.7 | 92.0 |\n| diht_vitl14_336px      | 77.9 | 49.3 | 65.3 | 78.2 | 91.1 |",
+      "normalized_value": "| Model | ImageNet-1K | COCO T2I | COCO I2T | Flickr30K T2I | Flickr30K I2T | | :--- | :----: | :----: | :----: | :----: | :----: | | | Accuracy@1 | Recall@1 | Recall@1 | Recall@1 | Recall@1 | | diht_vitb32_224px | 68.0 | 40.6 | 59.3 | 68.6 | 84.4 | | diht_vitb16_224px | 72.2 | 43.3 | 60.3 | 72.9 | 89.8 | | diht_vitl14_224px | 77.0 | 48.0 | 65.1 | 76.7 | 92.0 | | diht_vitl14_336px | 77.9 | 49.3 | 65.3 | 78.2 | 91.1 |",
+      "evidence": "| Model | ImageNet-1K | COCO T2I | COCO I2T | Flickr30K T2I | Flickr30K I2T |\n| :---  |    :----:   |  :----:  |  :----:  |     :----:    |     :----:    |\n|       |  Accuracy@1 | Recall@1 | Recall@1 |    Recall@1   |    Recall@1   |\n| diht_vitb32_224px      | 68.0 | 40.6 | 59.3 | 68.6 | 84.4 |\n| diht_vitb16_224px      | 72.2 | 43.3 | 60.3 | 72.9 | 89.8 |\n| diht_vitl14_224px      | 77.0 | 48.0 | 65.1 | 76.7 | 92.0 |\n| diht_vitl14_336px      | 77.9 | 49.3 | 65.3 | 78.2 | 91.1 |",
+      "evidence_location": "91-97",
+      "confidence": "high",
+      "reason": "Tabulates evaluation metrics across multiple benchmark datasets for all provided model variants."
+    },
+    {
+      "field": "citation",
+      "value": "@article{rdk+23,\n  title = {Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training},\n  author = {Radenovic, Filip and Dubey, Abhimanyu and Kadian, Abhishek and Mihaylov, Todor and Vandenhende, Simon and Patel, Yash and Wen, Yi and Ramanathan, Vignesh and Mahajan, Dhruv},\n  journal = {arXiv:2301.02280},\n  year = {2023}\n}",
+      "normalized_value": "@article{rdk+23, title = {Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training}, author = {Radenovic, Filip and Dubey, Abhimanyu and Kadian, Abhishek and Mihaylov, Todor and Vandenhende, Simon and Patel, Yash and Wen, Yi and Ramanathan, Vignesh and Mahajan, Dhruv}, journal = {arXiv:2301.02280}, year = {2023} }",
+      "evidence": "@article{rdk+23,\n  title = {Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training},\n  author = {Radenovic, Filip and Dubey, Abhimanyu and Kadian, Abhishek and Mihaylov, Todor and Vandenhende, Simon and Patel, Yash and Wen, Yi and Ramanathan, Vignesh and Mahajan, Dhruv},\n  journal = {arXiv:2301.02280},\n  year = {2023}\n}",
+      "evidence_location": "103-108",
+      "confidence": "high",
+      "reason": "Provides the BibTeX entry for citing the research paper and model."
+    },
+    {
+      "field": "copyright",
+      "value": "Copyright (c) Meta Platforms, Inc. and affiliates.",
+      "normalized_value": "Copyright (c) Meta Platforms, Inc. and affiliates.",
+      "evidence": "Copyright (c) Meta Platforms, Inc. and affiliates.",
+      "evidence_location": "113",
+      "confidence": "high",
+      "reason": "Specifies the copyright owner of the repository."
+    }
+  ]
+}

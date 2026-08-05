@@ -1,0 +1,364 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "tcn3r",
+      "normalized_value": "tcn3r",
+      "evidence": "# tcn3r",
+      "evidence_location": "1 (title)",
+      "confidence": "high",
+      "reason": "Names the artifact for identification and indexing."
+    },
+    {
+      "field": "purpose",
+      "value": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "normalized_value": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "evidence": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly states the artifact's purpose and data representation."
+    },
+    {
+      "field": "related_article_url",
+      "value": "https://arxiv.org/pdf/2002.08103.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2002.08103.pdf",
+      "evidence": "[the related article](https://arxiv.org/pdf/2002.08103.pdf)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Provides a detailed description of the motivation and algorithms."
+    },
+    {
+      "field": "citation_reference",
+      "value": "Pierre Monnin, Miguel Couceiro, Amedeo Napoli, and Adrien Coulet. \"Knowledge-Based\nMatching of n-ary Tuples\". In: Ontologies and Concepts in Mind and Machine - 25th\nInternational Conference on Conceptual Structures, ICCS 2020, Bolzano, Italy, September\n18–20, 2020, Proceedings. Ed. by Mehwish Alam, Tanya Braun, and Bruno Yun. Vol. 12277.\nLecture Notes in Computer Science. Springer, 2020, pp. 48–56. doi: 10.1007/978-3-030-\n57855-8_4. url: https://doi.org/10.1007/978-3-030-57855-8_4.",
+      "normalized_value": "Pierre Monnin, Miguel Couceiro, Amedeo Napoli, and Adrien Coulet. \"Knowledge-Based Matching of n-ary Tuples\". In: Ontologies and Concepts in Mind and Machine - 25th International Conference on Conceptual Structures, ICCS 2020, Bolzano, Italy, September 18–20, 2020, Proceedings. Ed. by Mehwish Alam, Tanya Braun, and Bruno Yun. Vol. 12277. Lecture Notes in Computer Science. Springer, 2020, pp. 48–56. doi: 10.1007/978-3-030- 57855-8_4. url: https://doi.org/10.1007/978-3-030-57855-8_4.",
+      "evidence": "Pierre Monnin, Miguel Couceiro, Amedeo Napoli, and Adrien Coulet. \"Knowledge-Based\nMatching of n-ary Tuples\". In: Ontologies and Concepts in Mind and Machine - 25th\nInternational Conference on Conceptual Structures, ICCS 2020, Bolzano, Italy, September\n18–20, 2020, Proceedings. Ed. by Mehwish Alam, Tanya Braun, and Bruno Yun. Vol. 12277.\nLecture Notes in Computer Science. Springer, 2020, pp. 48–56. doi: 10.1007/978-3-030-\n57855-8_4. url: https://doi.org/10.1007/978-3-030-57855-8_4.",
+      "evidence_location": "11-16 (Citing tcn3r)",
+      "confidence": "high",
+      "reason": "Supplies an explicit reusable bibliographic reference for the artifact."
+    },
+    {
+      "field": "batch_execution_scope",
+      "value": "Executes reconciliation rules on every pair of relationships in the triplestore.",
+      "normalized_value": "Executes reconciliation rules on every pair of relationships in the triplestore.",
+      "evidence": "Executes reconciliation rules on every pair of relationships in the triplestore.",
+      "evidence_location": "43-45 (batch mode)",
+      "confidence": "high",
+      "reason": "Defines what batch execution processes."
+    },
+    {
+      "field": "batch_command",
+      "value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads",
+      "normalized_value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads",
+      "evidence": "```bash\ntcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads\n```",
+      "evidence_location": "49-51 (Execution (without Docker), batch mode)",
+      "confidence": "high",
+      "reason": "Provides the documented command for running batch reconciliation without Docker."
+    },
+    {
+      "field": "simlimit",
+      "value": "Minimum similarity on non-empty aggregated dimensions to consider relations as related (< 0 to disable)",
+      "normalized_value": "Minimum similarity on non-empty aggregated dimensions to consider relations as related (< 0 to disable)",
+      "evidence": "* *SL*: Minimum similarity on non-empty aggregated dimensions to consider relations as related (< 0 to disable)",
+      "evidence_location": "57",
+      "confidence": "high",
+      "reason": "Explains the similarity threshold used by the command."
+    },
+    {
+      "field": "complimit",
+      "value": "Minimum number of non-empty comparable aggregated dimensions to consider relations as related (< 0 to disable)",
+      "normalized_value": "Minimum number of non-empty comparable aggregated dimensions to consider relations as related (< 0 to disable)",
+      "evidence": "* *CL*: Minimum number of non-empty comparable aggregated dimensions to consider relations as related (< 0 to disable)",
+      "evidence_location": "58",
+      "confidence": "high",
+      "reason": "Explains the comparable-dimension threshold used by the command."
+    },
+    {
+      "field": "dimensionlimit",
+      "value": "Minimum number of non-empty aggregated dimensions to apply simlimit or complimit (< 0 to disable)",
+      "normalized_value": "Minimum number of non-empty aggregated dimensions to apply simlimit or complimit (< 0 to disable)",
+      "evidence": "* *DL*: Minimum number of non-empty aggregated dimensions to apply simlimit or complimit (< 0 to disable)",
+      "evidence_location": "59",
+      "confidence": "high",
+      "reason": "Explains when the similarity and comparability limits are applied."
+    },
+    {
+      "field": "max_rows",
+      "value": "Max number of rows the SPARQL endpoint can return for a query",
+      "normalized_value": "Max number of rows the SPARQL endpoint can return for a query",
+      "evidence": "* *MR*: Max number of rows the SPARQL endpoint can return for a query",
+      "evidence_location": "60",
+      "confidence": "high",
+      "reason": "Documents the query result-size limit needed for execution."
+    },
+    {
+      "field": "thread_parameter",
+      "value": "number of threads to use when comparing relations (e.g., 8)",
+      "normalized_value": "number of threads to use when comparing relations (e.g., 8)",
+      "evidence": "* *threads*: number of threads to use when comparing relations (e.g., 8)",
+      "evidence_location": "61",
+      "confidence": "high",
+      "reason": "Defines the parallelism parameter for comparisons."
+    },
+    {
+      "field": "docker_command",
+      "value": "docker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4",
+      "normalized_value": "docker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4",
+      "evidence": "```bash\ndocker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4\n```",
+      "evidence_location": "65-69 (Execution (in Docker))",
+      "confidence": "high",
+      "reason": "Provides a reproducible Docker invocation with concrete execution parameters."
+    },
+    {
+      "field": "docker_data_directory",
+      "value": "/data",
+      "normalized_value": "/data",
+      "evidence": "The ``data`` subdirectory of the current directory is shared with the Docker container as ``/data``.\nIt is expected that the JSON configuration file is in this directory.\n``/data`` is also the directory where the output TTL file will be stored.",
+      "evidence_location": "71-73 (Execution (in Docker))",
+      "confidence": "high",
+      "reason": "Explains the Docker volume mapping and locations for configuration and output."
+    },
+    {
+      "field": "batch_output_file",
+      "value": "output.ttl",
+      "normalized_value": "output.ttl",
+      "evidence": "* *output.ttl*: is the path to the output TTL file where the generated links between relationships will be stored",
+      "evidence_location": "56",
+      "confidence": "high",
+      "reason": "Identifies the batch result file and its contents."
+    },
+    {
+      "field": "explain_command",
+      "value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR --explain true",
+      "normalized_value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR --explain true",
+      "evidence": "```bash\ntcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR --explain true\n```",
+      "evidence_location": "81-83 (Execution (without Docker), explain mode)",
+      "confidence": "high",
+      "reason": "Provides the documented command for interactive explanation mode."
+    },
+    {
+      "field": "explain_interaction",
+      "value": "URIs of relations to compare will be asked interactively.",
+      "normalized_value": "URIs of relations to compare will be asked interactively.",
+      "evidence": "URIs of relations to compare will be asked interactively.",
+      "evidence_location": "94 (explain mode)",
+      "confidence": "high",
+      "reason": "Describes the interactive input required by explain mode."
+    },
+    {
+      "field": "explain_docker_support",
+      "value": "Not available.",
+      "normalized_value": "Not available.",
+      "evidence": "#### Execution (in Docker)\n\nNot available.",
+      "evidence_location": "96-98 (explain mode)",
+      "confidence": "high",
+      "reason": "States that Docker execution is unavailable for explain mode."
+    },
+    {
+      "field": "explain_output_file",
+      "value": "output.txt",
+      "normalized_value": "output.txt",
+      "evidence": "* *output.txt*: is the path to the output text file where explanations of links between relationships will be stored",
+      "evidence_location": "88",
+      "confidence": "medium",
+      "reason": "The explain-mode description names output.txt, while the command shown in lines 81-82 uses output.ttl, creating a documented path inconsistency."
+    },
+    {
+      "field": "configuration_format",
+      "value": "JSON",
+      "normalized_value": "JSON",
+      "evidence": "### Configuration JSON file",
+      "evidence_location": "102",
+      "confidence": "high",
+      "reason": "Identifies the required configuration format."
+    },
+    {
+      "field": "configuration_example",
+      "value": "data/conf.json.example",
+      "normalized_value": "data/conf.json.example",
+      "evidence": "[An example is provided](data/conf.json.example)",
+      "evidence_location": "104",
+      "confidence": "high",
+      "reason": "Provides the example configuration path needed for setup."
+    },
+    {
+      "field": "sparql_endpoint",
+      "value": "http://pgxlod.loria.fr/sparql",
+      "normalized_value": "http://pgxlod.loria.fr/sparql",
+      "evidence": "\"server-address\": \"http://pgxlod.loria.fr/sparql\"",
+      "evidence_location": "109 (configuration example)",
+      "confidence": "high",
+      "reason": "Identifies the SPARQL endpoint used by the example configuration."
+    },
+    {
+      "field": "http_request_timeout",
+      "value": "10000000",
+      "normalized_value": "10000000",
+      "evidence": "\"timeout\": 10000000,",
+      "evidence_location": "115 (configuration example)",
+      "confidence": "high",
+      "reason": "Provides the example HTTP request timeout."
+    },
+    {
+      "field": "configured_relation_type",
+      "value": "http://pgxo.loria.fr/PharmacogenomicRelationship",
+      "normalized_value": "http://pgxo.loria.fr/PharmacogenomicRelationship",
+      "evidence": "\"http://pgxo.loria.fr/PharmacogenomicRelationship\"",
+      "evidence_location": "116-118 (configuration example)",
+      "confidence": "high",
+      "reason": "Identifies the relationship class configured for reconciliation."
+    },
+    {
+      "field": "supported_preorders",
+      "value": "_SetInclusion_: set inclusion preorder; _Individuals_: preorder between individuals; _Annotations_: preorder based on annotations of individuals",
+      "normalized_value": "_SetInclusion_: set inclusion preorder; _Individuals_: preorder between individuals; _Annotations_: preorder based on annotations of individuals",
+      "evidence": "* _preorder_: preorder to use for comparison on this dimension. Potential values:\n    * _SetInclusion_: set inclusion preorder\n    * _Individuals_: preorder between individuals, must be specified:\n      * _ind-leq-predicates_: list of predicates indicating that an individual is lower or equal than another. Subproperties will be considered as well.\n      * _ind-leq-predicates_: list of predciates indicating that an individual is greater or equal than another. Subproperties will be considered as well.\n    * _Annotations_: preorder based on annotations of individuals, must be specified:\n      * _ann-base-uris_: prefixes of URIs of annotations to consider\n      * _ind2ann-predicates_: predicates linking elements of this dimension to their annotations. Subproperties will be considered as well.\n      * _ann-leq-predicates_: predicates indicating that an annotation is lower or equal than another. Subproperties will be considered as well.\n      * _ann-geq-predicates_: predicates indicating that an annotation is greater or equal than another. Subproperties will be considered as well.",
+      "evidence_location": "216-225 (configuration schema)",
+      "confidence": "high",
+      "reason": "Documents the preorder strategies available for dimension comparison."
+    },
+    {
+      "field": "genetic_factor_preorder",
+      "value": "Individuals",
+      "normalized_value": "Individuals",
+      "evidence": "        \"GeneticFactor\": {\n            \"ind-types\": [\n                \"http://pgxo.loria.fr/GeneticFactor\"\n            ],\n            \"rel2ind-predicates\": [\n                \"http://pgxo.loria.fr/isAssociatedWith\",\n                \"http://pgxo.loria.fr/isNotAssociatedWith\"\n            ],\n            \"ind2dep-predicates\": [\n            ],\n            \"preorder\": \"Individuals\",",
+      "evidence_location": "120-130 (configuration example)",
+      "confidence": "high",
+      "reason": "Shows the preorder configured for the GeneticFactor dimension."
+    },
+    {
+      "field": "drug_preorder",
+      "value": "Annotations",
+      "normalized_value": "Annotations",
+      "evidence": "        \"Drug\": {\n            \"ind-types\": [\n                \"http://pgxo.loria.fr/Drug\"\n            ],\n            \"rel2ind-predicates\": [\n                \"http://pgxo.loria.fr/isAssociatedWith\",\n                \"http://pgxo.loria.fr/isNotAssociatedWith\"\n            ],\n            \"ind2dep-predicates\": [\n            ],\n            \"preorder\": \"Annotations\",",
+      "evidence_location": "138-148 (configuration example)",
+      "confidence": "high",
+      "reason": "Shows the preorder configured for the Drug dimension."
+    },
+    {
+      "field": "phenotype_preorder",
+      "value": "Annotations",
+      "normalized_value": "Annotations",
+      "evidence": "        \"Phenotype\": {\n            \"ind-types\": [\n                \"http://pgxo.loria.fr/Phenotype\"\n            ],\n            \"rel2ind-predicates\": [\n                \"http://pgxo.loria.fr/isAssociatedWith\",\n                \"http://pgxo.loria.fr/isNotAssociatedWith\"\n            ],\n            \"ind2dep-predicates\": [\n                \"http://purl.obolibrary.org/obo/RO_0002502\"\n            ],\n            \"preorder\": \"Annotations\",",
+      "evidence_location": "166-177 (configuration example)",
+      "confidence": "high",
+      "reason": "Shows the preorder configured for the Phenotype dimension."
+    },
+    {
+      "field": "output_predicate_equal",
+      "value": "http://www.w3.org/2002/07/owl#sameAs",
+      "normalized_value": "http://www.w3.org/2002/07/owl#sameAs",
+      "evidence": "\"output-pred-equal\": \"http://www.w3.org/2002/07/owl#sameAs\",",
+      "evidence_location": "193 (configuration example)",
+      "confidence": "high",
+      "reason": "Identifies the predicate used for equal relationships in generated output."
+    },
+    {
+      "field": "output_predicate_equivalent",
+      "value": "http://www.w3.org/2004/02/skos/core#closeMatch",
+      "normalized_value": "http://www.w3.org/2004/02/skos/core#closeMatch",
+      "evidence": "\"output-pred-equiv\": \"http://www.w3.org/2004/02/skos/core#closeMatch\",",
+      "evidence_location": "194 (configuration example)",
+      "confidence": "high",
+      "reason": "Identifies the predicate used for equivalent relationships."
+    },
+    {
+      "field": "output_predicate_lower_equal",
+      "value": "http://www.w3.org/2004/02/skos/core#broadMatch",
+      "normalized_value": "http://www.w3.org/2004/02/skos/core#broadMatch",
+      "evidence": "\"output-pred-leq\": \"http://www.w3.org/2004/02/skos/core#broadMatch\",",
+      "evidence_location": "195 (configuration example)",
+      "confidence": "high",
+      "reason": "Identifies the predicate used for lower-or-equal relationships."
+    },
+    {
+      "field": "output_predicate_greater_equal",
+      "value": "http://www.w3.org/2004/02/skos/core#narrowMatch",
+      "normalized_value": "http://www.w3.org/2004/02/skos/core#narrowMatch",
+      "evidence": "\"output-pred-geq\": \"http://www.w3.org/2004/02/skos/core#narrowMatch\",",
+      "evidence_location": "196 (configuration example)",
+      "confidence": "high",
+      "reason": "Identifies the predicate used for greater-or-equal relationships."
+    },
+    {
+      "field": "output_predicate_comparable",
+      "value": "http://www.w3.org/2004/02/skos/core#relatedMatch",
+      "normalized_value": "http://www.w3.org/2004/02/skos/core#relatedMatch",
+      "evidence": "\"output-pred-comparable\": \"http://www.w3.org/2004/02/skos/core#relatedMatch\",",
+      "evidence_location": "197 (configuration example)",
+      "confidence": "high",
+      "reason": "Identifies the predicate used for comparable relationships."
+    },
+    {
+      "field": "output_predicate_dependency_related",
+      "value": "http://www.w3.org/2004/02/skos/core#related",
+      "normalized_value": "http://www.w3.org/2004/02/skos/core#related",
+      "evidence": "\"output-pred-dependency-related\": \"http://www.w3.org/2004/02/skos/core#related\"",
+      "evidence_location": "198 (configuration example)",
+      "confidence": "high",
+      "reason": "Identifies the configured predicate for dependency-related output relationships."
+    },
+    {
+      "field": "test_ontology",
+      "value": "test/pgxo+test.owl",
+      "normalized_value": "test/pgxo+test.owl",
+      "evidence": "[test/pgxo+test.owl](test/pgxo+test.owl)",
+      "evidence_location": "235",
+      "confidence": "high",
+      "reason": "Provides the ontology test input to import into a triplestore."
+    },
+    {
+      "field": "test_import_requirement",
+      "value": "It should be imported in a triplestore.",
+      "normalized_value": "It should be imported in a triplestore.",
+      "evidence": "It should be imported in a triplestore.",
+      "evidence_location": "236",
+      "confidence": "high",
+      "reason": "States the setup step required before running the test."
+    },
+    {
+      "field": "test_configuration",
+      "value": "test/test-conf.json",
+      "normalized_value": "test/test-conf.json",
+      "evidence": "[test/test-conf.json](test/test-conf.json)",
+      "evidence_location": "237",
+      "confidence": "high",
+      "reason": "Provides the configuration file for the documented test run."
+    },
+    {
+      "field": "test_parameters",
+      "value": "--simlimit 0.85 --complimit 3 --dimensionlimit 3",
+      "normalized_value": "--simlimit 0.85 --complimit 3 --dimensionlimit 3",
+      "evidence": "``--simlimit 0.85 --complimit 3 --dimensionlimit 3``",
+      "evidence_location": "237-238",
+      "confidence": "high",
+      "reason": "Provides concrete thresholds for reproducing the test."
+    },
+    {
+      "field": "test_case_documentation",
+      "value": "test/documentation-tests.pdf",
+      "normalized_value": "test/documentation-tests.pdf",
+      "evidence": "[test/documentation-tests.pdf](test/documentation-tests.pdf)",
+      "evidence_location": "240",
+      "confidence": "high",
+      "reason": "Links to documentation describing the test cases."
+    },
+    {
+      "field": "expected_test_output",
+      "value": "test/expected-output.ttl",
+      "normalized_value": "test/expected-output.ttl",
+      "evidence": "[test/expected-output.ttl](test/expected-output.ttl)",
+      "evidence_location": "241",
+      "confidence": "high",
+      "reason": "Provides the sorted expected results for evaluating a test run."
+    },
+    {
+      "field": "dependencies",
+      "value": "C++17; boost; libcurl; OpenMP",
+      "normalized_value": "C++17; boost; libcurl; OpenMP",
+      "evidence": "* C++17\n* boost\n* libcurl\n* OpenMP",
+      "evidence_location": "243-248 (Dependencies)",
+      "confidence": "high",
+      "reason": "Lists the implementation and build dependencies needed to reproduce the artifact."
+    }
+  ]
+}

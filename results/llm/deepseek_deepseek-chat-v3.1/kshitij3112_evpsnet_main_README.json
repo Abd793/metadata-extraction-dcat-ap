@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "EvPSNet: Evidential Panoptic Segmentation Network for Uncertainy-aware Panoptic Segmentation",
+      "normalized_value": "EvPSNet: Evidential Panoptic Segmentation Network for Uncertainy-aware Panoptic Segmentation",
+      "evidence": "# EvPSNet: Evidential Panoptic Segmentation Network for Uncertainy-aware Panoptic Segmentation",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Provides the official name and full title of the artifact"
+    },
+    {
+      "field": "purpose",
+      "value": "tackle the task of uncertainty-aware panoptic segmentation, with an aim to provide per-pixel semantic and instance label together with per-pixel panoptic uncertainty estimation",
+      "normalized_value": "tackle the task of uncertainty-aware panoptic segmentation, with an aim to provide per-pixel semantic and instance label together with per-pixel panoptic uncertainty estimation",
+      "evidence": "EvPSNet is the first approach to tackle the task of uncertainty-aware panoptic segmentation, with an aim to provide per-pixel semantic and instance label together with per-pixel panoptic uncertainty estimation.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Clearly states the purpose and technical goal of the artifact"
+    },
+    {
+      "field": "implementation_framework",
+      "value": "PyTorch implementation",
+      "normalized_value": "PyTorch implementation",
+      "evidence": "This repository contains the **PyTorch implementation** of our RAL'2023 paper",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Specifies the implementation framework which is crucial for reproduction"
+    },
+    {
+      "field": "paper_title",
+      "value": "Uncertainty-aware Panoptic Segmentation",
+      "normalized_value": "Uncertainty-aware Panoptic Segmentation",
+      "evidence": "[Uncertainty-aware Panoptic Segmentation](https://arxiv.org/abs/2206.14554)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Provides the title of the associated research paper"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2206.14554",
+      "normalized_value": "https://arxiv.org/abs/2206.14554",
+      "evidence": "[Uncertainty-aware Panoptic Segmentation](https://arxiv.org/abs/2206.14554)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Provides direct link to the research paper"
+    },
+    {
+      "field": "citation",
+      "value": "@article{sirohi2023uncertainty,\n  title={Uncertainty-aware panoptic segmentation},\n  author={Sirohi, Kshitij and Marvi, Sajad and B{\"u}scher, Daniel and Burgard, Wolfram},\n  journal={IEEE Robotics and Automation Letters},\n  volume={8},\n  number={5},\n  pages={2629--2636},\n  year={2023},\n  publisher={IEEE}\n}",
+      "normalized_value": "@article{sirohi2023uncertainty, title={Uncertainty-aware panoptic segmentation}, author={Sirohi, Kshitij and Marvi, Sajad and B{\"u}scher, Daniel and Burgard, Wolfram}, journal={IEEE Robotics and Automation Letters}, volume={8}, number={5}, pages={2629--2636}, year={2023}, publisher={IEEE}",
+      "evidence": "@article{sirohi2023uncertainty,\n  title={Uncertainty-aware panoptic segmentation},\n  author={Sirohi, Kshitij and Marvi, Sajad and B{\"u}scher, Daniel and Burgard, Wolfram},\n  journal={IEEE Robotics and Automation Letters},\n  volume={8},\n  number={5},\n  pages={2629--2636},\n  year={2023},\n  publisher={IEEE}\n}",
+      "evidence_location": "11-21",
+      "confidence": "high",
+      "reason": "Provides complete BibTeX citation for proper academic attribution"
+    },
+    {
+      "field": "system_requirements",
+      "value": "Linux, Python 3.7, PyTorch 1.7, CUDA 10.2, GCC 7 or 8",
+      "normalized_value": "Linux, Python 3.7, PyTorch 1.7, CUDA 10.2, GCC 7 or 8",
+      "evidence": "* Linux \n* Python 3.7\n* PyTorch 1.7\n* CUDA 10.2\n* GCC 7 or 8",
+      "evidence_location": "24-28",
+      "confidence": "high",
+      "reason": "Lists specific system requirements for running the code"
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/kshitij3112/EvPSNet.git",
+      "normalized_value": "https://github.com/kshitij3112/EvPSNet.git",
+      "evidence": "git clone https://github.com/kshitij3112/EvPSNet.git",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Provides the GitHub repository URL for accessing the code"
+    },
+    {
+      "field": "installation_commands",
+      "value": "conda env create -n EvPSnet_env --file=environment.yml\nconda activate EvPSnet_env\npip install -r requirements.txt\ncd efficientNet\npython setup.py develop\ncd ..\npython setup.py develop",
+      "normalized_value": "conda env create -n EvPSnet_env --file=environment.yml conda activate EvPSnet_env pip install -r requirements.txt cd efficientNet python setup.py develop cd .. python setup.py develop",
+      "evidence": "conda env create -n EvPSnet_env --file=environment.yml\nconda activate EvPSnet_env\n```\nb. Install all other dependencies using pip:\n```bash\npip install -r requirements.txt\n```\nc. Install EfficientNet implementation\n```bash\ncd efficientNet\npython setup.py develop\n```\nd. Install EvPSNet implementation\n```bash\ncd ..\npython setup.py develop\n```",
+      "evidence_location": "37-53",
+      "confidence": "high",
+      "reason": "Provides complete installation commands for setting up the environment"
+    },
+    {
+      "field": "dataset",
+      "value": "cityscapes",
+      "normalized_value": "cityscapes",
+      "evidence": "data\n    └── cityscapes",
+      "evidence_location": "63-64",
+      "confidence": "medium",
+      "reason": "Indicates Cityscapes dataset is used, though not explicitly stated as the primary dataset"
+    },
+    {
+      "field": "dataset_preparation_commands",
+      "value": "python tools/convert_cityscapes.py ROOT_DIRECTORY_OF_CITYSCAPES ./data/cityscapes/\ncd ..\ngit clone https://github.com/mcordts/cityscapesScripts.git\ncd cityscapesScripts/cityscapesscripts/preparation\npython createPanopticImgs.py --dataset-folder path_to_cityscapes_gtFine_folder --output-folder ../../../EvPSNet/data/cityscapes --set-names val",
+      "normalized_value": "python tools/convert_cityscapes.py ROOT_DIRECTORY_OF_CITYSCAPES ./data/cityscapes/ cd .. git clone https://github.com/mcordts/cityscapesScripts.git cd cityscapesScripts/cityscapesscripts/preparation python createPanopticImgs.py --dataset-folder path_to_cityscapes_gtFine_folder --output-folder ../../../EvPSNet/data/cityscapes --set-names val",
+      "evidence": "python tools/convert_cityscapes.py ROOT_DIRECTORY_OF_CITYSCAPES ./data/cityscapes/\ncd ..\ngit clone https://github.com/mcordts/cityscapesScripts.git\ncd cityscapesScripts/cityscapesscripts/preparation\npython createPanopticImgs.py --dataset-folder path_to_cityscapes_gtFine_folder --output-folder ../../../EvPSNet/data/cityscapes --set-names val",
+      "evidence_location": "75-80",
+      "confidence": "high",
+      "reason": "Provides commands for preparing the Cityscapes dataset for training/evaluation"
+    },
+    {
+      "field": "training_commands",
+      "value": "python tools/train.py configs/EvPSNet_unc_singlegpu.py --work_dir work_dirs/checkpoints --validate\n./tools/dist_train.sh configs/EvPSNet_unc_mutigpu.py ${GPU_NUM} --work_dir work_dirs/checkpoints --validate",
+      "normalized_value": "python tools/train.py configs/EvPSNet_unc_singlegpu.py --work_dir work_dirs/checkpoints --validate ./tools/dist_train.sh configs/EvPSNet_unc_mutigpu.py ${GPU_NUM} --work_dir work_dirs/checkpoints --validate",
+      "evidence": "python tools/train.py configs/EvPSNet_unc_singlegpu.py --work_dir work_dirs/checkpoints --validate \n```\nTrain with multiple GPUS:\n```\n./tools/dist_train.sh configs/EvPSNet_unc_mutigpu.py ${GPU_NUM} --work_dir work_dirs/checkpoints --validate",
+      "evidence_location": "87-92",
+      "confidence": "high",
+      "reason": "Provides commands for training the model with single and multiple GPUs"
+    },
+    {
+      "field": "evaluation_commands",
+      "value": "python tools/test.py configs/EvPSNet_unc_singlegpu.py ${CHECKPOINT_FILE} --eval panoptic\n./tools/dist_test.sh configs/EvPSNet_unc_mutigpu.py ${CHECKPOINT_FILE} ${GPU_NUM} --eval panoptic",
+      "normalized_value": "python tools/test.py configs/EvPSNet_unc_singlegpu.py ${CHECKPOINT_FILE} --eval panoptic ./tools/dist_test.sh configs/EvPSNet_unc_mutigpu.py ${CHECKPOINT_FILE} ${GPU_NUM} --eval panoptic",
+      "evidence": "python tools/test.py configs/EvPSNet_unc_singlegpu.py ${CHECKPOINT_FILE} --eval panoptic\n```\nTest with multiple GPUS:\n```\n./tools/dist_test.sh configs/EvPSNet_unc_mutigpu.py ${CHECKPOINT_FILE} ${GPU_NUM} --eval panoptic",
+      "evidence_location": "97-102",
+      "confidence": "high",
+      "reason": "Provides commands for evaluating the model with panoptic segmentation metrics"
+    },
+    {
+      "field": "evaluation_metric",
+      "value": "panoptic",
+      "normalized_value": "panoptic",
+      "evidence": "--eval panoptic",
+      "evidence_location": "97, 101",
+      "confidence": "high",
+      "reason": "Specifies the evaluation metric used for testing the model"
+    },
+    {
+      "field": "license",
+      "value": "GPLv3",
+      "normalized_value": "GPLv3",
+      "evidence": "the code is released under the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) license",
+      "evidence_location": "122",
+      "confidence": "high",
+      "reason": "Specifies the license for academic use, important for legal reuse"
+    },
+    {
+      "field": "license_terms",
+      "value": "For academic usage, the code is released under the GPLv3 license. For any commercial purpose, please contact the authors.",
+      "normalized_value": "For academic usage, the code is released under the GPLv3 license. For any commercial purpose, please contact the authors.",
+      "evidence": "For academic usage, the code is released under the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) license. For any commercial purpose, please contact the authors.",
+      "evidence_location": "122",
+      "confidence": "high",
+      "reason": "Clarifies usage restrictions and commercial licensing requirements"
+    },
+    {
+      "field": "contact_people",
+      "value": "Kshitij Sirohi, Sajad Marvi, Daniel Büscher",
+      "normalized_value": "Kshitij Sirohi, Sajad Marvi, Daniel Büscher",
+      "evidence": "* [Kshitij Sirohi](http://www2.informatik.uni-freiburg.de/~sirohik/)\n* [Sajad Marvi](http://www2.informatik.uni-freiburg.de/~sirohik/)\n* [Daniel Büscher](http://www2.informatik.uni-freiburg.de/~buescher/)",
+      "evidence_location": "117-119",
+      "confidence": "high",
+      "reason": "Provides contact information for the authors/maintainers"
+    },
+    {
+      "field": "based_on",
+      "value": "EfficientPS, mmdetection, gen-efficientnet-pytorch",
+      "normalized_value": "EfficientPS, mmdetection, gen-efficientnet-pytorch",
+      "evidence": "The repository builds on [EfficientPS](https://github.com/DeepSceneSeg/EfficientPS), [mmdetection](https://github.com/open-mmlab/mmdetection) and [gen-efficientnet-pytorch](https://github.com/rwightman/gen-efficientnet-pytorch) codebases.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Identifies foundational codebases which is important for understanding dependencies and architecture"
+    }
+  ]
+}

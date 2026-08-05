@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Trainable Highly-expressive Activation Functions",
+      "normalized_value": "Trainable Highly-expressive Activation Functions",
+      "evidence": "# Trainable Highly-expressive Activation Functions [ECCV 2024]",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Names the artifact/paper, useful for identification and search."
+    },
+    {
+      "field": "publication_venue",
+      "value": "ECCV 2024",
+      "normalized_value": "ECCV 2024",
+      "evidence": "# Trainable Highly-expressive Activation Functions [ECCV 2024]",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Indicates the conference and year where the work was published."
+    },
+    {
+      "field": "authors",
+      "value": "Irit Chelly, Shahaf E. Finder, Shira Ifergane, and Oren Freifeld",
+      "normalized_value": "Irit Chelly, Shahaf E. Finder, Shira Ifergane, and Oren Freifeld",
+      "evidence": "[Irit Chelly*](https://irita42.wixsite.com/mysite), [Shahaf E. Finder*](https://shahaffind.github.io/), [Shira Ifergane](https://www.linkedin.com/in/shira-ifergane/), and [Oren Freifeld](https://www.cs.bgu.ac.il/~orenfr/).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Author list with personal page links, useful for attribution and contact."
+    },
+    {
+      "field": "arxiv_link",
+      "value": "https://arxiv.org/abs/2407.07564",
+      "normalized_value": "https://arxiv.org/abs/2407.07564",
+      "evidence": "[![arXiv](https://img.shields.io/badge/arXiv-2407.07564-b31b1b.svg?style=flat)](https://arxiv.org/abs/2407.07564)",
+      "evidence_location": "line 5, arXiv badge",
+      "confidence": "high",
+      "reason": "Direct link to the associated paper on arXiv (ID 2407.07564)."
+    },
+    {
+      "field": "python_version",
+      "value": "python 3.12",
+      "normalized_value": "python 3.12",
+      "evidence": "- python 3.12",
+      "evidence_location": "line 8, '### Requirements' section",
+      "confidence": "high",
+      "reason": "Required Python version for reproducing the environment."
+    },
+    {
+      "field": "dependencies",
+      "value": "torch 2.2.2, difw 0.0.29, scikit-learn 1.5.1",
+      "normalized_value": "torch 2.2.2, difw 0.0.29, scikit-learn 1.5.1",
+      "evidence": "- torch 2.2.2 \n- difw 0.0.29\n- scikit-learn 1.5.1",
+      "evidence_location": "lines 9-11, '### Requirements' section",
+      "confidence": "high",
+      "reason": "Pinned dependency versions needed to install and run the code."
+    },
+    {
+      "field": "cuda_version",
+      "value": "cuda version 12.2",
+      "normalized_value": "cuda version 12.2",
+      "evidence": "`difw` can be fragile, make sure that it compiles successfully. We've successfully compiled it with cuda version 12.2.",
+      "evidence_location": "line 13, '### Requirements' section",
+      "confidence": "high",
+      "reason": "CUDA version known to work for compiling the difw dependency; important for environment setup."
+    },
+    {
+      "field": "environment_setup_commands",
+      "value": "conda install cxx-compiler -c conda-forge; export CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH; export LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH; export PATH=/usr/local/cuda-12/bin:$PATH",
+      "normalized_value": "conda install cxx-compiler -c conda-forge; export CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH; export LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH; export PATH=/usr/local/cuda-12/bin:$PATH",
+      "evidence": "```sh\nconda install cxx-compiler -c conda-forge\nexport CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH\nexport LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH\nexport PATH=/usr/local/cuda-12/bin:$PATH\n```",
+      "evidence_location": "lines 16-21, '### Requirements' section, sh code block",
+      "confidence": "high",
+      "reason": "Setup commands for compiler and CUDA paths needed to build the difw dependency."
+    },
+    {
+      "field": "package_name",
+      "value": "ditac",
+      "normalized_value": "ditac",
+      "evidence": "from ditac import DiTAC",
+      "evidence_location": "line 27, '### How to use' section, python code block",
+      "confidence": "high",
+      "reason": "Importable package/module name for using the artifact in code."
+    },
+    {
+      "field": "main_class",
+      "value": "DiTAC",
+      "normalized_value": "DiTAC",
+      "evidence": "You can import the activation layer and use it within your network.\n```python\nimport torch\nfrom ditac import DiTAC\n\nact = DiTAC()\nx = torch.randn(8,32,20,20).to('cuda')\n\nact(x)\n```",
+      "evidence_location": "lines 24-33, '### How to use' section, python code block",
+      "confidence": "high",
+      "reason": "The trainable activation layer class provided by the artifact, with usage example."
+    },
+    {
+      "field": "reproduction_command",
+      "value": "python run_regression.py",
+      "normalized_value": "python run_regression.py",
+      "evidence": "You can recreate Fig. 1 using the sample code:\n```sh\npython run_regression.py\n```",
+      "evidence_location": "lines 35-38, '### How to use' section, sh code block",
+      "confidence": "high",
+      "reason": "Command to reproduce Figure 1 of the paper, supporting reproducibility."
+    },
+    {
+      "field": "code_availability_note",
+      "value": "Other experiments' code will be uploaded soon",
+      "normalized_value": "Other experiments' code will be uploaded soon",
+      "evidence": "**Other experiments' code will be uploaded soon**",
+      "evidence_location": "line 40",
+      "confidence": "high",
+      "reason": "Indicates that full experiment code is not yet available, relevant for reproducibility expectations."
+    },
+    {
+      "field": "license",
+      "value": "MIT license",
+      "normalized_value": "MIT license",
+      "evidence": "This project is released under the MIT license. Please see the [LICENSE](LICENSE) file for more information.",
+      "evidence_location": "line 43, '## License' section",
+      "confidence": "high",
+      "reason": "Legal terms governing reuse of the code."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{Chelly:ECCV:2024DiTAC,\n  title     = {Trainable Highly-expressive Activation Functions},\n  author    = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren},\n  booktitle = {European Conference on Computer Vision},\n  year      = {2024},\n}",
+      "normalized_value": "@inproceedings{Chelly:ECCV:2024DiTAC,\n  title     = {Trainable Highly-expressive Activation Functions},\n  author    = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren},\n  booktitle = {European Conference on Computer Vision},\n  year      = {2024},\n}",
+      "evidence": "```\n@inproceedings{Chelly:ECCV:2024DiTAC,\n  title     = {Trainable Highly-expressive Activation Functions},\n  author    = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren},\n  booktitle = {European Conference on Computer Vision},\n  year      = {2024},\n}\n```",
+      "evidence_location": "lines 48-55, '## Citation' section, code block",
+      "confidence": "high",
+      "reason": "Official BibTeX entry for citing the paper."
+    },
+    {
+      "field": "related_works_citations",
+      "value": "@inproceedings{martinez2022closed (Closed-form diffeomorphic transformations for time series alignment, ICML 2022); @article{freifeld2017transformations (Transformations based on continuous piecewise-affine velocity fields, IEEE TPAMI 2017)",
+      "normalized_value": "@inproceedings{martinez2022closed (Closed-form diffeomorphic transformations for time series alignment, ICML 2022); @article{freifeld2017transformations (Transformations based on continuous piecewise-affine velocity fields, IEEE TPAMI 2017)",
+      "evidence": "Please also consider citing previous works:\n```\n@inproceedings{martinez2022closed,\n  title={Closed-form diffeomorphic transformations for time series alignment},\n  author={Martinez, I{\\~n}igo and Viles, Elisabeth and Olaizola, Igor G},\n  booktitle={International Conference on Machine Learning},\n  pages={15122--15158},\n  year={2022},\n  organization={PMLR}\n}\n\n@article{freifeld2017transformations,\n  title={Transformations based on continuous piecewise-affine velocity fields},\n  author={Freifeld, Oren and Hauberg, S{\\o}ren and Batmanghelich, Kayhan and Fisher, Jonn W},\n  journal={IEEE transactions on pattern analysis and machine intelligence},\n  volume={39},\n  number={12},\n  pages={2496--2509},\n  year={2017},\n  publisher={IEEE}\n}\n```",
+      "evidence_location": "lines 56-77, '## Citation' section, code block",
+      "confidence": "high",
+      "reason": "Prior works the authors request to be cited, indicating the methodological foundations of the artifact."
+    }
+  ]
+}

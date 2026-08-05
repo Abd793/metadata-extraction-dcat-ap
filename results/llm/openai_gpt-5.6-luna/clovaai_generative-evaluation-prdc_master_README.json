@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Reliable Fidelity and Diversity Metrics for Generative Models (ICML 2020)",
+      "normalized_value": "Reliable Fidelity and Diversity Metrics for Generative Models (ICML 2020)",
+      "evidence": "## Reliable Fidelity and Diversity Metrics for Generative Models (ICML 2020)",
+      "evidence_location": "5; header",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its publication venue and year."
+    },
+    {
+      "field": "purpose",
+      "value": "We propose density and coverage metrics that solve the above issues. We analytically and experimentally show that density and coverage provide more interpretable and reliable signals for practitioners than the existing metrics.",
+      "normalized_value": "We propose density and coverage metrics that solve the above issues. We analytically and experimentally show that density and coverage provide more interpretable and reliable signals for practitioners than the existing metrics.",
+      "evidence": "In this paper, we show that even the latest version of the precision and recall (Kynk&auml;&auml;nniemi et al., 2019) metrics are not reliable yet. For example, they fail to detect the match between two identical distributions, they are not robust against outliers, and the evaluation hyperparameters are selected arbitrarily. We propose **density and coverage** metrics that solve the above issues. We analytically and experimentally show that density and coverage provide more interpretable and reliable signals for practitioners than the existing metrics.",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Explicitly states the problem addressed and the proposed metrics."
+    },
+    {
+      "field": "task",
+      "value": "image generation task",
+      "normalized_value": "image generation task",
+      "evidence": "Devising indicative evaluation metrics for the image generation task remains an open problem.",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Specifies the application task evaluated by the artifact."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2002.09797",
+      "normalized_value": "https://arxiv.org/abs/2002.09797",
+      "evidence": "[Paper: Reliable Fidelity and Diversity Metrics for Generative Models](https://arxiv.org/abs/2002.09797)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Provides the associated paper for background and reproducibility."
+    },
+    {
+      "field": "authors",
+      "value": "Muhammad Ferjad Naeem, Seong Joon Oh, Yunjey Choi, Youngjung Uh, Jaejun Yoo",
+      "normalized_value": "Muhammad Ferjad Naeem, Seong Joon Oh, Yunjey Choi, Youngjung Uh, Jaejun Yoo",
+      "evidence": "Muhammad Ferjad Naeem <sup>1,3*</sup>, Seong Joon Oh<sup>2*</sup>, Yunjey Choi<sup>1</sup>, \nYoungjung Uh<sup>1</sup>, Jaejun Yoo<sup>1,4</sup>  ",
+      "evidence_location": "9-10",
+      "confidence": "high",
+      "reason": "Identifies the listed authors for attribution and citation."
+    },
+    {
+      "field": "package_name",
+      "value": "prdc",
+      "normalized_value": "prdc",
+      "evidence": "```bash\npip3 install prdc\n```",
+      "evidence_location": "84-88; Installation",
+      "confidence": "high",
+      "reason": "Names the installable package used by the artifact."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip3 install prdc",
+      "normalized_value": "pip3 install prdc",
+      "evidence": "```bash\npip3 install prdc\n```",
+      "evidence_location": "86-88; Installation",
+      "confidence": "high",
+      "reason": "Provides the documented installation step."
+    },
+    {
+      "field": "api_function",
+      "value": "compute_prdc",
+      "normalized_value": "compute_prdc",
+      "evidence": "import numpy as np\nfrom prdc import compute_prdc",
+      "evidence_location": "95-98; Example",
+      "confidence": "high",
+      "reason": "Identifies the primary Python function exposed for computing the metrics."
+    },
+    {
+      "field": "usage_command",
+      "value": "metrics = compute_prdc(real_features=real_features,\n                       fake_features=fake_features,\n                       nearest_k=nearest_k)",
+      "normalized_value": "metrics = compute_prdc(real_features=real_features, fake_features=fake_features, nearest_k=nearest_k)",
+      "evidence": "metrics = compute_prdc(real_features=real_features,\n                       fake_features=fake_features,\n                       nearest_k=nearest_k)",
+      "evidence_location": "109-111; Example",
+      "confidence": "high",
+      "reason": "Shows the concrete inference/evaluation call and its required arguments."
+    },
+    {
+      "field": "example_configuration",
+      "value": "num_real_samples = num_fake_samples = 10000\nfeature_dim = 1000\nnearest_k = 5",
+      "normalized_value": "num_real_samples = num_fake_samples = 10000 feature_dim = 1000 nearest_k = 5",
+      "evidence": "num_real_samples = num_fake_samples = 10000\nfeature_dim = 1000\nnearest_k = 5",
+      "evidence_location": "100-102; Example",
+      "confidence": "high",
+      "reason": "Defines the documented sample counts, feature dimensionality, and nearest-neighbor parameter."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "precision, recall, density, and coverage",
+      "normalized_value": "precision, recall, density, and coverage",
+      "evidence": "Set the nearest neighbour `k=5`. We compute precision, recall, density, and coverage estimates below.",
+      "evidence_location": "93; Example",
+      "confidence": "high",
+      "reason": "Lists the metrics computed by the example."
+    },
+    {
+      "field": "example_results",
+      "value": "{'precision': 0.4772,\n 'recall': 0.4705,\n 'density': 1.0555,\n 'coverage': 0.9735}",
+      "normalized_value": "{'precision': 0.4772, 'recall': 0.4705, 'density': 1.0555, 'coverage': 0.9735}",
+      "evidence": "```python\n{'precision': 0.4772,\n 'recall': 0.4705,\n 'density': 1.0555,\n 'coverage': 0.9735}\n```",
+      "evidence_location": "116-121; Example",
+      "confidence": "high",
+      "reason": "Provides concrete reference output for reproducing the documented test."
+    },
+    {
+      "field": "copyright_holder",
+      "value": "NAVER Corp.",
+      "normalized_value": "NAVER Corp.",
+      "evidence": "Copyright (c) 2020-present NAVER Corp.",
+      "evidence_location": "132; License",
+      "confidence": "high",
+      "reason": "Identifies the copyright holder for attribution."
+    },
+    {
+      "field": "license_permissions",
+      "value": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:",
+      "normalized_value": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:",
+      "evidence": "Permission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of\n the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:",
+      "evidence_location": "134-139; License",
+      "confidence": "high",
+      "reason": "States the documented reuse, modification, distribution, and sublicensing permissions."
+    },
+    {
+      "field": "citation",
+      "value": "@article{ferjad2020icml,\n  title = {Reliable Fidelity and Diversity Metrics for Generative Models},\n  author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},\n  year = {2020},\n  booktitle = {International Conference on Machine Learning},\n}",
+      "normalized_value": "@article{ferjad2020icml, title = {Reliable Fidelity and Diversity Metrics for Generative Models}, author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun}, year = {2020}, booktitle = {International Conference on Machine Learning}, }",
+      "evidence": "``` \n@article{ferjad2020icml,\n  title = {Reliable Fidelity and Diversity Metrics for Generative Models},\n  author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},\n  year = {2020},\n  booktitle = {International Conference on Machine Learning},\n}\n```",
+      "evidence_location": "155-162; Cite this work",
+      "confidence": "high",
+      "reason": "Provides a ready-to-use bibliographic citation."
+    }
+  ]
+}

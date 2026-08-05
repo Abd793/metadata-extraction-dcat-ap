@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Indexes for RDF data",
+      "normalized_value": "Indexes for RDF data",
+      "evidence": "Indexes for RDF data",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Primary name/title of the artifact"
+    },
+    {
+      "field": "description",
+      "value": "C++ library used for the experiments in the paper [*Compressed Indexes for Fast Search of Semantic Data*](http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf)",
+      "normalized_value": "C++ library used for the experiments in the paper [*Compressed Indexes for Fast Search of Semantic Data*](http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf)",
+      "evidence": "This is the C++ library used for the experiments in the paper [*Compressed Indexes for Fast Search of Semantic Data*](http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf) [1], by Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini.",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Clear description of artifact purpose and context"
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/jermp/rdf_indexes.git",
+      "normalized_value": "https://github.com/jermp/rdf_indexes.git",
+      "evidence": "git clone --recursive https://github.com/jermp/rdf_indexes.git",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Primary repository location for cloning the code"
+    },
+    {
+      "field": "paper_reference",
+      "value": "[1] Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini. *Compressed Indexes for Fast Search of Semantic Data*. 2020. IEEE Transactions on Knowledge and Data Engineering (TKDE). 12 pages.",
+      "normalized_value": "[1] Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini. *Compressed Indexes for Fast Search of Semantic Data*. 2020. IEEE Transactions on Knowledge and Data Engineering (TKDE). 12 pages.",
+      "evidence": "[1] Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini. *Compressed Indexes for Fast Search of Semantic Data*. 2020. IEEE Transactions on Knowledge and Data Engineering (TKDE). 12 pages.",
+      "evidence_location": "278",
+      "confidence": "high",
+      "reason": "Primary academic paper associated with this work"
+    },
+    {
+      "field": "programming_language",
+      "value": "C++",
+      "normalized_value": "C++",
+      "evidence": "This is the C++ library used for the experiments",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Explicitly states the programming language used"
+    },
+    {
+      "field": "build_system",
+      "value": "CMake",
+      "normalized_value": "CMake",
+      "evidence": "[`CMake`](https://cmake.org/) is required to build the code.",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Specifies the build system dependency"
+    },
+    {
+      "field": "supported_compilers",
+      "value": "gcc 7.3.0, 8.3.0, 9.2.0 and clang 10.0.0",
+      "normalized_value": "gcc 7.3.0, 8.3.0, 9.2.0 and clang 10.0.0",
+      "evidence": "The code is tested on Linux with `gcc` 7.3.0, 8.3.0, 9.2.0 and on Mac 10.14 with `clang` 10.0.0.",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Specific compiler versions tested and supported"
+    },
+    {
+      "field": "supported_platforms",
+      "value": "Linux and Mac 10.14",
+      "normalized_value": "Linux and Mac 10.14",
+      "evidence": "The code is tested on Linux with `gcc` 7.3.0, 8.3.0, 9.2.0 and on Mac 10.14 with `clang` 10.0.0.",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Operating systems where the code has been tested"
+    },
+    {
+      "field": "dependencies",
+      "value": "few external dependencies (for benchmarking and serialization)",
+      "normalized_value": "few external dependencies (for benchmarking and serialization)",
+      "evidence": "The code has few external dependencies (for benchmarking and serialization)",
+      "evidence_location": "25",
+      "confidence": "medium",
+      "reason": "Describes external dependencies but not specific package names"
+    },
+    {
+      "field": "python_dependencies",
+      "value": "mmh3 and numpy",
+      "normalized_value": "mmh3 and numpy",
+      "evidence": "The scripts require the modules `mmh3` and `numpy` that can be easily installed with `pip3 install mmh3 numpy`.",
+      "evidence_location": "110-111",
+      "confidence": "high",
+      "reason": "Specific Python dependencies for data preparation scripts"
+    },
+    {
+      "field": "build_command_release",
+      "value": "mkdir build\ncd build\ncmake ..\nmake -j",
+      "normalized_value": "mkdir build\ncd build\ncmake ..\nmake -j",
+      "evidence": "mkdir build\ncd build\ncmake ..\nmake -j",
+      "evidence_location": "37-40",
+      "confidence": "high",
+      "reason": "Complete build instructions for release environment"
+    },
+    {
+      "field": "build_command_debug",
+      "value": "mkdir debug_build\ncd debug_build\ncmake .. -DCMAKE_BUILD_TYPE=Debug -DUSE_SANITIZERS=On\nmake -j",
+      "normalized_value": "mkdir debug_build\ncd debug_build\ncmake .. -DCMAKE_BUILD_TYPE=Debug -DUSE_SANITIZERS=On\nmake -j",
+      "evidence": "mkdir debug_build\ncd debug_build\ncmake .. -DCMAKE_BUILD_TYPE=Debug -DUSE_SANITIZERS=On\nmake -j",
+      "evidence_location": "44-47",
+      "confidence": "high",
+      "reason": "Complete build instructions for debug environment"
+    },
+    {
+      "field": "input_data_format",
+      "value": "integer triples in SPO, POS, OSP, and OPS permutations with statistics file",
+      "normalized_value": "integer triples in SPO, POS, OSP, and OPS permutations with statistics file",
+      "evidence": "To build an index we need the following permutations: SPO, POS and OSP. Also the permutation OPS may be needed to build some types of indexes. Each permutation is represented by a separate file in plain format, having an integer triple per line with integers separated by whitespaces.",
+      "evidence_location": "62-67",
+      "confidence": "high",
+      "reason": "Specifies required input data format for indexing"
+    },
+    {
+      "field": "data_preparation_script",
+      "value": "bash process.sh ../test_data/wordnet31.gz",
+      "normalized_value": "bash process.sh ../test_data/wordnet31.gz",
+      "evidence": "bash process.sh ../test_data/wordnet31.gz",
+      "evidence_location": "142",
+      "confidence": "high",
+      "reason": "Complete command to prepare data for indexing"
+    },
+    {
+      "field": "build_index_command",
+      "value": "./build <type> <collection_basename> [-o output_filename]",
+      "normalized_value": "./build <type> <collection_basename> [-o output_filename]",
+      "evidence": "./build <type> <collection_basename> [-o output_filename]",
+      "evidence_location": "153",
+      "confidence": "high",
+      "reason": "Command template for building indexes"
+    },
+    {
+      "field": "supported_index_types",
+      "value": "compact_3t, ef_3t, vb_3t, pef_3t, pef_r_3t, pef_2to, pef_2tp",
+      "normalized_value": "compact_3t, ef_3t, vb_3t, pef_3t, pef_r_3t, pef_2to, pef_2tp",
+      "evidence": "compact_3t\nef_3t\nvb_3t\npef_3t\npef_r_3t\npef_2to\npef_2tp",
+      "evidence_location": "165-172",
+      "confidence": "high",
+      "reason": "List of supported index types"
+    },
+    {
+      "field": "query_command",
+      "value": "./queries <type> <perm> <index_filename> [-q <query_filename> -n <num_queries> -w <num_wildcards>]",
+      "normalized_value": "./queries <type> <perm> <index_filename> [-q <query_filename> -n <num_queries> -w <num_wildcards>]",
+      "evidence": "./queries <type> <perm> <index_filename> [-q <query_filename> -n <num_queries> -w <num_wildcards>]",
+      "evidence_location": "198",
+      "confidence": "high",
+      "reason": "Command template for querying indexes"
+    },
+    {
+      "field": "test_command",
+      "value": "python ../test/check_everything.py ../test_data/wordnet31.mapped.sorted . wordnet",
+      "normalized_value": "python ../test/check_everything.py ../test_data/wordnet31.mapped.sorted . wordnet",
+      "evidence": "python ../test/check_everything.py ../test_data/wordnet31.mapped.sorted . wordnet",
+      "evidence_location": "240",
+      "confidence": "high",
+      "reason": "Command to run comprehensive tests"
+    },
+    {
+      "field": "author",
+      "value": "Giulio Ermanno Pibiri, <giulio.ermanno.pibiri@isti.cnr.it>",
+      "normalized_value": "Giulio Ermanno Pibiri, <giulio.ermanno.pibiri@isti.cnr.it>",
+      "evidence": "* [Giulio Ermanno Pibiri](http://pages.di.unipi.it/pibiri/), <giulio.ermanno.pibiri@isti.cnr.it>",
+      "evidence_location": "273",
+      "confidence": "high",
+      "reason": "Primary author contact information"
+    },
+    {
+      "field": "reference_paper",
+      "value": "[2] M. A. Martínez-Prieto, M. A. Gallego, and J. D. Fernández. *Exchange and consumption of huge rdf data* in Extended Semantic Web Conference. Springer, 2012, pp. 437–452.",
+      "normalized_value": "[2] M. A. Martínez-Prieto, M. A. Gallego, and J. D. Fernández. *Exchange and consumption of huge rdf data* in Extended Semantic Web Conference. Springer, 2012, pp. 437–452.",
+      "evidence": "[2] M. A. Martínez-Prieto, M. A. Gallego, and J. D. Fernández. *Exchange and consumption of huge rdf data* in Extended Semantic Web Conference. Springer, 2012, pp. 437–452.",
+      "evidence_location": "279-280",
+      "confidence": "high",
+      "reason": "Reference to related work used in the project"
+    }
+  ]
+}

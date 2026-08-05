@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Para-DPMM",
+      "normalized_value": "Para-DPMM",
+      "evidence": "Para-DPMM",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Identifies the main artifact name for search and reference"
+    },
+    {
+      "field": "purpose",
+      "value": "single cell transcriptomic clustering",
+      "normalized_value": "single cell transcriptomic clustering",
+      "evidence": "single cell transcriptomic clustering",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Describes the primary function of the artifact"
+    },
+    {
+      "field": "paper_title",
+      "value": "Parallel Clustering of Single Cell Transcriptomic Data with Split-Merge Sampling on Dirichlet Process Mixtures",
+      "normalized_value": "Parallel Clustering of Single Cell Transcriptomic Data with Split-Merge Sampling on Dirichlet Process Mixtures",
+      "evidence": "Parallel Clustering of Single Cell Transcriptomic Data with Split-Merge Sampling on Dirichlet Process Mixtures",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Provides citation and context for the research"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/1812.10048.pdf",
+      "normalized_value": "https://arxiv.org/pdf/1812.10048.pdf",
+      "evidence": "https://arxiv.org/pdf/1812.10048.pdf",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper"
+    },
+    {
+      "field": "data_source",
+      "value": "10X genomics website (https://support.10xgenomics.com/single-cell-gene-expression/datasets)",
+      "normalized_value": "10X genomics website (https://support.10xgenomics.com/single-cell-gene-expression/datasets)",
+      "evidence": "Download raw datasets from 10X genomics website (https://support.10xgenomics.com/single-cell-gene-expression/datasets)",
+      "evidence_location": "line 12",
+      "confidence": "high",
+      "reason": "Specifies where to obtain input data for reproduction"
+    },
+    {
+      "field": "dependencies_source",
+      "value": "Matlab2015a and gcc/4.8.4 (gcc/4.6.X and gcc/4.7.X should also work), GNU Scientific Library, Eigen library",
+      "normalized_value": "Matlab2015a and gcc/4.8.4 (gcc/4.6.X and gcc/4.7.X should also work), GNU Scientific Library, Eigen library",
+      "evidence": "We tested the code with Matlab2015a and gcc/4.8.4 (gcc/4.6.X and gcc/4.7.X should also work), the installation of following two libraries is needed:\n\n1) GNU Scientific Library: http://www.gnu.org/software/gsl/\n2) Eigen library: http://eigen.tuxfamily.org/",
+      "evidence_location": "lines 33-36",
+      "confidence": "high",
+      "reason": "Lists required software and libraries for source code execution"
+    },
+    {
+      "field": "dependencies_compiled",
+      "value": "gcc/6.1.0, gsl/2.3 and MATLAB/r2017b",
+      "normalized_value": "gcc/6.1.0, gsl/2.3 and MATLAB/r2017b",
+      "evidence": "The execution of compiled package is tested on HPC clusters with module gcc/6.1.0, gsl/2.3 and MATLAB/r2017b loaded;",
+      "evidence_location": "line 64",
+      "confidence": "high",
+      "reason": "Lists required software versions for compiled package execution"
+    },
+    {
+      "field": "installation_command_source",
+      "value": "Install the packages mentioned above (for the Eigen library, you only need to place the unzipped files inside the \"eigen\" directory)",
+      "normalized_value": "Install the packages mentioned above (for the Eigen library, you only need to place the unzipped files inside the \"eigen\" directory)",
+      "evidence": "Install the packages mentioned above (for the Eigen library, you only need to place the unzipped files inside the \"eigen\" directory);",
+      "evidence_location": "line 41",
+      "confidence": "high",
+      "reason": "Provides installation instructions for dependencies"
+    },
+    {
+      "field": "setup_command_source",
+      "value": "Start Matlab, enter the \"main\" sub directory in Matlab",
+      "normalized_value": "Start Matlab, enter the \"main\" sub directory in Matlab",
+      "evidence": "Start Matlab, enter the \"main\" sub directory in Matlab;",
+      "evidence_location": "line 43",
+      "confidence": "high",
+      "reason": "Initial setup command for running the source code"
+    },
+    {
+      "field": "compilation_command",
+      "value": "run compile_MEX.m",
+      "normalized_value": "run compile_MEX.m",
+      "evidence": "In Matlab, run compile_MEX.m;",
+      "evidence_location": "line 45",
+      "confidence": "high",
+      "reason": "Compilation step required before execution"
+    },
+    {
+      "field": "execution_command_source",
+      "value": "Run Para_DPMM.m",
+      "normalized_value": "Run Para_DPMM.m",
+      "evidence": "Run Para_DPMM.m, follow the guidelines given in the program (an example):",
+      "evidence_location": "line 47",
+      "confidence": "high",
+      "reason": "Main execution command for the source code version"
+    },
+    {
+      "field": "execution_command_compiled",
+      "value": "./Para_DPMM",
+      "normalized_value": "./Para_DPMM",
+      "evidence": "./Para_DPMM",
+      "evidence_location": "line 76",
+      "confidence": "high",
+      "reason": "Main execution command for the compiled package version"
+    },
+    {
+      "field": "input_parameters",
+      "value": "dataset path, number of processors, value of alpha, computing time limit (seconds)",
+      "normalized_value": "dataset path, number of processors, value of alpha, computing time limit (seconds)",
+      "evidence": "1> Please enter dataset path:  data_matrix_1_S_Set.mat\n      \n     2> Please enter number of processors:  16\n      \n     3> Please set the value of alpha:  1\n      \n     4> Please enter computing time limit (seconds):  20",
+      "evidence_location": "lines 49-55",
+      "confidence": "high",
+      "reason": "Documents required input parameters for execution"
+    },
+    {
+      "field": "output_files",
+      "value": "Para_DPMM_output.txt, Para_DPMM_result.mat",
+      "normalized_value": "Para_DPMM_output.txt, Para_DPMM_result.mat",
+      "evidence": "The training iteration and computation time log is saved in Para_DPMM_output.txt, the clustering result is saved in Para_DPMM_result.mat",
+      "evidence_location": "lines 57, 92",
+      "confidence": "high",
+      "reason": "Specifies output files generated by the program"
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "Adjusted Random Index (AR), Random Index (RI), Mirkin's index (MI), Hubert's index (HI)",
+      "normalized_value": "Adjusted Random Index (AR), Random Index (RI), Mirkin's index (MI), Hubert's index (HI)",
+      "evidence": "where z is the clustering result of Para_DPMM model, label is the ground truth cluster label, AR is Adjusted Random Index, RI is Random Index benchmark, MI is \"Mirkin's\" index and HI is \"Hubert's\" index.",
+      "evidence_location": "lines 57, 92",
+      "confidence": "high",
+      "reason": "Lists evaluation metrics used to assess clustering performance"
+    },
+    {
+      "field": "license",
+      "value": "academic purposes",
+      "normalized_value": "academic purposes",
+      "evidence": "Please feel free to use it for academic purposes.",
+      "evidence_location": "line 107",
+      "confidence": "medium",
+      "reason": "Specifies permitted usage, though not a formal license name"
+    },
+    {
+      "field": "attribution",
+      "value": "Dirichlet Process Mixtures package(http://people.csail.mit.edu/jchang7/code.php) written by Jason Chang",
+      "normalized_value": "Dirichlet Process Mixtures package(http://people.csail.mit.edu/jchang7/code.php) written by Jason Chang",
+      "evidence": "The Para-DPMM project depend heavily on the open source Dirichlet Process Mixtures package(http://people.csail.mit.edu/jchang7/code.php) written by Jason Chang.",
+      "evidence_location": "line 110",
+      "confidence": "high",
+      "reason": "Important attribution for derivative work and dependencies"
+    }
+  ]
+}

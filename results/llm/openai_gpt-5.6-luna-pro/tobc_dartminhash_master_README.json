@@ -1,0 +1,283 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "DartMinHash",
+      "normalized_value": "DartMinHash",
+      "evidence": "# DartMinHash: Fast Sketching for Weighted Sets",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the artifact."
+    },
+    {
+      "field": "purpose",
+      "value": "This repository contains experiments for comparing the estimation accuracy and running times of the following weighted minwise hashing algorithms:",
+      "normalized_value": "This repository contains experiments for comparing the estimation accuracy and running times of the following weighted minwise hashing algorithms",
+      "evidence": "This repository contains experiments for comparing the estimation accuracy and running times of the following weighted minwise hashing algorithms:",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "States the repository's concrete purpose and evaluation focus."
+    },
+    {
+      "field": "algorithms_compared",
+      "value": "DartMinHash; ICWS and FastICWS; BagMinHash",
+      "normalized_value": "DartMinHash; ICWS and FastICWS; BagMinHash",
+      "evidence": "* DartMinHash https://arxiv.org/abs/2005.11547\n* ICWS and FastICWS https://research.google/pubs/pub36928/\n* BagMinHash https://arxiv.org/abs/1802.03914",
+      "evidence_location": "5-7",
+      "confidence": "high",
+      "reason": "Lists the weighted minwise hashing algorithms evaluated by the artifact."
+    },
+    {
+      "field": "dartminhash_paper_url",
+      "value": "https://arxiv.org/abs/2005.11547",
+      "normalized_value": "https://arxiv.org/abs/2005.11547",
+      "evidence": "* DartMinHash https://arxiv.org/abs/2005.11547",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Provides the paper describing DartMinHash."
+    },
+    {
+      "field": "icws_reference_url",
+      "value": "https://research.google/pubs/pub36928/",
+      "normalized_value": "https://research.google/pubs/pub36928/",
+      "evidence": "* ICWS and FastICWS https://research.google/pubs/pub36928/",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Provides the reference for ICWS and FastICWS."
+    },
+    {
+      "field": "bagminhash_paper_url",
+      "value": "https://arxiv.org/abs/1802.03914",
+      "normalized_value": "https://arxiv.org/abs/1802.03914",
+      "evidence": "* BagMinHash https://arxiv.org/abs/1802.03914",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Provides the BagMinHash paper reference."
+    },
+    {
+      "field": "bagminhash_implementation_source",
+      "value": "https://github.com/oertl/bagminhash",
+      "normalized_value": "https://github.com/oertl/bagminhash",
+      "evidence": "For BagMinHash and ICWS we use the implementation from here https://github.com/oertl/bagminhash with the relevant files included in the /bagminhash folder.",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Identifies the external implementation used for BagMinHash and ICWS."
+    },
+    {
+      "field": "required_dependency",
+      "value": "XXHash64",
+      "normalized_value": "XXHash64",
+      "evidence": "The BagMinHash algorithm uses XXHash64 which must be installed:",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Names a required dependency for running the BagMinHash algorithm."
+    },
+    {
+      "field": "xxhash_clone_command",
+      "value": "git clone https://github.com/Cyan4973/xxHash.git",
+      "normalized_value": "git clone https://github.com/Cyan4973/xxHash.git",
+      "evidence": "1. Get xxhash from https://github.com/Cyan4973/xxHash, e.g. using `git clone https://github.com/Cyan4973/xxHash.git`",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Provides a concrete command for obtaining the XXHash dependency."
+    },
+    {
+      "field": "xxhash_build_command",
+      "value": "make lib",
+      "normalized_value": "make lib",
+      "evidence": "2. Build using `make lib`",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Provides the dependency build command."
+    },
+    {
+      "field": "xxhash_required_files",
+      "value": "xxhash.h and libxxhash.a",
+      "normalized_value": "xxhash.h and libxxhash.a",
+      "evidence": "3. Place xxhash.h and libxxhash.a into the directory /bagminhash/xxhash",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Identifies the dependency artifacts required by the repository."
+    },
+    {
+      "field": "xxhash_install_directory",
+      "value": "/bagminhash/xxhash",
+      "normalized_value": "/bagminhash/xxhash",
+      "evidence": "3. Place xxhash.h and libxxhash.a into the directory /bagminhash/xxhash",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Specifies where the XXHash files must be placed."
+    },
+    {
+      "field": "compiler",
+      "value": "GCC version 7.5.0",
+      "normalized_value": "GCC version 7.5.0",
+      "evidence": "The code compiles under GCC version 7.5.0 https://gcc.gnu.org/ with relevant commands in the makefile https://www.gnu.org/software/make/.",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "States the compiler version under which the code compiles."
+    },
+    {
+      "field": "run_command",
+      "value": "make run",
+      "normalized_value": "make run",
+      "evidence": "`make run` compiles and executes the main function in main.cpp.",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Provides the primary command for compiling and executing the artifact."
+    },
+    {
+      "field": "test_command",
+      "value": "make test",
+      "normalized_value": "make test",
+      "evidence": "`make test` compiles and run unit tests.",
+      "evidence_location": "26",
+      "confidence": "high",
+      "reason": "Provides the command for compiling and running unit tests."
+    },
+    {
+      "field": "testing_framework",
+      "value": "Catch2",
+      "normalized_value": "Catch2",
+      "evidence": "We use Catch2 https://github.com/catchorg/Catch2 for unit testing.",
+      "evidence_location": "80",
+      "confidence": "high",
+      "reason": "Identifies the framework used for unit tests."
+    },
+    {
+      "field": "experiment_source_file",
+      "value": "main.cpp",
+      "normalized_value": "main.cpp",
+      "evidence": "The different experiments are all placed in the main.cpp and write their output to stdout in CSV format.",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Identifies the source file containing the experiments."
+    },
+    {
+      "field": "experiment_output",
+      "value": "stdout in CSV format",
+      "normalized_value": "stdout in CSV format",
+      "evidence": "The different experiments are all placed in the main.cpp and write their output to stdout in CSV format.",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Specifies the output destination and format for experiment results."
+    },
+    {
+      "field": "time_performance_scope",
+      "value": "Times different algorithms on synthetic data for all combinations of sketch lengths, and L0 and L1 norms chosen.",
+      "normalized_value": "Times different algorithms on synthetic data for all combinations of sketch lengths, and L0 and L1 norms chosen",
+      "evidence": "1. `time_performance`: Times different algorithms on synthetic data for all combinations of sketch lengths, and L0 and L1 norms chosen.",
+      "evidence_location": "31",
+      "confidence": "high",
+      "reason": "Describes the broad performance timing experiment."
+    },
+    {
+      "field": "time_performance_specific_scope",
+      "value": "Same as above, but only runs on specified tuples of parameters.",
+      "normalized_value": "Same as above, but only runs on specified tuples of parameters",
+      "evidence": "2. `time_performance_specific`: Same as above, but only runs on specified tuples of parameters.",
+      "evidence_location": "32",
+      "confidence": "high",
+      "reason": "Describes the parameter-restricted timing experiment."
+    },
+    {
+      "field": "similarity_experiment_scope",
+      "value": "Returns the estimated Jaccard similarity of different algorithms on synthetic pairs of weighted sets with a specific similarity.",
+      "normalized_value": "Returns the estimated Jaccard similarity of different algorithms on synthetic pairs of weighted sets with a specific similarity",
+      "evidence": "3. `measure_similarity`: Returns the estimated Jaccard similarity of different algorithms on synthetic pairs of weighted sets with a specific similarity.",
+      "evidence_location": "33",
+      "confidence": "high",
+      "reason": "Describes the similarity-estimation experiment and its synthetic input."
+    },
+    {
+      "field": "default_experiment",
+      "value": "time_performance_specific",
+      "normalized_value": "time_performance_specific",
+      "evidence": "By default `make run` will run `time_performance_specific` on a subset of the settings used in Table 1 in the paper.",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Identifies what the default run executes."
+    },
+    {
+      "field": "csv_redirect_command",
+      "value": "make run > data.csv",
+      "normalized_value": "make run > data.csv",
+      "evidence": "In order to pipe the output to the file `data.csv` use command `make run > data.csv`.",
+      "evidence_location": "37",
+      "confidence": "high",
+      "reason": "Provides a reproducible command for saving experiment output."
+    },
+    {
+      "field": "sketch_length_notation",
+      "value": "t denotes the sketch length (usually k in the paper).",
+      "normalized_value": "t denotes the sketch length (usually k in the paper)",
+      "evidence": "* t denotes the sketch length (usually k in the paper).",
+      "evidence_location": "43",
+      "confidence": "high",
+      "reason": "Defines the sketch-length notation used in the reported results."
+    },
+    {
+      "field": "icws_implementation_description",
+      "value": "a simple and unoptimized version of ICWS using tabulation hashing",
+      "normalized_value": "a simple and unoptimized version of ICWS using tabulation hashing",
+      "evidence": "* ICWS is a simple and unoptimized version of ICWS using tabulation hashing.",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Clarifies the implementation characteristics of the ICWS baseline."
+    },
+    {
+      "field": "icws_xxhash_implementation_description",
+      "value": "the implementation from the BagMinHash repository which uses the ziggurat algorithm for fast sampling",
+      "normalized_value": "the implementation from the BagMinHash repository which uses the ziggurat algorithm for fast sampling",
+      "evidence": "* ICWS_xxhash is the implementation from the BagMinHash repository which uses the ziggurat algorithm for fast sampling: https://en.wikipedia.org/wiki/Ziggurat_algorithm",
+      "evidence_location": "45",
+      "confidence": "high",
+      "reason": "Documents the ICWS_xxhash implementation source and sampling approach."
+    },
+    {
+      "field": "fasticws_implementation_description",
+      "value": "our own highly optimized implementation of ICWS that tabulates expensive operations and only computes the logarithms of weights once",
+      "normalized_value": "our own highly optimized implementation of ICWS that tabulates expensive operations and only computes the logarithms of weights once",
+      "evidence": "* FastICWS is our own highly optimized implementation of ICWS that tabulates expensive operations and only computes the logarithms of weights once.",
+      "evidence_location": "46",
+      "confidence": "high",
+      "reason": "Explains the optimization strategy used by FastICWS."
+    },
+    {
+      "field": "bagminhash_variant_description",
+      "value": "BagMinHash variants described in the BagMinHash paper. BagMinHash2 is essentially always faster and is what we compare against.",
+      "normalized_value": "BagMinHash variants described in the BagMinHash paper. BagMinHash2 is essentially always faster and is what we compare against",
+      "evidence": "* BagMinHash1 and BagMinHash2: BagMinHash variants described in the BagMinHash paper. BagMinHash2 is essentially always faster and is what we compare against.",
+      "evidence_location": "47",
+      "confidence": "high",
+      "reason": "Identifies the compared BagMinHash variants and the selected comparison variant."
+    },
+    {
+      "field": "dartminhash_implementation_description",
+      "value": "Optimized implementation following the pseudocode in the paper.",
+      "normalized_value": "Optimized implementation following the pseudocode in the paper",
+      "evidence": "* DartMinHash: Optimized implementation following the pseudocode in the paper.",
+      "evidence_location": "48",
+      "confidence": "high",
+      "reason": "Describes how the DartMinHash implementation follows the referenced algorithm."
+    },
+    {
+      "field": "performance_output_columns",
+      "value": "id | L0 | log2_L1 | t | ICWS | FastICWS | ICWS_xxhash | BagMinHash1 | BagMinHash2 | DartMinHash",
+      "normalized_value": "id | L0 | log2_L1 | t | ICWS | FastICWS | ICWS_xxhash | BagMinHash1 | BagMinHash2 | DartMinHash",
+      "evidence": "| id | L0   | log2_L1 | t    | ICWS    | FastICWS | ICWS_xxhash | BagMinHash1 | BagMinHash2 | DartMinHash |",
+      "evidence_location": "52",
+      "confidence": "high",
+      "reason": "Defines the fields reported in the performance timing output."
+    },
+    {
+      "field": "jaccard_output_columns",
+      "value": "sim_j | t | ICWS_xxhash | FastICWS | BagMinHash2 | DartMinHash",
+      "normalized_value": "sim_j | t | ICWS_xxhash | FastICWS | BagMinHash2 | DartMinHash",
+      "evidence": "| sim_j | t  | ICWS_xxhash | FastICWS | BagMinHash2 | DartMinHash |",
+      "evidence_location": "66",
+      "confidence": "high",
+      "reason": "Defines the fields reported for Jaccard similarity estimates."
+    }
+  ]
+}

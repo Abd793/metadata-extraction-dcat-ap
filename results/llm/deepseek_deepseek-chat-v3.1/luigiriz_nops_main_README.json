@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "title",
+      "value": "Novel Class Discovery for 3D Point Cloud Semantic Segmentation [CVPR 2023]",
+      "normalized_value": "Novel Class Discovery for 3D Point Cloud Semantic Segmentation [CVPR 2023]",
+      "evidence": "# **Novel Class Discovery for 3D Point Cloud Semantic Segmentation [CVPR 2023]**",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the artifact name and conference publication"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2303.11610",
+      "normalized_value": "https://arxiv.org/pdf/2303.11610",
+      "evidence": "[PAPER](https://arxiv.org/pdf/2303.11610)",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Primary access link to the research paper"
+    },
+    {
+      "field": "description",
+      "value": "Novel class discovery (NCD) for semantic segmentation is the problem of learning a model that is capable of segmenting unlabelled (novel) classes by using only the supervision from labelled (base) classes.",
+      "normalized_value": "Novel class discovery (NCD) for semantic segmentation is the problem of learning a model that is capable of segmenting unlabelled (novel) classes by using only the supervision from labelled (base) classes.",
+      "evidence": "Novel class discovery (NCD) for semantic segmentation is the problem of learning a model that is capable of segmenting unlabelled (novel) classes by using only the supervision from labelled (base) classes.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Clear definition of the problem being solved"
+    },
+    {
+      "field": "method_description",
+      "value": "a new method for NCD based on online clustering that exploits uncertainty quantification to produce prototypes for pseudo-labelling the points of the novel classes",
+      "normalized_value": "a new method for NCD based on online clustering that exploits uncertainty quantification to produce prototypes for pseudo-labelling the points of the novel classes",
+      "evidence": "a new method for NCD based on online clustering that exploits uncertainty quantification to produce prototypes for pseudo-labelling the points of the novel classes",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Describes the core technical approach"
+    },
+    {
+      "field": "evaluation_datasets",
+      "value": "SemanticKITTI and SemanticPOSS datasets",
+      "normalized_value": "SemanticKITTI and SemanticPOSS datasets",
+      "evidence": "SemanticKITTI and SemanticPOSS datasets",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Identifies benchmark datasets used for evaluation"
+    },
+    {
+      "field": "python_version",
+      "value": "Python 3.8",
+      "normalized_value": "Python 3.8",
+      "evidence": "Python 3.8",
+      "evidence_location": "31",
+      "confidence": "high",
+      "reason": "Specifies required Python version for compatibility"
+    },
+    {
+      "field": "cuda_version",
+      "value": "CUDA 11.3",
+      "normalized_value": "CUDA 11.3",
+      "evidence": "CUDA 11.3",
+      "evidence_location": "31",
+      "confidence": "high",
+      "reason": "Specifies required CUDA version for GPU compatibility"
+    },
+    {
+      "field": "dependencies",
+      "value": "Pytorch 1.10.1, Minkowski Engine, Pytorch-Lighting 1.4.8, Scipy 1.7.3, Wandb",
+      "normalized_value": "Pytorch 1.10.1, Minkowski Engine, Pytorch-Lighting 1.4.8, Scipy 1.7.3, Wandb",
+      "evidence": "- [Pytorch 1.10.1](https://pytorch.org/get-started/previous-versions/)\n- [Minkowski Engine](https://github.com/NVIDIA/MinkowskiEngine)\n- [Pytorch-Lighting 1.4.8](https://www.pytorchlightning.ai) (be sure to install torchmetrics=0.7.2)\n- [Scipy 1.7.3](https://scipy.org/install/)\n- [Wandb](https://docs.wandb.ai/quickstart)",
+      "evidence_location": "35-39",
+      "confidence": "high",
+      "reason": "Lists all required dependencies with specific versions"
+    },
+    {
+      "field": "data_sources",
+      "value": "SemanticKITTI and SemanticPOSS",
+      "normalized_value": "SemanticKITTI and SemanticPOSS",
+      "evidence": "SemanticKITTI and SemanticPOSS",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "Identifies data sources required for running the code"
+    },
+    {
+      "field": "pretraining_command",
+      "value": "python main_pretrain.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "normalized_value": "python main_pretrain.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "evidence": "python main_pretrain.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "evidence_location": "65",
+      "confidence": "high",
+      "reason": "Command for running the pretraining phase"
+    },
+    {
+      "field": "discovery_command",
+      "value": "python main_discover.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "normalized_value": "python main_discover.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "evidence": "python main_discover.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "evidence_location": "75",
+      "confidence": "high",
+      "reason": "Command for running the discovery phase"
+    },
+    {
+      "field": "reproduction_command_semanticposs",
+      "value": "python main_discover.py -s [SPLIT NUMBER] --dataset SemanticPOSS --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.3",
+      "normalized_value": "python main_discover.py -s [SPLIT NUMBER] --dataset SemanticPOSS --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.3",
+      "evidence": "python main_discover.py -s [SPLIT NUMBER] --dataset SemanticPOSS --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.3",
+      "evidence_location": "83",
+      "confidence": "high",
+      "reason": "Specific command to reproduce paper results for SemanticPOSS dataset"
+    },
+    {
+      "field": "reproduction_command_semantickitti",
+      "value": "python main_discover.py -s [SPLIT NUMBER] --dataset SemanticKITTI --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.5",
+      "normalized_value": "python main_discover.py -s [SPLIT NUMBER] --dataset SemanticKITTI --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.5",
+      "evidence": "python main_discover.py -s [SPLIT NUMBER] --dataset SemanticKITTI --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.5",
+      "evidence_location": "86",
+      "confidence": "high",
+      "reason": "Specific command to reproduce paper results for SemanticKITTI dataset"
+    },
+    {
+      "field": "testing_command",
+      "value": "python main_discover_test.py -s [SPLIT NUMBER] --checkpoint=[PATH TO LIGHTNING CHECKPOINT]",
+      "normalized_value": "python main_discover_test.py -s [SPLIT NUMBER] --checkpoint=[PATH TO LIGHTNING CHECKPOINT]",
+      "evidence": "python main_discover_test.py -s [SPLIT NUMBER] --checkpoint=[PATH TO LIGHTNING CHECKPOINT]",
+      "evidence_location": "91",
+      "confidence": "high",
+      "reason": "Command for testing with a checkpoint"
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{riz2023novel,\n  author={Riz, Luigi and Saltori, Cristiano and Ricci, Elisa and Poiesi, Fabio},\n  booktitle={2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, \n  title={Novel Class Discovery for 3D Point Cloud Semantic Segmentation}, \n  year={2023},\n  volume={},\n  number={},\n  pages={9393-9402},\n  doi={10.1109/CVPR52729.2023.00906}}",
+      "normalized_value": "@inproceedings{riz2023novel,\n  author={Riz, Luigi and Saltori, Cristiano and Ricci, Elisa and Poiesi, Fabio},\n  booktitle={2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, \n  title={Novel Class Discovery for 3D Point Cloud Semantic Segmentation}, \n  year={2023},\n  volume={},\n  number={},\n  pages={9393-9402},\n  doi={10.1109/CVPR52729.2023.00906}}",
+      "evidence": "@inproceedings{riz2023novel,\n  author={Riz, Luigi and Saltori, Cristiano and Ricci, Elisa and Poiesi, Fabio},\n  booktitle={2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, \n  title={Novel Class Discovery for 3D Point Cloud Semantic Segmentation}, \n  year={2023},\n  volume={},\n  number={},\n  pages={9393-9402},\n  doi={10.1109/CVPR52729.2023.00906}}",
+      "evidence_location": "98-108",
+      "confidence": "high",
+      "reason": "Complete citation information for proper attribution"
+    },
+    {
+      "field": "funding",
+      "value": "European Union's Horizon Europe research and innovation programme under grant agreement No 101058589, PRIN project LEGO-AI (Prot. 2020TA3K9N), EU ISFP PROTECTOR (101034216) project, EU H2020 MARVEL (957337) project, Vision and Learning joint laboratory of Fondazione Bruno Kessler and UNITN",
+      "normalized_value": "European Union's Horizon Europe research and innovation programme under grant agreement No 101058589, PRIN project LEGO-AI (Prot. 2020TA3K9N), EU ISFP PROTECTOR (101034216) project, EU H2020 MARVEL (957337) project, Vision and Learning joint laboratory of Fondazione Bruno Kessler and UNITN",
+      "evidence": "This project has received funding from the European Union's Horizon Europe research and innovation programme under grant agreement No 101058589.\nThis work was also partially supported by the PRIN project LEGO-AI (Prot. 2020TA3K9N), the EU ISFP PROTECTOR (101034216) project and the EU H2020 MARVEL (957337) project and, it was carried out in the Vision and Learning joint laboratory of Fondazione Bruno Kessler and UNITN.",
+      "evidence_location": "112-113",
+      "confidence": "high",
+      "reason": "Funding information important for attribution and reproducibility context"
+    }
+  ]
+}

@@ -1,0 +1,373 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "normalized_value": "ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "evidence": "# ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "evidence_location": "1; title",
+      "confidence": "high",
+      "reason": "Names the artifact and expands its acronym."
+    },
+    {
+      "field": "artifact_purpose",
+      "value": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "normalized_value": "A Kaldi[1] recipe for automatic lyrics transcription",
+      "evidence": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Directly states what the artifact provides."
+    },
+    {
+      "field": "task",
+      "value": "translating singing voice into text",
+      "normalized_value": "translating singing voice into text",
+      "evidence": "Automatic Lyrics Transcription is the task of translating singing voice into text.",
+      "evidence_location": "27; System Details",
+      "confidence": "high",
+      "reason": "Defines the primary task addressed by the artifact."
+    },
+    {
+      "field": "system_components",
+      "value": "separate acoustic, language and pronunciation models",
+      "normalized_value": "separate acoustic, language and pronunciation models",
+      "evidence": "Jusy like in hybrid speech recognition, our lyrics transcriber consists of separate acoustic, language and pronunciation models.",
+      "evidence_location": "27; System Details",
+      "confidence": "high",
+      "reason": "Identifies the major model components required by the system."
+    },
+    {
+      "field": "acoustic_model_training",
+      "value": "Sequence discriminative training on LF-MMI criteria[2] (Kaldi-chain recipe)",
+      "normalized_value": "Sequence discriminative training on LF-MMI criteria[2] (Kaldi-chain recipe)",
+      "evidence": "**Acoustic Model**: Sequence discriminative training on LF-MMI criteria[2] (Kaldi-chain recipe).",
+      "evidence_location": "33; System Details",
+      "confidence": "high",
+      "reason": "Specifies the acoustic-model training criterion and recipe family."
+    },
+    {
+      "field": "acoustic_model_architecture",
+      "value": "multistream TDNN architecture with distinct TDNN streams",
+      "normalized_value": "multistream TDNN architecture with distinct TDNN streams",
+      "evidence": "  - The neural network is based on the multistream TDNN architecture with distinct TDNN streams.",
+      "evidence_location": "34; System Details",
+      "confidence": "high",
+      "reason": "Describes the neural architecture used by the acoustic model."
+    },
+    {
+      "field": "cross_domain_training",
+      "value": "Cross-domain Training",
+      "normalized_value": "Cross-domain Training",
+      "evidence": "  - Cross-domain Training:",
+      "evidence_location": "39; System Details",
+      "confidence": "high",
+      "reason": "Names a concrete training improvement included in the model."
+    },
+    {
+      "field": "silence_modeling",
+      "value": "Music Informed Silence Modeling",
+      "normalized_value": "Music Informed Silence Modeling",
+      "evidence": "  - Music Informed Silence Modeling:",
+      "evidence_location": "45; System Details",
+      "confidence": "high",
+      "reason": "Names a concrete modeling technique used by the acoustic system."
+    },
+    {
+      "field": "language_model",
+      "value": "4-gram MaxEnt trained using the SRILM toolkit, where Kneser-Ney smoothing applied",
+      "normalized_value": "4-gram MaxEnt trained using the SRILM toolkit, where Kneser-Ney smoothing applied",
+      "evidence": "**Language Model**: The LM is a 4-gram MaxEnt trained using the SRILM toolkit, where Kneser-Ney smoothing applied.",
+      "evidence_location": "52; System Details",
+      "confidence": "high",
+      "reason": "Specifies the language-model order, training toolkit, and smoothing method."
+    },
+    {
+      "field": "language_model_corpus",
+      "value": "lyrics of the data from DAMP and DALI datasets and artists from Billboard (2015-2018)",
+      "normalized_value": "lyrics of the data from DAMP and DALI datasets and artists from Billboard (2015-2018)",
+      "evidence": "The corpus consists of lyrics of the data from DAMP and DALI datasets and artists from Billboard (2015-2018) [4]",
+      "evidence_location": "52; System Details",
+      "confidence": "high",
+      "reason": "Identifies the stated sources of language-model training text."
+    },
+    {
+      "field": "pronunciation_model",
+      "value": "A predefined lexicon that provides a mapping between words and their phonemic representations. We use the singing adapted version presented here[5].",
+      "normalized_value": "A predefined lexicon that provides a mapping between words and their phonemic representations. We use the singing adapted version presented here[5]",
+      "evidence": "**Pronunciation Model**: A predefined lexicon that provides a mapping between words and their phonemic representations. We use the singing adapted version presented here[5].",
+      "evidence_location": "54; System Details",
+      "confidence": "high",
+      "reason": "Describes the pronunciation resource and its singing-adapted form."
+    },
+    {
+      "field": "framework",
+      "value": "Kaldi",
+      "normalized_value": "Kaldi",
+      "evidence": "This framework is built as a [Kaldi](http://kaldi-asr.org/)[1] recipe",
+      "evidence_location": "63; Setup",
+      "confidence": "high",
+      "reason": "Identifies the underlying speech-recognition framework."
+    },
+    {
+      "field": "kaldi_installation_url",
+      "value": "https://github.com/kaldi-asr/kaldi",
+      "normalized_value": "https://github.com/kaldi-asr/kaldi",
+      "evidence": "For instructions on Kaldi installation, please visit https://github.com/kaldi-asr/kaldi",
+      "evidence_location": "64; Setup",
+      "confidence": "high",
+      "reason": "Provides the stated installation reference for Kaldi."
+    },
+    {
+      "field": "dependency_install_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "```\npip install -r requirements.txt\n```",
+      "evidence_location": "68-70; Setup",
+      "confidence": "high",
+      "reason": "Defines how to install the Python dependencies."
+    },
+    {
+      "field": "kaldi_root_configuration",
+      "value": "Modify KALDI_ROOT in path.sh according to where your Kaldi installation is.",
+      "normalized_value": "Modify KALDI_ROOT in path.sh according to where your Kaldi installation is",
+      "evidence": "* Modify ```KALDI_ROOT``` in  ```path.sh``` according to where your Kaldi installation is.",
+      "evidence_location": "75; How to run",
+      "confidence": "high",
+      "reason": "Specifies the required environment-path configuration before running recipes."
+    },
+    {
+      "field": "damp_dataset",
+      "value": "Sing!300x30x2 data within the DAMP repository",
+      "normalized_value": "Sing!300x30x2 data within the DAMP repository",
+      "evidence": "We use the Sing!300x30x2 data within the DAMP repository[6]. To retrieve the data, you need to apply for authorization from https://ccrma.stanford.edu/damp/ .",
+      "evidence_location": "82; Data preparation",
+      "confidence": "high",
+      "reason": "Identifies the DAMP data subset used by the recipe."
+    },
+    {
+      "field": "damp_authorization_url",
+      "value": "https://ccrma.stanford.edu/damp/",
+      "normalized_value": "https://ccrma.stanford.edu/damp/",
+      "evidence": "We use the Sing!300x30x2 data within the DAMP repository[6]. To retrieve the data, you need to apply for authorization from https://ccrma.stanford.edu/damp/ .",
+      "evidence_location": "82; Data preparation",
+      "confidence": "high",
+      "reason": "Provides the stated access point and authorization source for DAMP."
+    },
+    {
+      "field": "data_split_behavior",
+      "value": "The train/dev/test splits are automatically done within this recipe.",
+      "normalized_value": "The train/dev/test splits are automatically done within this recipe",
+      "evidence": "The train/dev/test splits are automatically done within this recipe.",
+      "evidence_location": "83; Data preparation",
+      "confidence": "high",
+      "reason": "Documents how dataset splits are handled for reproduction."
+    },
+    {
+      "field": "damp_data_directory",
+      "value": "datadir_damp='path-to-damp'",
+      "normalized_value": "datadir_damp='path-to-damp'",
+      "evidence": "```\ndatadir_damp='path-to-damp'\n```",
+      "evidence_location": "84-87; Data preparation",
+      "confidence": "high",
+      "reason": "Provides the configuration variable for the downloaded DAMP data."
+    },
+    {
+      "field": "dali_dataset_usage",
+      "value": "DALI_v2.0 is used to train the polyphonic and cross-domain lyrics transcription models.",
+      "normalized_value": "DALI_v2.0 is used to train the polyphonic and cross-domain lyrics transcription models",
+      "evidence": "DALI_v2.0 is used to train the polyphonic and cross-domain lyrics transcription models. To retrieve the data, please refer to the relevant Github repository at:",
+      "evidence_location": "91; Data preparation",
+      "confidence": "high",
+      "reason": "Identifies the DALI version and its role in training."
+    },
+    {
+      "field": "dali_repository_url",
+      "value": "https://github.com/gabolsgabs/DALI",
+      "normalized_value": "https://github.com/gabolsgabs/DALI",
+      "evidence": "https://github.com/gabolsgabs/DALI",
+      "evidence_location": "93; Data preparation",
+      "confidence": "high",
+      "reason": "Provides the stated repository for retrieving DALI data."
+    },
+    {
+      "field": "dali_data_directory",
+      "value": "datadir_dali='path-to-dali'",
+      "normalized_value": "datadir_dali='path-to-dali'",
+      "evidence": "```\ndatadir_dali='path-to-dali'\n```",
+      "evidence_location": "95-98; Data preparation",
+      "confidence": "high",
+      "reason": "Provides the configuration variable for the downloaded DALI audio."
+    },
+    {
+      "field": "dali_talt_role",
+      "value": "This dataset is a subset of DALI, presented in [7] It is the largest test set used for evaluating polyphonic ALT models.",
+      "normalized_value": "This dataset is a subset of DALI, presented in [7] It is the largest test set used for evaluating polyphonic ALT models",
+      "evidence": "This dataset is a subset of DALI, presented in [7] It is the largest test set used for evaluating polyphonic ALT models. The data can be retrieved via the tutorial at: https://github.com/emirdemirel/DALI-TestSet4ALT .",
+      "evidence_location": "102; Data preparation",
+      "confidence": "high",
+      "reason": "Describes DALI-TALT's dataset relationship and evaluation role."
+    },
+    {
+      "field": "dali_talt_repository_url",
+      "value": "https://github.com/emirdemirel/DALI-TestSet4ALT",
+      "normalized_value": "https://github.com/emirdemirel/DALI-TestSet4ALT",
+      "evidence": "This dataset is a subset of DALI, presented in [7] It is the largest test set used for evaluating polyphonic ALT models. The data can be retrieved via the tutorial at: https://github.com/emirdemirel/DALI-TestSet4ALT .",
+      "evidence_location": "102; Data preparation",
+      "confidence": "high",
+      "reason": "Provides the stated retrieval tutorial for the DALI-TALT test set."
+    },
+    {
+      "field": "dali_talt_data_directory",
+      "value": "datadir_dali_talt='path-to-dali-talt'",
+      "normalized_value": "datadir_dali_talt='path-to-dali-talt'",
+      "evidence": "```\ndatadir_dali_talt='path-to-dali-talt'\n```",
+      "evidence_location": "103-105; Data preparation",
+      "confidence": "high",
+      "reason": "Provides the configuration variable for DALI-TALT."
+    },
+    {
+      "field": "jamendo_dataset_usage",
+      "value": "Jamendo(lyrics) is a benchmark evaluation set for both lyrics transcription and audio-to-lyrics alignment tasks[8]. It is also used in MIREX challenges.",
+      "normalized_value": "Jamendo(lyrics) is a benchmark evaluation set for both lyrics transcription and audio-to-lyrics alignment tasks[8]. It is also used in MIREX challenges",
+      "evidence": "Jamendo(lyrics) is a benchmark evaluation set for both lyrics transcription and audio-to-lyrics alignment tasks[8]. It is also used in MIREX challenges. Data can be retrieved at https://github.com/f90/jamendolyrics .",
+      "evidence_location": "109; Data preparation",
+      "confidence": "high",
+      "reason": "Identifies Jamendo's evaluation purposes and benchmark context."
+    },
+    {
+      "field": "jamendo_repository_url",
+      "value": "https://github.com/f90/jamendolyrics",
+      "normalized_value": "https://github.com/f90/jamendolyrics",
+      "evidence": "Jamendo(lyrics) is a benchmark evaluation set for both lyrics transcription and audio-to-lyrics alignment tasks[8]. It is also used in MIREX challenges. Data can be retrieved at https://github.com/f90/jamendolyrics .",
+      "evidence_location": "109; Data preparation",
+      "confidence": "high",
+      "reason": "Provides the stated source for retrieving the Jamendo benchmark data."
+    },
+    {
+      "field": "jamendo_data_directory",
+      "value": "datadir_jamendo='path-to-jamendo'",
+      "normalized_value": "datadir_jamendo='path-to-jamendo'",
+      "evidence": "```\ndatadir_jamendo='path-to-jamendo'\n```",
+      "evidence_location": "110-112; Data preparation",
+      "confidence": "high",
+      "reason": "Provides the configuration variable for Jamendo data."
+    },
+    {
+      "field": "single_stream_recipe",
+      "value": "Dilated Convolutional Neural Networks with Self-Attention (single-stream)",
+      "normalized_value": "Dilated Convolutional Neural Networks with Self-Attention (single-stream)",
+      "evidence": "##### 1 - Dilated Convolutional Neural Networks with Self-Attention (single-stream):",
+      "evidence_location": "119; Running the training pipeline",
+      "confidence": "high",
+      "reason": "Names one of the two included training recipes."
+    },
+    {
+      "field": "single_stream_training_command",
+      "value": "./run_singlestream.sh $audiopath",
+      "normalized_value": "./run_singlestream.sh $audiopath",
+      "evidence": "```\n./run_singlestream.sh $audiopath\n```",
+      "evidence_location": "128-131; Running the training pipeline",
+      "confidence": "high",
+      "reason": "Provides the command for running the single-stream recipe."
+    },
+    {
+      "field": "mstrenet_recipe",
+      "value": "MStreNet : Multistreaming Time-Delay Neural Networks & Cross-domain Training",
+      "normalized_value": "MStreNet : Multistreaming Time-Delay Neural Networks & Cross-domain Training",
+      "evidence": "##### 2 - MStreNet : Multistreaming Time-Delay Neural Networks & Cross-domain Training",
+      "evidence_location": "132; Running the training pipeline",
+      "confidence": "high",
+      "reason": "Names and characterizes the newer multistream training recipe."
+    },
+    {
+      "field": "mstrenet_training_command",
+      "value": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} \\\n    --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo} \\",
+      "normalized_value": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} \\ --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo} \\",
+      "evidence": "```\n./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} \\\n    --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo} \\\n```",
+      "evidence_location": "135-139; Running the training pipeline",
+      "confidence": "high",
+      "reason": "Provides the main command for training the MStreNet recipe with all dataset paths."
+    },
+    {
+      "field": "posteriorgram_extraction_command",
+      "value": "audio_path='absolute-path-to-the-input-audio-file'\nsave_path='path-to-save-the-output\ncd s5\n./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "normalized_value": "audio_path='absolute-path-to-the-input-audio-file' save_path='path-to-save-the-output cd s5 ./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "evidence": "```\naudio_path='absolute-path-to-the-input-audio-file'\nsave_path='path-to-save-the-output\ncd s5\n./extract_phn_posteriorgram.sh $audio_path $save_path\n```",
+      "evidence_location": "171-176; Extract frame-level Phoneme posteriorgrams",
+      "confidence": "high",
+      "reason": "Defines the optional command for extracting frame-level phoneme posteriorgrams."
+    },
+    {
+      "field": "posteriorgram_output_format",
+      "value": "numpy arrays (.npy)",
+      "normalized_value": "numpy arrays (.npy)",
+      "evidence": "The output posteriorgrams are saved as numpy arrays (.npy).",
+      "evidence_location": "178; Extract frame-level Phoneme posteriorgrams",
+      "confidence": "high",
+      "reason": "Specifies the generated posteriorgram file format."
+    },
+    {
+      "field": "audio_sample_rate",
+      "value": "16kHz",
+      "normalized_value": "16kHz",
+      "evidence": "Note that we have used 16kHz for the sample rate and 10ms of hop size.",
+      "evidence_location": "180; Extract frame-level Phoneme posteriorgrams",
+      "confidence": "high",
+      "reason": "Records the sample rate used for posteriorgram extraction."
+    },
+    {
+      "field": "audio_hop_size",
+      "value": "10ms",
+      "normalized_value": "10ms",
+      "evidence": "Note that we have used 16kHz for the sample rate and 10ms of hop size.",
+      "evidence_location": "180; Extract frame-level Phoneme posteriorgrams",
+      "confidence": "high",
+      "reason": "Records the frame hop size used for posteriorgram extraction."
+    },
+    {
+      "field": "mstrenet_paper_url",
+      "value": "https://arxiv.org/pdf/2108.02625.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2108.02625.pdf",
+      "evidence": "Link to paper : https://arxiv.org/pdf/2108.02625.pdf",
+      "evidence_location": "197; Citation",
+      "confidence": "high",
+      "reason": "Provides the paper link associated with the MStreNet recipe."
+    },
+    {
+      "field": "single_stream_paper_url",
+      "value": "https://arxiv.org/abs/2007.06486",
+      "normalized_value": "https://arxiv.org/abs/2007.06486",
+      "evidence": "Link to paper : https://arxiv.org/abs/2007.06486",
+      "evidence_location": "211; Citation",
+      "confidence": "high",
+      "reason": "Provides the paper link associated with the single-stream recipe."
+    },
+    {
+      "field": "mstrenet_citation",
+      "value": "  @article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\\\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}",
+      "normalized_value": "@article{demirel2021mstre, title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription}, author={Demirel, Emir and Ahlb{\\\"a}ck, Sven and Dixon, Simon}, booktitle={In proceedings of ISMIR2021}, year={2021}}",
+      "evidence": "```\n  @article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\\\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}\n```",
+      "evidence_location": "189-196; Citation",
+      "confidence": "high",
+      "reason": "Provides a directly reusable citation for the MStreNet recipe."
+    },
+    {
+      "field": "single_stream_citation",
+      "value": "@inproceedings{demirel2020,\n  title={Automatic lyrics transcription using dilated convolutional neural networks with self-attention},\n  author={Demirel, Emir and Ahlb{\\\"a}ck, Sven and Dixon, Simon},\n  booktitle={International Joint Conference on Neural Networks},\n  publisher={IEEE},\n  year={2020}\n}",
+      "normalized_value": "@inproceedings{demirel2020, title={Automatic lyrics transcription using dilated convolutional neural networks with self-attention}, author={Demirel, Emir and Ahlb{\\\"a}ck, Sven and Dixon, Simon}, booktitle={International Joint Conference on Neural Networks}, publisher={IEEE}, year={2020}}",
+      "evidence": "```\n@inproceedings{demirel2020,\n  title={Automatic lyrics transcription using dilated convolutional neural networks with self-attention},\n  author={Demirel, Emir and Ahlb{\\\"a}ck, Sven and Dixon, Simon},\n  booktitle={International Joint Conference on Neural Networks},\n  publisher={IEEE},\n  year={2020}\n}\n```",
+      "evidence_location": "201-209; Citation",
+      "confidence": "high",
+      "reason": "Provides a directly reusable citation for the single-stream recipe."
+    },
+    {
+      "field": "license",
+      "value": "Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International",
+      "normalized_value": "Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International",
+      "evidence": "This work is licensed under Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International, which means that the reusers can copy, distribute, remix, transform and build upon the material in any media providing the appropriate credits to this repository and to be used for non-commercial purposes.",
+      "evidence_location": "234-235; Important Notice",
+      "confidence": "high",
+      "reason": "States the artifact's license and its attribution and non-commercial reuse conditions."
+    }
+  ]
+}

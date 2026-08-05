@@ -1,0 +1,229 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "normalized_value": "Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "evidence": "# Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "evidence_location": "1; title",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its research topic."
+    },
+    {
+      "field": "artifact_description",
+      "value": "repository for our ACL'2022 paper",
+      "normalized_value": "repository for our ACL'2022 paper",
+      "evidence": "This is the repository for our ACL'2022 paper",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Describes the purpose of the repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2112.08812.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2112.08812.pdf",
+      "evidence": "https://arxiv.org/pdf/2112.08812.pdf",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated paper."
+    },
+    {
+      "field": "presentation_slides_url",
+      "value": "https://github.com/princeton-nlp/EvalConvQA/blob/main/ACL%202022%20Video%20talk.pdf",
+      "normalized_value": "https://github.com/princeton-nlp/EvalConvQA/blob/main/ACL%202022%20Video%20talk.pdf",
+      "evidence": "https://github.com/princeton-nlp/EvalConvQA/blob/main/ACL%202022%20Video%20talk.pdf",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Provides the slides for the ACL presentation."
+    },
+    {
+      "field": "human_evaluation_protocol",
+      "value": "human annotators chat with conversational QA models about passages from the QuAC development set, and after that the annotators judge the correctness of model answers",
+      "normalized_value": "human annotators chat with conversational QA models about passages from the QuAC development set, and after that the annotators judge the correctness of model answers",
+      "evidence": "In this work, we conduct the first large-scale human evaluation of state-of-the-art conversational QA systems. In our evaluation, human annotators chat with conversational QA models about passages from the [QuAC](https://quac.ai) development set, and after that the annotators judge the correctness of model answers. We release the human annotated dataset in the following section.",
+      "evidence_location": "21; Overview",
+      "confidence": "high",
+      "reason": "Defines the human evaluation procedure and its data source."
+    },
+    {
+      "field": "human_annotation_dataset_path",
+      "value": "data/human_annotation_data.json",
+      "normalized_value": "data/human_annotation_data.json",
+      "evidence": "You can download the human annotation dataset from `data/human_annotation_data.json`.",
+      "evidence_location": "28; Human Evaluation Dataset",
+      "confidence": "high",
+      "reason": "Specifies the downloadable dataset location."
+    },
+    {
+      "field": "annotation_record_fields",
+      "value": "model_name, context, dialog_id, qas",
+      "normalized_value": "model_name, context, dialog_id, qas",
+      "evidence": "        # The model evaluated. One of `bert4quac`, `graphflow`, `ham`, `excord`\n        \"model_name\": \"graphflow\",\n\n        # The passage used in this conversation.\n        \"context\": \"Azaria wrote and directed the 2004 short film Nobody's Perfect, ...\",\n\n        # The ID from the original QuAC dataset.\n        \"dialog_id\": \"C_f0555dd820d84564a189474bbfffd4a1_1_0\",\n\n        # The conversation, which contains a list of QA pairs.\n        \"qas\": [{",
+      "evidence_location": "33-43; Human Evaluation Dataset",
+      "confidence": "high",
+      "reason": "Documents the top-level structure of each human-annotation record."
+    },
+    {
+      "field": "annotation_qa_fields",
+      "value": "turn_id, question, answer, valid, answerable, correct",
+      "normalized_value": "turn_id, question, answer, valid, answerable, correct",
+      "evidence": "          # The number of the turn\n          \"turn_id\": 0,\n\n          # The question from the human annotator\n          \"question\": \"What is some voice work he's done?\",\n\n          # The answer from the model\n          \"answer\": \"Azaria wrote and directed the 2004 short film Nobody's Perfect,\",\n\n          # Whether the question is valid (annotated by our human annotator)\n          \"valid\": \"y\",\n\n          # Whether the question is answerable (annotated by our human annotator)\n          \"answerable\": \"y\",\n\n          # Whether the model's answer is correct (annotated by our human annotator)\n          \"correct\": \"y\",",
+      "evidence_location": "45-61; Human Evaluation Dataset",
+      "confidence": "high",
+      "reason": "Documents the fields used for each conversational QA turn and its annotations."
+    },
+    {
+      "field": "gold_annotation_condition",
+      "value": "ONLY IF they marked the answer as incorrect",
+      "normalized_value": "ONLY IF they marked the answer as incorrect",
+      "evidence": "          # Human annotator selects an answer, ONLY IF they marked the answer as incorrect\n          \"gold_anno\": [\"Azaria wrote and directed ...\"]",
+      "evidence_location": "63-64; Human Evaluation Dataset",
+      "confidence": "high",
+      "reason": "Explains when the optional gold annotation is included."
+    },
+    {
+      "field": "automatic_evaluation_issue",
+      "value": "the automatic evaluation does not always agree with the human evaluation",
+      "normalized_value": "the automatic evaluation does not always agree with the human evaluation",
+      "evidence": "We also identify a critical issue with the current automatic evaluation, which pre-collects human-human conversations and uses ground-truth answers as conversational history (differences between different evaluations are shown in the following figure). By comparison, we find that the automatic evaluation does not always agree with the human evaluation. We propose a new evaluation protocol that is based on predicted history and question rewriting. Our experiments show that the new protocol better reflects real-world performance compared to the original automatic evaluation. We also provide the new evaluation protocol code in the following.",
+      "evidence_location": "23; Overview",
+      "confidence": "high",
+      "reason": "States the central limitation motivating the artifact."
+    },
+    {
+      "field": "proposed_protocol_basis",
+      "value": "predicted history and question rewriting",
+      "normalized_value": "predicted history and question rewriting",
+      "evidence": "We also identify a critical issue with the current automatic evaluation, which pre-collects human-human conversations and uses ground-truth answers as conversational history (differences between different evaluations are shown in the following figure). By comparison, we find that the automatic evaluation does not always agree with the human evaluation. We propose a new evaluation protocol that is based on predicted history and question rewriting. Our experiments show that the new protocol better reflects real-world performance compared to the original automatic evaluation. We also provide the new evaluation protocol code in the following.",
+      "evidence_location": "23; Overview",
+      "confidence": "high",
+      "reason": "Identifies the key methodological basis of the proposed evaluation protocol."
+    },
+    {
+      "field": "evaluation_protocols",
+      "value": "Auto-Pred, Auto-Replace and Auto-Rewrite",
+      "normalized_value": "Auto-Pred, Auto-Replace and Auto-Rewrite",
+      "evidence": "We provide a convenient interface to test model performance on a few evaluation protocols compared in our paper, including `Auto-Pred`, `Auto-Replace` and our proposed evaluation protocol, `Auto-Rewrite`, which better demonstrates models' performance in human-model conversations. Please refer to our paper for more details. Following is a figure describing how Auto-Rewrite works.",
+      "evidence_location": "75; Automatic model evaluation interface",
+      "confidence": "high",
+      "reason": "Lists the evaluation protocols supported by the interface."
+    },
+    {
+      "field": "proposed_protocol_name",
+      "value": "Auto-Rewrite",
+      "normalized_value": "Auto-Rewrite",
+      "evidence": "including `Auto-Pred`, `Auto-Replace` and our proposed evaluation protocol, `Auto-Rewrite`",
+      "evidence_location": "75; Automatic model evaluation interface",
+      "confidence": "high",
+      "reason": "Names the proposed evaluation protocol."
+    },
+    {
+      "field": "protocol_result",
+      "value": "the new protocol better reflects real-world performance compared to the original automatic evaluation",
+      "normalized_value": "the new protocol better reflects real-world performance compared to the original automatic evaluation",
+      "evidence": "We also identify a critical issue with the current automatic evaluation, which pre-collects human-human conversations and uses ground-truth answers as conversational history (differences between different evaluations are shown in the following figure). By comparison, we find that the automatic evaluation does not always agree with the human evaluation. We propose a new evaluation protocol that is based on predicted history and question rewriting. Our experiments show that the new protocol better reflects real-world performance compared to the original automatic evaluation. We also provide the new evaluation protocol code in the following.",
+      "evidence_location": "23; Overview",
+      "confidence": "high",
+      "reason": "States the reported qualitative evaluation outcome."
+    },
+    {
+      "field": "experiment_datasets",
+      "value": "Our experiments use [QuAC dataset](https://quac.ai) for passages and conversations, and the test set of [CANARD dataset](https://sites.google.com/view/qanta/projects/canard) for context-independent questions in `Auto-Replace`.",
+      "normalized_value": "Our experiments use [QuAC dataset](https://quac.ai) for passages and conversations, and the test set of [CANARD dataset](https://sites.google.com/view/qanta/projects/canard) for context-independent questions in `Auto-Replace`.",
+      "evidence": "Our experiments use [QuAC dataset](https://quac.ai) for passages and conversations, and the test set of [CANARD dataset](https://sites.google.com/view/qanta/projects/canard) for context-independent questions in `Auto-Replace`.",
+      "evidence_location": "90; Download the datasets",
+      "confidence": "high",
+      "reason": "Identifies the datasets and their roles in the experiments."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "Please install all dependency packages using the following command:\n```bash\npip install -r requirements.txt\n```",
+      "evidence_location": "83-86; Install dependencies",
+      "confidence": "high",
+      "reason": "Provides the documented dependency installation step."
+    },
+    {
+      "field": "evaluated_models",
+      "value": "BERT, GraphFlow, HAM, ExCorD",
+      "normalized_value": "BERT, GraphFlow, HAM, ExCorD",
+      "evidence": "We provide our implementations for the four models that we used in our paper: BERT, [GraphFlow](https://www.ijcai.org/Proceedings/2020/171), [HAM](https://dl.acm.org/doi/abs/10.1145/3357384.3357905), [ExCorD](https://aclanthology.org/2021.acl-long.478/).",
+      "evidence_location": "94; Evaluating existing models",
+      "confidence": "high",
+      "reason": "Identifies the model implementations covered by the repository."
+    },
+    {
+      "field": "bert_training_command",
+      "value": "python run_quac_train.py \\\n  --type bert \\\n  --model_name_or_path bert-base-uncased \\\n  --do_train \\\n  --output_dir ${directory_to_save_model} \\\n  --overwrite_output_dir \\\n  --train_file ${path_to_quac_train_file} \\\n  --train_batch_size 8 \\\n  --gradient_accumulation_steps 4 \\\n  --max_seq_length 512 \\\n  --learning_rate 3e-5 \\\n  --history_len 2 \\\n  --warmup_proportion 0.1 \\\n  --max_grad_norm -1 \\\n  --weight_decay 0.01 \\\n  --rationale_beta 0 \\ # important for BERT",
+      "normalized_value": "python run_quac_train.py \\ --type bert \\ --model_name_or_path bert-base-uncased \\ --do_train \\ --output_dir ${directory_to_save_model} \\ --overwrite_output_dir \\ --train_file ${path_to_quac_train_file} \\ --train_batch_size 8 \\ --gradient_accumulation_steps 4 \\ --max_seq_length 512 \\ --learning_rate 3e-5 \\ --history_len 2 \\ --warmup_proportion 0.1 \\ --max_grad_norm -1 \\ --weight_decay 0.01 \\ --rationale_beta 0 \\ # important for BERT",
+      "evidence": "python run_quac_train.py \\\n  --type bert \\\n  --model_name_or_path bert-base-uncased \\\n  --do_train \\\n  --output_dir ${directory_to_save_model} \\\n  --overwrite_output_dir \\\n  --train_file ${path_to_quac_train_file} \\\n  --train_batch_size 8 \\\n  --gradient_accumulation_steps 4 \\\n  --max_seq_length 512 \\\n  --learning_rate 3e-5 \\\n  --history_len 2 \\\n  --warmup_proportion 0.1 \\\n  --max_grad_norm -1 \\\n  --weight_decay 0.01 \\\n  --rationale_beta 0 \\ # important for BERT",
+      "evidence_location": "100-115; BERT",
+      "confidence": "high",
+      "reason": "Provides the documented BERT training command and its main configuration."
+    },
+    {
+      "field": "bert_evaluation_command",
+      "value": "python run_quac_eval.py \\\n  --type bert \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --rewrite \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "normalized_value": "python run_quac_eval.py \\ --type bert \\ --output_dir ${directory-to-model-checkpoint} \\ --write_dir ${directory-to-write-evaluation-result} \\ --predict_file val_v0.2.json \\ --max_seq_length 512 \\ --doc_stride 128 \\ --max_query_length 64 \\ --match_metric f1 \\ --add_background \\ --skip_entity \\ --rewrite \\ --start_i ${index_of_first_passage_to_eval} \\ --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence": "python run_quac_eval.py \\\n  --type bert \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --rewrite \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence_location": "118-131; BERT",
+      "confidence": "high",
+      "reason": "Provides a documented Auto-Rewrite evaluation invocation."
+    },
+    {
+      "field": "graphflow_training_status",
+      "value": "We did not find an uploaded model checkpoint so we trained our own using [their training script](https://github.com/hugochan/GraphFlow)",
+      "normalized_value": "We did not find an uploaded model checkpoint so we trained our own using [their training script](https://github.com/hugochan/GraphFlow)",
+      "evidence": "We did not find an uploaded model checkpoint so we trained our own using [their training script](https://github.com/hugochan/GraphFlow).",
+      "evidence_location": "136; GraphFlow",
+      "confidence": "high",
+      "reason": "Clarifies the checkpoint availability and training provenance for GraphFlow."
+    },
+    {
+      "field": "graphflow_core_nlp_setup",
+      "value": "# Download Stanford CoreNLP package\nwget https://nlp.stanford.edu/software/stanford-corenlp-latest.zip\nunzip stanford-corenlp-latest.zip\nrm -f stanford-corenlp-latest.zip\n\n# Start StanfordCoreNLP server\njava -mx4g -cp \"${directory_to_standford_corenlp_package}\" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 &",
+      "normalized_value": "# Download Stanford CoreNLP package wget https://nlp.stanford.edu/software/stanford-corenlp-latest.zip unzip stanford-corenlp-latest.zip rm -f stanford-corenlp-latest.zip # Start StanfordCoreNLP server java -mx4g -cp \"${directory_to_standford_corenlp_package}\" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 &",
+      "evidence": "# Download Stanford CoreNLP package\nwget https://nlp.stanford.edu/software/stanford-corenlp-latest.zip\nunzip stanford-corenlp-latest.zip\nrm -f stanford-corenlp-latest.zip\n\n# Start StanfordCoreNLP server\njava -mx4g -cp \"${directory_to_standford_corenlp_package}\" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 &",
+      "evidence_location": "139-145; GraphFlow",
+      "confidence": "high",
+      "reason": "Documents the external package download and server setup required in the GraphFlow instructions."
+    },
+    {
+      "field": "ham_checkpoint_url",
+      "value": "https://worksheets.codalab.org/rest/bundles/0x5c08cb0fb90c4afd8a2811bb63023cce/contents/blob/",
+      "normalized_value": "https://worksheets.codalab.org/rest/bundles/0x5c08cb0fb90c4afd8a2811bb63023cce/contents/blob/",
+      "evidence": "The orgininal model checkpoint can be downloaded from [CodaLab](https://worksheets.codalab.org/rest/bundles/0x5c08cb0fb90c4afd8a2811bb63023cce/contents/blob/)",
+      "evidence_location": "179; HAM",
+      "confidence": "high",
+      "reason": "Provides the documented source for the original HAM checkpoint."
+    },
+    {
+      "field": "excord_checkpoint_url",
+      "value": "https://drive.google.com/file/d/1Xf0-XUvGi7jgiAAdA5BQLk7p5ikc_wOl/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1Xf0-XUvGi7jgiAAdA5BQLk7p5ikc_wOl/view?usp=sharing",
+      "evidence": "The original model checkpoint can be downloaded from [their repo](https://drive.google.com/file/d/1Xf0-XUvGi7jgiAAdA5BQLk7p5ikc_wOl/view?usp=sharing)",
+      "evidence_location": "216; ExCorD",
+      "confidence": "high",
+      "reason": "Provides the documented source for the original ExCorD checkpoint."
+    },
+    {
+      "field": "custom_model_integration",
+      "value": "One can follow our existing implementations for the four models to implement evaluation for their own models. To do so, please add a directory under `models` and write a customized model class following the template `interface.py` and our example implementations.",
+      "normalized_value": "One can follow our existing implementations for the four models to implement evaluation for their own models. To do so, please add a directory under `models` and write a customized model class following the template `interface.py` and our example implementations.",
+      "evidence": "One can follow our existing implementations for the four models to implement evaluation for their own models. To do so, please add a directory under `models` and write a customized model class following the template `interface.py` and our example implementations.",
+      "evidence_location": "237; Evaluating your own model",
+      "confidence": "high",
+      "reason": "Explains how users can adapt the interface to evaluate their own models."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{li2022ditch,\n    title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\",\n    author = \"Li, Huihan  and\n      Gao, Tianyu  and\n      Goenka, Manan  and\n      Chen, Danqi\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.555\",\n    pages = \"8074--8085\",\n}",
+      "normalized_value": "@inproceedings{li2022ditch, title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\", author = \"Li, Huihan and Gao, Tianyu and Goenka, Manan and Chen, Danqi\", booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\", year = \"2022\", url = \"https://aclanthology.org/2022.acl-long.555\", pages = \"8074--8085\", }",
+      "evidence": "```bibtex\n@inproceedings{li2022ditch,\n    title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\",\n    author = \"Li, Huihan  and\n      Gao, Tianyu  and\n      Goenka, Manan  and\n      Chen, Danqi\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.555\",\n    pages = \"8074--8085\",\n}\n```",
+      "evidence_location": "241-252; Citation",
+      "confidence": "high",
+      "reason": "Provides a ready-to-use bibliographic citation with authors, venue, year, URL, and pages."
+    }
+  ]
+}

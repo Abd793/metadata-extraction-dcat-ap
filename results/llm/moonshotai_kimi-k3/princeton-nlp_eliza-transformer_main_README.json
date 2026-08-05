@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Representing Rule-based Chatbots with Transformers",
+      "normalized_value": "Representing Rule-based Chatbots with Transformers",
+      "evidence": "# Representing Rule-based Chatbots with Transformers",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "The repository and paper title, useful for identifying and indexing the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2407.10949",
+      "normalized_value": "https://arxiv.org/abs/2407.10949",
+      "evidence": "This repository contains the code for our paper, [Representing Rule-based Chatbots with Transformers](https://arxiv.org/abs/2407.10949).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Direct link to the associated arXiv paper, enabling users to find the scientific context."
+    },
+    {
+      "field": "description",
+      "value": "The code can be used to generate synthetic ELIZA training data, train and evaluate Transformers on ELIZA transcripts, and conduct some analysis of the learned mechanisms.",
+      "normalized_value": "The code can be used to generate synthetic ELIZA training data, train and evaluate Transformers on ELIZA transcripts, and conduct some analysis of the learned mechanisms.",
+      "evidence": "The code can be used to generate synthetic ELIZA training data, train and evaluate Transformers on ELIZA transcripts, and conduct some analysis of the learned mechanisms.",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "States the purpose and capabilities of the code, helping users understand what the artifact does."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "Install [PyTorch](https://pytorch.org/get-started/locally/) and then install the remaining requirements: `pip install -r requirements.txt`.",
+      "evidence_location": "line 19, '## Setup' section",
+      "confidence": "high",
+      "reason": "Defines the setup step needed to install dependencies and reproduce the environment."
+    },
+    {
+      "field": "dependency",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "Install [PyTorch](https://pytorch.org/get-started/locally/) and then install the remaining requirements",
+      "evidence_location": "line 19, '## Setup' section",
+      "confidence": "high",
+      "reason": "Names a core framework dependency that must be installed separately before the remaining requirements."
+    },
+    {
+      "field": "python_version",
+      "value": "Python 3.12",
+      "normalized_value": "Python 3.12",
+      "evidence": "This code was tested using Python 3.12 and PyTorch version 2.2.2.",
+      "evidence_location": "line 20, '## Setup' section",
+      "confidence": "high",
+      "reason": "Specifies the tested Python version, important for environment reproduction."
+    },
+    {
+      "field": "pytorch_version",
+      "value": "PyTorch version 2.2.2",
+      "normalized_value": "PyTorch version 2.2.2",
+      "evidence": "This code was tested using Python 3.12 and PyTorch version 2.2.2.",
+      "evidence_location": "line 20, '## Setup' section",
+      "confidence": "high",
+      "reason": "Specifies the tested PyTorch version, important for environment reproduction."
+    },
+    {
+      "field": "data_generation_script",
+      "value": "src/generate_data.py",
+      "normalized_value": "src/generate_data.py",
+      "evidence": "The code we used to generate the data is in [src/generate_data.py](src/generate_data.py).",
+      "evidence_location": "line 24, '## Generating data' section",
+      "confidence": "high",
+      "reason": "Identifies the entry point for generating the synthetic ELIZA training data."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://huggingface.co/datasets/danf0/eliza",
+      "normalized_value": "https://huggingface.co/datasets/danf0/eliza",
+      "evidence": "The datasets we used in our experiments can also be downloaded directly from HuggingFace via this link: https://huggingface.co/datasets/danf0/eliza.",
+      "evidence_location": "line 29, '## Generating data' section",
+      "confidence": "high",
+      "reason": "Provides direct access to the pre-generated datasets used in the paper's experiments."
+    },
+    {
+      "field": "training_script",
+      "value": "src/run.py",
+      "normalized_value": "src/run.py",
+      "evidence": "To train Transformers on ELIZA conversations, see [src/run.py](src/run.py).",
+      "evidence_location": "line 33, '## Training models' section",
+      "confidence": "high",
+      "reason": "Identifies the entry point for training models, key for reproduction."
+    },
+    {
+      "field": "hardware",
+      "value": "NVIDIA GeForce RTX 2080 Ti GPUs with 11GB of memory",
+      "normalized_value": "NVIDIA GeForce RTX 2080 Ti GPUs with 11GB of memory",
+      "evidence": "We ran our experiments on NVIDIA GeForce RTX 2080 Ti GPUs with 11GB of memory.",
+      "evidence_location": "line 35, '## Training models' section",
+      "confidence": "high",
+      "reason": "Specifies the hardware used for experiments, helping users estimate resource requirements for reproduction."
+    },
+    {
+      "field": "training_duration",
+      "value": "single-turn models trained for approximately 12 hours each, multi-turn models trained for approximately 48 hours",
+      "normalized_value": "single-turn models trained for approximately 12 hours each, multi-turn models trained for approximately 48 hours",
+      "evidence": "The single-turn models were trained for approximately 12 hours each, and the multi-turn models were trained for approximately 48 hours.",
+      "evidence_location": "line 36, '## Training models' section",
+      "confidence": "high",
+      "reason": "Reports training time, useful for planning compute budgets when reproducing the experiments."
+    },
+    {
+      "field": "analysis_script",
+      "value": "src/utils/analysis_utils.py",
+      "normalized_value": "src/utils/analysis_utils.py",
+      "evidence": "[src/utils/analysis_utils.py](src/utils/analysis_utils.py) contains a number of utilities for analyzing these predictions.",
+      "evidence_location": "line 43, '### Error analysis' section",
+      "confidence": "high",
+      "reason": "Identifies utilities for error analysis of model predictions, supporting evaluation and reuse."
+    },
+    {
+      "field": "probing_script",
+      "value": "src/probing.py",
+      "normalized_value": "src/probing.py",
+      "evidence": "[src/probing.py](src/probing.py) contains code examinging attention embeddings, to investigate whether attentions scores are influenced more by content or position.",
+      "evidence_location": "line 48, '### Probing copying mechanisms' section",
+      "confidence": "high",
+      "reason": "Identifies the script for probing attention/copying mechanisms, a key analysis component of the paper."
+    },
+    {
+      "field": "counterfactual_generation_script",
+      "value": "src/counterfactuals.py",
+      "normalized_value": "src/counterfactuals.py",
+      "evidence": "The code for generating these datasets is in [src/counterfactuals.py](src/counterfactuals.py).",
+      "evidence_location": "line 54, '### Counterfactual data' section",
+      "confidence": "high",
+      "reason": "Identifies the script for generating counterfactual datasets used to examine learned memory mechanisms."
+    },
+    {
+      "field": "evaluation_flag",
+      "value": "--eval_only",
+      "normalized_value": "--eval_only",
+      "evidence": "After generating a counterfactual dataset, a model can be evaluated using [src/run.py](src/run.py), using the `--eval_only` flag.",
+      "evidence_location": "line 56, '### Counterfactual data' section",
+      "confidence": "high",
+      "reason": "Documents how to run evaluation-only mode, supporting reuse of the evaluation pipeline."
+    },
+    {
+      "field": "contact_email",
+      "value": "dfriedman@cs.princeton.edu",
+      "normalized_value": "dfriedman@cs.princeton.edu",
+      "evidence": "If you have any questions about the code or paper, please email Dan (dfriedman@cs.princeton.edu) or open an issue.",
+      "evidence_location": "line 60, '## Questions?' section",
+      "confidence": "high",
+      "reason": "Provides a contact point for questions about the code or paper."
+    },
+    {
+      "field": "citation",
+      "value": "@article{friedman2024representing,\n  title={Representing Rule-based Chatbots with Transformers},\n  author={Friedman, Dan and Panigrahi, Abhishek and Chen, Danqi},\n  year={2024}\n}",
+      "normalized_value": "@article{friedman2024representing, title={Representing Rule-based Chatbots with Transformers}, author={Friedman, Dan and Panigrahi, Abhishek and Chen, Danqi}, year={2024} }",
+      "evidence": "```bibtex\n@article{friedman2024representing,\n  title={Representing Rule-based Chatbots with Transformers},\n  author={Friedman, Dan and Panigrahi, Abhishek and Chen, Danqi},\n  year={2024}\n}\n```",
+      "evidence_location": "lines 63-69, '## Citation' section, fenced bibtex code block",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for attributing the work."
+    },
+    {
+      "field": "authors",
+      "value": "Friedman, Dan and Panigrahi, Abhishek and Chen, Danqi",
+      "normalized_value": "Friedman, Dan and Panigrahi, Abhishek and Chen, Danqi",
+      "evidence": "  author={Friedman, Dan and Panigrahi, Abhishek and Chen, Danqi},",
+      "evidence_location": "line 66, '## Citation' section",
+      "confidence": "high",
+      "reason": "Names the authors of the paper/artifact, useful for attribution and search."
+    },
+    {
+      "field": "publication_year",
+      "value": "2024",
+      "normalized_value": "2024",
+      "evidence": "  year={2024}",
+      "evidence_location": "line 67, '## Citation' section",
+      "confidence": "high",
+      "reason": "States the publication year, useful for indexing and citation."
+    }
+  ]
+}

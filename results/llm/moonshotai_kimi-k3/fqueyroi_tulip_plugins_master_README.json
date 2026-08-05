@@ -1,0 +1,202 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Graph Algorithms for Tulip Software",
+      "normalized_value": "Graph Algorithms for Tulip Software",
+      "evidence": "# Graph Algorithms for [Tulip Software](https://github.com/Tulip-Dev/tulip)",
+      "evidence_location": "3, top-level header",
+      "confidence": "high",
+      "reason": "Title of the repository/artifact identifying it as a collection of graph algorithms for Tulip."
+    },
+    {
+      "field": "description",
+      "value": "This page contains Tulip plugins using Tulip API or Tulip Python API. They are implementation of well-known (or less-known) graph algorithms and network analysis methods.",
+      "normalized_value": "This page contains Tulip plugins using Tulip API or Tulip Python API. They are implementation of well-known (or less-known) graph algorithms and network analysis methods.",
+      "evidence": "This page contains Tulip plugins using [Tulip API](http://tulip.labri.fr/Documentation/current/doxygen/html/index.html) or [Tulip Python API](http://tulip.labri.fr/Documentation/current/tulip-python/html). They are implementation of well-known (or less-known) graph algorithms and network analysis methods.",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "States the purpose and nature of the artifact: Tulip plugins implementing graph algorithms and network analysis methods."
+    },
+    {
+      "field": "host_framework",
+      "value": "Tulip",
+      "normalized_value": "Tulip",
+      "evidence": "> Tulip is an information visualization framework dedicated to the analysis and visualization of relational data.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Identifies the host framework the plugins target, essential for reuse and installation context."
+    },
+    {
+      "field": "host_framework_repository",
+      "value": "https://github.com/Tulip-Dev/tulip",
+      "normalized_value": "https://github.com/Tulip-Dev/tulip",
+      "evidence": "Find more info [here](https://github.com/Tulip-Dev/tulip).",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Link to the Tulip framework repository needed to run the plugins."
+    },
+    {
+      "field": "api_documentation",
+      "value": "http://tulip.labri.fr/Documentation/current/doxygen/html/index.html",
+      "normalized_value": "http://tulip.labri.fr/Documentation/current/doxygen/html/index.html",
+      "evidence": "[Tulip API](http://tulip.labri.fr/Documentation/current/doxygen/html/index.html)",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Link to the Tulip API documentation used by the plugins."
+    },
+    {
+      "field": "python_api_documentation",
+      "value": "http://tulip.labri.fr/Documentation/current/tulip-python/html",
+      "normalized_value": "http://tulip.labri.fr/Documentation/current/tulip-python/html",
+      "evidence": "[Tulip Python API](http://tulip.labri.fr/Documentation/current/tulip-python/html)",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Link to the Tulip Python API documentation used by the plugins."
+    },
+    {
+      "field": "plugin",
+      "value": "Transportation Networks Design",
+      "normalized_value": "Transportation Networks Design",
+      "evidence": "## [Transportation Networks Design](https://github.com/fqueyroi/tulip_plugins/tree/master/TransportationNetworks)\n\nDirectory \"TransportationNetworks\" contains two transportation network construction algorithms. \n- SPRouting: use iterative shortest-path routing of flow\n- PhysariumSolver: use biologically inspired routing and edge length update.",
+      "evidence_location": "11-15, section header 'Transportation Networks Design'",
+      "confidence": "high",
+      "reason": "Names a plugin directory and the two algorithms it contains (SPRouting, PhysariumSolver)."
+    },
+    {
+      "field": "citation",
+      "value": "Queyroi, F. (2018). Biological and Shortest-Path Routing Procedures for Transportation Network Design. arXiv preprint arXiv:1803.03528.",
+      "normalized_value": "Queyroi, F. (2018). Biological and Shortest-Path Routing Procedures for Transportation Network Design. arXiv preprint arXiv:1803.03528.",
+      "evidence": "> Queyroi, F. (2018). Biological and Shortest-Path Routing Procedures for Transportation Network Design. arXiv preprint [arXiv:1803.03528](https://arxiv.org/abs/1803.03528).",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Reference publication for the transportation network design algorithms, useful for citation and method details."
+    },
+    {
+      "field": "plugin",
+      "value": "Cliques",
+      "normalized_value": "Cliques",
+      "evidence": "### [Cliques](https://github.com/fqueyroi/tulip_plugins/tree/master/Cliques)\n\nA plugin to enumerate all [maximal cliques](https://en.wikipedia.org/wiki/Clique_(graph_theory)) in the graph.",
+      "evidence_location": "23-25, section header 'Cliques'",
+      "confidence": "high",
+      "reason": "Names a plugin that enumerates all maximal cliques in a graph."
+    },
+    {
+      "field": "algorithm_reference",
+      "value": "the algorithm of Eppstein et al. (https://arxiv.org/abs/1006.5440)",
+      "normalized_value": "the algorithm of Eppstein et al. (https://arxiv.org/abs/1006.5440)",
+      "evidence": "It uses [the algorithm of Eppstein *et al.*](https://arxiv.org/abs/1006.5440) : vertices are ordered using their degeneracy value (the [K-Cores plugin](https://github.com/Tulip-Dev/tulip/blob/master/plugins/metric/KCores.cpp) in Tulip) in order to speed up the enumeration.",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Identifies the underlying maximal clique enumeration algorithm and its arXiv reference, plus the degeneracy ordering optimization."
+    },
+    {
+      "field": "python_dependency",
+      "value": "pip install ordereddict",
+      "normalized_value": "pip install ordereddict",
+      "evidence": "**Warning!** This python plugin uses `collections.OrderedDict`. For python version prior to 2.7, you need to install the package: `pip install ordereddict`",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Installation requirement for the Cliques plugin on Python versions prior to 2.7."
+    },
+    {
+      "field": "plugin",
+      "value": "Clique Percolation",
+      "normalized_value": "Clique Percolation",
+      "evidence": "### [Clique Percolation](https://github.com/fqueyroi/tulip_plugins/tree/master/Cliques)\n\nAn implementation of the [Clique Percolation Method](https://en.wikipedia.org/wiki/Clique_percolation_method) that finds an overlapping clustering of the graph. It does so by merging the k-cliques that share k-1 vertices (k is a parameter of the algorithm). We actually use the plugin `CliqueEnum` to find maximal cliques rather than enumerating all $k$-cliques.",
+      "evidence_location": "29-31, section header 'Clique Percolation'",
+      "confidence": "high",
+      "reason": "Names a plugin implementing the Clique Percolation Method for overlapping clustering, including its parameter k and dependency on the CliqueEnum plugin."
+    },
+    {
+      "field": "plugin",
+      "value": "Label Propagation",
+      "normalized_value": "Label Propagation",
+      "evidence": "### [Label Propagation](https://github.com/fqueyroi/tulip_plugins/tree/master/LabelPropagation)\n\nA simple, fast and efficient graph clustering algorithm. For a weighted graph G=(V,E,w), it produces a *partition* of the vertices V.",
+      "evidence_location": "33-35, section header 'Label Propagation'",
+      "confidence": "high",
+      "reason": "Names a graph clustering plugin that partitions vertices of a weighted graph via label propagation."
+    },
+    {
+      "field": "citation",
+      "value": "Usha Nandini Raghavan, Réka Albert, and Soundar Kumara. Near linear time algorithm to detect community structures in large-scale networks. Physical Review E, 76(3):036106, 2007.",
+      "normalized_value": "Usha Nandini Raghavan, Réka Albert, and Soundar Kumara. Near linear time algorithm to detect community structures in large-scale networks. Physical Review E, 76(3):036106, 2007.",
+      "evidence": ">Usha Nandini Raghavan, Réka Albert, and Soundar Kumara. *Near linear time\nalgorithm to detect community structures in large-scale networks*. Physical Review\nE, 76(3) :036106, 2007.",
+      "evidence_location": "41-43",
+      "confidence": "high",
+      "reason": "Primary reference for the Label Propagation community detection algorithm."
+    },
+    {
+      "field": "citation",
+      "value": "Ian XY Leung, Pan Hui, Pietro Lìo, and Jon Crowcroft. Towards real-time community detection in large networks. Physical Review E, 79(6):066107, 2009.",
+      "normalized_value": "Ian XY Leung, Pan Hui, Pietro Lìo, and Jon Crowcroft. Towards real-time community detection in large networks. Physical Review E, 79(6):066107, 2009.",
+      "evidence": ">Ian XY Leung, Pan Hui, Pietro Lìo, and Jon Crowcroft. *Towards real-time community\ndetection in large networks.* Physical Review E, 79(6) :066107, 2009.",
+      "evidence_location": "47-48",
+      "confidence": "high",
+      "reason": "Secondary reference for the Label Propagation algorithm variant."
+    },
+    {
+      "field": "plugin",
+      "value": "K-Peaks Clustering",
+      "normalized_value": "K-Peaks Clustering",
+      "evidence": "### [K-Peaks Clustering](https://github.com/fqueyroi/tulip_plugins/tree/master/KPeaks)",
+      "evidence_location": "50, section header 'K-Peaks Clustering'",
+      "confidence": "high",
+      "reason": "Names a plugin implementing a variation of K-Cores decomposition."
+    },
+    {
+      "field": "citation",
+      "value": "J. Abello and F. Queyroi (2014). Network decomposition into fixed points of degree peeling. Social Network Analysis and Mining, 4(1), 191.",
+      "normalized_value": "J. Abello and F. Queyroi (2014). Network decomposition into fixed points of degree peeling. Social Network Analysis and Mining, 4(1), 191.",
+      "evidence": "> J. Abello and F. Queyroi (2014). *Network decomposition into fixed points of degree peeling*. Social Network Analysis and Mining, 4(1), 191.",
+      "evidence_location": "58",
+      "confidence": "high",
+      "reason": "Reference publication describing the K-Peaks decomposition method."
+    },
+    {
+      "field": "plugin",
+      "value": "Minimum Spanning Tree",
+      "normalized_value": "Minimum Spanning Tree",
+      "evidence": "## [Minimum Spanning Tree](https://github.com/fqueyroi/tulip_plugins/tree/master/MinimumSpanningTree)\n\nCompute the [Minimum Spanning Tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) of the graph (Python script) using a [Union-Find](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm) data structure.",
+      "evidence_location": "60-62, section header 'Minimum Spanning Tree'",
+      "confidence": "high",
+      "reason": "Names a plugin computing the minimum spanning tree using a Union-Find data structure, implemented as a Python script."
+    },
+    {
+      "field": "plugin",
+      "value": "Vertex Cycle Cover and Secret Santa!",
+      "normalized_value": "Vertex Cycle Cover and Secret Santa!",
+      "evidence": "## [Vertex Cycle Cover and Secret Santa!](https://github.com/fqueyroi/tulip_plugins/tree/master/VertexCycleCover)",
+      "evidence_location": "64, section header 'Vertex Cycle Cover and Secret Santa!'",
+      "confidence": "high",
+      "reason": "Names a plugin solving constrained Secret Santa assignment as a Vertex Cycle Cover problem."
+    },
+    {
+      "field": "method_description",
+      "value": "the problem is to find a Vertex Cycle Cover of G. This problem can be solved using a maximum matching algorithm.",
+      "normalized_value": "the problem is to find a Vertex Cycle Cover of G. This problem can be solved using a maximum matching algorithm.",
+      "evidence": "If we assume the the various possibilities are summed up in a graph G (an arc between A->B indicates that A can offer a gift to B) then the problem is to find a [Vertex Cycle Cover](https://en.wikipedia.org/wiki/Vertex_cycle_cover) of G. This problem can be solved using a maximum matching algorithm.",
+      "evidence_location": "72",
+      "confidence": "high",
+      "reason": "Describes the algorithmic approach (vertex cycle cover via maximum matching) used by the Secret Santa plugin."
+    },
+    {
+      "field": "algorithm_reference",
+      "value": "Liberti and Raimondi (2008), https://link.springer.com/chapter/10.1007/978-3-540-68880-8_26",
+      "normalized_value": "Liberti and Raimondi (2008), https://link.springer.com/chapter/10.1007/978-3-540-68880-8_26",
+      "evidence": "This is an implementation of the algorithm by [Liberti and Raimondi](https://link.springer.com/chapter/10.1007/978-3-540-68880-8_26) (2008).",
+      "evidence_location": "74",
+      "confidence": "high",
+      "reason": "Identifies the published algorithm implemented by the SecretSanta plugin for secrecy-preserving assignments."
+    },
+    {
+      "field": "source_repository",
+      "value": "https://github.com/fqueyroi/tulip_plugins",
+      "normalized_value": "https://github.com/fqueyroi/tulip_plugins",
+      "evidence": "### [Cliques](https://github.com/fqueyroi/tulip_plugins/tree/master/Cliques)",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "All plugin links point to the fqueyroi/tulip_plugins GitHub repository, identifying where the source code is hosted."
+    }
+  ]
+}

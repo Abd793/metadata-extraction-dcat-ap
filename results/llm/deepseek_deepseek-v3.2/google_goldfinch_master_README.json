@@ -1,0 +1,94 @@
+{
+  "metadata": [
+    {
+      "field": "dataset_name",
+      "value": "Goldfinch: GOogLe image-search Dataset for FINe grained CHallenges",
+      "normalized_value": "Goldfinch: GOogLe image-search Dataset for FINe grained CHallenges",
+      "evidence": "# Goldfinch: GOogLe image-search Dataset for FINe grained CHallenges",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Identifies the artifact name."
+    },
+    {
+      "field": "artifact_description",
+      "value": "Goldfinch is a dataset for fine-grained recognition challenges. It contains a list of bird, butterfly, aircraft, and dog categories with relevant Google image search and Flickr search URLs. In addition, it also includes a set of active learning annotations on dog categories.",
+      "normalized_value": "Goldfinch is a dataset for fine-grained recognition challenges. It contains a list of bird, butterfly, aircraft, and dog categories with relevant Google image search and Flickr search URLs. In addition, it also includes a set of active learning annotations on dog categories.",
+      "evidence": "Goldfinch is a dataset for fine-grained recognition challenges. It contains a list of bird, butterfly, aircraft, and dog categories with relevant Google image search and Flickr search URLs. In addition, it also includes a set of active learning annotations on dog categories.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Describes the purpose and contents of the dataset."
+    },
+    {
+      "field": "paper_reference",
+      "value": "[The Unreasonable Effectiveness of Noisy Data for Fine-Grained Recognition](https://arxiv.org/abs/1511.06789)",
+      "normalized_value": "[The Unreasonable Effectiveness of Noisy Data for Fine-Grained Recognition](https://arxiv.org/abs/1511.06789)",
+      "evidence": "[The Unreasonable Effectiveness of Noisy Data for Fine-Grained Recognition](https://arxiv.org/abs/1511.06789)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Provides citation and link to the associated research paper."
+    },
+    {
+      "field": "contact_email",
+      "value": "jkrause@google.com and howardzhou@google.com",
+      "normalized_value": "jkrause@google.com and howardzhou@google.com",
+      "evidence": "Questions can be directed to jkrause@google.com and howardzhou@google.com.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Contact information for questions about the dataset."
+    },
+    {
+      "field": "component_datasets",
+      "value": "CUB, Birdsnap, FGVC-Aircraft, Stanford Dogs, L-Bird, L-Butterfly, L-Dog, L-Aircraft",
+      "normalized_value": "CUB, Birdsnap, FGVC-Aircraft, Stanford Dogs, L-Bird, L-Butterfly, L-Dog, L-Aircraft",
+      "evidence": "### cub_classes.txt:\nFor each category in the CUB dataset:\n### birdsnap_classes.txt:\nFor each category in the Birdsnap dadataset:\n### fgvc_classes.txt:\nFor each category in the FGVC-Aircraft dataset:\n### sdog_classes.txt:\nFor each category in the Stanford Dogs dataset:\n### bird_classes.txt:\nFor each category in L-Bird:\n### lepidoptera_classes.txt:\nFor each category in L-Butterfly:\n### dog_classes.txt:\nFor each category in L-Dog:\n### aircraft_classes.txt:\nFor each category in L-Aircraft:",
+      "evidence_location": "lines 10-114 (sections: cub_classes.txt, birdsnap_classes.txt, fgvc_classes.txt, sdog_classes.txt, bird_classes.txt, lepidoptera_classes.txt, dog_classes.txt, aircraft_classes.txt)",
+      "confidence": "high",
+      "reason": "Lists the source datasets included in Goldfinch, important for understanding data provenance."
+    },
+    {
+      "field": "compressed_files",
+      "value": "aircraft_urls.txt.7z, bird_urls1.txt.7z, bird_urls2.txt.7z, dog_urls.txt.7z, lepidoptera_urls.txt.7z",
+      "normalized_value": "aircraft_urls.txt.7z, bird_urls1.txt.7z, bird_urls2.txt.7z, dog_urls.txt.7z, lepidoptera_urls.txt.7z",
+      "evidence": "### aircraft_urls.txt.7z\n### bird_urls1.txt.7z\n### bird_urls2.txt.7z\n### dog_urls.txt.7z\n### lepidoptera_urls.txt.7z",
+      "evidence_location": "lines 122-126",
+      "confidence": "high",
+      "reason": "Lists the compressed files containing image URLs, necessary for data access."
+    },
+    {
+      "field": "flickr_files",
+      "value": "flickr_{aircraft,bird,lepidoptera}.txt",
+      "normalized_value": "flickr_{aircraft,bird,lepidoptera}.txt",
+      "evidence": "flickr_{aircraft,bird,lepidoptera}.txt:",
+      "evidence_location": "line 145",
+      "confidence": "high",
+      "reason": "Specifies Flickr testing set files for different categories."
+    },
+    {
+      "field": "active_learning_files",
+      "value": "sdogs_active_learning_iteration{1,2}.txt",
+      "normalized_value": "sdogs_active_learning_iteration{1,2}.txt",
+      "evidence": "sdogs_active_learning_iteration{1,2}.txt:",
+      "evidence_location": "line 161",
+      "confidence": "high",
+      "reason": "Names of files containing active learning annotations on dog categories."
+    },
+    {
+      "field": "image_urls_format",
+      "value": "freebase id (or category name for aircraft),urls",
+      "normalized_value": "freebase id (or category name for aircraft),urls",
+      "evidence": "freebase id (or category name for aircraft),urls",
+      "evidence_location": "line 130",
+      "confidence": "high",
+      "reason": "Describes the format of image URL files, essential for parsing the data."
+    },
+    {
+      "field": "active_learning_file_format",
+      "value": "Format of each line, with values delimited by commas:\n1. Freebase id (see sdog_classes.txt for mapping to human-readable names)\n2. Rater majority vote (boolean)\n3. Url\n4-7. Generic dog detector pixel coordinates xmin,ymin,xmax,ymax\n8. Rating 1 (boolean)\n9. Rating 2\n11. Rating 3\n12. (Optional) Rating 4",
+      "normalized_value": "Format of each line, with values delimited by commas: 1. Freebase id (see sdog_classes.txt for mapping to human-readable names) 2. Rater majority vote (boolean) 3. Url 4-7. Generic dog detector pixel coordinates xmin,ymin,xmax,ymax 8. Rating 1 (boolean) 9. Rating 2 11. Rating 3 12. (Optional) Rating 4",
+      "evidence": "Format of each line, with values delimited by commas:\n```\n1. Freebase id (see sdog_classes.txt for mapping to human-readable names)\n2. Rater majority vote (boolean)\n3. Url\n4-7. Generic dog detector pixel coordinates xmin,ymin,xmax,ymax\n8. Rating 1 (boolean)\n9. Rating 2\n11. Rating 3\n12. (Optional) Rating 4\n```",
+      "evidence_location": "lines 164-173",
+      "confidence": "high",
+      "reason": "Specifies the detailed format for active learning annotation files, crucial for data usage and reproduction."
+    }
+  ]
+}

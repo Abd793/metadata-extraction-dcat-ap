@@ -1,0 +1,202 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "Probabilistic Cross-Modal Embedding (PCME)",
+      "normalized_value": "Probabilistic Cross-Modal Embedding (PCME)",
+      "evidence": "Probabilistic Cross-Modal Embedding (PCME) CVPR 2021",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Primary name of the artifact"
+    },
+    {
+      "field": "implementation_framework",
+      "value": "Official Pytorch implementation of PCME",
+      "normalized_value": "Official Pytorch implementation of PCME",
+      "evidence": "Official Pytorch implementation of PCME",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Specifies the implementation framework"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2101.05068",
+      "normalized_value": "https://arxiv.org/abs/2101.05068",
+      "evidence": "[Paper](https://arxiv.org/abs/2101.05068)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Link to the research paper"
+    },
+    {
+      "field": "conference",
+      "value": "CVPR 2021",
+      "normalized_value": "CVPR 2021",
+      "evidence": "Probabilistic Cross-Modal Embedding (PCME) CVPR 2021",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Conference where the work was presented"
+    },
+    {
+      "field": "authors",
+      "value": "Sanghyuk Chun, Seong Joon Oh, Rafael Sampaio de Rezende, Yannis Kalantidis, Diane Larlus",
+      "normalized_value": "Sanghyuk Chun, Seong Joon Oh, Rafael Sampaio de Rezende, Yannis Kalantidis, Diane Larlus",
+      "evidence": "Sanghyuk Chun<sup>1</sup> Seong Joon Oh<sup>1</sup> Rafael Sampaio de Rezende<sup>2</sup> Yannis Kalantidis<sup>2</sup> Diane Larlus<sup>2</sup>",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "List of authors for proper attribution"
+    },
+    {
+      "field": "affiliations",
+      "value": "NAVER AI LAB, NAVER LABS Europe",
+      "normalized_value": "NAVER AI LAB, NAVER LABS Europe",
+      "evidence": "<sup>1</sup><sub>[NAVER AI LAB](https://naver-career.gitbook.io/en/teams/clova-cic)</sub><br>\n<sup>2</sup><sub>[NAVER LABS Europe](https://europe.naverlabs.com/)</sub>",
+      "evidence_location": "7-8",
+      "confidence": "high",
+      "reason": "Author affiliations for proper attribution"
+    },
+    {
+      "field": "improved_version",
+      "value": "PCME++",
+      "normalized_value": "PCME++",
+      "evidence": "[PCME++](https://openreview.net/forum?id=ft1mr3WlGM), the improved version of PCME, is accepted at ICLR 2024. Please use [naver-ai/pcmepp](https://github.com/naver-ai/pcmepp) for the improved version!",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Information about improved version and where to find it"
+    },
+    {
+      "field": "installation_commands",
+      "value": "pip install cython && pip install -r requirements.txt\npython -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")'\ngit clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./",
+      "normalized_value": "pip install cython && pip install -r requirements.txt\npython -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")'\ngit clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./",
+      "evidence": "pip install cython && pip install -r requirements.txt\npython -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")'\ngit clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./",
+      "evidence_location": "26-28",
+      "confidence": "high",
+      "reason": "Commands for installing dependencies"
+    },
+    {
+      "field": "docker_image",
+      "value": "sanghyukchun/pcme:torch1.2-apex-dali",
+      "normalized_value": "sanghyukchun/pcme:torch1.2-apex-dali",
+      "evidence": "docker pull sanghyukchun/pcme:torch1.2-apex-dali",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Docker image for reproducible environment"
+    },
+    {
+      "field": "configuration_override",
+      "value": "python <train | eval>.py --dataloader__batch_size 32 --dataloader__eval_batch_size 8 --model__eval_method matching_prob",
+      "normalized_value": "python <train | eval>.py --dataloader__batch_size 32 --dataloader__eval_batch_size 8 --model__eval_method matching_prob",
+      "evidence": "python <train | eval>.py --dataloader__batch_size 32 --dataloader__eval_batch_size 8 --model__eval_method matching_prob",
+      "evidence_location": "46",
+      "confidence": "high",
+      "reason": "Example of how to override configuration parameters"
+    },
+    {
+      "field": "dataset_coco_source",
+      "value": "We followed the same split provided by [VSE++](http://www.cs.toronto.edu/~faghri/vsepp/data.tar)",
+      "normalized_value": "We followed the same split provided by [VSE++](http://www.cs.toronto.edu/~faghri/vsepp/data.tar)",
+      "evidence": "We followed the same split provided by [VSE++](http://www.cs.toronto.edu/~faghri/vsepp/data.tar)",
+      "evidence_location": "55",
+      "confidence": "high",
+      "reason": "Source of COCO dataset splits"
+    },
+    {
+      "field": "dataset_cub_source",
+      "value": "Download images (CUB-200-2011) from [this link](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), and download caption from [reedscot/cvpr2016](https://github.com/reedscot/cvpr2016)",
+      "normalized_value": "Download images (CUB-200-2011) from [this link](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), and download caption from [reedscot/cvpr2016](https://github.com/reedscot/cvpr2016)",
+      "evidence": "Download images (CUB-200-2011) from [this link](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), and download caption from [reedscot/cvpr2016](https://github.com/reedscot/cvpr2016)",
+      "evidence_location": "62",
+      "confidence": "high",
+      "reason": "Sources for CUB dataset images and captions"
+    },
+    {
+      "field": "evaluation_command_coco_recall",
+      "value": "python evaluate_recall_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth",
+      "normalized_value": "python evaluate_recall_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth",
+      "evidence": "python evaluate_recall_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth",
+      "evidence_location": "75-77",
+      "confidence": "high",
+      "reason": "Command for evaluating recall metrics on COCO"
+    },
+    {
+      "field": "evaluation_command_coco_pmrp",
+      "value": "python extract_rankings_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth \\\n    --dump_to <dumped_ranking_file>\n\npython evaluate_pmrp_coco.py --ranking_file <dumped_ranking_file>",
+      "normalized_value": "python extract_rankings_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth \\\n    --dump_to <dumped_ranking_file>\n\npython evaluate_pmrp_coco.py --ranking_file <dumped_ranking_file>",
+      "evidence": "python extract_rankings_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth \\\n    --dump_to <dumped_ranking_file>\n\npython evaluate_pmrp_coco.py --ranking_file <dumped_ranking_file>",
+      "evidence_location": "83-89",
+      "confidence": "high",
+      "reason": "Commands for evaluating PMRP metric on COCO"
+    },
+    {
+      "field": "pretrained_model_urls",
+      "value": "PCME: [link](https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_coco.pth), PCME (CutMix-pretrained): [link](https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_cutmix_coco.pth)",
+      "normalized_value": "PCME: [link](https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_coco.pth), PCME (CutMix-pretrained): [link](https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_cutmix_coco.pth)",
+      "evidence": "| PCME     | 45.0     | 68.8    |   26.2   | 46.0     | 54.6    |   48.0   | [link](https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_coco.pth) |\n| PCME (CutMix-pretrained) | 46.2 | 68.3 | 28.6 | 47.1 | 56.7 | 54.9 | [link](https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_cutmix_coco.pth) |",
+      "evidence_location": "94-95",
+      "confidence": "high",
+      "reason": "URLs to download pretrained models"
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "I2T 1K PMRP, I2T 1K R@1, I2T ECCV mAP@R, T2I 1K PMRP, T2I 1K R@1, T2I ECCV mAP@R",
+      "normalized_value": "I2T 1K PMRP, I2T 1K R@1, I2T ECCV mAP@R, T2I 1K PMRP, T2I 1K R@1, T2I ECCV mAP@R",
+      "evidence": "| Method   | I2T 1K PMRP | I2T 1K R@1 | I2T ECCV mAP@R | T2I 1K PMRP | T2I 1K R@1 | T2I ECCV mAP@R | Model file |",
+      "evidence_location": "92",
+      "confidence": "high",
+      "reason": "Evaluation metrics used for comparison"
+    },
+    {
+      "field": "distance_methods",
+      "value": "['elk', 'l2', 'min', 'max', 'wasserstein', 'kl', 'reverse_kl', 'js', 'bhattacharyya', 'matmul', 'matching_prob']",
+      "normalized_value": "['elk', 'l2', 'min', 'max', 'wasserstein', 'kl', 'reverse_kl', 'js', 'bhattacharyya', 'matmul', 'matching_prob']",
+      "evidence": "['elk', 'l2', 'min', 'max', 'wasserstein', 'kl', 'reverse_kl', 'js', 'bhattacharyya', 'matmul', 'matching_prob']",
+      "evidence_location": "128",
+      "confidence": "high",
+      "reason": "Available probabilistic distance methods for evaluation"
+    },
+    {
+      "field": "training_hardware",
+      "value": "single V100 with mixed-precision training (O2)",
+      "normalized_value": "single V100 with mixed-precision training (O2)",
+      "evidence": "we train each model with mixed-precision training (O2) on a single V100",
+      "evidence_location": "133",
+      "confidence": "high",
+      "reason": "Hardware requirements for training"
+    },
+    {
+      "field": "training_time_coco",
+      "value": "about 46 hours",
+      "normalized_value": "about 46 hours",
+      "evidence": "It takes about 46 hours in a single V100 with mixed precision training",
+      "evidence_location": "144",
+      "confidence": "high",
+      "reason": "Estimated training time for COCO dataset"
+    },
+    {
+      "field": "training_time_cub",
+      "value": "about 4 hours",
+      "normalized_value": "about 4 hours",
+      "evidence": "It takes about 4 hours in a single V100 with mixed precision training",
+      "evidence_location": "176",
+      "confidence": "high",
+      "reason": "Estimated training time for CUB dataset"
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{chun2021pcme,\n    title={Probabilistic Embeddings for Cross-Modal Retrieval},\n    author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane},\n    year={2021},\n    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},\n}",
+      "normalized_value": "@inproceedings{chun2021pcme,\n    title={Probabilistic Embeddings for Cross-Modal Retrieval},\n    author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane},\n    year={2021},\n    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},\n}",
+      "evidence": "@inproceedings{chun2021pcme,\n    title={Probabilistic Embeddings for Cross-Modal Retrieval},\n    author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane},\n    year={2021},\n    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},\n}",
+      "evidence_location": "181-186",
+      "confidence": "high",
+      "reason": "BibTeX citation for the main paper"
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "MIT License",
+      "evidence_location": "209",
+      "confidence": "high",
+      "reason": "License information for reuse"
+    }
+  ]
+}

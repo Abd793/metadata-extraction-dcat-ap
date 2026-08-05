@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "title",
+      "value": "Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "normalized_value": "Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "evidence": "# Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "The title is explicitly stated as the main heading."
+    },
+    {
+      "field": "authors",
+      "value": "Damien LaRocque, William Guimont-Martin, David-Alexandre Duclos, Philippe Giguère, Francois Pomerleau",
+      "normalized_value": "Damien LaRocque, William Guimont-Martin, David-Alexandre Duclos, Philippe Giguère, Francois Pomerleau",
+      "evidence": "> **Proprioception Is All You Need: Terrain Classification for Boreal Forests**\\\n> Damien LaRocque, William Guimont-Martin, David-Alexandre Duclos, Philippe Giguère, Francois Pomerleau\\\n> Paper: https://arxiv.org/abs/2403.16877",
+      "evidence_location": "lines 5-7",
+      "confidence": "high",
+      "reason": "List of authors is explicitly provided."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2403.16877",
+      "normalized_value": "https://arxiv.org/abs/2403.16877",
+      "evidence": "> Paper: https://arxiv.org/abs/2403.16877",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Direct link to the paper is provided."
+    },
+    {
+      "field": "conference",
+      "value": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024)",
+      "normalized_value": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024)",
+      "evidence": "This repo contains the source code and the datasets used in our paper _Proprioception Is All You Need: Terrain Classification for Boreal Forests_ that was submitted to the 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024).",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Conference name and year are explicitly stated."
+    },
+    {
+      "field": "source_code_description",
+      "value": "Most functions are available in the [`utils`](utils/) directory",
+      "normalized_value": "Most functions are available in the [`utils`](utils/) directory",
+      "evidence": "Most functions are available in the [`utils`](utils/) directory :",
+      "evidence_location": "line 13",
+      "confidence": "high",
+      "reason": "Describes the location and purpose of the source code."
+    },
+    {
+      "field": "source_code_files",
+      "value": "[`utils/preprocessing.py`](utils/preprocessing.py) contains the functions for the preprocessing pipeline\n[`utils/models.py`](utils/models.py) contains the code for the trained models\n[`utils/frequency.py`](utils/frequency.py) contains the functions for the multi-channel spectrogram",
+      "normalized_value": "[`utils/preprocessing.py`](utils/preprocessing.py) contains the functions for the preprocessing pipeline [`utils/models.py`](utils/models.py) contains the code for the trained models [`utils/frequency.py`](utils/frequency.py) contains the functions for the multi-channel spectrogram",
+      "evidence": "* [`utils/preprocessing.py`](utils/preprocessing.py) contains the functions for the preprocessing pipeline\n* [`utils/models.py`](utils/models.py) contains the code for the trained models\n* [`utils/frequency.py`](utils/frequency.py) contains the functions for the multi-channel spectrogram",
+      "evidence_location": "lines 15-17",
+      "confidence": "high",
+      "reason": "Lists and describes the main source code files."
+    },
+    {
+      "field": "python_version",
+      "value": "python3.10",
+      "normalized_value": "python3.10",
+      "evidence": "python3.10 -m venv .venv",
+      "evidence_location": "line 25",
+      "confidence": "high",
+      "reason": "Python version is specified in the installation command."
+    },
+    {
+      "field": "dependencies_installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "line 27",
+      "confidence": "high",
+      "reason": "Command to install dependencies from a requirements file."
+    },
+    {
+      "field": "gpu_requirements",
+      "value": "Two dependencies, [`mamba-ssm`](https://github.com/state-spaces/mamba) and [`causal-conv1d`](https://github.com/Dao-AILab/causal-conv1d) require a NVIDIA GPU.",
+      "normalized_value": "Two dependencies, [`mamba-ssm`](https://github.com/state-spaces/mamba) and [`causal-conv1d`](https://github.com/Dao-AILab/causal-conv1d) require a NVIDIA GPU.",
+      "evidence": "Two dependencies, [`mamba-ssm`](https://github.com/state-spaces/mamba) and [`causal-conv1d`](https://github.com/Dao-AILab/causal-conv1d) require a NVIDIA GPU.",
+      "evidence_location": "line 22",
+      "confidence": "high",
+      "reason": "Identifies specific dependencies that require GPU hardware."
+    },
+    {
+      "field": "docker_build_command",
+      "value": "docker build -t borealtc-gpu -f DockerfileGPU .",
+      "normalized_value": "docker build -t borealtc-gpu -f DockerfileGPU .",
+      "evidence": "docker build -t borealtc-gpu -f DockerfileGPU .",
+      "evidence_location": "line 34",
+      "confidence": "high",
+      "reason": "Command to build a Docker image for GPU usage."
+    },
+    {
+      "field": "docker_run_command",
+      "value": "docker run --gpus all -e CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES --rm --ipc host \\\n\t  --mount type=bind,source=.,target=/code/ \\\n\t  --mount type=bind,source=/dev/shm,target=/dev/shm \\\n\t  borealtc-gpu python3 main.py",
+      "normalized_value": "docker run --gpus all -e CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES --rm --ipc host --mount type=bind,source=.,target=/code/ --mount type=bind,source=/dev/shm,target=/dev/shm borealtc-gpu python3 main.py",
+      "evidence": "docker run --gpus all -e CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES --rm --ipc host \\\n\t  --mount type=bind,source=.,target=/code/ \\\n\t  --mount type=bind,source=/dev/shm,target=/dev/shm \\\n\t  borealtc-gpu python3 main.py",
+      "evidence_location": "lines计量-40",
+      "confidence": "high",
+      "reason": "Command to run the Docker image, specifying GPU and volume mounts."
+    },
+    {
+      "field": "datasets",
+      "value": "the `BorealTC` dataset, our publicly available dataset\n the `Vulpi` dataset, from the 2021 [paper](https://doi.org/10.1016/j.jterra.2020.12.002) of Vulpi et al.",
+      "normalized_value": "the `BorealTC` dataset, our publicly available dataset the `Vulpi` dataset, from the 2021 [paper](https://doi.org/10.1016/j.jterra.2020.12.002) of Vulpi et al.",
+      "evidence": "* the `BorealTC` dataset, our publicly available dataset\n* the `Vulpi` dataset, from the 2021 [paper](https://doi.org/10.1016/j.jterra.2020.12.002) of Vulpi et al. This dataset is originally sourced from their repository [Ph0bi0/T_DEEP](https://github.com/Ph0bi0/T_DEEP). The original data is available in the form of `.mat` files. We converted their data in `*.csv` files to work in Python.",
+      "evidence_location": "lines 47-49",
+      "confidence": "high",
+      "reason": "Names and describes the two datasets included in the repository."
+    },
+    {
+      "field": "dataset_structure",
+      "value": "Each experiment is provided in two files `imu_XX.csv` and `pro_XX.csv`, for the IMU and the wheel service data, respectively.\nBoth datasets are organized as the following :```sh\ndata\n├── borealtc\n│   ├── CLASS1\n│   │   ├── imu_00.csv\n│   │   ├── imu_01.csv\n│   │   ├── ...\n│   │   ├── pro_00.csv\n│   │   ├── pro_01.csv\n│   │   └── ...\n│   └── CLASS2\n│       ├── imu_00.csv\n│       ├── imu_01.csv\n│       ├── ...\n│       ├── pro_00.csv\n│       ├── pro_01.csv\n│       └── ...\n└── vulpi\n    ├── CLASS1\n    │   ├── imu_1.csv\n    │   ├── imu_2.csv\n    │   ├── ...\n    │   ├── pro_1.csv\n    │   ├── pro_2.csv\n    │   └── ...\n    └── CLASS2\n        ├── imu_1.csv\n        ├── imu_2.csv\n        ├── ...\n        ├── pro_1.csv\n        ├── pro_2.csv\n        └── ...```",
+      "normalized_value": "Each experiment is provided in two files `imu_XX.csv` and `pro_XX.csv`, for the IMU and the wheel service data, respectively. Both datasets are organized as the following :```sh data ├── borealtc │   ├── CLASS1 │   │   ├── imu_00.csv │   │   ├── imu_01.csv │   │   ├── ... │   │   ├── pro_00.csv │   │   ├── pro_01.csv │   │   └── ... │   └── CLASS2 │       ├── imu_00.csv │       ├── imu_01.csv │       ├── ... │       ├── pro_00.csv │       ├── pro_01.csv │       └── ... └── vulpi ├── CLASS1 │   ├── imu_1.csv │   ├── imu_2.csv │   ├── ... │   ├── pro_1.csv │   ├── pro_2.csv │   └── ... └── CLASS2 ├── imu_1.csv ├── imu_2.csv ├── ... ├── pro_1.csv ├── pro_2.csv └── ...```",
+      "evidence": "Each experiment is provided in two files `imu_XX.csv` and `pro_XX.csv`, for the IMU and the wheel service data, respectively.\nBoth datasets are organized as the following :\n\n```sh\ndata\n├── borealtc\n│   ├── CLASS1\n│   │   ├── imu_00.csv\n│   │   ├── imu_01.csv\n│   │   ├── ...\n│   │   ├── pro_00.csv\n│   │   ├── pro_01.csv\n│   │   └── ...\n│   └── CLASS2\n│       ├── imu_00.csv\n│       ├── imu_01.csv\n│       ├── ...\n│       ├── pro_00.csv\n│       ├── pro_01.csv\n│       └── ...\n└── vulpi\n    ├── CLASS1\n    │   ├── imu_1.csv\n    │   ├── imu_2.csv\n    │   ├── ...\n    │   ├── pro_1.csv\n    │   ├── pro_2.csv\n    │   └── ...\n    └── CLASS2\n        ├── imu_1.csv\n        ├── imu_2.csv\n        ├── ...\n        ├── pro_1.csv\n        ├── pro_2.csv\n        └── ...\n```",
+      "evidence_location": "lines 50-85",
+      "confidence": "high",
+      "reason": "Describes the file naming convention and the directory structure of the datasets."
+    },
+    {
+      "field": "model_checkpoints",
+      "value": "[mamba_vulpi.ckpt](checkpoints/mamba_vulpi.ckpt)\n[mamba_borealtc.ckpt](checkpoints/mamba_borealtc.ckpt)\n[mamba_combined.ckpt](checkpoints/mamba_combined.ckpt)",
+      "normalized_value": "[mamba_vulpi.ckpt](checkpoints/mamba_vulpi.ckpt) [mamba_borealtc.ckpt](checkpoints/mamba_borealtc.ckpt) [mamba_combined.ckpt](checkpoints/mamba_combined.ckpt)",
+      "evidence": "|                       Checkpoint                       |\n| :----------------------------------------------------: |\n|    [mamba_vulpi.ckpt](checkpoints/mamba_vulpi.ckpt)    |\n| [mamba_borealtc.ckpt](checkpoints/mamba_borealtc.ckpt) |\n| [mamba_combined.ckpt](checkpoints/mamba_combined.ckpt) |",
+      "evidence_location": "lines 92-95",
+      "confidence": "high",
+      "reason": "List of available model checkpoint files for Mamba."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{LaRocque2024BorealTC,\n    title={Proprioception Is All You Need: Terrain Classification for Boreal Forests},\n    author={Damien LaRocque and William Guimont-Martin and David-Alexandre Duclos and Philippe Giguère and François Pomerleau},\n    journal={arXiv preprint arXiv:2403.16877},\n    year={2024},\n    eprint={2403.16877},\n    archivePrefix={arXiv},\n    primaryClass={cs.RO}\n}",
+      "normalized_value": "@article{LaRocque2024BorealTC, title={Proprioception Is All You Need: Terrain Classification for Boreal Forests}, author={Damien LaRocque and William Guimont-Martin and David-Alexandre Duclos and Philippe Giguère and François Pomerleau}, journal={arXiv preprint arXiv:2403.16877}, year={2024}, eprint={2403.16877}, archivePrefix={arXiv}, primaryClass={cs.RO} }",
+      "evidence": "@article{LaRocque2024BorealTC,\n    title={Proprioception Is All You Need: Terrain Classification for Boreal Forests},\n    author={Damien LaRocque and William Guimont-Martin and David-Alexandre Duclos and Philippe Giguère and François Pomerleau},\n    journal={arXiv preprint arXiv:2403.16877},\n    year={2024},\n    eprint={2403.16877},\n    archivePrefix={arXiv},\n    primaryClass={cs.RO}\n}",
+      "evidence_location": "lines 127-136",
+      "confidence": "high",
+      "reason": "Full BibTeX citation for the paper."
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "normalized_value": "MIT",
+      "evidence": "This project is licensed under a [MIT](LICENSE) license.",
+      "evidence_location": "line 140",
+      "confidence": "high",
+      "reason": "License type is explicitly stated."
+    }
+  ]
+}

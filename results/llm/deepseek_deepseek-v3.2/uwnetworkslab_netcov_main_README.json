@@ -1,0 +1,175 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "NetCov",
+      "normalized_value": "NetCov",
+      "evidence": "# NetCov",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Identifies the name of the artifact."
+    },
+    {
+      "field": "description",
+      "value": "NetCov is an open-source tool that can be used with Batfish to analyze test coverage for network configurations.",
+      "normalized_value": "NetCov is an open-source tool that can be used with Batfish to analyze test coverage for network configurations.",
+      "evidence": "NetCov is an open-source tool that can be used with [Batfish](https://github.com/batfish/batfish) to analyze test coverage for network configurations.",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Describes the purpose and functionality of the artifact."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "NetCov is written in Python",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Specifies the programming language used for implementation."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install netcov",
+      "normalized_value": "pip install netcov",
+      "evidence": "```sh\n$ pip install netcov\n```",
+      "evidence_location": "lines 47-49",
+      "confidence": "high",
+      "reason": "Command to install the artifact using pip."
+    },
+    {
+      "field": "dependency_installation_command_macos",
+      "value": "brew install lcov",
+      "normalized_value": "brew install lcov",
+      "evidence": "```sh\n$ brew install lcov\n```",
+      "evidence_location": "lines 54-56",
+      "confidence": "high",
+      "reason": "Command to install LCOV dependency on MacOS for HTML report generation."
+    },
+    {
+      "field": "dependency_installation_command_ubuntu",
+      "value": "sudo apt install lcov",
+      "normalized_value": "sudo apt install lcov",
+      "evidence": "```sh\n$ sudo apt install lcov\n```",
+      "evidence_location": "lines 58-60",
+      "confidence": "high",
+      "reason": "Command to install LCOV dependency on Ubuntu for HTML report generation."
+    },
+    {
+      "field": "recommended_python_version",
+      "value": "Python version 3.7",
+      "normalized_value": "Python version 3.7",
+      "evidence": "A virtual environment and Python version 3.7 is recommended.",
+      "evidence_location": "line 46",
+      "confidence": "high",
+      "reason": "Specifies the recommended Python version for running the artifact."
+    },
+    {
+      "field": "usage_import_statement",
+      "value": "from netcov import NetCovSession as Session",
+      "normalized_value": "from netcov import NetCovSession as Session",
+      "evidence": "```python\n#from pybatfish.client.session import Session\nfrom netcov import NetCovSession as Session\n```",
+      "evidence_location": "lines 73-76",
+      "confidence": "high",
+      "reason": "Code snippet for importing NetCov session to replace pybatfish session in scripts."
+    },
+    {
+      "field": "coverage_console_command",
+      "value": "bf.cov.result()",
+      "normalized_value": "bf.cov.result()",
+      "evidence": "bf.cov.result()",
+      "evidence_location": "line 77",
+      "confidence": "high",
+      "reason": "Command to print coverage metrics to the console."
+    },
+    {
+      "field": "coverage_html_command",
+      "value": "bf.cov.html_report()",
+      "normalized_value": "bf.cov.html_report()",
+      "evidence": "bf.cov.html_report()",
+      "evidence_location": "line 77",
+      "confidence": "high",
+      "reason": "Command to generate HTML coverage report."
+    },
+    {
+      "field": "supported_questions",
+      "value": "Reachability test via traceroute question, Routing policy evaluation via testRoutePolicies question, Direct inspection of routing tables via routes and bgpRib questions, Querying interfaces via interfaceProperties question",
+      "normalized_value": "Reachability test via traceroute question, Routing policy evaluation via testRoutePolicies question, Direct inspection of routing tables via routes and bgpRib questions, Querying interfaces via interfaceProperties question",
+      "evidence": "- Reachability test via [traceroute](https://pybatfish.readthedocs.io/en/latest/notebooks/forwarding.html#Traceroute) question\n- Routing policy evaluation via [testRoutePolicies](https://pybatfish.readthedocs.io/en/latest/notebooks/routingProtocols.html#Test-Route-Policies) question\n- Direct inspection of routing tables via [routes](https://pybatfish.readthedocs.io/en/latest/notebooks/routingTables.html#Routes) and [bgpRib](https://pybatfish.readthedocs.io/en/latest/notebooks/routingTables.html#BGP-RIB) questions\n- Querying interfaces via [interfaceProperties](https://pybatfish.readthedocs.io/en/latest/notebooks/configProperties.html#Interface-Properties) question",
+      "evidence_location": "lines 13-17",
+      "confidence": "high",
+      "reason": "Lists the Batfish questions supported by NetCov for coverage tracking."
+    },
+    {
+      "field": "supported_vendors",
+      "value": "Cisco, Juniper, Arista, Palo Alto Networks, SONiC",
+      "normalized_value": "Cisco, Juniper, Arista, Palo Alto Networks, SONiC",
+      "evidence": "| Cisco              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |\n| Juniper            | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |\n| Arista             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |\n| Palo Alto Networks | :heavy_check_mark: |                    |                    |                    |                    |                    |\n| SONiC              |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |",
+      "evidence_location": "lines 23-27",
+      "confidence": "high",
+      "reason": "Specifies the network device vendors whose configuration syntax is supported by NetCov."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://www.usenix.org/conference/nsdi23/presentation/xu",
+      "normalized_value": "https://www.usenix.org/conference/nsdi23/presentation/xu",
+      "evidence": "[paper](https://www.usenix.org/conference/nsdi23/presentation/xu)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "URL to the academic paper associated with the artifact."
+    },
+    {
+      "field": "demo_video_url",
+      "value": "https://www.youtube.com/watch?v=FcBD2LhxqOQ",
+      "normalized_value": "https://www.youtube.com/watch?v=FcBD2LhxqOQ",
+      "evidence": "[demo video](https://www.youtube.com/watch?v=FcBD2LhxqOQ)",
+      "evidence_location": "line 81",
+      "confidence": "high",
+      "reason": "URL to a demonstration video of the artifact in use."
+    },
+    {
+      "field": "example_report_url",
+      "value": "https://rawcdn.githack.com/UWNetworksLab/netcov/main/examples/fattree4/coverage/HTML_REPORT/index.html",
+      "normalized_value": "https://rawcdn.githack.com/UWNetworksLab/netcov/main/examples/fattree4/coverage/HTML_REPORT/index.html",
+      "evidence": "[here](https://rawcdn.githack.com/UWNetworksLab/netcov/main/examples/fattree4/coverage/HTML_REPORT/index.html)",
+      "evidence_location": "line 40",
+      "confidence": "high",
+      "reason": "URL to an example HTML coverage report generated by the artifact."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings {netcov-nsdi-2023,\n  author = {Xieyang Xu and Weixin Deng and Ryan Beckett and Ratul Mahajan and David Walker},\n  title = {Test Coverage for Network Configurations},\n  booktitle = {20th USENIX Symposium on Networked Systems Design and Implementation (NSDI 23)},\n  year = {2023},\n  isbn = {978-1-939133-33-5},\n  address = {Boston, MA},\n  pages = {1717--1732},\n  url = {https://www.usenix.org/conference/nsdi23/presentation/xu},\n  publisher = {USENIX Association},\n  month = apr,\n}",
+      "normalized_value": "@inproceedings {netcov-nsdi-2023, author = {Xieyang Xu and Weixin Deng and Ryan Beckett and Ratul Mahajan and David Walker}, title = {Test Coverage for Network Configurations}, booktitle = {20th USENIX Symposium on Networked Systems Design and Implementation (NSDI 23)}, year = {2023}, isbn = {978-1-939133-33-5}, address = {Boston, MA}, pages = {1717--1732}, url = {https://www.usenix.org/conference/nsdi23/presentation/xu}, publisher = {USENIX Association}, month = apr, }",
+      "evidence": "```\n@inproceedings {netcov-nsdi-2023,\n  author = {Xieyang Xu and Weixin Deng and Ryan Beckett and Ratul Mahajan and David Walker},\n  title = {Test Coverage for Network Configurations},\n  booktitle = {20th USENIX Symposium on Networked Systems Design and Implementation (NSDI 23)},\n  year = {2023},\n  isbn = {978-1-939133-33-5},\n  address = {Boston, MA},\n  pages = {1717--1732},\n  url = {https://www.usenix.org/conference/nsdi23/presentation/xu},\n  publisher = {USENIX Association},\n  month = apr,\n}```",
+      "evidence_location": "lines 108-120",
+      "confidence": "high",
+      "reason": "BibTeX citation for referencing the artifact in academic publications."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/UWNetworksLab/netcov",
+      "normalized_value": "https://github.com/UWNetworksLab/netcov",
+      "evidence": "[GitHub issue](https://github.com/UWNetworksLab/netcov/issues)",
+      "evidence_location": "line 30",
+      "confidence": "medium",
+      "reason": "Implied URL to the GitHub repository from the issue tracker link."
+    },
+    {
+      "field": "advanced_usage_code",
+      "value": "# pause coverage tracking to avoid over-estimation\nbf.cov.pause()\nroutes = bf.q.routes(nodes=\"edge-0000\").answer().frame()\nbf.cov.resume()\n\n# filter RIB entries to test\ntested = routes[routes[\"Network\"] == '0.0.0.0/0'].head(1)\n\n# add tested route to coverage trace\nbf.cov.add_tested_routes(tested)",
+      "normalized_value": "# pause coverage tracking to avoid over-estimation bf.cov.pause() routes = bf.q.routes(nodes=\"edge-0000\").answer().frame() bf.cov.resume() # filter RIB entries to test tested = routes[routes[\"Network\"] == '0.0.0.0/0'].head(1) # add tested route to coverage trace bf.cov.add_tested_routes(tested)",
+      "evidence": "```\n# pause coverage tracking to avoid over-estimation\nbf.cov.pause()\nroutes = bf.q.routes(nodes=\"edge-0000\").answer().frame()\nbf.cov.resume()\n\n# filter RIB entries to test\ntested = routes[routes[\"Network\"] == '0.0.0.0/0'].head(1)\n\n# add tested route to coverage trace\nbf.cov.add_tested_routes(tested)\n```",
+      "evidence_location": "lines 87-98",
+      "confidence": "high",
+      "reason": "Example code for advanced usage to pause coverage tracking and add specific tested routes."
+    },
+    {
+      "field": "logging_setup_code",
+      "value": "import logging\nfh = logging.FileHandler('cov.log')\nlogging.getLogger('netcov').addHandler(fh)",
+      "normalized_value": "import logging fh = logging.FileHandler('cov.log') logging.getLogger('netcov').addHandler(fh)",
+      "evidence": "```python\nimport logging\nfh = logging.FileHandler('cov.log')\nlogging.getLogger('netcov').addHandler(fh)\n```",
+      "evidence_location": "lines 101-105",
+      "confidence": "high",
+      "reason": "Code snippet for configuring logging to save coverage report to a file."
+    }
+  ]
+}

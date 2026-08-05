@@ -1,0 +1,292 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "NEVIS'22",
+      "normalized_value": "NEVIS'22",
+      "evidence": "# 🏝️ NEVIS'22",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Title of the artifact/repository."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2211.11747",
+      "normalized_value": "https://arxiv.org/abs/2211.11747",
+      "evidence": "[![Paper](https://img.shields.io/badge/arXiv-2211.11747-red)](https://arxiv.org/abs/2211.11747)",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Link to the accompanying paper for the benchmark."
+    },
+    {
+      "field": "blog_link",
+      "value": "https://www.deepmind.com/blog/benchmarking-the-next-generation-of-never-ending-learners",
+      "normalized_value": "https://www.deepmind.com/blog/benchmarking-the-next-generation-of-never-ending-learners",
+      "evidence": "[![Blog](https://img.shields.io/badge/blog-link-blue)](https://www.deepmind.com/blog/benchmarking-the-next-generation-of-never-ending-learners)",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Link to blog post providing more context about the benchmark."
+    },
+    {
+      "field": "artifact_description",
+      "value": "NEVIS’22 is a benchmark for measuring the performance of algorithms in the field of continual learning.",
+      "normalized_value": "NEVIS'22 is a benchmark for measuring the performance of algorithms in the field of continual learning.",
+      "evidence": "NEVIS’22 is a benchmark for measuring the performance of algorithms in the field\nof continual learning. Please see the accompanying [paper] for more details.",
+      "evidence_location": "lines 10-11",
+      "confidence": "high",
+      "reason": "Concise description of what the artifact is and its purpose."
+    },
+    {
+      "field": "task",
+      "value": "continual learning",
+      "normalized_value": "continual learning",
+      "evidence": "NEVIS’22 is a benchmark for measuring the performance of algorithms in the field\nof continual learning.",
+      "evidence_location": "lines 10-11",
+      "confidence": "high",
+      "reason": "Identifies the machine learning task/domain the benchmark targets."
+    },
+    {
+      "field": "components",
+      "value": "1. Library code to download and post-process datasets ... 2. A package to combine the NEVIS’22 datasets into a stream, and robustly evaluate learners ... 3. Baseline learners implemented in JAX and PyTorch.",
+      "normalized_value": "Library code to download/post-process datasets; package to combine datasets into a stream and evaluate learners; baseline learners implemented in JAX and PyTorch.",
+      "evidence": "1.  Library code to download and post-process datasets that are not available\n    within [tfds], so that the stream used in the [paper] can be replicated.\n2.  A package to combine the NEVIS’22 datasets into a *stream*, and robustly\n    evaluate learners using the evaluation protocol proposed in the NEVIS’22\n    [paper].\n3.  Baseline learners implemented in JAX and PyTorch. The JAX learners are\n    identical to the learners used for the figures in the [paper], the PyTorch\n    learners are provided for example purposes.",
+      "evidence_location": "lines 13-22",
+      "confidence": "high",
+      "reason": "Describes the three main components provided by this Python package."
+    },
+    {
+      "field": "dataset_scale",
+      "value": "106 tasks",
+      "normalized_value": "106 tasks",
+      "evidence": "NEVIS’22 is composed of 106 tasks chronologically sorted and extracted from\npublications randomly sampled from online proceedings of major computer vision\nconferences over the past three decades.",
+      "evidence_location": "lines 24-26",
+      "confidence": "high",
+      "reason": "Concrete scale metric describing the benchmark's dataset composition."
+    },
+    {
+      "field": "evaluation_metric",
+      "value": "trade-off between error rate and compute measured in the number of floating-point operations",
+      "normalized_value": "error rate vs. floating-point operations (FLOPs) trade-off",
+      "evidence": "We\nevaluate learners in terms of their ability to learn future tasks, as measured\nby their trade-off between error rate and compute measured in the number of\nfloating-point operations.",
+      "evidence_location": "lines 36-39",
+      "confidence": "high",
+      "reason": "Defines the evaluation metric used to assess learners on the benchmark."
+    },
+    {
+      "field": "dependencies",
+      "value": "TensorFlow(-datasets), TensorFlow and JAX (jax learners), PyTorch (pytorch learners), Python >3.8, requirements.txt via pip",
+      "normalized_value": "TensorFlow, TensorFlow-datasets, JAX, PyTorch, Python 3.8+",
+      "evidence": "Our datasets use the Tensorflow(-datasets) API. Our JAX learners use\n    TensorFlow and JAX, and our PyTorch Learners use PyTorch. Each (datasets,\n    jax learners, and pytorch learners) have their own `requirements.txt` that\n    you are welcome to install with `pip` and a Python version above 3.8.",
+      "evidence_location": "lines 50-53",
+      "confidence": "high",
+      "reason": "Specifies the software dependencies and environment requirements for reproducibility."
+    },
+    {
+      "field": "environment_setup",
+      "value": "It is also possible to run the code directly using the provided Dockerfiles. see [here](https://docs.docker.com/get-docker/) for installing Docker.",
+      "normalized_value": "Run via provided Dockerfiles; requires Docker installation.",
+      "evidence": "It is also possible to run the code directly using the provided Dockerfiles.\n    see [here](https://docs.docker.com/get-docker/) for installing Docker.",
+      "evidence_location": "lines 55-56",
+      "confidence": "high",
+      "reason": "Alternative reproducibility path using Docker."
+    },
+    {
+      "field": "credential_setup",
+      "value": "Some datasets are downloaded from Kaggle. See the [Kaggle website](https://www.kaggle.com/docs/api) for configuring your credentials, and place them in the folder ~/.kaggle.",
+      "normalized_value": "Kaggle API credentials required, placed in ~/.kaggle",
+      "evidence": "Some datasets are downloaded from Kaggle. See the\n    [Kaggle website](https://www.kaggle.com/docs/api) for configuring your\n    credentials, and place them in the folder ~/.kaggle.",
+      "evidence_location": "lines 58-60",
+      "confidence": "high",
+      "reason": "Required credential setup for downloading some datasets, important for reproducibility."
+    },
+    {
+      "field": "dataset_download_command",
+      "value": "./build_dataset.sh -h",
+      "normalized_value": "./build_dataset.sh -h",
+      "evidence": "$ ./build_dataset.sh -h\nUsage:\n\t-d <DATASET_NAME> | Dataset name\n\t-s <STREAM_NAME>  | Stream variant name (FULL|SHORT|TINY|DEBUG|...)\n\t-b                | Build docker before running\n\t-e                | Develop mode where code is mounted\n\t-h                | Help message",
+      "evidence_location": "lines 101-109",
+      "confidence": "high",
+      "reason": "Documents the script used for downloading datasets and its usage options."
+    },
+    {
+      "field": "manual_download_dataset",
+      "value": "ImageNet is a TFDS Dataset but it needs to be downloaded manually.",
+      "normalized_value": "ImageNet requires manual download",
+      "evidence": "ImageNet is a TFDS Dataset but it needs to be downloaded manually. Please check\nthe [instructions](https://www.tensorflow.org/datasets/catalog/imagenet2012).",
+      "evidence_location": "lines 126-127",
+      "confidence": "high",
+      "reason": "Specifies a special manual step needed for a named dataset."
+    },
+    {
+      "field": "environment_variable",
+      "value": "TFDS_DATA_DIR",
+      "normalized_value": "TFDS_DATA_DIR",
+      "evidence": "For info, TFDS will look for datasets in the directory defined by the\nenvironment variable `TFDS_DATA_DIR`.",
+      "evidence_location": "lines 129-130",
+      "confidence": "high",
+      "reason": "Environment variable controlling dataset storage location, relevant for reproducibility."
+    },
+    {
+      "field": "training_command",
+      "value": "./launch_local.sh <X> example",
+      "normalized_value": "./launch_local.sh <X> example",
+      "evidence": "./launch_local.sh <X> example",
+      "evidence_location": "line 144",
+      "confidence": "high",
+      "reason": "Command to launch a training experiment, with X being the framework (jax or torch)."
+    },
+    {
+      "field": "gpu_option",
+      "value": "--device <GPU_ID>",
+      "normalized_value": "--device <GPU_ID>",
+      "evidence": "Note that for the torch version, if you want to run on gpu instead of cpu, you\nneed to provide the gpu id with `--device <GPU_ID>`. By default, the code is\nusing the id `-1` to symbolize cpu.",
+      "evidence_location": "lines 150-152",
+      "confidence": "high",
+      "reason": "Documents GPU configuration option for running experiments with the PyTorch framework."
+    },
+    {
+      "field": "output_directory",
+      "value": "./nevis_output_dir",
+      "normalized_value": "./nevis_output_dir",
+      "evidence": "By default the metrics computed by `experiments_<X>/metrics/nevis_metrics.py`\nwill be written in `./nevis_output_dir`.",
+      "evidence_location": "lines 156-157",
+      "confidence": "high",
+      "reason": "Default output location for metrics, useful for reproducing and locating results."
+    },
+    {
+      "field": "environment_variable",
+      "value": "NEVIS_DEFAULT_OUTPUT_DIR",
+      "normalized_value": "NEVIS_DEFAULT_OUTPUT_DIR",
+      "evidence": "You can specify a different path by overriding the environment variable\n`NEVIS_DEFAULT_OUTPUT_DIR`.",
+      "evidence_location": "lines 159-160",
+      "confidence": "high",
+      "reason": "Environment variable to configure output directory location."
+    },
+    {
+      "field": "tensorboard_setup",
+      "value": "pip install tensorboard",
+      "normalized_value": "pip install tensorboard",
+      "evidence": "pip install tensorboard",
+      "evidence_location": "line 175",
+      "confidence": "high",
+      "reason": "Command to install TensorBoard for metrics visualization, needed outside the docker."
+    },
+    {
+      "field": "tensorboard_command",
+      "value": "tensorboard --lodir=~/nevis/tensorboard",
+      "normalized_value": "tensorboard --lodir=~/nevis/tensorboard",
+      "evidence": "`tensorboard --lodir=~/nevis/tensorboard`",
+      "evidence_location": "line 170",
+      "confidence": "high",
+      "reason": "Command to launch TensorBoard for visualizing metrics."
+    },
+    {
+      "field": "example_dataset_download_command",
+      "value": "./build_dataset.sh -e -b -s debug",
+      "normalized_value": "./build_dataset.sh -e -b -s debug",
+      "evidence": "./build_dataset.sh -e -b -s debug",
+      "evidence_location": "line 195",
+      "confidence": "high",
+      "reason": "Concrete example command to download the DEBUG stream dataset (Coil100)."
+    },
+    {
+      "field": "environment_variable",
+      "value": "LOCAL_DIR",
+      "normalized_value": "LOCAL_DIR",
+      "evidence": "You can change this directory\nby overriding the env variable `LOCAL_DIR` in the script.",
+      "evidence_location": "lines 200-201",
+      "confidence": "high",
+      "reason": "Environment variable to change the local data download directory."
+    },
+    {
+      "field": "example_training_command",
+      "value": "./launch_local.sh jax example",
+      "normalized_value": "./launch_local.sh jax example",
+      "evidence": "./launch_local.sh jax example",
+      "evidence_location": "line 206",
+      "confidence": "high",
+      "reason": "Concrete example command launching the example learner using JAX framework."
+    },
+    {
+      "field": "example_stream",
+      "value": "DEBUG stream made of Pascal VOC 2007 and Coil100 datasets",
+      "normalized_value": "DEBUG stream (Pascal VOC 2007, Coil100)",
+      "evidence": "Let's take an example learner (returns always zeros) that we will \"train\" on the\nDEBUG stream made of Pascal VOC 2007 and Coil100 datasets.",
+      "evidence_location": "lines 186-187",
+      "confidence": "high",
+      "reason": "Describes a concrete reproducible example configuration."
+    },
+    {
+      "field": "baseline",
+      "value": "Independent, in `configs/finetuning_ind.py` where each dataset is learned by an independent model",
+      "normalized_value": "Independent baseline (configs/finetuning_ind.py)",
+      "evidence": "- **Independent**, in `configs/finetuning_ind.py` where each dataset is learned by an independent model",
+      "evidence_location": "line 220",
+      "confidence": "high",
+      "reason": "Names a specific baseline configuration provided by the artifact."
+    },
+    {
+      "field": "baseline",
+      "value": "Previous, in `configs/finetuning_prev.py` where we learn sequentially each dataset and initialize its parameters from the parameter vector learned on the previous task.",
+      "normalized_value": "Previous baseline (configs/finetuning_prev.py)",
+      "evidence": "- **Previous**, in `configs/finetuning_prev.py` where we learn sequentially each dataset and initialize its parameters from the parameter vector learned on the previous task.",
+      "evidence_location": "line 221",
+      "confidence": "high",
+      "reason": "Names a specific baseline configuration provided by the artifact."
+    },
+    {
+      "field": "baseline",
+      "value": "Dynamic, in `configs/finetuning_dknn.py`. where the initialization of task T is chosen among the models which have been trained on a dataset most similar to the current dataset.",
+      "normalized_value": "Dynamic baseline (configs/finetuning_dknn.py)",
+      "evidence": "- **Dynamic**, in `configs/finetuning_dknn.py`. where the initialization of task T is chosen among the models which have been trained on a dataset most similar to the current dataset. This baseline performs hyperparameter tuning while learning the task, following the protocol described in our tech report.",
+      "evidence_location": "line 222",
+      "confidence": "high",
+      "reason": "Names a specific baseline configuration provided by the artifact, including its method."
+    },
+    {
+      "field": "cheap_baseline_variant",
+      "value": "configs/cheap_finetuning_dknn.py",
+      "normalized_value": "configs/cheap_finetuning_dknn.py",
+      "evidence": "Variants are also proposed, such as cheaper configurations in `configs/cheap_finetuning_dknn.py` which use a smaller net and fewer trials of hyper-parameter search. These are the best entry point for people who have access to only one or few GPUs.",
+      "evidence_location": "line 225",
+      "confidence": "high",
+      "reason": "Named cheaper configuration variant for limited-resource reproduction."
+    },
+    {
+      "field": "pretrained_model_workflow",
+      "value": "configs/pretrain_imagenet.py then configs/finetuning_ind_pretrained.py",
+      "normalized_value": "configs/pretrain_imagenet.py -> configs/finetuning_ind_pretrained.py",
+      "evidence": "It is also possible to run a pretrained model on the Nevis stream. First train \nyour own pretrained model. For example on ImageNet, run the configuration `configs/pretrain_imagenet.py`. Collect the resulting checkpoint, see configuration file to see where it's saved. \nThen, use this checkpoint for `configs/finetuning_ind_pretrained.py`.",
+      "evidence_location": "lines 228-230",
+      "confidence": "high",
+      "reason": "Describes the workflow for using a pretrained model checkpoint with the benchmark."
+    },
+    {
+      "field": "code_structure",
+      "value": "dm_nevis/ (benchmarker/, datasets_storage/, streams/), experiments_jax/ (launch.py, experiment.py, configs/, learners/, metrics/, environment/, training/), experiments_torch/ (same substructure)",
+      "normalized_value": "dm_nevis/, experiments_jax/, experiments_torch/ directory structure",
+      "evidence": "|--- dm_nevis/\n|    |--- benchmarker/\n|    |--- datasets_storage/\n|    |--- streams/\n|--- experiments_jax/\n|    |--- launch.py\n|    |--- experiment.py\n|    |--- configs/\n|    |--- learners/\n|    |--- metrics/\n|    |--- environment/\n|    |--- training/\n|--- experiments_torch/\n|    |--- launch.py\n|    |--- experiment.py\n|    |--- configs/\n|    |--- learners/\n|    |--- metrics/\n|    |--- environment/\n|    |--- training/",
+      "evidence_location": "lines 236-257",
+      "confidence": "high",
+      "reason": "Documents the repository's code organization, useful for understanding and navigating the codebase."
+    },
+    {
+      "field": "citation",
+      "value": "@article{bornschein2022nevis, author={Bornschein, J\\\"org and Galashov, Alexandre and Hemsley, Ross and Rannen-Triki, Amal and Chen, Yutian and Chaudhry, Arslan and He, Xu Owen and Douillard, Arthur and Caccia, Massimo and Feng, Qixuang and Shen, Jiajun and Rebuffi, Sylvestre-Alvise and Stacpoole, Kitty and de las Casas, Diego and Hawkins, Will and Lazaridou, Angeliki and Teh, Yee Whye and Rusu, Andrei A. and Pascanu, Razvan and Ranzato, Marc'Aurelio}, title={Nevis\\'22: A Stream of 100 Tasks Sampled from 30 Years of Computer Vision Research}, journal={CoRR}, volume={abs/2211.11747}, year={2022}, url={https://arxiv.org/abs/2211.11747}, eprinttype={arXiv}}",
+      "normalized_value": "Bornschein et al., \"Nevis'22: A Stream of 100 Tasks Sampled from 30 Years of Computer Vision Research\", CoRR abs/2211.11747, 2022",
+      "evidence": "@article{bornschein2022nevis,\n  author={Bornschein, J\\\"org and Galashov, Alexandre and Hemsley, Ross and Rannen-Triki, Amal and Chen, Yutian and Chaudhry, Arslan and He, Xu Owen and Douillard, Arthur and Caccia, Massimo and Feng, Qixuang and Shen, Jiajun and Rebuffi, Sylvestre-Alvise and Stacpoole, Kitty and de las Casas, Diego and Hawkins, Will and Lazaridou, Angeliki and Teh, Yee Whye and Rusu, Andrei A. and Pascanu, Razvan and Ranzato, Marc'Aurelio},\n  title={Nevis\\'22: A Stream of 100 Tasks Sampled from 30 Years of Computer Vision Research},\n  journal={CoRR},\n  volume={abs/2211.11747},\n  year={2022},\n  url={https://arxiv.org/abs/2211.11747},\n  eprinttype={arXiv}\n}",
+      "evidence_location": "lines 281-289",
+      "confidence": "high",
+      "reason": "Official citation for the artifact, required for attribution and reuse."
+    },
+    {
+      "field": "contact_method",
+      "value": "If you wish to contact us, please raise a GitHub issue.",
+      "normalized_value": "Contact via GitHub issue",
+      "evidence": "If you wish to contact us, please raise a GitHub issue.",
+      "evidence_location": "line 276",
+      "confidence": "high",
+      "reason": "Specifies how to contact the maintainers of the artifact."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PointSQL",
+      "normalized_value": "PointSQL",
+      "evidence": "# Introduction\nThis is PointSQL, the source codes of [Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400)",
+      "evidence_location": "1-2",
+      "confidence": "high",
+      "reason": "Explicitly states the project name at the top of the document."
+    },
+    {
+      "field": "description",
+      "value": "source codes of [Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400) and [Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text) from Microsoft Research. We present the setup for the WikiSQL experiments.",
+      "normalized_value": "source codes of [Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400) and [Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text) from Microsoft Research. We present the setup for the WikiSQL experiments.",
+      "evidence": "This is PointSQL, the source codes of [Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400) \nand [Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text) from Microsoft Research.\nWe present the setup for the WikiSQL experiments.",
+      "evidence_location": "2-4",
+      "confidence": "high",
+      "reason": "Clearly defines the artifact's purpose, origin, and experimental scope."
+    },
+    {
+      "field": "task",
+      "value": "Natural Language to Structured Query Generation",
+      "normalized_value": "Natural Language to Structured Query Generation",
+      "evidence": "[Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Identifies the core NLP task the code implements."
+    },
+    {
+      "field": "dataset",
+      "value": "WikiSQL",
+      "normalized_value": "WikiSQL",
+      "evidence": "We present the setup for the WikiSQL experiments.",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Names the primary benchmark dataset used for training and evaluation."
+    },
+    {
+      "field": "dependencies",
+      "value": "Tensorflow 1.4, python 3.6, Stanza",
+      "normalized_value": "Tensorflow 1.4, python 3.6, Stanza",
+      "evidence": "- Tensorflow 1.4\n- python 3.6\n- [Stanza](https://github.com/stanfordnlp/stanza)",
+      "evidence_location": "130-132",
+      "confidence": "high",
+      "reason": "Lists exact software versions and libraries required to run the code."
+    },
+    {
+      "field": "training_command",
+      "value": "$ OUTDIR=output/meta_sum\n$ mkdir $OUTDIR\n$ python run.py --input-dir ./input \\\n    --output-dir $OUTDIR \\\n    --config config/nl2prog.meta_2_0.001.rank.config  \\\n    --meta_learning_rate 0.001 --gradient_clip_norm 5 \\\n    --num_layers 3  --num_meta_example 2 \\\n    --meta_learning --production",
+      "normalized_value": "$ OUTDIR=output/meta_sum $ mkdir $OUTDIR $ python run.py --input-dir ./input \\ --output-dir $OUTDIR \\ --config config/nl2prog.meta_2_0.001.rank.config \\ --meta_learning_rate 0.001 --gradient_clip_norm 5 \\ --num_layers 3 --num_meta_example 2 \\ --meta_learning --production",
+      "evidence": "```\n$ OUTDIR=output/meta_sum\n$ mkdir $OUTDIR\n$ python run.py --input-dir ./input \\\n    --output-dir $OUTDIR \\\n    --config config/nl2prog.meta_2_0.001.rank.config  \\\n    --meta_learning_rate 0.001 --gradient_clip_norm 5 \\\n    --num_layers 3  --num_meta_example 2 \\\n    --meta_learning --production\n```",
+      "evidence_location": "48-57",
+      "confidence": "high",
+      "reason": "Provides reproducible shell commands to train the meta-learning model with specified hyperparameters."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "$ mkdir -p ${OUTDIR}_dev\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_dev \\ \n    --config config/nl2prog.meta_2_0.001.rank.devconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production",
+      "normalized_value": "$ mkdir -p ${OUTDIR}_dev $ python run.py --input-dir ./input --output-dir ${OUTDIR}_dev \\ --config config/nl2prog.meta_2_0.001.rank.devconfig \\ --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40 --production",
+      "evidence": "```\n$ mkdir -p ${OUTDIR}_dev\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_dev \\ \n    --config config/nl2prog.meta_2_0.001.rank.devconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production\n```",
+      "evidence_location": "64-69",
+      "confidence": "high",
+      "reason": "Provides reproducible shell commands to evaluate the trained model on the development set."
+    },
+    {
+      "field": "dev_metrics",
+      "value": "Logical Form Accuracy: 0.631383269546, Execute Accuracy: 0.68277747403",
+      "normalized_value": "Logical Form Accuracy: 0.631383269546, Execute Accuracy: 0.68277747403",
+      "evidence": "Logical Form Accuracy: 0.631383269546\n    Execute Accuracy: 0.68277747403",
+      "evidence_location": "78-79",
+      "confidence": "high",
+      "reason": "Reports quantitative performance results on the development split."
+    },
+    {
+      "field": "test_metrics",
+      "value": "Logical Form Accuracy: 0.628073829775, Execute Accuracy: 0.680379563733",
+      "normalized_value": "Logical Form Accuracy: 0.628073829775, Execute Accuracy: 0.680379563733",
+      "evidence": "Logical Form Accuracy: 0.628073829775\n    Execute Accuracy: 0.680379563733",
+      "evidence_location": "96-97",
+      "confidence": "high",
+      "reason": "Reports quantitative performance results on the held-out test split."
+    },
+    {
+      "field": "baseline_test_metrics",
+      "value": "Logical Form Accuracy: 0.614592374009, Execute Accuracy: 0.668055314471",
+      "normalized_value": "Logical Form Accuracy: 0.614592374009, Execute Accuracy: 0.668055314471",
+      "evidence": "Logical Form Accuracy: 0.614592374009\n    Execute Accuracy: 0.668055314471",
+      "evidence_location": "116-117",
+      "confidence": "high",
+      "reason": "Provides baseline model results for comparative analysis."
+    },
+    {
+      "field": "pretrained_models_link",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz",
+      "evidence": "Download [pretrained model checkpoints](https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz) to ``model_zoo/``",
+      "evidence_location": "122",
+      "confidence": "high",
+      "reason": "Direct access link to download pre-trained weights for immediate inference without training."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{pshuang2018PT-MAML,\n  author    = {Po{-}Sen Huang and\n                Chenglong Wang and\n                Rishabh Singh and\n                Wen-tau Yih and\n                Xiaodong He},\n  title     = {Natural Language to Structured Query Generation via Meta-Learning},\n  booktitle = {NAACL},\n  year      = {2018},\n}\n\n@inproceedings{2018executionguided,\n  author    = {Chenglong Wang and\n                Po{-}Sen Huang and\n                Alex Polozov and\n                Marc Brockschmidt and \n                Rishabh Singh},\n  title = \"{Execution-Guided Neural Program Decoding}\",\n  booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)},\n  year = {2018}\n}\n\n@techreport{chenglong,\n  author = {Wang, Chenglong and Brockschmidt, Marc and Singh, Rishabh},\n  title = {Pointing Out {SQL} Queries From Text},\n  number = {MSR-TR-2017-45},\n  year = {2017},\n  month = {November},\n  url = {https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/},\n}",
+      "normalized_value": "@inproceedings{pshuang2018PT-MAML, author = {Po{-}Sen Huang and Chenglong Wang and Rishabh Singh and Wen-tau Yih and Xiaodong He}, title = {Natural Language to Structured Query Generation via Meta-Learning}, booktitle = {NAACL}, year = {2018}, } @inproceedings{2018executionguided, author = {Chenglong Wang and Po{-}Sen Huang and Alex Polozov and Marc Brockschmidt and Rishabh Singh}, title = \"{Execution-Guided Neural Program Decoding}\", booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)}, year = {2018} } @techreport{chenglong, author = {Wang, Chenglong and Brockschmidt, Marc and Singh, Rishabh}, title = {Pointing Out {SQL} Queries From Text}, number = {MSR-TR-2017-45}, year = {2017}, month = {November}, url = {https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/}, }",
+      "evidence": "```\n@inproceedings{pshuang2018PT-MAML,\n  author    = {Po{-}Sen Huang and\n                Chenglong Wang and\n                Rishabh Singh and\n                Wen-tau Yih and\n                Xiaodong He},\n  title     = {Natural Language to Structured Query Generation via Meta-Learning},\n  booktitle = {NAACL},\n  year      = {2018},\n}\n```\n\n\n```\n@inproceedings{2018executionguided,\n  author    = {Chenglong Wang and\n                Po{-}Sen Huang and\n                Alex Polozov and\n                Marc Brockschmidt and \n                Rishabh Singh},\n  title = \"{Execution-Guided Neural Program Decoding}\",\n  booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)},\n  year = {2018}\n}\n```\n\n\nand\n\n\n```\n@techreport{chenglong,\n  author = {Wang, Chenglong and Brockschmidt, Marc and Singh, Rishabh},\n  title = {Pointing Out {SQL} Queries From Text},\n  number = {MSR-TR-2017-45},\n  year = {2017},\n  month = {November},\n  url = {https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/},\n}\n```",
+      "evidence_location": "141-181",
+      "confidence": "high",
+      "reason": "Provides complete BibTeX entries for academic attribution of the associated papers."
+    },
+    {
+      "field": "legal_requirements",
+      "value": "Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. This project has adopted the Microsoft Open Source Code of Conduct.",
+      "normalized_value": "Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. This project has adopted the Microsoft Open Source Code of Conduct.",
+      "evidence": "This project welcomes contributions and suggestions.  Most contributions require you to agree to a\nContributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us\nthe rights to use your contribution. For details, visit https://cla.microsoft.com.\n\nWhen you submit a pull request, a CLA-bot will automatically determine whether you need to provide\na CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions\nprovided by the bot. You will only need to do this once across all repos using our CLA.\n\nThis project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).",
+      "evidence_location": "187-195",
+      "confidence": "high",
+      "reason": "Outlines mandatory licensing agreements and community conduct policies for reuse and contribution."
+    }
+  ]
+}

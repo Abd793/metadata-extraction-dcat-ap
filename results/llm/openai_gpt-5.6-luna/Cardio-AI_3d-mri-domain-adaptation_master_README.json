@@ -1,0 +1,211 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "3D CMR-Domain-Adaptation",
+      "normalized_value": "3D CMR-Domain-Adaptation",
+      "evidence": "# 3D CMR-Domain-Adaptation",
+      "evidence_location": "1; header",
+      "confidence": "high",
+      "reason": "Identifies the repository artifact."
+    },
+    {
+      "field": "purpose",
+      "value": "train a deep learning model for **Unsupervised Domain Adaptation (UDA)** of 3D cardiac magnetic resonance (CMR) cine images to **transform from axial to short-axis orientation**",
+      "normalized_value": "train a deep learning model for **Unsupervised Domain Adaptation (UDA)** of 3D cardiac magnetic resonance (CMR) cine images to **transform from axial to short-axis orientation**",
+      "evidence": "This repo contains code to train a deep learning model for **Unsupervised Domain Adaptation (UDA)** of 3D cardiac magnetic resonance (CMR) cine images to **transform from axial to short-axis orientation**.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly states the artifact's primary purpose and application."
+    },
+    {
+      "field": "input_output_transformation",
+      "value": "transform an axial (AX) CMR into the patient specific short-axis (SAX) direction",
+      "normalized_value": "transform an axial (AX) CMR into the patient specific short-axis (SAX) direction",
+      "evidence": "The trained model is able to transform an axial (AX) CMR into the patient specific short-axis (SAX) direction.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Defines the model's input and target orientation."
+    },
+    {
+      "field": "adaptation_method",
+      "value": "segmentation task via a pre-trained fixed network",
+      "normalized_value": "segmentation task via a pre-trained fixed network",
+      "evidence": "The task associated to the domain adaptation is to perform a **segmentation task via a pre-trained fixed network**, and the results are leveraged to guide the transformation process (rigid transform via spatial transformer networks).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Specifies how the pretrained task network guides domain adaptation."
+    },
+    {
+      "field": "training_data_requirement",
+      "value": "paired AX/SAX CMR image pairs and a pre-trained SAX segmentation model",
+      "normalized_value": "paired AX/SAX CMR image pairs and a pre-trained SAX segmentation model",
+      "evidence": "The model learns from paired AX/SAX CMR image pairs and a pre-trained SAX segmentation model.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "States the data and pretrained model inputs used for learning."
+    },
+    {
+      "field": "ground_truth_requirement",
+      "value": "neither AX nor SAX ground truth segmentations are required",
+      "normalized_value": "neither AX nor SAX ground truth segmentations are required",
+      "evidence": "For the training of this transformation model, neither AX nor SAX ground truth segmentations are required.",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Clarifies the supervision requirements for reproducing training."
+    },
+    {
+      "field": "transformation_constraint",
+      "value": "rigid and invertible",
+      "normalized_value": "rigid and invertible",
+      "evidence": "A special **Euler2Affine Layer** was implemented to restrict the transform of the spatial transformer network to be rigid and invertible.",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Identifies a concrete architectural constraint on the spatial transformation."
+    },
+    {
+      "field": "deep_learning_framework",
+      "value": "TF 2.X",
+      "normalized_value": "TF 2.X",
+      "evidence": "- The Deep Learning models/layers are build with TF 2.X.",
+      "evidence_location": "17-18; Overview",
+      "confidence": "high",
+      "reason": "Specifies the framework version family used by the models and layers."
+    },
+    {
+      "field": "transformation_dependency",
+      "value": "neuron project, which is also part of the current Voxelmorph approach (https://github.com/voxelmorph/voxelmorph)",
+      "normalized_value": "neuron project, which is also part of the current Voxelmorph approach (https://github.com/voxelmorph/voxelmorph)",
+      "evidence": "The transformation layer is built on the neuron project, which is also part of the current Voxelmorph approach (https://github.com/voxelmorph/voxelmorph).",
+      "evidence_location": "68-69",
+      "confidence": "high",
+      "reason": "Identifies an external project underlying the transformation layer."
+    },
+    {
+      "field": "dataset",
+      "value": "a multi-centric heterogeneous cine-SSFPs CMR TOF data set from the [German Competence Network for Congenital Heart Defects](https://www.kompetenznetz-ahf.de/en/about-us/competence-network/))",
+      "normalized_value": "a multi-centric heterogeneous cine-SSFPs CMR TOF data set from the [German Competence Network for Congenital Heart Defects](https://www.kompetenznetz-ahf.de/en/about-us/competence-network/))",
+      "evidence": "For this work a multi-centric heterogeneous cine-SSFPs CMR TOF data set from the [German Competence Network for Congenital Heart Defects](https://www.kompetenznetz-ahf.de/en/about-us/competence-network/)) was used (study identifier: NCT00266188, title: Non-invasive Imaging and Exercise Tolerance Tests in Post-repair Tetralogy of Fallot -Intervention and Course in Patients Over 8 Years Old).",
+      "evidence_location": "113; Dataset",
+      "confidence": "high",
+      "reason": "Names the dataset used in the work and links its source."
+    },
+    {
+      "field": "dataset_study_identifier",
+      "value": "NCT00266188",
+      "normalized_value": "NCT00266188",
+      "evidence": "For this work a multi-centric heterogeneous cine-SSFPs CMR TOF data set from the [German Competence Network for Congenital Heart Defects](https://www.kompetenznetz-ahf.de/en/about-us/competence-network/)) was used (study identifier: NCT00266188, title: Non-invasive Imaging and Exercise Tolerance Tests in Post-repair Tetralogy of Fallot -Intervention and Course in Patients Over 8 Years Old).",
+      "evidence_location": "113; Dataset",
+      "confidence": "high",
+      "reason": "Provides a concrete identifier for the source study behind the dataset."
+    },
+    {
+      "field": "dataset_acquisition",
+      "value": "The data was acquired at 14 different German sites between 2005-2008 on 1.5T and 3T machines",
+      "normalized_value": "The data was acquired at 14 different German sites between 2005-2008 on 1.5T and 3T machines",
+      "evidence": "The data was acquired at 14 different German sites between 2005-2008 on 1.5T and 3T machines; ",
+      "evidence_location": "115",
+      "confidence": "high",
+      "reason": "Describes acquisition diversity and scanner field strengths relevant to reproducibility."
+    },
+    {
+      "field": "software_prerequisites",
+      "value": "Python 3.6 locally installed; Installed nvidia drivers, cuda and cudnn",
+      "normalized_value": "Python 3.6 locally installed; Installed nvidia drivers, cuda and cudnn",
+      "evidence": "### Preconditions: \n- Python 3.6 locally installed \n(e.g.:  <a target=\"_blank\" href=\"https://www.anaconda.com/download/#macos\">Anaconda</a>)\n- Installed nvidia drivers, cuda and cudnn \n(e.g.:  <a target=\"_blank\" href=\"https://www.tensorflow.org/install/gpu\">Tensorflow</a>)",
+      "evidence_location": "124-128; Preconditions",
+      "confidence": "high",
+      "reason": "Lists the explicitly required local software and GPU prerequisites."
+    },
+    {
+      "field": "environment_file",
+      "value": "environment.yaml",
+      "normalized_value": "environment.yaml",
+      "evidence": "- The repository dependencies are saved as conda environment (environment.yaml) file. ",
+      "evidence_location": "17; Overview",
+      "confidence": "high",
+      "reason": "Identifies the dependency and environment specification file."
+    },
+    {
+      "field": "conda_environment_name",
+      "value": "ax2sax",
+      "normalized_value": "ax2sax",
+      "evidence": "Create a conda environment from environment.yaml (environment name will be ax2sax)\n```\nconda env create --file environment.yaml\n```",
+      "evidence_location": "136-139; Local setup",
+      "confidence": "high",
+      "reason": "Provides the expected environment name and creation command."
+    },
+    {
+      "field": "environment_activation",
+      "value": "conda activate ax2sax",
+      "normalized_value": "conda activate ax2sax",
+      "evidence": "Activate environment\n```\nconda activate ax2sax\n```",
+      "evidence_location": "141-143; Local setup",
+      "confidence": "high",
+      "reason": "Provides the command needed to activate the documented environment."
+    },
+    {
+      "field": "repository_installation",
+      "value": "pip install -e .",
+      "normalized_value": "pip install -e .",
+      "evidence": "├── setup.py           <- Makes project pip installable (pip install -e .) so src can be imported",
+      "evidence_location": "103-105; Repository Structure",
+      "confidence": "high",
+      "reason": "States how to install the project in editable mode so its source can be imported."
+    },
+    {
+      "field": "jupyter_kernel",
+      "value": "python -m ipykernel install --user --name ax2sax --display-name \"ax2sax kernel\"",
+      "normalized_value": "python -m ipykernel install --user --name ax2sax --display-name \"ax2sax kernel\"",
+      "evidence": "Create a jupyter kernel from the activated environment, this kernel will be visible in the jupyter lab\n```\npython -m ipykernel install --user --name ax2sax --display-name \"ax2sax kernel\"\n```",
+      "evidence_location": "149-152; Local setup",
+      "confidence": "high",
+      "reason": "Provides the command for making the configured environment available in JupyterLab."
+    },
+    {
+      "field": "paper_title",
+      "value": "Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks",
+      "normalized_value": "Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks",
+      "evidence": "S. Koehler, T. Hussain, Z. Blair, T. Huffaker, F. Ritzmann, A. Tandon,\nT. Pickardt, S. Sarikouch, H. Latus, G. Greil, I. Wolf, S. Engelhardt, \"Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks,\" in IEEE Transactions on Medical Imaging (TMI), early access, doi: 10.1109/TMI.2021.3052972.",
+      "evidence_location": "26-27; Paper",
+      "confidence": "high",
+      "reason": "Identifies the publication associated with the artifact."
+    },
+    {
+      "field": "paper_doi",
+      "value": "10.1109/TMI.2021.3052972",
+      "normalized_value": "10.1109/TMI.2021.3052972",
+      "evidence": "S. Koehler, T. Hussain, Z. Blair, T. Huffaker, F. Ritzmann, A. Tandon,\nT. Pickardt, S. Sarikouch, H. Latus, G. Greil, I. Wolf, S. Engelhardt, \"Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks,\" in IEEE Transactions on Medical Imaging (TMI), early access, doi: 10.1109/TMI.2021.3052972.",
+      "evidence_location": "26-27; Paper",
+      "confidence": "high",
+      "reason": "Provides a persistent identifier for locating and citing the associated paper."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://ieeexplore.ieee.org/document/9328840",
+      "normalized_value": "https://ieeexplore.ieee.org/document/9328840",
+      "evidence": "- Link to original paper: [IEEE TMI paper link](https://ieeexplore.ieee.org/document/9328840) (accepted 13.1.2021)",
+      "evidence_location": "29; Paper",
+      "confidence": "high",
+      "reason": "Provides direct access to the original publication."
+    },
+    {
+      "field": "experiment_artifacts",
+      "value": "One config file, which represents all experimental hyper-parameters which are neccessary to reproduce the experiment or to load it for later predictions; Three tensorboard logfiles per training to keep track of the trainings, evaluation and visual output progress; One dataframe which orchestrates the nrrd files with the metadata and the experiment splitting; Model graph description either as json or tensorflow protobuf file and the corresponding model weights as h5 file.",
+      "normalized_value": "One config file, which represents all experimental hyper-parameters which are neccessary to reproduce the experiment or to load it for later predictions; Three tensorboard logfiles per training to keep track of the trainings, evaluation and visual output progress; One dataframe which orchestrates the nrrd files with the metadata and the experiment splitting; Model graph description either as json or tensorflow protobuf file and the corresponding model weights as h5 file.",
+      "evidence": "Each experiment includes the following artefacts:\n- One config file, which represents all experimental hyper-parameters which are neccessary to reproduce the experiment or to load it for later predictions\n- Three tensorboard logfiles per training to keep track of the trainings, evaluation and visual output progress. \n- One dataframe which orchestrates the nrrd files with the metadata and the experiment splitting. \n- Model graph description either as json or tensorflow protobuf file and the corresponding model weights as h5 file.",
+      "evidence_location": "62-66; How to use",
+      "confidence": "high",
+      "reason": "Enumerates the files needed to reproduce, inspect, evaluate, and reuse experiments."
+    },
+    {
+      "field": "prediction_workflow",
+      "value": "transform AX CMR into the SAX domain, apply the task network, transform the predicted mask back into the AX domain",
+      "normalized_value": "transform AX CMR into the SAX domain, apply the task network, transform the predicted mask back into the AX domain",
+      "evidence": "│   │   ├── Predict        <- Load an experiment config and a pre-trained model, \n│   │   │                     transform AX CMR into the SAX domain, apply the task network, \n│   │   │                     transform the predicted mask back into the AX domain, ",
+      "evidence_location": "90-93; Repository Structure",
+      "confidence": "high",
+      "reason": "Describes the documented inference and mask back-transformation procedure."
+    }
+  ]
+}

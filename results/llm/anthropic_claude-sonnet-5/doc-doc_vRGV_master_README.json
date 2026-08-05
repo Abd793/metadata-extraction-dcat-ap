@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Visual Relation Grounding in Videos",
+      "normalized_value": "Visual Relation Grounding in Videos",
+      "evidence": "# [Visual Relation Grounding in Videos](https://arxiv.org/pdf/2007.08814.pdf)",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "This is the title of the artifact naming the project."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/pdf/2007.08814.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2007.08814.pdf",
+      "evidence": "[Visual Relation Grounding in Videos](https://arxiv.org/pdf/2007.08814.pdf)",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Direct link to the associated paper."
+    },
+    {
+      "field": "venue",
+      "value": "ECCV2020 (Spotlight)",
+      "normalized_value": "ECCV2020 (Spotlight)",
+      "evidence": "This is the pytorch implementation of our work at ECCV2020 (Spotlight).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Identifies the publication venue and presentation type for the work."
+    },
+    {
+      "field": "framework",
+      "value": "pytorch",
+      "normalized_value": "PyTorch",
+      "evidence": "This is the pytorch implementation of our work at ECCV2020 (Spotlight).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "States the deep learning framework used for implementation."
+    },
+    {
+      "field": "repository_structure",
+      "value": "The repository mainly includes 3 parts: (1) Extract RoI feature; (2) Train and inference; and (3) Generate relation-aware trajectories.",
+      "normalized_value": "The repository mainly includes 3 parts: (1) Extract RoI feature; (2) Train and inference; and (3) Generate relation-aware trajectories.",
+      "evidence": "The repository mainly includes 3 parts: (1) Extract RoI feature; (2) Train and inference; and (3) Generate relation-aware trajectories.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Describes the high-level structure/pipeline of the codebase."
+    },
+    {
+      "field": "release_note",
+      "value": "Fix issue on unstable result [2021/10/07].",
+      "normalized_value": "Fix issue on unstable result [2021/10/07].",
+      "evidence": "Fix issue on unstable result [2021/10/07].",
+      "evidence_location": "line 8, ## Notes",
+      "confidence": "high",
+      "reason": "Documents a change/fix made to the repository with a date."
+    },
+    {
+      "field": "environment_requirements",
+      "value": "Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0. For others libs, please refer to the file requirements.txt.",
+      "normalized_value": "Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0. For others libs, please refer to the file requirements.txt.",
+      "evidence": "Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0. For others libs, please refer to the file requirements.txt.",
+      "evidence_location": "line 12, ## Environment",
+      "confidence": "high",
+      "reason": "Specifies exact software/hardware environment needed to reproduce the work."
+    },
+    {
+      "field": "installation_commands",
+      "value": ">conda create -n envname python=3.6.5 # Create\n>conda activate envname # Enter\n>pip install -r requirements.txt # Install the provided libs\n>sh vRGV/lib/make.sh # Set the environment for detection, make sure you have nvcc",
+      "normalized_value": "conda create -n envname python=3.6.5; conda activate envname; pip install -r requirements.txt; sh vRGV/lib/make.sh",
+      "evidence": ">conda create -n envname python=3.6.5 # Create\n>conda activate envname # Enter\n>pip install -r requirements.txt # Install the provided libs\n>sh vRGV/lib/make.sh # Set the environment for detection, make sure you have nvcc",
+      "evidence_location": "lines 17-20, ## Install",
+      "confidence": "high",
+      "reason": "Defines the concrete installation and environment setup steps for reproducibility."
+    },
+    {
+      "field": "data_download_link_annotations",
+      "value": "https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing",
+      "evidence": "Please download the data [here](https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing).",
+      "evidence_location": "line 23, ## Data Preparation",
+      "confidence": "high",
+      "reason": "Provides the link to download required data for using the artifact."
+    },
+    {
+      "field": "data_download_link_videos",
+      "value": "https://xdshang.github.io/docs/imagenet-vidvrd.html",
+      "normalized_value": "https://xdshang.github.io/docs/imagenet-vidvrd.html",
+      "evidence": "Please download the videos [here](https://xdshang.github.io/docs/imagenet-vidvrd.html) and extract the frames into ground_data.",
+      "evidence_location": "line 25, ## Data Preparation",
+      "confidence": "high",
+      "reason": "Provides link to the underlying video dataset (ImageNet-VidVRD) used by this artifact."
+    },
+    {
+      "field": "data_directory_structure",
+      "value": "ground_data/vidvrd/JPEGImages/ILSVRC2015_train_xxx/000000.JPEG",
+      "normalized_value": "ground_data/vidvrd/JPEGImages/ILSVRC2015_train_xxx/000000.JPEG",
+      "evidence": "The directory should be like: ground_data/vidvrd/JPEGImages/ILSVRC2015_train_xxx/000000.JPEG.",
+      "evidence_location": "line 26, ## Data Preparation",
+      "confidence": "high",
+      "reason": "Specifies expected folder structure for data preparation, useful for reproduction."
+    },
+    {
+      "field": "feature_extraction_command",
+      "value": "./detection.sh 0 val #(or train)",
+      "normalized_value": "./detection.sh 0 val",
+      "evidence": "./detection.sh 0 val #(or train)",
+      "evidence_location": "line 31, ## Usage",
+      "confidence": "high",
+      "reason": "Command to run feature extraction step of the pipeline."
+    },
+    {
+      "field": "sample_feature_command",
+      "value": "cd tools\npython sample_video_feature.py",
+      "normalized_value": "cd tools; python sample_video_feature.py",
+      "evidence": "cd tools\npython sample_video_feature.py",
+      "evidence_location": "lines 35-36, ## Usage",
+      "confidence": "high",
+      "reason": "Command sequence to sample video features, part of the reproducible pipeline."
+    },
+    {
+      "field": "test_inference_commands",
+      "value": "./ground.sh 0 val # Output the relation-aware spatio-temporal attention\npython generate_track_link.py # Generate relation-aware trajectories with Viterbi algorithm.\npython eval_ground.py # Evaluate the performance",
+      "normalized_value": "./ground.sh 0 val; python generate_track_link.py; python eval_ground.py",
+      "evidence": "./ground.sh 0 val # Output the relation-aware spatio-temporal attention\npython generate_track_link.py # Generate relation-aware trajectories with Viterbi algorithm.\npython eval_ground.py # Evaluate the performance",
+      "evidence_location": "lines 40-42, ## Usage",
+      "confidence": "high",
+      "reason": "Commands to test/evaluate a provided model and reproduce the reported evaluation pipeline."
+    },
+    {
+      "field": "reported_metric",
+      "value": "You will get accuracy Acc_R: 24.58%.",
+      "normalized_value": "Acc_R: 24.58%",
+      "evidence": "You will get accuracy Acc_R: 24.58%.",
+      "evidence_location": "line 44, ## Usage",
+      "confidence": "high",
+      "reason": "Reports the expected evaluation metric result when reproducing the test with the provided model."
+    },
+    {
+      "field": "training_procedure",
+      "value": "Train. If you want to train the model from scratch. Please apply a two-stage training scheme: 1) train a basic model without relation attendance, and 2) load the reconstruction part of the pre-trained model to learn the whole model (with the same lr_rate). For implementation, please turn off/on ```[pretrain] in line 52 of ground.py```, and switch between ```line 6 & 7 in ground_relation.py```  for 1st & 2nd stage training respectively. Also, you need to change the model files in ```line 69 & 70 of ground_relation.py``` to the best model obtained at the first stage for 2nd-stage training.",
+      "normalized_value": "Two-stage training scheme: 1) train basic model without relation attendance, 2) load reconstruction part of pre-trained model to learn whole model.",
+      "evidence": "Train. If you want to train the model from scratch. Please apply a two-stage training scheme: 1) train a basic model without relation attendance, and 2) load the reconstruction part of the pre-trained model to learn the whole model (with the same lr_rate). For implementation, please turn off/on ```[pretrain] in line 52 of ground.py```, and switch between ```line 6 & 7 in ground_relation.py```  for 1st & 2nd stage training respectively. Also, you need to change the model files in ```line 69 & 70 of ground_relation.py``` to the best model obtained at the first stage for 2nd-stage training.",
+      "evidence_location": "line 46, ## Usage",
+      "confidence": "high",
+      "reason": "Describes the exact training procedure needed to reproduce model training from scratch."
+    },
+    {
+      "field": "train_command",
+      "value": "./ground.sh 0 train # Train the model with GPU id 0",
+      "normalized_value": "./ground.sh 0 train",
+      "evidence": "./ground.sh 0 train # Train the model with GPU id 0",
+      "evidence_location": "line 48, ## Usage",
+      "confidence": "high",
+      "reason": "Command to launch training of the model."
+    },
+    {
+      "field": "result_variance_note",
+      "value": "The results maybe slightly different (+/-0.5%), For comparison, please follow the results reported in our paper.",
+      "normalized_value": "The results maybe slightly different (+/-0.5%), For comparison, please follow the results reported in our paper.",
+      "evidence": "The results maybe slightly different (+/-0.5%), For comparison, please follow the results reported in our paper.",
+      "evidence_location": "line 50, ## Usage",
+      "confidence": "high",
+      "reason": "Important reproducibility caveat about expected result variance."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{xiao2020visual,\n  title={Visual Relation Grounding in Videos},\n  author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng},\n  booktitle={European Conference on Computer Vision},\n  pages={447--464},\n  year={2020},\n  organization={Springer}\n}",
+      "normalized_value": "Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng. Visual Relation Grounding in Videos. European Conference on Computer Vision, 2020, pages 447-464, Springer.",
+      "evidence": "@inproceedings{xiao2020visual,\n  title={Visual Relation Grounding in Videos},\n  author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng},\n  booktitle={European Conference on Computer Vision},\n  pages={447--464},\n  year={2020},\n  organization={Springer}\n}",
+      "evidence_location": "lines 61-68, ## Citation",
+      "confidence": "high",
+      "reason": "Provides the exact BibTeX citation for referencing this work."
+    },
+    {
+      "field": "license",
+      "value": "NUS © [NExT++](https://nextcenter.org/)",
+      "normalized_value": "NUS © NExT++",
+      "evidence": "NUS © [NExT++](https://nextcenter.org/)",
+      "evidence_location": "line 73, ## License",
+      "confidence": "medium",
+      "reason": "Indicates ownership/copyright attribution, though not a standard named license type."
+    },
+    {
+      "field": "authors",
+      "value": "Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng",
+      "normalized_value": "Junbin Xiao, Xindi Shang, Xun Yang, Sheng Tang, Tat-Seng Chua",
+      "evidence": "author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng},",
+      "evidence_location": "line 63, ## Citation",
+      "confidence": "high",
+      "reason": "Identifies the authors of the associated paper for attribution."
+    }
+  ]
+}

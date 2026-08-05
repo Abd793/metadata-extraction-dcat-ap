@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "The Unhealthy Comments Corpus (UCC)",
+      "normalized_value": "The Unhealthy Comments Corpus (UCC)",
+      "evidence": "# The Unhealthy Comments Corpus (UCC)",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Explicitly names the artifact in the document title."
+    },
+    {
+      "field": "description",
+      "value": "corpus of 44355 comments intended to assist in research on identifying subtle attributes which contribute to unhealthy conversations online",
+      "normalized_value": "corpus of 44355 comments intended to assist in research on identifying subtle attributes which contribute to unhealthy conversations online",
+      "evidence": "The Unhealthy Comments Corpus (UCC) is corpus of 44355 comments intended to assist in research on identifying subtle attributes which contribute to unhealthy conversations online.",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "States the purpose and size of the dataset, helping users understand and search for it."
+    },
+    {
+      "field": "dataset_size",
+      "value": "44355 comments",
+      "normalized_value": "44355 comments",
+      "evidence": "The Unhealthy Comments Corpus (UCC) is corpus of 44355 comments intended to assist in research on identifying subtle attributes which contribute to unhealthy conversations online.",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Concrete dataset size is key metadata for indexing and comparing datasets."
+    },
+    {
+      "field": "label_schema",
+      "value": "Each comment is labelled as either 'healthy' or 'unhealthy', in addition to binary labels for the presence of six potentially 'unhealthy' sub-attributes: (1) hostile; (2) antagonistic, insulting, provocative or trolling; (3) dismissive; (4) condescending or patronising; (5) sarcastic; and/or (6) an unfair generalisation. Each label also has an associated confidence score.",
+      "normalized_value": "Each comment is labelled as either 'healthy' or 'unhealthy', in addition to binary labels for the presence of six potentially 'unhealthy' sub-attributes: (1) hostile; (2) antagonistic, insulting, provocative or trolling; (3) dismissive; (4) condescending or patronising; (5) sarcastic; and/or (6) an unfair generalisation. Each label also has an associated confidence score.",
+      "evidence": "Each comment is labelled as either 'healthy' or 'unhealthy', in addition to binary labels for the presence of six potentially 'unhealthy' sub-attributes: (1) hostile; (2) antagonistic, insulting, provocative or trolling; (3) dismissive; (4) condescending or patronising; (5) sarcastic; and/or (6) an unfair generalisation. Each label also has an associated confidence score.",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Defines the annotation scheme, essential for reusing the dataset."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2010.07410",
+      "normalized_value": "https://arxiv.org/abs/2010.07410",
+      "evidence": "see our [paper](https://arxiv.org/abs/2010.07410), to appear in the [Fourth Workshop on Online Abuse and Harms 2020](https://www.workshopononlineabuse.com/)",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Provides the associated research paper for citation and methodological details."
+    },
+    {
+      "field": "publication_venue",
+      "value": "Fourth Workshop on Online Abuse and Harms 2020",
+      "normalized_value": "Fourth Workshop on Online Abuse and Harms 2020",
+      "evidence": "to appear in the [Fourth Workshop on Online Abuse and Harms 2020](https://www.workshopononlineabuse.com/)",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Identifies the venue where the accompanying paper appears, useful for citation."
+    },
+    {
+      "field": "data_files",
+      "value": "train.csv, test.csv, val.csv, unhealthy_full.csv",
+      "normalized_value": "train.csv, test.csv, val.csv, unhealthy_full.csv",
+      "evidence": "The dataset is provided as three .csv files, `train.csv`, `test.csv`, and `val.csv`.",
+      "evidence_location": "lines 16-18, section 'The data'",
+      "confidence": "high",
+      "reason": "Lists the dataset files and splits, needed to locate and use the data."
+    },
+    {
+      "field": "individual_annotations_file",
+      "value": "unhealthy_full.csv",
+      "normalized_value": "unhealthy_full.csv",
+      "evidence": "We also provide the individual annotations of each comment in `unhealthy_full.csv`. This contains all individual judgements which were aggregated to create the final dataset. Each of these annotations includes the trustworthiness score of the annotator, allowing users to impose higher trustworthiness thresholds or apply different aggregation methods as desired.",
+      "evidence_location": "line 18, section 'The data'",
+      "confidence": "high",
+      "reason": "Describes the file with raw per-annotator judgements and trustworthiness scores, enabling custom aggregation."
+    },
+    {
+      "field": "source_corpus",
+      "value": "SFU Opinion and Comments Corpus (SOCC)",
+      "normalized_value": "SFU Opinion and Comments Corpus (SOCC)",
+      "evidence": "The raw comments were taken from the [comments](https://github.com/sfu-discourse-lab/SOCC#comments) corpus within the [SFU Opinion and Comments Corpus](https://github.com/sfu-discourse-lab/SOCC).",
+      "evidence_location": "line 20, section 'The data'",
+      "confidence": "high",
+      "reason": "Identifies the provenance of the raw comments, important for attribution and reuse."
+    },
+    {
+      "field": "baseline_notebook",
+      "value": "UnhealthyConversations.ipynb",
+      "normalized_value": "UnhealthyConversations.ipynb",
+      "evidence": "We provide notebooks to replicate our baseline classification results on this dataset in `UnhealthyConversations.ipynb`. Fine-tuning pre-trained BERT produces classifiers with modest performance compared to the state of the art for sequence classification.",
+      "evidence_location": "line 24, section 'Baseline classification'",
+      "confidence": "high",
+      "reason": "Points to the notebook for reproducing baseline classification results."
+    },
+    {
+      "field": "baseline_method",
+      "value": "Fine-tuning pre-trained BERT",
+      "normalized_value": "Fine-tuning pre-trained BERT",
+      "evidence": "Fine-tuning pre-trained BERT produces classifiers with modest performance compared to the state of the art for sequence classification.",
+      "evidence_location": "line 24, section 'Baseline classification'",
+      "confidence": "high",
+      "reason": "Names the baseline modelling approach, useful for reproduction and comparison."
+    },
+    {
+      "field": "colab_demo_link",
+      "value": "https://colab.research.google.com/github/conversationai/unhealthy-conversations/blob/master/notebooks/UnhealthyConversations.ipynb",
+      "normalized_value": "https://colab.research.google.com/github/conversationai/unhealthy-conversations/blob/master/notebooks/UnhealthyConversations.ipynb",
+      "evidence": "[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/conversationai/unhealthy-conversations/blob/master/notebooks/UnhealthyConversations.ipynb)",
+      "evidence_location": "line 25, section 'Baseline classification'",
+      "confidence": "high",
+      "reason": "Provides a runnable Colab environment for the baseline notebook."
+    },
+    {
+      "field": "evaluation_metric",
+      "value": "ROC AUC",
+      "normalized_value": "ROC AUC",
+      "evidence": "For each comment, we randomly hold out one annotator to act as our 'human model' and use the aggregated score of the other annotators as the ground truth to compute the ROC AUC (repeated 5 times then averaged). We use the same test sets to compute the ROC AUC of the trained BERT model and average those scores as well.",
+      "evidence_location": "line 30, section 'Baseline classification'",
+      "confidence": "high",
+      "reason": "Specifies the evaluation metric and human-comparison protocol used in the benchmark."
+    },
+    {
+      "field": "benchmark_results",
+      "value": "Antagonistic: Human AUC 0.71, BERT AUC 0.82; Condescending: Human AUC 0.72, BERT AUC 0.78; Dismissive: Human AUC 0.68, BERT AUC 0.82; Generalisation: Human AUC 0.73, BERT AUC 0.74; Hostile: Human AUC 0.76, BERT AUC 0.84; Sarcastic: Human AUC 0.72, BERT AUC 0.64; Unhealthy: Human AUC 0.62, BERT AUC 0.69",
+      "normalized_value": "Antagonistic: Human AUC 0.71, BERT AUC 0.82; Condescending: Human AUC 0.72, BERT AUC 0.78; Dismissive: Human AUC 0.68, BERT AUC 0.82; Generalisation: Human AUC 0.73, BERT AUC 0.74; Hostile: Human AUC 0.76, BERT AUC 0.84; Sarcastic: Human AUC 0.72, BERT AUC 0.64; Unhealthy: Human AUC 0.62, BERT AUC 0.69",
+      "evidence": "| Attribute}  | Human AUC | BERT AUC |\n|------------ |-----------|----------|\n|Antagonistic |0.71       |  0.82    | \n|Condescending| 0.72      |    0.78  |\n|Dismissive   | 0.68      | 0.82     |\n|Generalisation | 0.73    | 0.74     |\n|Hostile       |0.76      |0.84      |\n|Sarcastic     |0.72      |0.64      |\n|Unhealthy     | 0.62     | 0.69   |",
+      "evidence_location": "lines 32-40, section 'Baseline classification', results table",
+      "confidence": "high",
+      "reason": "Concrete per-attribute benchmark results comparing BERT to human annotators."
+    },
+    {
+      "field": "analysis_code",
+      "value": "AUC_analysis.ipynb",
+      "normalized_value": "AUC_analysis.ipynb",
+      "evidence": "Code for  this analysis is in `AUC_analysis.ipynb`.",
+      "evidence_location": "line 42, section 'Baseline classification'",
+      "confidence": "high",
+      "reason": "Points to the code reproducing the AUC human-vs-model analysis."
+    },
+    {
+      "field": "license",
+      "value": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License",
+      "normalized_value": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License",
+      "evidence": "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nhttps://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "evidence_location": "lines 47-48",
+      "confidence": "high",
+      "reason": "States the legal terms governing reuse of the dataset."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/conversationai/unhealthy-conversations",
+      "normalized_value": "https://github.com/conversationai/unhealthy-conversations",
+      "evidence": "[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/conversationai/unhealthy-conversations/blob/master/notebooks/UnhealthyConversations.ipynb)",
+      "evidence_location": "line 25 (also line 28)",
+      "confidence": "medium",
+      "reason": "The repository URL is not stated directly but is unambiguously embedded in the Colab and image links."
+    }
+  ]
+}

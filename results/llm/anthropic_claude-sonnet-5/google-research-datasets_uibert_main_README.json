@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "UI understanding datasets for UIBert",
+      "normalized_value": "UI understanding datasets for UIBert",
+      "evidence": "# UI understanding datasets for UIBert",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "This is the title of the document, identifying the artifact."
+    },
+    {
+      "field": "associated_paper",
+      "value": "UIBert: Learning Generic Multimodal Representations for UI Understanding",
+      "normalized_value": "UIBert: Learning Generic Multimodal Representations for UI Understanding",
+      "evidence": "[UIBert: Learning Generic Multimodal Representations for UI Understanding](https://arxiv.org/abs/2107.13731)",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Names the paper this dataset supports, useful for context and citation."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2107.13731",
+      "normalized_value": "https://arxiv.org/abs/2107.13731",
+      "evidence": "https://arxiv.org/abs/2107.13731",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Direct link to the associated paper for reference and citation."
+    },
+    {
+      "field": "dataset_components",
+      "value": "app similar UI component retrieval data (AppSim) and referring expression component retrieval data (RefExp)",
+      "normalized_value": "AppSim and RefExp",
+      "evidence": "app similar UI component retrieval data (AppSim) and referring expression\ncomponent retrieval data (RefExp).",
+      "evidence_location": "lines 6-7",
+      "confidence": "high",
+      "reason": "Names the two datasets contained in this artifact, essential for understanding what it provides."
+    },
+    {
+      "field": "base_dataset",
+      "value": "public Rico dataset, which contains 72k mobile app UI data",
+      "normalized_value": "Rico dataset (72k mobile app UI data)",
+      "evidence": "Both datasets are extended from the public Rico dataset, which contains 72k\nmobile app UI data.",
+      "evidence_location": "lines 9-10",
+      "confidence": "high",
+      "reason": "Identifies the source dataset these two datasets extend, important for reproducibility and provenance."
+    },
+    {
+      "field": "base_dataset_link",
+      "value": "https://interactionmining.org/rico",
+      "normalized_value": "https://interactionmining.org/rico",
+      "evidence": "[Rico](https://interactionmining.org/rico)",
+      "evidence_location": "line 20",
+      "confidence": "high",
+      "reason": "Link to retrieve the original UI data referenced by image ids in the datasets."
+    },
+    {
+      "field": "data_format",
+      "value": "TFRecords",
+      "normalized_value": "TFRecords",
+      "evidence": "Both data are saved as TFRecords, which makes it easy to be loaded in\nTensorflow.",
+      "evidence_location": "lines 24-25",
+      "confidence": "high",
+      "reason": "Specifies the storage/serialization format of the datasets, needed to load and use them."
+    },
+    {
+      "field": "appsim_schema",
+      "value": "anchor/image/anchor/bbox/{xmax|xmin|ymax|ymin}: float_list[1]; {anchor|search}/image/id: bytes_list[1]; search/image/candidate/bbox/{xmax|xmin|ymax|ymin}: float_list[10]; search/correct/index: int64_list[1]",
+      "normalized_value": "AppSim TFRecord feature schema",
+      "evidence": "-   `anchor/image/anchor/bbox/{xmax|xmin|ymax|ymin}`: float_list[1].\n        Bounding box of the anchor UIelement on the anchor UI.\n\n    -   `{anchor|search}/image/id`: bytes_list[1]. Image id of the anchor and\n        search UIs.\n\n    -   `search/image/candidate/bbox/{xmax|xmin|ymax|ymin}`: float_list[10]. 10\n        candidate UI elements on the search UI. One of them is semantically\n        similar to the anchor UI element of the anchor UI. Its index is saved in\n        `search/correct/index`.\n\n    -   `search/correct/index`: int64_list[1]. Index of the semantically simialr\n        UI element in the search UI candidates list.",
+      "evidence_location": "lines 32-44",
+      "confidence": "high",
+      "reason": "Defines the exact feature schema for the AppSim dataset, necessary to parse and reuse the TFRecords."
+    },
+    {
+      "field": "refexp_schema",
+      "value": "image/id: bytes_list[1]; image/ref_exp/label: int64_list[1]; image/ref_exp/text: bytes_list[1]; image/object/bbox/{xmax|xmin|ymax|ymin}: float_list variable length; image/object/num: float_list[1]; image/view_hierarchy/bbox/{xmax|xmin|ymax|ymin}: float list variable length; image/view_hierarchy/class/label: int64_list; image/view_hierarchy/class/name: bytes_list; image/view_hierarchy/description: bytes_list; image/view_hierarchy/id/name: bytes_list; image/view_hierarchy/text: byte_list",
+      "normalized_value": "RefExp TFRecord feature schema",
+      "evidence": "-   `image/id`: bytes_list[1]. Image id.\n    -   `image/ref_exp/label`: int64_list[1]. Index of the UI element that is\n        referred to by the referring expression in the `image/object/bbox/…`\n        list.\n    -   `image/ref_exp/text`: bytes_list[1]. Referring expression.\n    -   `image/object/bbox/{xmax|xmin|ymax|ymin}`: float_list of variable\n        length. UI elements on the UI. The number of elements is denoted in\n        `image/object/num`.\n    -   `image/object/num`: float_list[1]. Number of UI elements.\n\n    -   `image/view_hierarchy/bbox/{xmax|xmin|ymax|ymin}`: float list of\n        variable length. Bounding boxes of leaf nodes in the view hierarchy.\n\n    -   `image/view_hierarchy/class/label`: int64_list. Label of the class name.\n\n    -   `image/view_hierarchy/class/name`: bytes_list. Processed class name\n        string in the view hierarchy.\n\n    -   `image/view_hierarchy/description` bytes_list. Content description\n        string in the view hierarchy.\n\n    -   `image/view_hierarchy/id/name`: bytes_list. Processed source id string\n        in the view hierarchy.\n\n    -   `image/view_hierarchy/text`: byte_list. Text string in the view\n        hierarchy.",
+      "evidence_location": "lines 50-75",
+      "confidence": "high",
+      "reason": "Defines the exact feature schema for the RefExp dataset, necessary to parse and reuse the TFRecords."
+    },
+    {
+      "field": "citation",
+      "value": "@misc{bai2021uibert,\n      title={UIBert: Learning Generic Multimodal Representations for UI Understanding},\n      author={Chongyang Bai and Xiaoxue Zang and Ying Xu and Srinivas Sunkara and Abhinav Rastogi and Jindong Chen and Blaise Aguera y Arcas},\n      year={2021},\n      eprint={2107.13731},\n      archivePrefix={arXiv},\n      primaryClass={cs.CV}\n}",
+      "normalized_value": "@misc{bai2021uibert, title={UIBert: Learning Generic Multimodal Representations for UI Understanding}, author={Chongyang Bai and Xiaoxue Zang and Ying Xu and Srinivas Sunkara and Abhinav Rastogi and Jindong Chen and Blaise Aguera y Arcas}, year={2021}, eprint={2107.13731}, archivePrefix={arXiv}, primaryClass={cs.CV}}",
+      "evidence": "@misc{bai2021uibert,\n      title={UIBert: Learning Generic Multimodal Representations for UI Understanding},\n      author={Chongyang Bai and Xiaoxue Zang and Ying Xu and Srinivas Sunkara and Abhinav Rastogi and Jindong Chen and Blaise Aguera y Arcas},\n      year={2021},\n      eprint={2107.13731},\n      archivePrefix={arXiv},\n      primaryClass={cs.CV}\n}",
+      "evidence_location": "lines 82-89",
+      "confidence": "high",
+      "reason": "The BibTeX citation for attributing use of this dataset, explicitly requested by the authors."
+    },
+    {
+      "field": "license",
+      "value": "CC BY 4.0",
+      "normalized_value": "CC BY 4.0",
+      "evidence": "Datasets are licensed under\n[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).",
+      "evidence_location": "lines 94-95",
+      "confidence": "high",
+      "reason": "States the license under which the datasets are distributed, critical for legal reuse."
+    },
+    {
+      "field": "license_link",
+      "value": "https://creativecommons.org/licenses/by/4.0/",
+      "normalized_value": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence_location": "line 95",
+      "confidence": "high",
+      "reason": "Direct link to the license text."
+    },
+    {
+      "field": "contact_method",
+      "value": "create an issue in this repository",
+      "normalized_value": "Create an issue in this repository",
+      "evidence": "If you have a technical question regarding the dataset or publication, please\ncreate an issue in this repository.",
+      "evidence_location": "lines 99-100",
+      "confidence": "high",
+      "reason": "Describes how to reach maintainers for support, useful for reuse and troubleshooting."
+    }
+  ]
+}

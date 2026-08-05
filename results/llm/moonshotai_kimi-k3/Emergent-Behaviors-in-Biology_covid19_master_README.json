@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "covid19",
+      "normalized_value": "covid19",
+      "evidence": "# covid19",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Repository/artifact name given as the document title."
+    },
+    {
+      "field": "description",
+      "value": "This repository accompanies the manuscript \"Data-driven modeling reveals a universal dynamic underlying the COVID-19 pandemic under social distancing\" by Robert Marsland III and Pankaj Mehta.",
+      "normalized_value": "This repository accompanies the manuscript \"Data-driven modeling reveals a universal dynamic underlying the COVID-19 pandemic under social distancing\" by Robert Marsland III and Pankaj Mehta.",
+      "evidence": "This repository accompanies the manuscript [Data-driven modeling reveals a universal dynamic underlying the COVID-19 pandemic under social distancing](https://arxiv.org/abs/2004.10666) by Robert Marsland III and Pankaj Mehta.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "States the purpose of the repository: it accompanies a specific manuscript."
+    },
+    {
+      "field": "paper_title",
+      "value": "Data-driven modeling reveals a universal dynamic underlying the COVID-19 pandemic under social distancing",
+      "normalized_value": "Data-driven modeling reveals a universal dynamic underlying the COVID-19 pandemic under social distancing",
+      "evidence": "[Data-driven modeling reveals a universal dynamic underlying the COVID-19 pandemic under social distancing](https://arxiv.org/abs/2004.10666)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Title of the associated manuscript, useful for citation and search."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2004.10666",
+      "normalized_value": "https://arxiv.org/abs/2004.10666",
+      "evidence": "(https://arxiv.org/abs/2004.10666)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Direct arXiv link to the associated manuscript."
+    },
+    {
+      "field": "authors",
+      "value": "Robert Marsland III and Pankaj Mehta",
+      "normalized_value": "Robert Marsland III and Pankaj Mehta",
+      "evidence": "by Robert Marsland III and Pankaj Mehta",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Authors of the accompanying manuscript, useful for attribution and citation."
+    },
+    {
+      "field": "notebook",
+      "value": "COVID-19 Predictor",
+      "normalized_value": "COVID-19 Predictor",
+      "evidence": "A Jupyter notebook \"COVID-19 Predictor\" for plotting predictions alongside the latest fatality and case data.",
+      "evidence_location": "line 4, list item",
+      "confidence": "high",
+      "reason": "Names an interactive Jupyter notebook included in the repository and its function."
+    },
+    {
+      "field": "interactive_demo_link",
+      "value": "https://mybinder.org/v2/gh/Emergent-Behaviors-in-Biology/covid19/master?filepath=COVID-19%20predictor.ipynb",
+      "normalized_value": "https://mybinder.org/v2/gh/Emergent-Behaviors-in-Biology/covid19/master?filepath=COVID-19%20predictor.ipynb",
+      "evidence": "[Click here to open the notebook](https://mybinder.org/v2/gh/Emergent-Behaviors-in-Biology/covid19/master?filepath=COVID-19%20predictor.ipynb), which is hosted on Binder for interactive use.",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Binder link enabling interactive execution of the notebook without local installation."
+    },
+    {
+      "field": "figure_generation_notebook",
+      "value": "Coronavirus Figures",
+      "normalized_value": "Coronavirus Figures",
+      "evidence": "Another Jupyter notebook \"Coronavirus Figures\" that generates all the figures in the manuscript.",
+      "evidence_location": "line 5, list item",
+      "confidence": "high",
+      "reason": "Names the notebook that reproduces all manuscript figures, key for reproducibility."
+    },
+    {
+      "field": "input_data",
+      "value": "A snapshot of all the input data files (fatalities/cases, social policy metrics, and IHME predictions) required for generating the figures",
+      "normalized_value": "A snapshot of all the input data files (fatalities/cases, social policy metrics, and IHME predictions) required for generating the figures",
+      "evidence": "A snapshot of all the input data files (fatalities/cases, social policy metrics, and IHME predictions) required for generating the figures, from the time the analyses in the manuscript were carried out.",
+      "evidence_location": "line 6, list item",
+      "confidence": "high",
+      "reason": "Describes the bundled input data needed to reproduce the figures."
+    },
+    {
+      "field": "output_data_files",
+      "value": "predictions_cases_apr15.csv and predictions_deaths_apr15.csv",
+      "normalized_value": "predictions_cases_apr15.csv and predictions_deaths_apr15.csv",
+      "evidence": "The two files \"predictions_cases_apr15.csv\" and \"predictions_deaths_apr15.csv\" contain the best-fit values and 95 percent confidence bounds for the total final number of fatalities/cases `Nmax`, the time of peak new fatalities/cases `th`, and the infection timescale `sigma` defined in the text.",
+      "evidence_location": "line 7, list item",
+      "confidence": "high",
+      "reason": "Names the output prediction files and the fitted parameters they contain."
+    },
+    {
+      "field": "model_parameters",
+      "value": "Nmax (total final number of fatalities/cases), th (time of peak new fatalities/cases), sigma (infection timescale)",
+      "normalized_value": "Nmax (total final number of fatalities/cases), th (time of peak new fatalities/cases), sigma (infection timescale)",
+      "evidence": "the total final number of fatalities/cases `Nmax`, the time of peak new fatalities/cases `th`, and the infection timescale `sigma` defined in the text",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Identifies the fitted model parameters reported in the output files, useful for interpreting and reusing results."
+    },
+    {
+      "field": "uncertainty_caveat",
+      "value": "The confidence intervals are lower bounds on the true amount of uncertainty and do not account for possible future changes in social policy or systematic deviations from the fitting function.",
+      "normalized_value": "The confidence intervals are lower bounds on the true amount of uncertainty and do not account for possible future changes in social policy or systematic deviations from the fitting function.",
+      "evidence": "Note that the confidence intervals are <em>lower bounds</em> on the true amount of uncertainty. These intervals are calculated under the assumption that the data is accurately described by our fitting function, with no changes in parameter values, and with all deviations from this function due to random multiplicative noise. The confidence intervals <em>do not</em> account for possible future changes in social policy, or for systematic deviations from the fitting function that may arise at late times.",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Important methodological caveat about the reported confidence intervals, relevant for evaluation and reuse of the predictions."
+    }
+  ]
+}

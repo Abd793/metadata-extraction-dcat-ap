@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "package_name",
+      "value": "prdc",
+      "normalized_value": "prdc",
+      "evidence": "pip3 install prdc",
+      "evidence_location": "line 87, '### Installation' code block",
+      "confidence": "high",
+      "reason": "Names the installable PyPI package, needed to install and reuse the artifact."
+    },
+    {
+      "field": "title",
+      "value": "Reliable Fidelity and Diversity Metrics for Generative Models",
+      "normalized_value": "Reliable Fidelity and Diversity Metrics for Generative Models",
+      "evidence": "## Reliable Fidelity and Diversity Metrics for Generative Models (ICML 2020)",
+      "evidence_location": "line 5, top-level header",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its associated paper title."
+    },
+    {
+      "field": "publication_venue",
+      "value": "ICML 2020",
+      "normalized_value": "ICML 2020",
+      "evidence": "* **1 June 2020**: Paper accepted at ICML 2020.",
+      "evidence_location": "line 31, '## Updates' section",
+      "confidence": "high",
+      "reason": "States the conference and year where the underlying paper was published."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2002.09797",
+      "normalized_value": "https://arxiv.org/abs/2002.09797",
+      "evidence": "[Paper: Reliable Fidelity and Diversity Metrics for Generative Models](https://arxiv.org/abs/2002.09797)",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Direct link to the arXiv paper describing the method."
+    },
+    {
+      "field": "authors",
+      "value": "Muhammad Ferjad Naeem, Seong Joon Oh, Yunjey Choi, Youngjung Uh, Jaejun Yoo",
+      "normalized_value": "Muhammad Ferjad Naeem, Seong Joon Oh, Yunjey Choi, Youngjung Uh, Jaejun Yoo",
+      "evidence": "Muhammad Ferjad Naeem <sup>1,3*</sup>, Seong Joon Oh<sup>2*</sup>, Yunjey Choi<sup>1</sup>, \nYoungjung Uh<sup>1</sup>, Jaejun Yoo<sup>1,4</sup>",
+      "evidence_location": "lines 9-10",
+      "confidence": "high",
+      "reason": "Author list for attribution and citation."
+    },
+    {
+      "field": "author_affiliations",
+      "value": "Clova AI Research, NAVER Corp.; Clova AI Research, LINE Plus Corp.; Technische Universität München; EPFL",
+      "normalized_value": "Clova AI Research, NAVER Corp.; Clova AI Research, LINE Plus Corp.; Technische Universität München; EPFL",
+      "evidence": "<sup>1</sup> <sub>Clova AI Research, NAVER Corp.</sub>\n<sup>2</sup> <sub>Clova AI Research, LINE Plus Corp.</sub>\n<sup>3</sup> <sub>Technische Universit&auml;t M&uuml;nchen</sub>\n<sup>4</sup> <sub>EPFL</sub>",
+      "evidence_location": "lines 15-18",
+      "confidence": "high",
+      "reason": "Institutional affiliations of the authors, useful for attribution and provenance."
+    },
+    {
+      "field": "proposed_metrics",
+      "value": "density and coverage",
+      "normalized_value": "density and coverage",
+      "evidence": "We propose **density and coverage** metrics that solve the above issues.",
+      "evidence_location": "line 23",
+      "confidence": "high",
+      "reason": "Names the core contribution: the evaluation metrics implemented by this package."
+    },
+    {
+      "field": "task",
+      "value": "evaluation metrics for the image generation task (measuring fidelity and diversity of generative models)",
+      "normalized_value": "evaluation metrics for the image generation task (measuring fidelity and diversity of generative models)",
+      "evidence": "Devising indicative evaluation metrics for the image generation task remains an open problem.",
+      "evidence_location": "line 20",
+      "confidence": "medium",
+      "reason": "Describes the scientific task the artifact addresses; combined with surrounding context on fidelity/diversity."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip3 install prdc",
+      "normalized_value": "pip3 install prdc",
+      "evidence": "```bash\npip3 install prdc\n```",
+      "evidence_location": "lines 86-88, '### Installation' code block",
+      "confidence": "high",
+      "reason": "The single command needed to install the package."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "```python\nimport numpy as np\nfrom prdc import compute_prdc",
+      "evidence_location": "lines 95-97, '### Example' code block",
+      "confidence": "medium",
+      "reason": "Code blocks are tagged python and installation uses pip3, indicating a Python package, though the language is never named in prose."
+    },
+    {
+      "field": "dependencies",
+      "value": "numpy",
+      "normalized_value": "numpy",
+      "evidence": "import numpy as np",
+      "evidence_location": "line 96, '### Example' code block",
+      "confidence": "medium",
+      "reason": "NumPy is the only external library imported in the usage example; other dependencies are not stated."
+    },
+    {
+      "field": "api_function",
+      "value": "compute_prdc(real_features, fake_features, nearest_k)",
+      "normalized_value": "compute_prdc(real_features, fake_features, nearest_k)",
+      "evidence": "metrics = compute_prdc(real_features=real_features,\n                       fake_features=fake_features,\n                       nearest_k=nearest_k)",
+      "evidence_location": "lines 109-111, '### Example' code block",
+      "confidence": "high",
+      "reason": "The main entry point for computing precision, recall, density, and coverage."
+    },
+    {
+      "field": "example_configuration",
+      "value": "10000 real and fake samples from N(0,I) in 1000-dimensional space, nearest neighbour k=5",
+      "normalized_value": "10000 real and fake samples from N(0,I) in 1000-dimensional space, nearest neighbour k=5",
+      "evidence": "Test 10000 real and fake samples form the standard normal distribution N(0,I) in 1000-dimensional Euclidean space.\nSet the nearest neighbour `k=5`.",
+      "evidence_location": "lines 92-93, '### Example' section",
+      "confidence": "high",
+      "reason": "Concrete parameters for reproducing the documented example."
+    },
+    {
+      "field": "example_output",
+      "value": "{'precision': 0.4772, 'recall': 0.4705, 'density': 1.0555, 'coverage': 0.9735}",
+      "normalized_value": "{'precision': 0.4772, 'recall': 0.4705, 'density': 1.0555, 'coverage': 0.9735}",
+      "evidence": "{'precision': 0.4772,\n 'recall': 0.4705,\n 'density': 1.0555,\n 'coverage': 0.9735}",
+      "evidence_location": "lines 117-120, example output code block",
+      "confidence": "high",
+      "reason": "Expected output of the example, useful for verifying a correct installation (noted as fluctuating due to randomness)."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/clovaai/prdc",
+      "normalized_value": "https://github.com/clovaai/prdc",
+      "evidence": "https://github.com/clovaai/prdc/blob/master/figure/p_vs_d.png?raw=true",
+      "evidence_location": "line 65, figure image URL",
+      "confidence": "medium",
+      "reason": "The GitHub repository path is revealed through raw image URLs, though no explicit repository link is given."
+    },
+    {
+      "field": "pypi_url",
+      "value": "https://pypi.python.org/pypi/prdc/",
+      "normalized_value": "https://pypi.python.org/pypi/prdc/",
+      "evidence": "[![PyPI download month](https://img.shields.io/pypi/dm/prdc.svg)](https://pypi.python.org/pypi/prdc/)",
+      "evidence_location": "line 2, badge",
+      "confidence": "high",
+      "reason": "Link to the package's PyPI page for distribution metadata."
+    },
+    {
+      "field": "video_url",
+      "value": "http://www.youtube.com/watch?v=_XwsGkryVpk",
+      "normalized_value": "http://www.youtube.com/watch?v=_XwsGkryVpk",
+      "evidence": "<a href=\"http://www.youtube.com/watch?feature=player_embedded&v=_XwsGkryVpk\n\" target=\"_blank\">",
+      "evidence_location": "lines 25-26",
+      "confidence": "medium",
+      "reason": "Link to a presentation video about the work; URL split across lines in the source."
+    },
+    {
+      "field": "copyright_holder",
+      "value": "NAVER Corp.",
+      "normalized_value": "NAVER Corp.",
+      "evidence": "Copyright (c) 2020-present NAVER Corp.",
+      "evidence_location": "line 132, '### License' code block",
+      "confidence": "high",
+      "reason": "Identifies the rights holder for reuse and attribution purposes."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "Permission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software",
+      "evidence_location": "lines 134-138, '### License' code block",
+      "confidence": "medium",
+      "reason": "The license text matches the standard MIT License wording and a PyPI license badge is shown, but the license is never named explicitly in the document."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{ferjad2020icml,\n  title = {Reliable Fidelity and Diversity Metrics for Generative Models},\n  author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},\n  year = {2020},\n  booktitle = {International Conference on Machine Learning},\n}",
+      "normalized_value": "@article{ferjad2020icml, title = {Reliable Fidelity and Diversity Metrics for Generative Models}, author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun}, year = {2020}, booktitle = {International Conference on Machine Learning}, }",
+      "evidence": "@article{ferjad2020icml,\n  title = {Reliable Fidelity and Diversity Metrics for Generative Models},\n  author = {Naeem, Muhammad Ferjad and Oh, Seong Joon and Uh, Youngjung and Choi, Yunjey and Yoo, Jaejun},\n  year = {2020},\n  booktitle = {International Conference on Machine Learning},\n}",
+      "evidence_location": "lines 156-161, '### Cite this work' code block",
+      "confidence": "high",
+      "reason": "Provided citation entry for academically citing the artifact."
+    },
+    {
+      "field": "related_work",
+      "value": "Kynkäänniemi et al., 2019. Improved precision and recall metric for assessing generative models. Neurips 2019.",
+      "normalized_value": "Kynkäänniemi et al., 2019. Improved precision and recall metric for assessing generative models. Neurips 2019.",
+      "evidence": "Kynk&auml;&auml;nniemi et al., 2019. Improved precision and recall metric for assessing generative models. Neurips 2019.",
+      "evidence_location": "line 127, '### References' section",
+      "confidence": "high",
+      "reason": "Names the prior precision/recall metric that this work critiques and improves upon, giving scientific context."
+    }
+  ]
+}

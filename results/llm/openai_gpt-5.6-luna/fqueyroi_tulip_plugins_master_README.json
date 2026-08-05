@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Graph Algorithms for Tulip Software",
+      "normalized_value": "Graph Algorithms for Tulip Software",
+      "evidence": "# Graph Algorithms for [Tulip Software](https://github.com/Tulip-Dev/tulip)",
+      "evidence_location": "3; header",
+      "confidence": "high",
+      "reason": "Names the artifact and identifies the software ecosystem it targets."
+    },
+    {
+      "field": "description",
+      "value": "Tulip is an information visualization framework dedicated to the analysis and visualization of relational data. Tulip aims to provide the developer with a complete library, supporting the design of interactive information visualization applications for relational data that can be tailored to the problems he or she is addressing.",
+      "normalized_value": "Tulip is an information visualization framework dedicated to the analysis and visualization of relational data. Tulip aims to provide the developer with a complete library, supporting the design of interactive information visualization applications for relational data that can be tailored to the problems he or she is addressing.",
+      "evidence": "> Tulip is an information visualization framework dedicated to the analysis and visualization of relational data. Tulip aims to provide the developer with a complete library, supporting the design of interactive information visualization applications for relational data that can be tailored to the problems he or she is addressing.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Provides the stated purpose and application domain of Tulip."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/Tulip-Dev/tulip",
+      "normalized_value": "https://github.com/Tulip-Dev/tulip",
+      "evidence": "Find more info [here](https://github.com/Tulip-Dev/tulip).",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Provides the main Tulip repository for access and reuse."
+    },
+    {
+      "field": "api_dependencies",
+      "value": "Tulip API; Tulip Python API",
+      "normalized_value": "Tulip API; Tulip Python API",
+      "evidence": "This page contains Tulip plugins using [Tulip API](http://tulip.labri.fr/Documentation/current/doxygen/html/index.html) or [Tulip Python API](http://tulip.labri.fr/Documentation/current/tulip-python/html). They are implementation of well-known (or less-known) graph algorithms and network analysis methods.",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Identifies the APIs used by the plugins and their algorithmic purpose."
+    },
+    {
+      "field": "transportation_network_algorithms",
+      "value": "SPRouting: use iterative shortest-path routing of flow; PhysariumSolver: use biologically inspired routing and edge length update.",
+      "normalized_value": "SPRouting: use iterative shortest-path routing of flow; PhysariumSolver: use biologically inspired routing and edge length update.",
+      "evidence": "- SPRouting: use iterative shortest-path routing of flow\n- PhysariumSolver: use biologically inspired routing and edge length update.",
+      "evidence_location": "14-15; Transportation Networks",
+      "confidence": "high",
+      "reason": "Specifies the two transportation network construction algorithms and how each routes flow."
+    },
+    {
+      "field": "transportation_network_reference",
+      "value": "Queyroi, F. (2018). Biological and Shortest-Path Routing Procedures for Transportation Network Design. arXiv preprint arXiv:1803.03528",
+      "normalized_value": "Queyroi, F. (2018). Biological and Shortest-Path Routing Procedures for Transportation Network Design. arXiv preprint arXiv:1803.03528",
+      "evidence": "> Queyroi, F. (2018). Biological and Shortest-Path Routing Procedures for Transportation Network Design. arXiv preprint [arXiv:1803.03528](https://arxiv.org/abs/1803.03528).",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Provides a paper for understanding or reproducing the transportation network methods."
+    },
+    {
+      "field": "clique_enumeration_method",
+      "value": "A plugin to enumerate all maximal cliques in the graph. It uses the algorithm of Eppstein et al.: vertices are ordered using their degeneracy value",
+      "normalized_value": "A plugin to enumerate all maximal cliques in the graph. It uses the algorithm of Eppstein et al.: vertices are ordered using their degeneracy value",
+      "evidence": "A plugin to enumerate all [maximal cliques](https://en.wikipedia.org/wiki/Clique_(graph_theory)) in the graph. It uses [the algorithm of Eppstein *et al.*](https://arxiv.org/abs/1006.5440) : vertices are ordered using their degeneracy value (the [K-Cores plugin](https://github.com/Tulip-Dev/tulip/blob/master/plugins/metric/KCores.cpp) in Tulip) in order to speed up the enumeration.",
+      "evidence_location": "25; Cliques",
+      "confidence": "high",
+      "reason": "Describes the clique output and the concrete algorithmic approach used."
+    },
+    {
+      "field": "clique_percolation_method",
+      "value": "An implementation of the Clique Percolation Method that finds an overlapping clustering of the graph. It does so by merging the k-cliques that share k-1 vertices",
+      "normalized_value": "An implementation of the Clique Percolation Method that finds an overlapping clustering of the graph. It does so by merging the k-cliques that share k-1 vertices",
+      "evidence": "An implementation of the [Clique Percolation Method](https://en.wikipedia.org/wiki/Clique_percolation_method) that finds an overlapping clustering of the graph. It does so by merging the k-cliques that share k-1 vertices (k is a parameter of the algorithm). We actually use the plugin `CliqueEnum` to find maximal cliques rather than enumerating all $k$-cliques.",
+      "evidence_location": "31; Clique Percolation",
+      "confidence": "high",
+      "reason": "Defines the clustering method, its overlap rule, parameter, and implementation dependency."
+    },
+    {
+      "field": "python_dependency",
+      "value": "collections.OrderedDict; for python version prior to 2.7, install ordereddict with pip install ordereddict",
+      "normalized_value": "collections.OrderedDict; for python version prior to 2.7, install ordereddict with pip install ordereddict",
+      "evidence": "**Warning!** This python plugin uses `collections.OrderedDict`. For python version prior to 2.7, you need to install the package: `pip install ordereddict`",
+      "evidence_location": "27; Cliques",
+      "confidence": "high",
+      "reason": "Provides a concrete compatibility requirement and installation command."
+    },
+    {
+      "field": "label_propagation_output",
+      "value": "For a weighted graph G=(V,E,w), it produces a partition of the vertices V.",
+      "normalized_value": "For a weighted graph G=(V,E,w), it produces a partition of the vertices V.",
+      "evidence": "A simple, fast and efficient graph clustering algorithm. For a weighted graph G=(V,E,w), it produces a *partition* of the vertices V.",
+      "evidence_location": "35; Label Propagation",
+      "confidence": "high",
+      "reason": "States the input graph form and the output produced by the clustering algorithm."
+    },
+    {
+      "field": "label_propagation_behavior",
+      "value": "The algorithm iteratively change vertices labels (that correspond to cluster). A vertex will take as label the label that occurs the most in its neighborhood. The algoithm will stop after a sufficient number of iterations.",
+      "normalized_value": "The algorithm iteratively change vertices labels (that correspond to cluster). A vertex will take as label the label that occurs the most in its neighborhood. The algoithm will stop after a sufficient number of iterations.",
+      "evidence": "The algorithm iteratively change vertices labels (that correspond to cluster). A vertex will take as label the label that occurs the most in its neighborhood. The algoithm will stop after a sufficient number of iterations.",
+      "evidence_location": "37; Label Propagation",
+      "confidence": "high",
+      "reason": "Explains the iterative update rule and stopping behavior needed to understand the method."
+    },
+    {
+      "field": "label_propagation_references",
+      "value": "Usha Nandini Raghavan, Réka Albert, and Soundar Kumara. Near linear time algorithm to detect community structures in large-scale networks. Physical Review E, 76(3) :036106, 2007.; Ian XY Leung, Pan Hui, Pietro Lìo, and Jon Crowcroft. Towards real-time community detection in large networks. Physical Review E, 79(6) :066107, 2009.",
+      "normalized_value": "Usha Nandini Raghavan, Réka Albert, and Soundar Kumara. Near linear time algorithm to detect community structures in large-scale networks. Physical Review E, 76(3) :036106, 2007.; Ian XY Leung, Pan Hui, Pietro Lìo, and Jon Crowcroft. Towards real-time community detection in large networks. Physical Review E, 79(6) :066107, 2009.",
+      "evidence": ">Usha Nandini Raghavan, Réka Albert, and Soundar Kumara. *Near linear time\nalgorithm to detect community structures in large-scale networks*. Physical Review\nE, 76(3) :036106, 2007.\n\nand \n\n>Ian XY Leung, Pan Hui, Pietro Lìo, and Jon Crowcroft. *Towards real-time community\ndetection in large networks.* Physical Review E, 79(6) :066107, 2009.",
+      "evidence_location": "41-48; Label Propagation",
+      "confidence": "high",
+      "reason": "Identifies the cited research underlying or contextualizing label propagation."
+    },
+    {
+      "field": "minimum_spanning_tree_method",
+      "value": "Compute the Minimum Spanning Tree of the graph (Python script) using a Union-Find data structure.",
+      "normalized_value": "Compute the Minimum Spanning Tree of the graph (Python script) using a Union-Find data structure.",
+      "evidence": "Compute the [Minimum Spanning Tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) of the graph (Python script) using a [Union-Find](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm) data structure.",
+      "evidence_location": "62; Minimum Spanning Tree",
+      "confidence": "high",
+      "reason": "Specifies the computation, implementation language, and core data structure."
+    },
+    {
+      "field": "vertex_cycle_cover_application",
+      "value": "If we assume the the various possibilities are summed up in a graph G (an arc between A->B indicates that A can offer a gift to B) then the problem is to find a Vertex Cycle Cover of G. This problem can be solved using a maximum matching algorithm.",
+      "normalized_value": "If we assume the the various possibilities are summed up in a graph G (an arc between A->B indicates that A can offer a gift to B) then the problem is to find a Vertex Cycle Cover of G. This problem can be solved using a maximum matching algorithm.",
+      "evidence": "If we assume the the various possibilities are summed up in a graph G (an arc between A->B indicates that A can offer a gift to B) then the problem is to find a [Vertex Cycle Cover](https://en.wikipedia.org/wiki/Vertex_cycle_cover) of G. This problem can be solved using a maximum matching algorithm.",
+      "evidence_location": "72; Vertex Cycle Cover and Secret Santa!",
+      "confidence": "high",
+      "reason": "Defines the graph formulation and algorithmic solution for the assignment problem."
+    },
+    {
+      "field": "secret_santa_plugin",
+      "value": "SecretSanta",
+      "normalized_value": "SecretSanta",
+      "evidence": "Therefore, the Tulip Python plugin \"SecretSanta\" find a solution where the knowledge of a given assignment can not be used to infer another assignment.",
+      "evidence_location": "74; Vertex Cycle Cover and Secret Santa!",
+      "confidence": "high",
+      "reason": "Names the reusable Tulip Python plugin and states its privacy-oriented assignment behavior."
+    },
+    {
+      "field": "secret_santa_reference",
+      "value": "Liberti and Raimondi (2008)",
+      "normalized_value": "Liberti and Raimondi (2008)",
+      "evidence": "This is an implementation of the algorithm by [Liberti and Raimondi](https://link.springer.com/chapter/10.1007/978-3-540-68880-8_26) (2008).",
+      "evidence_location": "74; Vertex Cycle Cover and Secret Santa!",
+      "confidence": "high",
+      "reason": "Identifies the cited source for the Secret Santa assignment algorithm."
+    }
+  ]
+}

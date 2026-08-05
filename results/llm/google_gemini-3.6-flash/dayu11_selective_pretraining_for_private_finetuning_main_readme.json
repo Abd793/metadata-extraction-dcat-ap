@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "repository_url",
+      "value": "https://github.com/dayu11/selective_pretraining_for_private_finetuning",
+      "normalized_value": "https://github.com/dayu11/selective_pretraining_for_private_finetuning",
+      "evidence": "[This repo](https://github.com/dayu11/selective_pretraining_for_private_finetuning)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the GitHub repository where the project source code is hosted."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2305.13865",
+      "normalized_value": "https://arxiv.org/abs/2305.13865",
+      "evidence": "[this paper](https://arxiv.org/abs/2305.13865)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides the URL to the scientific paper that describes the method implemented by this repository."
+    },
+    {
+      "field": "artifact_description",
+      "value": "implements the framework in [this paper](https://arxiv.org/abs/2305.13865) on SST-2",
+      "normalized_value": "implements the framework in [this paper](https://arxiv.org/abs/2305.13865) on SST-2",
+      "evidence": "[This repo](https://github.com/dayu11/selective_pretraining_for_private_finetuning) implements the framework in [this paper](https://arxiv.org/abs/2305.13865) on SST-2.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Describes the main purpose and functional scope of the repository."
+    },
+    {
+      "field": "benchmark_dataset",
+      "value": "SST-2",
+      "normalized_value": "SST-2",
+      "evidence": "SST-2",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the benchmark dataset targeted and evaluated by the framework."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "GPUs that support half-precision training",
+      "normalized_value": "GPUs that support half-precision training",
+      "evidence": "The code requires GPUs that support half-precision training.",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Specifies the hardware features necessary to run the code."
+    },
+    {
+      "field": "dependencies",
+      "value": "torch==1.12.1\ndatasets\nevaluate\naccelerate\ntqdm",
+      "normalized_value": "torch==1.12.1 datasets evaluate accelerate tqdm",
+      "evidence": "```\ntorch==1.12.1\ndatasets\nevaluate\naccelerate\ntqdm\n```",
+      "evidence_location": "5-11",
+      "confidence": "high",
+      "reason": "Lists the required Python package dependencies."
+    },
+    {
+      "field": "pretraining_datasets",
+      "value": "Wikipedia + BookCorpus",
+      "normalized_value": "Wikipedia + BookCorpus",
+      "evidence": "Wikipedia + BookCorpus",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Identifies source datasets used for pre-training data extraction and selection."
+    },
+    {
+      "field": "sentence_splitting_command",
+      "value": "cd pretraining_data_selection\npython splitting_into_sentences.py",
+      "normalized_value": "cd pretraining_data_selection python splitting_into_sentences.py",
+      "evidence": "```\ncd pretraining_data_selection\npython splitting_into_sentences.py\n```",
+      "evidence_location": "24-27",
+      "confidence": "high",
+      "reason": "Command to download pre-training datasets and split documents into sentences."
+    },
+    {
+      "field": "classifier_data_preparation_command",
+      "value": "python build_classifier_data_for_sst2.py",
+      "normalized_value": "python build_classifier_data_for_sst2.py",
+      "evidence": "```\npython build_classifier_data_for_sst2.py\n```",
+      "evidence_location": "30-32",
+      "confidence": "high",
+      "reason": "Command to prepare data for training the domain classifier."
+    },
+    {
+      "field": "dp_transformers_installation_command",
+      "value": "cd ../dp_finetuning\ncd transformers\npip install --editable .\ncd ..",
+      "normalized_value": "cd ../dp_finetuning cd transformers pip install --editable . cd ..",
+      "evidence": "```\ncd ../dp_finetuning\ncd transformers\npip install --editable .\ncd ..\n```",
+      "evidence_location": "37-42",
+      "confidence": "high",
+      "reason": "Command to install local transformers package configured with DP gradient computation."
+    },
+    {
+      "field": "domain_classifier_training_command",
+      "value": "bash scripts/train_domain_classifier.sh 1.4 1 64 32 1e-3",
+      "normalized_value": "bash scripts/train_domain_classifier.sh 1.4 1 64 32 1e-3",
+      "evidence": "```\nbash scripts/train_domain_classifier.sh 1.4 1 64 32 1e-3\n```",
+      "evidence_location": "45-47",
+      "confidence": "high",
+      "reason": "Command to train the domain classifier with DP-Adam."
+    },
+    {
+      "field": "data_selection_command",
+      "value": "cd ../pretraining_data_selection\npython sampling_with_logits.py --num_tokens 40",
+      "normalized_value": "cd ../pretraining_data_selection python sampling_with_logits.py --num_tokens 40",
+      "evidence": "```\ncd ../pretraining_data_selection\npython sampling_with_logits.py --num_tokens 40\n```",
+      "evidence_location": "54-57",
+      "confidence": "high",
+      "reason": "Command to select pre-training sentences using classifier logits."
+    },
+    {
+      "field": "standard_transformers_installation_command",
+      "value": "cd ../pretraining\ncd transformers\npip install --editable .\ncd ..",
+      "normalized_value": "cd ../pretraining cd transformers pip install --editable . cd ..",
+      "evidence": "```\ncd ../pretraining\ncd transformers\npip install --editable .\ncd ..\n```",
+      "evidence_location": "67-72",
+      "confidence": "high",
+      "reason": "Command to install standard transformers package enabling multi-GPU pre-training."
+    },
+    {
+      "field": "pretraining_command",
+      "value": "bash scripts/pretraining.sh pretraining_data_40m.ds tiny 3e-4 1000000 32 8 1",
+      "normalized_value": "bash scripts/pretraining.sh pretraining_data_40m.ds tiny 3e-4 1000000 32 8 1",
+      "evidence": "```\nbash scripts/pretraining.sh pretraining_data_40m.ds tiny 3e-4 1000000 32 8 1\n```",
+      "evidence_location": "76-78",
+      "confidence": "high",
+      "reason": "Command to run pre-training on selected data."
+    },
+    {
+      "field": "private_finetuning_command",
+      "value": "bash scripts/train_sst2.sh ../pretraining/results/pretraining_data_random_40m.ds_lr3e-4_maxsteps1000000_tiny/checkpoint-XXXX 1.4 1 32 64 1e-3 30 0",
+      "normalized_value": "bash scripts/train_sst2.sh ../pretraining/results/pretraining_data_random_40m.ds_lr3e-4_maxsteps1000000_tiny/checkpoint-XXXX 1.4 1 32 64 1e-3 30 0",
+      "evidence": "```\nbash scripts/train_sst2.sh ../pretraining/results/pretraining_data_random_40m.ds_lr3e-4_maxsteps1000000_tiny/checkpoint-XXXX 1.4 1 32 64 1e-3 30 0\n```",
+      "evidence_location": "101-103",
+      "confidence": "high",
+      "reason": "Command to perform private fine-tuning on SST-2 dataset."
+    }
+  ]
+}

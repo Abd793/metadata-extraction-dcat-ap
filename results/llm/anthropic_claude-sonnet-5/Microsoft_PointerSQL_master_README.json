@@ -1,0 +1,283 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PointSQL",
+      "normalized_value": "PointSQL",
+      "evidence": "This is PointSQL, the source codes of [Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Names the artifact explicitly at the start of the README."
+    },
+    {
+      "field": "associated_paper",
+      "value": "Natural Language to Structured Query Generation via Meta-Learning (https://arxiv.org/abs/1803.02400)",
+      "normalized_value": "Natural Language to Structured Query Generation via Meta-Learning - https://arxiv.org/abs/1803.02400",
+      "evidence": "[Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Primary paper this codebase implements."
+    },
+    {
+      "field": "associated_paper",
+      "value": "Pointing Out SQL Queries From Text (https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text)",
+      "normalized_value": "Pointing Out SQL Queries From Text - https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text",
+      "evidence": "[Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text) from Microsoft Research.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Second paper associated with this codebase."
+    },
+    {
+      "field": "task",
+      "value": "WikiSQL experiments",
+      "normalized_value": "WikiSQL experiments",
+      "evidence": "We present the setup for the WikiSQL experiments.",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "States the task/benchmark the repository targets."
+    },
+    {
+      "field": "dataset_download",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny",
+      "evidence": "Download a preprocessed dataset [link](https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny) to `input/`",
+      "evidence_location": "line 11",
+      "confidence": "high",
+      "reason": "Link to preprocessed dataset needed for training/testing."
+    },
+    {
+      "field": "setup_command",
+      "value": "$ cd wikisql_data\n$ wget https://github.com/salesforce/WikiSQL/raw/master/data.tar.bz2\n$ tar -xvjf data.tar.bz2",
+      "normalized_value": "cd wikisql_data && wget https://github.com/salesforce/WikiSQL/raw/master/data.tar.bz2 && tar -xvjf data.tar.bz2",
+      "evidence": "$ cd wikisql_data\n$ wget https://github.com/salesforce/WikiSQL/raw/master/data.tar.bz2\n$ tar -xvjf data.tar.bz2",
+      "evidence_location": "lines 20-22",
+      "confidence": "high",
+      "reason": "Concrete command sequence for downloading raw WikiSQL data as part of preprocessing."
+    },
+    {
+      "field": "dataset_source",
+      "value": "WikiSQL (https://github.com/salesforce/WikiSQL)",
+      "normalized_value": "WikiSQL - https://github.com/salesforce/WikiSQL",
+      "evidence": "Download data from [WikiSQL](https://github.com/salesforce/WikiSQL). ",
+      "evidence_location": "line 17",
+      "confidence": "high",
+      "reason": "Names the original dataset source repository used for preprocessing."
+    },
+    {
+      "field": "preprocessing_command",
+      "value": "$ cd wikisql_data/scripts/\n$ python annotate.py\n$ python prepare.py",
+      "normalized_value": "cd wikisql_data/scripts/ && python annotate.py && python prepare.py",
+      "evidence": "$ cd wikisql_data/scripts/\n$ python annotate.py\n$ python prepare.py",
+      "evidence_location": "lines 27-29",
+      "confidence": "high",
+      "reason": "Preprocessing pipeline command for annotation using Stanza."
+    },
+    {
+      "field": "preprocessing_command",
+      "value": "python wikisql_data/scripts/relevance.py",
+      "normalized_value": "python wikisql_data/scripts/relevance.py",
+      "evidence": "python wikisql_data/scripts/relevance.py",
+      "evidence_location": "line 35",
+      "confidence": "high",
+      "reason": "Command to prepare relevance files needed for training."
+    },
+    {
+      "field": "pretrained_embeddings",
+      "value": "glove (https://nlp.stanford.edu/projects/glove/) and character n-gram embeddings (http://www.logos.t.u-tokyo.ac.jp/~hassy/publications/arxiv2016jmt/)",
+      "normalized_value": "GloVe embeddings and character n-gram embeddings",
+      "evidence": "Download pretrained embeddings from [glove](https://nlp.stanford.edu/projects/glove/) and [character n-gram embeddings](http://www.logos.t.u-tokyo.ac.jp/~hassy/publications/arxiv2016jmt/) and put them under ``input/``",
+      "evidence_location": "line 37",
+      "confidence": "high",
+      "reason": "Names required pretrained embeddings and their sources for the model."
+    },
+    {
+      "field": "related_paper",
+      "value": "Execute-Guided Decoding (https://arxiv.org/abs/1807.03100)",
+      "normalized_value": "Execute-Guided Decoding - https://arxiv.org/abs/1807.03100",
+      "evidence": "Note we use a new preprocessed dataset (v2) in the [Execute-Guided Decoding](https://arxiv.org/abs/1807.03100) paper",
+      "evidence_location": "line 40",
+      "confidence": "high",
+      "reason": "Additional related paper referenced for the v2 dataset."
+    },
+    {
+      "field": "dataset_download_v2",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t",
+      "evidence": "A preprocessed dataset can be found [here](https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t), where the ``wikisql_train.dat``, ``wikisql_test.dat``, ``wikisql_dev.dat`` are the files that can be directly used in training. ",
+      "evidence_location": "line 41",
+      "confidence": "high",
+      "reason": "Link to updated (v2) preprocessed dataset for direct use in training."
+    },
+    {
+      "field": "dataset_version_note",
+      "value": "the version 2 dataset matches the v1.1 release of WikiSQL",
+      "normalized_value": "version 2 dataset matches WikiSQL v1.1 release",
+      "evidence": "Note: the version 2 dataset matches the v1.1 release of [WikiSQL](https://github.com/salesforce/WikiSQL). The preprocessing script ``wikisql_data/scripts/prepare_v2.py`` (python3 required) processes WikiSQL v1.1 raw data and table files to generate ``wikisql_train.dat``, ``wikisql_test.dat``, ``wikisql_dev.dat``.",
+      "evidence_location": "line 43",
+      "confidence": "high",
+      "reason": "Clarifies dataset version compatibility and preprocessing script for reproducibility."
+    },
+    {
+      "field": "training_command",
+      "value": "$ OUTDIR=output/meta_sum\n$ mkdir $OUTDIR\n$ python run.py --input-dir ./input \\\n    --output-dir $OUTDIR \\\n    --config config/nl2prog.meta_2_0.001.rank.config  \\\n    --meta_learning_rate 0.001 --gradient_clip_norm 5 \\\n    --num_layers 3  --num_meta_example 2 \\\n    --meta_learning --production",
+      "normalized_value": "python run.py --input-dir ./input --output-dir $OUTDIR --config config/nl2prog.meta_2_0.001.rank.config --meta_learning_rate 0.001 --gradient_clip_norm 5 --num_layers 3 --num_meta_example 2 --meta_learning --production",
+      "evidence": "$ OUTDIR=output/meta_sum\n$ mkdir $OUTDIR\n$ python run.py --input-dir ./input \\\n    --output-dir $OUTDIR \\\n    --config config/nl2prog.meta_2_0.001.rank.config  \\\n    --meta_learning_rate 0.001 --gradient_clip_norm 5 \\\n    --num_layers 3  --num_meta_example 2 \\\n    --meta_learning --production",
+      "evidence_location": "lines 49-56",
+      "confidence": "high",
+      "reason": "Exact command to train the Meta + Sum loss model."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "$ mkdir -p ${OUTDIR}_dev\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_dev \\ \n    --config config/nl2prog.meta_2_0.001.rank.devconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production",
+      "normalized_value": "python run.py --input-dir ./input --output-dir ${OUTDIR}_dev --config config/nl2prog.meta_2_0.001.rank.devconfig --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40 --production",
+      "evidence": "$ mkdir -p ${OUTDIR}_dev\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_dev \\ \n    --config config/nl2prog.meta_2_0.001.rank.devconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production",
+      "evidence_location": "lines 65-68",
+      "confidence": "high",
+      "reason": "Command for running evaluation on the development set."
+    },
+    {
+      "field": "evaluation_result",
+      "value": "Logical Form Accuracy: 0.631383269546, Execute Accuracy: 0.68277747403 (dev set)",
+      "normalized_value": "Dev set: Logical Form Accuracy 0.631383269546, Execute Accuracy 0.68277747403",
+      "evidence": "Logical Form Accuracy: 0.631383269546\n    Execute Accuracy: 0.68277747403",
+      "evidence_location": "lines 78-79",
+      "confidence": "high",
+      "reason": "Reported accuracy metrics for the Meta+Sum model on the development set."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "$ mkdir -p ${OUTDIR}_test\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \\ \n    --config config/nl2prog.meta_2_0.001.rank.testconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production",
+      "normalized_value": "python run.py --input-dir ./input --output-dir ${OUTDIR}_test --config config/nl2prog.meta_2_0.001.rank.testconfig --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40 --production",
+      "evidence": "$ mkdir -p ${OUTDIR}_test\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \\ \n    --config config/nl2prog.meta_2_0.001.rank.testconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production",
+      "evidence_location": "lines 83-86",
+      "confidence": "high",
+      "reason": "Command for running evaluation on the test set."
+    },
+    {
+      "field": "evaluation_result",
+      "value": "Logical Form Accuracy: 0.628073829775, Execute Accuracy: 0.680379563733 (test set, Meta+Sum)",
+      "normalized_value": "Test set (Meta+Sum): Logical Form Accuracy 0.628073829775, Execute Accuracy 0.680379563733",
+      "evidence": "Logical Form Accuracy: 0.628073829775\n    Execute Accuracy: 0.680379563733",
+      "evidence_location": "lines 96-97",
+      "confidence": "high",
+      "reason": "Reported accuracy metrics for the Meta+Sum model on the test set."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "$ OUTDIR=output/base_sum\n $ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \\\n    --config config/nl2prog.testconfig --production  \\\n    --test-model model_zoo/base_sum/table_nl_prog-79 --production",
+      "normalized_value": "python run.py --input-dir ./input --output-dir ${OUTDIR}_test --config config/nl2prog.testconfig --production --test-model model_zoo/base_sum/table_nl_prog-79 --production",
+      "evidence": " $ OUTDIR=output/base_sum\n $ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \\\n    --config config/nl2prog.testconfig --production  \\\n    --test-model model_zoo/base_sum/table_nl_prog-79 --production",
+      "evidence_location": "lines 102-105",
+      "confidence": "high",
+      "reason": "Command for running the baseline model on the test set."
+    },
+    {
+      "field": "evaluation_result",
+      "value": "Logical Form Accuracy: 0.614592374009, Execute Accuracy: 0.668055314471 (baseline model, test set)",
+      "normalized_value": "Baseline model test set: Logical Form Accuracy 0.614592374009, Execute Accuracy 0.668055314471",
+      "evidence": "Logical Form Accuracy: 0.614592374009\n    Execute Accuracy: 0.668055314471",
+      "evidence_location": "lines 116-117",
+      "confidence": "high",
+      "reason": "Reported baseline model accuracy metrics on the test set, useful for comparison."
+    },
+    {
+      "field": "pretrained_model_checkpoints",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz",
+      "evidence": "Download [pretrained model checkpoints](https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz) to ``model_zoo/`` ",
+      "evidence_location": "line 122",
+      "confidence": "high",
+      "reason": "Link to pretrained model checkpoints for reuse."
+    },
+    {
+      "field": "model_checkpoint_path",
+      "value": "model_zoo/meta_sum",
+      "normalized_value": "model_zoo/meta_sum",
+      "evidence": "+ Meta + Sum loss: `model_zoo/meta_sum`",
+      "evidence_location": "line 125",
+      "confidence": "high",
+      "reason": "Names the checkpoint directory for the Meta+Sum loss model."
+    },
+    {
+      "field": "model_checkpoint_path",
+      "value": "model_zoo/base_sum",
+      "normalized_value": "model_zoo/base_sum",
+      "evidence": "+ Base Sum loss: `model_zoo/base_sum`",
+      "evidence_location": "line 126",
+      "confidence": "high",
+      "reason": "Names the checkpoint directory for the Base Sum loss baseline model."
+    },
+    {
+      "field": "dependency",
+      "value": "Tensorflow 1.4",
+      "normalized_value": "Tensorflow 1.4",
+      "evidence": "- Tensorflow 1.4",
+      "evidence_location": "line 130",
+      "confidence": "high",
+      "reason": "Required framework version for reproducing the artifact."
+    },
+    {
+      "field": "dependency",
+      "value": "python 3.6",
+      "normalized_value": "python 3.6",
+      "evidence": "- python 3.6",
+      "evidence_location": "line 131",
+      "confidence": "high",
+      "reason": "Required Python version for reproducing the artifact."
+    },
+    {
+      "field": "dependency",
+      "value": "Stanza (https://github.com/stanfordnlp/stanza)",
+      "normalized_value": "Stanza - https://github.com/stanfordnlp/stanza",
+      "evidence": "- [Stanza](https://github.com/stanfordnlp/stanza)",
+      "evidence_location": "line 132",
+      "confidence": "high",
+      "reason": "Required NLP toolkit dependency."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{pshuang2018PT-MAML, author = {Po{-}Sen Huang and Chenglong Wang and Rishabh Singh and Wen-tau Yih and Xiaodong He}, title = {Natural Language to Structured Query Generation via Meta-Learning}, booktitle = {NAACL}, year = {2018}, }",
+      "normalized_value": "pshuang2018PT-MAML citation, NAACL 2018",
+      "evidence": "@inproceedings{pshuang2018PT-MAML,\n  author    = {Po{-}Sen Huang and\n               Chenglong Wang and\n               Rishabh Singh and\n               Wen-tau Yih and\n               Xiaodong He},\n  title     = {Natural Language to Structured Query Generation via Meta-Learning},\n  booktitle = {NAACL},\n  year      = {2018},\n}",
+      "evidence_location": "lines 142-151",
+      "confidence": "high",
+      "reason": "Official BibTeX citation for the primary paper associated with this repository."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{2018executionguided, author = {Chenglong Wang and Po{-}Sen Huang and Alex Polozov and Marc Brockschmidt and Rishabh Singh}, title = \"{Execution-Guided Neural Program Decoding}\", booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)}, year = {2018} }",
+      "normalized_value": "2018executionguided citation, ICML NAMPI workshop 2018",
+      "evidence": "@inproceedings{2018executionguided,\n  author    = {Chenglong Wang and\n               Po{-}Sen Huang and\n               Alex Polozov and\n               Marc Brockschmidt and \n               Rishabh Singh},\n  title = \"{Execution-Guided Neural Program Decoding}\",\n  booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)},\n  year = {2018}\n}",
+      "evidence_location": "lines 156-165",
+      "confidence": "high",
+      "reason": "BibTeX citation for related Execution-Guided decoding work referenced in the README."
+    },
+    {
+      "field": "citation",
+      "value": "@techreport{chenglong, author = {Wang, Chenglong and Brockschmidt, Marc and Singh, Rishabh}, title = {Pointing Out {SQL} Queries From Text}, number = {MSR-TR-2017-45}, year = {2017}, month = {November}, url = {https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/}, }",
+      "normalized_value": "chenglong citation, MSR-TR-2017-45",
+      "evidence": "@techreport{chenglong,\n  author = {Wang, Chenglong and Brockschmidt, Marc and Singh, Rishabh},\n  title = {Pointing Out {SQL} Queries From Text},\n  number = {MSR-TR-2017-45},\n  year = {2017},\n  month = {November},\n  url = {https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/},\n}",
+      "evidence_location": "lines 173-180",
+      "confidence": "high",
+      "reason": "BibTeX citation for the second paper this codebase implements, including technical report number MSR-TR-2017-45."
+    },
+    {
+      "field": "contribution_policy",
+      "value": "Contributor License Agreement (CLA) required, https://cla.microsoft.com",
+      "normalized_value": "Microsoft CLA required at https://cla.microsoft.com",
+      "evidence": "This project welcomes contributions and suggestions.  Most contributions require you to agree to a\nContributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us\nthe rights to use your contribution. For details, visit https://cla.microsoft.com.",
+      "evidence_location": "lines 187-189",
+      "confidence": "high",
+      "reason": "Documents the legal contribution requirement for reuse/contribution to this project."
+    },
+    {
+      "field": "code_of_conduct",
+      "value": "Microsoft Open Source Code of Conduct",
+      "normalized_value": "Microsoft Open Source Code of Conduct",
+      "evidence": "This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).",
+      "evidence_location": "line 195",
+      "confidence": "high",
+      "reason": "States the code of conduct adopted by the project, relevant to legal/reuse context."
+    }
+  ]
+}

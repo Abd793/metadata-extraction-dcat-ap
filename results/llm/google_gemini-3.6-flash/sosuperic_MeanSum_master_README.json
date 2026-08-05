@@ -1,0 +1,175 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "MeanSum: A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "normalized_value": "MeanSum: A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence": "# MeanSum: A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the title and purpose of the repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/1810.05739",
+      "normalized_value": "https://arxiv.org/abs/1810.05739",
+      "evidence": "[https://arxiv.org/abs/1810.05739](https://arxiv.org/abs/1810.05739)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "URL of the paper describing the model."
+    },
+    {
+      "field": "academic_conference",
+      "value": "ICML 2019",
+      "normalized_value": "ICML 2019",
+      "evidence": "Corresponding paper, accepted to ICML 2019: [https://arxiv.org/abs/1810.05739](https://arxiv.org/abs/1810.05739).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Academic conference where the paper was accepted."
+    },
+    {
+      "field": "programming_language",
+      "value": "python 3",
+      "normalized_value": "python 3",
+      "evidence": "- python 3",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Major Python version required for running the project."
+    },
+    {
+      "field": "pytorch_version",
+      "value": "torch 0.4.0",
+      "normalized_value": "torch 0.4.0",
+      "evidence": "- torch 0.4.0",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Specific PyTorch version required by the code."
+    },
+    {
+      "field": "docker_image",
+      "value": "pytorch/pytorch:0.4_cuda9_cudnn7",
+      "normalized_value": "pytorch/pytorch:0.4_cuda9_cudnn7",
+      "evidence": "Tested in Docker, image = ```pytorch/pytorch:0.4_cuda9_cudnn7```.",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Docker image tag in which the environment was tested."
+    },
+    {
+      "field": "directory_setup_command",
+      "value": "bash setup_dirs.sh",
+      "normalized_value": "bash setup_dirs.sh",
+      "evidence": "```\nbash setup_dirs.sh\n```",
+      "evidence_location": "20-22",
+      "confidence": "high",
+      "reason": "Command to set up necessary directory structures."
+    },
+    {
+      "field": "package_installation_command",
+      "value": "bash install_python_pkgs.sh",
+      "normalized_value": "bash install_python_pkgs.sh",
+      "evidence": "```\nbash install_python_pkgs.sh\n```",
+      "evidence_location": "26-28",
+      "confidence": "high",
+      "reason": "Command to install required Python dependencies."
+    },
+    {
+      "field": "tensorboard_fix_command",
+      "value": "python update_tensorboard.py",
+      "normalized_value": "python update_tensorboard.py",
+      "evidence": "```\npython update_tensorboard.py\n```",
+      "evidence_location": "32-34",
+      "confidence": "high",
+      "reason": "Command to patch Tensorboard default parameters for displaying text output."
+    },
+    {
+      "field": "dataset_name",
+      "value": "Yelp data",
+      "normalized_value": "Yelp data",
+      "evidence": "1. Download Yelp data: https://www.yelp.com/dataset and place files in ```datasets/yelp_dataset/```",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "Name of the dataset used by this model."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://www.yelp.com/dataset",
+      "normalized_value": "https://www.yelp.com/dataset",
+      "evidence": "1. Download Yelp data: https://www.yelp.com/dataset and place files in ```datasets/yelp_dataset/```",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "URL to download the dataset."
+    },
+    {
+      "field": "data_preprocessing_command",
+      "value": "bash scripts/preprocess_data.sh",
+      "normalized_value": "bash scripts/preprocess_data.sh",
+      "evidence": "    ```\n    bash scripts/preprocess_data.sh\n    ```",
+      "evidence_location": "44-46",
+      "confidence": "high",
+      "reason": "Command to preprocess dataset into train, val, and test splits."
+    },
+    {
+      "field": "subword_tokenizer_url",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/subwordenc_32000_maxrevs260_fixed.pkl",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/subwordenc_32000_maxrevs260_fixed.pkl",
+      "evidence": "[link](https://s3.us-east-2.amazonaws.com/unsup-sum/subwordenc_32000_maxrevs260_fixed.pkl)",
+      "evidence_location": "49",
+      "confidence": "high",
+      "reason": "URL to download pre-built subword tokenizer pickled file."
+    },
+    {
+      "field": "pretrained_summarization_model_url",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt",
+      "evidence": "[link](https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt)",
+      "evidence_location": "55",
+      "confidence": "high",
+      "reason": "URL to download the pre-trained summarization model checkpoint."
+    },
+    {
+      "field": "pretrained_language_model_url",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/lm_e24_2.88.pt",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/lm_e24_2.88.pt",
+      "evidence": "[link](https://s3.us-east-2.amazonaws.com/unsup-sum/lm_e24_2.88.pt)",
+      "evidence_location": "58",
+      "confidence": "high",
+      "reason": "URL to download the pre-trained language model checkpoint."
+    },
+    {
+      "field": "pretrained_classification_model_url",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/clf_e10_l0.6760_a0.7092.pt",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/clf_e10_l0.6760_a0.7092.pt",
+      "evidence": "[link](https://s3.us-east-2.amazonaws.com/unsup-sum/clf_e10_l0.6760_a0.7092.pt)",
+      "evidence_location": "61",
+      "confidence": "high",
+      "reason": "URL to download the pre-trained classification model checkpoint."
+    },
+    {
+      "field": "reference_summaries_url",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/summaries_0-200_cleaned.csv",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/summaries_0-200_cleaned.csv",
+      "evidence": "Download from: [link](https://s3.us-east-2.amazonaws.com/unsup-sum/summaries_0-200_cleaned.csv).",
+      "evidence_location": "66",
+      "confidence": "high",
+      "reason": "URL to download human-written reference summaries dataset."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>",
+      "normalized_value": "python train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>",
+      "evidence": "```\npython train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>\n```",
+      "evidence_location": "78-80",
+      "confidence": "high",
+      "reason": "Command to run testing/evaluation with a pretrained model."
+    },
+    {
+      "field": "training_command",
+      "value": "python train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes>",
+      "normalized_value": "python train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes>",
+      "evidence": "```\npython train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes> \n```",
+      "evidence_location": "84-86",
+      "confidence": "high",
+      "reason": "Command to train the summarization model."
+    }
+  ]
+}

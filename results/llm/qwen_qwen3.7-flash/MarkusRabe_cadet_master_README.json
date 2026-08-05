@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "CADET",
+      "normalized_value": "CADET",
+      "evidence": "# CADET",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Explicit project title identifying the artifact."
+    },
+    {
+      "field": "description",
+      "value": "CADET is a solver for _quantified Boolean formulas_ with a forall-exists quantifier alternation (2QBF).",
+      "normalized_value": "CADET is a solver for quantified Boolean formulas with a forall-exists quantifier alternation (2QBF).",
+      "evidence": "CADET is a solver for _quantified Boolean formulas_ with a forall-exists quantifier alternation (2QBF).",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Clearly states the core purpose and scope of the software."
+    },
+    {
+      "field": "author",
+      "value": "Markus N. Rabe",
+      "normalized_value": "Markus N. Rabe",
+      "evidence": "was written by [Markus N. Rabe](https://people.eecs.berkeley.edu/~rabe/).",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Identifies the primary creator of the solver."
+    },
+    {
+      "field": "algorithm",
+      "value": "Incremental Determinization",
+      "normalized_value": "Incremental Determinization",
+      "evidence": "The solver is based on the _Incremental Determinization_ algorithm published in SAT 2016",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Names the foundational algorithm implemented by the solver."
+    },
+    {
+      "field": "task",
+      "value": "solving quantified Boolean formulas (2QBF)",
+      "normalized_value": "solving quantified Boolean formulas (2QBF)",
+      "evidence": "CADET is a solver for _quantified Boolean formulas_ with a forall-exists quantifier alternation (2QBF).",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Defines the specific computational problem addressed."
+    },
+    {
+      "field": "benchmark_performance",
+      "value": "It won second price in the 2QBF track of [QBFEval](http://www.qbflib.org/qbfeval17.php)",
+      "normalized_value": "It won second price in the 2QBF track of QBFEval",
+      "evidence": "It won second price in the 2QBF track of [QBFEval](http://www.qbflib.org/qbfeval17.php)",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Provides concrete competitive evaluation results for indexing and credibility."
+    },
+    {
+      "field": "supported_platforms",
+      "value": "Linux and OSX",
+      "normalized_value": "Linux and OSX",
+      "evidence": "You can find pre-built binaries of CADET for Linux and OSX.",
+      "evidence_location": "75",
+      "confidence": "high",
+      "reason": "Indicates operating system compatibility for users."
+    },
+    {
+      "field": "compilers",
+      "value": "clang and gcc",
+      "normalized_value": "clang and gcc",
+      "evidence": "CADET can be built from source with both clang and gcc.",
+      "evidence_location": "75",
+      "confidence": "high",
+      "reason": "Specifies required build toolchains for compilation."
+    },
+    {
+      "field": "testing_dependencies",
+      "value": "Python 3",
+      "normalized_value": "Python 3",
+      "evidence": "The testing scripts require Python 3.",
+      "evidence_location": "75",
+      "confidence": "high",
+      "reason": "Required dependency for executing the test suite."
+    },
+    {
+      "field": "optional_tools",
+      "value": "AIGER tool set, ABC",
+      "normalized_value": "AIGER tool set, ABC",
+      "evidence": "As soon as you work with certificates you may want to install the [AIGER tool set]... and the [ABC]...",
+      "evidence_location": "124",
+      "confidence": "high",
+      "reason": "Recommended external tools for proof generation and minimization."
+    },
+    {
+      "field": "build_command",
+      "value": "$ ./configure && make",
+      "normalized_value": "./configure && make",
+      "evidence": "```\nbash\n$ ./configure && make\n```",
+      "evidence_location": "80-82",
+      "confidence": "high",
+      "reason": "Standard command sequence for compiling the solver from source."
+    },
+    {
+      "field": "test_command",
+      "value": "$ make test",
+      "normalized_value": "make test",
+      "evidence": "```\nbash\n$ make test\n```",
+      "evidence_location": "86-88",
+      "confidence": "high",
+      "reason": "Command to verify correct installation and functionality."
+    },
+    {
+      "field": "run_command",
+      "value": "$ ./cadet file.qdimacs",
+      "normalized_value": "./cadet file.qdimacs",
+      "evidence": "```\nbash\n$ ./cadet file.qdimacs\n```",
+      "evidence_location": "97-99",
+      "confidence": "high",
+      "reason": "Primary execution syntax for solving input formulas."
+    },
+    {
+      "field": "certificate_generation_command",
+      "value": "$ ./cadet -c certificate.aag file.qdimacs",
+      "normalized_value": "./cadet -c certificate.aag file.qdimacs",
+      "evidence": "```\nbash\n$ ./cadet -c certificate.aag file.qdimacs\n```",
+      "evidence_location": "120-122",
+      "confidence": "high",
+      "reason": "Command to produce verifiable SAT certificates for reproduction and validation."
+    },
+    {
+      "field": "input_formats",
+      "value": "QDIMACS, QAIGER",
+      "normalized_value": "QDIMACS, QAIGER",
+      "evidence": "CADET reads files in both [QDIMACS](http://www.qbflib.org/qdimacs.html) and [QAIGER](https://github.com/ltentrup/QAIGER) format.",
+      "evidence_location": "109",
+      "confidence": "high",
+      "reason": "Specifies accepted file types for feeding data into the solver."
+    },
+    {
+      "field": "academic_references",
+      "value": "[Learning Heuristics for 2QBF through Deep Reinforcement Learning](https://arxiv.org/abs/1807.08058). Gil Lederman, Markus N. Rabe, Edward A. Lee, Sanjit A. Seshia. arXiv preprint, 2018.\n\n[Understanding and Extending Incremental Determinization for 2QBF](https://people.eecs.berkeley.edu/~sseshia/pubdir/id-cav18.pdf). Markus N. Rabe, Leander Tentrup, Cameron Rasmussen, and Sanjit Seshia. CAV, 2018.\n\n[Encodings of Bounded Synthesis](https://www.react.uni-saarland.de/publications/FFRT17.html) Faymonville, Finkbeiner, Rabe, Tentrup. TACAS, 2017.\n\n[Incremental Determinization](https://www.eecs.berkeley.edu/~rabe/IncrementalDeterminizationSAT2016.pdf). Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "normalized_value": "[Learning Heuristics for 2QBF through Deep Reinforcement Learning](https://arxiv.org/abs/1807.08058). Gil Lederman, Markus N. Rabe, Edward A. Lee, Sanjit A. Seshia. arXiv preprint, 2018. [Understanding and Extending Incremental Determinization for 2QBF](https://people.eecs.berkeley.edu/~sseshia/pubdir/id-cav18.pdf). Markus N. Rabe, Leander Tentrup, Cameron Rasmussen, and Sanjit Seshia. CAV, 2018. [Encodings of Bounded Synthesis](https://www.react.uni-saarland.de/publications/FFRT17.html) Faymonville, Finkbeiner, Rabe, Tentrup. TACAS, 2017. [Incremental Determinization](https://www.eecs.berkeley.edu/~rabe/IncrementalDeterminizationSAT2016.pdf). Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "evidence": "## Publications\n\n[Learning Heuristics for 2QBF through Deep Reinforcement Learning](https://arxiv.org/abs/1807.08058). Gil Lederman, Markus N. Rabe, Edward A. Lee, Sanjit A. Seshia. arXiv preprint, 2018.\n\n[Understanding and Extending Incremental Determinization for 2QBF](https://people.eecs.berkeley.edu/~sseshia/pubdir/id-cav18.pdf). Markus N. Rabe, Leander Tentrup, Cameron Rasmussen, and Sanjit Seshia. CAV, 2018.\n\n[Encodings of Bounded Synthesis](https://www.react.uni-saarland.de/publications/FFRT17.html) Faymonville, Finkbeiner, Rabe, Tentrup. TACAS, 2017.\n\n[Incremental Determinization](https://www.eecs.berkeley.edu/~rabe/IncrementalDeterminizationSAT2016.pdf). Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "evidence_location": "134-143",
+      "confidence": "high",
+      "reason": "Provides full citations for reproducing methodology and contextualizing the research."
+    }
+  ]
+}

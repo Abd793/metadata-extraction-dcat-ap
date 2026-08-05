@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "title",
+      "value": "To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO",
+      "normalized_value": "To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO",
+      "evidence": "To Cool or not to Cool? <br>\nTemperature Network Meets Large Foundation Models via DRO",
+      "evidence_location": "1-2",
+      "confidence": "high",
+      "reason": "Primary title of the research work, essential for identification"
+    },
+    {
+      "field": "description",
+      "value": "a principled framework for learning a small yet generalizable temperature prediction network (TempNet) to improve large foundation models (LFMs)",
+      "normalized_value": "a principled framework for learning a small yet generalizable temperature prediction network (TempNet) to improve large foundation models (LFMs)",
+      "evidence": "a principled framework for learning a small yet generalizable temperature prediction network (TempNet) to improve LFMs",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Core description of the artifact's purpose and methodology"
+    },
+    {
+      "field": "paper_url",
+      "value": "http://arxiv.org/abs/2404.04575",
+      "normalized_value": "http://arxiv.org/abs/2404.04575",
+      "evidence": "[paper](http://arxiv.org/abs/2404.04575)",
+      "evidence_location": "71",
+      "confidence": "high",
+      "reason": "Link to the academic paper describing the research"
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/zhqiu/TempNet",
+      "normalized_value": "https://github.com/zhqiu/TempNet",
+      "evidence": "[repository](https://github.com/zhqiu/TempNet)",
+      "evidence_location": "80",
+      "confidence": "high",
+      "reason": "Link to the code repository for implementation"
+    },
+    {
+      "field": "huggingface_organization",
+      "value": "LLM-Opt",
+      "normalized_value": "LLM-Opt",
+      "evidence": "Hugging Face](https://huggingface.co/LLM-Opt)",
+      "evidence_location": "80",
+      "confidence": "high",
+      "reason": "Hugging Face organization where models are hosted"
+    },
+    {
+      "field": "model_components",
+      "value": "LLaMA 2 Chat 7B, 13B, 70B, and their respective TempNets",
+      "normalized_value": "LLaMA 2 Chat 7B, 13B, 70B, and their respective TempNets",
+      "evidence": "base models for LLaMA 2 Chat 7B, 13B, 70B, and their respective TempNets",
+      "evidence_location": "80",
+      "confidence": "high",
+      "reason": "Specific model variants available for download and use"
+    },
+    {
+      "field": "training_frameworks",
+      "value": "GPT_2, LLaMA-1, LLaMA-2, and Bimodal-CL",
+      "normalized_value": "GPT_2, LLaMA-1, LLaMA-2, and Bimodal-CL",
+      "evidence": "four directories: `GPT_2`, `LLaMA-1`, `LLaMA-2`, and `Bimodal-CL`",
+      "evidence_location": "76",
+      "confidence": "high",
+      "reason": "Specific frameworks/directories containing training code for different models"
+    },
+    {
+      "field": "inference_code",
+      "value": "import torch\nfrom tempnet import LLaMA_TempNet\nfrom transformers import AutoTokenizer, GenerationConfig\n\nmodel_name = 'LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1'\n\ntokenizer = AutoTokenizer.from_pretrained(model_name, legacy=False)\ngeneration_config = GenerationConfig.from_pretrained(model_name)\nmodel = LLaMA_TempNet.from_pretrained(model_name, device_map=\"auto\", torch_dtype=torch.float16)\n\ninputs = 'How do you get water in the desert?'\ninput_ids = tokenizer(inputs, return_tensors=\"pt\").input_ids.cuda()\n\noutputs = model.generate(input_ids, generation_config=generation_config)\nresponse = tokenizer.decode(outputs[0], skip_special_tokens=True)[len(inputs)-1:].strip()",
+      "normalized_value": "import torch\nfrom tempnet import LLaMA_TempNet\nfrom transformers import AutoTokenizer, GenerationConfig\n\nmodel_name = 'LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1'\n\ntokenizer = AutoTokenizer.from_pretrained(model_name, legacy=False)\ngeneration_config = GenerationConfig.from_pretrained(model_name)\nmodel = LLaMA_TempNet.from_pretrained(model_name, device_map=\"auto\", torch_dtype=torch.float16)\n\ninputs = 'How do you get water in the desert?'\ninput_ids = tokenizer(inputs, return_tensors=\"pt\").input_ids.cuda()\n\noutputs = model.generate(input_ids, generation_config=generation_config)\nresponse = tokenizer.decode(outputs[0], skip_special_tokens=True)[len(inputs)-1:].strip()",
+      "evidence": "```python\nimport torch\nfrom tempnet import LLaMA_TempNet\nfrom transformers import AutoTokenizer, GenerationConfig\n\nmodel_name = 'LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1'\n\ntokenizer = AutoTokenizer.from_pretrained(model_name, legacy=False)\ngeneration_config = GenerationConfig.from_pretrained(model_name)\nmodel = LLaMA_TempNet.from_pretrained(model_name, device_map=\"auto\", torch_dtype=torch.float16)\n\ninputs = 'How do you get water in the desert?'\ninput_ids = tokenizer(inputs, return_tensors=\"pt\").input_ids.cuda()\n\noutputs = model.generate(input_ids, generation_config=generation_config)\nresponse = tokenizer.decode(outputs[0], skip_special_tokens=True)[len(inputs)-1:].strip()\n```",
+      "evidence_location": "82-98",
+      "confidence": "high",
+      "reason": "Complete inference code example showing how to use the model"
+    },
+    {
+      "field": "citation",
+      "value": "@article{qiu2024to,\n  title={To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO},\n  author={Zi-Hao Qiu, Siqi Guo, Mao Xu, Tuo Zhao, Lijun Zhang, and Tianbao Yang},\n  journal={arXiv preprint arXiv:2404.04575},\n  year={2024}\n}",
+      "normalized_value": "@article{qiu2024to,\n  title={To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO},\n  author={Zi-Hao Qiu, Siqi Guo, Mao Xu, Tuo Zhao, Lijun Zhang, and Tianbao Yang},\n  journal={arXiv preprint arXiv:2404.04575},\n  year={2024}\n}",
+      "evidence": "@article{qiu2024to,\n  title={To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO},\n  author={Zi-Hao Qiu, Siqi Guo, Mao Xu, Tuo Zhao, Lijun Zhang, and Tianbao Yang},\n  journal={arXiv preprint arXiv:2404.04575},\n  year={2024}\n}",
+      "evidence_location": "109-114",
+      "confidence": "high",
+      "reason": "BibTeX citation for proper academic attribution"
+    },
+    {
+      "field": "evaluation_benchmarks",
+      "value": "AlpacaEval",
+      "normalized_value": "AlpacaEval",
+      "evidence": "[AlpacaEval](https://tatsu-lab.github.io/alpaca_eval/)",
+      "evidence_location": "47",
+      "confidence": "high",
+      "reason": "Benchmark used for evaluating instruction-following tasks"
+    },
+    {
+      "field": "evaluation_datasets",
+      "value": "Flickr30K and MSCOCO",
+      "normalized_value": "Flickr30K and MSCOCO",
+      "evidence": "image-text retrieval on Flickr30K and MSCOCO",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Datasets used for evaluating image-text retrieval performance"
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "IR@1 and TR@1 for the Recall@1 on image-retrieval (IR) and text-retrieval (TR)",
+      "normalized_value": "IR@1 and TR@1 for the Recall@1 on image-retrieval (IR) and text-retrieval (TR)",
+      "evidence": "IR@1 and TR@1 for the Recall@1 on image-retrieval (IR) and text-retrieval (TR)",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Metrics used for evaluating retrieval performance"
+    },
+    {
+      "field": "hardware_used",
+      "value": "Nvidia A100-80G GPUs",
+      "normalized_value": "Nvidia A100-80G GPUs",
+      "evidence": "Nvidia A100-80G GPUs",
+      "evidence_location": "47",
+      "confidence": "high",
+      "reason": "Hardware specification for training experiments"
+    }
+  ]
+}

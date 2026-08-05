@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Soft-QMIX",
+      "normalized_value": "Soft-QMIX",
+      "evidence": "# Soft-QMIX",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "The repository title names the artifact, a value function factorization method."
+    },
+    {
+      "field": "base_repository",
+      "value": "pymarl (https://github.com/benellis3/pymarl2)",
+      "normalized_value": "pymarl (https://github.com/benellis3/pymarl2)",
+      "evidence": "This repo is heavily based on the [pymarl](https://github.com/benellis3/pymarl2)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Identifies the upstream codebase this artifact is derived from, important for understanding and reproducing it."
+    },
+    {
+      "field": "installation_instructions",
+      "value": "follow the installation guide in the original repo pymarl",
+      "normalized_value": "follow the installation guide in the original repo pymarl",
+      "evidence": "please follow the installation guide in the original repo [pymarl](https://github.com/benellis3/pymarl2)",
+      "evidence_location": "line 7, '## Installation' section",
+      "confidence": "high",
+      "reason": "Tells users where to find setup/dependency instructions needed to install the artifact."
+    },
+    {
+      "field": "run_command",
+      "value": "bash ./qmix.sh",
+      "normalized_value": "bash ./qmix.sh",
+      "evidence": "```bash\nbash ./qmix.sh\n```",
+      "evidence_location": "lines 13-15, '## Run' section code block",
+      "confidence": "high",
+      "reason": "Primary command to execute the code."
+    },
+    {
+      "field": "required_configuration",
+      "value": "change `entity: \"xxx\"` in the `src/config/default.yaml` file to your own wandb entity",
+      "normalized_value": "change `entity: \"xxx\"` in the `src/config/default.yaml` file to your own wandb entity",
+      "evidence": "> You have to change `entity: \"xxx\"` in the `src/config/default.yaml` file to your own wandb entity.",
+      "evidence_location": "line 17, '## Run' section",
+      "confidence": "high",
+      "reason": "Required configuration step (Weights & Biases logging entity) before running experiments."
+    },
+    {
+      "field": "example_run_command",
+      "value": "CUDA_VISIBLE_DEVICES=0 python src/main.py --config=qmix --env-config=sc2_gen_protoss",
+      "normalized_value": "CUDA_VISIBLE_DEVICES=0 python src/main.py --config=qmix --env-config=sc2_gen_protoss",
+      "evidence": "```bash\nCUDA_VISIBLE_DEVICES=0 python src/main.py --config=qmix --env-config=sc2_gen_protoss\n```",
+      "evidence_location": "lines 21-23, '## Run' section code block",
+      "confidence": "high",
+      "reason": "Concrete command showing how to run a specific map (protoss5v5) with configurable algorithm and environment configs."
+    },
+    {
+      "field": "default_map",
+      "value": "terran5v5",
+      "normalized_value": "terran5v5",
+      "evidence": "you can change the hyperparameters in the `qmix.sh` file. For instance to run protoss5v5 map, you can use the following command (default is terran5v5):",
+      "evidence_location": "line 19, '## Run' section",
+      "confidence": "high",
+      "reason": "States the default evaluation map, useful for reproducing default results."
+    },
+    {
+      "field": "environment_config",
+      "value": "capability_config:\n    n_units: 10\n    n_enemies: 10",
+      "normalized_value": "capability_config: n_units: 10 n_enemies: 10",
+      "evidence": "To run 10v10 map, you should change the `sc2_gen_terran.yaml` file\n\n```yaml\ncapability_config:\n    n_units: 10\n    n_enemies: 10\n```",
+      "evidence_location": "lines 25-31, '## Run' section code block",
+      "confidence": "high",
+      "reason": "Shows how to configure the StarCraft II environment for a 10v10 scenario, needed to reproduce that setting."
+    },
+    {
+      "field": "environment_domain",
+      "value": "StarCraft II (sc2_gen maps)",
+      "normalized_value": "StarCraft II (sc2_gen maps)",
+      "evidence": "CUDA_VISIBLE_DEVICES=0 python src/main.py --config=qmix --env-config=sc2_gen_protoss",
+      "evidence_location": "line 22, '## Run' section",
+      "confidence": "medium",
+      "reason": "The 'sc2_gen' env-config names and 'sc2_gen_terran.yaml' file indicate StarCraft II generated maps, but the document never spells out 'StarCraft II' explicitly."
+    },
+    {
+      "field": "paper_title",
+      "value": "Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization",
+      "normalized_value": "Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization",
+      "evidence": "title={Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization},",
+      "evidence_location": "line 38, '## Publication' section BibTeX block",
+      "confidence": "high",
+      "reason": "Title of the associated publication, describing the method (maximum entropy for monotonic value function factorization)."
+    },
+    {
+      "field": "authors",
+      "value": "Chen, Wentse and Huang, Shiyu and Schneider, Jeff",
+      "normalized_value": "Chen, Wentse and Huang, Shiyu and Schneider, Jeff",
+      "evidence": "author={Chen, Wentse and Huang, Shiyu and Schneider, Jeff},",
+      "evidence_location": "line 39, '## Publication' section BibTeX block",
+      "confidence": "high",
+      "reason": "Author list for attribution and citation."
+    },
+    {
+      "field": "publication_year",
+      "value": "2024",
+      "normalized_value": "2024",
+      "evidence": "year={2024}",
+      "evidence_location": "line 41, '## Publication' section BibTeX block",
+      "confidence": "high",
+      "reason": "Publication year for citation and indexing."
+    },
+    {
+      "field": "arxiv_id",
+      "value": "2406.13930",
+      "normalized_value": "2406.13930",
+      "evidence": "journal={arXiv preprint arXiv:2406.13930},",
+      "evidence_location": "line 40, '## Publication' section BibTeX block",
+      "confidence": "medium",
+      "reason": "arXiv identifier for the paper; the BibTeX and the link URL agree on 2406.13930, but the visible link text on line 35 shows a different ID (2207.05631), creating minor ambiguity."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{chen2024soft,\n  title={Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization},\n  author={Chen, Wentse and Huang, Shiyu and Schneider, Jeff},\n  journal={arXiv preprint arXiv:2406.13930},\n  year={2024}\n}",
+      "normalized_value": "@article{chen2024soft,\n  title={Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization},\n  author={Chen, Wentse and Huang, Shiyu and Schneider, Jeff},\n  journal={arXiv preprint arXiv:2406.13930},\n  year={2024}\n}",
+      "evidence": "@article{chen2024soft,\n  title={Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization},\n  author={Chen, Wentse and Huang, Shiyu and Schneider, Jeff},\n  journal={arXiv preprint arXiv:2406.13930},\n  year={2024}\n}",
+      "evidence_location": "lines 37-42, '## Publication' section code block",
+      "confidence": "high",
+      "reason": "Complete BibTeX entry enabling proper citation of the work."
+    }
+  ]
+}

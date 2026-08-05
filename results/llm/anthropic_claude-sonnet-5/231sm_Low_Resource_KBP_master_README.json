@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "repository_name",
+      "value": "Low_Resource_KBP",
+      "normalized_value": "Low_Resource_KBP",
+      "evidence": "# Low_Resource_KBP",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Title of the repository/README, identifies the artifact."
+    },
+    {
+      "field": "description",
+      "value": "knowledge graph population in low resource conditions",
+      "normalized_value": "knowledge graph population in low resource conditions",
+      "evidence": "knowledge graph population in low resource conditions",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Describes the overall purpose of the repository/artifact."
+    },
+    {
+      "field": "dataset_name",
+      "value": "FewEvent",
+      "normalized_value": "FewEvent",
+      "evidence": "***FewEvent*** dataset",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Names the dataset provided by this artifact."
+    },
+    {
+      "field": "dataset_file",
+      "value": "Few-Shot_ED.json.zip",
+      "normalized_value": "Few-Shot_ED.json.zip",
+      "evidence": "The file \"*Few-Shot_ED.json.zip*\" is the ***FewEvent*** dataset for the paper accepted by WSDM 2020",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Identifies the concrete file name of the dataset artifact for download/use."
+    },
+    {
+      "field": "paper_title",
+      "value": "Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection",
+      "normalized_value": "Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection",
+      "evidence": "***[\"Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection\"](https://arxiv.org/abs/1910.11621)***",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Title of the associated research paper for citation and context."
+    },
+    {
+      "field": "paper_venue",
+      "value": "WSDM 2020",
+      "normalized_value": "WSDM 2020",
+      "evidence": "the paper accepted by WSDM 2020",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Publication venue for the associated paper, useful for citation."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/1910.11621",
+      "normalized_value": "https://arxiv.org/abs/1910.11621",
+      "evidence": "https://arxiv.org/abs/1910.11621",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Direct link to the paper for access and citation."
+    },
+    {
+      "field": "source_dataset",
+      "value": "ACE-2005 corpus",
+      "normalized_value": "ACE-2005 corpus",
+      "evidence": "[ACE-2005 corpus](http://projects.ldc.upenn.edu/ace/)",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Identifies a raw data source used to construct the dataset, relevant for provenance and reuse."
+    },
+    {
+      "field": "source_dataset",
+      "value": "TAC-KBP-2017 Event Track Data",
+      "normalized_value": "TAC-KBP-2017 Event Track Data",
+      "evidence": "[TAC-KBP-2017 Event Track Data](https://tac.nist.gov/2017/KBP/Event/index.html)",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Identifies another raw data source used to construct the dataset, relevant for provenance and reuse."
+    },
+    {
+      "field": "source_dataset",
+      "value": "automatically-labeled event data",
+      "normalized_value": "automatically-labeled event data",
+      "evidence": "[automatically-labeled event data](https://github.com/acl2017submission/event-data), from Freebase and Wikipedia, constrained to specific domains such as music, film, sports, education, etc.",
+      "evidence_location": "line 11",
+      "confidence": "high",
+      "reason": "Identifies a third raw data source (with repository link) used to extend the dataset, including domain constraints and origin (Freebase and Wikipedia)."
+    },
+    {
+      "field": "data_structure_format",
+      "value": "{event_type_label1: [instance1, instance2, ...], event_type_label2: ...}",
+      "normalized_value": "{event_type_label1: [instance1, instance2, ...], event_type_label2: ...}",
+      "evidence": "{event_type_label1: \\[instance1, instance2, ...\\], event_type_label2: ...}",
+      "evidence_location": "line 16",
+      "confidence": "high",
+      "reason": "Defines the JSON structure of the dataset, essential for programmatic reuse."
+    },
+    {
+      "field": "instance_format_example",
+      "value": "[\"In trucks and on foot they came to the town of Safwan\", \"came\", [7, 6, 12]]",
+      "normalized_value": "[\"In trucks and on foot they came to the town of Safwan\", \"came\", [7, 6, 12]]",
+      "evidence": "\\[\"In trucks and on foot they came to the town of Safwan\", \"came\", \\[7, 6, 12\\]\\]",
+      "evidence_location": "line 21",
+      "confidence": "high",
+      "reason": "Concrete example instance illustrating the dataset's per-record format needed to parse/use the data."
+    },
+    {
+      "field": "instance_field_semantics",
+      "value": "event mention, trigger, distance to sentence start, distance to sentence end, sentence length",
+      "normalized_value": "event mention, trigger, distance to sentence start, distance to sentence end, sentence length",
+      "evidence": "* \"In trucks and on foot they came to the town of Safwan\" is an event mention\n* \"came\" is trigger\n* 7 means the distance from trigger \"came\" to the beginning of the sentence\n* 6 means the distance from trigger \"came\" to the ending of the sentence\n* 12 means the sentence length",
+      "evidence_location": "lines 23-27",
+      "confidence": "high",
+      "reason": "Explains the semantics of each field in the instance tuple, necessary for correctly interpreting/using the dataset."
+    },
+    {
+      "field": "data_cleaning_note",
+      "value": "Note that the sentence should be cleaned, e.g., To expand abbreviations",
+      "normalized_value": "Note that the sentence should be cleaned, e.g., To expand abbreviations",
+      "evidence": "(Note that the sentence should be cleaned, e.g., To expand abbreviations)",
+      "evidence_location": "line 19",
+      "confidence": "high",
+      "reason": "Provides a preprocessing caveat relevant to correctly reusing the dataset."
+    }
+  ]
+}

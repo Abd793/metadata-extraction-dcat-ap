@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Slideflow",
+      "normalized_value": "Slideflow",
+      "evidence": "**Slideflow is a deep learning library for digital pathology, offering a user-friendly interface for model development.**",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Explicitly names the deep learning library in the header introduction."
+    },
+    {
+      "field": "description",
+      "value": "a deep learning library for digital pathology, offering a user-friendly interface for model development.",
+      "normalized_value": "a deep learning library for digital pathology, offering a user-friendly interface for model development",
+      "evidence": "**Slideflow is a deep learning library for digital pathology, offering a user-friendly interface for model development.**",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "States the core description and function of Slideflow."
+    },
+    {
+      "field": "doi",
+      "value": "10.5281/zenodo.5703792",
+      "normalized_value": "10.5281/zenodo.5703792",
+      "evidence": "[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5703792.svg)](https://doi.org/10.5281/zenodo.5703792)",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Provides the Zenodo Digital Object Identifier for the project."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2304.04142",
+      "normalized_value": "https://arxiv.org/abs/2304.04142",
+      "evidence": "[ArXiv](https://arxiv.org/abs/2304.04142)",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Link to the ArXiv pre-print publication."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://slideflow.dev",
+      "normalized_value": "https://slideflow.dev",
+      "evidence": "[Docs](https://slideflow.dev)",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Link to the primary project documentation website."
+    },
+    {
+      "field": "studio_url",
+      "value": "https://slideflow.dev/studio/",
+      "normalized_value": "https://slideflow.dev/studio/",
+      "evidence": "[Slideflow Studio](https://slideflow.dev/studio/)",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Link to the interactive visualization tool page."
+    },
+    {
+      "field": "python_version_requirement",
+      "value": "Python >= 3.7 (<3.10 if using cuCIM)",
+      "normalized_value": "Python >= 3.7 (<3.10 if using cuCIM)",
+      "evidence": "- Python >= 3.7 (<3.10 if using [cuCIM](https://docs.rapids.ai/api/cucim/stable/))",
+      "evidence_location": "39, ## Requirements",
+      "confidence": "high",
+      "reason": "Specifies Python version requirements."
+    },
+    {
+      "field": "framework_requirements",
+      "value": "PyTorch >= 1.9 or Tensorflow 2.5-2.11",
+      "normalized_value": "PyTorch >= 1.9 or Tensorflow 2.5-2.11",
+      "evidence": "- [PyTorch](https://pytorch.org/) >= 1.9 _or_ [Tensorflow](https://www.tensorflow.org/) 2.5-2.11",
+      "evidence_location": "40, ## Requirements",
+      "confidence": "high",
+      "reason": "Specifies deep learning framework dependency options and versions."
+    },
+    {
+      "field": "optional_dependency",
+      "value": "Libvips >= 8.9 (alternative slide reader, adds support for *.scn, *.mrxs, *.ndpi, *.vms, and *.vmu files).",
+      "normalized_value": "Libvips >= 8.9 (alternative slide reader, adds support for *.scn, *.mrxs, *.ndpi, *.vms, and *.vmu files)",
+      "evidence": "- [Libvips](https://libvips.github.io/libvips/) >= 8.9 (alternative slide reader, adds support for *.scn, *.mrxs, *.ndpi, *.vms, and *.vmu files).",
+      "evidence_location": "43, ### Optional",
+      "confidence": "high",
+      "reason": "Identifies an optional library dependency for additional slide reader capabilities."
+    },
+    {
+      "field": "pip_installation_command",
+      "value": "pip3 install --upgrade setuptools pip wheel\npip3 install slideflow[cucim] cupy-cuda11x",
+      "normalized_value": "pip3 install --upgrade setuptools pip wheel pip3 install slideflow[cucim] cupy-cuda11x",
+      "evidence": "```\npip3 install --upgrade setuptools pip wheel\npip3 install slideflow[cucim] cupy-cuda11x\n```",
+      "evidence_location": "54-57, ### Method 1: Install via pip",
+      "confidence": "high",
+      "reason": "Provides shell commands to install Slideflow via PyPI."
+    },
+    {
+      "field": "docker_repository",
+      "value": "https://hub.docker.com/repository/docker/jamesdolezal/slideflow",
+      "normalized_value": "https://hub.docker.com/repository/docker/jamesdolezal/slideflow",
+      "evidence": "[docker images](https://hub.docker.com/repository/docker/jamesdolezal/slideflow)",
+      "evidence_location": "63, ### Method 2: Docker image",
+      "confidence": "high",
+      "reason": "Link to Docker Hub repository containing pre-configured Docker images."
+    },
+    {
+      "field": "docker_installation_command",
+      "value": "docker pull jamesdolezal/slideflow:latest-tf\ndocker run -it --gpus all jamesdolezal/slideflow:latest-tf",
+      "normalized_value": "docker pull jamesdolezal/slideflow:latest-tf docker run -it --gpus all jamesdolezal/slideflow:latest-tf",
+      "evidence": "```\ndocker pull jamesdolezal/slideflow:latest-tf\ndocker run -it --gpus all jamesdolezal/slideflow:latest-tf\n```",
+      "evidence_location": "65-68, ### Method 2: Docker image",
+      "confidence": "high",
+      "reason": "Provides commands for pulling and running the pre-configured TensorFlow Docker container."
+    },
+    {
+      "field": "source_installation_command",
+      "value": "git clone https://github.com/slideflow/slideflow\nconda env create -f slideflow/environment.yml\nconda activate slideflow\npip install -e slideflow/ cupy-cuda11x",
+      "normalized_value": "git clone https://github.com/slideflow/slideflow conda env create -f slideflow/environment.yml conda activate slideflow pip install -e slideflow/ cupy-cuda11x",
+      "evidence": "```\ngit clone https://github.com/slideflow/slideflow\nconda env create -f slideflow/environment.yml\nconda activate slideflow\npip install -e slideflow/ cupy-cuda11x\n```",
+      "evidence_location": "81-86, ### Method 3: From source",
+      "confidence": "high",
+      "reason": "Provides commands to clone and set up Slideflow from source using conda."
+    },
+    {
+      "field": "addons_installation_command",
+      "value": "pip install slideflow-gpl slideflow-noncommercial",
+      "normalized_value": "pip install slideflow-gpl slideflow-noncommercial",
+      "evidence": "```\npip install slideflow-gpl slideflow-noncommercial\n```",
+      "evidence_location": "92-94, ### Non-Commercial Add-ons",
+      "confidence": "high",
+      "reason": "Provides commands to install non-commercial add-on packages."
+    },
+    {
+      "field": "license",
+      "value": "Apache-2.0",
+      "normalized_value": "Apache-2.0",
+      "evidence": "This code is made available under the Apache-2.0 license.",
+      "evidence_location": "214, ## 🔓 License",
+      "confidence": "high",
+      "reason": "Specifies the open source license governing the repository."
+    },
+    {
+      "field": "citation_text",
+      "value": "Dolezal, J.M., Kochanny, S., Dyer, E. et al. Slideflow: deep learning for digital histopathology with real-time whole-slide visualization. BMC Bioinformatics 25, 134 (2024). https://doi.org/10.1186/s12859-024-05758-x",
+      "normalized_value": "Dolezal, J.M., Kochanny, S., Dyer, E. et al. Slideflow: deep learning for digital histopathology with real-time whole-slide visualization. BMC Bioinformatics 25, 134 (2024). https://doi.org/10.1186/s12859-024-05758-x",
+      "evidence": "Dolezal, J.M., Kochanny, S., Dyer, E. et al. Slideflow: deep learning for digital histopathology with real-time whole-slide visualization. BMC Bioinformatics 25, 134 (2024). https://doi.org/10.1186/s12859-024-05758-x",
+      "evidence_location": "219, ## 🔗 Reference",
+      "confidence": "high",
+      "reason": "Provides text citation for the published Slideflow paper."
+    },
+    {
+      "field": "bibtex_citation",
+      "value": "@Article{Dolezal2024,\n    author={Dolezal, James M. and Kochanny, Sara and Dyer, Emma and Ramesh, Siddhi and Srisuwananukorn, Andrew and Sacco, Matteo and Howard, Frederick M. and Li, Anran and Mohan, Prajval and Pearson, Alexander T.},\n    title={Slideflow: deep learning for digital histopathology with real-time whole-slide visualization},\n    journal={BMC Bioinformatics},\n    year={2024},\n    month={Mar},\n    day={27},\n    volume={25},\n    number={1},\n    pages={134},\n    doi={10.1186/s12859-024-05758-x},\n    url={https://doi.org/10.1186/s12859-024-05758-x}\n}",
+      "normalized_value": "@Article{Dolezal2024, author={Dolezal, James M. and Kochanny, Sara and Dyer, Emma and Ramesh, Siddhi and Srisuwananukorn, Andrew and Sacco, Matteo and Howard, Frederick M. and Li, Anran and Mohan, Prajval and Pearson, Alexander T.}, title={Slideflow: deep learning for digital histopathology with real-time whole-slide visualization}, journal={BMC Bioinformatics}, year={2024}, month={Mar}, day={27}, volume={25}, number={1}, pages={134}, doi={10.1186/s12859-024-05758-x}, url={https://doi.org/10.1186/s12859-024-05758-x} }",
+      "evidence": "```\n@Article{Dolezal2024,\n    author={Dolezal, James M. and Kochanny, Sara and Dyer, Emma and Ramesh, Siddhi and Srisuwananukorn, Andrew and Sacco, Matteo and Howard, Frederick M. and Li, Anran and Mohan, Prajval and Pearson, Alexander T.},\n    title={Slideflow: deep learning for digital histopathology with real-time whole-slide visualization},\n    journal={BMC Bioinformatics},\n    year={2024},\n    month={Mar},\n    day={27},\n    volume={25},\n    number={1},\n    pages={134},\n    doi={10.1186/s12859-024-05758-x},\n    url={https://doi.org/10.1186/s12859-024-05758-x}\n}\n```",
+      "evidence_location": "221-235, ## 🔗 Reference",
+      "confidence": "high",
+      "reason": "Provides BibTeX citation format for academic referencing."
+    }
+  ]
+}

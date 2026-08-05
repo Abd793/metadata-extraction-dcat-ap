@@ -1,0 +1,229 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "PFHedge: Deep Hedging in PyTorch",
+      "normalized_value": "PFHedge: Deep Hedging in PyTorch",
+      "evidence": "<h1 align=\"center\">PFHedge: Deep Hedging in PyTorch</h1>",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Identifies the artifact name and brief description."
+    },
+    {
+      "field": "description",
+      "value": "A PyTorch-based framework for Deep Hedging.",
+      "normalized_value": "A PyTorch-based framework for Deep Hedging.",
+      "evidence": "**PFHedge** is a [PyTorch](https://pytorch.org/)-based framework for [Deep Hedging][deep-hedging-arxiv].",
+      "evidence_location": "line 11",
+      "confidence": "high",
+      "reason": "Summarizes the artifact's purpose and framework."
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "[PyTorch](https://pytorch.org/)-based framework",
+      "evidence_location": "line 11",
+      "confidence": "high",
+      "reason": "Specifies the deep learning library used."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/pfnet-research/pfhedge",
+      "normalized_value": "https://github.com/pfnet-research/pfhedge",
+      "evidence": "[![CI](https://github.com/pfnet-research/pfhedge/workflows/CI/badge.svg)](https://github.com/pfnet-research/pfhedge/actions?query=workflow%3ACI)",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Source code repository link for access and contribution."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://pfnet-research.github.io/pfhedge/",
+      "normalized_value": "https://pfnet-research.github.io/pfhedge/",
+      "evidence": "[PFHedge Documentation](https://pfnet-research.github.io/pfhedge/)",
+      "evidence_location": "line 13",
+      "confidence": "high",
+      "reason": "Link to official documentation for understanding and usage."
+    },
+    {
+      "field": "blog_url",
+      "value": "https://tech.preferred.jp/en/blog/neural-network-architecture-for-efficient-deep-hedging/",
+      "normalized_value": "https://tech.preferred.jp/en/blog/neural-network-architecture-for-efficient-deep-hedging/",
+      "evidence": "[Neural Network Architecture for Efficient Deep Hedging](https://tech.preferred.jp/en/blog/neural-network-architecture-for-efficient-deep-hedging/)",
+      "evidence_location": "line 14",
+      "confidence": "high",
+      "reason": "Additional explanatory resource for context."
+    },
+    {
+      "field": "install_command",
+      "value": "pip install pfhedge",
+      "normalized_value": "pip install pfhedge",
+      "evidence": "```sh\npip install pfhedge\n```",
+      "evidence_location": "lines 65-67",
+      "confidence": "high",
+      "reason": "Command to install the package for reproducibility."
+    },
+    {
+      "field": "colab_example_url",
+      "value": "https://colab.research.google.com/github/pfnet-research/pfhedge/blob/main/examples/example_readme.ipynb",
+      "normalized_value": "https://colab.research.google.com/github/pfnet-research/pfhedge/blob/main/examples/example_readme.ipynb",
+      "evidence": "[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)][example-readme-colab]",
+      "evidence_location": "line 71 and line 308 (link definition)",
+      "confidence": "high",
+      "reason": "Interactive notebook for example usage and experimentation."
+    },
+    {
+      "field": "fit_command",
+      "value": "hedger.fit(derivative, n_epochs=200)",
+      "normalized_value": "hedger.fit(derivative, n_epochs=200)",
+      "evidence": "```py\nhedger.fit(derivative, n_epochs=200)\n```",
+      "evidence_location": "lines 155-157",
+      "confidence": "high",
+      "reason": "Command to train the hedging model for reproduction."
+    },
+    {
+      "field": "price_command",
+      "value": "price = hedger.price(derivative)",
+      "normalized_value": "price = hedger.price(derivative)",
+      "evidence": "```py\nprice = hedger.price(derivative)\n```",
+      "evidence_location": "lines 161-163",
+      "confidence": "high",
+      "reason": "Command to compute derivative prices for evaluation."
+    },
+    {
+      "field": "gpu_usage_example",
+      "value": "dtype = torch.float64; device = torch.device(\"cuda:0\"); derivative = EuropeanOption(BrownianStock()).to(dtype, device); hedger = Hedger(...).to(dtype, device)",
+      "normalized_value": "dtype = torch.float64; device = torch.device(\"cuda:0\"); derivative = EuropeanOption(BrownianStock()).to(dtype, device); hedger = Hedger(...).to(dtype, device)",
+      "evidence": "```py\ndtype = torch.float64\ndevice = torch.device(\"cuda:0\")\n\nderivative = EuropeanOption(BrownianStock()).to(dtype, device)\nhedger = Hedger(...).to(dtype, device)\n```",
+      "evidence_location": "lines 171-177",
+      "confidence": "high",
+      "reason": "Example setup for using GPU and specific data types for hardware configuration."
+    },
+    {
+      "field": "hedging_model_types",
+      "value": "MultiLayerPerceptron, BlackScholes, WhalleyWilmott, and any PyTorch Module",
+      "normalized_value": "MultiLayerPerceptron, BlackScholes, WhalleyWilmott, and any PyTorch Module",
+      "evidence": "* **Model**: ... MultiLayerPerceptron ... BlackScholes ... WhalleyWilmott ... Any PyTorch Module which you build.",
+      "evidence_location": "lines 107-110",
+      "confidence": "high",
+      "reason": "Lists available models for hedging to understand usage options."
+    },
+    {
+      "field": "risk_measure_types",
+      "value": "EntropicRiskMeasure, ExpectedShortfall",
+      "normalized_value": "EntropicRiskMeasure, ExpectedShortfall",
+      "evidence": "* **Criterion**: ... EntropicRiskMeasure ... ExpectedShortfall ...",
+      "evidence_location": "lines 112-113",
+      "confidence": "high",
+      "reason": "Available risk measures for optimization in the framework."
+    },
+    {
+      "field": "input_features",
+      "value": "log_moneyness, expiry_time, volatility, prev_hedge",
+      "normalized_value": "log_moneyness, expiry_time, volatility, prev_hedge",
+      "evidence": "* **Inputs**: ... 'log_moneyness' ... 'expiry_time' ... 'volatility' ... 'prev_hedge'",
+      "evidence_location": "lines 102-105",
+      "confidence": "high",
+      "reason": "Input features used by the hedger for configuration."
+    },
+    {
+      "field": "derivative_types",
+      "value": "EuropeanOption, LookbackOption, VarianceSwap, and so forth.",
+      "normalized_value": "EuropeanOption, LookbackOption, VarianceSwap, and so forth.",
+      "evidence": "Examples include EuropeanOption, LookbackOption, VarianceSwap, and so forth.",
+      "evidence_location": "line 78",
+      "confidence": "high",
+      "reason": "Types of derivatives supported for hedging tasks."
+    },
+    {
+      "field": "primary_instrument_types",
+      "value": "stocks, bonds, commodities, currencies",
+      "normalized_value": "stocks, bonds, commodities, currencies",
+      "evidence": "Examples include stocks, bonds, commodities, and currencies.",
+      "evidence_location": "line 77",
+      "confidence": "high",
+      "reason": "Basic financial instruments used as underliers."
+    },
+    {
+      "field": "reference_arxiv_url",
+      "value": "https://arxiv.org/abs/1802.03042",
+      "normalized_value": "https://arxiv.org/abs/1802.03042",
+      "evidence": "[deep-hedging-arxiv]: https://arxiv.org/abs/1802.03042",
+      "evidence_location": "line 302",
+      "confidence": "high",
+      "reason": "arXiv link for the foundational Deep Hedging paper for scientific context."
+    },
+    {
+      "field": "reference_arxiv_url_ntb",
+      "value": "https://arxiv.org/abs/2103.01775",
+      "normalized_value": "https://arxiv.org/abs/2103.01775",
+      "evidence": "[ntb-network-arxiv]: https://arxiv.org/abs/2103.01775",
+      "evidence_location": "line 305",
+      "confidence": "high",
+      "reason": "arXiv link for the No-Transaction Band Network paper for related research."
+    },
+    {
+      "field": "maintainers",
+      "value": "Shota Imaki and Masanori Hirano",
+      "normalized_value": "Shota Imaki and Masanori Hirano",
+      "evidence": "maintained by [Shota Imaki](https://github.com/simaki) and [Masanori Hirano](https://github.com/masanorihirano).",
+      "evidence_location": "line 294",
+      "confidence": "high",
+      "reason": "Identifies project maintainers for attribution and contact."
+    },
+    {
+      "field": "contributing_url",
+      "value": ".github/CONTRIBUTING.md",
+      "normalized_value": ".github/CONTRIBUTING.md",
+      "evidence": "[CONTRIBUTING.md](.github/CONTRIBUTING.md)",
+      "evidence_location": "line 292",
+      "confidence": "high",
+      "reason": "Link to contribution guidelines for reuse and collaboration."
+    },
+    {
+      "field": "pytorch_version_badge",
+      "value": "torch-1.9.0-- | 2.0.0---red",
+      "normalized_value": "torch-1.9.0-- | 2.0.0---red",
+      "evidence": "![pytorch](https://img.shields.io/badge/torch-1.9.0--%20%7C%202.0.0---red)",
+      "evidence_location": "line 9",
+      "confidence": "low",
+      "reason": "Indicates supported PyTorch versions, but the format is ambiguous and unclear."
+    },
+    {
+      "field": "ci_url",
+      "value": "https://github.com/pfnet-research/pfhedge/actions?query=workflow%3ACI",
+      "normalized_value": "https://github.com/pfnet-research/pfhedge/actions?query=workflow%3ACI",
+      "evidence": "[![CI](https://github.com/pfnet-research/pfhedge/workflows/CI/badge.svg)](https://github.com/pfnet-research/pfhedge/actions?query=workflow%3ACI)",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Link to continuous integration pipeline for project status."
+    },
+    {
+      "field": "codecov_url",
+      "value": "https://codecov.io/gh/pfnet-research/pfhedge",
+      "normalized_value": "https://codecov.io/gh/pfnet-research/pfhedge",
+      "evidence": "[![codecov](https://codecov.io/gh/pfnet-research/pfhedge/branch/main/graph/badge.svg?token=GpXV1ldVCN)](https://codecov.io/gh/pfnet-research/pfhedge)",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Link to code coverage reports for quality assessment."
+    },
+    {
+      "field": "pypi_url",
+      "value": "https://pypi.org/project/pfhedge",
+      "normalized_value": "https://pypi.org/project/pfhedge",
+      "evidence": "[![pypi](https://img.shields.io/pypi/v/pfhedge.svg)](https://pypi.org/project/pfhedge)",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Link to PyPI package page for distribution and installation."
+    },
+    {
+      "field": "autogreek_module_description",
+      "value": "pfhedge.autogreek provides functions implementing automatic evaluation of greeks using automatic differentiation.",
+      "normalized_value": "pfhedge.autogreek provides functions implementing automatic evaluation of greeks using automatic differentiation.",
+      "evidence": "A module pfhedge.autogreek provides functions implementing automatic evaluation of greeks using automatic differentiation.",
+      "evidence_location": "line 262",
+      "confidence": "high",
+      "reason": "Describes a feature for automatic greek computation in the framework."
+    }
+  ]
+}

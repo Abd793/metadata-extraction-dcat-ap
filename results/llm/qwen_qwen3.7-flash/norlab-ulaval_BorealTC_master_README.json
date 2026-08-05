@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "normalized_value": "Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "evidence": "# Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Primary title identifying the project and associated research paper."
+    },
+    {
+      "field": "description",
+      "value": "This repo contains the source code and the datasets used in our paper _Proprioception Is All You Need: Terrain Classification for Boreal Forests_ that was submitted to the 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024).",
+      "normalized_value": "This repo contains the source code and the datasets used in our paper _Proprioception Is All You Need: Terrain Classification for Boreal Forests_ that was submitted to the 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024).",
+      "evidence": "This repo contains the source code and the datasets used in our paper _Proprioception Is All You Need: Terrain Classification for Boreal Forests_ that was submitted to the 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024).",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Clearly states the repository's purpose and academic context."
+    },
+    {
+      "field": "authors",
+      "value": "Damien LaRocque, William Guimont-Martin, David-Alexandre Duclos, Philippe Giguère, Francois Pomerleau",
+      "normalized_value": "Damien LaRocque, William Guimont-Martin, David-Alexandre Duclos, Philippe Giguère, Francois Pomerleau",
+      "evidence": "Damien LaRocque, William Guimont-Martin, David-Alexandre Duclos, Philippe Giguère, Francois Pomerleau",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Lists the creators and contributors responsible for the work."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2403.16877",
+      "normalized_value": "https://arxiv.org/abs/2403.16877",
+      "evidence": "Paper: https://arxiv.org/abs/2403.16877",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Direct link to the peer-reviewed/preprint version of the research."
+    },
+    {
+      "field": "conference",
+      "value": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024)",
+      "normalized_value": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024)",
+      "evidence": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024)",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Identifies the academic venue where the work was presented."
+    },
+    {
+      "field": "runtime_version",
+      "value": "python3.10",
+      "normalized_value": "python3.10",
+      "evidence": "python3.10 -m venv .venv",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Specifies the exact Python interpreter version required for setup."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "NVIDIA GPU",
+      "normalized_value": "NVIDIA GPU",
+      "evidence": "Two dependencies, [`mamba-ssm`](https://github.com/state-spaces/mamba) and [`causal-conv1d`](https://github.com/Dao-AILab/causal-conv1d) require a NVIDIA GPU.",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Indicates mandatory hardware acceleration for core dependencies."
+    },
+    {
+      "field": "dataset_names",
+      "value": "BorealTC, Vulpi",
+      "normalized_value": "BorealTC, Vulpi",
+      "evidence": "* the `BorealTC` dataset, our publicly available dataset\n* the `Vulpi` dataset, from the 2021 [paper](https://doi.org/10.1016/j.jterra.2020.12.002) of Vulpi et al.",
+      "evidence_location": "47-48",
+      "confidence": "high",
+      "reason": "Names the specific datasets packaged with the repository for evaluation."
+    },
+    {
+      "field": "model_architectures",
+      "value": "Mamba, CNN",
+      "normalized_value": "Mamba, CNN",
+      "evidence": "### Mamba\n### CNN",
+      "evidence_location": "89, 99",
+      "confidence": "high",
+      "reason": "Identifies the neural network architectures implemented and benchmarked."
+    },
+    {
+      "field": "checkpoint_files",
+      "value": "mamba_vulpi.ckpt, mamba_borealtc.ckpt, mamba_combined.ckpt",
+      "normalized_value": "mamba_vulpi.ckpt, mamba_borealtc.ckpt, mamba_combined.ckpt",
+      "evidence": "[mamba_vulpi.ckpt](checkpoints/mamba_vulpi.ckpt)\n[mamba_borealtc.ckpt](checkpoints/mamba_borealtc.ckpt)\n[mamba_combined.ckpt](checkpoints/mamba_combined.ckpt)",
+      "evidence_location": "93-95",
+      "confidence": "high",
+      "reason": "Provides direct download links to trained model weights for reproducibility."
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "normalized_value": "MIT",
+      "evidence": "This project is licensed under a [MIT](LICENSE) license.",
+      "evidence_location": "140",
+      "confidence": "high",
+      "reason": "Specifies the open-source license terms governing code and data reuse."
+    },
+    {
+      "field": "installation_commands",
+      "value": "```sh\npython3.10 -m venv .venv\n. .venv/bin/activate\npip install -r requirements.txt\n```",
+      "normalized_value": "```sh\npython3.10 -m venv .venv\n. .venv/bin/activate\npip install -r requirements.txt\n```",
+      "evidence": "```sh\npython3.10 -m venv .venv\n. .venv/bin/activate\npip install -r requirements.txt\n```",
+      "evidence_location": "24-28",
+      "confidence": "high",
+      "reason": "Provides exact shell commands to create a virtual environment and install dependencies."
+    },
+    {
+      "field": "docker_commands",
+      "value": "```sh\n# Build the Docker image\ndocker build -t borealtc-gpu -f DockerfileGPU .\n\n# Run the Docker image\ndocker run --gpus all -e CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES --rm --ipc host \\\n\t  --mount type=bind,source=.,target=/code/ \\\n\t  --mount type=bind,source=/dev/shm,target=/dev/shm \\\n\t  borealtc-gpu python3 main.py\n```",
+      "normalized_value": "```sh\n# Build the Docker image\ndocker build -t borealtc-gpu -f DockerfileGPU .\n\n# Run the Docker image\ndocker run --gpus all -e CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES --rm --ipc host \\\n\t  --mount type=bind,source=.,target=/code/ \\\n\t  --mount type=bind,source=/dev/shm,target=/dev/shm \\\n\t  borealtc-gpu python3 main.py\n```",
+      "evidence": "```sh\n# Build the Docker image\ndocker build -t borealtc-gpu -f DockerfileGPU .\n\n# Run the Docker image\ndocker run --gpus all -e CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES --rm --ipc host \\\n\t  --mount type=bind,source=.,target=/code/ \\\n\t  --mount type=bind,source=/dev/shm,target=/dev/shm \\\n\t  borealtc-gpu python3 main.py\n```",
+      "evidence_location": "32-41",
+      "confidence": "high",
+      "reason": "Provides exact shell commands to build and execute the project in a containerized environment."
+    }
+  ]
+}

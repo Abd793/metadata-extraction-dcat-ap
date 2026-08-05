@@ -1,0 +1,202 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PatchPerPix for Instance Segmentation",
+      "normalized_value": "PatchPerPix for Instance Segmentation",
+      "evidence": "# PatchPerPix for Instance Segmentation",
+      "evidence_location": "line 1, title",
+      "confidence": "high",
+      "reason": "Provides the artifact's explicit name and identifies its application area."
+    },
+    {
+      "field": "repository_purpose",
+      "value": "This repository is the official implementation of [PatchPerPix for Instance Segmentation](https://arxiv.org/abs/2001.07626).",
+      "normalized_value": "This repository is the official implementation of [PatchPerPix for Instance Segmentation](https://arxiv.org/abs/2001.07626).",
+      "evidence": "This repository is the official implementation of [PatchPerPix for Instance Segmentation](https://arxiv.org/abs/2001.07626).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "States the repository's purpose and links to the associated paper."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2001.07626",
+      "normalized_value": "https://arxiv.org/abs/2001.07626",
+      "evidence": "This repository is the official implementation of [PatchPerPix for Instance Segmentation](https://arxiv.org/abs/2001.07626).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Provides the primary publication link for the artifact."
+    },
+    {
+      "field": "authors_and_venue",
+      "value": "**Lisa Mais<sup>1</sup>, Peter Hirsch<sup>1</sup>, Dagmar Kainmueller**, ECCV2020",
+      "normalized_value": "**Lisa Mais<sup>1</sup>, Peter Hirsch<sup>1</sup>, Dagmar Kainmueller**, ECCV2020",
+      "evidence": " **Lisa Mais<sup>1</sup>, Peter Hirsch<sup>1</sup>, Dagmar Kainmueller**, ECCV2020</br>",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Identifies the listed authors and publication venue/year."
+    },
+    {
+      "field": "task",
+      "value": "proposal free instance segmentation",
+      "normalized_value": "proposal free instance segmentation",
+      "evidence": "We present a novel method for proposal free instance segmentation that can handle sophisticated object shapes that span large parts of an image and form dense object clusters with crossovers.",
+      "evidence_location": "line 11, Abstract",
+      "confidence": "high",
+      "reason": "Explicitly names the core computer vision task addressed by the artifact."
+    },
+    {
+      "field": "method",
+      "value": "predicting dense local shape descriptors, which we assemble to form instances",
+      "normalized_value": "predicting dense local shape descriptors, which we assemble to form instances",
+      "evidence": "Our method is based on predicting dense local shape descriptors, which we assemble to form instances.",
+      "evidence_location": "line 11, Abstract",
+      "confidence": "high",
+      "reason": "Summarizes the central computational approach used by the artifact."
+    },
+    {
+      "field": "supported_data_domains",
+      "value": "the ISBI 2012 EM segmentation benchmark, the BBBC010 C. elegans dataset, and 2d as well as 3d fluorescence microscopy datasets of cell nuclei",
+      "normalized_value": "the ISBI 2012 EM segmentation benchmark, the BBBC010 C. elegans dataset, and 2d as well as 3d fluorescence microscopy datasets of cell nuclei",
+      "evidence": "We evaluate our method on a diverse range of data domains, where it defines the new state of the art on four benchmarks, namely the ISBI 2012 EM segmentation benchmark, the BBBC010 C. elegans dataset, and 2d as well as 3d fluorescence microscopy datasets of cell nuclei.",
+      "evidence_location": "line 11, Abstract",
+      "confidence": "high",
+      "reason": "Lists concrete datasets and application domains used for evaluation."
+    },
+    {
+      "field": "additional_application",
+      "value": "3d light microscopy data of drosophila neurons",
+      "normalized_value": "3d light microscopy data of drosophila neurons",
+      "evidence": "We show furthermore that our method also applies to 3d light microscopy data of drosophila neurons, which exhibit extreme cases of complex shape clusters.",
+      "evidence_location": "line 11, Abstract",
+      "confidence": "high",
+      "reason": "Documents an additional supported application domain."
+    },
+    {
+      "field": "dependencies",
+      "value": "Python 3 and PyTorch",
+      "normalized_value": "Python 3 and PyTorch",
+      "evidence": "This package requires Python 3 and PyTorch.",
+      "evidence_location": "lines 13-15, Installation",
+      "confidence": "high",
+      "reason": "Provides the explicitly required software dependencies."
+    },
+    {
+      "field": "installation_environment",
+      "value": "linux/ubuntu 20.04",
+      "normalized_value": "linux/ubuntu 20.04",
+      "evidence": "The recommended way is to install the package into your conda/python virtual environment. We recommend to use conda to install torch (tested with torch 1.13, but newer versions should work, too). The following instructions were tested on linux/ubuntu 20.04.",
+      "evidence_location": "line 22, Installation",
+      "confidence": "high",
+      "reason": "Specifies the tested operating-system environment and relevant PyTorch version."
+    },
+    {
+      "field": "installation_commands",
+      "value": "conda create --name ppp --yes\nconda activate ppp\nconda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes\ngit clone https://github.com/Kainmueller-Lab/PatchPerPix.git\ncd PatchPerPix\nPATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .",
+      "normalized_value": "conda create --name ppp --yes\nconda activate ppp\nconda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes\ngit clone https://github.com/Kainmueller-Lab/PatchPerPix.git\ncd PatchPerPix\nPATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .",
+      "evidence": "```\nconda create --name ppp --yes\nconda activate ppp\nconda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes\ngit clone https://github.com/Kainmueller-Lab/PatchPerPix.git\ncd PatchPerPix\nPATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .\n```",
+      "evidence_location": "lines 25-32, Installation",
+      "confidence": "high",
+      "reason": "Supplies a reproducible environment-creation and package-installation procedure."
+    },
+    {
+      "field": "legacy_experiment_requirement",
+      "value": "Previous versions (e.g., for the experiments published in our ECCV 2020 paper) require TensorFlow 1.x.",
+      "normalized_value": "Previous versions (e.g., for the experiments published in our ECCV 2020 paper) require TensorFlow 1.x.",
+      "evidence": "Previous versions (e.g., for the experiments published in our ECCV 2020 paper) require TensorFlow 1.x.",
+      "evidence_location": "line 18, Installation",
+      "confidence": "high",
+      "reason": "Warns users about a distinct dependency requirement for older experiments."
+    },
+    {
+      "field": "legacy_version_tag",
+      "value": "eccv2020",
+      "normalized_value": "eccv2020",
+      "evidence": "If you want to run older experiments please checkout the respective tag: [eccv2020](https://github.com/Kainmueller-Lab/PatchPerPix/tree/ea4e2d4)",
+      "evidence_location": "line 19, Installation",
+      "confidence": "high",
+      "reason": "Identifies the repository tag needed to reproduce older published experiments."
+    },
+    {
+      "field": "data_format",
+      "value": "*zarr* format",
+      "normalized_value": "zarr format",
+      "evidence": "The code expects the data to be in the *zarr* format ([https://zarr.readthedocs.io/en/stable/](https://zarr.readthedocs.io/en/stable/)).",
+      "evidence_location": "line 54, Data preparation",
+      "confidence": "high",
+      "reason": "Specifies the required input data format."
+    },
+    {
+      "field": "data_layout_requirement",
+      "value": "all used arrays (e.g., raw image data and labels) to be placed in a single zarr file",
+      "normalized_value": "all used arrays (e.g., raw image data and labels) to be placed in a single zarr file",
+      "evidence": "It expects all used arrays (e.g., raw image data and labels) to be placed in a single zarr file (organized into a hierarchy via groups, see [zarr documentation](https://zarr.readthedocs.io/en/stable/tutorial.html#groups)).",
+      "evidence_location": "line 54, Data preparation",
+      "confidence": "high",
+      "reason": "Documents how input arrays must be organized for the code to consume them."
+    },
+    {
+      "field": "main_usage_command",
+      "value": "python run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments",
+      "normalized_value": "python run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments",
+      "evidence": "```\npython run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments\n```",
+      "evidence_location": "lines 62-65, Usage",
+      "confidence": "high",
+      "reason": "Provides a concrete end-to-end experiment command covering training, prediction, labeling, and evaluation."
+    },
+    {
+      "field": "experiment_tasks",
+      "value": "train, validate_checkpoints, validate, predict, decode, label, postprocess, evaluate",
+      "normalized_value": "train, validate_checkpoints, validate, predict, decode, label, postprocess, evaluate",
+      "evidence": "| `train`                | executes the training of the network                                                                   |\n| `validate_checkpoints` | performs validation (over stored model checkpoints and a set of hyperparameters)                       |\n| `validate`             | performs validation (for a specific model checkpoint and over a set of hyperparameters)                |\n| `predict`              | executes the trained network in inference mode and computes predictions                                |\n| `decode`               | decodes predicted patch encodings to full patches (only if model was trained to output encodings)      |\n| `label`                | computes final instances based on predicted patches                                                    |\n| `postprocess`          | post-processes predictions and predicted instances (optional, mostly for manual inspection of results) |\n| `evaluate`             | compares predicted instances to ground truth instances and computes quantitative evaluation            |",
+      "evidence_location": "lines 82-89, Available Sub-Tasks",
+      "confidence": "high",
+      "reason": "Indexes the supported training, inference, postprocessing, and evaluation operations."
+    },
+    {
+      "field": "benchmark_result_bbbc010",
+      "value": "PatchPerPix (ppp+dec): avS_[0.5:0.9:0.1] = 0.816; S_0.5 = 0.960; S_0.6 = 0.955; S_0.7 = 0.931; S_0.8 = 0.805; S_0.9 = 0.428",
+      "normalized_value": "PatchPerPix (ppp+dec): avS_[0.5:0.9:0.1] = 0.816; S_0.5 = 0.960; S_0.6 = 0.955; S_0.7 = 0.931; S_0.8 = 0.805; S_0.9 = 0.428",
+      "evidence": "| PatchPerPix (ppp+dec)    | **0.816**                   | **0.960**       | **0.955**       | **0.931**       | **0.805**       | **0.428**       |",
+      "evidence_location": "lines 102-105, Results / BBBC010",
+      "confidence": "high",
+      "reason": "Captures the reported PatchPerPix performance on the BBBC010 benchmark."
+    },
+    {
+      "field": "benchmark_result_isbi2012",
+      "value": "PatchPerPix: rRAND = 0.988290; rINF = 0.991544",
+      "normalized_value": "PatchPerPix: rRAND = 0.988290; rINF = 0.991544",
+      "evidence": "| PatchPerPix | **0.988290** | 0.991544     |",
+      "evidence_location": "lines 114-117, Results / ISBI2012",
+      "confidence": "high",
+      "reason": "Captures the reported PatchPerPix scores on the ISBI2012 benchmark."
+    },
+    {
+      "field": "benchmark_result_dsb2018",
+      "value": "PatchPerPix: avS_[0.5:0.9:0.1] = 0.693; S_0.1 = 0.919; S_0.2 = 0.919; S_0.3 = 0.915; S_0.4 = 0.898; S_0.5 = 0.868; S_0.6 = 0.827; S_0.7 = 0.755; S_0.8 = 0.635; S_0.9 = 0.379",
+      "normalized_value": "PatchPerPix: avS_[0.5:0.9:0.1] = 0.693; S_0.1 = 0.919; S_0.2 = 0.919; S_0.3 = 0.915; S_0.4 = 0.898; S_0.5 = 0.868; S_0.6 = 0.827; S_0.7 = 0.755; S_0.8 = 0.635; S_0.9 = 0.379",
+      "evidence": "| PatchPerPix   | **0.693**                   | **0.919**       | **0.919**       | **0.915**       | **0.898**       | **0.868**       | **0.827**       | **0.755**       | **0.635**       | **0.379**       |",
+      "evidence_location": "lines 129-133, Results / dsb2018",
+      "confidence": "high",
+      "reason": "Captures the reported PatchPerPix performance on the DSB2018 benchmark."
+    },
+    {
+      "field": "benchmark_result_nuclei3d",
+      "value": "PatchPerPix: avS_[0.5:0.9:0.1] = 0.436; S_0.1 = 0.926; S_0.2 = 0.918; S_0.3 = 0.900; S_0.4 = 0.853; S_0.5 = 0.766; S_0.6 = 0.668; S_0.7 = 0.493; S_0.8 = 0.228; S_0.9 = 0.027",
+      "normalized_value": "PatchPerPix: avS_[0.5:0.9:0.1] = 0.436; S_0.1 = 0.926; S_0.2 = 0.918; S_0.3 = 0.900; S_0.4 = 0.853; S_0.5 = 0.766; S_0.6 = 0.668; S_0.7 = 0.493; S_0.8 = 0.228; S_0.9 = 0.027",
+      "evidence": "| PatchPerPix    | **0.436**                   | 0.926           | 0.918           | 0.900           | 0.853           | **0.766**       | **0.668**       | **0.493**       | **0.228**       | 0.027           |",
+      "evidence_location": "lines 144-149, Results / nuclei3d",
+      "confidence": "high",
+      "reason": "Captures the reported PatchPerPix performance on the 3D nuclei benchmark."
+    },
+    {
+      "field": "license",
+      "value": "MIT license",
+      "normalized_value": "MIT license",
+      "evidence": "All contributions  are welcome! The content in this repository is licensed under the MIT license.",
+      "evidence_location": "line 188, Contributing",
+      "confidence": "high",
+      "reason": "Provides the stated licensing information relevant to reuse and redistribution."
+    }
+  ]
+}

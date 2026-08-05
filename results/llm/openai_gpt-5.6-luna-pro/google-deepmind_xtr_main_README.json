@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "XTR: Rethinking the Role of Token Retrieval in Multi-Vector Retrieval",
+      "normalized_value": "XTR: Rethinking the Role of Token Retrieval in Multi-Vector Retrieval",
+      "evidence": "# XTR: Rethinking the Role of Token Retrieval in Multi-Vector Retrieval",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Provides the artifact's explicit title and identity."
+    },
+    {
+      "field": "description",
+      "value": "In this repository, we provide how you can run XTR (conteXtualized Token Retriever) for document retrieval.",
+      "normalized_value": "In this repository, we provide how you can run XTR (conteXtualized Token Retriever) for document retrieval.",
+      "evidence": "In this repository, we provide how you can run XTR (conteXtualized Token Retriever) for document retrieval.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly states what the repository provides and the retrieval task it supports."
+    },
+    {
+      "field": "technical_paper_url",
+      "value": "https://arxiv.org/abs/2304.01982",
+      "normalized_value": "https://arxiv.org/abs/2304.01982",
+      "evidence": "Please refer to our NeurIPS 2023 paper ([Lee et al., 2023](https://arxiv.org/abs/2304.01982)) for technical details.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Links to the paper containing the technical details."
+    },
+    {
+      "field": "kaggle_model_url",
+      "value": "https://www.kaggle.com/models/deepmind/xtr/",
+      "normalized_value": "https://www.kaggle.com/models/deepmind/xtr/",
+      "evidence": "XTR is available through [Kaggle Models](https://www.kaggle.com/models/deepmind/xtr/).",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Provides the hosted model access location."
+    },
+    {
+      "field": "huggingface_model_url",
+      "value": "https://huggingface.co/google/xtr-base-en",
+      "normalized_value": "https://huggingface.co/google/xtr-base-en",
+      "evidence": "XTR is also available in [Huggingface](https://huggingface.co/google/xtr-base-en) thanks to [Mujeen Sung](https://github.com/mjeensung).",
+      "evidence_location": "33",
+      "confidence": "high",
+      "reason": "Provides an alternative hosted model location."
+    },
+    {
+      "field": "inference_notebook_url",
+      "value": "https://colab.research.google.com/github/google-deepmind/xtr/blob/main/xtr_evaluation_on_beir_miracl.ipynb",
+      "normalized_value": "https://colab.research.google.com/github/google-deepmind/xtr/blob/main/xtr_evaluation_on_beir_miracl.ipynb",
+      "evidence": "[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/xtr/blob/main/xtr_evaluation_on_beir_miracl.ipynb)",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Links to the Colab notebook for running the documented retrieval inference."
+    },
+    {
+      "field": "checkpoint_path",
+      "value": "/kaggle/input/xtr/tensorflow2/base-en/2/",
+      "normalized_value": "/kaggle/input/xtr/tensorflow2/base-en/2/",
+      "evidence": "hub_url = \"/kaggle/input/xtr/tensorflow2/base-en/2/\" # if using Kaggle Notebooks, otherwise:",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Specifies the local Kaggle Notebook checkpoint location."
+    },
+    {
+      "field": "checkpoint_url",
+      "value": "https://www.kaggle.com/models/deepmind/xtr/frameworks/tensorFlow2/variations/base-en/versions/2",
+      "normalized_value": "https://www.kaggle.com/models/deepmind/xtr/frameworks/tensorFlow2/variations/base-en/versions/2",
+      "evidence": "hub_url = \"https://www.kaggle.com/models/deepmind/xtr/frameworks/tensorFlow2/variations/base-en/versions/2\"",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Specifies the remotely hosted TensorFlow 2 base-en checkpoint and version."
+    },
+    {
+      "field": "python_dependencies",
+      "value": "tensorflow_hub, tensorflow, tensorflow_text",
+      "normalized_value": "tensorflow_hub, tensorflow, tensorflow_text",
+      "evidence": "import tensorflow_hub as hub\nimport tensorflow as tf\nimport tensorflow_text as text  # Registers the ops.",
+      "evidence_location": "11-13",
+      "confidence": "high",
+      "reason": "Identifies the Python packages imported by the example."
+    },
+    {
+      "field": "model_loading_command",
+      "value": "encoder = hub.KerasLayer(hub_url, signature=\"serving_default\", signature_outputs_as_dict=True)",
+      "normalized_value": "encoder = hub.KerasLayer(hub_url, signature=\"serving_default\", signature_outputs_as_dict=True)",
+      "evidence": "encoder = hub.KerasLayer(hub_url, signature=\"serving_default\", signature_outputs_as_dict=True)",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Provides the explicit command for loading the XTR encoder."
+    },
+    {
+      "field": "model_signature",
+      "value": "serving_default",
+      "normalized_value": "serving_default",
+      "evidence": "encoder = hub.KerasLayer(hub_url, signature=\"serving_default\", signature_outputs_as_dict=True)",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Identifies the TensorFlow Hub serving signature used by the example."
+    },
+    {
+      "field": "model_output_keys",
+      "value": "encodings, mask",
+      "normalized_value": "encodings, mask",
+      "evidence": "encodings = sample_embeds[\"encodings\"].numpy()\nmask = sample_embeds[\"mask\"].numpy()",
+      "evidence_location": "24-25",
+      "confidence": "high",
+      "reason": "Identifies the two output tensors consumed by the example."
+    },
+    {
+      "field": "output_representation",
+      "value": "token-level representations",
+      "normalized_value": "token-level representations",
+      "evidence": "# This returns token-level representations from XTR.",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "States the semantic type of the model outputs."
+    },
+    {
+      "field": "citation",
+      "value": "@article{lee2024rethinking,\n  title={Rethinking the role of token retrieval in multi-vector retrieval},\n  author={Lee, Jinhyuk and Dai, Zhuyun and Duddu, Sai Meher Karthik and Lei, Tao and Naim, Iftekhar and Chang, Ming-Wei and Zhao, Vincent},\n  journal={Advances in Neural Information Processing Systems},\n  volume={36},\n  year={2024}\n}",
+      "normalized_value": "@article{lee2024rethinking, title={Rethinking the role of token retrieval in multi-vector retrieval}, author={Lee, Jinhyuk and Dai, Zhuyun and Duddu, Sai Meher Karthik and Lei, Tao and Naim, Iftekhar and Chang, Ming-Wei and Zhao, Vincent}, journal={Advances in Neural Information Processing Systems}, volume={36}, year={2024} }",
+      "evidence": "```bibtex\n@article{lee2024rethinking,\n  title={Rethinking the role of token retrieval in multi-vector retrieval},\n  author={Lee, Jinhyuk and Dai, Zhuyun and Duddu, Sai Meher Karthik and Lei, Tao and Naim, Iftekhar and Chang, Ming-Wei and Zhao, Vincent},\n  journal={Advances in Neural Information Processing Systems},\n  volume={36},\n  year={2024}\n}\n```",
+      "evidence_location": "37-45",
+      "confidence": "high",
+      "reason": "Provides the repository's complete citation record for reuse and attribution."
+    },
+    {
+      "field": "software_license",
+      "value": "Apache License, Version 2.0 (Apache 2.0)",
+      "normalized_value": "Apache License, Version 2.0 (Apache 2.0)",
+      "evidence": "All software is licensed under the Apache License, Version 2.0 (Apache 2.0);\nyou may not use this file except in compliance with the Apache 2.0 license.",
+      "evidence_location": "51-52",
+      "confidence": "high",
+      "reason": "States the license governing the software."
+    },
+    {
+      "field": "software_license_url",
+      "value": "https://www.apache.org/licenses/LICENSE-2.0",
+      "normalized_value": "https://www.apache.org/licenses/LICENSE-2.0",
+      "evidence": "https://www.apache.org/licenses/LICENSE-2.0",
+      "evidence_location": "54",
+      "confidence": "high",
+      "reason": "Provides the canonical URL for the software license text."
+    },
+    {
+      "field": "materials_license",
+      "value": "Creative Commons Attribution 4.0 International License (CC-BY)",
+      "normalized_value": "Creative Commons Attribution 4.0 International License (CC-BY)",
+      "evidence": "All other materials are licensed under the Creative Commons Attribution 4.0\nInternational License (CC-BY).",
+      "evidence_location": "56-57",
+      "confidence": "high",
+      "reason": "States the license governing materials other than software."
+    },
+    {
+      "field": "materials_license_url",
+      "value": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "normalized_value": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "evidence": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "evidence_location": "58",
+      "confidence": "high",
+      "reason": "Provides the canonical URL for the materials license text."
+    },
+    {
+      "field": "copyright_notice",
+      "value": "Copyright 2024 DeepMind Technologies Limited",
+      "normalized_value": "Copyright 2024 DeepMind Technologies Limited",
+      "evidence": "Copyright 2024 DeepMind Technologies Limited",
+      "evidence_location": "49",
+      "confidence": "high",
+      "reason": "Identifies the stated copyright holder and year."
+    },
+    {
+      "field": "official_status",
+      "value": "This is not an official Google product.",
+      "normalized_value": "This is not an official Google product.",
+      "evidence": "This is not an official Google product.",
+      "evidence_location": "66",
+      "confidence": "high",
+      "reason": "Records the explicit product-status disclaimer."
+    }
+  ]
+}

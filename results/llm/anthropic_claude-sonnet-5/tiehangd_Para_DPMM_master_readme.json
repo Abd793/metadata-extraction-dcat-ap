@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Para-DPMM model",
+      "normalized_value": "Para-DPMM",
+      "evidence": "Source code and datasets of Para-DPMM model for single cell transcriptomic clustering to reproduce results in paper \"[Parallel Clustering of Single Cell Transcriptomic Data with Split-Merge Sampling on Dirichlet Process Mixtures](https://arxiv.org/pdf/1812.10048.pdf)\", Author: Tiehang Duan; José P. Pinto; Xiaohui Xie;",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Names the artifact and its purpose explicitly"
+    },
+    {
+      "field": "paper_title",
+      "value": "Parallel Clustering of Single Cell Transcriptomic Data with Split-Merge Sampling on Dirichlet Process Mixtures",
+      "normalized_value": "Parallel Clustering of Single Cell Transcriptomic Data with Split-Merge Sampling on Dirichlet Process Mixtures",
+      "evidence": "\"[Parallel Clustering of Single Cell Transcriptomic Data with Split-Merge Sampling on Dirichlet Process Mixtures](https://arxiv.org/pdf/1812.10048.pdf)\"",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Title of the paper the artifact reproduces"
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/pdf/1812.10048.pdf",
+      "normalized_value": "https://arxiv.org/pdf/1812.10048.pdf",
+      "evidence": "https://arxiv.org/pdf/1812.10048.pdf",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Direct link to the associated paper for citation/reproducibility"
+    },
+    {
+      "field": "authors",
+      "value": "Tiehang Duan; José P. Pinto; Xiaohui Xie",
+      "normalized_value": "Tiehang Duan; José P. Pinto; Xiaohui Xie",
+      "evidence": "Author: Tiehang Duan; José P. Pinto; Xiaohui Xie;",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Names the authors of the work for citation purposes"
+    },
+    {
+      "field": "dataset_source",
+      "value": "10X genomics website (https://support.10xgenomics.com/single-cell-gene-expression/datasets)",
+      "normalized_value": "https://support.10xgenomics.com/single-cell-gene-expression/datasets",
+      "evidence": "Download raw datasets from 10X genomics website (https://support.10xgenomics.com/single-cell-gene-expression/datasets) and store the files in the datasets folder;",
+      "evidence_location": "line 12, section 1.1",
+      "confidence": "high",
+      "reason": "Identifies where the raw input data can be obtained for reproduction"
+    },
+    {
+      "field": "data_preparation_script",
+      "value": "data_preparation.m",
+      "normalized_value": "data_preparation.m",
+      "evidence": "Follow the comments in \"data_preparation.m\" to modify the file names based on the downloaded data files;",
+      "evidence_location": "line 15, section 1.2",
+      "confidence": "high",
+      "reason": "Names the script used for preprocessing data, needed for reproducibility"
+    },
+    {
+      "field": "data_preparation_command",
+      "value": "Run \"data_preparation.m\";",
+      "normalized_value": "Run data_preparation.m",
+      "evidence": "Run \"data_preparation.m\";",
+      "evidence_location": "line 21, section 1.4",
+      "confidence": "high",
+      "reason": "Command to execute the data preparation step"
+    },
+    {
+      "field": "software_environment",
+      "value": "Matlab2015a and gcc/4.8.4 (gcc/4.6.X and gcc/4.7.X should also work)",
+      "normalized_value": "Matlab2015a and gcc/4.8.4",
+      "evidence": "We tested the code with Matlab2015a and gcc/4.8.4 (gcc/4.6.X and gcc/4.7.X should also work), the installation of following two libraries is needed:",
+      "evidence_location": "line 33, Option 1",
+      "confidence": "high",
+      "reason": "Specifies the tested software environment for running the source code"
+    },
+    {
+      "field": "dependency",
+      "value": "GNU Scientific Library: http://www.gnu.org/software/gsl/",
+      "normalized_value": "GNU Scientific Library (http://www.gnu.org/software/gsl/)",
+      "evidence": "1) GNU Scientific Library: http://www.gnu.org/software/gsl/",
+      "evidence_location": "line 35",
+      "confidence": "high",
+      "reason": "Required library dependency for building/running the source code"
+    },
+    {
+      "field": "dependency",
+      "value": "Eigen library: http://eigen.tuxfamily.org/",
+      "normalized_value": "Eigen library (http://eigen.tuxfamily.org/)",
+      "evidence": "2) Eigen library: http://eigen.tuxfamily.org/",
+      "evidence_location": "line 36",
+      "confidence": "high",
+      "reason": "Required library dependency for building/running the source code"
+    },
+    {
+      "field": "build_command",
+      "value": "run compile_MEX.m",
+      "normalized_value": "compile_MEX.m",
+      "evidence": "(3) In Matlab, run compile_MEX.m;",
+      "evidence_location": "line 45, Option 1 Steps",
+      "confidence": "high",
+      "reason": "Command needed to compile the MEX code before running the model"
+    },
+    {
+      "field": "run_command",
+      "value": "Run Para_DPMM.m, follow the guidelines given in the program (an example):",
+      "normalized_value": "Run Para_DPMM.m",
+      "evidence": "(4) Run Para_DPMM.m, follow the guidelines given in the program (an example):",
+      "evidence_location": "line 47, Option 1 Steps",
+      "confidence": "high",
+      "reason": "Main command to run the model in source code option"
+    },
+    {
+      "field": "usage_example_inputs",
+      "value": "1> Please enter dataset path: data_matrix_1_S_Set.mat / 2> Please enter number of processors: 16 / 3> Please set the value of alpha: 1 / 4> Please enter computing time limit (seconds): 20",
+      "normalized_value": "dataset path: data_matrix_1_S_Set.mat; processors: 16; alpha: 1; time limit: 20 seconds",
+      "evidence": "     1> Please enter dataset path:  data_matrix_1_S_Set.mat\n     \n     2> Please enter number of processors:  16\n     \n     3> Please set the value of alpha:  1\n     \n     4> Please enter computing time limit (seconds):  20",
+      "evidence_location": "lines 49-55, Option 1 Steps",
+      "confidence": "high",
+      "reason": "Example configuration parameters showing how to run the program interactively"
+    },
+    {
+      "field": "output_files",
+      "value": "Para_DPMM_output.txt, Para_DPMM_result.mat",
+      "normalized_value": "Para_DPMM_output.txt; Para_DPMM_result.mat",
+      "evidence": "(5) Result: The training iteration and computation time log is saved in Para_DPMM_output.txt, the clustering result is saved in Para_DPMM_result.mat, where z is the clustering result of Para_DPMM model, label is the ground truth cluster label, AR is Adjusted Random Index, RI is Random Index benchmark, MI is \"Mirkin's\" index and HI is \"Hubert's\" index.",
+      "evidence_location": "line 57, Option 1 Result",
+      "confidence": "high",
+      "reason": "Identifies output artifacts and their contents produced after running the model"
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "AR is Adjusted Random Index, RI is Random Index benchmark, MI is \"Mirkin's\" index and HI is \"Hubert's\" index",
+      "normalized_value": "AR (Adjusted Rand Index), RI (Rand Index), MI (Mirkin's index), HI (Hubert's index)",
+      "evidence": "AR is Adjusted Random Index, RI is Random Index benchmark, MI is \"Mirkin's\" index and HI is \"Hubert's\" index.",
+      "evidence_location": "line 57, Option 1 Result",
+      "confidence": "high",
+      "reason": "Defines the clustering evaluation metrics reported by the model"
+    },
+    {
+      "field": "hpc_environment",
+      "value": "module gcc/6.1.0, gsl/2.3 and MATLAB/r2017b",
+      "normalized_value": "gcc/6.1.0, gsl/2.3, MATLAB/r2017b",
+      "evidence": "The execution of compiled package is tested on HPC clusters with module gcc/6.1.0, gsl/2.3 and MATLAB/r2017b loaded;",
+      "evidence_location": "line 64, Option 2",
+      "confidence": "high",
+      "reason": "Specifies the tested HPC environment and module versions for running the compiled package"
+    },
+    {
+      "field": "hpc_setup_commands",
+      "value": "module load gcc/6.1.0; module load gsl/2.3; module load MATLAB/r2017b; ./Para_DPMM",
+      "normalized_value": "module load gcc/6.1.0 / module load gsl/2.3 / module load MATLAB/r2017b / ./Para_DPMM",
+      "evidence": "      1> module load gcc/6.1.0\n\n      2> module load gsl/2.3\n\n      3> module load MATLAB/r2017b\n\n      4> ./Para_DPMM",
+      "evidence_location": "lines 70-76, Option 2 Steps",
+      "confidence": "high",
+      "reason": "Deployment/setup commands to run the compiled package on HPC"
+    },
+    {
+      "field": "usage_example_inputs",
+      "value": "1> Please enter dataset path: ./datasets/data_matrix_1_S_Set.mat / 2> Please enter number of processors: 16 / 3> Please set the value of alpha: 1 / 4> Please enter computing time limit (seconds): 40",
+      "normalized_value": "dataset path: ./datasets/data_matrix_1_S_Set.mat; processors: 16; alpha: 1; time limit: 40 seconds",
+      "evidence": "      1> Please enter dataset path:  ./datasets/data_matrix_1_S_Set.mat\n\n      2> Please enter number of processors:  16\n\n      3> Please set the value of alpha:  1\n\n      4> Please enter computing time limit (seconds):  40",
+      "evidence_location": "lines 80-86, Option 2 Steps",
+      "confidence": "high",
+      "reason": "Example configuration for running the compiled package interactively"
+    },
+    {
+      "field": "comparison_methods_interface",
+      "value": "interface to comparison methods folders provide interface programs (written in R)",
+      "normalized_value": "R interface programs in 'interface to comparison methods' folders",
+      "evidence": "Most of the methods are available in the form of R package, and in the \"interface to comparison methods\" folders, we provide interface programs (written in R) to use these datasets with the available R packages for comparison. Please install the related R pacakges before using the interface programs.",
+      "evidence_location": "line 99, section 3",
+      "confidence": "high",
+      "reason": "Describes how comparison methods are implemented and where to find them for reproducing comparative results"
+    },
+    {
+      "field": "license_or_usage_terms",
+      "value": "Please feel free to use it for academic purposes.",
+      "normalized_value": "Free to use for academic purposes",
+      "evidence": "Please feel free to use it for academic purposes.",
+      "evidence_location": "line 107",
+      "confidence": "medium",
+      "reason": "Indicates permitted reuse terms, though not a formal license"
+    },
+    {
+      "field": "dependency",
+      "value": "Dirichlet Process Mixtures package(http://people.csail.mit.edu/jchang7/code.php) written by Jason Chang",
+      "normalized_value": "Dirichlet Process Mixtures package by Jason Chang (http://people.csail.mit.edu/jchang7/code.php)",
+      "evidence": "Note: The Para-DPMM project depend heavily on the open source Dirichlet Process Mixtures package(http://people.csail.mit.edu/jchang7/code.php) written by Jason Chang.",
+      "evidence_location": "line 110",
+      "confidence": "high",
+      "reason": "Identifies a key upstream dependency/attribution needed for understanding and reuse"
+    }
+  ]
+}

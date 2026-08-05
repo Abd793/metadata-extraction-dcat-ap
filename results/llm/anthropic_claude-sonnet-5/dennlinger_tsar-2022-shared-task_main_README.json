@@ -1,0 +1,265 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "UniHD at TSAR-2022 Shared Task: Is Compute All We Need for Lexical Simplification?",
+      "normalized_value": "UniHD at TSAR-2022 Shared Task: Is Compute All We Need for Lexical Simplification?",
+      "evidence": "# UniHD at TSAR-2022 Shared Task: Is Compute All We Need for Lexical Simplification?",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "This is the title of the artifact/repository as stated in the top-level header."
+    },
+    {
+      "field": "description",
+      "value": "This repository contains the modifications made by our team for the (winning) entry in the English shared task category. We further include modifications made for Spanish and Portuguese, obtaining SotA in those languages as well.",
+      "normalized_value": "This repository contains the modifications made by our team for the (winning) entry in the English shared task category. We further include modifications made for Spanish and Portuguese, obtaining SotA in those languages as well.",
+      "evidence": "This repository contains the modifications made by our team for the (winning) entry in the English shared task category.\nWe further include modifications made for Spanish and Portuguese, obtaining SotA in those languages as well.",
+      "evidence_location": "lines 3-4",
+      "confidence": "high",
+      "reason": "Describes the purpose and scope of the artifact repository."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2301.01764",
+      "normalized_value": "https://arxiv.org/abs/2301.01764",
+      "evidence": "**Find the arXiv version of our paper here: https://arxiv.org/abs/2301.01764**",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Direct link to the associated arXiv paper for citation and understanding."
+    },
+    {
+      "field": "citation",
+      "value": "@article{aumiller-gertz-2023-unihd,\nauthor = {Aumiller, Dennis and Gertz, Michael},\ntitle = {{UniHD at TSAR-2022 Shared Task: Is Compute All We Need for Lexical Simplification?}},\njournal = {CoRR},\nvolume = {abs/2301.01764},\neprinttype = {arXiv},\neprint = {2301.01764},\nurl = {https://arxiv.org/abs/2301.01764}\n}",
+      "normalized_value": "@article{aumiller-gertz-2023-unihd, author = {Aumiller, Dennis and Gertz, Michael}, title = {{UniHD at TSAR-2022 Shared Task: Is Compute All We Need for Lexical Simplification?}}, journal = {CoRR}, volume = {abs/2301.01764}, eprinttype = {arXiv}, eprint = {2301.01764}, url = {https://arxiv.org/abs/2301.01764} }",
+      "evidence": "@article{aumiller-gertz-2023-unihd,\nauthor = {Aumiller, Dennis and Gertz, Michael},\ntitle = {{UniHD at TSAR-2022 Shared Task: Is Compute All We Need for Lexical Simplification?}},\njournal = {CoRR},\nvolume = {abs/2301.01764},\neprinttype = {arXiv},\neprint = {2301.01764},\nurl = {https://arxiv.org/abs/2301.01764}\n}",
+      "evidence_location": "lines 11-19",
+      "confidence": "high",
+      "reason": "The BibTeX citation entry for proper attribution when using this work."
+    },
+    {
+      "field": "api_key_requirement",
+      "value": "OpenAI API key in a file named config.py, template in config.py.template",
+      "normalized_value": "OpenAI API key required in config.py (template: config.py.template)",
+      "evidence": "To run the results for the respective subsets, you need to provide your own OpenAI API key in a file named `config.py`. A template can be found in `config.py.template`, which already contains the correct variable name and structure.",
+      "evidence_location": "line 24",
+      "confidence": "high",
+      "reason": "Critical setup dependency required for reproduction, indicating use of OpenAI API."
+    },
+    {
+      "field": "install_command",
+      "value": "python3 -m pip install -r requirements.txt",
+      "normalized_value": "python3 -m pip install -r requirements.txt",
+      "evidence": "Other required packages can be installed with `python3 -m pip install -r requirements.txt` from the main repository folder.",
+      "evidence_location": "line 25",
+      "confidence": "high",
+      "reason": "Explicit installation command for dependencies needed to reproduce results."
+    },
+    {
+      "field": "inference_scripts",
+      "value": "context_predictor.py (English), _es.py (Spanish), _pt.py (Portuguese)",
+      "normalized_value": "context_predictor.py, _es.py, _pt.py",
+      "evidence": "Obtaining predictions from the API should be possible by running `context_predictor.py` for English results, and the `_es.py` and `\\_pt.py` files for Spanish and Portuguese predictions, respectively.",
+      "evidence_location": "line 27",
+      "confidence": "high",
+      "reason": "Identifies the scripts used to run inference/predictions for each language."
+    },
+    {
+      "field": "predictions_location",
+      "value": "en/ subfolder or UniHD.zip; es/ and pt/ folders",
+      "normalized_value": "en/, UniHD.zip, es/, pt/",
+      "evidence": "Our predictions submitted to the workshop can be found either in the subfolder `en/`, or the fiel `UniHD.zip`. Later additions of the Spanish and Portuguese predictions are in the respective folders `es/` (for Spanish) and `pt/` (Portuguese).",
+      "evidence_location": "line 29",
+      "confidence": "high",
+      "reason": "Points to locations of submitted prediction outputs, useful for reuse/verification."
+    },
+    {
+      "field": "reproducibility_note",
+      "value": "An exact reproduction of the system outputs may not be possible, as the generation temperature and other, server-side factors, such as the random seed, can potentially lead to differing predictions.",
+      "normalized_value": "An exact reproduction of the system outputs may not be possible, as the generation temperature and other, server-side factors, such as the random seed, can potentially lead to differing predictions.",
+      "evidence": "An exact reproduction of the system outputs may not be possible, as the generation temperature and other, server-side factors, such as the random seed, can potentially lead to differing predictions. In our experience, there is no possibility of fixing a particular prediction to occur with 100% likelihood.",
+      "evidence_location": "line 30",
+      "confidence": "high",
+      "reason": "Important caveat about reproducibility limitations of the artifact."
+    },
+    {
+      "field": "model_used",
+      "value": "text-davinci-002",
+      "normalized_value": "text-davinci-002",
+      "evidence": "In our experiments, we used the (relatively \"outdated\" `text-davinci-002` model, which may respond differently to prompt variants than later additions.",
+      "evidence_location": "line 31",
+      "confidence": "high",
+      "reason": "Names the specific model used for the experiments, important for reproducibility."
+    },
+    {
+      "field": "task",
+      "value": "Lexical Simplification for English (en), Spanish (es) and Portuguese (pt)",
+      "normalized_value": "Lexical Simplification for English, Spanish, and Portuguese",
+      "evidence": "TSAR2022 Shared Task on Lexical Simplification for English (en), Spanish (es) and Portuguese (pt) - Datasets and Evaluation scripts",
+      "evidence_location": "line 34",
+      "confidence": "high",
+      "reason": "States the scientific task addressed by the shared task and datasets."
+    },
+    {
+      "field": "project_page",
+      "value": "https://taln.upf.edu/pages/tsar2022-st/",
+      "normalized_value": "https://taln.upf.edu/pages/tsar2022-st/",
+      "evidence": "[TSAR-2022 Shared-Task website](https://taln.upf.edu/pages/tsar2022-st/)",
+      "evidence_location": "line 37",
+      "confidence": "high",
+      "reason": "Link to the official shared task website with benchmark and guideline details."
+    },
+    {
+      "field": "dataset_format",
+      "value": "trial_none/test_none: Sentence<TAB>ComplexWord; trial_gold/test_gold: Sentence<TAB>ComplexWord<TAB>Annotation1<TAB>Annotation2<TAB>...<TAB>AnnotationN",
+      "normalized_value": "trial_none/test_none: Sentence<TAB>ComplexWord; trial_gold/test_gold: Sentence<TAB>ComplexWord<TAB>Annotation1...AnnotationN",
+      "evidence": "- Format of the *trial_none* and *test_none* files: <span style=\"font-weight:normal\">Sentence&lt;TAB&gt;ComplexWord</span>\n- Format of the *trial_gold* and *test_gold* files: <span style=\"font-weight:normal\">Sentence&lt;TAB&gt;ComplexWord&lt;TAB&gt;Annotation1&lt;TAB&gt;Annotation2&lt;TAB&gt;...&lt;TAB&gt;AnnotationN</span>",
+      "evidence_location": "lines 46-47",
+      "confidence": "high",
+      "reason": "Specifies exact file format for dataset files, essential for dataset reuse."
+    },
+    {
+      "field": "trial_dataset_size",
+      "value": "10 instances (English and Portuguese) and 12 instances (Spanish)",
+      "normalized_value": "10 instances (English, Portuguese), 12 instances (Spanish)",
+      "evidence": "The trial dataset consists of a set of 10 instances (for English and Portuguese) and 12 instances (for Spanish) of a sentence, a target complex word.",
+      "evidence_location": "line 51",
+      "confidence": "high",
+      "reason": "Concrete dataset size statistic for trial dataset."
+    },
+    {
+      "field": "trial_dataset_files",
+      "value": "/datasets/trial/tsar2022_en_trial_none.tsv, /datasets/trial/tsar2022_en_trial_gold.tsv, /datasets/trial/tsar2022_es_trial_none.tsv, /datasets/trial/tsar2022_es_trial_gold.tsv, /datasets/trial/tsar2022_pt_trial_none.tsv, /datasets/trial/tsar2022_pt_trial_gold.tsv",
+      "normalized_value": "/datasets/trial/tsar2022_en_trial_none.tsv, /datasets/trial/tsar2022_en_trial_gold.tsv, /datasets/trial/tsar2022_es_trial_none.tsv, /datasets/trial/tsar2022_es_trial_gold.tsv, /datasets/trial/tsar2022_pt_trial_none.tsv, /datasets/trial/tsar2022_pt_trial_gold.tsv",
+      "evidence": "- /datasets/trial/tsar2022_en_trial_none.tsv\n- /datasets/trial/tsar2022_en_trial_gold.tsv\n- /datasets/trial/tsar2022_es_trial_none.tsv\n- /datasets/trial/tsar2022_es_trial_gold.tsv\n- /datasets/trial/tsar2022_pt_trial_none.tsv\n- /datasets/trial/tsar2022_pt_trial_gold.tsv",
+      "evidence_location": "lines 54-59",
+      "confidence": "high",
+      "reason": "File paths for trial dataset used for reproduction/reuse."
+    },
+    {
+      "field": "test_dataset_files",
+      "value": "English test_none (373 instances) /datasets/test/tsar2022_en_test_none.tsv; Spanish test_none (368 instances) /datasets/test/tsar2022_es_test_none.tsv; Portuguese test_none (374 instances) /datasets/test/tsar2022_pt_test_none.tsv",
+      "normalized_value": "English test_none (373 instances): /datasets/test/tsar2022_en_test_none.tsv; Spanish test_none (368 instances): /datasets/test/tsar2022_es_test_none.tsv; Portuguese test_none (374 instances): /datasets/test/tsar2022_pt_test_none.tsv",
+      "evidence": "- English test_none dataset (373 instances)<br/> \n/datasets/test/tsar2022_en_test_none.tsv  \n\n- Spanish test_none dataset (368 instances)<br/> \n/datasets/test/tsar2022_es_test_none.tsv  \n\n- Portuguese test_none dataset (374 instances)<br/> \n/datasets/test/tsar2022_pt_test_none.tsv",
+      "evidence_location": "lines 69-76",
+      "confidence": "high",
+      "reason": "Test dataset file locations and sizes used for benchmark evaluation."
+    },
+    {
+      "field": "test_gold_dataset_files",
+      "value": "English test_gold (373 instances) /datasets/test/tsar2022_en_test_gold.tsv; Spanish test_gold (368 instances) /datasets/test/tsar2022_es_test_gold.tsv; Portuguese test_gold (374 instances) /datasets/test/tsar2022_pt_test_gold.tsv",
+      "normalized_value": "English test_gold (373 instances): /datasets/test/tsar2022_en_test_gold.tsv; Spanish test_gold (368 instances): /datasets/test/tsar2022_es_test_gold.tsv; Portuguese test_gold (374 instances): /datasets/test/tsar2022_pt_test_gold.tsv",
+      "evidence": "- English test_gold dataset (373 instances)<br/> \n/datasets/test/tsar2022_en_test_gold.tsv  \n\n- Spanish test_gold dataset (368 instances)<br/> \n/datasets/test/tsar2022_es_test_gold.tsv  \n\n- Portuguese test_gold dataset (374 instances)<br/> \n/datasets/test/tsar2022_pt_test_gold.tsv",
+      "evidence_location": "lines 80-87",
+      "confidence": "high",
+      "reason": "Gold-annotated test dataset file locations for evaluation."
+    },
+    {
+      "field": "official_results_location",
+      "value": "/results/official",
+      "normalized_value": "/results/official",
+      "evidence": "The official results for each language (en, es, and pt) can be found in this directory:<br/> \n/results/official",
+      "evidence_location": "lines 92-93",
+      "confidence": "high",
+      "reason": "Location of official benchmark results for reproducibility/comparison."
+    },
+    {
+      "field": "official_metrics",
+      "value": "MAP@1/Potential@1/Precision@1, MAP@3, MAP@5, MAP@10, Potential@3, Potential@5, Potential@10, Accuracy@1@top_gold_1, Accuracy@2@top_gold_1, Accuracy@3@top_gold_1",
+      "normalized_value": "MAP@1/Potential@1/Precision@1, MAP@3, MAP@5, MAP@10, Potential@3, Potential@5, Potential@10, Accuracy@1@top_gold_1, Accuracy@2@top_gold_1, Accuracy@3@top_gold_1",
+      "evidence": "-  MAP@1/Potential@1/Precision@1\n-  MAP@3\n-  MAP@5\n-  MAP@10\n-  Potential@3\n-  Potential@5\n-  Potential@10\n-  Accuracy@1@top_gold_1\n-  Accuracy@2@top_gold_1\n-  Accuracy@3@top_gold_1 ",
+      "evidence_location": "lines 96-105",
+      "confidence": "high",
+      "reason": "Defines the specific evaluation metrics used for the shared task benchmark."
+    },
+    {
+      "field": "extended_results_location",
+      "value": "/results/extended",
+      "normalized_value": "/results/extended",
+      "evidence": "The extended results for each language (en, es, and pt) can be found in this directory:<br/> \n/results/extended<br/>",
+      "evidence_location": "lines 108-109",
+      "confidence": "high",
+      "reason": "Location of extended benchmark results for deeper evaluation."
+    },
+    {
+      "field": "extended_metrics",
+      "value": "Potential@K K={1..10}, MAP@K K={1..10}, Precision@K K={1..10} (macro-average), Recall@K K={1..10} (macro-average), Accuracy@K@top_gold_1 K={1..10}",
+      "normalized_value": "Potential@K K={1..10}, MAP@K K={1..10}, Precision@K K={1..10} (macro-average), Recall@K K={1..10} (macro-average), Accuracy@K@top_gold_1 K={1..10}",
+      "evidence": "-  Potential@K  K={1..10} \n-  MAP@K  K={1..10}\n-  Precision@K  K={1..10}  (macro-average)\n-  Recall@K  K={1..10}     (macro-average)\n-  Accuracy@K@top_gold_1   K={1..10}",
+      "evidence_location": "lines 112-116",
+      "confidence": "high",
+      "reason": "Extended evaluation metrics for deeper benchmark analysis."
+    },
+    {
+      "field": "evaluation_script",
+      "value": "tsar_eval.py",
+      "normalized_value": "tsar_eval.py",
+      "evidence": "### tsar_eval.py",
+      "evidence_location": "line 122",
+      "confidence": "high",
+      "reason": "Names the evaluation script used to compute official metrics."
+    },
+    {
+      "field": "evaluation_script_usage",
+      "value": "Evaluation Script for the TSAR-2022 Lexical Simplification Shared Task\n\nUsage: tsar_eval.py <options>\n\nOptions:\n  -h, --help            show this help message and exit\n  --gold_file=<PATH>    The path to the file with the gold annotated instances\n  --predictions_file=<PATH>\n                        The path to file with the predictions\n  --output_file=<PATH>  path to the output file\n  --verbose             Verbose output mode",
+      "normalized_value": "Evaluation Script for the TSAR-2022 Lexical Simplification Shared Task Usage: tsar_eval.py <options> Options: -h, --help; --gold_file=<PATH>; --predictions_file=<PATH>; --output_file=<PATH>; --verbose",
+      "evidence": "Evaluation Script for the TSAR-2022 Lexical Simplification Shared Task\n\nUsage: tsar_eval.py <options>\n\nOptions:\n  -h, --help            show this help message and exit\n  --gold_file=<PATH>    The path to the file with the gold annotated instances\n  --predictions_file=<PATH>\n                        The path to file with the predictions\n  --output_file=<PATH>  path to the output file\n  --verbose             Verbose output mode",
+      "evidence_location": "lines 140-150",
+      "confidence": "high",
+      "reason": "Documents the command-line options for the evaluation script, essential for running evaluation."
+    },
+    {
+      "field": "evaluation_command_example",
+      "value": "python3 ./tsar_eval.py --gold_file ./gold/tsar_es_gold.tsv --predictions_file ./predicted/TEAMNAME_TRACKNAME_RUNNAME.tsv  --output_file ./results/TEAMNAME_TRACKNAME_RUNNAME.tsv.eval",
+      "normalized_value": "python3 ./tsar_eval.py --gold_file ./gold/tsar_es_gold.tsv --predictions_file ./predicted/TEAMNAME_TRACKNAME_RUNNAME.tsv --output_file ./results/TEAMNAME_TRACKNAME_RUNNAME.tsv.eval",
+      "evidence": "python3 ./tsar_eval.py --gold_file ./gold/tsar_es_gold.tsv --predictions_file ./predicted/TEAMNAME_TRACKNAME_RUNNAME.tsv  --output_file ./results/TEAMNAME_TRACKNAME_RUNNAME.tsv.eval",
+      "evidence_location": "line 157",
+      "confidence": "high",
+      "reason": "Concrete example command for running the evaluation script."
+    },
+    {
+      "field": "related_paper",
+      "value": "Lexical Simplification Benchmarks for English, Portuguese, and Spanish",
+      "normalized_value": "Lexical Simplification Benchmarks for English, Portuguese, and Spanish",
+      "evidence": "[Lexical Simplification Benchmarks for English, Portuguese, and Spanish](https://www.frontiersin.org/articles/10.3389/frai.2022.991242).<br/>\nSanja Štajner, Daniel Ferrés, Matthew Shardlow, Kai North, Marcos Zampieri and  Horacio Saggion.<br/>\nFront. Artif. Intell. Sec. Natural Language Processing. <br/>\ndoi: 10.3389/frai.2022.991242",
+      "evidence_location": "lines 166-169",
+      "confidence": "high",
+      "reason": "Related dataset compilation paper providing additional scientific context and citation info."
+    },
+    {
+      "field": "related_paper_preprint",
+      "value": "https://arxiv.org/abs/2209.05301",
+      "normalized_value": "https://arxiv.org/abs/2209.05301",
+      "evidence": "Preprint available at ArXiV: [https://arxiv.org/abs/2209.05301](https://arxiv.org/abs/2209.05301)",
+      "evidence_location": "line 171",
+      "confidence": "high",
+      "reason": "Preprint link for the dataset compilation paper, useful for citation and understanding."
+    },
+    {
+      "field": "license_code",
+      "value": "AGPL 3.0v license",
+      "normalized_value": "AGPL 3.0v License",
+      "evidence": "The python scripts follow [AGPL 3.0v license](LICENSE).",
+      "evidence_location": "line 176",
+      "confidence": "high",
+      "reason": "Specifies the license governing the code/scripts, essential for reuse compliance."
+    },
+    {
+      "field": "license_dataset",
+      "value": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License [CC-BY-NC-SA-4.0]",
+      "normalized_value": "CC-BY-NC-SA-4.0",
+      "evidence": "The datasets (under the /datasets directory) are licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License [CC-BY-NC-SA-4.0](CC-BY-NC-SA-4.0).",
+      "evidence_location": "line 177",
+      "confidence": "high",
+      "reason": "Specifies the license governing the datasets, essential for reuse compliance."
+    },
+    {
+      "field": "contact",
+      "value": "https://taln.upf.edu/pages/tsar2022-st/#contact",
+      "normalized_value": "https://taln.upf.edu/pages/tsar2022-st/#contact",
+      "evidence": "https://taln.upf.edu/pages/tsar2022-st/#contact",
+      "evidence_location": "line 180",
+      "confidence": "high",
+      "reason": "Contact link for questions regarding the shared task."
+    }
+  ]
+}

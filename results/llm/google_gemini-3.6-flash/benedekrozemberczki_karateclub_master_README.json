@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Karate Club",
+      "normalized_value": "Karate Club",
+      "evidence": "**Karate Club**",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Identifies the name of the software library."
+    },
+    {
+      "field": "description",
+      "value": "Karate Club is an unsupervised machine learning extension library for NetworkX.",
+      "normalized_value": "Karate Club is an unsupervised machine learning extension library for NetworkX.",
+      "evidence": "**Karate Club** is an unsupervised machine learning extension library for [NetworkX](https://networkx.github.io/).",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Provides a summary description of the library and its main purpose."
+    },
+    {
+      "field": "dependency",
+      "value": "NetworkX",
+      "normalized_value": "NetworkX",
+      "evidence": "[NetworkX](https://networkx.github.io/)",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Names the underlying library that Karate Club extends."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://karateclub.readthedocs.io/",
+      "normalized_value": "https://karateclub.readthedocs.io/",
+      "evidence": "[Documentation](https://karateclub.readthedocs.io/)",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Direct link to the project documentation."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2003.04819",
+      "normalized_value": "https://arxiv.org/abs/2003.04819",
+      "evidence": "[Paper](https://arxiv.org/abs/2003.04819)",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Direct link to the research paper describing the library."
+    },
+    {
+      "field": "video_url",
+      "value": "https://www.youtube.com/watch?v=t212-ntxu2U",
+      "normalized_value": "https://www.youtube.com/watch?v=t212-ntxu2U",
+      "evidence": "[Promo Video](https://www.youtube.com/watch?v=t212-ntxu2U)",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Link to the promotional video for the project."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{karateclub,\n       title = {{Karate Club: An API Oriented Open-source Python Framework for Unsupervised Learning on Graphs}},\n       author = {Benedek Rozemberczki and Oliver Kiss and Rik Sarkar},\n       year = {2020},\n       pages = {3125–3132},\n       booktitle = {Proceedings of the 29th ACM International Conference on Information and Knowledge Management (CIKM '20)},\n       organization = {ACM},\n}",
+      "normalized_value": "@inproceedings{karateclub, title = {{Karate Club: An API Oriented Open-source Python Framework for Unsupervised Learning on Graphs}}, author = {Benedek Rozemberczki and Oliver Kiss and Rik Sarkar}, year = {2020}, pages = {3125–3132}, booktitle = {Proceedings of the 29th ACM International Conference on Information and Knowledge Management (CIKM '20)}, organization = {ACM}, }",
+      "evidence": "```bibtex\n@inproceedings{karateclub,\n       title = {{Karate Club: An API Oriented Open-source Python Framework for Unsupervised Learning on Graphs}},\n       author = {Benedek Rozemberczki and Oliver Kiss and Rik Sarkar},\n       year = {2020},\n       pages = {3125–3132},\n       booktitle = {Proceedings of the 29th ACM International Conference on Information and Knowledge Management (CIKM '20)},\n       organization = {ACM},\n}\n```",
+      "evidence_location": "30-39, Citing",
+      "confidence": "high",
+      "reason": "BibTeX entry provided for citing the artifact in academic work."
+    },
+    {
+      "field": "usage_example",
+      "value": "import networkx as nx\nfrom karateclub import EgoNetSplitter\n\ng = nx.newman_watts_strogatz_graph(1000, 20, 0.05)\n\nsplitter = EgoNetSplitter(1.0)\n\nsplitter.fit(g)\n\nprint(splitter.get_memberships())",
+      "normalized_value": "import networkx as nx from karateclub import EgoNetSplitter g = nx.newman_watts_strogatz_graph(1000, 20, 0.05) splitter = EgoNetSplitter(1.0) splitter.fit(g) print(splitter.get_memberships())",
+      "evidence": "```python\nimport networkx as nx\nfrom karateclub import EgoNetSplitter\n\ng = nx.newman_watts_strogatz_graph(1000, 20, 0.05)\n\nsplitter = EgoNetSplitter(1.0)\n\nsplitter.fit(g)\n\nprint(splitter.get_memberships())\n```",
+      "evidence_location": "46-57, A simple example",
+      "confidence": "high",
+      "reason": "Demonstrates basic usage of the library with Python code."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install karateclub",
+      "normalized_value": "pip install karateclub",
+      "evidence": "```sh\n$ pip install karateclub\n```",
+      "evidence_location": "184-186, Installation",
+      "confidence": "high",
+      "reason": "Specifies the command needed to install the library via pip."
+    },
+    {
+      "field": "package_upgrade_command",
+      "value": "pip install karateclub --upgrade",
+      "normalized_value": "pip install karateclub --upgrade",
+      "evidence": "```sh\n$ pip install karateclub --upgrade\n```",
+      "evidence_location": "190-192, Installation",
+      "confidence": "high",
+      "reason": "Specifies the command to upgrade the library via pip."
+    },
+    {
+      "field": "example_execution_command",
+      "value": "cd examples/whole_graph_embedding/\npython graph2vec_example.py",
+      "normalized_value": "cd examples/whole_graph_embedding/ python graph2vec_example.py",
+      "evidence": "```sh\n$ cd examples/whole_graph_embedding/\n$ python graph2vec_example.py\n```",
+      "evidence_location": "203-206, Running examples",
+      "confidence": "high",
+      "reason": "Provides exact terminal commands to run an example script."
+    },
+    {
+      "field": "test_command",
+      "value": "pytest",
+      "normalized_value": "pytest",
+      "evidence": "```sh\n$ pytest\n```",
+      "evidence_location": "214-216, Running tests",
+      "confidence": "high",
+      "reason": "Command used to run the project's unit tests."
+    },
+    {
+      "field": "license",
+      "value": "GNU General Public License v3.0",
+      "normalized_value": "GNU General Public License v3.0",
+      "evidence": "- [GNU General Public License v3.0](https://github.com/benedekrozemberczki/karateclub/blob/master/LICENSE)",
+      "evidence_location": "222, License",
+      "confidence": "high",
+      "reason": "Defines the license governing usage and redistribution of the library."
+    }
+  ]
+}

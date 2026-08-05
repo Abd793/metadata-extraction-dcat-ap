@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Vec2Sent",
+      "normalized_value": "Vec2Sent",
+      "evidence": "# Vec2Sent<br><sub><sup>Probing Sentence Embeddings with Natural Language Generation</sup></sub>",
+      "evidence_location": "line 1, document title header",
+      "confidence": "high",
+      "reason": "Names the artifact and its subtitle describing its purpose."
+    },
+    {
+      "field": "description",
+      "value": "We introspect black-box sentence embeddings by conditionally generating from them with the objective to retrieve the underlying discrete sentence. We perceive of this as a new unsupervised probing task and show that it correlates well with downstream task performance.",
+      "normalized_value": "We introspect black-box sentence embeddings by conditionally generating from them with the objective to retrieve the underlying discrete sentence. We perceive of this as a new unsupervised probing task and show that it correlates well with downstream task performance.",
+      "evidence": "We introspect black-box sentence embeddings by conditionally generating from them with the\nobjective to retrieve the underlying discrete sentence. We perceive of this as a new unsupervised\nprobing task and show that it correlates well with downstream task performance.",
+      "evidence_location": "lines 4-6, introductory paragraph",
+      "confidence": "high",
+      "reason": "Describes the purpose and method of the artifact, helping users understand and index it."
+    },
+    {
+      "field": "arxiv_link",
+      "value": "https://arxiv.org/abs/2011.00592",
+      "normalized_value": "https://arxiv.org/abs/2011.00592",
+      "evidence": "[![arXiv](https://img.shields.io/badge/View%20on%20arXiv-B31B1B?logo=arxiv&labelColor=gray)](https://arxiv.org/abs/2011.00592)",
+      "evidence_location": "line 2, arXiv badge",
+      "confidence": "high",
+      "reason": "Provides access link to the associated research paper."
+    },
+    {
+      "field": "install_command",
+      "value": "pip install \"vec2sent @ git+https://github.com/maruker/vec2sent.git\"",
+      "normalized_value": "pip install \"vec2sent @ git+https://github.com/maruker/vec2sent.git\"",
+      "evidence": "```shell\npip install \"vec2sent @ git+https://github.com/maruker/vec2sent.git\"\n```",
+      "evidence_location": "lines 14-16, Quickstart section code block",
+      "confidence": "high",
+      "reason": "Defines the primary installation step for the package."
+    },
+    {
+      "field": "entry_points",
+      "value": "There are three entry points to generate and evaluate sentences, and to perform arithmetic in the vector space.",
+      "normalized_value": "There are three entry points to generate and evaluate sentences, and to perform arithmetic in the vector space.",
+      "evidence": "There are three entry points to **generate** and **evaluate** sentences, and to perform **arithmetic** in the vector space.",
+      "evidence_location": "line 18, Quickstart section",
+      "confidence": "high",
+      "reason": "Summarizes the main CLI capabilities of the tool."
+    },
+    {
+      "field": "vector_arithmetic_command",
+      "value": "vec2sent_arithmetic -s infersent -c maruker/vec2sent-infersent",
+      "normalized_value": "vec2sent_arithmetic -s infersent -c maruker/vec2sent-infersent",
+      "evidence": "```shell\nvec2sent_arithmetic -s infersent -c maruker/vec2sent-infersent\n```",
+      "evidence_location": "lines 22-24, Vector Arithmetic subsection code block",
+      "confidence": "high",
+      "reason": "Shows how to run vector-space arithmetic (sentence analogies) with a specific encoder and checkpoint."
+    },
+    {
+      "field": "generation_command",
+      "value": "vec2sent_generate -s hier -c maruker/vec2sent-hier -d data/test.en.2008 -o hier.txt",
+      "normalized_value": "vec2sent_generate -s hier -c maruker/vec2sent-hier -d data/test.en.2008 -o hier.txt",
+      "evidence": "```shell\nvec2sent_generate -s hier -c maruker/vec2sent-hier -d data/test.en.2008 -o hier.txt\n```",
+      "evidence_location": "lines 39-41, Sentence Generation subsection code block",
+      "confidence": "high",
+      "reason": "Shows the inference/generation command including input data and output file arguments."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "vec2sent_evaluate --metric BLEU --file hier.txt",
+      "normalized_value": "vec2sent_evaluate --metric BLEU --file hier.txt",
+      "evidence": "```shell\nvec2sent_evaluate --metric BLEU --file hier.txt\n```",
+      "evidence_location": "lines 47-49, Evaluation subsection code block",
+      "confidence": "high",
+      "reason": "Shows how to evaluate generated outputs with a chosen metric."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "ID, PERM, ID_PERM, BLEU, MOVER",
+      "normalized_value": "ID, PERM, ID_PERM, BLEU, MOVER",
+      "evidence": "| Parameter | Explanation                                                                       |\n|-----------|-----------------------------------------------------------------------------------|\n| ID        | Fraction of all sentences where the output is identical to the input              |\n| PERM      | Fraction of all output sentences that can be formed as a permutation of the input |\n| ID_PERM   | Fraction of all permuations that are identical to the input                       |\n| BLEU      | Document BLEU score                                                               |\n| MOVER     | Average Mover Score between input and output sentences                            |",
+      "evidence_location": "lines 53-59, Evaluation section metrics table",
+      "confidence": "high",
+      "reason": "Lists the concrete evaluation metrics supported by the tool."
+    },
+    {
+      "field": "cleanup_command",
+      "value": "vec2sent_cleanup",
+      "normalized_value": "vec2sent_cleanup",
+      "evidence": "> Vec2Sent needs to download several gigabites of sentence embedding models. Those files can be deleted using the command `vec2sent_cleanup`",
+      "evidence_location": "lines 62-63, TIP callout in Quickstart section",
+      "confidence": "high",
+      "reason": "Documents a maintenance command and warns about large model downloads, relevant for disk management."
+    },
+    {
+      "field": "model_hosting",
+      "value": "Hugging Face Hub",
+      "normalized_value": "Hugging Face Hub",
+      "evidence": "We upload our models to the Hugging Face Hub. The following table shows, which parameters to set in order to load the sentence embeddings and corresponding Vec2Sent models.",
+      "evidence_location": "line 67, Available Models section",
+      "confidence": "high",
+      "reason": "States where the pretrained model checkpoints are hosted."
+    },
+    {
+      "field": "available_models",
+      "value": "avg (maruker/vec2sent-avg), hier (maruker/vec2sent-hier), gem (maruker/vec2sent-gem), sent2vec (maruker/vec2sent-sent2vec), infersent (maruker/vec2sent-infersent), sbert-large (maruker/vec2sent-sbert-large)",
+      "normalized_value": "avg (maruker/vec2sent-avg), hier (maruker/vec2sent-hier), gem (maruker/vec2sent-gem), sent2vec (maruker/vec2sent-sent2vec), infersent (maruker/vec2sent-infersent), sbert-large (maruker/vec2sent-sbert-large)",
+      "evidence": "| Sentence embedding name `-s` | Checkpoint `-c`              | Explanation                                                                       |\n|------------------------------|------------------------------|-----------------------------------------------------------------------------------|\n| avg                          | maruker/vec2sent-avg         | Average pooling on [BPEmb](https://github.com/bheinzerling/bpemb) word embeddings |\n| hier                         | maruker/vec2sent-hier        | Hierarchical pooling on [BPEmb](https://github.com/bheinzerling/bpemb)            |\n| gem                          | maruker/vec2sent-gem         | [Geometric Embeddings](https://github.com/fursovia/geometric_embedding)           |\n| sent2vec                     | maruker/vec2sent-sent2vec    | [Sent2Vec](https://github.com/epfml/sent2vec)                                     |\n| infersent                    | maruker/vec2sent-infersent   | [InferSent](https://github.com/facebookresearch/InferSent)                        |\n| sbert-large                  | maruker/vec2sent-sbert-large | [SBERT](https://github.com/UKPLab/sentence-transformers)                          |",
+      "evidence_location": "lines 69-76, Available Models section table",
+      "confidence": "high",
+      "reason": "Enumerates supported sentence encoders and their corresponding Hugging Face checkpoints needed to load models."
+    },
+    {
+      "field": "extension_point",
+      "value": "vec2sent.sentence_embeddings.abstract_sentence_embedding.AbstractEmbedding",
+      "normalized_value": "vec2sent.sentence_embeddings.abstract_sentence_embedding.AbstractEmbedding",
+      "evidence": "Additional sentence embeddings can be used by extending the class ``vec2sent.sentence_embeddings.abstract_sentence_embedding.AbstractEmbedding``.",
+      "evidence_location": "line 78, Available Models section",
+      "confidence": "high",
+      "reason": "Names the abstract class to extend for adding custom sentence embeddings, relevant for reuse."
+    },
+    {
+      "field": "setup_commands",
+      "value": "python -m venv venv; source venv/bin/activate; git submodule update --init; pip install .",
+      "normalized_value": "python -m venv venv; source venv/bin/activate; git submodule update --init; pip install .",
+      "evidence": "```shell\npython -m venv venv\nsource venv/bin/activate\n```\n\n#### Download requirements\n```shell\n# Download git submodules (MoS model and some sentence embeddings)\ngit submodule update --init\n```\n\n#### Install\n\n```shell\npip install .\n```",
+      "evidence_location": "lines 84-99, Installation section code blocks",
+      "confidence": "high",
+      "reason": "Defines the full source-based installation procedure including virtual environment setup and git submodules."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{kerscher-eger-2020-vec2sent, title = \"{V}ec2{S}ent: Probing Sentence Embeddings with Natural Language Generation\", author = \"Kerscher, Martin and Eger, Steffen\", booktitle = \"Proceedings of the 28th International Conference on Computational Linguistics\", year = \"2020\", pages = \"1729--1736\"}",
+      "normalized_value": "@inproceedings{kerscher-eger-2020-vec2sent, title = \"{V}ec2{S}ent: Probing Sentence Embeddings with Natural Language Generation\", author = \"Kerscher, Martin and Eger, Steffen\", booktitle = \"Proceedings of the 28th International Conference on Computational Linguistics\", year = \"2020\", pages = \"1729--1736\"}",
+      "evidence": "@inproceedings{kerscher-eger-2020-vec2sent,\n    title = \"{V}ec2{S}ent: Probing Sentence Embeddings with Natural Language Generation\",\n    author = \"Kerscher, Martin  and\n      Eger, Steffen\",\n    booktitle = \"Proceedings of the 28th International Conference on Computational Linguistics\",\n    month = dec,\n    year = \"2020\",\n    address = \"Barcelona, Spain (Online)\",\n    publisher = \"International Committee on Computational Linguistics\",\n    url = \"https://www.aclweb.org/anthology/2020.coling-main.152\",\n    pages = \"1729--1736\",\n    abstract = \"We introspect black-box sentence embeddings by conditionally generating from them with the objective to retrieve the underlying discrete sentence. We perceive of this as a new unsupervised probing task and show that it correlates well with downstream task performance. We also illustrate how the language generated from different encoders differs. We apply our approach to generate sentence analogies from sentence embeddings.\",\n}",
+      "evidence_location": "lines 103-117, Citation section BibTeX block",
+      "confidence": "high",
+      "reason": "Provides the official citation for academic reuse of the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://www.aclweb.org/anthology/2020.coling-main.152",
+      "normalized_value": "https://www.aclweb.org/anthology/2020.coling-main.152",
+      "evidence": "    url = \"https://www.aclweb.org/anthology/2020.coling-main.152\",",
+      "evidence_location": "line 113, Citation section BibTeX block",
+      "confidence": "high",
+      "reason": "Direct link to the published paper in the ACL Anthology."
+    },
+    {
+      "field": "base_model",
+      "value": "Mixture of Softmaxes",
+      "normalized_value": "Mixture of Softmaxes",
+      "evidence": "The models are based on [Mixture of Softmaxes](https://github.com/zihangdai/mos) with a context vector added to the inputs.",
+      "evidence_location": "line 121, Acknowledgments section",
+      "confidence": "high",
+      "reason": "Identifies the underlying model architecture the artifact builds upon, useful for understanding and reproduction."
+    }
+  ]
+}

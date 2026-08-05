@@ -1,0 +1,265 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "EORB-SLAM: An Event-based ORB-SLAM",
+      "normalized_value": "EORB-SLAM: An Event-based ORB-SLAM",
+      "evidence": "# EORB-SLAM: An Event-based ORB-SLAM",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Title of the artifact as given in the top-level header."
+    },
+    {
+      "field": "description",
+      "value": "This project is a feature-based odometry/SLAM algorithm that is used to estimate the 6DoF pose of a robot and reconstruct the 3D point cloud of the scene using a variety of sensors.",
+      "normalized_value": "This project is a feature-based odometry/SLAM algorithm that is used to estimate the 6DoF pose of a robot and reconstruct the 3D point cloud of the scene using a variety of sensors.",
+      "evidence": "This project is a feature-based odometry/SLAM algorithm that is used to estimate the 6DoF pose of a robot and reconstruct the 3D point cloud of the scene using a variety of sensors.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Explicit description of the artifact's purpose and function."
+    },
+    {
+      "field": "base_project",
+      "value": "ORB-SLAM (https://github.com/UZ-SLAMLab/ORB_SLAM3)",
+      "normalized_value": "ORB-SLAM https://github.com/UZ-SLAMLab/ORB_SLAM3",
+      "evidence": "This project is built on an older version of the [ORB-SLAM](https://github.com/UZ-SLAMLab/ORB_SLAM3) algorithm.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Identifies the upstream project this artifact extends, important for provenance and reuse."
+    },
+    {
+      "field": "sensor_hardware",
+      "value": "DAVIS event camera",
+      "normalized_value": "DAVIS event camera",
+      "evidence": "It extends ORB-SLAM, which allows simultaneous localization and mapping using a monocular [DAVIS event camera](https://en.wikipedia.org/wiki/Event_camera).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Specifies the sensor hardware supported by this artifact, relevant for reproducibility."
+    },
+    {
+      "field": "supported_modes",
+      "value": "Event-only, Event-IMU, Event-Image, and Event-Image-IMU modes",
+      "normalized_value": "Event-only, Event-IMU, Event-Image, and Event-Image-IMU modes",
+      "evidence": "In addition to the configurations in the original work, this project supports Event-only, Event-IMU, Event-Image, and Event-Image-IMU modes.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Lists the operating modes/configurations the artifact supports, key to understanding usage."
+    },
+    {
+      "field": "related_paper",
+      "value": "https://arxiv.org/abs/2301.00618",
+      "normalized_value": "https://arxiv.org/abs/2301.00618",
+      "evidence": "Please refer to [this article](https://arxiv.org/abs/2301.00618) for an explanation of the event-based configuration (no image).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Link to an associated paper explaining the event-based configuration, useful for scientific context and citation."
+    },
+    {
+      "field": "contributions",
+      "value": "Support for DAVIS event cameras; Added these modes to the original algorithm: Event-only, Event-Image (monocular), Event-Image-Inertial (monocular), Event-Inertial (monocular); Dataset loader can automatically load different datasets and configuration parameters; Introducing sensor configuration object; Mixed key point tracking (in addition to ORB features, the proposed algorithm can use both the AKAZE and ORB features for image-based SLAM)",
+      "normalized_value": "Support for DAVIS event cameras; Added these modes to the original algorithm: Event-only, Event-Image (monocular), Event-Image-Inertial (monocular), Event-Inertial (monocular); Dataset loader can automatically load different datasets and configuration parameters; Introducing sensor configuration object; Mixed key point tracking (in addition to ORB features, the proposed algorithm can use both the AKAZE and ORB features for image-based SLAM)",
+      "evidence": "- Support for DAVIS event cameras\n- Added these modes to the original algorithm: Event-only, Event-Image (monocular), Event-Image-Inertial (monocular), Event-Inertial (monocular)\n- Dataset loader can automatically load different datasets and configuration parameters\n- Introducing sensor configuration object\n- Mixed key point tracking (in addition to ORB features, the proposed algorithm can use both the AKAZE and ORB features for image-based SLAM)",
+      "evidence_location": "lines 7-11, section 'Contributions'",
+      "confidence": "high",
+      "reason": "Enumerates the concrete contributions/features of the artifact, useful for understanding what it adds over the base project."
+    },
+    {
+      "field": "operating_system",
+      "value": "Ubuntu 20.04 LTS",
+      "normalized_value": "Ubuntu 20.04 LTS",
+      "evidence": "These instructions are for Ubuntu 20.04 LTS.",
+      "evidence_location": "line 15, section 'Dependencies'",
+      "confidence": "high",
+      "reason": "Specifies the target OS environment for build/installation, key for reproducibility."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "a powerful machine with about 16 GB RAM",
+      "normalized_value": "16 GB RAM",
+      "evidence": "A successful build requires a stable internet connection (downloads more than 2 GB of data!) and a powerful machine with about 16 GB RAM.",
+      "evidence_location": "line 15, section 'Dependencies'",
+      "confidence": "high",
+      "reason": "Documents hardware requirements necessary for building the project."
+    },
+    {
+      "field": "compiler_version",
+      "value": "g++-7 and gcc-7",
+      "normalized_value": "g++-7 and gcc-7",
+      "evidence": "[Install g++-7 and gcc-7 along with version 9 on Ubuntu 20.04](https://vegastack.com/tutorials/how-to-install-gcc-compiler-on-ubuntu-20-04/)",
+      "evidence_location": "line 19, section 'C++11 or C++0x Compiler'",
+      "confidence": "high",
+      "reason": "Specifies required compiler versions for building the project."
+    },
+    {
+      "field": "install_tools_command",
+      "value": "sudo apt install -y make cmake pkg-config unzip yasm git gfortran nano wget curl",
+      "normalized_value": "sudo apt install -y make cmake pkg-config unzip yasm git gfortran nano wget curl",
+      "evidence": "sudo apt install -y make cmake pkg-config unzip yasm git gfortran nano wget curl",
+      "evidence_location": "lines 23-25, section 'Install the necessary tools'",
+      "confidence": "high",
+      "reason": "Command to install base build tools required before building the project."
+    },
+    {
+      "field": "dependency",
+      "value": "Pangolin (https://github.com/stevenlovegrove/Pangolin)",
+      "normalized_value": "Pangolin https://github.com/stevenlovegrove/Pangolin",
+      "evidence": "[Pangolin project page](https://github.com/stevenlovegrove/Pangolin)",
+      "evidence_location": "line 29, section 'Pangolin'",
+      "confidence": "high",
+      "reason": "Names a required dependency and its source repository."
+    },
+    {
+      "field": "eigen3_install_command",
+      "value": "sudo apt install libeigen3-dev",
+      "normalized_value": "sudo apt install libeigen3-dev",
+      "evidence": "`sudo apt install libeigen3-dev`",
+      "evidence_location": "line 33, section 'Eigen3'",
+      "confidence": "high",
+      "reason": "Installation command for the Eigen3 dependency."
+    },
+    {
+      "field": "dependency_version",
+      "value": "Ceres-solver 1.14",
+      "normalized_value": "Ceres-solver 1.14",
+      "evidence": "Follow [these steps](http://ceres-solver.org/installation.html) to install Ceres-solver 1.14. Note the version; it won't work with newer versions!",
+      "evidence_location": "line 37, section 'Ceres-solver 1.14'",
+      "confidence": "high",
+      "reason": "Specifies a critical, version-pinned dependency required for the build; explicitly warns other versions won't work."
+    },
+    {
+      "field": "boost_install_command",
+      "value": "sudo apt-get install -y libboost-all-dev",
+      "normalized_value": "sudo apt-get install -y libboost-all-dev",
+      "evidence": "`sudo apt-get install -y libboost-all-dev`",
+      "evidence_location": "line 41, section 'Boost'",
+      "confidence": "high",
+      "reason": "Installation command for the Boost dependency."
+    },
+    {
+      "field": "dependency_version",
+      "value": "OpenCV 3.4.1",
+      "normalized_value": "OpenCV 3.4.1",
+      "evidence": "Follow the steps in [Install OpenCV-3.4.1 with CUDA](https://gist.github.com/raulqf/a3caa97db3f8760af33266a1475d0e5e) and [Install OpenCV-3.4.1 on Ubuntu 17.10](https://gist.github.com/okanon/c09669f3ff3351c864742bc2754b01ea) to install `OpenCV 3.4.1` on your machine.",
+      "evidence_location": "line 45, section 'The OpenCV hell!'",
+      "confidence": "high",
+      "reason": "Specifies the required OpenCV version for the build, critical for reproducibility."
+    },
+    {
+      "field": "ros_support",
+      "value": "ROS melodic on Ubuntu 18.04; ROS noetic on Ubuntu 20.04",
+      "normalized_value": "ROS melodic on Ubuntu 18.04; ROS noetic on Ubuntu 20.04",
+      "evidence": "The original code uses ROS `melodic` on Ubuntu 18.04. However, ROS `noetic` is supported on Ubuntu 20.04. Integration of this project with ROS is possible, but it requires compiling and installing the core project first and then linking it to your ROS logic.",
+      "evidence_location": "line 49, section 'ROS (optional)'",
+      "confidence": "high",
+      "reason": "Describes optional ROS integration and specific supported versions."
+    },
+    {
+      "field": "installation_commands",
+      "value": "git clone https://github.com/m-dayani/EORB_SLAM.git\ncd EORB_SLAM\n\nmkdir build\ncd build\ncmake ..\nmake -j4",
+      "normalized_value": "git clone https://github.com/m-dayani/EORB_SLAM.git\ncd EORB_SLAM\n\nmkdir build\ncd build\ncmake ..\nmake -j4",
+      "evidence": "git clone https://github.com/m-dayani/EORB_SLAM.git\ncd EORB_SLAM\n\nmkdir build\ncd build\ncmake ..\nmake -j4",
+      "evidence_location": "lines 56-62, section 'Installation'",
+      "confidence": "high",
+      "reason": "Complete command sequence to clone and build the artifact from source."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/m-dayani/EORB_SLAM.git",
+      "normalized_value": "https://github.com/m-dayani/EORB_SLAM.git",
+      "evidence": "git clone https://github.com/m-dayani/EORB_SLAM.git",
+      "evidence_location": "line 56, section 'Installation'",
+      "confidence": "high",
+      "reason": "Direct link to the source repository of the artifact."
+    },
+    {
+      "field": "build_script",
+      "value": "build_eorb_slam.sh",
+      "normalized_value": "build_eorb_slam.sh",
+      "evidence": "To make life easier for you, I included a bash script (`build_eorb_slam.sh`) and a Docker file that contains all the necessary commands to download and install the required packages.",
+      "evidence_location": "line 65, section 'Installation'",
+      "confidence": "high",
+      "reason": "Names an included helper script for automating dependency installation and build."
+    },
+    {
+      "field": "docker_support",
+      "value": "a Docker file that contains all the necessary commands to download and install the required packages",
+      "normalized_value": "Docker file for downloading and installing required packages",
+      "evidence": "To make life easier for you, I included a bash script (`build_eorb_slam.sh`) and a Docker file that contains all the necessary commands to download and install the required packages.",
+      "evidence_location": "line 65, section 'Installation'",
+      "confidence": "high",
+      "reason": "Indicates availability of a Docker-based setup, relevant to reproducibility/deployment."
+    },
+    {
+      "field": "dataset",
+      "value": "The Public Event dataset (https://rpg.ifi.uzh.ch/davis_data.html)",
+      "normalized_value": "The Public Event dataset https://rpg.ifi.uzh.ch/davis_data.html",
+      "evidence": "[The Public Event dataset](https://rpg.ifi.uzh.ch/davis_data.html)",
+      "evidence_location": "line 70, section 'Usage'",
+      "confidence": "high",
+      "reason": "Named benchmark/event dataset supported for evaluation and usage of the artifact."
+    },
+    {
+      "field": "dataset",
+      "value": "The MVSEC dataset (https://daniilidis-group.github.io/mvsec/)",
+      "normalized_value": "The MVSEC dataset https://daniilidis-group.github.io/mvsec/",
+      "evidence": "[The MVSEC dataset](https://daniilidis-group.github.io/mvsec/)",
+      "evidence_location": "line 71, section 'Usage'",
+      "confidence": "high",
+      "reason": "Named benchmark/event dataset supported for evaluation and usage of the artifact."
+    },
+    {
+      "field": "dataset",
+      "value": "The EuRoC dataset (https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets)",
+      "normalized_value": "The EuRoC dataset https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets",
+      "evidence": "[The EuRoC dataset](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets)",
+      "evidence_location": "line 73, section 'Usage'",
+      "confidence": "high",
+      "reason": "Named dataset for exploring visual and inertial modes, useful for reproduction/evaluation."
+    },
+    {
+      "field": "configuration_files_location",
+      "value": "Examples/Event/*.yaml",
+      "normalized_value": "Examples/Event/*.yaml",
+      "evidence": "4. Edit a configuration file (listed in `Examples/Event/*.yaml`)",
+      "evidence_location": "line 75, section 'Usage'",
+      "confidence": "high",
+      "reason": "Specifies location of configuration files needed to run the artifact."
+    },
+    {
+      "field": "example_run_command",
+      "value": "./Examples/Event/fmt_ev_ethz ./Examples/Event/EvETHZ.yaml",
+      "normalized_value": "./Examples/Event/fmt_ev_ethz ./Examples/Event/EvETHZ.yaml",
+      "evidence": "`./Examples/Event/fmt_ev_ethz ./Examples/Event/EvETHZ.yaml`",
+      "evidence_location": "line 78, section 'Usage'",
+      "confidence": "high",
+      "reason": "Concrete example command to run the built artifact on a dataset."
+    },
+    {
+      "field": "vocabulary_setup",
+      "value": "Extract the ORB Vocabulary file in the Vocabulary directory",
+      "normalized_value": "Extract the ORB Vocabulary file in the Vocabulary directory",
+      "evidence": "3. Extract the ORB Vocabulary file in the Vocabulary directory",
+      "evidence_location": "line 74, section 'Usage'",
+      "confidence": "high",
+      "reason": "Necessary setup step required to run the SLAM algorithm."
+    },
+    {
+      "field": "known_limitation",
+      "value": "Generally, this app is not stable. There are some issues in the ORB-SLAM3 algorithm itself. The original algorithm is designed for larger images of datasets like EuRoC. If you try to run it on small images of an event-based dataset (especially the hdr_boxes of The Public Event dataset) the backend (optimizer) throws unhandled exceptions.",
+      "normalized_value": "This app is not stable due to issues in ORB-SLAM3; small event-based images (e.g. hdr_boxes) cause backend optimizer exceptions",
+      "evidence": "Generally, __this app is not stable__. There are some issues in the ORB-SLAM3 algorithm itself. The original algorithm is designed for larger images of datasets like `EuRoC`. If you try to run it on small images of an event-based dataset (especially the hdr_boxes of The Public Event dataset) the backend (optimizer) throws unhandled exceptions. Such optimization exceptions might randomly happen for the EORB-SLAM algorithm.",
+      "evidence_location": "line 93, section 'Issues'",
+      "confidence": "high",
+      "reason": "Documents a concrete known limitation/instability of the artifact relevant to reuse and reproducibility."
+    },
+    {
+      "field": "known_limitation",
+      "value": "For performance, most main components of this algorithm are executed in parallel threads. Unexpected race conditions and deadlocks are other issues of this algorithm.",
+      "normalized_value": "Parallel execution of components can cause race conditions and deadlocks",
+      "evidence": "For performance, most main components of this algorithm are executed in parallel threads. Unexpected race conditions and deadlocks are other issues of this algorithm.",
+      "evidence_location": "line 94, section 'Issues'",
+      "confidence": "high",
+      "reason": "Documents a concrete known technical limitation (concurrency issues) relevant to reuse."
+    }
+  ]
+}

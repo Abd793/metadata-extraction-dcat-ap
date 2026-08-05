@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "license",
+      "value": "CC BY-NC 4.0",
+      "normalized_value": "CC BY-NC 4.0",
+      "evidence": "License: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Clear license information important for reuse"
+    },
+    {
+      "field": "authors",
+      "value": "Li Lucy, Jesse Dodge, David Bamman, Katherine A. Keith",
+      "normalized_value": "Li Lucy, Jesse Dodge, David Bamman, Katherine A. Keith",
+      "evidence": "**Authors**: Li Lucy, Jesse Dodge, David Bamman, Katherine A. Keith",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Author attribution for citation and credit"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2212.09676",
+      "normalized_value": "https://arxiv.org/abs/2212.09676",
+      "evidence": "**[Paper](https://arxiv.org/abs/2212.09676)**",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Link to academic paper for context and citation"
+    },
+    {
+      "field": "blog_url",
+      "value": "https://blog.allenai.org/words-as-gatekeepers-measuring-discipline-specific-terms-and-meanings-in-scholarly-publications-718dc56d08a5",
+      "normalized_value": "https://blog.allenai.org/words-as-gatekeepers-measuring-discipline-specific-terms-and-meanings-in-scholarly-publications-718dc56d08a5",
+      "evidence": "**[Blog post](https://blog.allenai.org/words-as-gatekeepers-measuring-discipline-specific-terms-and-meanings-in-scholarly-publications-718dc56d08a5)**",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Additional explanatory material for understanding the work"
+    },
+    {
+      "field": "description",
+      "value": "Scholarly text is often laden with jargon, or specialized language that can facilitate efficient in-group communication within fields but hinder understanding for out-groups. In this work, we develop and validate an interpretable approach for measuring scholarly jargon from text. Expanding the scope of prior work which focuses on word types, we use word sense induction to also identify words that are widespread but overloaded with different meanings across fields. We then estimate the prevalence of these discipline-specific words and senses across hundreds of subfields, and show that word senses provide a complementary, yet unique view of jargon alongside word types. We demonstrate the utility of our metrics for science of science and computational sociolinguistics by highlighting two key social implications. First, though most fields reduce their use of jargon when writing for general-purpose venues, and some fields (e.g., biological sciences) do so less than others. Second, the direction of correlation between jargon and citation rates varies among fields, but jargon is nearly always negatively correlated with interdisciplinary impact. Broadly, our findings suggest that though multidisciplinary venues intend to cater to more general audiences, some fields' writing norms may act as barriers rather than bridges, and thus impede the dispersion of scholarly ideas.",
+      "normalized_value": "Scholarly text is often laden with jargon, or specialized language that can facilitate efficient in-group communication within fields but hinder understanding for out-groups. In this work, we develop and validate an interpretable approach for measuring scholarly jargon from text. Expanding the scope of prior work which focuses on word types, we use word sense induction to also identify words that are widespread but overloaded with different meanings across fields. We then estimate the prevalence of these discipline-specific words and senses across hundreds of subfields, and show that word senses provide a complementary, yet unique view of jargon alongside word types. We demonstrate the utility of our metrics for science of science and computational sociolinguistics by highlighting two key social implications. First, though most fields reduce their use of jargon when writing for general-purpose venues, and some fields (e.g., biological sciences) do so less than others. Second, the direction of correlation between jargon and citation rates varies among fields, but jargon is nearly always negatively correlated with interdisciplinary impact. Broadly, our findings suggest that though multidisciplinary venues intend to cater to more general audiences, some fields' writing norms may act as barriers rather than bridges, and thus impede the dispersion of scholarly ideas.",
+      "evidence": "**Abstract**: Scholarly text is often laden with jargon, or specialized language that can facilitate efficient in-group communication within fields but hinder understanding for out-groups. In this work, we develop and validate an interpretable approach for measuring scholarly jargon from text. Expanding the scope of prior work which focuses on word types, we use word sense induction to also identify words that are widespread but overloaded with different meanings across fields. We then estimate the prevalence of these discipline-specific words and senses across hundreds of subfields, and show that word senses provide a complementary, yet unique view of jargon alongside word types. We demonstrate the utility of our metrics for science of science and computational sociolinguistics by highlighting two key social implications. First, though most fields reduce their use of jargon when writing for general-purpose venues, and some fields (e.g., biological sciences) do so less than others. Second, the direction of correlation between jargon and citation rates varies among fields, but jargon is nearly always negatively correlated with interdisciplinary impact. Broadly, our findings suggest that though multidisciplinary venues intend to cater to more general audiences, some fields' writing norms may act as barriers rather than bridges, and thus impede the dispersion of scholarly ideas.",
+      "evidence_location": "line 13",
+      "confidence": "high",
+      "reason": "Detailed abstract explaining project purpose and methodology"
+    },
+    {
+      "field": "data_source",
+      "value": "S2ORC",
+      "normalized_value": "S2ORC",
+      "evidence": "Information on accessing S2ORC can be found [here](https://github.com/allenai/s2orc).",
+      "evidence_location": "line 30",
+      "confidence": "high",
+      "reason": "Primary dataset used in the research"
+    },
+    {
+      "field": "dependency",
+      "value": "WSIatScale repo",
+      "normalized_value": "WSIatScale repo",
+      "evidence": "many scripts are modified versions of ones found in the [WSIatScale repo](https://github.com/allenai/WSIatScale)",
+      "evidence_location": "line 56",
+      "confidence": "high",
+      "reason": "Key dependency for word sense induction pipeline"
+    },
+    {
+      "field": "model",
+      "value": "scholarBERT",
+      "normalized_value": "scholarBERT",
+      "evidence": "--model scholarBERT",
+      "evidence_location": "lines 71, 77",
+      "confidence": "high",
+      "reason": "Specific model required for running the pipeline"
+    },
+    {
+      "field": "reproduction_command",
+      "value": "bash prepare_sense_input.sh 2>&1 | tee temp.log",
+      "normalized_value": "bash prepare_sense_input.sh 2>&1 | tee temp.log",
+      "evidence": "Run `bash prepare_sense_input.sh 2>&1 | tee temp.log` to do the next three scripts:",
+      "evidence_location": "line 58",
+      "confidence": "high",
+      "reason": "Initial command to start the WSI pipeline"
+    },
+    {
+      "field": "reproduction_command",
+      "value": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset s2orc --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "normalized_value": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset s2orc --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "evidence": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset s2orc --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "evidence_location": "lines 70-72",
+      "confidence": "high",
+      "reason": "Command for running write_mask_preds.py on S2ORC data"
+    },
+    {
+      "field": "reproduction_command",
+      "value": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset wikipedia --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "normalized_value": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset wikipedia --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "evidence": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset wikipedia --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "evidence_location": "lines 76-78",
+      "confidence": "high",
+      "reason": "Command for running write_mask_preds.py on Wikipedia data"
+    },
+    {
+      "field": "reproduction_command",
+      "value": "python create_inverted_index.py --replacements_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --vocab_path /home/lucyl/language-map-of-science/logs/sense_vocab/wsi_vocab_set_98_50.txt --outdir /home/lucyl/language-map-of-science/logs/inverted_index --input_ids_path /home/lucyl/language-map-of-science/data/input_paper_ids/journal_analysis.txt",
+      "normalized_value": "python create_inverted_index.py --replacements_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --vocab_path /home/lucyl/language-map-of-science/logs/sense_vocab/wsi_vocab_set_98_50.txt --outdir /home/lucyl/language-map-of-science/logs/inverted_index --input_ids_path /home/lucyl/language-map-of-science/data/input_paper_ids/journal_analysis.txt",
+      "evidence": "python create_inverted_index.py --replacements_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --vocab_path /home/lucyl/language-map-of-science/logs/sense_vocab/wsi_vocab_set_98_50.txt --outdir /home/lucyl/language-map-of-science/logs/inverted_index --input_ids_path /home/lucyl/language-map-of-science/data/input_paper_ids/journal_analysis.txt",
+      "evidence_location": "lines 84-86",
+      "confidence": "high",
+      "reason": "Command for creating inverted index"
+    },
+    {
+      "field": "reproduction_command",
+      "value": "python cluster_reps_per_token.py --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --out_dir /home/lucyl/language-map-of-science/logs/word_clusters_lemmed --lemmatize True --resolution 0.0",
+      "normalized_value": "python cluster_reps_per_token.py --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --out_dir /home/lucyl/language-map-of-science/logs/word_clusters_lemmed --lemmatize True --resolution 0.0",
+      "evidence": "python cluster_reps_per_token.py --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --out_dir /home/lucyl/language-map-of-science/logs/word_clusters_lemmed --lemmatize True --resolution 0.0",
+      "evidence_location": "lines 92-94",
+      "confidence": "high",
+      "reason": "Command for clustering representations with lemmatization"
+    },
+    {
+      "field": "reproduction_command",
+      "value": "python cluster_reps_per_token.py --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --out_dir /home/lucyl/language-map-of-science/logs/word_clusters_eval --lemmatize True --wiki_eval True --resolution 0.0",
+      "normalized_value": "python cluster_reps_per_token.py --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --out_dir /home/lucyl/language-map-of-science/logs/word_clusters_eval --lemmatize True --wiki_eval True --resolution 0.0",
+      "evidence": "python cluster_reps_per_token.py --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --out_dir /home/lucyl/language-map-of-science/logs/word_clusters_eval --lemmatize True --wiki_eval True --resolution 0.0",
+      "evidence_location": "lines 100-102",
+      "confidence": "high",
+      "reason": "Command for clustering Wiktionary evaluation words"
+    },
+    {
+      "field": "reproduction_command",
+      "value": "python assign_clusters_to_tokens.py --out_dir /home/lucyl/language-map-of-science/logs/sense_assignments_lemmed --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --dataset s2orc --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --cluster_dir /home/lucyl/language-map-of-science/logs/word_clusters_lemmed --lemmatize True --resolution 0.0",
+      "normalized_value": "python assign_clusters_to_tokens.py --out_dir /home/lucyl/language-map-of-science/logs/sense_assignments_lemmed --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --dataset s2orc --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --cluster_dir /home/lucyl/language-map-of-science/logs/word_clusters_lemmed --lemmatize True --resolution 0.0",
+      "evidence": "python assign_clusters_to_tokens.py --out_dir /home/lucyl/language-map-of-science/logs/sense_assignments_lemmed --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --dataset s2orc --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --cluster_dir /home/lucyl/language-map-of-science/logs/word_clusters_lemmed --lemmatize True --resolution 0.0",
+      "evidence_location": "lines 110-112",
+      "confidence": "high",
+      "reason": "Command for assigning clusters to tokens"
+    },
+    {
+      "field": "reproduction_command",
+      "value": "python assign_clusters_to_tokens.py --out_dir /home/lucyl/language-map-of-science/logs/sense_assignments_eval --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --dataset s2orc --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --cluster_dir /home/lucyl/language-map-of-science/logs/word_clusters_eval --lemmatize True --wiki_eval True --resolution 0.5",
+      "normalized_value": "python assign_clusters_to_tokens.py --out_dir /home/lucyl/language-map-of-science/logs/sense_assignments_eval --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --dataset s2orc --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --cluster_dir /home/lucyl/language-map-of-science/logs/word_clusters_eval --lemmatize True --wiki_eval True --resolution 0.5",
+      "evidence": "python assign_clusters_to_tokens.py --out_dir /home/lucyl/language-map-of-science/logs/sense_assignments_eval --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --dataset s2orc --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --cluster_dir /home/lucyl/language-map-of-science/logs/word_clusters_eval --lemmatize True --wiki_eval True --resolution 0.5",
+      "evidence_location": "lines 115-117",
+      "confidence": "high",
+      "reason": "Command for assigning clusters to Wiktionary evaluation tokens"
+    },
+    {
+      "field": "reproduction_command",
+      "value": "python jargonyness_per_paper.py --cutoff 0.1 --exp_name general_specific",
+      "normalized_value": "python jargonyness_per_paper.py --cutoff 0.1 --exp_name general_specific",
+      "evidence": "python jargonyness_per_paper.py --cutoff 0.1 --exp_name general_specific",
+      "evidence_location": "lines 130-132",
+      "confidence": "high",
+      "reason": "Command for calculating jargoniness per paper (general_specific experiment)"
+    },
+    {
+      "field": "reproduction_command",
+      "value": "python jargonyness_per_paper.py --cutoff 0.1 --exp_name regression_sample",
+      "normalized_value": "python jargonyness_per_paper.py --cutoff 0.1 --exp_name regression_sample",
+      "evidence": "python jargonyness_per_paper.py --cutoff 0.1 --exp_name regression_sample",
+      "evidence_location": "lines 133-134",
+      "confidence": "high",
+      "reason": "Command for calculating jargoniness per paper (regression_sample experiment)"
+    }
+  ]
+}

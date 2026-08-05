@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Soft-QMIX",
+      "normalized_value": "Soft-QMIX",
+      "evidence": "# Soft-QMIX",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Project name is given as the main header."
+    },
+    {
+      "field": "repository_based_on",
+      "value": "pymarl",
+      "normalized_value": "pymarl",
+      "evidence": "This repo is heavily based on the [pymarl](https://github.com/benellis3/pymarl2)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Explicitly states the repository this work builds upon, which is important for understanding dependencies and context."
+    },
+    {
+      "field": "installation_instructions",
+      "value": "please follow the installation guide in the original repo [pymarl](https://github.com/benellis3/pymarl2)",
+      "normalized_value": "please follow the installation guide in the original repo pymarl",
+      "evidence": "please follow the installation guide in the original repo [pymarl](https://github.com/benellis3/pymarl2)",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Provides definitive installation instructions by referencing the base repository guide."
+    },
+    {
+      "field": "run_command",
+      "value": "bash ./qmix.sh",
+      "normalized_value": "bash ./qmix.sh",
+      "evidence": "```bash\nbash ./qmix.sh\n```",
+      "evidence_location": "lines 13-15",
+      "confidence": "high",
+      "reason": "Primary command to run the code."
+    },
+    {
+      "field": "configuration_note",
+      "value": "You have to change `entity: \"xxx\"` in the `src/config/default.yaml` file to your own wandb entity.",
+      "normalized_value": "You have to change `entity: \"xxx\"` in the `src/config/default.yaml` file to your own wandb entity.",
+      "evidence": "> You have to change `entity: \"xxx\"` in the `src/config/default.yaml` file to your own wandb entity.",
+      "evidence_location": "line 17",
+      "confidence": "high",
+      "reason": "Critical configuration step for using Weights & Biases (wandb)."
+    },
+    {
+      "field": "hyperparameter_location",
+      "value": "qmix.sh",
+      "normalized_value": "qmix.sh",
+      "evidence": "you can change the hyperparameters in the `qmix.sh` file.",
+      "evidence_location": "line 19",
+      "confidence": "high",
+      "reason": "Identifies the file where key hyperparameters are configured."
+    },
+    {
+      "field": "example_command",
+      "value": "CUDA_VISIBLE_DEVICES=0 python src/main.py --config=qmix --env-config=sc2_gen_protoss",
+      "normalized_value": "CUDA_VISIBLE_DEVICES=0 python src/main.py --config=qmix --env-config=sc2_gen_protoss",
+      "evidence": "```bash\nCUDA_VISIBLE_DEVICES=0 python src/main.py --config=qmix --env-config=sc2_gen_protoss\n```",
+      "evidence_location": "lines NA 21-23",
+      "confidence": "high",
+      "reason": "A specific example command for running on a different map (protoss5v5)."
+    },
+    {
+      "field": "map_config_modification",
+      "value": "sc2_gen_terran.yaml",
+      "normalized_value": "sc2_gen_terran.yaml",
+      "evidence": "To run 10v10 map, you should change the `sc2_gen_terran.yaml` file",
+      "evidence_location": "line 25",
+      "confidence": "high",
+      "reason": "Identifies a specific configuration file that must be modified to change the environment."
+    },
+    {
+      "field": "map_configuration_example",
+      "value": "capability_config:\n    n_units: 10\n    n_enemies: 10",
+      "normalized_value": "capability_config:\n    n_units: 10\n    n_enemies:138 10",
+      "evidence": "```yaml\ncapability_config:\n    n_units: 10\n    n_enemies: 10\n```",
+      "evidence_location": "lines 27-31",
+      "confidence": "high",
+      "reason": "Shows exact YAML configuration changes needed for a 10v10 map."
+    },
+    {
+      "field": "paper_citation",
+      "value": "@article{chen2024soft,\n  title={Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization},\n  author={Chen, Wentse and Huang, Shiyu and Schneider, Jeff},\n  journal={arXiv preprint arXiv:2406.13930},\n  year={2024}\n}",
+      "normalized_value": "@article{chen2024soft,\n  title={Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization},\n  author={Chen, Wentse and Huang, Shiyu and Schneider, Jeff},\n  journal={arXiv preprint arXiv:2406.13930},\n  year={2024}\n}",
+      "evidence": "@article{chen2024soft,\n  title={Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization},\n  author={Chen, Wentse and Huang, Shiyu and Schneider, Jeff},\n  journal={arXiv preprint arXiv:2406.13930},\n  year={2024}\n}",
+      "evidence_location": "lines 37-42",
+      "confidence": "high",
+      "reason": "Full BibTeX citation for the related paper, essential for attribution and academic reference."
+    },
+    {
+      "field": "paper_title",
+      "value": "Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization",
+      "normalized_value": "Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization",
+      "evidence": "title={Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization},",
+      "evidence_location": "line 38",
+      "confidence": "high",
+      "reason": "Provides the full title of the associated publication."
+    },
+    {
+      "field": "paper_authors",
+      "value": "Chen, Wentse and Huang, Shiyu and Schneider, Jeff",
+      "normalized_value": "Chen, Wentse and Huang, Shiyu and Schneider, Jeff",
+      "evidence": "author={Chen, Wentse and Huang, Shiyu and Schneider, Jeff},",
+      "evidence_location": "line 39",
+      "confidence": "high",
+      "reason": "Identifies the authors of the paper, which is important for attribution."
+    },
+    {
+      "field": "paper_venue",
+      "value": "arXiv preprint arXiv:2406.13930",
+      "normalized_value": "arXiv preprint arXiv:2406.13930",
+      "evidence": "journal={arXiv preprint arXiv:2406.13930},",
+      "evidence_location": "line 40",
+      "confidence": "high",
+      "reason": "Provides the publication venue and specific arXiv identifier."
+    },
+    {
+      "field": "publication_year",
+      "value": "2024",
+      "normalized_value": "2024",
+      "evidence": "year={2024}",
+      "evidence_location": "line 41",
+      "confidence": "high",
+      "reason": "The year of the paper's publication."
+    }
+  ]
+}

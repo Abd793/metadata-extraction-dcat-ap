@@ -1,0 +1,175 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Neural Jump Ordinary Differential Equations",
+      "normalized_value": "Neural Jump Ordinary Differential Equations",
+      "evidence": "# Neural Jump Ordinary Differential Equations",
+      "evidence_location": "1, title",
+      "confidence": "high",
+      "reason": "Identifies the artifact by name."
+    },
+    {
+      "field": "purpose",
+      "value": "official implementation of Neural Jump Ordinary Differential Equations: Consistent Continuous-Time Prediction and Filtering",
+      "normalized_value": "official implementation of Neural Jump Ordinary Differential Equations: Consistent Continuous-Time Prediction and Filtering",
+      "evidence": "This repository is the official implementation of \n[Neural Jump Ordinary Differential Equations: Consistent Continuous-Time Prediction and Filtering](https://openreview.net/forum?id=JFKR3WqwyXR).",
+      "evidence_location": "5-6, introductory paragraph",
+      "confidence": "high",
+      "reason": "Explicitly states what the repository implements."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://openreview.net/forum?id=JFKR3WqwyXR",
+      "normalized_value": "https://openreview.net/forum?id=JFKR3WqwyXR",
+      "evidence": "[Neural Jump Ordinary Differential Equations: Consistent Continuous-Time Prediction and Filtering](https://openreview.net/forum?id=JFKR3WqwyXR).",
+      "evidence_location": "6, introductory paragraph",
+      "confidence": "high",
+      "reason": "Provides the associated paper link."
+    },
+    {
+      "field": "conference",
+      "value": "ICLR conference",
+      "normalized_value": "ICLR conference",
+      "evidence": "For a short summary of the paper see our video-presentation at the \n[ICLR conference](https://iclr.cc/virtual/2021/poster/3339).",
+      "evidence_location": "8-9, introductory paragraph",
+      "confidence": "high",
+      "reason": "Identifies the conference associated with the presentation."
+    },
+    {
+      "field": "runtime_environment",
+      "value": "Python 3.7",
+      "normalized_value": "Python 3.7",
+      "evidence": "This code was executed using Python 3.7.",
+      "evidence_location": "16-18, Requirements",
+      "confidence": "high",
+      "reason": "Specifies the documented Python execution environment."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "```setup\npip install -r requirements.txt\n```",
+      "evidence_location": "20-24, Requirements",
+      "confidence": "high",
+      "reason": "Defines the dependency installation step."
+    },
+    {
+      "field": "training_source_directory",
+      "value": "cd NJODE",
+      "normalized_value": "cd NJODE",
+      "evidence": "```train\ncd NJODE\n```",
+      "evidence_location": "32-35, Training & Testing",
+      "confidence": "high",
+      "reason": "Specifies the directory from which the training commands are run."
+    },
+    {
+      "field": "synthetic_training_datasets",
+      "value": "Black-Scholes, Heston, Ornstein-Uhlenbeck",
+      "normalized_value": "Black-Scholes, Heston, Ornstein-Uhlenbeck",
+      "evidence": "for Black-Scholes model:\n```train\npython demo.py --dataset='BlackScholes'\n```\n\nfor Heston model:\n```train\npython demo.py --dataset='Heston'\n```\n\nfor Ornstein-Uhlenbeck model:\n```train\npython demo.py --dataset='OrnsteinUhlenbeck'\n```",
+      "evidence_location": "37-50, Training & Testing",
+      "confidence": "high",
+      "reason": "Lists the three synthetic stochastic models supported by the documented training commands."
+    },
+    {
+      "field": "dataset_generation_behavior",
+      "value": "If no dataset for the model was generated yet, it will be generated automatically before the training starts.",
+      "normalized_value": "If no dataset for the model was generated yet, it will be generated automatically before the training starts.",
+      "evidence": "If no dataset for the model was generated yet, it will be generated \nautomatically before the training starts.",
+      "evidence_location": "52-53, Training & Testing",
+      "confidence": "high",
+      "reason": "Documents automatic dataset generation during training."
+    },
+    {
+      "field": "checkpoint_interval",
+      "value": "The model is trained and concurrently saved and tested after every <save_every> epoch.",
+      "normalized_value": "The model is trained and concurrently saved and tested after every <save_every> epoch.",
+      "evidence": "The model is trained and concurrently saved and tested after every <save_every>\nepoch.",
+      "evidence_location": "59-60, Training & Testing",
+      "confidence": "high",
+      "reason": "Specifies the training checkpoint and testing frequency."
+    },
+    {
+      "field": "pretrained_model_location",
+      "value": "../data/saved_models/id-x for x=1,2,3",
+      "normalized_value": "../data/saved_models/id-x for x=1,2,3",
+      "evidence": "Pre-trained models for each of the 3 stochastic models are distributed with the\ncode and saved in \"../data/saved_models/id-x\" for x=1,2,3.",
+      "evidence_location": "67-70, Pre-trained Models",
+      "confidence": "high",
+      "reason": "Provides the location and identifiers of the distributed pretrained models."
+    },
+    {
+      "field": "pretrained_model_commands",
+      "value": "Black-Scholes: python demo.py --model_id=1; Heston: python demo.py --model_id=2; Ornstein-Uhlenbeck: python demo.py --model_id=3",
+      "normalized_value": "Black-Scholes: python demo.py --model_id=1; Heston: python demo.py --model_id=2; Ornstein-Uhlenbeck: python demo.py --model_id=3",
+      "evidence": "- for Black-Scholes model:\n```demo\npython demo.py --model_id=1\n```\n\n- for Heston model:\n```demo\npython demo.py --model_id=2\n```\n\n- for Ornstein-Uhlenbeck model:\n```demo\npython demo.py --model_id=3\n```",
+      "evidence_location": "79-92, Pre-trained Models",
+      "confidence": "high",
+      "reason": "Maps each pretrained model identifier to its documented inference and plotting command."
+    },
+    {
+      "field": "climate_dataset",
+      "value": "The preprocessed climate data that was provided by GRU-ODE-Bayes together with the cross-validation indices generated with their provided code, is saved in data/training_data/climate/",
+      "normalized_value": "The preprocessed climate data that was provided by GRU-ODE-Bayes together with the cross-validation indices generated with their provided code, is saved in data/training_data/climate/",
+      "evidence": "The preprocessed climate data that was provided by [GRU-ODE-Bayes](https://arxiv.org/abs/1905.12374)\ntogether with the cross-validation indices generated with their provided \ncode, is saved in data/training_data/climate/, s.t. models can be trained right \naway.",
+      "evidence_location": "191-195, Training on Climate Dataset",
+      "confidence": "high",
+      "reason": "Identifies a bundled dataset, its preprocessing provenance, and storage path."
+    },
+    {
+      "field": "climate_evaluation_command",
+      "value": "get_climate_cross_validation(early_stop_after_epoch=100)",
+      "normalized_value": "get_climate_cross_validation(early_stop_after_epoch=100)",
+      "evidence": "get_climate_cross_validation(early_stop_after_epoch=100)\n``` \nin extras.py.",
+      "evidence_location": "209-228, Training on Climate Dataset",
+      "confidence": "high",
+      "reason": "Defines the documented climate cross-validation evaluation call and early-stopping setting."
+    },
+    {
+      "field": "physionet_dataset_behavior",
+      "value": "The Physionet dataset that was used by Latent ODEs for Irregularly-Sampled Time Series is downloaded and saved automatically when training for the first time. Moreover, the preprocessing steps provided in this paper are applied automatically.",
+      "normalized_value": "The Physionet dataset that was used by Latent ODEs for Irregularly-Sampled Time Series is downloaded and saved automatically when training for the first time. Moreover, the preprocessing steps provided in this paper are applied automatically.",
+      "evidence": "The Physionet dataset that was used by \n[Latent ODEs for Irregularly-Sampled Time Series](https://arxiv.org/abs/1907.03907)\nis downloaded and saved automatically when training for the first time. Moreover,\nthe preprocessing steps provided in this paper are applied automatically.",
+      "evidence_location": "231-235, Training on Physionet Dataset",
+      "confidence": "high",
+      "reason": "Documents automatic acquisition and preprocessing of the Physionet dataset."
+    },
+    {
+      "field": "evaluation_method",
+      "value": "validation (based on 5 runs)",
+      "normalized_value": "validation (based on 5 runs)",
+      "evidence": "For performing/evaluating the validation (based on 5 runs) use the function-call:",
+      "evidence_location": "249, Training on Physionet Dataset",
+      "confidence": "high",
+      "reason": "Specifies the documented validation protocol for Physionet experiments."
+    },
+    {
+      "field": "license_reference",
+      "value": "LICENSE.txt",
+      "normalized_value": "LICENSE.txt",
+      "evidence": "This code can be used in accordance with the LICENSE.txt.",
+      "evidence_location": "309-313, Usage, License & Citation",
+      "confidence": "high",
+      "reason": "Identifies the repository file governing code use."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{\nherrera2021neural,\ntitle={Neural Jump Ordinary Differential Equations: Consistent Continuous-Time Prediction and Filtering},\nauthor={Calypso Herrera and Florian Krach and Josef Teichmann},\nbooktitle={International Conference on Learning Representations},\nyear={2021},\nurl={https://openreview.net/forum?id=JFKR3WqwyXR}\n}",
+      "normalized_value": "@inproceedings{\nherrera2021neural,\ntitle={Neural Jump Ordinary Differential Equations: Consistent Continuous-Time Prediction and Filtering},\nauthor={Calypso Herrera and Florian Krach and Josef Teichmann},\nbooktitle={International Conference on Learning Representations},\nyear={2021},\nurl={https://openreview.net/forum?id=JFKR3WqwyXR}\n}",
+      "evidence": "```\n@inproceedings{\nherrera2021neural,\ntitle={Neural Jump Ordinary Differential Equations: Consistent Continuous-Time Prediction and Filtering},\nauthor={Calypso Herrera and Florian Krach and Josef Teichmann},\nbooktitle={International Conference on Learning Representations},\nyear={2021},\nurl={https://openreview.net/forum?id=JFKR3WqwyXR}\n}\n```",
+      "evidence_location": "315-324, Usage, License & Citation",
+      "confidence": "high",
+      "reason": "Provides a reusable bibliographic citation with authors, venue, year, title, and URL."
+    },
+    {
+      "field": "code_references",
+      "value": "https://github.com/edebrouwer/gru_ode_bayes; https://github.com/YuliaRubanova/latent_ode",
+      "normalized_value": "https://github.com/edebrouwer/gru_ode_bayes; https://github.com/YuliaRubanova/latent_ode",
+      "evidence": "Parts of this code are based on and/or copied from the code of: \nhttps://github.com/edebrouwer/gru_ode_bayes, of the paper \n[GRU-ODE-Bayes: Continuous modeling of sporadically-observed time series](https://arxiv.org/abs/1905.12374)\nand the code of: https://github.com/YuliaRubanova/latent_ode, of the paper\n[Latent ODEs for Irregularly-Sampled Time Series](https://arxiv.org/abs/1907.03907).",
+      "evidence_location": "327-332, Acknowledgements and References",
+      "confidence": "high",
+      "reason": "Identifies external codebases used as implementation sources."
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "BLEBeacon Dataset",
+      "normalized_value": "BLEBeacon Dataset",
+      "evidence": "# BLEBeacon Dataset",
+      "evidence_location": "1; header",
+      "confidence": "high",
+      "reason": "Provides the explicit name used to identify the dataset."
+    },
+    {
+      "field": "dataset_description",
+      "value": "The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month.",
+      "normalized_value": "The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE) advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month.",
+      "evidence": "The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month.",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Summarizes the data type, source devices, participants, setting, and collection duration."
+    },
+    {
+      "field": "data_collection_infrastructure",
+      "value": "A network of Raspberry Pi 3 (RPi)-based edge devices were deployed inside a multi-floor facility continuously gathering BLE advertisement packets and storing them in a cloud-based environment.",
+      "normalized_value": "A network of Raspberry Pi 3 (RPi)-based edge devices were deployed inside a multi-floor facility continuously gathering BLE advertisement packets and storing them in a cloud-based environment.",
+      "evidence": "A network of Raspberry Pi 3 (RPi)-based edge devices were deployed inside a multi-floor facility continuously gathering BLE advertisement packets and storing them in a cloud-based environment.",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Documents the sensing hardware, deployment environment, collection process, and storage environment."
+    },
+    {
+      "field": "application_focus",
+      "value": "The focus is on presenting a real-life realization of a location-aware sensing infrastructure, that can provide insights for smart sensing platforms, crowd-based applications, building management, and user-localization frameworks.",
+      "normalized_value": "The focus is on presenting a real-life realization of a location-aware sensing infrastructure, that can provide insights for smart sensing platforms, crowd-based applications, building management, and user-localization frameworks.",
+      "evidence": "The focus is on presenting a real-life realization of a location-aware sensing infrastructure, that can provide insights for smart sensing platforms, crowd-based applications, building management, and user-localization frameworks.",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Identifies the stated use cases and research/application context."
+    },
+    {
+      "field": "dataset_access",
+      "value": "https://crawdad.org/unm/blebeacon/20190312/",
+      "normalized_value": "https://crawdad.org/unm/blebeacon/20190312/",
+      "evidence": "Since 2019, the BLEBeacon dataset is part of the Community Resource for Archiving Wireless Data At Dartmouth (CRAWDAD): https://crawdad.org/unm/blebeacon/20190312/",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Provides the explicitly stated archival access location."
+    },
+    {
+      "field": "beacon_hardware",
+      "value": "Users carried off-the-shelf Gimbal Series 10 iBeacons",
+      "normalized_value": "Users carried off-the-shelf Gimbal Series 10 iBeacons",
+      "evidence": "Users carried off-the-shelf Gimbal Series 10 iBeacons that continuously transmit BLE advertisement packets.",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Identifies the beacon hardware used to generate the traces."
+    },
+    {
+      "field": "beacon_transmission_configuration",
+      "value": "The periodic transmission rate for each beacon is set to 1 Hz, with omni-directional antenna propagation setting, and transmission power of 0 dBm.",
+      "normalized_value": "The periodic transmission rate for each beacon is set to 1 Hz, with omni-directional antenna propagation setting, and transmission power of 0 dBm.",
+      "evidence": "The periodic transmission rate for each beacon is set to 1 Hz, with omni-directional antenna propagation setting, and transmission power of 0 dBm.",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Supplies concrete radio parameters useful for interpreting or reproducing the data collection."
+    },
+    {
+      "field": "collection_operations",
+      "value": "RSSI Report and Check-In/Check-Out Report",
+      "normalized_value": "RSSI Report and Check-In/Check-Out Report",
+      "evidence": "Regarding system operation two approaches were utilized in parallel:",
+      "evidence_location": "21",
+      "confidence": "medium",
+      "reason": "The following documented operation descriptions explicitly identify the two parallel collection modes."
+    },
+    {
+      "field": "rssi_report_contents",
+      "value": "all advertisement packet receptions from beacon devices are directly reported to a server with a message that contains the beacon/user ID, the packet's Received Signal Strength Indicator (RSSI), a reception timestamp, and finally the ID of the RPi that received the advertisement",
+      "normalized_value": "all advertisement packet receptions from beacon devices are directly reported to a server with a message that contains the beacon/user ID, the packet's Received Signal Strength Indicator (RSSI), a reception timestamp, and finally the ID of the RPi that received the advertisement",
+      "evidence": "* RSSI Report: all advertisement packet receptions from beacon devices are directly reported to a server with a message that contains the beacon/user ID, the packet's Received Signal Strength Indicator (RSSI), a reception timestamp, and finally the ID of the RPi that received the advertisement (Fig. 1).",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Describes the packet-level report and its recorded attributes."
+    },
+    {
+      "field": "check_in_check_out_logic",
+      "value": "A check in-timestamp is created during the user's initial entry, and while this beacon is still being detected by the RPi, a last seen-timestamp is updated. When the beacon is no longer detected a Check-In/Check-Out report packet is created and sent to the server containing the beacon/user ID, the check in-timestamp, the last seen-timestamp, and finally the ID of the RPi (Fig. 2). A thirty-second period is used to ensure that the occupant exited the RPi proximity.",
+      "normalized_value": "A check in-timestamp is created during the user's initial entry, and while this beacon is still being detected by the RPi, a last seen-timestamp is updated. When the beacon is no longer detected a Check-In/Check-Out report packet is created and sent to the server containing the beacon/user ID, the check in-timestamp, the last seen-timestamp, and finally the ID of the RPi (Fig. 2). A thirty-second period is used to ensure that the occupant exited the RPi proximity.",
+      "evidence": "* Check-In/Check-Out Report: each RPi scanner continuously manages a list of current occupants/users in its proximity. A check in-timestamp is created during the user's initial entry, and while this beacon is still being detected by the RPi, a last seen-timestamp is updated. When the beacon is no longer detected a Check-In/Check-Out report packet is created and sent to the server containing the beacon/user ID, the check in-timestamp, the last seen-timestamp, and finally the ID of the RPi (Fig. 2). A thirty-second period is used to ensure that the occupant exited the RPi proximity.",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Defines how occupancy intervals are formed and the timeout used to determine departure."
+    },
+    {
+      "field": "dataset_files",
+      "value": "two files, one with the trial readings from the RSSI report operation (RSSI Report file) and the other from the Check-In/Check-Out report operation (Check-In Check-Out Report file)",
+      "normalized_value": "two files, one with the trial readings from the RSSI report operation (RSSI Report file) and the other from the Check-In/Check-Out report operation (Check-In Check-Out Report file)",
+      "evidence": "The BLEBeacon dataset contains two files, one with the trial readings from the RSSI report operation (RSSI Report file) and the other from the Check-In/Check-Out report operation (Check-In Check-Out Report file).",
+      "evidence_location": "34",
+      "confidence": "high",
+      "reason": "Identifies the dataset's file-level organization and the purpose of each file."
+    },
+    {
+      "field": "rssi_report_schema",
+      "value": "Entry_id, Beacon_id, RSSI, Timestamp, RPi_id",
+      "normalized_value": "Entry_id, Beacon_id, RSSI, Timestamp, RPi_id",
+      "evidence": "The RSSI Report file contains the following entries:\n* Entry_id: unique identifier of a packet in the dataset.\n* Beacon_id: unique identifier of the occupant/beacon.\n* RSSI: the Received Signal Strength Indicator (RSSI) in dB.\n* Timestamp: Date (Month/Day/Year) and Unix time (Hour:Second) of the advertisement packet reception moment from the Rpi.\n* RPi_id: RPi that received the packet.",
+      "evidence_location": "35-40; ## Dataset",
+      "confidence": "high",
+      "reason": "Provides the fields and definitions needed to parse and reuse the RSSI report."
+    },
+    {
+      "field": "check_in_check_out_schema",
+      "value": "Entry_id, Beacon_id, RPi_id, In_time, Out_time",
+      "normalized_value": "Entry_id, Beacon_id, RPi_id, In_time, Out_time",
+      "evidence": "The Check-In/Check-Out Report file contains Entry_id, Beacon_id, and RPi_id as described above with the addition of two entries namely:\n* In_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the moment a user enters the RPi's vicinity and the first advertisement packet is received.\n* Out_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the last advertisement packet received from the same user by the specific RPi.",
+      "evidence_location": "43-45; ## Dataset",
+      "confidence": "high",
+      "reason": "Provides the fields and temporal semantics needed to parse occupancy reports."
+    },
+    {
+      "field": "primary_reference",
+      "value": "D. Sikeridis, I. Papapanagiotou, M. Devetsikiotis, \"BLEBeacon: A Real-Subject Trial Dataset from Mobile Bluetooth Low Energy Beacons\", arXiv preprint arXiv:1802.08782, 2018.",
+      "normalized_value": "D. Sikeridis, I. Papapanagiotou, M. Devetsikiotis, \"BLEBeacon: A Real-Subject Trial Dataset from Mobile Bluetooth Low Energy Beacons\", arXiv preprint arXiv:1802.08782, 2018.",
+      "evidence": "Further information and a detailed description of the sensing infrastructure setup, the real-subject trial, and the BLEBeacon dataset can be found in: D. Sikeridis, I. Papapanagiotou, M. Devetsikiotis,  [\"BLEBeacon: A Real-Subject Trial Dataset from Mobile Bluetooth Low Energy Beacons\"](https://arxiv.org/abs/1802.08782), arXiv preprint arXiv:1802.08782, 2018.",
+      "evidence_location": "50; # Readme",
+      "confidence": "high",
+      "reason": "Provides the linked publication for detailed methodology and dataset context."
+    },
+    {
+      "field": "dataset_citation",
+      "value": "Dimitrios Sikeridis, Ioannis Papapanagiotou, Michael Devetsikiotis, CRAWDAD dataset unm/blebeacon (v. 2019‑03‑12), downloaded from https://crawdad.org/unm/blebeacon/20190312, Mar 2019.",
+      "normalized_value": "Dimitrios Sikeridis, Ioannis Papapanagiotou, Michael Devetsikiotis, CRAWDAD dataset unm/blebeacon (v. 2019‑03‑12), downloaded from https://crawdad.org/unm/blebeacon/20190312, Mar 2019.",
+      "evidence": "> Dimitrios Sikeridis, Ioannis Papapanagiotou, Michael Devetsikiotis, CRAWDAD dataset unm/blebeacon (v. 2019‑03‑12), downloaded from https://crawdad.org/unm/blebeacon/20190312, Mar 2019.",
+      "evidence_location": "7; # BLEBeacon Dataset",
+      "confidence": "high",
+      "reason": "Supplies the README's explicit attribution and versioned citation text."
+    }
+  ]
+}

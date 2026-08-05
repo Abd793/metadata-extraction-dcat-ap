@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "paper_title",
+      "value": "Evaluating Mathematical Reasoning Beyond Accuracy",
+      "normalized_value": "Evaluating Mathematical Reasoning Beyond Accuracy",
+      "evidence": "# Evaluating Mathematical Reasoning Beyond Accuracy",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Title of the research paper documented in the header."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2404.05692.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2404.05692.pdf",
+      "evidence": "[Evaluating Mathematical Reasoning Beyond Accuracy](https://arxiv.org/pdf/2404.05692.pdf)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Direct link to the research paper PDF on arXiv."
+    },
+    {
+      "field": "artifact_description",
+      "value": "ReasonEval, a suite comprising a new evaluation methodology with defined metrics for assessing mathematical reasoning quality and corresponding LLM-based evaluators for automated calculation.",
+      "normalized_value": "ReasonEval, a suite comprising a new evaluation methodology with defined metrics for assessing mathematical reasoning quality and corresponding LLM-based evaluators for automated calculation",
+      "evidence": "To measure reasoning beyond final-answer accuracy, we develop **ReasonEval**, a suite comprising a new evaluation methodology with defined metrics for assessing mathematical reasoning quality and corresponding LLM-based evaluators for automated calculation.",
+      "evidence_location": "18, ## Introduction",
+      "confidence": "high",
+      "reason": "Description of the purpose and components of the ReasonEval artifact."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/GAIR-NLP/ReasonEval",
+      "normalized_value": "https://github.com/GAIR-NLP/ReasonEval",
+      "evidence": "```bash\ngit clone https://github.com/GAIR-NLP/ReasonEval\ncd ReasonEval\n```",
+      "evidence_location": "42-45, ## Quick Start > ### Setup",
+      "confidence": "high",
+      "reason": "URL to clone the GitHub repository."
+    },
+    {
+      "field": "python_version",
+      "value": "3.10",
+      "normalized_value": "3.10",
+      "evidence": "conda create -n ReasonEval python=3.10",
+      "evidence_location": "48, ## Quick Start > ### Setup",
+      "confidence": "high",
+      "reason": "Required Python version for creating the Conda environment."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "```bash\npip install -r requirements.txt\n```",
+      "evidence_location": "51-53, ## Quick Start > ### Setup",
+      "confidence": "high",
+      "reason": "Command to install required dependencies."
+    },
+    {
+      "field": "model_checkpoint_url",
+      "value": "https://huggingface.co/GAIR/ReasonEval-7B",
+      "normalized_value": "https://huggingface.co/GAIR/ReasonEval-7B",
+      "evidence": "[🤗 GAIR/ReasonEval-7B](https://huggingface.co/GAIR/ReasonEval-7B)",
+      "evidence_location": "65, ## Quick Start > ### Model",
+      "confidence": "high",
+      "reason": "Hugging Face checkpoint URL for the ReasonEval-7B model."
+    },
+    {
+      "field": "model_checkpoint_url",
+      "value": "https://huggingface.co/GAIR/ReasonEval-34B",
+      "normalized_value": "https://huggingface.co/GAIR/ReasonEval-34B",
+      "evidence": "[🤗 GAIR/ReasonEval-34B](https://huggingface.co/GAIR/ReasonEval-34B)",
+      "evidence_location": "66, ## Quick Start > ### Model",
+      "confidence": "high",
+      "reason": "Hugging Face checkpoint URL for the ReasonEval-34B model."
+    },
+    {
+      "field": "base_model",
+      "value": "WizardMath-7B-V1.1",
+      "normalized_value": "WizardMath-7B-V1.1",
+      "evidence": "[WizardMath-7B-V1.1](https://huggingface.co/WizardLM/WizardMath-7B-V1.1)",
+      "evidence_location": "65, ## Quick Start > ### Model",
+      "confidence": "high",
+      "reason": "Base model from which ReasonEval-7B was fine-tuned."
+    },
+    {
+      "field": "base_model",
+      "value": "llemma_34b",
+      "normalized_value": "llemma_34b",
+      "evidence": "[llemma_34b](https://huggingface.co/EleutherAI/llemma_34b)",
+      "evidence_location": "66, ## Quick Start > ### Model",
+      "confidence": "high",
+      "reason": "Base model from which ReasonEval-34B was fine-tuned."
+    },
+    {
+      "field": "license",
+      "value": "Apache License 2.0",
+      "normalized_value": "Apache License 2.0",
+      "evidence": "[Apache License 2.0](https://www.apache.org/licenses/)",
+      "evidence_location": "66, ## Quick Start > ### Model",
+      "confidence": "high",
+      "reason": "License for the ReasonEval-34B model."
+    },
+    {
+      "field": "usage_command",
+      "value": "python ./codes/examples.py\n--model_name_or_path GAIR/ReasonEval-7B # Specify the model name or path here\n--model_size 7B # Indicate the model size of ReasonEval (7B or 34B)",
+      "normalized_value": "python ./codes/examples.py --model_name_or_path GAIR/ReasonEval-7B # Specify the model name or path here --model_size 7B # Indicate the model size of ReasonEval (7B or 34B)",
+      "evidence": "```bash\n# examples\n## Replace the 'question' and 'reasoning_steps' in ./codes/examples.py with your own content.\npython ./codes/examples.py\n--model_name_or_path GAIR/ReasonEval-7B # Specify the model name or path here\n--model_size 7B # Indicate the model size of ReasonEval (7B or 34B)\n```",
+      "evidence_location": "89-95, ## Quick Start > ### Usage",
+      "confidence": "high",
+      "reason": "Command to run the evaluation script on example input."
+    },
+    {
+      "field": "evaluation_commands",
+      "value": "python ./codes/mr-gsm8k_eval.py\npython ./codes/mr-math_eval.py --error_type invalid\npython ./codes/mr-math_eval.py --error_type redundant",
+      "normalized_value": "python ./codes/mr-gsm8k_eval.py python ./codes/mr-math_eval.py --error_type invalid python ./codes/mr-math_eval.py --error_type redundant",
+      "evidence": "```bash\npython ./codes/mr-gsm8k_eval.py\npython ./codes/mr-math_eval.py --error_type invalid\npython ./codes/mr-math_eval.py --error_type redundant\n```",
+      "evidence_location": "210-214, ## Meta Evaluation > ### Code",
+      "confidence": "high",
+      "reason": "Commands to reproduce paper evaluation results across meta-evaluation datasets."
+    },
+    {
+      "field": "dataset",
+      "value": "Meta-Reasoning-MATH",
+      "normalized_value": "Meta-Reasoning-MATH",
+      "evidence": "Meta-Reasoning-MATH",
+      "evidence_location": "101, ## Meta Evaluation > ### Datasets",
+      "confidence": "high",
+      "reason": "Dataset constructed for meta-evaluation to judge step correctness and error location."
+    },
+    {
+      "field": "dataset",
+      "value": "Meta-Reasoning-GSM8K",
+      "normalized_value": "Meta-Reasoning-GSM8K",
+      "evidence": "Meta-Reasoning-GSM8K",
+      "evidence_location": "164, ## Meta Evaluation > ### Datasets",
+      "confidence": "high",
+      "reason": "Meta-evaluation dataset consisting of solutions from GSM8K problems."
+    },
+    {
+      "field": "dataset",
+      "value": "Perturbation",
+      "normalized_value": "Perturbation",
+      "evidence": "Perturbation",
+      "evidence_location": "165, ## Meta Evaluation > ### Datasets",
+      "confidence": "high",
+      "reason": "Meta-evaluation dataset introducing error types to intermediate steps."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "- **Validity**: The step contains no mistakes in calculation and logic.\n- **Redundancy**: The step lacks utility in solving the problem but is still valid.",
+      "normalized_value": "- **Validity**: The step contains no mistakes in calculation and logic. - **Redundancy**: The step lacks utility in solving the problem but is still valid",
+      "evidence": "- **Validity**: The step contains no mistakes in calculation and logic.\n- **Redundancy**: The step lacks utility in solving the problem but is still valid.",
+      "evidence_location": "19-20, ## Introduction",
+      "confidence": "high",
+      "reason": "Key metrics evaluated by ReasonEval to assess step-by-step mathematical reasoning quality."
+    },
+    {
+      "field": "citation",
+      "value": "@article{xia2024evaluating,\n        title={Evaluating Mathematical Reasoning Beyond Accuracy}, \n        author={Xia, Shijie and Li, Xuefeng and Liu, Yixin and Wu, Tongshuang and Liu, Pengfei},\n        journal={arXiv preprint arXiv:2404.05692},\n        year={2024},\n}",
+      "normalized_value": "@article{xia2024evaluating, title={Evaluating Mathematical Reasoning Beyond Accuracy}, author={Xia, Shijie and Li, Xuefeng and Liu, Yixin and Wu, Tongshuang and Liu, Pengfei}, journal={arXiv preprint arXiv:2404.05692}, year={2024}, }",
+      "evidence": "```\n@article{xia2024evaluating,\n        title={Evaluating Mathematical Reasoning Beyond Accuracy}, \n        author={Xia, Shijie and Li, Xuefeng and Liu, Yixin and Wu, Tongshuang and Liu, Pengfei},\n        journal={arXiv preprint arXiv:2404.05692},\n        year={2024},\n}\n```",
+      "evidence_location": "218-225, ## Citation",
+      "confidence": "high",
+      "reason": "BibTeX entry for citing the associated paper."
+    }
+  ]
+}

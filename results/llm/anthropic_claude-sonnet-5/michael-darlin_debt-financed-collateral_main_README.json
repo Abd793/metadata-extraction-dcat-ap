@@ -1,0 +1,211 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Debt-Financed Collateral",
+      "normalized_value": "Debt-Financed Collateral",
+      "evidence": "# Debt-Financed Collateral",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Title of the repository, identifying the artifact name."
+    },
+    {
+      "field": "associated_paper",
+      "value": "\"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\"",
+      "normalized_value": "Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem",
+      "evidence": "This repository documents the data analysis performed for the paper \"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\" ([ArXiv](https://arxiv.org/abs/2204.11107)).",
+      "evidence_location": "line 3, ## Overview",
+      "confidence": "high",
+      "reason": "Names the paper this artifact supports, enabling citation and context."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2204.11107",
+      "normalized_value": "https://arxiv.org/abs/2204.11107",
+      "evidence": "([ArXiv](https://arxiv.org/abs/2204.11107))",
+      "evidence_location": "line 3, ## Overview",
+      "confidence": "high",
+      "reason": "Direct link to the associated paper for citation/reference."
+    },
+    {
+      "field": "database_system",
+      "value": "MariaDB",
+      "normalized_value": "MariaDB",
+      "evidence": "All relevant data was stored in a MariaDB database; an export of the table data is available [here](https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_).",
+      "evidence_location": "line 3, ## Overview",
+      "confidence": "high",
+      "reason": "Specifies the database technology used to store the collected data, relevant for reproducing the data pipeline."
+    },
+    {
+      "field": "dataset_export_link",
+      "value": "https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_",
+      "normalized_value": "https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_",
+      "evidence": "an export of the table data is available [here](https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_)",
+      "evidence_location": "line 3, ## Overview",
+      "confidence": "high",
+      "reason": "Link to the exported dataset needed to reproduce or reuse the underlying data."
+    },
+    {
+      "field": "data_collection_service",
+      "value": "Google's BigQuery service",
+      "normalized_value": "Google BigQuery",
+      "evidence": "The majority of event data was collected through Google's BigQuery service, using Python.",
+      "evidence_location": "line 9, 1-scrape",
+      "confidence": "high",
+      "reason": "Names the external cloud service used for large-scale data collection, important for reproducibility."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "**Large-scale data collection (Python)** - The majority of event data was collected through Google's BigQuery service, using Python.",
+      "evidence_location": "line 9, 1-scrape",
+      "confidence": "high",
+      "reason": "Identifies a programming language used in the artifact's data collection scripts."
+    },
+    {
+      "field": "programming_language",
+      "value": "NodeJS",
+      "normalized_value": "NodeJS",
+      "evidence": "**One-off data collection (NodeJS)** - These scripts were used to collect more targeted information.",
+      "evidence_location": "line 12, 1-scrape",
+      "confidence": "high",
+      "reason": "Identifies a programming language/runtime used for one-off data collection scripts."
+    },
+    {
+      "field": "programming_language",
+      "value": "R",
+      "normalized_value": "R",
+      "evidence": "*analysis.r* contains the R code used to create charts and tables for the final paper.",
+      "evidence_location": "line 24, 3-analyze",
+      "confidence": "high",
+      "reason": "Identifies the language used for the final analysis/visualization stage of the artifact."
+    },
+    {
+      "field": "code_file",
+      "value": "defiEvents.py",
+      "normalized_value": "defiEvents.py",
+      "evidence": "*defiEvents.py*: collection of classes used for data collection.",
+      "evidence_location": "line 10, 1-scrape",
+      "confidence": "high",
+      "reason": "Names a specific reusable code file that defines the data collection classes."
+    },
+    {
+      "field": "code_file",
+      "value": "collectEvents.py",
+      "normalized_value": "collectEvents.py",
+      "evidence": "*collectEvents.py*: script to collect data. This script was run once for each project. Code was written to collect data across multiple protocol versions (e.g. both Version 1 and Version 2 of Uniswap), but only data from the most recent protocol was used.",
+      "evidence_location": "line 11, 1-scrape",
+      "confidence": "high",
+      "reason": "Names the main script used to run data collection, key for reproducing the pipeline."
+    },
+    {
+      "field": "code_file",
+      "value": "mkrVaults.js",
+      "normalized_value": "mkrVaults.js",
+      "evidence": "*mkrVaults.js*: Collect data on all existing Maker vaults, including all addresses associated to the vault (owner, DSProxy, and UrnHandler addresses).",
+      "evidence_location": "line 13, 1-scrape",
+      "confidence": "high",
+      "reason": "Names a script collecting MakerDAO vault data, part of the reproducible data collection pipeline."
+    },
+    {
+      "field": "code_file",
+      "value": "mkrRateAdjust.js",
+      "normalized_value": "mkrRateAdjust.js",
+      "evidence": "*mkrRateAdjust.js*: Collect information to adjust DAI amounts recorded in frob transactions. Frob transaction amounts (specifically for debt withdrawal/repayment) are recorded without interest rate adjustments. This file collects information to adjust DAI amounts according to the prevailing cumulative interest rate in the Maker Vat contract.",
+      "evidence_location": "line 14, 1-scrape",
+      "confidence": "high",
+      "reason": "Names a script for interest-rate adjustment of DAI amounts, relevant to reproducing the analysis methodology."
+    },
+    {
+      "field": "code_file",
+      "value": "uniExchanges.js",
+      "normalized_value": "uniExchanges.js",
+      "evidence": "*uniExchanges.js*: Collect pair addresses from Uniswap for all tokens used in the final analysis.",
+      "evidence_location": "line 15, 1-scrape",
+      "confidence": "high",
+      "reason": "Names a script collecting Uniswap pair addresses used in the final analysis."
+    },
+    {
+      "field": "code_file",
+      "value": "usdValues.js",
+      "normalized_value": "usdValues.js",
+      "evidence": "*usdValues.js*: Collect hourly USD pricing data from Coinbase and update each transaction with the most recent USD price.",
+      "evidence_location": "line 16, 1-scrape",
+      "confidence": "high",
+      "reason": "Names a script collecting pricing data from Coinbase, part of the data pipeline."
+    },
+    {
+      "field": "data_source",
+      "value": "Coinbase",
+      "normalized_value": "Coinbase",
+      "evidence": "Collect hourly USD pricing data from Coinbase and update each transaction with the most recent USD price.",
+      "evidence_location": "line 16, 1-scrape",
+      "confidence": "high",
+      "reason": "Names the external price data source used in the pipeline."
+    },
+    {
+      "field": "code_file",
+      "value": "algo.ipynb",
+      "normalized_value": "algo.ipynb",
+      "evidence": "*algo.ipynb* contains the algorithm used to estimate the percentage of debt-financed collateral",
+      "evidence_location": "line 20, 2-transform",
+      "confidence": "high",
+      "reason": "Names the notebook implementing the core algorithm for the artifact's estimation task."
+    },
+    {
+      "field": "task",
+      "value": "estimate the percentage of debt-financed collateral",
+      "normalized_value": "estimate the percentage of debt-financed collateral",
+      "evidence": "*algo.ipynb* contains the algorithm used to estimate the percentage of debt-financed collateral",
+      "evidence_location": "line 20, 2-transform",
+      "confidence": "high",
+      "reason": "Describes the core analytical task the artifact's algorithm performs."
+    },
+    {
+      "field": "code_file",
+      "value": "analysis.r",
+      "normalized_value": "analysis.r",
+      "evidence": "*analysis.r* contains the R code used to create charts and tables for the final paper.",
+      "evidence_location": "line 24, 3-analyze",
+      "confidence": "high",
+      "reason": "Names the script producing the final charts/tables reported in the paper, key for reproducing figures."
+    },
+    {
+      "field": "utility_file",
+      "value": "abi.js",
+      "normalized_value": "abi.js",
+      "evidence": "*abi.js*: ABIs for relevant contracts",
+      "evidence_location": "line 29, utils",
+      "confidence": "high",
+      "reason": "Names a utility file containing contract ABIs needed for interacting with smart contracts."
+    },
+    {
+      "field": "utility_file",
+      "value": "addr.js",
+      "normalized_value": "addr.js",
+      "evidence": "*addr.js*: relevant addresses",
+      "evidence_location": "line 30, utils",
+      "confidence": "high",
+      "reason": "Names a utility file listing relevant contract/account addresses used across scripts."
+    },
+    {
+      "field": "utility_file",
+      "value": "eventLib.js",
+      "normalized_value": "eventLib.js",
+      "evidence": "*eventLib.js*: helper functions",
+      "evidence_location": "line 31, utils",
+      "confidence": "high",
+      "reason": "Names a utility file with helper functions used by the NodeJS scripts."
+    },
+    {
+      "field": "repository_structure",
+      "value": "1-scrape, 2-transform, 3-analyze, utils",
+      "normalized_value": "1-scrape, 2-transform, 3-analyze, utils",
+      "evidence": "**1-scrape**\n\n- **Large-scale data collection (Python)**",
+      "evidence_location": "lines 7-28",
+      "confidence": "medium",
+      "reason": "Describes the folder organization of the repository, useful for navigating the artifact's pipeline stages."
+    }
+  ]
+}

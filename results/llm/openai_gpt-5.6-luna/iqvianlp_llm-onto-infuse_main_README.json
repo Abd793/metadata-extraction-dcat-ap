@@ -1,0 +1,220 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Ontological knowledge infusion in embedding-Large Language Models",
+      "normalized_value": "Ontological knowledge infusion in embedding-Large Language Models",
+      "evidence": "## Ontological knowledge infusion in embedding-Large Language Models",
+      "evidence_location": "1; header",
+      "confidence": "high",
+      "reason": "Identifies the repository artifact."
+    },
+    {
+      "field": "purpose",
+      "value": "improve an embedding-Large Language Model (embedding-LLM) of interest by infusing the knowledge formalized by a reference ontology",
+      "normalized_value": "improve an embedding-Large Language Model (embedding-LLM) of interest by infusing the knowledge formalized by a reference ontology",
+      "evidence": "The code of this repository implements a novel approach to improve an embedding-Large Language \nModel (embedding-LLM) of interest by infusing the knowledge formalized by a reference ontology:",
+      "evidence_location": "3-4",
+      "confidence": "high",
+      "reason": "Explicitly states the repository's main purpose."
+    },
+    {
+      "field": "method_goal",
+      "value": "boosting the ability of the considered embedding-LLM to effectively model the knowledge domain described by the infused ontology",
+      "normalized_value": "boosting the ability of the considered embedding-LLM to effectively model the knowledge domain described by the infused ontology",
+      "evidence": "ontological \nknowledge infusion aims at boosting the ability of the considered embedding-LLM to effectively model \nthe knowledge domain described by the infused ontology.",
+      "evidence_location": "4-6",
+      "confidence": "high",
+      "reason": "Describes the intended benefit of the method."
+    },
+    {
+      "field": "reference_ontology",
+      "value": "disease ontology MONDO",
+      "normalized_value": "disease ontology MONDO",
+      "evidence": "Hereinafter we describe the procedure to follow to infuse the disease knowledge formalized by the \n[disease ontology MONDO](https://mondo.monarchinitiative.org/)",
+      "evidence_location": "12-13",
+      "confidence": "high",
+      "reason": "Names the ontology and domain knowledge used by the procedure."
+    },
+    {
+      "field": "evaluation_datasets",
+      "value": "BIOSSES (biomedical domain) and the five test sets of SemEval Sentence Similarity challenges released yearly of 2012, 2013, 2014, 2015, 2016",
+      "normalized_value": "BIOSSES (biomedical domain) and the five test sets of SemEval Sentence Similarity challenges released yearly of 2012, 2013, 2014, 2015, 2016",
+      "evidence": "and evaluate the ontology-enhanced embedding-LLMs against two widespread sentence-similarity \ndatasets: [BIOSSES](https://huggingface.co/datasets/biosses) (biomedical domain) and the five test sets of SemEval Sentence Similarity challenges\nreleased yearly of [2012](https://huggingface.co/datasets/mteb/sts12-sts), [2013](https://huggingface.co/datasets/mteb/sts13-sts),\n[2014](https://huggingface.co/datasets/mteb/sts14-sts), [2015](https://huggingface.co/datasets/mteb/sts15-sts), \n[2016](https://huggingface.co/datasets/mteb/sts16-sts).",
+      "evidence_location": "14-18",
+      "confidence": "high",
+      "reason": "Specifies the datasets used to evaluate the ontology-enhanced models."
+    },
+    {
+      "field": "python_version",
+      "value": "Python 3.10.x",
+      "normalized_value": "Python 3.10.x",
+      "evidence": "- Create and activate a virtual environment based on Python 3.10.x.",
+      "evidence_location": "20-21; 1) Set-up environment",
+      "confidence": "high",
+      "reason": "Provides the required Python environment version."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "- Clone the repository, set the repo-folder as the working directory and install python requirements: `pip install -r requirements.txt`",
+      "evidence_location": "22; 1) Set-up environment",
+      "confidence": "high",
+      "reason": "Defines the dependency installation step."
+    },
+    {
+      "field": "resource_directories",
+      "value": "ONTO_FUSE_SYNTH_DATA, CHROMA_DB, EVAL_RESULT",
+      "normalized_value": "ONTO_FUSE_SYNTH_DATA, CHROMA_DB, EVAL_RESULT",
+      "evidence": "- Create a resource-folder - e.g. `RESOURCE_FOLDER` where all the data / models generated to support \nand evaluate ontological knowledge infusion will be stored: inside the resource-folder create three sub-folders \nwith the following names: `ONTO_FUSE_SYNTH_DATA`, `CHROMA_DB`, `EVAL_RESULT`.",
+      "evidence_location": "23-25; 1) Set-up environment",
+      "confidence": "high",
+      "reason": "Identifies the required storage layout for generated data, models, and results."
+    },
+    {
+      "field": "configuration",
+      "value": "BASE_DATA_FOLDER_PATH equal to the absolute local path of the resource-folder",
+      "normalized_value": "BASE_DATA_FOLDER_PATH equal to the absolute local path of the resource-folder",
+      "evidence": "- Modify the line 3 of the file [constant_config.py](constant_config.py) by setting the value of `BASE_DATA_FOLDER_PATH` \nequal to the absolute local path of the resource-folder.",
+      "evidence_location": "26-27; 1) Set-up environment",
+      "confidence": "high",
+      "reason": "Specifies the configuration needed for scripts to locate input and output resources."
+    },
+    {
+      "field": "ontology_preload_script",
+      "value": "onto/load.py",
+      "normalized_value": "onto/load.py",
+      "evidence": "Run the [onto/load.py](onto/load.py) script: in the resource-folder a MONDO ontology pickle object file \nexploited to store the contents of the ontology to support ontological knowledge infusion, will be \ncreated.",
+      "evidence_location": "30-33; 2) Preload MONDO ontology",
+      "confidence": "high",
+      "reason": "Provides the reproducibility step for loading the MONDO ontology."
+    },
+    {
+      "field": "synthetic_data_generation_model",
+      "value": "OpenAI GPT-3.5-turbo",
+      "normalized_value": "OpenAI GPT-3.5-turbo",
+      "evidence": "- Add your OpenAI access credentials to prompt GPT-3.5-turbo in the module [synth_data_gen/constants.py](synth_data_gen/constants.py). \nThe module [synth_data_gen/prompt_openai.py](synth_data_gen/prompt_openai.py) wraps interactions with OpenAI GPT-3.5-turbo model.",
+      "evidence_location": "36-37; 3) Generate synthetic definitions of MONDO ontology concepts",
+      "confidence": "high",
+      "reason": "Names the external model used to generate synthetic concept definitions."
+    },
+    {
+      "field": "synthetic_data_generation_script",
+      "value": "synth_data_gen/generate_synth_data.py",
+      "normalized_value": "synth_data_gen/generate_synth_data.py",
+      "evidence": "- Run [synth_data_gen/generate_synth_data.py](synth_data_gen/generate_synth_data.py) script: this script will generate a synthetic \nconcept definition from each synonym of each concept of the MONDO ontology.",
+      "evidence_location": "38-39; 3) Generate synthetic definitions of MONDO ontology concepts",
+      "confidence": "high",
+      "reason": "Identifies the script used to create training data."
+    },
+    {
+      "field": "synthetic_data_output",
+      "value": "a CSV file inside the ONTO_FUSE_SYNTH_DATA folder",
+      "normalized_value": "a CSV file inside the ONTO_FUSE_SYNTH_DATA folder",
+      "evidence": "The synthetic concept \ndefinitions generated by running this script are stored in a CSV file inside the `ONTO_FUSE_SYNTH_DATA` \nfolder (that in turns is a sub-folder of the resource-folder).",
+      "evidence_location": "39-41; 3) Generate synthetic definitions of MONDO ontology concepts",
+      "confidence": "high",
+      "reason": "Specifies the format and location of generated synthetic data."
+    },
+    {
+      "field": "training_script",
+      "value": "llm_train/train_and_evaluate_onto_knowldge_infusion.py",
+      "normalized_value": "llm_train/train_and_evaluate_onto_knowldge_infusion.py",
+      "evidence": "Run [llm_train/train_and_evaluate_onto_knowldge_infusion.py](llm_train/train_and_evaluate_onto_knowldge_infusion.py) \nby providing the following two command line arguments:",
+      "evidence_location": "43-45; 4) Perform ontological knowledge infusion: fine-tuning embedding-LLMs by a contrastive objective",
+      "confidence": "high",
+      "reason": "Identifies the main training and evaluation entry point."
+    },
+    {
+      "field": "supported_base_models",
+      "value": "sapbert_cls, pubmedbert_mean, pubmedbert_cls, gist, gtebase",
+      "normalized_value": "sapbert_cls, pubmedbert_mean, pubmedbert_cls, gist, gtebase",
+      "evidence": "- **ARGUMENT 1**: embedding-LLM base model identifier, to perform ontological knowledge infusion \non such embedding-LLM. One of: sapbert_cls, pubmedbert_mean, pubmedbert_cls, gist, gtebase.",
+      "evidence_location": "46-47; 4) Perform ontological knowledge infusion: fine-tuning embedding-LLMs by a contrastive objective",
+      "confidence": "high",
+      "reason": "Lists the explicitly supported embedding-LLM identifiers."
+    },
+    {
+      "field": "training_data_argument",
+      "value": "name of the CSV file with synthetic definitions generated by running the script synth_data_gen/generate_synth_data.py",
+      "normalized_value": "name of the CSV file with synthetic definitions generated by running the script synth_data_gen/generate_synth_data.py",
+      "evidence": "- **ARGUMENT 2**: name of the CSV file with synthetic definitions generated by running the script \n[synth_data_gen/generate_synth_data.py](synth_data_gen/generate_synth_data.py), as described at \nstep 3 and stored in the `ONTO_FUSE_SYNTH_DATA` folder (that is a sub-folder of the resource-folder).",
+      "evidence_location": "48-50; 4) Perform ontological knowledge infusion: fine-tuning embedding-LLMs by a contrastive objective",
+      "confidence": "high",
+      "reason": "Specifies the second required training-script argument and its input location."
+    },
+    {
+      "field": "pair_generation_method",
+      "value": "ontology-driven generation of positive pairs of definitions by synonym substitution and ontology-driven generation of hard-negative pairs of definitions",
+      "normalized_value": "ontology-driven generation of positive pairs of definitions by synonym substitution and ontology-driven generation of hard-negative pairs of definitions",
+      "evidence": "- ontology-driven generation of positive pairs of definitions by synonym substitution\n- ontology-driven generation of hard-negative pairs of definitions by: (i) indexing all definitions \nin a collection of the [Chroma DB embedding database](https://www.trychroma.com/); (ii) identifying \nfor each definition the associated hard-negative one(s), relying on the is-a relations specified by \nthe MONDO ontology",
+      "evidence_location": "55-59; 4) Perform ontological knowledge infusion: fine-tuning embedding-LLMs by a contrastive objective",
+      "confidence": "high",
+      "reason": "Describes how positive and hard-negative training pairs are constructed."
+    },
+    {
+      "field": "training_objective",
+      "value": "a contrastive learning framework relying on InfoNCE loss",
+      "normalized_value": "a contrastive learning framework relying on InfoNCE loss",
+      "evidence": "- infuse disease knowledge from the MONDO ontology in the embedding-LLM selected through command-line \n**ARGUMENT 1**: this is obtained by relying on a contrastive learning framework relying on \nInfoNCE loss (for more details refer the [paper on ontological knowledge infusion](https://arxiv.org/abs/2405.20527)).",
+      "evidence_location": "60-62; 4) Perform ontological knowledge infusion: fine-tuning embedding-LLMs by a contrastive objective",
+      "confidence": "high",
+      "reason": "Names the learning framework and loss used for infusion."
+    },
+    {
+      "field": "evaluation_output",
+      "value": ".eval text files in the EVAL_RESULT folder",
+      "normalized_value": ".eval text files in the EVAL_RESULT folder",
+      "evidence": "2016](https://huggingface.co/datasets/mteb/sts16-sts). Evaluation results are stored in .eval text \nfiles in the `EVAL_RESULT` folder (that is a sub-folder of the resource-folder).",
+      "evidence_location": "68-69; 4) Perform ontological knowledge infusion: fine-tuning embedding-LLMs by a contrastive objective",
+      "confidence": "high",
+      "reason": "Specifies the format and location of evaluation results."
+    },
+    {
+      "field": "reference_publication",
+      "value": "Towards Ontology-Enhanced Representation Learning for Large Language Models",
+      "normalized_value": "Towards Ontology-Enhanced Representation Learning for Large Language Models",
+      "evidence": "- **TITLE**: Towards Ontology-Enhanced Representation Learning for Large Language Models",
+      "evidence_location": "76; Reference publication",
+      "confidence": "high",
+      "reason": "Provides the publication associated with the repository's method."
+    },
+    {
+      "field": "reference_publication_authors",
+      "value": "Francesco Ronzano and Jay Nanavati",
+      "normalized_value": "Francesco Ronzano and Jay Nanavati",
+      "evidence": "- **AUTHORS**: Francesco Ronzano and Jay Nanavati",
+      "evidence_location": "77; Reference publication",
+      "confidence": "high",
+      "reason": "Provides attribution information for the reference publication."
+    },
+    {
+      "field": "reference_publication_link",
+      "value": "https://arxiv.org/abs/2405.20527",
+      "normalized_value": "https://arxiv.org/abs/2405.20527",
+      "evidence": "- **ARXIV LINK**: [https://arxiv.org/abs/2405.20527](https://arxiv.org/abs/2405.20527)",
+      "evidence_location": "79; Reference publication",
+      "confidence": "high",
+      "reason": "Provides direct access to the method's reference paper."
+    },
+    {
+      "field": "reference_publication_affiliation",
+      "value": "IQVIA",
+      "normalized_value": "IQVIA",
+      "evidence": "- **AFFILIATION**: IQVIA",
+      "evidence_location": "78; Reference publication",
+      "confidence": "high",
+      "reason": "Records the stated affiliation of the publication authors."
+    },
+    {
+      "field": "reference_publication_date",
+      "value": "30 May 2024",
+      "normalized_value": "30 May 2024",
+      "evidence": "- **DATE**: 30 May 2024",
+      "evidence_location": "80; Reference publication",
+      "confidence": "high",
+      "reason": "Records the publication date provided in the README."
+    }
+  ]
+}

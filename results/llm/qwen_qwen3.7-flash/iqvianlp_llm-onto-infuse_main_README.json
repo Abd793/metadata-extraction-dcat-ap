@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Ontological knowledge infusion in embedding-Large Language Models",
+      "normalized_value": "Ontological knowledge infusion in embedding-Large Language Models",
+      "evidence": "## Ontological knowledge infusion in embedding-Large Language Models",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit project title serving as primary identifier."
+    },
+    {
+      "field": "artifact_description",
+      "value": "The code of this repository implements a novel approach to improve an embedding-Large Language Model (embedding-LLM) of interest by infusing the knowledge formalized by a reference ontology: ontological knowledge infusion aims at boosting the ability of the considered embedding-LLM to effectively model the knowledge domain described by the infused ontology.",
+      "normalized_value": "The code of this repository implements a novel approach to improve an embedding-Large Language Model (embedding-LLM) of interest by infusing the knowledge formalized by a reference ontology: ontological knowledge infusion aims at boosting the ability of the considered embedding-LLM to effectively model the knowledge domain described by the infused ontology.",
+      "evidence": "The code of this repository implements a novel approach to improve an embedding-Large Language \nModel (embedding-LLM) of interest by infusing the knowledge formalized by a reference ontology: ontological \nknowledge infusion aims at boosting the ability of the considered embedding-LLM to effectively model \nthe knowledge domain described by the infused ontology.",
+      "evidence_location": "3-6",
+      "confidence": "high",
+      "reason": "Clearly defines the purpose, scope, and core functionality of the codebase."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2405.20527",
+      "normalized_value": "https://arxiv.org/abs/2405.20527",
+      "evidence": "[Towards Ontology-Enhanced Representation Learning for Large Language Models](https://arxiv.org/abs/2405.20527)",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Direct access link to the foundational research paper describing the method."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python 3.10.x",
+      "normalized_value": "Python 3.10.x",
+      "evidence": "- Create and activate a virtual environment based on Python 3.10.x.",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Specifies the exact Python version required for environment setup and compatibility."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "`pip install -r requirements.txt`",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Standard command for installing project dependencies listed in requirements.txt."
+    },
+    {
+      "field": "configuration_file",
+      "value": "constant_config.py",
+      "normalized_value": "constant_config.py",
+      "evidence": "- Modify the line 3 of the file [constant_config.py](constant_config.py) by setting the value of `BASE_DATA_FOLDER_PATH` equal to the absolute local path of the resource-folder.",
+      "evidence_location": "26",
+      "confidence": "high",
+      "reason": "Identifies the primary configuration file users must edit to set critical paths before running scripts."
+    },
+    {
+      "field": "external_dependency",
+      "value": "OpenAI GPT-3.5-turbo",
+      "normalized_value": "OpenAI GPT-3.5-turbo",
+      "evidence": "- Add your OpenAI access credentials to prompt GPT-3.5-turbo in the module [synth_data_gen/constants.py](synth_data_gen/constants.py). The module [synth_data_gen/prompt_openai.py](synth_data_gen/prompt_openai.py) wraps interactions with OpenAI GPT-3.5-turbo model.",
+      "evidence_location": "36-37",
+      "confidence": "high",
+      "reason": "Specifies a required third-party API and model version needed for synthetic data generation."
+    },
+    {
+      "field": "training_script",
+      "value": "llm_train/train_and_evaluate_onto_knowldge_infusion.py",
+      "normalized_value": "llm_train/train_and_evaluate_onto_knowldge_infusion.py",
+      "evidence": "Run [llm_train/train_and_evaluate_onto_knowldge_infusion.py](llm_train/train_and_evaluate_onto_knowldge_infusion.py) by providing the following two command line arguments:",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Main executable script that performs the core knowledge infusion and fine-tuning workflow."
+    },
+    {
+      "field": "supported_models",
+      "value": "sapbert_cls, pubmedbert_mean, pubmedbert_cls, gist, gtebase",
+      "normalized_value": "sapbert_cls, pubmedbert_mean, pubmedbert_cls, gist, gtebase",
+      "evidence": "One of: sapbert_cls, pubmedbert_mean, pubmedbert_cls, gist, gtebase.",
+      "evidence_location": "47",
+      "confidence": "high",
+      "reason": "Lists the specific base embedding-LLM identifiers compatible with the training script."
+    },
+    {
+      "field": "evaluation_datasets",
+      "value": "BIOSSES, SemEval Sentence Similarity challenges (STS12, STS13, STS14, STS15, STS16)",
+      "normalized_value": "BIOSSES, SemEval Sentence Similarity challenges (STS12, STS13, STS14, STS15, STS16)",
+      "evidence": "evaluate the ontology-enhanced embedding-LLMs against two widespread sentence-similarity datasets: [BIOSSES](https://huggingface.co/datasets/biosses) (biomedical domain) and the five test sets of SemEval Sentence Similarity challenges released yearly of [2012](https://huggingface.co/datasets/mteb/sts12-sts), [2013](https://huggingface.co/datasets/mteb/sts13-sts),[2014](https://huggingface.co/datasets/mteb/sts14-sts), [2015](https://huggingface.co/datasets/mteb/sts15-sts), [2016](https://huggingface.co/datasets/mteb/sts16-sts).",
+      "evidence_location": "14-18",
+      "confidence": "high",
+      "reason": "Identifies the standard benchmarks used to measure model performance and reproduce evaluation results."
+    },
+    {
+      "field": "loss_function",
+      "value": "InfoNCE loss",
+      "normalized_value": "InfoNCE loss",
+      "evidence": "this is obtained by relying on a contrastive learning framework relying on InfoNCE loss",
+      "evidence_location": "62",
+      "confidence": "high",
+      "reason": "Specifies the exact optimization objective used during the contrastive fine-tuning process."
+    },
+    {
+      "field": "training_knowledge_source",
+      "value": "MONDO (disease ontology)",
+      "normalized_value": "MONDO (disease ontology)",
+      "evidence": "infuse the disease knowledge formalized by the [disease ontology MONDO](https://mondo.monarchinitiative.org/) in four widespread embedding-LLMs",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Identifies the specific domain ontology injected into the models to enhance representation learning."
+    },
+    {
+      "field": "publication_title",
+      "value": "Towards Ontology-Enhanced Representation Learning for Large Language Models",
+      "normalized_value": "Towards Ontology-Enhanced Representation Learning for Large Language Models",
+      "evidence": "- **TITLE**: Towards Ontology-Enhanced Representation Learning for Large Language Models",
+      "evidence_location": "76",
+      "confidence": "high",
+      "reason": "Provides the exact title required for academic citation and literature tracking."
+    },
+    {
+      "field": "publication_authors",
+      "value": "Francesco Ronzano and Jay Nanavati",
+      "normalized_value": "Francesco Ronzano and Jay Nanavati",
+      "evidence": "- **AUTHORS**: Francesco Ronzano and Jay Nanavati",
+      "evidence_location": "77",
+      "confidence": "high",
+      "reason": "Required for proper attribution and citation of the underlying research."
+    },
+    {
+      "field": "publication_date",
+      "value": "30 May 2024",
+      "normalized_value": "30 May 2024",
+      "evidence": "- **DATE**: 30 May 2024",
+      "evidence_location": "80",
+      "confidence": "high",
+      "reason": "Indicates the publication date, useful for citation formatting and assessing recency."
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_title",
+      "value": "To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO",
+      "normalized_value": "To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO",
+      "evidence": "<h1 align=\"center\">To Cool or not to Cool? <br>\nTemperature Network Meets Large Foundation Models via DRO </h1>",
+      "evidence_location": "lines 1-2, title",
+      "confidence": "high",
+      "reason": "Provides the artifact's explicit title and identifies its focus on temperature networks and large foundation models."
+    },
+    {
+      "field": "research_objective",
+      "value": "In this paper, we present **a principled framework** for learning a small yet generalizable temperature prediction network (TempNet) to improve LFMs.",
+      "normalized_value": "In this paper, we present **a principled framework** for learning a small yet generalizable temperature prediction network (TempNet) to improve LFMs",
+      "evidence": "In this paper, we present **a principled framework** for learning a small yet generalizable temperature prediction network (TempNet) to improve LFMs.",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Explicitly states the artifact's purpose and the role of TempNet."
+    },
+    {
+      "field": "supported_model_families",
+      "value": "large foundation models (LFMs) such as large language models (LLMs) and CLIP models",
+      "normalized_value": "large foundation models (LFMs) such as large language models (LLMs) and CLIP models",
+      "evidence": "large foundation models (LFMs) such as large language models (LLMs) and CLIP models",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Identifies the model classes to which the method is applied."
+    },
+    {
+      "field": "optimization_method",
+      "value": "Our solution is composed of a novel learning framework with robust losses underpinned by constrained distributionally robust optimization (DRO), and a properly designed TempNet with theoretical inspiration.",
+      "normalized_value": "Our solution is composed of a novel learning framework with robust losses underpinned by constrained distributionally robust optimization (DRO), and a properly designed TempNet with theoretical inspiration",
+      "evidence": "Our solution is composed of a novel learning framework with robust losses underpinned by constrained distributionally robust optimization (DRO), and a properly designed TempNet with theoretical inspiration.",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Names the stated learning framework and its constrained DRO basis."
+    },
+    {
+      "field": "training_modes",
+      "value": "TempNet can be trained together with a large foundation model from scratch or learned separately given a pretrained foundation model.",
+      "normalized_value": "TempNet can be trained together with a large foundation model from scratch or learned separately given a pretrained foundation model",
+      "evidence": "TempNet can be trained together with a large foundation model from scratch or learned separately given a pretrained foundation model.",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Describes the two supported approaches for training TempNet."
+    },
+    {
+      "field": "llm_training_settings",
+      "value": "training from scratch, finetuning a pretrained LLM model, and learning TempNet only with a frozen LLM model",
+      "normalized_value": "training from scratch, finetuning a pretrained LLM model, and learning TempNet only with a frozen LLM model",
+      "evidence": "Results of training LLMs in various settings, including training from scratch, finetuning a pretrained LLM model, and learning TempNet only with a frozen LLM model.",
+      "evidence_location": "line 29, Experimental Results",
+      "confidence": "high",
+      "reason": "Lists concrete LLM experimentation configurations."
+    },
+    {
+      "field": "training_code_directories",
+      "value": "`GPT_2`, `LLaMA-1`, `LLaMA-2`, and `Bimodal-CL`",
+      "normalized_value": "`GPT_2`, `LLaMA-1`, `LLaMA-2`, and `Bimodal-CL`",
+      "evidence": "We conduct experiments across various tasks and models to validate the effectiveness of TempNet. Given the different training frameworks required by each model, we distribute the training code for different models across four directories: `GPT_2`, `LLaMA-1`, `LLaMA-2`, and `Bimodal-CL`.",
+      "evidence_location": "line 76, Training",
+      "confidence": "high",
+      "reason": "Provides the repository layout needed to locate model-specific training code."
+    },
+    {
+      "field": "retrieval_evaluation",
+      "value": "For image-text retrieval on Flickr30K and MSCOCO, we compute IR@1 and TR@1 for the Recall@1 on image-retrieval (IR) and text-retrieval (TR).",
+      "normalized_value": "For image-text retrieval on Flickr30K and MSCOCO, we compute IR@1 and TR@1 for the Recall@1 on image-retrieval (IR) and text-retrieval (TR)",
+      "evidence": "For image-text retrieval on Flickr30K and MSCOCO, we compute IR@1 and TR@1 for the Recall@1 on image-retrieval (IR) and text-retrieval (TR).",
+      "evidence_location": "line 35, Experimental Results",
+      "confidence": "high",
+      "reason": "Names the retrieval datasets and the reported retrieval metrics."
+    },
+    {
+      "field": "classification_metric",
+      "value": "top-1 accuracy (\\%)",
+      "normalized_value": "top-1 accuracy (\\%)",
+      "evidence": "For classification tasks, we compute top-1 accuracy (\\%).",
+      "evidence_location": "line 35, Experimental Results",
+      "confidence": "high",
+      "reason": "Specifies the metric used for classification experiments."
+    },
+    {
+      "field": "evaluation_protocol",
+      "value": "We report the average of scores and standard deviation over 3 runs with different random seeds.",
+      "normalized_value": "We report the average of scores and standard deviation over 3 runs with different random seeds",
+      "evidence": "We report the average of scores and standard deviation over 3 runs with different random seeds.",
+      "evidence_location": "line 35, Experimental Results",
+      "confidence": "high",
+      "reason": "Defines the replication and score-reporting protocol."
+    },
+    {
+      "field": "instruction_following_benchmark",
+      "value": "AlpacaEval",
+      "normalized_value": "AlpacaEval",
+      "evidence": "To test TempNet's performance in instruction-following tasks, we fix the LLaMA2 Chat models and trained TempNet, then test them on the [AlpacaEval](https://tatsu-lab.github.io/alpaca_eval/) benchmark.",
+      "evidence_location": "line 47, Experimental Results",
+      "confidence": "high",
+      "reason": "Identifies the benchmark used for instruction-following evaluation."
+    },
+    {
+      "field": "evaluation_hardware",
+      "value": "Nvidia A100-80G GPUs",
+      "normalized_value": "Nvidia A100-80G GPUs",
+      "evidence": "including the training times of TempNet on Nvidia A100-80G GPUs and their win rates on AlpacaEval data.",
+      "evidence_location": "line 47, Experimental Results",
+      "confidence": "high",
+      "reason": "Provides the explicitly named hardware used for TempNet training."
+    },
+    {
+      "field": "example_average_temperature",
+      "value": "0.82",
+      "normalized_value": "0.82",
+      "evidence": "With TempNet, in the process of generating names for this task, LLaMA2 7B Chat produces a higher averaged temperature value of 0.82, ultimately creating a novel name **Tunanadoes**.",
+      "evidence_location": "line 62, Experimental Results",
+      "confidence": "high",
+      "reason": "Records a concrete example of a temperature predicted by TempNet."
+    },
+    {
+      "field": "released_models",
+      "value": "base models for LLaMA 2 Chat 7B, 13B, 70B, and their respective TempNets",
+      "normalized_value": "base models for LLaMA 2 Chat 7B, 13B, 70B, and their respective TempNets",
+      "evidence": "We upload the base models for LLaMA 2 Chat 7B, 13B, 70B, and their respective TempNets to [Hugging Face](https://huggingface.co/LLM-Opt).",
+      "evidence_location": "line 80, Inference",
+      "confidence": "high",
+      "reason": "Identifies the released model variants available for inference."
+    },
+    {
+      "field": "model_hub_url",
+      "value": "https://huggingface.co/LLM-Opt",
+      "normalized_value": "https://huggingface.co/LLM-Opt",
+      "evidence": "[Hugging Face](https://huggingface.co/LLM-Opt)",
+      "evidence_location": "line 80, Inference",
+      "confidence": "high",
+      "reason": "Provides the access location for the released base models and TempNets."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/zhqiu/TempNet",
+      "normalized_value": "https://github.com/zhqiu/TempNet",
+      "evidence": "[repository](https://github.com/zhqiu/TempNet)",
+      "evidence_location": "line 80, Inference",
+      "confidence": "high",
+      "reason": "Provides the source repository containing the TempNet implementation."
+    },
+    {
+      "field": "inference_entrypoint",
+      "value": "tempnet.py",
+      "normalized_value": "tempnet.py",
+      "evidence": "The `tempnet.py` in the [repository](https://github.com/zhqiu/TempNet) contains the definition of the TempNet class",
+      "evidence_location": "line 80, Inference",
+      "confidence": "high",
+      "reason": "Identifies the implementation file needed to perform inference."
+    },
+    {
+      "field": "inference_architecture",
+      "value": "a class that inherits from Hugging Face's LLaMA, including TempNet",
+      "normalized_value": "a class that inherits from Hugging Face's LLaMA, including TempNet",
+      "evidence": "and a class that inherits from Hugging Face's LLaMA, including TempNet.",
+      "evidence_location": "line 80, Inference",
+      "confidence": "high",
+      "reason": "Describes how TempNet is integrated into the LLaMA inference class."
+    },
+    {
+      "field": "inference_model_identifier",
+      "value": "LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1",
+      "normalized_value": "LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1",
+      "evidence": "model_name = 'LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1'",
+      "evidence_location": "line 87, Inference code",
+      "confidence": "high",
+      "reason": "Provides the exact Hugging Face model identifier used in the inference example."
+    },
+    {
+      "field": "inference_example",
+      "value": "import torch\nfrom tempnet import LLaMA_TempNet\nfrom transformers import AutoTokenizer, GenerationConfig\n\nmodel_name = 'LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1'\n\ntokenizer = AutoTokenizer.from_pretrained(model_name, legacy=False)\ngeneration_config = GenerationConfig.from_pretrained(model_name)\nmodel = LLaMA_TempNet.from_pretrained(model_name, device_map=\"auto\", torch_dtype=torch.float16)\n\ninputs = 'How do you get water in the desert?'\ninput_ids = tokenizer(inputs, return_tensors=\"pt\").input_ids.cuda()\n\noutputs = model.generate(input_ids, generation_config=generation_config)\nresponse = tokenizer.decode(outputs[0], skip_special_tokens=True)[len(inputs)-1:].strip()",
+      "normalized_value": "import torch from tempnet import LLaMA_TempNet from transformers import AutoTokenizer, GenerationConfig model_name = 'LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1' tokenizer = AutoTokenizer.from_pretrained(model_name, legacy=False) generation_config = GenerationConfig.from_pretrained(model_name) model = LLaMA_TempNet.from_pretrained(model_name, device_map=\"auto\", torch_dtype=torch.float16) inputs = 'How do you get water in the desert?' input_ids = tokenizer(inputs, return_tensors=\"pt\").input_ids.cuda() outputs = model.generate(input_ids, generation_config=generation_config) response = tokenizer.decode(outputs[0], skip_special_tokens=True)[len(inputs)-1:].strip()",
+      "evidence": "```python\nimport torch\nfrom tempnet import LLaMA_TempNet\nfrom transformers import AutoTokenizer, GenerationConfig\n\nmodel_name = 'LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1'\n\ntokenizer = AutoTokenizer.from_pretrained(model_name, legacy=False)\ngeneration_config = GenerationConfig.from_pretrained(model_name)\nmodel = LLaMA_TempNet.from_pretrained(model_name, device_map=\"auto\", torch_dtype=torch.float16)\n\ninputs = 'How do you get water in the desert?'\ninput_ids = tokenizer(inputs, return_tensors=\"pt\").input_ids.cuda()\n\noutputs = model.generate(input_ids, generation_config=generation_config)\nresponse = tokenizer.decode(outputs[0], skip_special_tokens=True)[len(inputs)-1:].strip()\n```",
+      "evidence_location": "lines 82-98, Inference",
+      "confidence": "high",
+      "reason": "Provides the documented end-to-end Python procedure for loading TempNet and generating a response."
+    },
+    {
+      "field": "paper_url",
+      "value": "http://arxiv.org/abs/2404.04575",
+      "normalized_value": "http://arxiv.org/abs/2404.04575",
+      "evidence": "For more details, please refer to our [paper](http://arxiv.org/abs/2404.04575)",
+      "evidence_location": "line 71, More Details",
+      "confidence": "high",
+      "reason": "Links to the paper containing additional methodological details."
+    },
+    {
+      "field": "citation",
+      "value": "@article{qiu2024to,\n  title={To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO},\n  author={Zi-Hao Qiu, Siqi Guo, Mao Xu, Tuo Zhao, Lijun Zhang, and Tianbao Yang},\n  journal={arXiv preprint arXiv:2404.04575},\n  year={2024}\n}",
+      "normalized_value": "@article{qiu2024to, title={To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO}, author={Zi-Hao Qiu, Siqi Guo, Mao Xu, Tuo Zhao, Lijun Zhang, and Tianbao Yang}, journal={arXiv preprint arXiv:2404.04575}, year={2024} }",
+      "evidence": "```\n@article{qiu2024to,\n  title={To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO},\n  author={Zi-Hao Qiu, Siqi Guo, Mao Xu, Tuo Zhao, Lijun Zhang, and Tianbao Yang},\n  journal={arXiv preprint arXiv:2404.04575},\n  year={2024}\n}\n```",
+      "evidence_location": "lines 108-115, Citation",
+      "confidence": "high",
+      "reason": "Supplies the repository's recommended BibTeX citation for the artifact's paper."
+    }
+  ]
+}

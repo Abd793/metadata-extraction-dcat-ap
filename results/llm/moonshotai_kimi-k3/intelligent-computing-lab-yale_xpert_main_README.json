@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "XPert",
+      "normalized_value": "XPert",
+      "evidence": "# XPert: Peripheral Circuit & Neural Architecture Co-search for Area and Energy-efficient Xbar-based Computing (Design & Automation Conference, 2023)",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Names the artifact and its purpose in the document title."
+    },
+    {
+      "field": "publication_venue",
+      "value": "Design & Automation Conference, 2023",
+      "normalized_value": "Design & Automation Conference, 2023",
+      "evidence": "(Design & Automation Conference, 2023)",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Identifies the peer-reviewed venue and year where the work was published, useful for citation."
+    },
+    {
+      "field": "description",
+      "value": "we propose XPert, which co-searches network architecture in tandem with peripheral parameters such as the type and precision of analog-to-digital converters, crossbar column sharing and the layer-specific input precision using an optimization-based design space exploration",
+      "normalized_value": "we propose XPert, which co-searches network architecture in tandem with peripheral parameters such as the type and precision of analog-to-digital converters, crossbar column sharing and the layer-specific input precision using an optimization-based design space exploration",
+      "evidence": "To this end, we propose XPert, which co-searches network architecture in tandem with peripheral parameters such as the type and precision of analog-to-digital converters, crossbar column sharing and the layer-specific input precision using an optimization-based design space exploration.",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Describes what the artifact does and the method it uses (optimization-based design space exploration)."
+    },
+    {
+      "field": "application_domain",
+      "value": "Deep Neural Networks (DNNs) implemented on In-memory Computing (IMC) architectures",
+      "normalized_value": "Deep Neural Networks (DNNs) implemented on In-memory Computing (IMC) architectures",
+      "evidence": "The hardware-efficiency and accuracy of Deep Neural Networks (DNNs) implemented on In-memory Computing (IMC) architectures primarily depend on the DNN architecture and the peripheral circuit parameters.",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Establishes the scientific context: DNNs on in-memory computing hardware."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2303.17646",
+      "normalized_value": "https://arxiv.org/abs/2303.17646",
+      "evidence": "The paper is available at https://arxiv.org/abs/2303.17646",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Direct link to the associated paper for citation and further reading."
+    },
+    {
+      "field": "baseline",
+      "value": "VGG16",
+      "normalized_value": "VGG16",
+      "evidence": "Compared to VGG16 baselines,",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Names the baseline architecture against which results are reported."
+    },
+    {
+      "field": "evaluation_datasets",
+      "value": "CIFAR10 (TinyImagenet)",
+      "normalized_value": "CIFAR10 (TinyImagenet)",
+      "evidence": "at 92.46% (56.7%) accuracy for CIFAR10 (TinyImagenet) datasets",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Identifies the benchmark datasets used for evaluation."
+    },
+    {
+      "field": "reported_results",
+      "value": "XPert achieves 10.24x (4.7x) lower EDAP, 1.72x (1.62x) higher TOPS/W,1.93x (3x) higher TOPS/mm2 at 92.46% (56.7%) accuracy for CIFAR10 (TinyImagenet) datasets",
+      "normalized_value": "XPert achieves 10.24x (4.7x) lower EDAP, 1.72x (1.62x) higher TOPS/W,1.93x (3x) higher TOPS/mm2 at 92.46% (56.7%) accuracy for CIFAR10 (TinyImagenet) datasets",
+      "evidence": "Compared to VGG16 baselines, XPert achieves 10.24x (4.7x) lower EDAP, 1.72x (1.62x) higher TOPS/W,1.93x (3x) higher TOPS/mm2 at 92.46% (56.7%) accuracy for CIFAR10 (TinyImagenet) datasets.",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Concrete quantitative results and metrics (EDAP, TOPS/W, TOPS/mm2, accuracy) for evaluating the artifact's claims."
+    },
+    {
+      "field": "cosearch_run_command",
+      "value": "python Phase1_VGG16_backbone.py",
+      "normalized_value": "python Phase1_VGG16_backbone.py",
+      "evidence": "Run the Code using \n```\npython Phase1_VGG16_backbone.py with the variables described below.\n```",
+      "evidence_location": "lines 6-10, section 'Running the Co-search', fenced code block",
+      "confidence": "high",
+      "reason": "Defines the command to run the Phase1 co-search, essential for reproduction."
+    },
+    {
+      "field": "cosearch_configuration_parameters",
+      "value": "--lr, --hw_params, --target_latency, --target_area, --epochs, --wt_prec, --cellbit, --area_tolerance",
+      "normalized_value": "--lr, --hw_params, --target_latency, --target_area, --epochs, --wt_prec, --cellbit, --area_tolerance",
+      "evidence": "```\n--lr: Learning Rate\n--hw_params: Tuple of #PEs per Tile, #Crossbars per PE, #Tiles, Crossbar Size\n--target_latency: Target Latency\n--target_area: Target Area Constraint (mm^2)\n--epochs: Total Number of Search Epochs\n--wt_prec: Weight Precision\n--cellbit: Number of bits per NVM device\n--area_tolerance: The uncerainity in the on-chip area tolerated in the searched model. \n```",
+      "evidence_location": "lines 13-22, section 'Variable Description', fenced code block",
+      "confidence": "high",
+      "reason": "Documents the configurable command-line variables needed to run and reproduce the co-search."
+    },
+    {
+      "field": "evaluation_framework",
+      "value": "XPertSim C++ Evaluation",
+      "normalized_value": "XPertSim C++ Evaluation",
+      "evidence": "# Instructions for XPertSim C++ Evaluation",
+      "evidence_location": "line 23, top-level header",
+      "confidence": "high",
+      "reason": "Names the C++-based evaluation simulator component of the artifact."
+    },
+    {
+      "field": "evaluation_input_file_format",
+      "value": "Network_custom.csv row format: feature size, feature size, input channels, kernel size, kernel size, output channels, max-pool flag, padding, column sharing, ADC type (1: Flash ADC, 0: SAR ADC), Input Precision, ADC Precision",
+      "normalized_value": "Network_custom.csv row format: feature size, feature size, input channels, kernel size, kernel size, output channels, max-pool flag, padding, column sharing, ADC type (1: Flash ADC, 0: SAR ADC), Input Precision, ADC Precision",
+      "evidence": "The Network_custom.csv file contains the DNN information required for evaluation. For each layer, we append an additional layer to ensure 64 Crossbar arrays per tile. Each row has the following format: \n\nfeature size, feature size, input channels, kernel size, kernel size, output channels, max-pool flag, padding, column sharing, ADC type (1: Flash ADC, 0: SAR ADC), Input Precision, ADC Precision.",
+      "evidence_location": "lines 25-29, section 'Step 1: Create the Network_custom.csv file'",
+      "confidence": "high",
+      "reason": "Specifies the required input file and its schema for running the evaluation, needed for reuse."
+    },
+    {
+      "field": "model_configuration_format",
+      "value": "(Layer Type: ('C': Convolutional layer, 'L': Linear Layer), input channels, output channels, kernel size, output size ('same': if output feature size is same as input feature size), scaling factor",
+      "normalized_value": "(Layer Type: ('C': Convolutional layer, 'L': Linear Layer), input channels, output channels, kernel size, output size ('same': if output feature size is same as input feature size), scaling factor",
+      "evidence": "Add the desired model configurations to the cfg_list and make sure to add the cfg variable in the \"def VGG8()\" function.\n\nThe model can be defined inside the cfg_list by using the following format: \n\n(Layer Type: ('C': Convolutional layer, 'L': Linear Layer), input channels, output channels, kernel size, output size ('same': if output feature size is same as input feature size), scaling factor.",
+      "evidence_location": "lines 31-37, section 'Step 2: Update the VGG.py with the desired model'",
+      "confidence": "high",
+      "reason": "Documents how to define custom model configurations in VGG.py for evaluation."
+    },
+    {
+      "field": "evaluation_run_command",
+      "value": "python inference.py --model custom",
+      "normalized_value": "python inference.py --model custom",
+      "evidence": "Run the inference.py using \"python inference.py --model custom\"",
+      "evidence_location": "line 43, section 'Step 3 Run the Evaluation'",
+      "confidence": "high",
+      "reason": "Defines the command to run inference/evaluation, essential for reproduction."
+    },
+    {
+      "field": "adapted_from",
+      "value": "Neurosim platform https://github.com/neurosim/DNN_NeuroSim_V1.3",
+      "normalized_value": "Neurosim platform https://github.com/neurosim/DNN_NeuroSim_V1.3",
+      "evidence": "This repository is adapted from the Neurosim platform https://github.com/neurosim/DNN_NeuroSim_V1.3.",
+      "evidence_location": "lines 46-47, section 'Acknowledgement'",
+      "confidence": "high",
+      "reason": "Attribution and provenance information, relevant for reuse and licensing considerations."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python, C++",
+      "normalized_value": "Python, C++",
+      "evidence": "# Instructions for XPertSim C++ Evaluation",
+      "evidence_location": "line 23 (C++); Python implied by commands on lines 9 and 43",
+      "confidence": "medium",
+      "reason": "C++ is named explicitly for the evaluation simulator; Python is implied by the 'python' invocation commands but never stated as the project language."
+    }
+  ]
+}

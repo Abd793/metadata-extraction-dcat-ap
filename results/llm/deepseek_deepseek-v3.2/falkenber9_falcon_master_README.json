@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "FALCON - Fast Analysis of LTE Control channels",
+      "normalized_value": "FALCON - Fast Analysis of LTE Control channels",
+      "evidence": "FALCON - Fast Analysis of LTE Control channels",
+      "evidence_location": "lines 3-4",
+      "confidence": "high",
+      "reason": "Clearly identifies the artifact name and subtitle."
+    },
+    {
+      "field": "description",
+      "value": "**FALCON** is an open-source software collection for real-time analysis of radio resources in private or commercial LTE/LTE-A networks.",
+      "normalized_value": "**FALCON** is an open-source software collection for real-time analysis of radio resources in private or commercial LTE/LTE-A networks.",
+      "evidence": "**FALCON** is an open-source software collection for real-time analysis of radio resources in private or commercial LTE/LTE-A networks.",
+      "evidence_location": "line 13",
+      "confidence": "high",
+      "reason": "Provides a concise purpose statement of the artifact."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/falkenber9/falcon.git",
+      "normalized_value": "https://github.com/falkenber9/falcon.git",
+      "evidence": "git clone https://github.com/falkenber9/falcon.git",
+      "evidence_location": "line 109",
+      "confidence": "high",
+      "reason": "Direct link to the source code repository for access and cloning."
+    },
+    {
+      "field": "paper_doi",
+      "value": "10.1109/GLOBECOM38437.2019.9014096",
+      "normalized_value": "10.1109/GLOBECOM38437.2019.9014096",
+      "evidence": "[![DOI](https://img.shields.io/badge/DOI-10.1109/GLOBECOM38437.2019.9014096-fcb426.svg)](https://dx.doi.org/10.1109/GLOBECOM38437.2019.9014096)",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "DOI for the associated scientific publication, enabling citation and access."
+    },
+    {
+      "field": "paper_arxiv_id",
+      "value": "1907.10110",
+      "normalized_value": "1907.10110",
+      "evidence": "[![arXiv](https://img.shields.io/badge/arXiv-1907.10110-b31b1b.svg)](https://arxiv.org/abs/1907.10110)",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "arXiv ID for the paper, providing an alternative access point."
+    },
+    {
+      "field": "license",
+      "value": "AGPLv3 license",
+      "normalized_value": "AGPLv3 license",
+      "evidence": "FALCON is released under the [AGPLv3 license](LICENSE).",
+      "evidence_location": "line 39",
+      "confidence": "high",
+      "reason": "Specifies the software license for legal reuse and distribution."
+    },
+    {
+      "field": "video_url",
+      "value": "http://www.youtube.com/watch?v=Va_aZYxRu3U",
+      "normalized_value": "http://www.youtube.com/watch?v=Va_aZYxRu3U",
+      "evidence": "[![Video](https://img.shields.io/youtube/views/Va_aZYxRu3U)](http://www.youtube.com/watch?v=Va_aZYxRu3U)",
+      "evidence_location": "line 11",
+      "confidence": "high",
+      "reason": "Link to a video presentation for understanding and demonstration."
+    },
+    {
+      "field": "supported_operating_systems",
+      "value": "Ubuntu 18.04.x LTS, Ubuntu 20.04.x LTS, Archlinux",
+      "normalized_value": "Ubuntu 18.04.x LTS, Ubuntu 20.04.x LTS, Archlinux",
+      "evidence": "* Ubuntu 18.04.x LTS (Bionic Beaver)\n* Ubuntu 20.04.x LTS (Focal Fossa)\n* Archlinux [![](https://img.shields.io/aur/version/tudo-falcon)](https://aur.archlinux.org/packages/tudo-falcon) [![](https://img.shields.io/aur/maintainer/tudo-falcon)](https://aur.archlinux.org/packages/tudo-falcon)",
+      "evidence_location": "lines 63-65",
+      "confidence": "high",
+      "reason": "Lists operating systems where installation has been verified, aiding reproducibility."
+    },
+    {
+      "field": "installation_command_ubuntu",
+      "value": "git clone https://github.com/falkenber9/falcon.git\ncd falcon\nmkdir build\ncd build\ncmake -DCMAKE_INSTALL_PREFIX=/usr ../\nmake\n\n# Install (optional)\nsudo make install\n\n# Uninstall (use carefully!)\nsudo xargs rm < install_manifest.txt",
+      "normalized_value": "git clone https://github.com/falkenber9/falcon.git cd falcon mkdir build cd build cmake -DCMAKE_INSTALL_PREFIX=/usr ../ make # Install (optional) sudo make install # Uninstall (use carefully!) sudo xargs rm < install_manifest.txt",
+      "evidence": "```sh\ngit clone https://github.com/falkenber9/falcon.git\ncd falcon\nmkdir build\ncd build\ncmake -DCMAKE_INSTALL_PREFIX=/usr ../\nmake\n\n# Install (optional)\nsudo make install\n\n# Uninstall (use carefully!)\nsudo xargs rm < install_manifest.txt\n```",
+      "evidence_location": "lines 109-121",
+      "confidence": "high",
+      "reason": "Step-by-step commands to build and install the software on Ubuntu, essential for reproduction."
+    },
+    {
+      "field": "installation_command_archlinux",
+      "value": "# Install\nyay -Sy tudo-falcon\n\n# Uninstall\nsudo pacman -Rs tudo-falcon",
+      "normalized_value": "# Install yay -Sy tudo-falcon # Uninstall sudo pacman -Rs tudo-falcon",
+      "evidence": "```sh\n# Install\nyay -Sy tudo-falcon\n\n# Uninstall\nsudo pacman -Rs tudo-falcon\n```",
+      "evidence_location": "lines 135-141",
+      "confidence": "high",
+      "reason": "Commands to install and uninstall via AUR on Archlinux, facilitating setup."
+    },
+    {
+      "field": "tested_sdr_hardware",
+      "value": "Ettus Research: USRP B210, Ettus Research: USRP B205mini, Lime Microsystems: LimeSDR Mini",
+      "normalized_value": "Ettus Research: USRP B210, Ettus Research: USRP B205mini, Lime Microsystems: LimeSDR Mini",
+      "evidence": "* Ettus Research: USRP B210\n* Ettus Research: USRP B205mini\n* Lime Microsystems: LimeSDR Mini",
+      "evidence_location": "lines 175-178",
+      "confidence": "high",
+      "reason": "Lists Software Defined Radios tested with the software, guiding hardware selection."
+    },
+    {
+      "field": "minimum_cpu_requirement",
+      "value": "Use a CPU with at least 4 physical cores",
+      "normalized_value": "Use a CPU with at least 4 physical cores",
+      "evidence": "Use a CPU with at least 4 physical cores",
+      "evidence_location": "line 192",
+      "confidence": "high",
+      "reason": "Specifies minimum hardware needed for performance, aiding system requirements."
+    },
+    {
+      "field": "example_usage_command",
+      "value": "FalconEye -f 1829.4e6 -D /tmp/dci.csv",
+      "normalized_value": "FalconEye -f 1829.4e6 -D /tmp/dci.csv",
+      "evidence": "FalconEye -f 1829.4e6 -D /tmp/dci.csv",
+      "evidence_location": "line 237",
+      "confidence": "high",
+      "reason": "Example command to run the software for real-time monitoring, demonstrating usage."
+    },
+    {
+      "field": "software_components",
+      "value": "* FalconGUI: A visualization for online/offline PDCCH decoding\n* FalconEye: A command-line version of the PDCCH decoder for automated/batch processing\n* FalconCaptureProbe: Signal recorder with optional network probing\n* FalconCaptureWarden: A command-line controller for synchronized recordings by multiple instances of FalconCaptureProbe\n* imdea_cc_decoder: Port of IMDEA OWL's PDCCH decoder\n* imdea_capture_sync: Port of IMDEA OWL's signal recorder",
+      "normalized_value": "* FalconGUI: A visualization for online/offline PDCCH decoding * FalconEye: A command-line version of the PDCCH decoder for automated/batch processing * FalconCaptureProbe: Signal recorder with optional network probing * FalconCaptureWarden: A command-line controller for synchronized recordings by multiple instances of FalconCaptureProbe * imdea_cc_decoder: Port of IMDEA OWL's PDCCH decoder * imdea_capture_sync: Port of IMDEA OWL's signal recorder",
+      "evidence": "* FalconGUI: A visualization for online/offline PDCCH decoding\n* FalconEye: A command-line version of the PDCCH decoder for automated/batch processing\n* FalconCaptureProbe: Signal recorder with optional network probing\n* FalconCaptureWarden: A command-line controller for synchronized recordings by multiple instances of FalconCaptureProbe\n* imdea_cc_decoder: Port of IMDEA OWL's PDCCH decoder\n* imdea_capture_sync: Port of IMDEA OWL's signal recorder",
+      "evidence_location": "lines 214-220",
+      "confidence": "high",
+      "reason": "Describes the tools included in the software collection, helping users understand its structure."
+    },
+    {
+      "field": "key_features",
+      "value": "* Reliable real-time monitoring public LTE cells\n* Monitoring up to 20 MHz bandwidth\n* FDD only\n* Supported DCI formats: 0/1A, 1, 1B, 1C, 2, 2A, 2B\n* Suitable for short-term and long-term monitoring with non-ideal radio conditions\n* Qt-based and OpenGL-accelerated GUI for visualization of allocated resource blocks, spectrogram and cell-specific performance metrics (throughput, resource utilization, user activity, etc.).\n* Synchronized recorder with integrated support for network probing by an auxiliary modem",
+      "normalized_value": "* Reliable real-time monitoring public LTE cells * Monitoring up to 20 MHz bandwidth * FDD only * Supported DCI formats: 0/1A, 1, 1B, 1C, 2, 2A, 2B * Suitable for short-term and long-term monitoring with non-ideal radio conditions * Qt-based and OpenGL-accelerated GUI for visualization of allocated resource blocks, spectrogram and cell-specific performance metrics (throughput, resource utilization, user activity, etc.). * Synchronized recorder with integrated support for network probing by an auxiliary modem",
+      "evidence": "* Reliable real-time monitoring public LTE cells\n* Monitoring up to 20 MHz bandwidth\n* FDD only\n* Supported DCI formats: 0/1A, 1, 1B, 1C, 2, 2A, 2B\n* Suitable for short-term and long-term monitoring with non-ideal radio conditions\n* Qt-based and OpenGL-accelerated GUI for visualization of allocated resource blocks, spectrogram and cell-specific performance metrics (throughput, resource utilization, user activity, etc.).\n* Synchronized recorder with integrated support for network probing by an auxiliary modem",
+      "evidence_location": "lines 43-49",
+      "confidence": "high",
+      "reason": "Highlights the main capabilities and specifications of the software."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@InProceedings{Falkenberg2019a,\n\tAuthor = {Robert Falkenberg and Christian Wietfeld},\n\tTitle = {{FALCON}: An Accurate Real-time Monitor for Client-based Mobile Network Data Analytics},\n\tBooktitle = {2019 IEEE Global Communications Conference (GLOBECOM)},\n\tYear = {2019},\n\tAddress = {Waikoloa, Hawaii, USA},\n\tMonth = dec,\n\tPublisher = {IEEE},\n\tDoi = {10.1109/GLOBECOM38437.2019.9014096},\n\tEprint = {1907.10110},\n\tEprinttype = {arxiv},\n\tUrl = {https://arxiv.org/abs/1907.10110}\n}",
+      "normalized_value": "@InProceedings{Falkenberg2019a, Author = {Robert Falkenberg and Christian Wietfeld}, Title = {{FALCON}: An Accurate Real-time Monitor for Client-based Mobile Network Data Analytics}, Booktitle = {2019 IEEE Global Communications Conference (GLOBECOM)}, Year = {2019}, Address = {Waikoloa, Hawaii, USA}, Month = dec, Publisher = {IEEE}, Doi = {10.1109/GLOBECOM38437.2019.9014096}, Eprint = {1907.10110}, Eprinttype = {arxiv}, Url = {https://arxiv.org/abs/1907.10110} }",
+      "evidence": "```tex\n@InProceedings{Falkenberg2019a,\n\tAuthor = {Robert Falkenberg and Christian Wietfeld},\n\tTitle = {{FALCON}: An Accurate Real-time Monitor for Client-based Mobile Network Data Analytics},\n\tBooktitle = {2019 IEEE Global Communications Conference (GLOBECOM)},\n\tYear = {2019},\n\tAddress = {Waikoloa, Hawaii, USA},\n\tMonth = dec,\n\tPublisher = {IEEE},\n\tDoi = {10.1109/GLOBECOM38437.2019.9014096},\n\tEprint = {1907.10110},\n\tEprinttype = {arxiv},\n\tUrl = {https://arxiv.org/abs/1907.10110}\n}\n```",
+      "evidence_location": "lines 359-373",
+      "confidence": "high",
+      "reason": "Provides a standard BibTeX citation for academic reference and attribution."
+    },
+    {
+      "field": "related_publications",
+      "value": "- B. Sliwa, R. Falkenberg, C. Wietfeld, [**Towards Cooperative Data Rate Prediction for Future Mobile and Vehicular 6G Networks**](https://arxiv.org/abs/2001.09452), In *2nd 6G Wireless Summit (6G SUMMIT)*, 2020.\n- R. Falkenberg, C. Wietfeld, [**FALCON: An Accurate Real-time Monitor for Client-based Mobile Network Data Analytics**](https://arxiv.org/abs/1907.10110), In *GLOBECOM 2019 - 2019 IEEE Global Communications Conference*, 2019.\n- R. Falkenberg, K. Heimann, C. Wietfeld, [**Discover Your Competition in LTE: Client-Based Passive Data Rate Prediction by Machine Learning**](https://arxiv.org/abs/1711.06820), In *GLOBECOM 2017 - 2017 IEEE Global Communications Conference*, 2017.\n- R. Falkenberg, C. Ide, C. Wietfeld, [**Client-Based Control Channel Analysis for Connectivity Estimation in LTE Networks**](https://arxiv.org/abs/1701.03304), In *IEEE Vehicular Technology Conference (VTC-Fall)*, 2016.",
+      "normalized_value": "- B. Sliwa, R. Falkenberg, C. Wietfeld, [**Towards Cooperative Data Rate Prediction for Future Mobile and Vehicular 6G Networks**](https://arxiv.org/abs/2001.09452), In *2nd 6G Wireless Summit (6G SUMMIT)*, 2020. - R. Falkenberg, C. Wietfeld, [**FALCON: An Accurate Real-time Monitor for Client-based Mobile Network Data Analytics**](https://arxiv.org/abs/1907.10110), In *GLOBECOM 2019 - 2019 IEEE Global Communications Conference*, 2019. - R. Falkenberg, K. Heimann, C. Wietfeld, [**Discover Your Competition in LTE: Client-Based Passive Data Rate Prediction by Machine Learning**](https://arxiv.org/abs/1711.06820), In *GLOBECOM 2017 - 2017 IEEE Global Communications Conference*, 2017. - R. Falkenberg, C. Ide, C. Wietfeld, [**Client-Based Control Channel Analysis for Connectivity Estimation in LTE Networks**](https://arxiv.org/abs/1701.03304), In *IEEE Vehicular Technology Conference (VTC-Fall)*, 2016.",
+      "evidence": "- B. Sliwa, R. Falkenberg, C. Wietfeld, [**Towards Cooperative Data Rate Prediction for Future Mobile and Vehicular 6G Networks**](https://arxiv.org/abs/2001.09452), In *2nd 6G Wireless Summit (6G SUMMIT)*, 2020.\n- R. Falkenberg, C. Wietfeld, [**FALCON: An Accurate Real-time Monitor for Client-based Mobile Network Data Analytics**](https://arxiv.org/abs/1907.10110), In *GLOBECOM 2019 - 2019 IEEE Global Communications Conference*, 2019.\n- R. Falkenberg, K. Heimann, C. Wietfeld, [**Discover Your Competition in LTE: Client-Based Passive Data Rate Prediction by Machine Learning**](https://arxiv.org/abs/1711.06820), In *GLOBECOM 2017 - 2017 IEEE Global Communications Conference*, 2017.\n- R. Falkenberg, C. Ide, C. Wietfeld, [**Client-Based Control Channel Analysis for Connectivity Estimation in LTE Networks**](https://arxiv.org/abs/1701.03304), In *IEEE Vehicular Technology Conference (VTC-Fall)*, 2016.",
+      "evidence_location": "lines 347-352",
+      "confidence": "high",
+      "reason": "Lists additional research papers related to the project, providing context."
+    },
+    {
+      "field": "funding_acknowledgement",
+      "value": "The research around this project has been supported by *Deutsche Forschungsgemeinschaft* (DFG) within the Collaborative Research Center SFB 876 “Providing Information by Resource-Constrained Analysis”, project A4 at TU Dortmund University.",
+      "normalized_value": "The research around this project has been supported by *Deutsche Forschungsgemeinschaft* (DFG) within the Collaborative Research Center SFB 876 “Providing Information by Resource-Constrained Analysis”, project A4 at TU Dortmund University.",
+      "evidence": "The research around this project has been supported by *Deutsche Forschungsgemeinschaft* (DFG) within the Collaborative Research Center SFB 876 “Providing Information by Resource-Constrained Analysis”, project A4 at TU Dortmund University.",
+      "evidence_location": "lines 28-29",
+      "confidence": "high",
+      "reason": "Acknowledges the funding source, important for attribution and context."
+    },
+    {
+      "field": "planned_features",
+      "value": "* TDD\n* Support for DCI with Carrier Indicator Field (CIF)\n* Multithreaded DCI search\n* Visualization of System Information Blocks (SIB)",
+      "normalized_value": "* TDD * Support for DCI with Carrier Indicator Field (CIF) * Multithreaded DCI search * Visualization of System Information Blocks (SIB)",
+      "evidence": "* TDD\n* Support for DCI with Carrier Indicator Field (CIF)\n* Multithreaded DCI search\n* Visualization of System Information Blocks (SIB)",
+      "evidence_location": "lines 54-57",
+      "confidence": "high",
+      "reason": "Indicates future development directions, useful for users anticipating updates."
+    },
+    {
+      "field": "base_library",
+      "value": "srsLTE library",
+      "normalized_value": "srsLTE library",
+      "evidence": "Based on [srsLTE][srslte] library",
+      "evidence_location": "line 20",
+      "confidence": "high",
+      "reason": "Specifies the underlying library used, important for dependencies and understanding the codebase."
+    }
+  ]
+}

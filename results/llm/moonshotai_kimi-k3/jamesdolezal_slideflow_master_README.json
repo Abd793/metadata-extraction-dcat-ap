@@ -1,0 +1,247 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Slideflow",
+      "normalized_value": "Slideflow",
+      "evidence": "**Slideflow is a deep learning library for digital pathology, offering a user-friendly interface for model development.**",
+      "evidence_location": "line 16",
+      "confidence": "high",
+      "reason": "Names the artifact and its purpose, essential for identification and indexing."
+    },
+    {
+      "field": "description",
+      "value": "Slideflow is a deep learning library for digital pathology, offering a user-friendly interface for model development.",
+      "normalized_value": "Slideflow is a deep learning library for digital pathology, offering a user-friendly interface for model development.",
+      "evidence": "**Slideflow is a deep learning library for digital pathology, offering a user-friendly interface for model development.**",
+      "evidence_location": "line 16",
+      "confidence": "high",
+      "reason": "Summarizes what the artifact does and its domain (digital pathology deep learning)."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/slideflow/slideflow",
+      "normalized_value": "https://github.com/slideflow/slideflow",
+      "evidence": "git clone https://github.com/slideflow/slideflow",
+      "evidence_location": "line 82, 'Method 3: From source' code block",
+      "confidence": "high",
+      "reason": "Source repository URL needed to access and reproduce the artifact."
+    },
+    {
+      "field": "doi",
+      "value": "10.5281/zenodo.5703792",
+      "normalized_value": "10.5281/zenodo.5703792",
+      "evidence": "[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5703792.svg)](https://doi.org/10.5281/zenodo.5703792)",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Zenodo DOI badge provides a persistent identifier for archiving and citation."
+    },
+    {
+      "field": "arxiv_link",
+      "value": "https://arxiv.org/abs/2304.04142",
+      "normalized_value": "https://arxiv.org/abs/2304.04142",
+      "evidence": "[ArXiv](https://arxiv.org/abs/2304.04142)",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Link to the associated preprint paper."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://slideflow.dev",
+      "normalized_value": "https://slideflow.dev",
+      "evidence": "Full documentation with example tutorials can be found at [slideflow.dev](https://www.slideflow.dev/).",
+      "evidence_location": "line 36",
+      "confidence": "high",
+      "reason": "Official documentation site with tutorials, useful for learning and reuse."
+    },
+    {
+      "field": "studio_tool_url",
+      "value": "https://slideflow.dev/studio/",
+      "normalized_value": "https://slideflow.dev/studio/",
+      "evidence": "[Slideflow Studio](https://slideflow.dev/studio/)",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Link to Slideflow Studio, the interactive visualization/deployment tool accompanying the library."
+    },
+    {
+      "field": "pypi_package",
+      "value": "slideflow",
+      "normalized_value": "slideflow",
+      "evidence": "[![PyPI version](https://badge.fury.io/py/slideflow.svg)](https://badge.fury.io/py/slideflow)",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "PyPI package name enables installation and version lookup."
+    },
+    {
+      "field": "python_version_requirement",
+      "value": "Python >= 3.7 (<3.10 if using cuCIM)",
+      "normalized_value": "Python >= 3.7 (<3.10 if using cuCIM)",
+      "evidence": "- Python >= 3.7 (<3.10 if using [cuCIM](https://docs.rapids.ai/api/cucim/stable/))",
+      "evidence_location": "line 39, '## Requirements' section",
+      "confidence": "high",
+      "reason": "Specifies the supported Python versions needed to set up the environment."
+    },
+    {
+      "field": "deep_learning_backend_requirement",
+      "value": "PyTorch >= 1.9 or Tensorflow 2.5-2.11",
+      "normalized_value": "PyTorch >= 1.9 or Tensorflow 2.5-2.11",
+      "evidence": "- [PyTorch](https://pytorch.org/) >= 1.9 _or_ [Tensorflow](https://www.tensorflow.org/) 2.5-2.11",
+      "evidence_location": "line 40, '## Requirements' section",
+      "confidence": "high",
+      "reason": "Core framework dependency with version constraints, required for installation."
+    },
+    {
+      "field": "optional_dependency",
+      "value": "Libvips >= 8.9 (alternative slide reader, adds support for *.scn, *.mrxs, *.ndpi, *.vms, and *.vmu files)",
+      "normalized_value": "Libvips >= 8.9 (alternative slide reader, adds support for *.scn, *.mrxs, *.ndpi, *.vms, and *.vmu files)",
+      "evidence": "- [Libvips](https://libvips.github.io/libvips/) >= 8.9 (alternative slide reader, adds support for *.scn, *.mrxs, *.ndpi, *.vms, and *.vmu files).",
+      "evidence_location": "line 43, '### Optional' subsection",
+      "confidence": "high",
+      "reason": "Optional dependency that extends supported slide file formats."
+    },
+    {
+      "field": "optional_dependency",
+      "value": "CPLEX 20.1.0 with Python API, or Pyomo with Bonmin solver (linear solver for preserved-site cross-validation)",
+      "normalized_value": "CPLEX 20.1.0 with Python API, or Pyomo with Bonmin solver (linear solver for preserved-site cross-validation)",
+      "evidence": "- Linear solver (for preserved-site cross-validation)\n  - [CPLEX](https://www.ibm.com/docs/en/icos/12.10.0?topic=v12100-installing-cplex-optimization-studio) 20.1.0 with [Python API](https://www.ibm.com/docs/en/icos/12.10.0?topic=cplex-setting-up-python-api)\n  - _or_ [Pyomo](http://www.pyomo.org/installation) with [Bonmin](https://anaconda.org/conda-forge/coinbonmin) solver",
+      "evidence_location": "lines 44-46, '### Optional' subsection",
+      "confidence": "high",
+      "reason": "Optional solver dependencies required for a specific cross-validation feature."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip3 install --upgrade setuptools pip wheel\npip3 install slideflow[cucim] cupy-cuda11x",
+      "normalized_value": "pip3 install --upgrade setuptools pip wheel\npip3 install slideflow[cucim] cupy-cuda11x",
+      "evidence": "```\npip3 install --upgrade setuptools pip wheel\npip3 install slideflow[cucim] cupy-cuda11x\n```",
+      "evidence_location": "lines 54-57, '### Method 1: Install via pip' code block",
+      "confidence": "high",
+      "reason": "Primary pip installation commands for reproducing the environment."
+    },
+    {
+      "field": "docker_image",
+      "value": "jamesdolezal/slideflow:latest-tf",
+      "normalized_value": "jamesdolezal/slideflow:latest-tf",
+      "evidence": "```\ndocker pull jamesdolezal/slideflow:latest-tf\ndocker run -it --gpus all jamesdolezal/slideflow:latest-tf\n```",
+      "evidence_location": "lines 65-68, '### Method 2: Docker image' code block",
+      "confidence": "high",
+      "reason": "Pre-configured Docker image with Tensorflow backend for containerized deployment."
+    },
+    {
+      "field": "docker_image",
+      "value": "jamesdolezal/slideflow:latest-torch",
+      "normalized_value": "jamesdolezal/slideflow:latest-torch",
+      "evidence": "```\ndocker pull jamesdolezal/slideflow:latest-torch\ndocker run -it --shm-size=2g --gpus all jamesdolezal/slideflow:latest-torch\n```",
+      "evidence_location": "lines 72-75, '### Method 2: Docker image' code block",
+      "confidence": "high",
+      "reason": "Pre-configured Docker image with PyTorch backend for containerized deployment."
+    },
+    {
+      "field": "source_installation_command",
+      "value": "git clone https://github.com/slideflow/slideflow\nconda env create -f slideflow/environment.yml\nconda activate slideflow\npip install -e slideflow/ cupy-cuda11x",
+      "normalized_value": "git clone https://github.com/slideflow/slideflow\nconda env create -f slideflow/environment.yml\nconda activate slideflow\npip install -e slideflow/ cupy-cuda11x",
+      "evidence": "```\ngit clone https://github.com/slideflow/slideflow\nconda env create -f slideflow/environment.yml\nconda activate slideflow\npip install -e slideflow/ cupy-cuda11x\n```",
+      "evidence_location": "lines 81-86, '### Method 3: From source' code block",
+      "confidence": "high",
+      "reason": "Commands to build and install from source using a conda development environment."
+    },
+    {
+      "field": "noncommercial_addon_packages",
+      "value": "slideflow-gpl slideflow-noncommercial",
+      "normalized_value": "slideflow-gpl slideflow-noncommercial",
+      "evidence": "To add additional tools and pretrained models available under a non-commercial license, install `slideflow-gpl` and `slideflow-noncommercial`:\n\n```\npip install slideflow-gpl slideflow-noncommercial\n```",
+      "evidence_location": "lines 90-94, '### Non-Commercial Add-ons' section",
+      "confidence": "high",
+      "reason": "Add-on packages providing extra pretrained models under a non-commercial license; important for reuse and licensing awareness."
+    },
+    {
+      "field": "included_pretrained_models",
+      "value": "UNI, HistoSSL, GigaPath, PLIP, RetCCL, CTransPath",
+      "normalized_value": "UNI, HistoSSL, GigaPath, PLIP, RetCCL, CTransPath",
+      "evidence": "This will provide integrated access to 6 additional pretrained foundation models ([UNI](https://www.nature.com/articles/s41591-024-02857-3), [HistoSSL](https://www.medrxiv.org/content/10.1101/2023.07.21.23292757v2.full.pdf), [GigaPath](https://aka.ms/gigapath), [PLIP](https://www.nature.com/articles/s41591-023-02504-3), [RetCCL](https://www.sciencedirect.com/science/article/abs/pii/S1361841522002730), and [CTransPath](https://www.sciencedirect.com/science/article/abs/pii/S1361841522002043)), the MIL architecture [CLAM](https://www.nature.com/articles/s41551-020-00682-w), the UQ algorithm [BISCUIT](https://www.nature.com/articles/s41467-022-34025-x), and the GAN framework [StyleGAN3](https://nvlabs-fi-cdn.nvidia.com/stylegan3/stylegan3-paper.pdf).",
+      "evidence_location": "line 96, '### Non-Commercial Add-ons' section",
+      "confidence": "high",
+      "reason": "Lists concrete pretrained foundation models and architectures available via the add-ons, useful for capability discovery."
+    },
+    {
+      "field": "backend_configuration",
+      "value": "SF_BACKEND environment variable selects PyTorch or Tensorflow backend (defaults to PyTorch)",
+      "normalized_value": "SF_BACKEND environment variable selects PyTorch or Tensorflow backend (defaults to PyTorch)",
+      "evidence": "Slideflow supports both PyTorch and Tensorflow, defaulting to PyTorch if both are available. You can specify the backend to use with the environmental variable `SF_BACKEND`. For example:\n\n```\nexport SF_BACKEND=tensorflow\n```",
+      "evidence_location": "lines 102-106, '### Deep learning (PyTorch vs. Tensorflow)' section",
+      "confidence": "high",
+      "reason": "Configuration mechanism for choosing the deep learning backend."
+    },
+    {
+      "field": "slide_backend_configuration",
+      "value": "SF_SLIDE_BACKEND environment variable selects slide reader (cuCIM default, or libvips)",
+      "normalized_value": "SF_SLIDE_BACKEND environment variable selects slide reader (cuCIM default, or libvips)",
+      "evidence": "You can set the active slide backend with the environmental variable `SF_SLIDE_BACKEND`:\n\n```\nexport SF_SLIDE_BACKEND=libvips\n```",
+      "evidence_location": "lines 110-114, '### Slide reading (cuCIM vs. Libvips)' section",
+      "confidence": "high",
+      "reason": "Configuration mechanism for choosing the whole-slide image reading backend."
+    },
+    {
+      "field": "supported_features",
+      "value": "Training pipelines, slide processing and stain normalization, weakly-supervised or strongly-supervised training, foundation models, multiple-instance learning (MIL), self-supervised learning (SSL), generative adversarial networks (GANs), explainability tools (heatmaps, mosaic maps, saliency maps, synthetic histology), layer activation analysis, uncertainty quantification, interactive user interface",
+      "normalized_value": "Training pipelines, slide processing and stain normalization, weakly-supervised or strongly-supervised training, foundation models, multiple-instance learning (MIL), self-supervised learning (SSL), generative adversarial networks (GANs), explainability tools (heatmaps, mosaic maps, saliency maps, synthetic histology), layer activation analysis, uncertainty quantification, interactive user interface",
+      "evidence": "## 🚀 Features\n- Easy-to-use, highly customizable training pipelines\n- Robust **[slide processing](https://slideflow.dev/slide_processing) and [stain normalization](https://slideflow.dev/norm)** toolkit\n- Support for training with **[weakly-supervised](https://slideflow.dev/training) or [strongly-supervised](https://slideflow.dev/tile_labels)** labels\n- Built-in, state-of-the-art **[foundation models](https://slideflow.dev/features)**\n- **[Multiple-instance learning (MIL)](https://slideflow.dev/mil)**\n- **[Self-supervised learning (SSL)](https://slideflow.dev/ssl)**\n- **[Generative adversarial networks (GANs)](https://slideflow.dev/training)**\n- **Explainability tools**: [Heatmaps](https://slideflow.dev/evaluation/#heatmaps), [mosaic maps](https://slideflow.dev/posthoc/#mosaic-maps), [saliency maps](https://slideflow.dev/saliency/), [synthetic histology](https://slideflow.dev/stylegan)\n- Robust **[layer activation analysis](https://slideflow.dev/posthoc)** tools\n- **[Uncertainty quantification](https://slideflow.dev/uq)**\n- **[Interactive user interface](https://slideflow.dev/studio)** for model deployment",
+      "evidence_location": "lines 22-33, '## 🚀 Features' section",
+      "confidence": "high",
+      "reason": "Enumerates the concrete capabilities of the library, useful for search and capability matching."
+    },
+    {
+      "field": "usage_example",
+      "value": "P = sf.create_project(root='/project/destination', cfg=sf.project.LungAdenoSquam(), download=True)",
+      "normalized_value": "P = sf.create_project(root='/project/destination', cfg=sf.project.LungAdenoSquam(), download=True)",
+      "evidence": "```python\nimport slideflow as sf\n\nP = sf.create_project(\n    root='/project/destination',\n    cfg=sf.project.LungAdenoSquam(),\n    download=True\n)\n```",
+      "evidence_location": "lines 120-128, '## Getting started' code block",
+      "confidence": "high",
+      "reason": "Quickstart example showing project creation with automatic slide download from the Genomic Data Commons."
+    },
+    {
+      "field": "training_example",
+      "value": "P.train('category1', params=params, save_predictions=True, multi_gpu=True)",
+      "normalized_value": "P.train('category1', params=params, save_predictions=True, multi_gpu=True)",
+      "evidence": "```python\nP.train(\n  'category1',\n  params=params,\n  save_predictions=True,\n  multi_gpu=True\n)\n```",
+      "evidence_location": "lines 183-190, '### Training models' code block",
+      "confidence": "high",
+      "reason": "Demonstrates the model training API including cross-validation and multi-GPU support."
+    },
+    {
+      "field": "license",
+      "value": "Apache-2.0",
+      "normalized_value": "Apache-2.0",
+      "evidence": "This code is made available under the Apache-2.0 license.",
+      "evidence_location": "line 214, '## 🔓 License' section",
+      "confidence": "high",
+      "reason": "License terms governing reuse of the code."
+    },
+    {
+      "field": "citation",
+      "value": "Dolezal, J.M., Kochanny, S., Dyer, E. et al. Slideflow: deep learning for digital histopathology with real-time whole-slide visualization. BMC Bioinformatics 25, 134 (2024). https://doi.org/10.1186/s12859-024-05758-x",
+      "normalized_value": "Dolezal, J.M., Kochanny, S., Dyer, E. et al. Slideflow: deep learning for digital histopathology with real-time whole-slide visualization. BMC Bioinformatics 25, 134 (2024). https://doi.org/10.1186/s12859-024-05758-x",
+      "evidence": "Dolezal, J.M., Kochanny, S., Dyer, E. et al. Slideflow: deep learning for digital histopathology with real-time whole-slide visualization. BMC Bioinformatics 25, 134 (2024). https://doi.org/10.1186/s12859-024-05758-x",
+      "evidence_location": "line 219, '## 🔗 Reference' section",
+      "confidence": "high",
+      "reason": "Preferred citation for academic reuse and attribution."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@Article{Dolezal2024, author={Dolezal, James M. and Kochanny, Sara and Dyer, Emma and Ramesh, Siddhi and Srisuwananukorn, Andrew and Sacco, Matteo and Howard, Frederick M. and Li, Anran and Mohan, Prajval and Pearson, Alexander T.}, title={Slideflow: deep learning for digital histopathology with real-time whole-slide visualization}, journal={BMC Bioinformatics}, year={2024}, month={Mar}, day={27}, volume={25}, number={1}, pages={134}, doi={10.1186/s12859-024-05758-x}, url={https://doi.org/10.1186/s12859-024-05758-x}}",
+      "normalized_value": "@Article{Dolezal2024, author={Dolezal, James M. and Kochanny, Sara and Dyer, Emma and Ramesh, Siddhi and Srisuwananukorn, Andrew and Sacco, Matteo and Howard, Frederick M. and Li, Anran and Mohan, Prajval and Pearson, Alexander T.}, title={Slideflow: deep learning for digital histopathology with real-time whole-slide visualization}, journal={BMC Bioinformatics}, year={2024}, month={Mar}, day={27}, volume={25}, number={1}, pages={134}, doi={10.1186/s12859-024-05758-x}, url={https://doi.org/10.1186/s12859-024-05758-x}}",
+      "evidence": "```\n@Article{Dolezal2024,\n    author={Dolezal, James M. and Kochanny, Sara and Dyer, Emma and Ramesh, Siddhi and Srisuwananukorn, Andrew and Sacco, Matteo and Howard, Frederick M. and Li, Anran and Mohan, Prajval and Pearson, Alexander T.},\n    title={Slideflow: deep learning for digital histopathology with real-time whole-slide visualization},\n    journal={BMC Bioinformatics},\n    year={2024},\n    month={Mar},\n    day={27},\n    volume={25},\n    number={1},\n    pages={134},\n    doi={10.1186/s12859-024-05758-x},\n    url={https://doi.org/10.1186/s12859-024-05758-x}\n}\n```",
+      "evidence_location": "lines 221-235, '## 🔗 Reference' code block",
+      "confidence": "high",
+      "reason": "Machine-readable BibTeX entry for citing the artifact."
+    },
+    {
+      "field": "release_version",
+      "value": "3.0.0",
+      "normalized_value": "3.0.0",
+      "evidence": "[✨ What's New in 3.0 ✨](https://github.com/slideflow/slideflow/releases/tag/3.0.0)",
+      "evidence_location": "line 8",
+      "confidence": "medium",
+      "reason": "Indicates the highlighted major release (3.0.0); whether it is the latest version is implied by the 'What's New' link but not explicitly stated."
+    }
+  ]
+}

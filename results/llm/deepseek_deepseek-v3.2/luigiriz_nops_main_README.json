@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Novel Class Discovery for 3D Point Cloud Semantic Segmentation [CVPR 2023]",
+      "normalized_value": "Novel Class Discovery for 3D Point Cloud Semantic Segmentation [CVPR 2023]",
+      "evidence": "# **Novel Class Discovery for 3D Point Cloud Semantic Segmentation [CVPR 2023]**",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Identifies the name and conference of the artifact."
+    },
+    {
+      "field": "description",
+      "value": "Novel class discovery (NCD) for semantic segmentation is the problem of learning a model that is capable of segmenting unlabelled (novel) classes by using only the supervision from labelled (base) classes.",
+      "normalized_value": "Novel class discovery (NCD) for semantic segmentation is the problem of learning a model that is capable of segmenting unlabelled (novel) classes by using only the supervision from labelled (base) classes.",
+      "evidence": "Novel class discovery (NCD) for semantic segmentation is the problem of learning a model that is capable of segmenting unlabelled (novel) classes by using only the supervision from labelled (base) classes.",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Explains the core problem addressed by the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2303.11610",
+      "normalized_value": "https://arxiv.org/pdf/2303.11610",
+      "evidence": "[PAPER](https://arxiv.org/pdf/2303.11610)",
+      "evidence_location": "line 17",
+      "confidence": "high",
+      "reason": "Provides a link to the associated research paper."
+    },
+    {
+      "field": "authors",
+      "value": "Luigi Riz, Cristiano Saltori, Elisa Ricci, Fabio Poiesi",
+      "normalized_value": "Luigi Riz, Cristiano Saltori, Elisa Ricci, Fabio Poiesi",
+      "evidence": "Authors: \n        [Luigi Riz](https://scholar.google.com/citations?user=djO2pVUAAAAJ&hl),\n        [Cristiano Saltori](https://scholar.google.com/citations?user=PID7Z4oAAAAJ&hl),\n        [Elisa Ricci](https://scholar.google.ca/citations?user=xf1T870AAAAJ&hl),\n        [Fabio Poiesi](https://scholar.google.co.uk/citations?user=BQ7li6AAAAAJ&hl)",
+      "evidence_location": "lines 19-23",
+      "confidence": "high",
+      "reason": "Lists the authors for proper attribution."
+    },
+    {
+      "field": "conference",
+      "value": "CVPR 2023",
+      "normalized_value": "CVPR 2023",
+      "evidence": "NOPS is accepted to CVPR 2023!",
+      "evidence_location": "line 27",
+      "confidence": "high",
+      "reason": "Indicates the conference where the work was presented."
+    },
+    {
+      "field": "dependencies",
+      "value": "Python 3.8, CUDA 11.3, pytorch 1.10.1, pytorch-lighting 1.4.8, Minkowski Engine, Scipy 1.7.3, Wandb",
+      "normalized_value": "Python 3.8, CUDA 11.3, pytorch 1.10.1, pytorch-lighting 1.4.8, Minkowski Engine, Scipy 1.7.3, Wandb",
+      "evidence": "The code has been tested with Python 3.8, CUDA 11.3, pytorch 1.10.1 and pytorch-lighting 1.4.8. Any other version may require to update the code for compatibility.\n\n### Conda\nTo run the code, you need to install:\n- [Pytorch 1.10.1](https://pytorch.org/get-started/previous-versions/)\n- [Minkowski Engine](https://github.com/NVIDIA/MinkowskiEngine)\n- [Pytorch-Lighting 1.4.8](https://www.pytorchlightning.ai) (be sure to install torchmetrics=0.7.2)\n- [Scipy 1.7.3](https://scipy.org/install/)\n- [Wandb](https://docs.wandb.ai/quickstart)",
+      "evidence_location": "lines 31-40",
+      "confidence": "high",
+      "reason": "Specifies the required software and hardware for installation."
+    },
+    {
+      "field": "data_structure",
+      "value": "./\n├── \n├── ...\n└── path_to_data_shown_in_yaml_config/\n      └── sequences\n            ├── 00/           \n            │   ├── velodyne/\t\n            |   |\t   ├── 000000.bin\n            |   |\t   ├── 000001.bin\n            |   |\t   └── ...\n            │   └── labels/ \n            |          ├── 000000.label\n            |          ├── 000001.label\n            |          └── ...\n            └── ...",
+      "normalized_value": "./ ├── ├── ... └── path_to_data_shown_in_yaml_config/ └── sequences ├── 00/ │ ├── velodyne/ | | ├── 000000.bin | | ├── 000001.bin | | └── ... │ └── labels/ | ├── 000000.label | ├── 000001.label | └── ... └── ...",
+      "evidence": "./\n├── \n├── ...\n└── path_to_data_shown_in_yaml_config/\n      └── sequences\n            ├── 00/           \n            │   ├── velodyne/\t\n            |   |\t   ├── 000000.bin\n            |   |\t   ├── 000001.bin\n            |   |\t   └── ...\n            │   └── labels/ \n            |          ├── 000000.label\n            |          ├── 000001.label\n            |          └── ...\n            └── ...",
+      "evidence_location": "lines 43-59",
+      "confidence": "high",
+      "reason": "Shows the folder structure required for data preparation."
+    },
+    {
+      "field": "pretraining_command",
+      "value": "python main_pretrain.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "normalized_value": "python main_pretrain.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "evidence": "python main_pretrain.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "evidence_location": "lines 65-66",
+      "confidence": "high",
+      "reason": "Command to run the pretraining step."
+    },
+    {
+      "field": "discovery_command",
+      "value": "python main_discover.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "normalized_value": "python main_discover.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "evidence": "python main_discover.py -s [SPLIT NUMBER] --dataset [SemanticPOSS, SemanticKITTI]",
+      "evidence_location": "lines 75-76",
+      "confidence": "high",
+      "reason": "Command to run the discovery step."
+    },
+    {
+      "field": "reproduction_commands",
+      "value": "python main_discover.py -s [SPLIT NUMBER] --dataset SemanticPOSS --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.3\npython main_discover.py -s [SPLIT NUMBER] --dataset SemanticKITTI --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.5",
+      "normalized_value": "python main_discover.py -s [SPLIT NUMBER] --dataset SemanticPOSS --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.3 python main_discover.py -s [SPLIT NUMBER] --dataset SemanticKITTI --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.5",
+      "evidence": "python main_discover.py -s [SPLIT NUMBER] --dataset SemanticPOSS --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.3\npython main_discover.py -s [SPLIT NUMBER] --dataset SemanticKITTI --dataset_config [CONFIG_PATH] --num_heads=5 --overcluster_factor=3 --use_scheduler --adapting_epsilon_sk --use_uncertainty_queue --use_uncertainty_loss --uncertainty_percentile=0.5",
+      "evidence_location": "lines 83-87",
+      "confidence": "high",
+      "reason": "Exact commands to reproduce the paper's results as specified."
+    },
+    {
+      "field": "test_command",
+      "value": "python main_discover_test.py -s [SPLIT NUMBER] --checkpoint=[PATH TO LIGHTNING CHECKPOINT]",
+      "normalized_value": "python main_discover_test.py -s [SPLIT NUMBER] --checkpoint=[PATH TO LIGHTNING CHECKPOINT]",
+      "evidence": "python main_discover_test.py -s [SPLIT NUMBER] --checkpoint=[PATH TO LIGHTNING CHECKPOINT]",
+      "evidence_location": "lines 91-92",
+      "confidence": "high",
+      "reason": "Command to test the model with a checkpoint."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{riz2023novel,\n  author={Riz, Luigi and Saltori, Cristiano and Ricci, Elisa and Poiesi, Fabio},\n  booktitle={2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, \n  title={Novel Class Discovery for 3D Point Cloud Semantic Segmentation}, \n  year={2023},\n  volume={},\n  number={},\n  pages={9393-9402},\n  doi={10.1109/CVPR52729.2023.00906}}",
+      "normalized_value": "@inproceedings{riz2023novel, author={Riz, Luigi and Saltori, Cristiano and Ricci, Elisa and Poiesi, Fabio}, booktitle={2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, title={Novel Class Discovery for 3D Point Cloud Semantic Segmentation}, year={2023}, volume={}, number={}, pages={9393-9402}, doi={10.1109/CVPR52729.2023.00906}}",
+      "evidence": "@inproceedings{riz2023novel,\n  author={Riz, Luigi and Saltori, Cristiano and Ricci, Elisa and Poiesi, Fabio},\n  booktitle={2023 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, \n  title={Novel Class Discovery for 3D Point Cloud Semantic Segmentation}, \n  year={2023},\n  volume={},\n  number={},\n  pages={9393-9402},\n  doi={10.1109/CVPR52729.2023.00906}}",
+      "evidence_location": "lines 98-108",
+      "confidence": "high",
+      "reason": "Provides the BibTeX citation for proper attribution."
+    },
+    {
+      "field": "funding",
+      "value": "This project has received funding from the European Union’s Horizon Europe research and innovation programme under grant agreement No 101058589. This work was also partially supported by the PRIN project LEGO-AI (Prot. 2020TA3K9N), the EU ISFP PROTECTOR (101034216) project and the EU H2020 MARVEL (957337) project and, it was carried out in the Vision and Learning joint laboratory of Fondazione Bruno Kessler and UNITN.",
+      "normalized_value": "This project has received funding from the European Union’s Horizon Europe research and innovation programme under grant agreement No 101058589. This work was also partially supported by the PRIN project LEGO-AI (Prot. 2020TA3K9N), the EU ISFP PROTECTOR (101034216) project and the EU H2020 MARVEL (957337) project and, it was carried out in the Vision and Learning joint laboratory of Fondazione Bruno Kessler and UNITN.",
+      "evidence": "This project has received funding from the European Union’s Horizon Europe research and innovation programme under grant agreement No 101058589.\nThis work was also partially supported by the PRIN project LEGO-AI (Prot. 2020TA3K9N), the EU ISFP PROTECTOR (101034216) project and the EU H2020 MARVEL (957337) project and, it was carried out in the Vision and Learning joint laboratory of Fondazione Bruno Kessler and UNITN.",
+      "evidence_location": "lines 112-114",
+      "confidence": "high",
+      "reason": "Acknowledges funding sources and institutional support."
+    },
+    {
+      "field": "datasets",
+      "value": "SemanticKITTI, SemanticPOSS",
+      "normalized_value": "SemanticKITTI, SemanticPOSS",
+      "evidence": "SemanticKITTI and SemanticPOSS datasets",
+      "evidence_location": "line 15",
+      "confidence": "high",
+      "reason": "Lists the datasets used for evaluation."
+    },
+    {
+      "field": "method_summary",
+      "value": "a new method for NCD based on online clustering that exploits uncertainty quantification to produce prototypes for pseudo-labelling the points of the novel classes and a new evaluation protocol to assess the performance of NCD for point cloud semantic segmentation.",
+      "normalized_value": "a new method for NCD based on online clustering that exploits uncertainty quantification to produce prototypes for pseudo-labelling the points of the novel classes and a new evaluation protocol to assess the performance of NCD for point cloud semantic segmentation.",
+      "evidence": "a new method for NCD based on online clustering that exploits uncertainty quantification to produce prototypes for pseudo-labelling the points of the novel classes.\nLastly, we introduce a new evaluation protocol to assess the performance of NCD for point cloud semantic segmentation.",
+      "evidence_location": "lines 13-14",
+      "confidence": "high",
+      "reason": "Describes the proposed method and evaluation protocol."
+    },
+    {
+      "field": "release_info",
+      "value": "3/2023: NOPS code is OUT! 3/2023: NOPS is accepted to CVPR 2023!",
+      "normalized_value": "3/2023: NOPS code is OUT! 3/2023: NOPS is accepted to CVPR 2023!",
+      "evidence": "- 3/2023: NOPS code is **OUT**!:fire:\n- 3/2023: NOPS is accepted to CVPR 2023!:fire: Our work is the first allowing the segmentation of known and unknown classes in 3D Lidar scans!",
+      "evidence_location": "lines 26-27",
+      "confidence": "high",
+      "reason": "Provides timeline for code release and conference acceptance."
+    }
+  ]
+}

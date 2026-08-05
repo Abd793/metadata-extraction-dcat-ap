@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "paper_title",
+      "value": "KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches",
+      "normalized_value": "KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches",
+      "evidence": "# KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the official title of the paper and benchmark project."
+    },
+    {
+      "field": "authors",
+      "value": "Jiayi Yuan*, Hongyi Liu*, Shaochen (Henry) Zhong*, Yu-Neng Chuang, Songchen Li, Guanchu Wang, Duy Le, Hongye Jin, Vipin Chaudhary, Zhaozhuo Xu, Zirui Liu, Xia Hu",
+      "normalized_value": "Jiayi Yuan*, Hongyi Liu*, Shaochen (Henry) Zhong*, Yu-Neng Chuang, Songchen Li, Guanchu Wang, Duy Le, Hongye Jin, Vipin Chaudhary, Zhaozhuo Xu, Zirui Liu, Xia Hu",
+      "evidence": "Jiayi Yuan*, Hongyi Liu*, Shaochen (Henry) Zhong*, Yu-Neng Chuang, Songchen Li, Guanchu Wang, Duy Le, Hongye Jin, Vipin Chaudhary, Zhaozhuo Xu, Zirui Liu, Xia Hu",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Lists the authors of the work documented in the repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2407.01527",
+      "normalized_value": "https://arxiv.org/abs/2407.01527",
+      "evidence": "([arXiv](https://arxiv.org/abs/2407.01527))",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Direct link to the arXiv preprint of the paper."
+    },
+    {
+      "field": "publication_venue",
+      "value": "EMNLP 2024 Findings",
+      "normalized_value": "EMNLP 2024 Findings",
+      "evidence": "* `2024/09/19`: Accepted at EMNLP 2024 Findings (with a 4/5 meta!).",
+      "evidence_location": "16, ## Changelog and To-do",
+      "confidence": "high",
+      "reason": "Specifies the academic venue where the benchmark paper was accepted."
+    },
+    {
+      "field": "experiment_results_url",
+      "value": "https://drive.google.com/drive/folders/1PBB5bkR88QbaA1-dBTwP5xKLq8iEBcBb?usp=share_link",
+      "normalized_value": "https://drive.google.com/drive/folders/1PBB5bkR88QbaA1-dBTwP5xKLq8iEBcBb?usp=share_link",
+      "evidence": "* `2024/10/16`: All experiment logs, filtered, and raw results shared at [Google Drive link](https://drive.google.com/drive/folders/1PBB5bkR88QbaA1-dBTwP5xKLq8iEBcBb?usp=share_link).",
+      "evidence_location": "12, ## Changelog and To-do",
+      "confidence": "high",
+      "reason": "Link to the external storage containing raw and processed experiment logs and results."
+    },
+    {
+      "field": "baseline_models",
+      "value": "meta-llama/Meta-Llama-3-8B-Instruct, mistralai/Mistral-7B-Instruct-v0.2, lmsys/longchat-7b-v1.5-32k",
+      "normalized_value": "meta-llama/Meta-Llama-3-8B-Instruct, mistralai/Mistral-7B-Instruct-v0.2, lmsys/longchat-7b-v1.5-32k",
+      "evidence": "`meta-llama/Meta-Llama-3-8B-Instruct`/`mistralai/Mistral-7B-Instruct-v0.2`/`lmsys/longchat-7b-v1.5-32k`",
+      "evidence_location": "38, ## Environment Setup",
+      "confidence": "high",
+      "reason": "Lists the primary baseline language models evaluated in the benchmark."
+    },
+    {
+      "field": "installation_commands",
+      "value": "cd longctx_bench\npip install --upgrade pip\npip install -r requirements/<requirment_file_name>",
+      "normalized_value": "cd longctx_bench pip install --upgrade pip pip install -r requirements/<requirment_file_name>",
+      "evidence": "```\ncd longctx_bench\npip install --upgrade pip\npip install -r requirements/<requirment_file_name>\n```",
+      "evidence_location": "44-48, ## Environment Setup",
+      "confidence": "high",
+      "reason": "Provides shell commands to set up the project environment and install required packages."
+    },
+    {
+      "field": "evaluated_datasets",
+      "value": "NarrativeQA, Qasper, MultiFieldQA, HotpotQA, 2WikiMQA, Musique, GovReport, QMSum, MultiNews, TREC, TriviaQA, SAMSum, PassageRetrieval, LCC, RepoBench-P",
+      "normalized_value": "NarrativeQA, Qasper, MultiFieldQA, HotpotQA, 2WikiMQA, Musique, GovReport, QMSum, MultiNews, TREC, TriviaQA, SAMSum, PassageRetrieval, LCC, RepoBench-P",
+      "evidence": "NarrativeQA, Qasper, MultiFieldQA, HotpotQA, 2WikiMQA, Musique, GovReport, QMSum, MultiNews, TREC, TriviaQA, SAMSum, PassageRetrieval, LCC, RepoBench-P",
+      "evidence_location": "63, ## Dataset and Access Preparation",
+      "confidence": "high",
+      "reason": "Enumerates the 15 datasets from LongBench evaluated in the paper."
+    },
+    {
+      "field": "dataset_preparation_command",
+      "value": "python scripts/dataset_prep/download_longbench.py",
+      "normalized_value": "python scripts/dataset_prep/download_longbench.py",
+      "evidence": "```\npython scripts/dataset_prep/download_longbench.py\n```",
+      "evidence_location": "67-69, ## Dataset and Access Preparation",
+      "confidence": "high",
+      "reason": "Command used to download and process LongBench datasets for experiments."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "bash scripts/paulgraham_passkey/20480words_10x10x3_7digits/baseline/mistral-7b-instruct-v0.2.sh <output_dir_root>",
+      "normalized_value": "bash scripts/paulgraham_passkey/20480words_10x10x3_7digits/baseline/mistral-7b-instruct-v0.2.sh <output_dir_root>",
+      "evidence": "```\nbash scripts/paulgraham_passkey/20480words_10x10x3_7digits/baseline/mistral-7b-instruct-v0.2.sh <output_dir_root>\n```",
+      "evidence_location": "78-80, ## Experiment Reproduction",
+      "confidence": "high",
+      "reason": "Provides a shell command to reproduce an evaluation experiment."
+    },
+    {
+      "field": "reproducibility_commit",
+      "value": "3e9d810f93cfdecc87d4538e1721d08047d66010",
+      "normalized_value": "3e9d810f93cfdecc87d4538e1721d08047d66010",
+      "evidence": "[commit 3e9d810](https://github.com/henryzhongsc/longctx_bench/commit/3e9d810f93cfdecc87d4538e1721d08047d66010)",
+      "evidence_location": "91, ## Experiment Reproduction",
+      "confidence": "high",
+      "reason": "Identifies the exact Git commit SHA corresponding to the reported paper results."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{yuan_liu_zhong_2024_kvcache_comp_benchmnark,\n    title={KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches},\n    author={Jiayi Yuan and Hongyi Liu and Shaochen Zhong and Yu-Neng Chuang and Songchen Li and Guanchu Wang and Duy Le and Hongye Jin and Vipin Chaudhary and Zhaozhuo Xu and Zirui Liu and Xia Hu},\n    booktitle={The 2024 Conference on Empirical Methods in Natural Language Processing},\n    year={2024},\n}",
+      "normalized_value": "@inproceedings{yuan_liu_zhong_2024_kvcache_comp_benchmnark, title={KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches}, author={Jiayi Yuan and Hongyi Liu and Shaochen Zhong and Yu-Neng Chuang and Songchen Li and Guanchu Wang and Duy Le and Hongye Jin and Vipin Chaudhary and Zhaozhuo Xu and Zirui Liu and Xia Hu}, booktitle={The 2024 Conference on Empirical Methods in Natural Language Processing}, year={2024}, }",
+      "evidence": "```\n@inproceedings{yuan_liu_zhong_2024_kvcache_comp_benchmnark,\n    title={KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches},\n    author={Jiayi Yuan and Hongyi Liu and Shaochen Zhong and Yu-Neng Chuang and Songchen Li and Guanchu Wang and Duy Le and Hongye Jin and Vipin Chaudhary and Zhaozhuo Xu and Zirui Liu and Xia Hu},\n    booktitle={The 2024 Conference on Empirical Methods in Natural Language Processing},\n    year={2024},\n}\n```",
+      "evidence_location": "139-146",
+      "confidence": "high",
+      "reason": "Provides the BibTeX entry for citing this benchmark and codebase."
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "title",
+      "value": "KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches",
+      "normalized_value": "KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches",
+      "evidence": "# KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its associated paper by name."
+    },
+    {
+      "field": "authors",
+      "value": "Jiayi Yuan*, Hongyi Liu*, Shaochen (Henry) Zhong*, Yu-Neng Chuang, Songchen Li, Guanchu Wang, Duy Le, Hongye Jin, Vipin Chaudhary, Zhaozhuo Xu, Zirui Liu, Xia Hu",
+      "normalized_value": "Jiayi Yuan*, Hongyi Liu*, Shaochen (Henry) Zhong*, Yu-Neng Chuang, Songchen Li, Guanchu Wang, Duy Le, Hongye Jin, Vipin Chaudhary, Zhaozhuo Xu, Zirui Liu, Xia Hu",
+      "evidence": "Jiayi Yuan\\*, Hongyi Liu\\*, Shaochen (Henry) Zhong\\*, Yu-Neng Chuang, Songchen Li, Guanchu Wang, Duy Le, Hongye Jin, Vipin Chaudhary, Zhaozhuo Xu, Zirui Liu, Xia Hu",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Author list for attribution and citation."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2407.01527",
+      "normalized_value": "https://arxiv.org/abs/2407.01527",
+      "evidence": "This is the official implementation of our above-mentioned KV cache compression benchmark paper ([arXiv](https://arxiv.org/abs/2407.01527)).",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper."
+    },
+    {
+      "field": "publication_venue",
+      "value": "EMNLP 2024 Findings",
+      "normalized_value": "EMNLP 2024 Findings",
+      "evidence": "* `2024/09/19`: Accepted at EMNLP 2024 Findings (with a 4/5 meta!).",
+      "evidence_location": "line 16, Changelog and To-do section",
+      "confidence": "high",
+      "reason": "States where the paper was published, useful for citation and credibility."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/henryzhongsc/longctx_bench",
+      "normalized_value": "https://github.com/henryzhongsc/longctx_bench",
+      "evidence": "[`requirements/tf_4.40.txt`](https://github.com/henryzhongsc/longctx_bench/blob/main/requirements/tf_4.40.txt)",
+      "evidence_location": "line 38, Environment Setup section",
+      "confidence": "high",
+      "reason": "Identifies the canonical GitHub repository hosting the code."
+    },
+    {
+      "field": "description",
+      "value": "Our benchmark paper attempts to answer such questions by evaluating many exemplar methods among the above schools against various long context tasks.",
+      "normalized_value": "Our benchmark paper attempts to answer such questions by evaluating many exemplar methods among the above schools against various long context tasks.",
+      "evidence": "Token evictions, KV cache quantizations, hard prompt compression, RNNs, RNN-Transformer hybrids — plenty of efficiency approaches claim they are long context capable, but which can stand up to comprehensive scrutiny, and what are the trade-offs? Our benchmark paper attempts to answer such questions by evaluating many exemplar methods among the above schools against various long context tasks.",
+      "evidence_location": "line 26, Overview section",
+      "confidence": "high",
+      "reason": "Explains the purpose of the artifact: benchmarking long-context efficiency methods."
+    },
+    {
+      "field": "benchmarked_methods",
+      "value": "Mamba, Mamba-Chat, RecurrantGemma, RWKV-5-World, FlexGen, StreamingLLM, InfLLM, H2O, LLMLingua2, KIVI, Mamba 2, plus transformers-based LLM baselines (meta-llama/Meta-Llama-3-8B-Instruct, mistralai/Mistral-7B-Instruct-v0.2, lmsys/longchat-7b-v1.5-32k)",
+      "normalized_value": "Mamba, Mamba-Chat, RecurrantGemma, RWKV-5-World, FlexGen, StreamingLLM, InfLLM, H2O, LLMLingua2, KIVI, Mamba 2, plus transformers-based LLM baselines (meta-llama/Meta-Llama-3-8B-Instruct, mistralai/Mistral-7B-Instruct-v0.2, lmsys/longchat-7b-v1.5-32k)",
+      "evidence": "supports the three transformers-based LLM baseline (`meta-llama/Meta-Llama-3-8B-Instruct`/`mistralai/Mistral-7B-Instruct-v0.2`/`lmsys/longchat-7b-v1.5-32k`), [Mamba](https://arxiv.org/abs/2312.00752), [Mamba-Chat](https://huggingface.co/havenhq/mamba-chat), [RecurrantGemma](https://storage.googleapis.com/deepmind-media/gemma/recurrentgemma-report.pdf), [RWKV-5-World](https://pypi.org/project/rwkv/), [FlexGen](https://arxiv.org/abs/2303.06865), [StreamingLLM](https://arxiv.org/abs/2309.17453), [InfLLM](https://arxiv.org/abs/2402.04617), [H2O](https://arxiv.org/abs/2306.14048), and [LLMLingua2](https://arxiv.org/abs/2403.12968).",
+      "evidence_location": "lines 38-40, Environment Setup section",
+      "confidence": "high",
+      "reason": "Lists the concrete methods and baseline models covered by the benchmark, key for understanding scope."
+    },
+    {
+      "field": "environment_requirements",
+      "value": "Three requirement files: requirements/tf_4.40.txt (baselines, Mamba, FlexGen, StreamingLLM, InfLLM, H2O, LLMLingua2, etc.), requirements/tf_4.36.txt (KIVI), requirements/tf_4.45.txt (Mamba 2)",
+      "normalized_value": "Three requirement files: requirements/tf_4.40.txt (baselines, Mamba, FlexGen, StreamingLLM, InfLLM, H2O, LLMLingua2, etc.), requirements/tf_4.36.txt (KIVI), requirements/tf_4.45.txt (Mamba 2)",
+      "evidence": "some of the featured methods require conflicting environments, causing us unable to provide a single unified environment for all featured methods. Thus, we try to control the version of some of the major packages (`torch`, `transformers`, etc.) and provide two sets of requirements.",
+      "evidence_location": "lines 36-40, Environment Setup section",
+      "confidence": "medium",
+      "reason": "Documents that multiple conflicting environments are needed and which requirement file maps to which methods; the prose says 'two sets' while three files are listed, a minor inconsistency."
+    },
+    {
+      "field": "installation_command",
+      "value": "cd longctx_bench\npip install --upgrade pip\npip install -r requirements/<requirment_file_name>",
+      "normalized_value": "cd longctx_bench\npip install --upgrade pip\npip install -r requirements/<requirment_file_name>",
+      "evidence": "```\ncd longctx_bench\npip install --upgrade pip\npip install -r requirements/<requirment_file_name>\n```",
+      "evidence_location": "lines 44-48, Environment Setup section code block",
+      "confidence": "high",
+      "reason": "Defines the general installation/setup steps for the project."
+    },
+    {
+      "field": "installation_command_kivi",
+      "value": "cd longctx_bench\npip install -r requirements/tf_4.36.txt\npip install flash-attn==2.6.3\ncd pipeline/kivi/quant & pip install -e .",
+      "normalized_value": "cd longctx_bench\npip install -r requirements/tf_4.36.txt\npip install flash-attn==2.6.3\ncd pipeline/kivi/quant & pip install -e .",
+      "evidence": "```\ncd longctx_bench\npip install -r requirements/tf_4.36.txt\npip install flash-attn==2.6.3\ncd pipeline/kivi/quant & pip install -e .\n```",
+      "evidence_location": "lines 52-57, Environment Setup section code block",
+      "confidence": "high",
+      "reason": "Concrete setup steps for the KIVI method including the pinned flash-attn version 2.6.3."
+    },
+    {
+      "field": "datasets",
+      "value": "15 LongBench datasets (NarrativeQA, Qasper, MultiFieldQA, HotpotQA, 2WikiMQA, Musique, GovReport, QMSum, MultiNews, TREC, TriviaQA, SAMSum, PassageRetrieval, LCC, RepoBench-P) plus a Needle-in-a-Haystack/PaulGraham Passkey test",
+      "normalized_value": "15 LongBench datasets (NarrativeQA, Qasper, MultiFieldQA, HotpotQA, 2WikiMQA, Musique, GovReport, QMSum, MultiNews, TREC, TriviaQA, SAMSum, PassageRetrieval, LCC, RepoBench-P) plus a Needle-in-a-Haystack/PaulGraham Passkey test",
+      "evidence": "Currently, our benchmark features 15 datasets (NarrativeQA, Qasper, MultiFieldQA, HotpotQA, 2WikiMQA, Musique, GovReport, QMSum, MultiNews, TREC, TriviaQA, SAMSum, PassageRetrieval, LCC, RepoBench-P) from [**LongBench**](https://github.com/THUDM/LongBench) and a [**Needle-in-a-Haystack/PaulGraham Passkey**](https://github.com/gkamradt/LLMTest_NeedleInAHaystack) test",
+      "evidence_location": "line 63, Dataset and Access Preparation section",
+      "confidence": "high",
+      "reason": "Names the exact evaluation datasets used by the benchmark."
+    },
+    {
+      "field": "dataset_preparation_command",
+      "value": "python scripts/dataset_prep/download_longbench.py",
+      "normalized_value": "python scripts/dataset_prep/download_longbench.py",
+      "evidence": "```\npython scripts/dataset_prep/download_longbench.py\n```",
+      "evidence_location": "lines 67-69, Dataset and Access Preparation section code block",
+      "confidence": "high",
+      "reason": "Command to download/prepare the LongBench datasets needed for reproduction."
+    },
+    {
+      "field": "access_token_requirement",
+      "value": "HuggingFace access token must be supplied under config/access_tokens.py for gated models such as meta-llama/Meta-Llama-3-8B-Instruct",
+      "normalized_value": "HuggingFace access token must be supplied under config/access_tokens.py for gated models such as meta-llama/Meta-Llama-3-8B-Instruct",
+      "evidence": "Our paper features some models that are gated (e.g., `meta-llama/Meta-Llama-3-8B-Instruct`). So please supply your HuggingFace access token under [`config/access_tokens.py`](https://github.com/henryzhongsc/longctx_bench/blob/main/config/access_tokens.py).",
+      "evidence_location": "line 71, Dataset and Access Preparation section",
+      "confidence": "high",
+      "reason": "Prerequisite credential needed to run experiments with gated models."
+    },
+    {
+      "field": "reproduction_command_passkey",
+      "value": "bash scripts/paulgraham_passkey/20480words_10x10x3_7digits/baseline/mistral-7b-instruct-v0.2.sh <output_dir_root>",
+      "normalized_value": "bash scripts/paulgraham_passkey/20480words_10x10x3_7digits/baseline/mistral-7b-instruct-v0.2.sh <output_dir_root>",
+      "evidence": "```\nbash scripts/paulgraham_passkey/20480words_10x10x3_7digits/baseline/mistral-7b-instruct-v0.2.sh <output_dir_root>\n```",
+      "evidence_location": "lines 78-80, Experiment Reproduction section code block",
+      "confidence": "high",
+      "reason": "Example command to reproduce needle/passkey baseline results."
+    },
+    {
+      "field": "reproduction_command_longbench_kivi",
+      "value": "bash scripts/longbench/kivi/2bit/llama3-8b-instruct.sh <output_dir_root>",
+      "normalized_value": "bash scripts/longbench/kivi/2bit/llama3-8b-instruct.sh <output_dir_root>",
+      "evidence": "```\nbash scripts/longbench/kivi/2bit/llama3-8b-instruct.sh <output_dir_root>\n```",
+      "evidence_location": "lines 84-86, Experiment Reproduction section code block",
+      "confidence": "high",
+      "reason": "Example command to reproduce LongBench results with KIVI 2-bit compression."
+    },
+    {
+      "field": "quick_start_scripts",
+      "value": "scripts/quick_start folder contains fast proxy scripts (just Qasper for LongBench and two of the longest needle inputs for PaulGraham Passkey) to verify code and environment before longer evaluations",
+      "normalized_value": "scripts/quick_start folder contains fast proxy scripts (just Qasper for LongBench and two of the longest needle inputs for PaulGraham Passkey) to verify code and environment before longer evaluations",
+      "evidence": "we additionally supply a set of scripts in the [`scripts/quick_start`](https://github.com/henryzhongsc/longctx_bench/blob/main/scripts/quick_start) folder, which are quick to conclude (just Qasper for LongBench and just two of the longest needle inputs for PaulGraham Passkey).",
+      "evidence_location": "line 89, Experiment Reproduction section",
+      "confidence": "high",
+      "reason": "Points users to fast sanity-check scripts, aiding reproduction workflow."
+    },
+    {
+      "field": "results_archive_url",
+      "value": "https://drive.google.com/drive/folders/1PBB5bkR88QbaA1-dBTwP5xKLq8iEBcBb?usp=share_link",
+      "normalized_value": "https://drive.google.com/drive/folders/1PBB5bkR88QbaA1-dBTwP5xKLq8iEBcBb?usp=share_link",
+      "evidence": "we share all experiment logs, filtered, and raw results at [Google Drive link](https://drive.google.com/drive/folders/1PBB5bkR88QbaA1-dBTwP5xKLq8iEBcBb?usp=share_link).",
+      "evidence_location": "line 91, Experiment Reproduction section",
+      "confidence": "high",
+      "reason": "External archive of all experiment logs and raw/filtered results for verification and comparison."
+    },
+    {
+      "field": "reproduction_commit",
+      "value": "3e9d810f93cfdecc87d4538e1721d08047d66010",
+      "normalized_value": "3e9d810f93cfdecc87d4538e1721d08047d66010",
+      "evidence": "All experiments are done with respect to [commit 3e9d810](https://github.com/henryzhongsc/longctx_bench/commit/3e9d810f93cfdecc87d4538e1721d08047d66010).",
+      "evidence_location": "line 91, Experiment Reproduction section",
+      "confidence": "high",
+      "reason": "Pins the exact code commit used for reported experiments, critical for reproducibility."
+    },
+    {
+      "field": "output_structure",
+      "value": "Results are found under <output_folder_dir> containing input_config folder, output_config.json (with main metrics under key eval_results), raw_results.json, and exp.log",
+      "normalized_value": "Results are found under <output_folder_dir> containing input_config folder, output_config.json (with main metrics under key eval_results), raw_results.json, and exp.log",
+      "evidence": "* `output_config.json`: This file provides a fuse of the above two input configs and some management information (e.g., start/end time of a job). **Most importantly, it highlights the main reported metrics under the key `eval_results`.**",
+      "evidence_location": "lines 115-122, Result Digestion section",
+      "confidence": "high",
+      "reason": "Explains where to find reported metrics in experiment outputs, needed for evaluation and comparison."
+    },
+    {
+      "field": "codebase_architecture",
+      "value": "Codebase revolves around two configs: pipeline_config (defines a method, implemented under pipeline/) and eval_config (defines an evaluation scheme, implemented under eval/)",
+      "normalized_value": "Codebase revolves around two configs: pipeline_config (defines a method, implemented under pipeline/) and eval_config (defines an evaluation scheme, implemented under eval/)",
+      "evidence": "Our codebase mainly revolves around the two configs — [`pipeline_config`](https://github.com/henryzhongsc/longctx_bench/blob/main/config/pipeline_config) and [`eval_config`](https://github.com/henryzhongsc/longctx_bench/blob/main/config/eval_config) — where the former one defines a method, and the latter one defines an evaluation scheme.",
+      "evidence_location": "line 129, Codebase Design and Contribution section",
+      "confidence": "high",
+      "reason": "Describes the configuration-driven design, helping users extend or reuse the codebase."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{yuan_liu_zhong_2024_kvcache_comp_benchmnark,\n    title={KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches},\n    author={Jiayi Yuan and Hongyi Liu and Shaochen Zhong and Yu-Neng Chuang and Songchen Li and Guanchu Wang and Duy Le and Hongye Jin and Vipin Chaudhary and Zhaozhuo Xu and Zirui Liu and Xia Hu},\n    booktitle={The 2024 Conference on Empirical Methods in Natural Language Processing},\n    year={2024},\n}",
+      "normalized_value": "@inproceedings{yuan_liu_zhong_2024_kvcache_comp_benchmnark,\n    title={KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches},\n    author={Jiayi Yuan and Hongyi Liu and Shaochen Zhong and Yu-Neng Chuang and Songchen Li and Guanchu Wang and Duy Le and Hongye Jin and Vipin Chaudhary and Zhaozhuo Xu and Zirui Liu and Xia Hu},\n    booktitle={The 2024 Conference on Empirical Methods in Natural Language Processing},\n    year={2024},\n}",
+      "evidence": "```\n@inproceedings{yuan_liu_zhong_2024_kvcache_comp_benchmnark,\n    title={KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches},\n    author={Jiayi Yuan and Hongyi Liu and Shaochen Zhong and Yu-Neng Chuang and Songchen Li and Guanchu Wang and Duy Le and Hongye Jin and Vipin Chaudhary and Zhaozhuo Xu and Zirui Liu and Xia Hu},\n    booktitle={The 2024 Conference on Empirical Methods in Natural Language Processing},\n    year={2024},\n}\n```",
+      "evidence_location": "lines 139-146, citation code block",
+      "confidence": "high",
+      "reason": "Official BibTeX citation for referencing the work."
+    }
+  ]
+}

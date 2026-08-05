@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "An Empirical Framework for Domain Generalization In Clinical Settings",
+      "normalized_value": "An Empirical Framework for Domain Generalization In Clinical Settings",
+      "evidence": "# An Empirical Framework for Domain Generalization In Clinical Settings",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Primary name and purpose of the artifact"
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{zhang2021empirical,\n  title={An empirical framework for domain generalization in clinical settings},\n  author={Zhang, Haoran and Dullerud, Natalie and Seyyed-Kalantari, Laleh and Morris, Quaid and Joshi, Shalmali and Ghassemi, Marzyeh},\n  booktitle={Proceedings of the Conference on Health, Inference, and Learning},\n  pages={279--290},\n  year={2021}\n}",
+      "normalized_value": "@inproceedings{zhang2021empirical, title={An empirical framework for domain generalization in clinical settings}, author={Zhang, Haoran and Dullerud, Natalie and Seyyed-Kalantari, Laleh and Morris, Quaid and Joshi, Shalmali and Ghassemi, Marzyeh}, booktitle={Proceedings of the Conference on Health, Inference, and Learning}, pages={279--290}, year={2021}}",
+      "evidence": "@inproceedings{zhang2021empirical,\n  title={An empirical framework for domain generalization in clinical settings},\n  author={Zhang, Haoran and Dullerud, Natalie and Seyyed-Kalantari, Laleh and Morris, Quaid and Joshi, Shalmali and Ghassemi, Marzyeh},\n  booktitle={Proceedings of the Conference on Health, Inference, and Learning},\n  pages={279--290},\n  year={2021}\n}",
+      "evidence_location": "6-13",
+      "confidence": "high",
+      "reason": "BibTeX citation for academic attribution"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2103.11163",
+      "normalized_value": "https://arxiv.org/abs/2103.11163",
+      "evidence": "This paper can also be found on arxiv: https://arxiv.org/abs/2103.11163",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Direct link to paper for reference"
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/MLforHealth/ClinicalDG.git",
+      "normalized_value": "https://github.com/MLforHealth/ClinicalDG.git",
+      "evidence": "git clone https://github.com/MLforHealth/ClinicalDG.git",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "GitHub repository URL for cloning"
+    },
+    {
+      "field": "based_on",
+      "value": "DomainBed framework (from commit a10458a)",
+      "normalized_value": "DomainBed framework (from commit a10458a)",
+      "evidence": "Our implementation is a modified version of the excellent [DomainBed](https://github.com/facebookresearch/DomainBed) framework (from commit [a10458a](https://github.com/facebookresearch/DomainBed/tree/a10458a2adfd8aec0fda2d617f710e5044e5dc60))",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Identifies core framework dependency and specific commit"
+    },
+    {
+      "field": "additional_code_source",
+      "value": "eICU Benchmarks",
+      "normalized_value": "eICU Benchmarks",
+      "evidence": "We also make use of some code from [eICU Benchmarks](https://github.com/mostafaalishahi/eICU_Benchmark)",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Additional code dependency for reproduction"
+    },
+    {
+      "field": "environment_setup_command",
+      "value": "conda env create -f environment.yml\nconda activate clinicaldg",
+      "normalized_value": "conda env create -f environment.yml conda activate clinicaldg",
+      "evidence": "conda env create -f environment.yml\nconda activate clinicaldg",
+      "evidence_location": "31-32",
+      "confidence": "high",
+      "reason": "Commands to create and activate Conda environment for reproducibility"
+    },
+    {
+      "field": "data_instructions",
+      "value": "DataSources.md",
+      "normalized_value": "DataSources.md",
+      "evidence": "See [DataSources.md](DataSources.md) for detailed instructions",
+      "evidence_location": "36",
+      "confidence": "high",
+      "reason": "Location of data acquisition instructions"
+    },
+    {
+      "field": "training_command_example",
+      "value": "python -m clinicaldg.scripts.train\\\n       --algorithm ERM\\\n       --dataset eICUSubsampleUnobs\\\n       --es_method val\\\n       --hparams  '{\"eicu_architecture\": \"GRU\", \"eicu_subsample_g1_mean\": 0.5, \"eicu_subsample_g2_mean\": 0.05}'\\\n       --output_dir /path/to/output",
+      "normalized_value": "python -m clinicaldg.scripts.train --algorithm ERM --dataset eICUSubsampleUnobs --es_method val --hparams '{\"eicu_architecture\": \"GRU\", \"eicu_subsample_g1_mean\": 0.5, \"eicu_subsample_g2_mean\": 0.05}' --output_dir /path/to/output",
+      "evidence": "python -m clinicaldg.scripts.train\\\n       --algorithm ERM\\\n       --dataset eICUSubsampleUnobs\\\n       --es_method val\\\n       --hparams  '{\"eicu_architecture\": \"GRU\", \"eicu_subsample_g1_mean\": 0.5, \"eicu_subsample_g2_mean\": 0.05}'\\\n       --output_dir /path/to/output",
+      "evidence_location": "44-49",
+      "confidence": "high",
+      "reason": "Example command for training a single model"
+    },
+    {
+      "field": "sweep_command_example",
+      "value": "python -m clinicaldg.scripts.sweep launch\\\n       --output_dir=/my/sweep/output/path\\\n       --command_launcher slurm\\\n       --algorithms ERMID ERM IRM VREx RVP IGA CORAL MLDG GroupDRO \\\n       --datasets CXR CXRBinary\\\n       --n_hparams 10\\\n       --n_trials 5\\\n       --es_method train\\\n       --hparams '{\"cxr_augment\": 1}'",
+      "normalized_value": "python -m clinicaldg.scripts.sweep launch --output_dir=/my/sweep/output/path --command_launcher slurm --algorithms ERMID ERM IRM VREx RVP IGA CORAL MLDG GroupDRO --datasets CXR CXRBinary --n_hparams 10 --n_trials 5 --es_method train --hparams '{\"cxr_augment\": 1}'",
+      "evidence": "python -m clinicaldg.scripts.sweep launch\\\n       --output_dir=/my/sweep/output/path\\\n       --command_launcher slurm\\\n       --algorithms ERMID ERM IRM VREx RVP IGA CORAL MLDG GroupDRO \\\n       --datasets CXR CXRBinary\\\n       --n_hparams 10\\\n       --n_trials 5\\\n       --es_method train\\\n       --hparams '{\"cxr_augment\": 1}'",
+      "evidence_location": "54-62",
+      "confidence": "high",
+      "reason": "Example command for hyperparameter sweeping"
+    },
+    {
+      "field": "supported_algorithms",
+      "value": "ERMID ERM IRM VREx RVP IGA CORAL MLDG GroupDRO",
+      "normalized_value": "ERMID ERM IRM VREx RVP IGA CORAL MLDG GroupDRO",
+      "evidence": "--algorithms ERMID ERM IRM VREx RVP IGA CORAL MLDG GroupDRO \\",
+      "evidence_location": "57",
+      "confidence": "high",
+      "reason": "List of supported domain generalization algorithms"
+    },
+    {
+      "field": "supported_datasets",
+      "value": "CXR CXRBinary",
+      "normalized_value": "CXR CXRBinary",
+      "evidence": "--datasets CXR CXRBinary\\",
+      "evidence_location": "58",
+      "confidence": "high",
+      "reason": "List of supported datasets for experimentation"
+    },
+    {
+      "field": "results_aggregation_location",
+      "value": "notebooks/AggResults.ipynb",
+      "normalized_value": "notebooks/AggResults.ipynb",
+      "evidence": "We provide sample code for creating aggregate results for an experiment in `notebooks/AggResults.ipynb`",
+      "evidence_location": "71",
+      "confidence": "high",
+      "reason": "Location of results aggregation code"
+    },
+    {
+      "field": "license",
+      "value": "MIT license",
+      "normalized_value": "MIT license",
+      "evidence": "This source code is released under the MIT license, included [here](LICENSE)",
+      "evidence_location": "75",
+      "confidence": "high",
+      "reason": "License information for reuse"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PSTR",
+      "normalized_value": "PSTR",
+      "evidence": "# PSTR (CVPR2022)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the name of the artifact/project repository."
+    },
+    {
+      "field": "paper_title",
+      "value": "PSTR: End-to-End One-Step Person Search With Transformers",
+      "normalized_value": "PSTR: End-to-End One-Step Person Search With Transformers",
+      "evidence": "[*PSTR: End-to-End One-Step Person Search With Transformers (CVPR2022)*](https://arxiv.org/abs/2204.03340)",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Title of the CVPR 2022 research paper associated with this repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2204.03340",
+      "normalized_value": "https://arxiv.org/abs/2204.03340",
+      "evidence": "https://arxiv.org/abs/2204.03340",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Direct arXiv URL to the paper."
+    },
+    {
+      "field": "task_description",
+      "value": "End-to-end one-step person search with Transformers, which does not requre NMS post-processing.",
+      "normalized_value": "End-to-end one-step person search with Transformers, which does not requre NMS post-processing.",
+      "evidence": "- **End-to-end one-step person search** with Transformers, which does not requre NMS post-processing.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Describes the primary function and key characteristics of the model."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/JialeCao001/PSTR.git",
+      "normalized_value": "https://github.com/JialeCao001/PSTR.git",
+      "evidence": "git clone https://github.com/JialeCao001/PSTR.git",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Git repository URL for cloning the project source code."
+    },
+    {
+      "field": "cuda_version",
+      "value": "cuda11.1",
+      "normalized_value": "cuda11.1",
+      "evidence": "- We install this project using cuda11.1 and PyTorch1.8.0 (or PyTorch1.9.0) as follows.",
+      "evidence_location": "16, ## Installation",
+      "confidence": "high",
+      "reason": "Specifies the CUDA version required for installing and executing the code."
+    },
+    {
+      "field": "pytorch_version",
+      "value": "PyTorch1.8.0 (or PyTorch1.9.0)",
+      "normalized_value": "PyTorch1.8.0 (or PyTorch1.9.0)",
+      "evidence": "- We install this project using cuda11.1 and PyTorch1.8.0 (or PyTorch1.9.0) as follows.",
+      "evidence_location": "16, ## Installation",
+      "confidence": "high",
+      "reason": "Specifies compatible PyTorch framework versions."
+    },
+    {
+      "field": "python_version",
+      "value": "3.7",
+      "normalized_value": "3.7",
+      "evidence": "conda create -n pstr python=3.7 -y",
+      "evidence_location": "24, ## Installation",
+      "confidence": "high",
+      "reason": "Python version required for creating the conda environment."
+    },
+    {
+      "field": "installation_commands",
+      "value": " ```bash\n# Download this project\ngit clone https://github.com/JialeCao001/PSTR.git\n\n# Create a new conda enviroment for PSTR\nconda create -n pstr python=3.7 -y\nconda activate pstr\npip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html\n#conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge\n\n# Comiple mmcv, which has been included in this project\ncd PSTR/mmcv\nMMCV_WITH_OPS=1 pip install -e .\n\n# Comiple this project \ncd PSTR\npip install -r requirements/build.txt\npip install -v -e .  # or \"python setup.py develop\"\npip install sklearn\n```",
+      "normalized_value": "```bash # Download this project git clone https://github.com/JialeCao001/PSTR.git # Create a new conda enviroment for PSTR conda create -n pstr python=3.7 -y conda activate pstr pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html #conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge # Comiple mmcv, which has been included in this project cd PSTR/mmcv MMCV_WITH_OPS=1 pip install -e . # Comiple this project cd PSTR pip install -r requirements/build.txt pip install -v -e . # or \"python setup.py develop\" pip install sklearn ```",
+      "evidence": " ```bash\n# Download this project\ngit clone https://github.com/JialeCao001/PSTR.git\n\n# Create a new conda enviroment for PSTR\nconda create -n pstr python=3.7 -y\nconda activate pstr\npip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html\n#conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge\n\n# Comiple mmcv, which has been included in this project\ncd PSTR/mmcv\nMMCV_WITH_OPS=1 pip install -e .\n\n# Comiple this project \ncd PSTR\npip install -r requirements/build.txt\npip install -v -e .  # or \"python setup.py develop\"\npip install sklearn\n```",
+      "evidence_location": "19-38, ## Installation",
+      "confidence": "high",
+      "reason": "Complete setup and installation script for environment creation, dependency resolution, and compilation."
+    },
+    {
+      "field": "datasets",
+      "value": "PRW and CUHK-SYSU",
+      "normalized_value": "PRW and CUHK-SYSU",
+      "evidence": "- Download [PRW](https://github.com/liangzheng06/PRW-baseline) and [CUHK-SYSU](https://github.com/ShuangLI59/person_search) datasets.",
+      "evidence_location": "47, ## Train and Inference",
+      "confidence": "high",
+      "reason": "Identifies the datasets used for training and evaluating person search models."
+    },
+    {
+      "field": "dataset_annotations_url",
+      "value": "https://drive.google.com/file/d/1J2YAU7n954TiSwqopJCWdK25IaF6Mb9_/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1J2YAU7n954TiSwqopJCWdK25IaF6Mb9_/view?usp=sharing",
+      "evidence": "- Download the [json annotations](https://drive.google.com/file/d/1J2YAU7n954TiSwqopJCWdK25IaF6Mb9_/view?usp=sharing) provided by [AlignPS](https://github.com/daodaofr/AlignPS).",
+      "evidence_location": "48, ## Train and Inference",
+      "confidence": "high",
+      "reason": "Direct download URL for the JSON annotations required to train/evaluate on the datasets."
+    },
+    {
+      "field": "training_command",
+      "value": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "normalized_value": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "evidence": "```shell\npython tools/train.py ${CONFIG_FILE} --no-validate\n```",
+      "evidence_location": "52-54, ## Train and Inference",
+      "confidence": "high",
+      "reason": "Command used for training the model using a single GPU."
+    },
+    {
+      "field": "testing_command",
+      "value": "PRW: sh run_test_prw.sh \nCUHK: sh run_test_cuhk.sh",
+      "normalized_value": "PRW: sh run_test_prw.sh CUHK: sh run_test_cuhk.sh",
+      "evidence": "```shell\nPRW: sh run_test_prw.sh \nCUHK: sh run_test_cuhk.sh  \n```",
+      "evidence_location": "59-62, ## Train and Inference",
+      "confidence": "high",
+      "reason": "Shell scripts used for model testing/inference on the PRW and CUHK-SYSU datasets."
+    },
+    {
+      "field": "model_backbones",
+      "value": "ResNet50, ResNet50-DCN, and PVTv2b2",
+      "normalized_value": "ResNet50, ResNet50-DCN, and PVTv2b2",
+      "evidence": "- **Pre-trained models** with ResNet50, ResNet50-DCN, and PVTv2b2.",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Lists the neural network backbones supported and pre-trained in this project."
+    },
+    {
+      "field": "citation",
+      "value": "@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}",
+      "normalized_value": "@article{Cao_PSTR_CVPR_2022, author = {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan}, title = {PSTR: End-to-End One-Step Person Search With Transformers}, journal = {Proc. IEEE Conference on Computer Vision and Pattern Recognition}, year = {2022} }",
+      "evidence": "```\n@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}\n```",
+      "evidence_location": "87-94, ## Citation",
+      "confidence": "high",
+      "reason": "BibTeX citation entry for referencing the paper."
+    },
+    {
+      "field": "acknowledged_repositories",
+      "value": "[mmdetection](https://github.com/open-mmlab/mmdetection), [AlignPS](https://github.com/daodaofr/AlignPS), and [SeqNet](https://github.com/serend1p1ty/SeqNet)",
+      "normalized_value": "[mmdetection](https://github.com/open-mmlab/mmdetection), [AlignPS](https://github.com/daodaofr/AlignPS), and [SeqNet](https://github.com/serend1p1ty/SeqNet)",
+      "evidence": "Many thanks to the open source codes: [mmdetection](https://github.com/open-mmlab/mmdetection), [AlignPS](https://github.com/daodaofr/AlignPS), and [SeqNet](https://github.com/serend1p1ty/SeqNet).",
+      "evidence_location": "97, ## Acknowledgement",
+      "confidence": "high",
+      "reason": "Lists open-source code repositories that the project built upon or borrowed from."
+    }
+  ]
+}

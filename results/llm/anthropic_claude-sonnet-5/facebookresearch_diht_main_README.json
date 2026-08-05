@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "DiHT",
+      "normalized_value": "DiHT",
+      "evidence": "# DiHT",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Title of the artifact as given in the README header"
+    },
+    {
+      "field": "paper_title",
+      "value": "\"Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training\"",
+      "normalized_value": "Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training",
+      "evidence": "\"Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training\" [[Paper](https://arxiv.org/abs/2301.02280)]",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Names the associated paper for the artifact"
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2301.02280",
+      "normalized_value": "https://arxiv.org/abs/2301.02280",
+      "evidence": "[[Paper](https://arxiv.org/abs/2301.02280)]",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Direct link to the paper describing the method"
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/facebookresearch/diht",
+      "normalized_value": "https://github.com/facebookresearch/diht",
+      "evidence": "git clone https://github.com/facebookresearch/diht",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Repository URL used for cloning the codebase"
+    },
+    {
+      "field": "installation_commands",
+      "value": "git clone https://github.com/facebookresearch/diht\ncd diht\npip install -r requirements.txt\npip install -e .  # To install as an editable package",
+      "normalized_value": "git clone https://github.com/facebookresearch/diht\ncd diht\npip install -r requirements.txt\npip install -e .",
+      "evidence": "git clone https://github.com/facebookresearch/diht\ncd diht\npip install -r requirements.txt\npip install -e .  # To install as an editable package",
+      "evidence_location": "lines 7-10, ## Installation",
+      "confidence": "high",
+      "reason": "Provides the exact setup/installation commands needed to reproduce the environment"
+    },
+    {
+      "field": "installation_alternative",
+      "value": "pip install .",
+      "normalized_value": "pip install .",
+      "evidence": "You can use `pip install .` to install the codebase as a non-editable package.",
+      "evidence_location": "line 13",
+      "confidence": "high",
+      "reason": "Alternative installation command as non-editable package"
+    },
+    {
+      "field": "dependencies_file",
+      "value": "requirements.txt",
+      "normalized_value": "requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Names the file listing required dependencies"
+    },
+    {
+      "field": "usage_example_code",
+      "value": "import torch\n\nfrom diht import model_zoo\nfrom PIL import Image\n\n\ntext_tokenizer, image_transform, model = model_zoo.load_model(\n    \"diht_vitl14_336px\", is_train=False\n)\n\nimage = Image.open(\"infer_image.png\").convert(\"RGB\")\nimage = image_transform(image).unsqueeze(0)\ntext_captions = [\"a mountain\", \"a beach\", \"a desert\"]\ntext = text_tokenizer(text_captions)\n\nwith torch.no_grad():\n    image_features, text_features, logit_scale = model(image, text)\n    logits_per_image = logit_scale * image_features @ text_features.T\n    probs = logits_per_image.softmax(dim=-1).numpy()\n\nprint(f\"text captions: {text_captions}\")\nprint(f\"text caption probs: {probs}\")",
+      "normalized_value": "import torch\nfrom diht import model_zoo\nfrom PIL import Image\ntext_tokenizer, image_transform, model = model_zoo.load_model(\"diht_vitl14_336px\", is_train=False)\nimage = Image.open(\"infer_image.png\").convert(\"RGB\")\nimage = image_transform(image).unsqueeze(0)\ntext_captions = [\"a mountain\", \"a beach\", \"a desert\"]\ntext = text_tokenizer(text_captions)\nwith torch.no_grad():\n    image_features, text_features, logit_scale = model(image, text)\n    logits_per_image = logit_scale * image_features @ text_features.T\n    probs = logits_per_image.softmax(dim=-1).numpy()\nprint(f\"text captions: {text_captions}\")\nprint(f\"text caption probs: {probs}\")",
+      "evidence": "import torch\n\nfrom diht import model_zoo\nfrom PIL import Image\n\n\ntext_tokenizer, image_transform, model = model_zoo.load_model(\n    \"diht_vitl14_336px\", is_train=False\n)\n\nimage = Image.open(\"infer_image.png\").convert(\"RGB\")\nimage = image_transform(image).unsqueeze(0)\ntext_captions = [\"a mountain\", \"a beach\", \"a desert\"]\ntext = text_tokenizer(text_captions)\n\nwith torch.no_grad():\n    image_features, text_features, logit_scale = model(image, text)\n    logits_per_image = logit_scale * image_features @ text_features.T\n    probs = logits_per_image.softmax(dim=-1).numpy()\n\nprint(f\"text captions: {text_captions}\")\nprint(f\"text caption probs: {probs}\")",
+      "evidence_location": "lines 18-39, ## Example",
+      "confidence": "high",
+      "reason": "Demonstrates how to load and run inference with the model"
+    },
+    {
+      "field": "example_output",
+      "value": "text captions: ['a mountain', 'a beach', 'a desert']\ntext caption probs: [[0.99370664 0.00514017 0.00115326]]",
+      "normalized_value": "text captions: ['a mountain', 'a beach', 'a desert']\ntext caption probs: [[0.99370664 0.00514017 0.00115326]]",
+      "evidence": "text captions: ['a mountain', 'a beach', 'a desert']\ntext caption probs: [[0.99370664 0.00514017 0.00115326]]",
+      "evidence_location": "lines 44-45",
+      "confidence": "high",
+      "reason": "Expected output for the provided usage example, useful for verifying correct reproduction"
+    },
+    {
+      "field": "device_configuration",
+      "value": "model = model.to(torch.device(\"cuda\"))",
+      "normalized_value": "model = model.to(torch.device(\"cuda\"))",
+      "evidence": "By default the model runs on CPU, to run on GPU you can do `model = model.to(torch.device(\"cuda\"))`. The image and text tensors will also have to be transferred accordingly.",
+      "evidence_location": "line 50, ## Running on GPU/CPU",
+      "confidence": "high",
+      "reason": "Explains how to configure the model to run on GPU vs default CPU"
+    },
+    {
+      "field": "available_models_command",
+      "value": "import diht\n\n\nprint(diht.available_models())",
+      "normalized_value": "import diht\nprint(diht.available_models())",
+      "evidence": "import diht\n\n\nprint(diht.available_models())",
+      "evidence_location": "lines 55-58, ## Available Models",
+      "confidence": "high",
+      "reason": "Command to list available pretrained models in the codebase"
+    },
+    {
+      "field": "model_name",
+      "value": "diht_vitl14_336px",
+      "normalized_value": "diht_vitl14_336px",
+      "evidence": "\"diht_vitl14_336px\", is_train=False",
+      "evidence_location": "line 25",
+      "confidence": "high",
+      "reason": "Specific pretrained model checkpoint identifier used in the example"
+    },
+    {
+      "field": "evaluation_command_imagenet",
+      "value": "python example_imagenet_eval.py",
+      "normalized_value": "python example_imagenet_eval.py",
+      "evidence": "python example_imagenet_eval.py",
+      "evidence_location": "line 66, ## Example ImageNet-1K zero-shot evaluation",
+      "confidence": "high",
+      "reason": "Command to reproduce zero-shot ImageNet-1K evaluation"
+    },
+    {
+      "field": "evaluation_dataset_setup_imagenet",
+      "value": "Download ImageNet-1K dataset from the original website. Edit `IMAGENET_ROOT` in `example_imagenet_eval.py` to match the location on your machine.",
+      "normalized_value": "Download ImageNet-1K dataset from the original website. Edit IMAGENET_ROOT in example_imagenet_eval.py to match the location on your machine.",
+      "evidence": "> **Note**: Download ImageNet-1K dataset from the original website. Edit `IMAGENET_ROOT` in `example_imagenet_eval.py` to match the location on your machine.",
+      "evidence_location": "line 64",
+      "confidence": "high",
+      "reason": "Setup instructions needed to reproduce the ImageNet evaluation"
+    },
+    {
+      "field": "evaluation_result_imagenet",
+      "value": "ImageNet1K acc@1 for diht_vitl14_336px: 77.9",
+      "normalized_value": "ImageNet1K acc@1 for diht_vitl14_336px: 77.9",
+      "evidence": "ImageNet1K acc@1 for diht_vitl14_336px: 77.9",
+      "evidence_location": "line 70",
+      "confidence": "high",
+      "reason": "Reported benchmark result for the model on ImageNet-1K zero-shot classification"
+    },
+    {
+      "field": "evaluation_command_retrieval",
+      "value": "python example_retrieval_eval.py",
+      "normalized_value": "python example_retrieval_eval.py",
+      "evidence": "python example_retrieval_eval.py",
+      "evidence_location": "line 78, ## Example retrieval zero-shot evaluation",
+      "confidence": "high",
+      "reason": "Command to reproduce zero-shot retrieval evaluation"
+    },
+    {
+      "field": "evaluation_dataset_setup_retrieval",
+      "value": "Download COCO and Flickr30K datasets from the original websites. Json files (`coco_test.json` and `flickr30k_test.json`) can be downloaded from https://github.com/salesforce/ALBEF#download. Edit `COCO_ROOT` and `FLICKR30K_ROOT` in `example_retrieval_eval.py` to match the locations on your machine.",
+      "normalized_value": "Download COCO and Flickr30K datasets from the original websites. Json files (coco_test.json and flickr30k_test.json) can be downloaded from https://github.com/salesforce/ALBEF#download. Edit COCO_ROOT and FLICKR30K_ROOT in example_retrieval_eval.py to match the locations on your machine.",
+      "evidence": "> **Note**: Download COCO and Flickr30K datasets from the original websites. Json files (`coco_test.json` and `flickr30k_test.json`) can be downloaded from https://github.com/salesforce/ALBEF#download. Edit `COCO_ROOT` and `FLICKR30K_ROOT` in `example_retrieval_eval.py` to match the locations on your machine.",
+      "evidence_location": "line 76",
+      "confidence": "high",
+      "reason": "Setup instructions and dependency link needed to reproduce retrieval evaluation"
+    },
+    {
+      "field": "evaluation_result_retrieval",
+      "value": "COCO T2I r@1 for diht_vitl14_336px: 49.3\nCOCO I2T r@1 for diht_vitl14_336px: 65.3\n\nFlickr30K T2I r@1 for diht_vitl14_336px: 78.2\nFlickr30K I2T r@1 for diht_vitl14_336px: 91.1",
+      "normalized_value": "COCO T2I r@1 for diht_vitl14_336px: 49.3\nCOCO I2T r@1 for diht_vitl14_336px: 65.3\nFlickr30K T2I r@1 for diht_vitl14_336px: 78.2\nFlickr30K I2T r@1 for diht_vitl14_336px: 91.1",
+      "evidence": "COCO T2I r@1 for diht_vitl14_336px: 49.3\nCOCO I2T r@1 for diht_vitl14_336px: 65.3\n\nFlickr30K T2I r@1 for diht_vitl14_336px: 78.2\nFlickr30K I2T r@1 for diht_vitl14_336px: 91.1",
+      "evidence_location": "lines 82-86",
+      "confidence": "high",
+      "reason": "Reported retrieval benchmark results for the model"
+    },
+    {
+      "field": "zero_shot_performance_table",
+      "value": "| Model | ImageNet-1K | COCO T2I | COCO I2T | Flickr30K T2I | Flickr30K I2T |\n| :---  |    :----:   |  :----:  |  :----:  |     :----:    |     :----:    |\n|       |  Accuracy@1 | Recall@1 | Recall@1 |    Recall@1   |    Recall@1   |\n| diht_vitb32_224px      | 68.0 | 40.6 | 59.3 | 68.6 | 84.4 |\n| diht_vitb16_224px      | 72.2 | 43.3 | 60.3 | 72.9 | 89.8 |\n| diht_vitl14_224px      | 77.0 | 48.0 | 65.1 | 76.7 | 92.0 |\n| diht_vitl14_336px      | 77.9 | 49.3 | 65.3 | 78.2 | 91.1 |",
+      "normalized_value": "| Model | ImageNet-1K | COCO T2I | COCO I2T | Flickr30K T2I | Flickr30K I2T |\n| diht_vitb32_224px | 68.0 | 40.6 | 59.3 | 68.6 | 84.4 |\n| diht_vitb16_224px | 72.2 | 43.3 | 60.3 | 72.9 | 89.8 |\n| diht_vitl14_224px | 77.0 | 48.0 | 65.1 | 76.7 | 92.0 |\n| diht_vitl14_336px | 77.9 | 49.3 | 65.3 | 78.2 | 91.1 |",
+      "evidence": "| Model | ImageNet-1K | COCO T2I | COCO I2T | Flickr30K T2I | Flickr30K I2T |\n| :---  |    :----:   |  :----:  |  :----:  |     :----:    |     :----:    |\n|       |  Accuracy@1 | Recall@1 | Recall@1 |    Recall@1   |    Recall@1   |\n| diht_vitb32_224px      | 68.0 | 40.6 | 59.3 | 68.6 | 84.4 |\n| diht_vitb16_224px      | 72.2 | 43.3 | 60.3 | 72.9 | 89.8 |\n| diht_vitl14_224px      | 77.0 | 48.0 | 65.1 | 76.7 | 92.0 |\n| diht_vitl14_336px      | 77.9 | 49.3 | 65.3 | 78.2 | 91.1 |",
+      "evidence_location": "lines 91-97, ## Zero-shot model performance",
+      "confidence": "high",
+      "reason": "Comprehensive benchmark results table for multiple model variants across datasets and metrics"
+    },
+    {
+      "field": "citation",
+      "value": "@article{rdk+23,\n  title = {Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training},\n  author = {Radenovic, Filip and Dubey, Abhimanyu and Kadian, Abhishek and Mihaylov, Todor and Vandenhende, Simon and Patel, Yash and Wen, Yi and Ramanathan, Vignesh and Mahajan, Dhruv},\n  journal = {arXiv:2301.02280},\n  year = {2023}\n}",
+      "normalized_value": "@article{rdk+23, title = {Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training}, author = {Radenovic, Filip and Dubey, Abhimanyu and Kadian, Abhishek and Mihaylov, Todor and Vandenhende, Simon and Patel, Yash and Wen, Yi and Ramanathan, Vignesh and Mahajan, Dhruv}, journal = {arXiv:2301.02280}, year = {2023}}",
+      "evidence": "@article{rdk+23,\n  title = {Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training},\n  author = {Radenovic, Filip and Dubey, Abhimanyu and Kadian, Abhishek and Mihaylov, Todor and Vandenhende, Simon and Patel, Yash and Wen, Yi and Ramanathan, Vignesh and Mahajan, Dhruv},\n  journal = {arXiv:2301.02280},\n  year = {2023}\n}",
+      "evidence_location": "lines 103-108, ## Citation",
+      "confidence": "high",
+      "reason": "Provides the exact citation format for referencing the artifact/paper"
+    },
+    {
+      "field": "license_notice",
+      "value": "Copyright (c) Meta Platforms, Inc. and affiliates.\nAll rights reserved.\nThis source code is licensed under the license found in the\nLICENSE file in the root directory of this source tree.",
+      "normalized_value": "Copyright (c) Meta Platforms, Inc. and affiliates. All rights reserved. This source code is licensed under the license found in the LICENSE file in the root directory of this source tree.",
+      "evidence": "Copyright (c) Meta Platforms, Inc. and affiliates.\nAll rights reserved.\nThis source code is licensed under the license found in the\nLICENSE file in the root directory of this source tree.",
+      "evidence_location": "lines 113-116, ## License",
+      "confidence": "medium",
+      "reason": "Indicates copyright holder and points to a LICENSE file, though the specific license type is not named in the README"
+    }
+  ]
+}

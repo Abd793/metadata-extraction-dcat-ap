@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "HamilToniQ: An Open-Source Benchmark Toolkit for Quantum Computers",
+      "normalized_value": "HamilToniQ: An Open-Source Benchmark Toolkit for Quantum Computers",
+      "evidence": "# ![HamilToniQ_logo](./figures/HamilToniQ_logo.png)HamilToniQ: An Open-Source Benchmark Toolkit for Quantum Computers",
+      "evidence_location": "line 3, title",
+      "confidence": "high",
+      "reason": "Explicitly identifies the artifact and its overall purpose."
+    },
+    {
+      "field": "purpose",
+      "value": "HamilToniQ is an application-oriented benchmarking toolkit for the comprehensive evaluation of QPUs.",
+      "normalized_value": "HamilToniQ is an application-oriented benchmarking toolkit for the comprehensive evaluation of QPUs.",
+      "evidence": "HamilToniQ is an application-oriented benchmarking toolkit for the comprehensive evaluation of QPUs.",
+      "evidence_location": "lines 15-17, Introduction",
+      "confidence": "high",
+      "reason": "States what the toolkit is designed to do."
+    },
+    {
+      "field": "scoring_system",
+      "value": "The toolkit generates a single score, termed H-Score, capturing all relevant QPU performance factors such as error rates, circuit compilation, and quantum error mitigation.",
+      "normalized_value": "The toolkit generates a single score, termed H-Score, capturing all relevant QPU performance factors such as error rates, circuit compilation, and quantum error mitigation.",
+      "evidence": "- Comprehensive scoring system: The toolkit generates a single score, termed H-Score, capturing all relevant QPU performance factors such as error rates, circuit compilation, and quantum error mitigation.",
+      "evidence_location": "lines 19-24, Introduction",
+      "confidence": "high",
+      "reason": "Defines the primary score and the performance factors it captures."
+    },
+    {
+      "field": "benchmarking_focus",
+      "value": "The toolkit is based on optimization algorithms to reflect actual application scenarios.",
+      "normalized_value": "The toolkit is based on optimization algorithms to reflect actual application scenarios.",
+      "evidence": "- Focusing on real-world application: The toolkit is based on optimization algorithms to reflect actual application scenarios.",
+      "evidence_location": "lines 19-25, Introduction",
+      "confidence": "high",
+      "reason": "Describes the application-oriented benchmarking basis."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/FelixXu35/hamiltoniq.git",
+      "normalized_value": "https://github.com/FelixXu35/hamiltoniq.git",
+      "evidence": "git clone https://github.com/FelixXu35/hamiltoniq.git",
+      "evidence_location": "lines 35-40, Quick Start > Installation",
+      "confidence": "high",
+      "reason": "Provides the repository URL needed to obtain the artifact."
+    },
+    {
+      "field": "installation",
+      "value": "cd /path/to/your/directory\ngit clone https://github.com/FelixXu35/hamiltoniq.git\ncd hamiltoniq\npip install -e .",
+      "normalized_value": "cd /path/to/your/directory git clone https://github.com/FelixXu35/hamiltoniq.git cd hamiltoniq pip install -e .",
+      "evidence": "```shell\ncd /path/to/your/directory\ngit clone https://github.com/FelixXu35/hamiltoniq.git\ncd hamiltoniq\npip install -e .\n```",
+      "evidence_location": "lines 31-40, Quick Start > Installation",
+      "confidence": "high",
+      "reason": "Provides the explicit commands for cloning and installing the toolkit."
+    },
+    {
+      "field": "backend_benchmark_usage",
+      "value": "from hamiltoniq.bechmark import Toniq\n\ntoniq = Toniq()\nbackend = <your_backend>\nn_qubits = <your_prefered_number_of_qubits>\nn_layers = <your_prefered_number_of_layers>\nn_cores = <number_of_cores_in_your_PC>\n\nscore = toniq.simulator_run(backend=backend, n_qubits=n_qubits, n_layers=n_layers, n_cores=n_cores)",
+      "normalized_value": "from hamiltoniq.bechmark import Toniq> toniq = Toniq() backend = <your_backend> n_qubits = <your_prefered_number_of_qubits> n_layers = <your_prefered_number_of_layers> n_cores = <number_of_cores_in_your_PC> score = toniq.simulator_run(backend=backend, n_qubits=n_qubits, n_layers=n_layers, n_cores=n_cores)",
+      "evidence": "```python\nfrom hamiltoniq.bechmark import Toniq\n\ntoniq = Toniq()\nbackend = <your_backend>\nn_qubits = <your_prefered_number_of_qubits>\nn_layers = <your_prefered_number_of_layers>\nn_cores = <number_of_cores_in_your_PC>\n\nscore = toniq.simulator_run(backend=backend, n_qubits=n_qubits, n_layers=n_layers, n_cores=n_cores)\n```",
+      "evidence_location": "lines 42-56, Quick Start > Bechmark a backend",
+      "confidence": "high",
+      "reason": "Shows the documented API and parameters for benchmarking a backend."
+    },
+    {
+      "field": "example_notebook",
+      "value": "./docs/example_code.ipynb",
+      "normalized_value": "./docs/example_code.ipynb",
+      "evidence": "An example is given in [this notebook](./docs/example_code.ipynb).",
+      "evidence_location": "line 58, Quick Start > Bechmark a backend",
+      "confidence": "high",
+      "reason": "Links to a runnable example for using the toolkit."
+    },
+    {
+      "field": "comparison_constraint",
+      "value": "comparison across different numbers of qubits is meaningless",
+      "normalized_value": "comparison across different numbers of qubits is meaningless",
+      "evidence": "Note that comparison across different numbers of qubits is meaningless.",
+      "evidence_location": "lines 62-66, H-Scores",
+      "confidence": "high",
+      "reason": "Important qualification for interpreting the reported benchmark results."
+    },
+    {
+      "field": "benchmark_workflow",
+      "value": "The HamilToniQ’s benchmarking workflow, shown in the figure below, commences with the characterization of QPUs, where each QPU is classified according to its type, topology, and multi-QPU system. This initial step ensures a tailored approach to the benchmarking process, considering the unique attributes of each QPU. Subsequently, the process engages in quantum circuit compilation, employing a specific strategy designed to optimize the execution of quantum circuits on the identified QPUs. Integral to the workflow is Quantum Error Mitigation (QEM), which strategically addresses computational noise and errors that could affect the fidelity of the quantum processes. The culmination of this rigorous workflow is the benchmarking result, which quantifies the performance of the QPU in terms of reliability—represented by the H-Score and Execution Time. These metrics provide a quantitative and objective measure of the QPU’s performance, reflecting the effectiveness of the benchmarking process implemented by HamilToniQ. Additionally, the H-score can help manage computational resources in a Quantum-HPC system.",
+      "normalized_value": "The HamilToniQ’s benchmarking workflow, shown in the figure below, commences with the characterization of QPUs, where each QPU is classified according to its type, topology, and multi-QPU system. This initial step ensures a tailored approach to the benchmarking process, considering the unique attributes of each QPU. Subsequently, the process engages in quantum circuit compilation, employing a specific strategy designed to optimize the execution of quantum circuits on the identified QPUs. Integral to the workflow is Quantum Error Mitigation (QEM), which strategically addresses computational noise and errors that could affect the fidelity of the quantum processes. The culmination of this rigorous workflow is the benchmarking result, which quantifies the performance of the QPU in terms of reliability—represented by the H-Score and Execution Time. These metrics provide a quantitative and objective measure of the QPU’s performance, reflecting the effectiveness of the benchmarking process implemented by HamilToniQ. Additionally, the H-score can help manage computational resources in a Quantum-HPC system.",
+      "evidence": "The HamilToniQ’s benchmarking workflow, shown in the figure below, commences with the characterization of QPUs, where each QPU is classified according to its type, topology, and multi-QPU system. This initial step ensures a tailored approach to the benchmarking process, considering the unique attributes of each QPU. Subsequently, the process engages in quantum circuit compilation, employing a specific strategy designed to optimize the execution of quantum circuits on the identified QPUs. Integral to the workflow is Quantum Error Mitigation (QEM), which strategically addresses computational noise and errors that could affect the fidelity of the quantum processes. The culmination of this rigorous workflow is the benchmarking result, which quantifies the performance of the QPU in terms of reliability—represented by the H-Score and Execution Time. These metrics provide a quantitative and objective measure of the QPU’s performance, reflecting the effectiveness of the benchmarking process implemented by HamilToniQ. Additionally, the H-score can help manage computational resources in a Quantum-HPC system.",
+      "evidence_location": "line 90, Architecture",
+      "confidence": "high",
+      "reason": "Summarizes the documented stages, inputs, and output metrics of the benchmark."
+    },
+    {
+      "field": "score_computation",
+      "value": "The reference part, which is optional, utilizes a noiseless simulator to find the scoring curve. Users will only need this part when they are benchmarking on their own Q matrices. In the scoring part, the Quantum Approximate Optimization Algorithm (QAOA) is executed a certain number of times, and the scoring curve is used to determine the score of each iteration based on its accuracy. The final H-Score is computed as the average of all individual scores.",
+      "normalized_value": "The reference part, which is optional, utilizes a noiseless simulator to find the scoring curve. Users will only need this part when they are benchmarking on their own Q matrices. In the scoring part, the Quantum Approximate Optimization Algorithm (QAOA) is executed a certain number of times, and the scoring curve is used to determine the score of each iteration based on its accuracy. The final H-Score is computed as the average of all individual scores.",
+      "evidence": "HamilToniQ primarily comprises two components: the reference part, also known as ground truth, and the scoring part, as depicted in the figure below. The reference part, which is optional, utilizes a noiseless simulator to find the scoring curve. Users will only need this part when they are benchmarking on their own Q matrices. In the scoring part, the Quantum Approximate Optimization Algorithm (QAOA) is executed a certain number of times, and the scoring curve is used to determine the score of each iteration based on its accuracy. The final H-Score is computed as the average of all individual scores.",
+      "evidence_location": "line 94, Architecture",
+      "confidence": "high",
+      "reason": "Documents the reference and scoring components and how the final H-Score is calculated."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2404.13971",
+      "normalized_value": "https://arxiv.org/abs/2404.13971",
+      "evidence": "For more technical details please visit our [arXiv Paper](https://arxiv.org/abs/2404.13971).",
+      "evidence_location": "line 88, Architecture",
+      "confidence": "high",
+      "reason": "Provides the linked technical publication for deeper methodological details."
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "normalized_value": "MIT",
+      "evidence": "[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "The README badge explicitly identifies the project license as MIT."
+    },
+    {
+      "field": "citation",
+      "value": "@article{xu2024hamiltoniq,\n  title={HamilToniQ: An Open-Source Benchmark Toolkit for Quantum Computers},\n  author={Xu, Xiaotian and Chen, Kuan-Cheng and Wille, Robert},\n  journal={arXiv preprint arXiv:2404.13971},\n  year={2024}\n}",
+      "normalized_value": "@article{xu2024hamiltoniq, title={HamilToniQ: An Open-Source Benchmark Toolkit for Quantum Computers}, author={Xu, Xiaotian and Chen, Kuan-Cheng and Wille, Robert}, journal={arXiv preprint arXiv:2404.13971}, year={2024}}",
+      "evidence": "```text\n@article{xu2024hamiltoniq,\n  title={HamilToniQ: An Open-Source Benchmark Toolkit for Quantum Computers},\n  author={Xu, Xiaotian and Chen, Kuan-Cheng and Wille, Robert},\n  journal={arXiv preprint arXiv:2404.13971},\n  year={2024}\n}\n```",
+      "evidence_location": "lines 100-111, How to cite",
+      "confidence": "high",
+      "reason": "Provides the complete citation recommended by the artifact authors."
+    }
+  ]
+}

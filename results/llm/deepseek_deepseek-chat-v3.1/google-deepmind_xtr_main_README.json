@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "XTR: Rethinking the Role of Token Retrieval in Multi-Vector Retrieval",
+      "normalized_value": "XTR: Rethinking the Role of Token Retrieval in Multi-Vector Retrieval",
+      "evidence": "# XTR: Rethinking the Role of Token Retrieval in Multi-Vector Retrieval",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Primary name and description of the artifact from the main header"
+    },
+    {
+      "field": "short_name",
+      "value": "XTR",
+      "normalized_value": "XTR",
+      "evidence": "XTR (conteXtualized Token Retriever)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Abbreviated name and full expansion of the artifact"
+    },
+    {
+      "field": "paper_reference",
+      "value": "NeurIPS 2023 paper ([Lee et al., 2023](https://arxiv.org/abs/2304.01982))",
+      "normalized_value": "NeurIPS 2023 paper (Lee et al., 2023)",
+      "evidence": "Please refer to our NeurIPS 2023 paper ([Lee et al., 2023](https://arxiv.org/abs/2304.01982)) for technical details.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Reference to the associated research paper with conference and authors"
+    },
+    {
+      "field": "purpose",
+      "value": "document retrieval",
+      "normalized_value": "document retrieval",
+      "evidence": "run XTR (conteXtualized Token Retriever) for document retrieval",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Primary purpose of the artifact"
+    },
+    {
+      "field": "model_access_kaggle",
+      "value": "https://www.kaggle.com/models/deepmind/xtr/",
+      "normalized_value": "https://www.kaggle.com/models/deepmind/xtr/",
+      "evidence": "XTR is available through [Kaggle Models](https://www.kaggle.com/models/deepmind/xtr/).",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Primary access point for the model"
+    },
+    {
+      "field": "model_access_huggingface",
+      "value": "https://huggingface.co/google/xtr-base-en",
+      "normalized_value": "https://huggingface.co/google/xtr-base-en",
+      "evidence": "XTR is also available in [Huggingface](https://huggingface.co/google/xtr-base-en)",
+      "evidence_location": "33",
+      "confidence": "high",
+      "reason": "Alternative access point for the model"
+    },
+    {
+      "field": "colab_notebook",
+      "value": "https://colab.research.google.com/github/google-deepmind/xtr/blob/main/xtr_evaluation_on_beir_miracl.ipynb",
+      "normalized_value": "https://colab.research.google.com/github/google-deepmind/xtr/blob/main/xtr_evaluation_on_beir_miracl.ipynb",
+      "evidence": "[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/google-deepmind/xtr/blob/main/xtr_evaluation_on_beir_miracl.ipynb)",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Link to interactive notebook for running document retrieval"
+    },
+    {
+      "field": "usage_example",
+      "value": "```python\n## Model Usage\nimport tensorflow_hub as hub\nimport tensorflow as tf\nimport tensorflow_text as text  # Registers the ops.\n\nhub_url = \"/kaggle/input/xtr/tensorflow2/base-en/2/\" # if using Kaggle Notebooks, otherwise:\nhub_url = \"https://www.kaggle.com/models/deepmind/xtr/frameworks/tensorFlow2/variations/base-en/versions/2\"\nencoder = hub.KerasLayer(hub_url, signature=\"serving_default\", signature_outputs_as_dict=True)\n\n# Sample texts to encode.\nsample_texts = tf.constant([\"dog\", \"Puppies are nice.\", \"I enjoy taking long walks along the beach with my dog.\"])\nsample_embeds = encoder(sample_texts)\n\n# This returns token-level representations from XTR.\nencodings = sample_embeds[\"encodings\"].numpy()\nmask = sample_embeds[\"mask\"].numpy()\nprint(f\"encodings: {encodings.shape}, mask: {mask.shape}\")\n```",
+      "normalized_value": "```python ## Model Usage import tensorflow_hub as hub import tensorflow as tf import tensorflow_text as text  # Registers the ops. hub_url = \"/kaggle/input/xtr/tensorflow2/base-en/2/\" # if using Kaggle Notebooks, otherwise: hub_url = \"https://www.kaggle.com/models/deepmind/xtr/frameworks/tensorFlow2/variations/base-en/versions/2\" encoder = hub.KerasLayer(hub_url, signature=\"serving_default\", signature_outputs_as_dict=True) # Sample texts to encode. sample_texts = tf.constant([\"dog\", \"Puppies are nice.\", \"I enjoy taking long walks along the beach with my dog.\"]) sample_embeds = encoder(sample_texts) # This returns token-level representations from XTR. encodings = sample_embeds[\"encodings\"].numpy() mask = sample_embeds[\"mask\"].numpy() print(f\"encodings: {encodings.shape}, mask: {mask.shape}\") ```",
+      "evidence": "```python\n## Model Usage\nimport tensorflow_hub as hub\nimport tensorflow as tf\nimport tensorflow_text as text  # Registers the ops.\n\nhub_url = \"/kaggle/input/xtr/tensorflow2/base-en/2/\" # if using Kaggle Notebooks, otherwise:\nhub_url = \"https://www.kaggle.com/models/deepmind/xtr/frameworks/tensorFlow2/variations/base-en/versions/2\"\nencoder = hub.KerasLayer(hub_url, signature=\"serving_default\", signature_outputs_as_dict=True)\n\n# Sample texts to encode.\nsample_texts = tf.constant([\"dog\", \"Puppies are nice.\", \"I enjoy taking long walks along the beach with my dog.\"])\nsample_embeds = encoder(sample_texts)\n\n# This returns token-level representations from XTR.\nencodings = sample_embeds[\"encodings\"].numpy()\nmask = sample_embeds[\"mask\"].numpy()\nprint(f\"encodings: {encodings.shape}, mask: {mask.shape}\")\n```",
+      "evidence_location": "9-27",
+      "confidence": "high",
+      "reason": "Complete code example for loading and using the model"
+    },
+    {
+      "field": "citation",
+      "value": "@article{lee2024rethinking,\n  title={Rethinking the role of token retrieval in multi-vector retrieval},\n  author={Lee, Jinhyuk and Dai, Zhuyun and Duddu, Sai Meher Karthik and Lei, Tao and Naim, Iftekhar and Chang, Ming-Wei and Zhao, Vincent},\n  journal={Advances in Neural Information Processing Systems},\n  volume={36},\n  year={2024}\n}",
+      "normalized_value": "@article{lee2024rethinking, title={Rethinking the role of token retrieval in multi-vector retrieval}, author={Lee, Jinhyuk and Dai, Zhuyun and Duddu, Sai Meher Karthik and Lei, Tao and Naim, Iftekhar and Chang, Ming-Wei and Zhao, Vincent}, journal={Advances in Neural Information Processing Systems}, volume={36}, year={2024}}",
+      "evidence": "```bibtex\n@article{lee2024rethinking,\n  title={Rethinking the role of token retrieval in multi-vector retrieval},\n  author={Lee, Jinhyuk and Dai, Zhuyun and Duddu, Sai Meher Karthik and Lei, Tao and Naim, Iftekhar and Chang, Ming-Wei and Zhao, Vincent},\n  journal={Advances in Neural Information Processing Systems},\n  volume={36},\n  year={2024}\n}\n```",
+      "evidence_location": "37-45",
+      "confidence": "high",
+      "reason": "BibTeX citation for proper attribution"
+    },
+    {
+      "field": "software_license",
+      "value": "Apache License, Version 2.0 (Apache 2.0)",
+      "normalized_value": "Apache License, Version 2.0 (Apache 2.0)",
+      "evidence": "All software is licensed under the Apache License, Version 2.0 (Apache 2.0);",
+      "evidence_location": "51",
+      "confidence": "high",
+      "reason": "License governing software usage"
+    },
+    {
+      "field": "materials_license",
+      "value": "Creative Commons Attribution 4.0 International License (CC-BY)",
+      "normalized_value": "Creative Commons Attribution 4.0 International License (CC-BY)",
+      "evidence": "All other materials are licensed under the Creative Commons Attribution 4.0 International License (CC-BY).",
+      "evidence_location": "56-57",
+      "confidence": "high",
+      "reason": "License governing non-software materials"
+    },
+    {
+      "field": "copyright",
+      "value": "Copyright 2024 DeepMind Technologies Limited",
+      "normalized_value": "Copyright 2024 DeepMind Technologies Limited",
+      "evidence": "Copyright 2024 DeepMind Technologies Limited",
+      "evidence_location": "49",
+      "confidence": "high",
+      "reason": "Copyright holder information"
+    },
+    {
+      "field": "framework",
+      "value": "tensorflow",
+      "normalized_value": "tensorflow",
+      "evidence": "import tensorflow_hub as hub\nimport tensorflow as tf",
+      "evidence_location": "11-12",
+      "confidence": "high",
+      "reason": "Primary framework used for model implementation"
+    },
+    {
+      "field": "model_variant",
+      "value": "base-en",
+      "normalized_value": "base-en",
+      "evidence": "hub_url = \"https://www.kaggle.com/models/deepmind/xtr/frameworks/tensorFlow2/variations/base-en/versions/2\"",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Specific model variant mentioned in usage example"
+    }
+  ]
+}

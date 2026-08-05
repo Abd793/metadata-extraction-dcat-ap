@@ -1,0 +1,256 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PointSQL",
+      "normalized_value": "PointSQL",
+      "evidence": "This is PointSQL",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Identifies the artifact by name."
+    },
+    {
+      "field": "description",
+      "value": "This is PointSQL, the source codes of [Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400) and [Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text) from Microsoft Research. We present the setup for the WikiSQL experiments.",
+      "normalized_value": "This is PointSQL, the source codes of [Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400) and [Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text) from Microsoft Research. We present the setup for the WikiSQL experiments.",
+      "evidence": "This is PointSQL, the source codes of [Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400) and [Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text) from Microsoft Research. We present the setup for the WikiSQL experiments.",
+      "evidence_location": "lines 2-4",
+      "confidence": "high",
+      "reason": "Provides an overview of the artifact's purpose and context."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/1803.02400",
+      "normalized_value": "https://arxiv.org/abs/1803.02400",
+      "evidence": "[Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Link to the associated research paper."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text",
+      "normalized_value": "https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text",
+      "evidence": "[Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Link to another associated research paper."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny",
+      "evidence": "Download a preprocessed dataset [link](https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny) to `input/`",
+      "evidence_location": "line 11",
+      "confidence": "high",
+      "reason": "URL for downloading preprocessed dataset."
+    },
+    {
+      "field": "dataset_source_url",
+      "value": "https://github.com/salesforce/WikiSQL",
+      "normalized_value": "https://github.com/salesforce/WikiSQL",
+      "evidence": "Download data from [WikiSQL](https://github.com/salesforce/WikiSQL).",
+      "evidence_location": "line 17",
+      "confidence": "high",
+      "reason": "URL for the source dataset WikiSQL."
+    },
+    {
+      "field": "embedding_url",
+      "value": "https://nlp.stanford.edu/projects/glove/",
+      "normalized_value": "https://nlp.stanford.edu/projects/glove/",
+      "evidence": "Download pretrained embeddings from [glove](https://nlp.stanford.edu/projects/glove/)",
+      "evidence_location": "line 37",
+      "confidence": "high",
+      "reason": "URL for downloading GloVe embeddings."
+    },
+    {
+      "field": "embedding_url",
+      "value": "http://www.logos.t.u-tokyo.ac.jp/~hassy/publications/arxiv2016jmt/",
+      "normalized_value": "http://www.logos.t.u-tokyo.ac.jp/~hassy/publications/arxiv2016jmt/",
+      "evidence": "and [character n-gram embeddings](http://www.logos.t.u-tokyo.ac.jp/~hassy/publications/arxiv2016jmt/)",
+      "evidence_location": "line 37",
+      "confidence": "high",
+      "reason": "URL for downloading character n-gram embeddings."
+    },
+    {
+      "field": "dataset_url_v2",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t",
+      "evidence": "A preprocessed dataset can be found [here](https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t),",
+      "evidence_location": "line 41",
+      "confidence": "high",
+      "reason": "URL for version 2 preprocessed dataset."
+    },
+    {
+      "field": "data_download_command",
+      "value": "$ cd wikisql_data\n$ wget https://github.com/salesforce/WikiSQL/raw/master/data.tar.bz2\n$ tar -xvjf data.tar.bz2",
+      "normalized_value": "$ cd wikisql_data $ wget https://github.com/salesforce/WikiSQL/raw/master/data.tar.bz2 $ tar -xvjf data.tar.bz2",
+      "evidence": "$ cd wikisql_data\n$ wget https://github.com/salesforce/WikiSQL/raw/master/data.tar.bz2\n$ tar -xvjf data.tar.bz2",
+      "evidence_location": "lines 19-23",
+      "confidence": "high",
+      "reason": "Command to download and extract the WikiSQL dataset."
+    },
+    {
+      "field": "annotation_command",
+      "value": "$ cd wikisql_data/scripts/\n$ python annotate.py\n$ python prepare.py",
+      "normalized_value": "$ cd wikisql_data/scripts/ $ python annotate.py $ python prepare.py",
+      "evidence": "$ cd wikisql_data/scripts/\n$ python annotate.py\n$ python prepare.py",
+      "evidence_location": "lines 27-30",
+      "confidence": "high",
+      "reason": "Command to run annotation and preprocessing scripts."
+    },
+    {
+      "field": "relevance_command",
+      "value": "python wikisql_data/scripts/relevance.py",
+      "normalized_value": "python wikisql_data/scripts/relevance.py",
+      "evidence": "python wikisql_data/scripts/relevance.py",
+      "evidence_location": "line 35",
+      "confidence": "high",
+      "reason": "Command to prepare relevance files."
+    },
+    {
+      "field": "training_command",
+      "value": "$ OUTDIR=output/meta_sum\n$ mkdir $OUTDIR\n$ python run.py --input-dir ./input \\\n    --output-dir $OUTDIR \\\n    --config config/nl2prog.meta_2_0.001.rank.config  \\\n    --meta_learning_rate 0.001 --gradient_clip_norm 5 \\\n    --num_layers 3  --num_meta_example 2 \\\n    --meta_learning --production",
+      "normalized_value": "$ OUTDIR=output/meta_sum $ mkdir $OUTDIR $ python run.py --input-dir ./input --output-dir $OUTDIR --config config/nl2prog.meta_2_0.001.rank.config --meta_learning_rate 0.001 --gradient_clip_norm 5 --num_layers 3 --num_meta_example 2 --meta_learning --production",
+      "evidence": "$ OUTDIR=output/meta_sum\n$ mkdir $OUTDIR\n$ python run.py --input-dir ./input \\\n    --output-dir $OUTDIR \\\n    --config config/nl2prog.meta_2_0.001.rank.config  \\\n    --meta_learning_rate 0.001 --gradient_clip_norm 5 \\\n    --num_layers 3  --num_meta_example 2 \\\n    --meta_learning --production",
+      "evidence_location": "lines 48-57",
+      "confidence": "high",
+      "reason": "Command to train the model with meta + sum loss."
+    },
+    {
+      "field": "evaluation_command_dev",
+      "value": "$ mkdir -p ${OUTDIR}_dev\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_dev \\ \n    --config config/nl2prog.meta_2_0.001.rank.devconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production",
+      "normalized_value": "$ mkdir -p ${OUTDIR}_dev $ python run.py --input-dir ./input --output-dir ${OUTDIR}_dev --config config/nl2prog.meta_2_0.001.rank.devconfig --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40 --production",
+      "evidence": "$ mkdir -p ${OUTDIR}_dev\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_dev \\ \n    --config config/nl2prog.meta_2_0.001.rank.devconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production",
+      "evidence_location": "lines 65-69",
+      "confidence": "high",
+      "reason": "Command to evaluate on the development set."
+    },
+    {
+      "field": "execution_command_dev",
+      "value": "$ cp ${OUTDIR}_dev/test_top_1.log dev_top_1.log\n$ python2 execute_dev.py \n    #Q2 (predition) result is wrong: 1254\n    #Q1 or Q2 fail to parse: 0\n    #Q1 (ground truth) exec to None: 20\n    #Q1 (ground truth) failed to execute: 0\n    Logical Form Accuracy: 0.631383269546\n    Execute Accuracy: 0.68277747403",
+      "normalized_value": "$ cp ${OUTDIR}_dev/test_top_1.log dev_top_1.log $ python2 execute_dev.py #Q2 (predition) result is wrong: 1254 #Q1 or Q2 fail to parse: 0 #Q1 (ground truth) exec to None: 20 #Q1 (ground truth) failed to execute: 0 Logical Form Accuracy: 0.631383269546 Execute Accuracy: 0.68277747403",
+      "evidence": "$ cp ${OUTDIR}_dev/test_top_1.log dev_top_1.log\n$ python2 execute_dev.py \n    #Q2 (predition) result is wrong: 1254\n    #Q1 or Q2 fail to parse: 0\n    #Q1 (ground truth) exec to None: 20\n    #Q1 (ground truth) failed to execute: 0\n    Logical Form Accuracy: 0.631383269546\n    Execute Accuracy: 0.68277747403",
+      "evidence_location": "lines 72-80",
+      "confidence": "high",
+      "reason": "Command to run execution and get accuracy metrics for development set."
+    },
+    {
+      "field": "evaluation_command_test",
+      "value": "$ mkdir -p ${OUTDIR}_test\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \\ \n    --config config/nl2prog.meta_2_0.001.rank.testconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production",
+      "normalized_value": "$ mkdir -p ${OUTDIR}_test $ python run.py --input-dir ./input --output-dir ${OUTDIR}_test --config config/nl2prog.meta_2_0.001.rank.testconfig --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40 --production",
+      "evidence": "$ mkdir -p ${OUTDIR}_test\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \\ \n    --config config/nl2prog.meta_2_0.001.rank.testconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production",
+      "evidence_location": "lines 83-87",
+      "confidence": "high",
+      "reason": "Command to evaluate on the test set."
+    },
+    {
+      "field": "execution_command_test",
+      "value": "$ cp ${OUTDIR}_test/test_top_1.log .\n$ python2 execute.py\n    #Q2 (predition) result is wrong: 2556\n    #Q1 or Q2 fail to parse: 0\n    #Q1 (ground truth) exec to None: 48\n    #Q1 (ground truth) failed to execute: 0\n    Logical Form Accuracy: 0.628073829775\n    Execute Accuracy: 0.680379563733",
+      "normalized_value": "$ cp ${OUTDIR}_test/test_top_1.log . $ python2 execute.py #Q2 (predition) result is wrong: 2556 #Q1 or Q2 fail to parse: 0 #Q1 (ground truth) exec to None: 48 #Q1 (ground truth) failed to execute: 0 Logical Form Accuracy: 0.628073829775 Execute Accuracy: 0.680379563733",
+      "evidence": "$ cp ${OUTDIR}_test/test_top_1.log .\n$ python2 execute.py\n    #Q2 (predition) result is wrong: 2556\n    #Q1 or Q2 fail to parse: 0\n    #Q1 (ground truth) exec to None: 48\n    #Q1 (ground truth) failed to execute: 0\n    Logical Form Accuracy: 0.628073829775\n    Execute Accuracy: 0.680379563733",
+      "evidence_location": "lines 90-98",
+      "confidence": "high",
+      "reason": "Command to run execution and get accuracy metrics for test set."
+    },
+    {
+      "field": "baseline_evaluation_command",
+      "value": "$ OUTDIR=output/base_sum\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \\\n    --config config/nl2prog.testconfig --production  \\\n    --test-model model_zoo/base_sum/table_nl_prog-79 --production",
+      "normalized_value": "$ OUTDIR=output/base_sum $ python run.py --input-dir ./input --output-dir ${OUTDIR}_test --config config/nl2prog.testconfig --production --test-model model_zoo/base_sum/table_nl_prog-79 --production",
+      "evidence": "$ OUTDIR=output/base_sum\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \\\n    --config config/nl2prog.testconfig --production  \\\n    --test-model model_zoo/base_sum/table_nl_prog-79 --production",
+      "evidence_location": "lines 102-106",
+      "confidence": "high",
+      "reason": "Command to evaluate the baseline model on test set."
+    },
+    {
+      "field": "baseline_execution_command",
+      "value": "$ cp ${OUTDIR}_test/test_top_1.log .\n$ python2 execute.py\n    #Q2 (predition) result is wrong: 2636\n    #Q1 or Q2 fail to parse: 0\n    #Q1 (ground truth) exec to None: 48\n    #Q1 (ground truth) failed to execute: 0\n    Logical Form Accuracy: 0.614592374009\n    Execute Accuracy: 0.668055314471",
+      "normalized_value": "$ cp ${OUTDIR}_test/test_top_1.log . $ python2 execute.py #Q2 (predition) result is wrong: 2636 #Q1 or Q2 fail to parse: 0 #Q1 (ground truth) exec to None: 48 #Q1 (ground truth) failed to execute: 0 Logical Form Accuracy: 0.614592374009 Execute Accuracy: 0.668055314471",
+      "evidence": "$ cp ${OUTDIR}_test/test_top_1.log .\n$ python2 execute.py\n    #Q2 (predition) result is wrong: 2636\n    #Q1 or Q2 fail to parse: 0\n    #Q1 (ground truth) exec to None: 48\n    #Q1 (ground truth) failed to execute: 0\n    Logical Form Accuracy: 0.614592374009\n    Execute Accuracy: 0.668055314471",
+      "evidence_location": "lines 110-118",
+      "confidence": "high",
+      "reason": "Command to run execution and get accuracy metrics for baseline model."
+    },
+    {
+      "field": "pretrained_model_url",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz",
+      "evidence": "Download [pretrained model checkpoints](https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz) to ``model_zoo/``",
+      "evidence_location": "line 122",
+      "confidence": "high",
+      "reason": "URL for downloading pretrained model checkpoints."
+    },
+    {
+      "field": "dependency",
+      "value": "Tensorflow 1.4",
+      "normalized_value": "Tensorflow 1.4",
+      "evidence": "- Tensorflow 1.4",
+      "evidence_location": "line 130",
+      "confidence": "high",
+      "reason": "Specifies the required TensorFlow version."
+    },
+    {
+      "field": "dependency",
+      "value": "python 3.6",
+      "normalized_value": "python 3.6",
+      "evidence": "- python 3.6",
+      "evidence_location": "line 131",
+      "confidence": "high",
+      "reason": "Specifies the required Python version."
+    },
+    {
+      "field": "dependency",
+      "value": "Stanza",
+      "normalized_value": "Stanza",
+      "evidence": "- [Stanza](https://github.com/stanfordnlp/stanza)",
+      "evidence_location": "line 132",
+      "confidence": "high",
+      "reason": "Specifies the required Stanza library."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{pshuang2018PT-MAML,\n  author    = {Po{-}Sen Huang and\n               Chenglong Wang and\n               Rishabh Singh and\n               Wen-tau Yih and\n               Xiaodong He},\n  title     = {Natural Language to Structured Query Generation via Meta-Learning},\n  booktitle = {NAACL},\n  year      = {2018},\n}",
+      "normalized_value": "@inproceedings{pshuang2018PT-MAML, author = {Po{-}Sen Huang and Chenglong Wang and Rishabh Singh and Wen-tau Yih and Xiaodong He}, title = {Natural Language to Structured Query Generation via Meta-Learning}, booktitle = {NAACL}, year = {2018}, }",
+      "evidence": "@inproceedings{pshuang2018PT-MAML,\n  author    = {Po{-}Sen Huang and\n               Chenglong Wang and\n               Rishabh Singh and\n               Wen-tau Yih and\n               Xiaodong He},\n  title     = {Natural Language to Structured Query Generation via Meta-Learning},\n  booktitle = {NAACL},\n  year      = {2018},\n}",
+      "evidence_location": "lines 141-152",
+      "confidence": "high",
+      "reason": "Citation for the associated paper."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{2018executionguided,\n  author    = {Chenglong Wang and\n               Po{-}Sen Huang and\n               Alex Polozov and\n               Marc Brockschmidt and \n               Rishabh Singh},\n  title = \"{Execution-Guided Neural Program Decoding}\",\n  booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)},\n  year = {2018}\n}",
+      "normalized_value": "@inproceedings{2018executionguided, author = {Chenglong Wang and Po{-}Sen Huang and Alex Polozov and Marc Brockschmidt and Rishabh Singh}, title = \"{Execution-Guided Neural Program Decoding}\", booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)}, year = {2018} }",
+      "evidence": "@inproceedings{2018executionguided,\n  author    = {Chenglong Wang and\n               Po{-}Sen Huang and\n               Alex Polozov and\n               Marc Brockschmidt and \n               Rishabh Singh},\n  title = \"{Execution-Guided Neural Program Decoding}\",\n  booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)},\n  year = {2018}\n}",
+      "evidence_location": "lines 156-166",
+      "confidence": "high",
+      "reason": "Citation for another associated paper."
+    },
+    {
+      "field": "citation",
+      "value": "@techreport{chenglong,\n  author = {Wang, Chenglong and Brockschmidt, Marc and Singh, Rishabh},\n  title = {Pointing Out {SQL} Queries From Text},\n  number = {MSR-TR-2017-45},\n  year = {2017},\n  month = {November},\n  url = {https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/},\n}",
+      "normalized_value": "@techreport{chenglong, author = {Wang, Chenglong and Brockschmidt, Marc and Singh, Rishabh}, title = {Pointing Out {SQL} Queries From Text}, number = {MSR-TR-2017-45}, year = {2017}, month = {November}, url = {https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/}, }",
+      "evidence": "@techreport{chenglong,\n  author = {Wang, Chenglong and Brockschmidt, Marc and Singh, Rishabh},\n  title = {Pointing Out {SQL} Queries From Text},\n  number = {MSR-TR-2017-45},\n  year = {2017},\n  month = {November},\n  url = {https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/},\n}",
+      "evidence_location": "lines 173-181",
+      "confidence": "high",
+      "reason": "Citation for the technical report."
+    },
+    {
+      "field": "model_checkpoint_path",
+      "value": "model_zoo/meta_sum",
+      "normalized_value": "model_zoo/meta_sum",
+      "evidence": "Meta + Sum loss: `model_zoo/meta_sum`",
+      "evidence_location": "line 125",
+      "confidence": "high",
+      "reason": "Path to the pretrained model checkpoint for meta+sum loss."
+    },
+    {
+      "field": "model_checkpoint_path",
+      "value": "model_zoo/base_sum",
+      "normalized_value": "model_zoo/base_sum",
+      "evidence": "Base Sum loss: `model_zoo/base_sum`",
+      "evidence_location": "line 126",
+      "confidence": "high",
+      "reason": "Path to the pretrained model checkpoint for base sum loss."
+    }
+  ]
+}

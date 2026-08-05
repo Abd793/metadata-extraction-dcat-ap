@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "DSM: Direct Sparse Mapping",
+      "normalized_value": "DSM: Direct Sparse Mapping",
+      "evidence": "# DSM: Direct Sparse Mapping",
+      "evidence_location": "line 1; header",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its expanded name."
+    },
+    {
+      "field": "authors",
+      "value": "Jon Zubizarreta, Iker Aguinaga, Juan D. Tardós and J. M. M. Montiel.",
+      "normalized_value": "Jon Zubizarreta, Iker Aguinaga, Juan D. Tardós and J. M. M. Montiel.",
+      "evidence": "**Authors:** Jon Zubizarreta, Iker Aguinaga, Juan D. Tardós and J. M. M. Montiel.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Provides the named authors for attribution and discovery."
+    },
+    {
+      "field": "purpose",
+      "value": "DSM is a novel approach to monocular SLAM. It is a fully direct system that estimates the camera trajectory and a consistent global map.",
+      "normalized_value": "DSM is a novel approach to monocular SLAM. It is a fully direct system that estimates the camera trajectory and a consistent global map.",
+      "evidence": "DSM is a novel approach to monocular SLAM. It is a fully direct system that estimates the camera trajectory and a consistent global map.",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Summarizes the artifact's technical purpose and output."
+    },
+    {
+      "field": "method_capability",
+      "value": "It is able to detect and handle map point reobservations when revisiting already mapped areas using the same photometric model and map points.",
+      "normalized_value": "It is able to detect and handle map point reobservations when revisiting already mapped areas using the same photometric model and map points.",
+      "evidence": "Is is able to detect and handle map point reobservations when revisiting already mapped areas using the same photometric model and map points.",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Describes a concrete mapping and relocalization-related capability."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/jzubizarreta/dsm.git",
+      "normalized_value": "https://github.com/jzubizarreta/dsm.git",
+      "evidence": "```sh\ngit clone https://github.com/jzubizarreta/dsm.git\n```",
+      "evidence_location": "lines 19-23; Installation",
+      "confidence": "high",
+      "reason": "Provides the repository access URL needed to obtain the artifact."
+    },
+    {
+      "field": "related_publication",
+      "value": "Jon Zubizarreta, Iker Aguinaga and J. M. M. Montiel. Direct Sparse Mapping. In IEEE Transactions on Robotics",
+      "normalized_value": "Jon Zubizarreta, Iker Aguinaga and J. M. M. Montiel. Direct Sparse Mapping. In IEEE Transactions on Robotics",
+      "evidence": "* Jon Zubizarreta, Iker Aguinaga and J. M. M. Montiel. **Direct Sparse Mapping**. In *IEEE Transactions on Robotics* [[pdf](https://arxiv.org/abs/1904.06577)]",
+      "evidence_location": "lines 12-14; Related Publications",
+      "confidence": "high",
+      "reason": "Links the artifact to its associated research publication."
+    },
+    {
+      "field": "supported_platforms",
+      "value": "Ubuntu 18.04 and Windows 10 (VS15 and VS17)",
+      "normalized_value": "Ubuntu 18.04 and Windows 10 (VS15 and VS17)",
+      "evidence": "We tested DSM int two different system configurations: **Ubuntu 18.04** and **Windows 10** (VS15 and VS17).",
+      "evidence_location": "lines 16-17; Installation",
+      "confidence": "high",
+      "reason": "Identifies explicitly tested operating-system and compiler configurations."
+    },
+    {
+      "field": "minimum_language_standard",
+      "value": "C++11",
+      "normalized_value": "C++11",
+      "evidence": "The library requires at least C++11.",
+      "evidence_location": "line 17; Installation",
+      "confidence": "high",
+      "reason": "Specifies the minimum C++ standard required to build the library."
+    },
+    {
+      "field": "required_dependency",
+      "value": "Eigen3",
+      "normalized_value": "Eigen3",
+      "evidence": "#### Eigen3\n\nWe use [Eigen3](http://eigen.tuxfamily.org) for almost any mathematical operation.",
+      "evidence_location": "lines 27-29; Required Dependencies",
+      "confidence": "high",
+      "reason": "Names a required mathematical library dependency."
+    },
+    {
+      "field": "required_dependency",
+      "value": "OpenCV",
+      "normalized_value": "OpenCV",
+      "evidence": "#### OpenCV\n\nWe use [OpenCV](https://opencv.org/) to manipulate images (read/write/display) and to bootstrap the monocular system.",
+      "evidence_location": "lines 37-39; Required Dependencies",
+      "confidence": "high",
+      "reason": "Names a required image-processing and system-bootstrap dependency."
+    },
+    {
+      "field": "required_dependency",
+      "value": "Ceres Solver",
+      "normalized_value": "Ceres Solver",
+      "evidence": "#### Ceres Solver\n\nWe use [Ceres Solver](http://ceres-solver.org) to perform the photometric bundle adjustment.",
+      "evidence_location": "lines 47-49; Required Dependencies",
+      "confidence": "high",
+      "reason": "Names the optimization dependency and its role in photometric bundle adjustment."
+    },
+    {
+      "field": "ceres_dependencies_install",
+      "value": "sudo apt-get install libgoogle-glog-dev\n\n# BLAS & LAPACK\nsudo apt-get install libatlas-base-dev\n\n# SuiteSparse\nsudo apt-get install libsuitesparse-dev",
+      "normalized_value": "sudo apt-get install libgoogle-glog-dev # BLAS & LAPACK sudo apt-get install libatlas-base-dev # SuiteSparse sudo apt-get install libsuitesparse-dev",
+      "evidence": "```sh\n# glog & gflags\nsudo apt-get install libgoogle-glog-dev\n\n# BLAS & LAPACK\nsudo apt-get install libatlas-base-dev\n\n# SuiteSparse\nsudo apt-get install libsuitesparse-dev\n```",
+      "evidence_location": "lines 55-66; Ceres Solver",
+      "confidence": "high",
+      "reason": "Provides concrete package installation commands for Ceres dependencies."
+    },
+    {
+      "field": "build_command",
+      "value": "cd ../../dsm\nmkdir build\ncd build\ncmake ..\nmake -j4",
+      "normalized_value": "cd ../../dsm mkdir build cd build cmake .. make -j4",
+      "evidence": "```sh\ncd ../../dsm\nmkdir build\ncd build\ncmake ..\nmake -j4\n```",
+      "evidence_location": "lines 98-108; DSM build",
+      "confidence": "high",
+      "reason": "Provides the documented commands for compiling DSM."
+    },
+    {
+      "field": "build_outputs",
+      "value": "libdsm.so, libQtVisualizer.so, EurocExample and VideoExample",
+      "normalized_value": "libdsm.so, libQtVisualizer.so, EurocExample and VideoExample",
+      "evidence": "This will compile two libraries `libdsm.so` and `libQtVisualizer.so` at **lib** folder, which can be linked from external projects. It will also create two executables `EurocExample` and `VideoExample` at **bin** folder to run DSM in the EuRoC dataset and with custom videos respectively.",
+      "evidence_location": "line 110; DSM build",
+      "confidence": "high",
+      "reason": "Identifies the reusable libraries and executable entry points produced by the build."
+    },
+    {
+      "field": "calibration_format",
+      "value": "fx fy cx cy k1 k2 p1 p2\nin_width in_height\nout_width out_height",
+      "normalized_value": "fx fy cx cy k1 k2 p1 p2 in_width in_height out_width out_height",
+      "evidence": "The calibration file has the format\n\n```\nfx fy cx cy k1 k2 p1 p2\nin_width in_height\nout_width out_height \n```",
+      "evidence_location": "lines 135-141; Calibration format",
+      "confidence": "high",
+      "reason": "Defines the input camera-calibration file structure required for use."
+    },
+    {
+      "field": "camera_model",
+      "value": "the radial-tangential model of OpenCV",
+      "normalized_value": "the radial-tangential model of OpenCV",
+      "evidence": "DSM requires the geometric calibration of the camera as an input. Currently it uses the radial-tangential model of OpenCV.",
+      "evidence_location": "lines 132-133; Calibration format",
+      "confidence": "high",
+      "reason": "Specifies the camera distortion model supported by the documented calibration input."
+    },
+    {
+      "field": "euroc_dataset",
+      "value": "EuRoC dataset",
+      "normalized_value": "EuRoC dataset",
+      "evidence": "1. Download a sequence (ASL format) from [https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets).",
+      "evidence_location": "lines 145-147; EuRoC Example",
+      "confidence": "high",
+      "reason": "Identifies the documented benchmark dataset and its download location."
+    },
+    {
+      "field": "euroc_run_command",
+      "value": "./EurocExample <IMAGE_FOLDER> <TIMESTAMPS_FILE> <CALIB_FILE> <SETTINGS_FILE>",
+      "normalized_value": "./EurocExample <IMAGE_FOLDER> <TIMESTAMPS_FILE> <CALIB_FILE> <SETTINGS_FILE>",
+      "evidence": "```sh\n./EurocExample <IMAGE_FOLDER> <TIMESTAMPS_FILE> <CALIB_FILE> <SETTINGS_FILE>\n```",
+      "evidence_location": "lines 151-155; EuRoC Example",
+      "confidence": "high",
+      "reason": "Provides the executable invocation for reproducing a EuRoC run."
+    },
+    {
+      "field": "custom_video_run_command",
+      "value": "./VideoExample <VIDEO_FILE> <CALIB_FILE> <SETTINGS_FILE>",
+      "normalized_value": "./VideoExample <VIDEO_FILE> <CALIB_FILE> <SETTINGS_FILE>",
+      "evidence": "```sh\n./VideoExample <VIDEO_FILE> <CALIB_FILE> <SETTINGS_FILE>\n```",
+      "evidence_location": "lines 169-173; Video Example",
+      "confidence": "high",
+      "reason": "Provides the executable invocation for running custom calibrated videos."
+    },
+    {
+      "field": "license",
+      "value": "GPLv3 license",
+      "normalized_value": "GPLv3 license",
+      "evidence": "DSM is released under a [GPLv3 license](https://github.com/jzubizarreta/dsm/blob/master/License-gpl.txt).",
+      "evidence_location": "lines 245-247; License",
+      "confidence": "high",
+      "reason": "States the artifact's reuse and distribution license."
+    },
+    {
+      "field": "citation_doi",
+      "value": "10.1109/TRO.2020.2991614",
+      "normalized_value": "10.1109/TRO.2020.2991614",
+      "evidence": "      doi = {10.1109/TRO.2020.2991614},",
+      "evidence_location": "lines 251-258; License",
+      "confidence": "high",
+      "reason": "Provides a persistent identifier for citing the associated work."
+    }
+  ]
+}

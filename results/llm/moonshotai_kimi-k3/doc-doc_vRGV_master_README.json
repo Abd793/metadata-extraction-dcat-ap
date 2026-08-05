@@ -1,0 +1,211 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Visual Relation Grounding in Videos",
+      "normalized_value": "Visual Relation Grounding in Videos",
+      "evidence": "# [Visual Relation Grounding in Videos](https://arxiv.org/pdf/2007.08814.pdf)",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Names the artifact/paper this repository implements."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/pdf/2007.08814.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2007.08814.pdf",
+      "evidence": "# [Visual Relation Grounding in Videos](https://arxiv.org/pdf/2007.08814.pdf)",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Direct link to the associated arXiv paper."
+    },
+    {
+      "field": "publication_venue",
+      "value": "ECCV2020 (Spotlight)",
+      "normalized_value": "ECCV2020 (Spotlight)",
+      "evidence": "This is the pytorch implementation of our work at ECCV2020 (Spotlight).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Identifies the peer-reviewed venue and spotlight status of the work."
+    },
+    {
+      "field": "framework",
+      "value": "pytorch",
+      "normalized_value": "pytorch",
+      "evidence": "This is the pytorch implementation of our work at ECCV2020 (Spotlight).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "States the deep learning framework used for the implementation."
+    },
+    {
+      "field": "repository_structure",
+      "value": "3 parts: (1) Extract RoI feature; (2) Train and inference; and (3) Generate relation-aware trajectories",
+      "normalized_value": "3 parts: (1) Extract RoI feature; (2) Train and inference; and (3) Generate relation-aware trajectories",
+      "evidence": "The repository mainly includes 3 parts: (1) Extract RoI feature; (2) Train and inference; and (3) Generate relation-aware trajectories.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Describes the pipeline components, helping users understand the workflow."
+    },
+    {
+      "field": "python_version",
+      "value": "python 3.6.5",
+      "normalized_value": "python 3.6.5",
+      "evidence": "Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0. For others libs, please refer to the file requirements.txt.",
+      "evidence_location": "line 12, '## Environment' section",
+      "confidence": "high",
+      "reason": "Required Python version for reproducing the environment."
+    },
+    {
+      "field": "pytorch_version",
+      "value": "pytorch 0.4.1",
+      "normalized_value": "pytorch 0.4.1",
+      "evidence": "Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0. For others libs, please refer to the file requirements.txt.",
+      "evidence_location": "line 12, '## Environment' section",
+      "confidence": "high",
+      "reason": "Required PyTorch version for reproduction."
+    },
+    {
+      "field": "cuda_version_requirement",
+      "value": "cuda >= 9.0",
+      "normalized_value": "cuda >= 9.0",
+      "evidence": "Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0. For others libs, please refer to the file requirements.txt.",
+      "evidence_location": "line 12, '## Environment' section",
+      "confidence": "high",
+      "reason": "Minimum CUDA version needed to run the code."
+    },
+    {
+      "field": "dependencies_file",
+      "value": "requirements.txt",
+      "normalized_value": "requirements.txt",
+      "evidence": "For others libs, please refer to the file requirements.txt.",
+      "evidence_location": "line 12, '## Environment' section",
+      "confidence": "high",
+      "reason": "Points to the file listing additional library dependencies."
+    },
+    {
+      "field": "installation_commands",
+      "value": "conda create -n envname python=3.6.5; conda activate envname; pip install -r requirements.txt; sh vRGV/lib/make.sh",
+      "normalized_value": "conda create -n envname python=3.6.5; conda activate envname; pip install -r requirements.txt; sh vRGV/lib/make.sh",
+      "evidence": ">conda create -n envname python=3.6.5 # Create\n>conda activate envname # Enter\n>pip install -r requirements.txt # Install the provided libs\n>sh vRGV/lib/make.sh # Set the environment for detection, make sure you have nvcc",
+      "evidence_location": "lines 16-21, '## Install' code block",
+      "confidence": "high",
+      "reason": "Step-by-step setup commands needed to install and build the project."
+    },
+    {
+      "field": "data_download_link",
+      "value": "https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing",
+      "evidence": "Please download the data [here](https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing). The folder ```ground_data``` should be at the same directory as ```vRGV```. Please merge the downloaded vRGV folder with this repo.",
+      "evidence_location": "line 23, '## Data Preparation' section",
+      "confidence": "high",
+      "reason": "Link to download the required ground_data folder."
+    },
+    {
+      "field": "video_dataset_source",
+      "value": "https://xdshang.github.io/docs/imagenet-vidvrd.html",
+      "normalized_value": "https://xdshang.github.io/docs/imagenet-vidvrd.html",
+      "evidence": "Please download the videos [here](https://xdshang.github.io/docs/imagenet-vidvrd.html) and extract the frames into ground_data.",
+      "evidence_location": "line 25, '## Data Preparation' section",
+      "confidence": "high",
+      "reason": "Source for the videos (ImageNet VidVRD) used by the project."
+    },
+    {
+      "field": "data_directory_layout",
+      "value": "ground_data/vidvrd/JPEGImages/ILSVRC2015_train_xxx/000000.JPEG",
+      "normalized_value": "ground_data/vidvrd/JPEGImages/ILSVRC2015_train_xxx/000000.JPEG",
+      "evidence": "The directory should be like: ground_data/vidvrd/JPEGImages/ILSVRC2015_train_xxx/000000.JPEG.",
+      "evidence_location": "line 26, '## Data Preparation' section",
+      "confidence": "high",
+      "reason": "Specifies the expected directory structure for extracted video frames."
+    },
+    {
+      "field": "storage_requirement",
+      "value": "about 100G storage",
+      "normalized_value": "about 100G storage",
+      "evidence": "Feature Extraction. (need about 100G storage! Because I dumped all the detected bboxes along with their features. It can be greatly reduced by changing detect_frame.py to return the top-40 bboxes and save them with .npz file.)",
+      "evidence_location": "line 29, '## Usage' section",
+      "confidence": "high",
+      "reason": "Hardware/storage prerequisite for the feature extraction step."
+    },
+    {
+      "field": "feature_extraction_command",
+      "value": "./detection.sh 0 val #(or train)",
+      "normalized_value": "./detection.sh 0 val #(or train)",
+      "evidence": "./detection.sh 0 val #(or train)",
+      "evidence_location": "line 31, '## Usage' code block",
+      "confidence": "high",
+      "reason": "Command to run RoI feature extraction."
+    },
+    {
+      "field": "feature_sampling_command",
+      "value": "cd tools && python sample_video_feature.py",
+      "normalized_value": "cd tools && python sample_video_feature.py",
+      "evidence": "cd tools\npython sample_video_feature.py",
+      "evidence_location": "lines 35-36, '## Usage' code block",
+      "confidence": "high",
+      "reason": "Commands to sample video features after extraction."
+    },
+    {
+      "field": "inference_and_evaluation_commands",
+      "value": "./ground.sh 0 val; python generate_track_link.py; python eval_ground.py",
+      "normalized_value": "./ground.sh 0 val; python generate_track_link.py; python eval_ground.py",
+      "evidence": "./ground.sh 0 val # Output the relation-aware spatio-temporal attention\npython generate_track_link.py # Generate relation-aware trajectories with Viterbi algorithm.\npython eval_ground.py # Evaluate the performance",
+      "evidence_location": "lines 40-42, '## Usage' code block",
+      "confidence": "high",
+      "reason": "Commands for testing with the provided model, generating trajectories, and evaluating performance."
+    },
+    {
+      "field": "reported_metric",
+      "value": "Acc_R: 24.58%",
+      "normalized_value": "Acc_R: 24.58%",
+      "evidence": "You will get accuracy Acc_R: 24.58%.",
+      "evidence_location": "line 44, '## Usage' section",
+      "confidence": "high",
+      "reason": "Concrete evaluation result users should obtain when verifying the provided model."
+    },
+    {
+      "field": "training_command",
+      "value": "./ground.sh 0 train # Train the model with GPU id 0",
+      "normalized_value": "./ground.sh 0 train # Train the model with GPU id 0",
+      "evidence": "./ground.sh 0 train # Train the model with GPU id 0",
+      "evidence_location": "line 48, '## Usage' code block",
+      "confidence": "high",
+      "reason": "Command to train the model from scratch."
+    },
+    {
+      "field": "training_scheme",
+      "value": "two-stage training scheme: 1) train a basic model without relation attendance, and 2) load the reconstruction part of the pre-trained model to learn the whole model (with the same lr_rate)",
+      "normalized_value": "two-stage training scheme: 1) train a basic model without relation attendance, and 2) load the reconstruction part of the pre-trained model to learn the whole model (with the same lr_rate)",
+      "evidence": "Please apply a two-stage training scheme: 1) train a basic model without relation attendance, and 2) load the reconstruction part of the pre-trained model to learn the whole model (with the same lr_rate).",
+      "evidence_location": "line 46, '## Usage' section",
+      "confidence": "high",
+      "reason": "Describes the required training procedure for reproducing results from scratch."
+    },
+    {
+      "field": "result_variance_note",
+      "value": "The results maybe slightly different (+/-0.5%)",
+      "normalized_value": "The results maybe slightly different (+/-0.5%)",
+      "evidence": "The results maybe slightly different (+/-0.5%), For comparison, please follow the results reported in our paper.",
+      "evidence_location": "line 50, '## Usage' section",
+      "confidence": "high",
+      "reason": "Sets expectations for reproduction variance relative to paper results."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{xiao2020visual, title={Visual Relation Grounding in Videos}, author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng}, booktitle={European Conference on Computer Vision}, pages={447--464}, year={2020}, organization={Springer}}",
+      "normalized_value": "@inproceedings{xiao2020visual, title={Visual Relation Grounding in Videos}, author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng}, booktitle={European Conference on Computer Vision}, pages={447--464}, year={2020}, organization={Springer}}",
+      "evidence": "@inproceedings{xiao2020visual,\n  title={Visual Relation Grounding in Videos},\n  author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng},\n  booktitle={European Conference on Computer Vision},\n  pages={447--464},\n  year={2020},\n  organization={Springer}\n}",
+      "evidence_location": "lines 60-69, '## Citation' code block",
+      "confidence": "high",
+      "reason": "BibTeX entry for citing the associated paper."
+    },
+    {
+      "field": "license_holder",
+      "value": "NUS © NExT++",
+      "normalized_value": "NUS © NExT++",
+      "evidence": "NUS © [NExT++](https://nextcenter.org/)",
+      "evidence_location": "line 73, '## License' section",
+      "confidence": "medium",
+      "reason": "States copyright holder (NUS NExT++ center) but does not name a specific license type, so reuse terms are only partially specified."
+    }
+  ]
+}

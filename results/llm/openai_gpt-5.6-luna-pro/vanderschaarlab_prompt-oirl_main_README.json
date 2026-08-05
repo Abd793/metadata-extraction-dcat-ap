@@ -1,0 +1,292 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Prompt-OIRL: Learning to Prompt LLMs with Expert Knowledge (Known Magic Words 🧙)",
+      "normalized_value": "Prompt-OIRL: Learning to Prompt LLMs with Expert Knowledge (Known Magic Words 🧙)",
+      "evidence": "# 🪄 Prompt-OIRL: Learning to Prompt LLMs with Expert Knowledge (Known Magic Words 🧙)",
+      "evidence_location": "1; title",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its named approach."
+    },
+    {
+      "field": "artifact_type",
+      "value": "Implementation and 📒 tutorial for ICLR 2024 paper",
+      "normalized_value": "Implementation and 📒 tutorial for ICLR 2024 paper",
+      "evidence": "### 💻 Implementation and 📒 tutorial for ICLR 2024 paper",
+      "evidence_location": "3; subtitle",
+      "confidence": "high",
+      "reason": "Clarifies that the repository contains implementation and tutorial materials."
+    },
+    {
+      "field": "purpose",
+      "value": "enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization",
+      "normalized_value": "enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization",
+      "evidence": "> In this study, we aim to enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization. We identify a previously overlooked objective of query dependency in such optimization and elucidate two ensuing challenges that impede the successful and economical design of prompt optimization techniques. One primary issue is the absence of an effective method to evaluate prompts during inference when the golden answer is unavailable. Concurrently, learning via interactions with the LLMs to navigate the expansive natural language prompting space proves to be resource-intensive.",
+      "evidence_location": "21; Abstract",
+      "confidence": "high",
+      "reason": "States the concrete problem and intended use of the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2309.06553.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2309.06553.pdf",
+      "evidence": "- [Paper Link](https://arxiv.org/pdf/2309.06553.pdf)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated paper."
+    },
+    {
+      "field": "open_review_url",
+      "value": "https://openreview.net/forum?id=N6o0ZtPzTg",
+      "normalized_value": "https://openreview.net/forum?id=N6o0ZtPzTg",
+      "evidence": "- [Open Review Link](https://openreview.net/forum?id=N6o0ZtPzTg)",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Provides the paper's OpenReview record."
+    },
+    {
+      "field": "method",
+      "value": "offline inverse reinforcement learning",
+      "normalized_value": "offline inverse reinforcement learning",
+      "evidence": "To address this, we introduce Prompt-OIRL, which harnesses offline inverse reinforcement learning to draw insights from offline prompting demonstration data. Such data exists as by-products when diverse prompts are benchmarked on open-accessible datasets. With Prompt-OIRL, the query-dependent prompt optimization objective is achieved by first learning an offline reward model. This model can evaluate any query-prompt pairs without accessing LLMs. Subsequently, a best-of-N strategy is deployed to recommend the optimal prompt. Our experimental evaluations across various LLM scales and arithmetic reasoning datasets underscore both the efficacy and economic viability of the proposed approach.",
+      "evidence_location": "22; Abstract",
+      "confidence": "high",
+      "reason": "Names the central learning method used by Prompt-OIRL."
+    },
+    {
+      "field": "prompt_selection_strategy",
+      "value": "best-of-N strategy",
+      "normalized_value": "best-of-N strategy",
+      "evidence": "To address this, we introduce Prompt-OIRL, which harnesses offline inverse reinforcement learning to draw insights from offline prompting demonstration data. Such data exists as by-products when diverse prompts are benchmarked on open-accessible datasets. With Prompt-OIRL, the query-dependent prompt optimization objective is achieved by first learning an offline reward model. This model can evaluate any query-prompt pairs without accessing LLMs. Subsequently, a best-of-N strategy is deployed to recommend the optimal prompt. Our experimental evaluations across various LLM scales and arithmetic reasoning datasets underscore both the efficacy and economic viability of the proposed approach.",
+      "evidence_location": "22; Abstract",
+      "confidence": "high",
+      "reason": "Specifies how the optimal prompt is selected after reward modeling."
+    },
+    {
+      "field": "offline_prompt_evaluation",
+      "value": "evaluate any query-prompt pairs without accessing LLMs",
+      "normalized_value": "evaluate any query-prompt pairs without accessing LLMs",
+      "evidence": "To address this, we introduce Prompt-OIRL, which harnesses offline inverse reinforcement learning to draw insights from offline prompting demonstration data. Such data exists as by-products when diverse prompts are benchmarked on open-accessible datasets. With Prompt-OIRL, the query-dependent prompt optimization objective is achieved by first learning an offline reward model. This model can evaluate any query-prompt pairs without accessing LLMs. Subsequently, a best-of-N strategy is deployed to recommend the optimal prompt. Our experimental evaluations across various LLM scales and arithmetic reasoning datasets underscore both the efficacy and economic viability of the proposed approach.",
+      "evidence_location": "22; Abstract",
+      "confidence": "high",
+      "reason": "Describes the proxy model's inference-time evaluation capability."
+    },
+    {
+      "field": "benchmark_datasets",
+      "value": "SVAMP, GSM8K, MAWPS",
+      "normalized_value": "SVAMP, GSM8K, MAWPS",
+      "evidence": "2. get access to the datasets: [SVAMP](https://github.com/arkilpatel/SVAMP), [GSM8K](https://huggingface.co/datasets/gsm8k), [MAWPS](https://github.com/sroy9/mawps)",
+      "evidence_location": "39; Preliminaries",
+      "confidence": "high",
+      "reason": "Lists the datasets needed to reproduce the documented results."
+    },
+    {
+      "field": "llama2_license_url",
+      "value": "https://ai.meta.com/llama/",
+      "normalized_value": "https://ai.meta.com/llama/",
+      "evidence": "1. get the [license to use LLaMA-2](https://ai.meta.com/llama/).",
+      "evidence_location": "37; Preliminaries",
+      "confidence": "high",
+      "reason": "Provides the stated licensing access required for LLaMA-2 reproduction."
+    },
+    {
+      "field": "offline_dataset_availability",
+      "value": "released all the interactive logs with those LLMs collected in our experiments.",
+      "normalized_value": "released all the interactive logs with those LLMs collected in our experiments.",
+      "evidence": "This step will take a long time --- typically a few days. To avoid repeating such a computationally expensive (when running LLMs on local machines) or costly (when calling the commercial APIs like GPT3.5 or TigerBot) process, we have **released all the interactive logs with those LLMs collected in our experiments.**. Therefore, if you are just looking to explore the method and don't need to re-create everything from scratch, we recommend that you skip this step,",
+      "evidence_location": "59; Reproduce the Main Results, Step 1",
+      "confidence": "high",
+      "reason": "Indicates that interactive offline data is already available for reuse."
+    },
+    {
+      "field": "repository_clone_command",
+      "value": "git clone git@github.com:holarissun/Prompt-OIRL.git",
+      "normalized_value": "git clone git@github.com:holarissun/Prompt-OIRL.git",
+      "evidence": "git clone git@github.com:holarissun/Prompt-OIRL.git",
+      "evidence_location": "44; Create a Virtual Env",
+      "confidence": "high",
+      "reason": "Provides the command needed to obtain the artifact repository."
+    },
+    {
+      "field": "environment_creation_command",
+      "value": "conda create --name prompt-oirl python==3.10",
+      "normalized_value": "conda create --name prompt-oirl python==3.10",
+      "evidence": "conda create --name prompt-oirl python==3.10",
+      "evidence_location": "48; Create a Virtual Env",
+      "confidence": "high",
+      "reason": "Defines the documented Conda environment name and Python version."
+    },
+    {
+      "field": "environment_activation_command",
+      "value": "conda activate prompt-oirl",
+      "normalized_value": "conda activate prompt-oirl",
+      "evidence": "conda activate prompt-oirl",
+      "evidence_location": "49; Create a Virtual Env",
+      "confidence": "high",
+      "reason": "Specifies how to activate the documented environment."
+    },
+    {
+      "field": "dependency_install_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "54; Create a Virtual Env",
+      "confidence": "high",
+      "reason": "Provides the documented dependency installation step."
+    },
+    {
+      "field": "llama_repository_clone_command",
+      "value": "git clone git@github.com:facebookresearch/llama.git",
+      "normalized_value": "git clone git@github.com:facebookresearch/llama.git",
+      "evidence": "git clone git@github.com:facebookresearch/llama.git",
+      "evidence_location": "64; Reproduce the Main Results, Step 1",
+      "confidence": "high",
+      "reason": "Specifies the additional LLaMA repository needed for offline-data generation."
+    },
+    {
+      "field": "offline_dataset_generation_command",
+      "value": "torchrun --nproc_per_node 1 llama_step1_gen_offline.py \\\n    --ckpt_dir llama-2-7b-chat/ \\\n    --tokenizer_path tokenizer.model \\\n    --max_seq_len 512 --max_batch_size 8 --prompt_idx 0 --dataset_eval gsm8k",
+      "normalized_value": "torchrun --nproc_per_node 1 llama_step1_gen_offline.py \\ --ckpt_dir llama-2-7b-chat/ \\ --tokenizer_path tokenizer.model \\ --max_seq_len 512 --max_batch_size 8 --prompt_idx 0 --dataset_eval gsm8k",
+      "evidence": "torchrun --nproc_per_node 1 llama_step1_gen_offline.py \\\n    --ckpt_dir llama-2-7b-chat/ \\\n    --tokenizer_path tokenizer.model \\\n    --max_seq_len 512 --max_batch_size 8 --prompt_idx 0 --dataset_eval gsm8k",
+      "evidence_location": "72-77; Reproduce the Main Results, Step 1",
+      "confidence": "high",
+      "reason": "Provides the explicit command for generating the offline dataset with LLaMA-2."
+    },
+    {
+      "field": "model_checkpoint",
+      "value": "llama-2-7b-chat/",
+      "normalized_value": "llama-2-7b-chat/",
+      "evidence": "--ckpt_dir llama-2-7b-chat/ \\",
+      "evidence_location": "74; Reproduce the Main Results, Step 1",
+      "confidence": "high",
+      "reason": "Identifies the checkpoint directory used by the documented generation command."
+    },
+    {
+      "field": "offline_dataset_generation_time",
+      "value": "typically a few days",
+      "normalized_value": "typically a few days",
+      "evidence": "This step will take a long time --- typically a few days.",
+      "evidence_location": "59; Reproduce the Main Results, Step 1",
+      "confidence": "high",
+      "reason": "Sets expectations for the optional offline-data generation cost."
+    },
+    {
+      "field": "data_reorganization_command",
+      "value": "python3 llama_step2_reorg_data.py",
+      "normalized_value": "python3 llama_step2_reorg_data.py",
+      "evidence": "python3 llama_step2_reorg_data.py",
+      "evidence_location": "82; Reproduce the Main Results, Step 2",
+      "confidence": "high",
+      "reason": "Provides the command for reorganizing collected offline data."
+    },
+    {
+      "field": "reorganized_data_directory",
+      "value": "LMllama2",
+      "normalized_value": "LMllama2",
+      "evidence": "For the easiest way to run the experiment it is recommended that you start with this step.  This step will take a few seconds to finish, it will do some file renaming and training-test split and save corresponding files to a new folder ```LMllama2```",
+      "evidence_location": "79; Reproduce the Main Results, Step 2",
+      "confidence": "high",
+      "reason": "Identifies the output folder created by the reorganization step."
+    },
+    {
+      "field": "data_preprocessing_command",
+      "value": "python3 llama_step3_data_processing.py",
+      "normalized_value": "python3 llama_step3_data_processing.py",
+      "evidence": "python3 llama_step3_data_processing.py",
+      "evidence_location": "90; Reproduce the Main Results, Step 3",
+      "confidence": "high",
+      "reason": "Provides the command for preprocessing offline data."
+    },
+    {
+      "field": "preprocessed_data_format",
+      "value": ".npy",
+      "normalized_value": ".npy",
+      "evidence": "This step will take a few seconds to finish, it will process the data and store embeddings and labels for different experiment settings (i.e., with different availability of training prompts) with ```.npy``` format files.",
+      "evidence_location": "86; Reproduce the Main Results, Step 3",
+      "confidence": "high",
+      "reason": "Specifies the format of the generated embeddings and labels."
+    },
+    {
+      "field": "task_selection_instruction",
+      "value": "please make sure that you select the relevant task by updating the code (the line marked with `NOTE`) in this and the following 2 steps.",
+      "normalized_value": "please make sure that you select the relevant task by updating the code (the line marked with `NOTE`) in this and the following 2 steps.",
+      "evidence": "Note: please make sure that you select the relevant task by updating the code (the line marked with `NOTE`) in this and the following 2 steps.",
+      "evidence_location": "88; Reproduce the Main Results, Step 3",
+      "confidence": "high",
+      "reason": "Documents a required configuration change affecting the remaining processing steps."
+    },
+    {
+      "field": "offline_evaluation_command",
+      "value": "python3 llama_step4_offline_evaluation.py",
+      "normalized_value": "python3 llama_step4_offline_evaluation.py",
+      "evidence": "python3 llama_step4_offline_evaluation.py",
+      "evidence_location": "95; Reproduce the Main Results, Step 4",
+      "confidence": "high",
+      "reason": "Provides the command for proxy reward model learning and offline prompt evaluation."
+    },
+    {
+      "field": "reward_model_algorithms",
+      "value": "XGBoost reward model; LightGBM reward model",
+      "normalized_value": "XGBoost reward model; LightGBM reward model",
+      "evidence": "This step will take a few minutes to a few hours to finish, depending on the algorithms chosen and the processor. In general, training an XGBoost reward model will take a bit longer time, and using a LightGBM reward model can be faster.",
+      "evidence_location": "93; Reproduce the Main Results, Step 4",
+      "confidence": "high",
+      "reason": "Lists the documented reward-model algorithm choices."
+    },
+    {
+      "field": "offline_evaluation_runtime",
+      "value": "a few minutes to a few hours",
+      "normalized_value": "a few minutes to a few hours",
+      "evidence": "This step will take a few minutes to a few hours to finish, depending on the algorithms chosen and the processor.",
+      "evidence_location": "93; Reproduce the Main Results, Step 4",
+      "confidence": "high",
+      "reason": "Provides a practical runtime expectation for offline evaluation."
+    },
+    {
+      "field": "embedding_file_requirement",
+      "value": "you will need to download a missing embedding file from [this link](https://drive.google.com/file/d/1ER50FoLInO1pTr50dDjjZMBGPX-pXVA1/view?usp=sharing) and place it in the `embeddings` directory to run this step. (oversized for Github, ~ 230Mb)",
+      "normalized_value": "you will need to download a missing embedding file from [this link](https://drive.google.com/file/d/1ER50FoLInO1pTr50dDjjZMBGPX-pXVA1/view?usp=sharing) and place it in the `embeddings` directory to run this step. (oversized for Github, ~ 230Mb)",
+      "evidence": "- Note: you will need to download a missing embedding file from [this link](https://drive.google.com/file/d/1ER50FoLInO1pTr50dDjjZMBGPX-pXVA1/view?usp=sharing) and place it in the `embeddings` directory to run this step. (oversized for Github, ~ 230Mb)",
+      "evidence_location": "97; Reproduce the Main Results, Step 4",
+      "confidence": "high",
+      "reason": "Identifies a required external artifact, its destination, download location, and approximate size."
+    },
+    {
+      "field": "prompt_optimization_command",
+      "value": "python3 llama_step5_offline_optimization.py",
+      "normalized_value": "python3 llama_step5_offline_optimization.py",
+      "evidence": "python3 llama_step5_offline_optimization.py",
+      "evidence_location": "102; Reproduce the Main Results, Step 5",
+      "confidence": "high",
+      "reason": "Provides the command for offline prompt optimization."
+    },
+    {
+      "field": "optimization_output_format",
+      "value": ".csv",
+      "normalized_value": ".csv",
+      "evidence": "This step will take a few minutes to finish. Evaluating the algorithms by interacting with the LLMs can also be an option but could be slower. Results under different settings will be all saved to ```.csv``` files",
+      "evidence_location": "100; Reproduce the Main Results, Step 5",
+      "confidence": "high",
+      "reason": "Specifies the format used to save results under different settings."
+    },
+    {
+      "field": "related_paper_url",
+      "value": "https://arxiv.org/pdf/2310.06147.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2310.06147.pdf",
+      "evidence": "[RL in the Era of LLMs: What is Essential? What is Needed? RLHF, Prompting, and Beyond.](https://arxiv.org/pdf/2310.06147.pdf)",
+      "evidence_location": "109; A Related Discussion on RLHF",
+      "confidence": "high",
+      "reason": "Links to the related positioning paper discussed by the artifact."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{sun2023query,\n  title={Query-Dependent Prompt Evaluation and Optimization with Offline Inverse RL},\n  author={Sun, Hao and H{\\\"u}y{\\\"u}k, Alihan and van der Schaar, Mihaela},\n  booktitle={The Twelfth International Conference on Learning Representations},\n  year={2024}\n}",
+      "normalized_value": "@inproceedings{sun2023query, title={Query-Dependent Prompt Evaluation and Optimization with Offline Inverse RL}, author={Sun, Hao and H{\\\"u}y{\\\"u}k, Alihan and van der Schaar, Mihaela}, booktitle={The Twelfth International Conference on Learning Representations}, year={2024} }",
+      "evidence": "@inproceedings{sun2023query,\n  title={Query-Dependent Prompt Evaluation and Optimization with Offline Inverse RL},\n  author={Sun, Hao and H{\\\"u}y{\\\"u}k, Alihan and van der Schaar, Mihaela},\n  booktitle={The Twelfth International Conference on Learning Representations},\n  year={2024}\n}",
+      "evidence_location": "118-123; BibTex Citation",
+      "confidence": "high",
+      "reason": "Provides reusable BibTeX attribution for the code or paper."
+    }
+  ]
+}

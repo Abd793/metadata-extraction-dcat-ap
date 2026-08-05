@@ -1,0 +1,427 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Indexes for RDF data",
+      "normalized_value": "Indexes for RDF data",
+      "evidence": "Indexes for RDF data",
+      "evidence_location": "1-2; title",
+      "confidence": "high",
+      "reason": "Names the artifact."
+    },
+    {
+      "field": "artifact_description",
+      "value": "This is the C++ library used for the experiments in the paper [*Compressed Indexes for Fast Search of Semantic Data*](http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf) [1], by Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini.",
+      "normalized_value": "This is the C++ library used for the experiments in the paper [*Compressed Indexes for Fast Search of Semantic Data*](http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf) [1], by Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini",
+      "evidence": "This is the C++ library used for the experiments in the paper [*Compressed Indexes for Fast Search of Semantic Data*](http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf) [1], by Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini.",
+      "evidence_location": "4; introduction",
+      "confidence": "high",
+      "reason": "States the artifact's purpose and relationship to the research paper."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/jermp/rdf_indexes.git",
+      "normalized_value": "https://github.com/jermp/rdf_indexes.git",
+      "evidence": "git clone --recursive https://github.com/jermp/rdf_indexes.git",
+      "evidence_location": "25-27; Compiling the code",
+      "confidence": "high",
+      "reason": "Provides the repository cloning URL."
+    },
+    {
+      "field": "paper_url",
+      "value": "http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf",
+      "normalized_value": "http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf",
+      "evidence": "[*Compressed Indexes for Fast Search of Semantic Data*](http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf)",
+      "evidence_location": "4; introduction",
+      "confidence": "high",
+      "reason": "Provides direct access to the paper associated with the artifact."
+    },
+    {
+      "field": "programming_language",
+      "value": "C++",
+      "normalized_value": "C++",
+      "evidence": "This is the C++ library used for the experiments",
+      "evidence_location": "4; introduction",
+      "confidence": "high",
+      "reason": "Explicitly identifies the library's implementation language."
+    },
+    {
+      "field": "tested_environment",
+      "value": "The code is tested on Linux with `gcc` 7.3.0, 8.3.0, 9.2.0 and on Mac 10.14 with `clang` 10.0.0.",
+      "normalized_value": "The code is tested on Linux with `gcc` 7.3.0, 8.3.0, 9.2.0 and on Mac 10.14 with `clang` 10.0.0",
+      "evidence": "The code is tested on Linux with `gcc` 7.3.0, 8.3.0, 9.2.0 and on Mac 10.14 with `clang` 10.0.0.",
+      "evidence_location": "22; Compiling the code",
+      "confidence": "high",
+      "reason": "Lists the operating systems, compiler implementations, and tested versions."
+    },
+    {
+      "field": "build_system",
+      "value": "CMake",
+      "normalized_value": "CMake",
+      "evidence": "`CMake` is required to build the code.",
+      "evidence_location": "23; Compiling the code",
+      "confidence": "high",
+      "reason": "Identifies the required build system."
+    },
+    {
+      "field": "clone_command",
+      "value": "git clone --recursive https://github.com/jermp/rdf_indexes.git",
+      "normalized_value": "git clone --recursive https://github.com/jermp/rdf_indexes.git",
+      "evidence": "git clone --recursive https://github.com/jermp/rdf_indexes.git",
+      "evidence_location": "25-27; Compiling the code",
+      "confidence": "high",
+      "reason": "Provides the recommended repository checkout command including submodules."
+    },
+    {
+      "field": "submodule_setup_commands",
+      "value": "git submodule init\ngit submodule update",
+      "normalized_value": "git submodule init git submodule update",
+      "evidence": "    git submodule init\n    git submodule update",
+      "evidence_location": "29-33; Compiling the code",
+      "confidence": "high",
+      "reason": "Defines the fallback setup when the repository was cloned without recursive submodules."
+    },
+    {
+      "field": "release_build_commands",
+      "value": "mkdir build\ncd build\ncmake ..\nmake -j",
+      "normalized_value": "mkdir build cd build cmake .. make -j",
+      "evidence": "    mkdir build\n    cd build\n    cmake ..\n    make -j",
+      "evidence_location": "35-40; Compiling the code",
+      "confidence": "high",
+      "reason": "Provides the reproducible release build procedure."
+    },
+    {
+      "field": "debug_build_commands",
+      "value": "mkdir debug_build\ncd debug_build\ncmake .. -DCMAKE_BUILD_TYPE=Debug -DUSE_SANITIZERS=On\nmake -j",
+      "normalized_value": "mkdir debug_build cd debug_build cmake .. -DCMAKE_BUILD_TYPE=Debug -DUSE_SANITIZERS=On make -j",
+      "evidence": "    mkdir debug_build\n    cd debug_build\n    cmake .. -DCMAKE_BUILD_TYPE=Debug -DUSE_SANITIZERS=On\n    make -j",
+      "evidence_location": "42-47; Compiling the code",
+      "confidence": "high",
+      "reason": "Provides the reproducible debug and sanitizer-enabled build procedure."
+    },
+    {
+      "field": "input_data_type",
+      "value": "integer triples",
+      "normalized_value": "integer triples",
+      "evidence": "The library works exclusively with integer triples,",
+      "evidence_location": "54-56; Input data format",
+      "confidence": "high",
+      "reason": "Defines the required input representation."
+    },
+    {
+      "field": "input_mapping_requirement",
+      "value": "RDF triples have been mapped to integer identifiers and sorted in different permutations of the subject (S), predicate (P) and object (O) components",
+      "normalized_value": "RDF triples have been mapped to integer identifiers and sorted in different permutations of the subject (S), predicate (P) and object (O) components",
+      "evidence": "We assume the RDF triples have been mapped to integer identifiers\nand sorted in different permutations of\nthe subject (S), predicate (P) and object (O)\ncomponents.",
+      "evidence_location": "57-60; Input data format",
+      "confidence": "high",
+      "reason": "Explains how RDF data must be transformed before indexing and querying."
+    },
+    {
+      "field": "required_permutations",
+      "value": "SPO, POS and OSP. Also the permutation OPS may\nbe needed to build some types of indexes.",
+      "normalized_value": "SPO, POS and OSP. Also the permutation OPS may be needed to build some types of indexes.",
+      "evidence": "SPO, POS and OSP. Also the permutation OPS may\nbe needed to build some types of indexes.",
+      "evidence_location": "62-64; Input data format",
+      "confidence": "high",
+      "reason": "Specifies the permutations needed to build indexes."
+    },
+    {
+      "field": "permutation_file_format",
+      "value": "Each permutation is represented by a separate file in plain format, having an integer triple per line with integers separated by whitespaces.",
+      "normalized_value": "Each permutation is represented by a separate file in plain format, having an integer triple per line with integers separated by whitespaces",
+      "evidence": "Each permutation is represented by a separate\nfile in plain format, having an integer triple\nper line with integers separated by whitespaces.",
+      "evidence_location": "65-67; Input data format",
+      "confidence": "high",
+      "reason": "Defines the on-disk format for permutation files."
+    },
+    {
+      "field": "required_data_files",
+      "value": "RDF_dataset.spo, RDF_dataset.pos, RDF_dataset.osp, RDF_dataset.ops",
+      "normalized_value": "RDF_dataset.spo, RDF_dataset.pos, RDF_dataset.osp, RDF_dataset.ops",
+      "evidence": "-  `RDF_dataset.spo`\n-  `RDF_dataset.pos`\n-  `RDF_dataset.osp`\n-  `RDF_dataset.ops`",
+      "evidence_location": "68-74; Input data format",
+      "confidence": "high",
+      "reason": "Shows the expected permutation filenames for a dataset basename."
+    },
+    {
+      "field": "statistics_file",
+      "value": "RDF_dataset.stats",
+      "normalized_value": "RDF_dataset.stats",
+      "evidence": "named `RDF_dataset.stats`.",
+      "evidence_location": "76-79; Input data format",
+      "confidence": "high",
+      "reason": "Identifies the required statistics filename."
+    },
+    {
+      "field": "statistics_file_format",
+      "value": "plain format and contains 7 integers, one per line",
+      "normalized_value": "plain format and contains 7 integers, one per line",
+      "evidence": "Also this file is in\nplain format and contains 7 integers, one per line:",
+      "evidence_location": "76-79; Input data format",
+      "confidence": "high",
+      "reason": "Defines the serialization format of the statistics file."
+    },
+    {
+      "field": "statistics_fields",
+      "value": "1. total number of triples\n2. distinct subjects\n3. distinct predicates\n4. distinct objects\n5. distinct S-P pairs\n6. distinct P-O pairs\n7. distinct O-S pairs",
+      "normalized_value": "1. total number of triples 2. distinct subjects 3. distinct predicates 4. distinct objects 5. distinct S-P pairs 6. distinct P-O pairs 7. distinct O-S pairs",
+      "evidence": "1. total number of triples\n2. distinct subjects\n3. distinct predicates\n4. distinct objects\n5. distinct S-P pairs\n6. distinct P-O pairs\n7. distinct O-S pairs",
+      "evidence_location": "81-87; Input data format",
+      "confidence": "high",
+      "reason": "Lists the exact seven values required in the statistics file."
+    },
+    {
+      "field": "source_data_format",
+      "value": "standard N-Triples format,\nadditionally compressed via gzip",
+      "normalized_value": "standard N-Triples format, additionally compressed via gzip",
+      "evidence": "Assume we have an RDF dataset in standard N-Triples format,\nadditionally compressed via gzip.",
+      "evidence_location": "99-100; Preparing the data for indexing",
+      "confidence": "high",
+      "reason": "Identifies the source dataset format used by the preparation workflow."
+    },
+    {
+      "field": "preparation_script_language",
+      "value": "python3",
+      "normalized_value": "python3",
+      "evidence": "The folder `scripts` contains all the python3 scripts needed to prepare the datasets for indexing.",
+      "evidence_location": "97; Preparing the data for indexing",
+      "confidence": "high",
+      "reason": "Identifies the language/runtime of the dataset preparation scripts."
+    },
+    {
+      "field": "preparation_dependencies",
+      "value": "mmh3 and numpy",
+      "normalized_value": "mmh3 and numpy",
+      "evidence": "**NOTE** - The scripts require the modules `mmh3` and `numpy` that can be easily\ninstalled with `pip3 install mmh3 numpy`.",
+      "evidence_location": "110-111; Preparing the data for indexing",
+      "confidence": "high",
+      "reason": "Lists the Python modules required by the preparation scripts."
+    },
+    {
+      "field": "dependency_install_command",
+      "value": "pip3 install mmh3 numpy",
+      "normalized_value": "pip3 install mmh3 numpy",
+      "evidence": "pip3 install mmh3 numpy",
+      "evidence_location": "110-111; Preparing the data for indexing",
+      "confidence": "high",
+      "reason": "Provides the dependency installation command."
+    },
+    {
+      "field": "preparation_working_directory",
+      "value": "scripts folder",
+      "normalized_value": "scripts folder",
+      "evidence": "from within the `scripts` folder.",
+      "evidence_location": "107-108; Preparing the data for indexing",
+      "confidence": "high",
+      "reason": "Specifies where the preparation commands should be run."
+    },
+    {
+      "field": "preparation_command",
+      "value": "bash process.sh ../test_data/wordnet31.gz",
+      "normalized_value": "bash process.sh ../test_data/wordnet31.gz",
+      "evidence": "bash process.sh ../test_data/wordnet31.gz",
+      "evidence_location": "139-144; Preparing the data for indexing",
+      "confidence": "high",
+      "reason": "Provides the convenience command that summarizes the full dataset preparation workflow."
+    },
+    {
+      "field": "index_build_command",
+      "value": "./build <type> <collection_basename> [-o output_filename]",
+      "normalized_value": "./build <type> <collection_basename> [-o output_filename]",
+      "evidence": "./build <type> <collection_basename> [-o output_filename]",
+      "evidence_location": "149-153; Building an index",
+      "confidence": "high",
+      "reason": "Defines the executable syntax for building an index."
+    },
+    {
+      "field": "example_index_build_command",
+      "value": "./build pef_3t ../test_data/wordnet31.mapped.sorted -o wordnet31.pef_3t.bin",
+      "normalized_value": "./build pef_3t ../test_data/wordnet31.mapped.sorted -o wordnet31.pef_3t.bin",
+      "evidence": "./build pef_3t ../test_data/wordnet31.mapped.sorted -o wordnet31.pef_3t.bin",
+      "evidence_location": "155-161; Building an index",
+      "confidence": "high",
+      "reason": "Provides a concrete reproducible index-building example and output filename."
+    },
+    {
+      "field": "compression_method",
+      "value": "partitioned Elias-Fano (PEF)",
+      "normalized_value": "partitioned Elias-Fano (PEF)",
+      "evidence": "compressed\nwith partitioned Elias-Fano (PEF)",
+      "evidence_location": "159-160; Building an index",
+      "confidence": "high",
+      "reason": "Identifies the compression method used by the example index type."
+    },
+    {
+      "field": "supported_index_type",
+      "value": "compact_3t",
+      "normalized_value": "compact_3t",
+      "evidence": "`compact_3t`",
+      "evidence_location": "164-165; Building an index",
+      "confidence": "high",
+      "reason": "Names one supported index type."
+    },
+    {
+      "field": "supported_index_type",
+      "value": "ef_3t",
+      "normalized_value": "ef_3t",
+      "evidence": "`ef_3t`",
+      "evidence_location": "164-166; Building an index",
+      "confidence": "high",
+      "reason": "Names one supported index type."
+    },
+    {
+      "field": "supported_index_type",
+      "value": "vb_3t",
+      "normalized_value": "vb_3t",
+      "evidence": "`vb_3t`",
+      "evidence_location": "164-167; Building an index",
+      "confidence": "high",
+      "reason": "Names one supported index type."
+    },
+    {
+      "field": "supported_index_type",
+      "value": "pef_3t",
+      "normalized_value": "pef_3t",
+      "evidence": "`pef_3t`",
+      "evidence_location": "164-168; Building an index",
+      "confidence": "high",
+      "reason": "Names one supported index type."
+    },
+    {
+      "field": "supported_index_type",
+      "value": "pef_r_3t",
+      "normalized_value": "pef_r_3t",
+      "evidence": "`pef_r_3t`",
+      "evidence_location": "164-169; Building an index",
+      "confidence": "high",
+      "reason": "Names one supported index type."
+    },
+    {
+      "field": "supported_index_type",
+      "value": "pef_2to",
+      "normalized_value": "pef_2to",
+      "evidence": "`pef_2to`",
+      "evidence_location": "164-170; Building an index",
+      "confidence": "high",
+      "reason": "Names one supported index type."
+    },
+    {
+      "field": "supported_index_type",
+      "value": "pef_2tp",
+      "normalized_value": "pef_2tp",
+      "evidence": "`pef_2tp`",
+      "evidence_location": "164-171; Building an index",
+      "confidence": "high",
+      "reason": "Names one supported index type."
+    },
+    {
+      "field": "query_pattern",
+      "value": "an ordinary integer triple with *k* wildcard symbols, for 0 ≤ *k* ≤ 3",
+      "normalized_value": "an ordinary integer triple with *k* wildcard symbols, for 0 ≤ *k* ≤ 3",
+      "evidence": "A triple selection pattern is just an ordinary integer triple\nwith *k* wildcard symbols, for 0 ≤ *k* ≤ 3.",
+      "evidence_location": "175-176; Querying an index",
+      "confidence": "high",
+      "reason": "Defines the query pattern and the allowed number of wildcards."
+    },
+    {
+      "field": "wildcard_symbol",
+      "value": "-1",
+      "normalized_value": "-1",
+      "evidence": "In the library, a wildcard is represented by the integer -1.",
+      "evidence_location": "177; Querying an index",
+      "confidence": "high",
+      "reason": "Identifies the concrete wildcard encoding used in query triples."
+    },
+    {
+      "field": "query_command",
+      "value": "./queries <type> <perm> <index_filename> [-q <query_filename> -n <num_queries> -w <num_wildcards>]",
+      "normalized_value": "./queries <type> <perm> <index_filename> [-q <query_filename> -n <num_queries> -w <num_wildcards>]",
+      "evidence": "./queries <type> <perm> <index_filename> [-q <query_filename> -n <num_queries> -w <num_wildcards>]",
+      "evidence_location": "196-198; Querying an index",
+      "confidence": "high",
+      "reason": "Defines the executable syntax for querying an index."
+    },
+    {
+      "field": "query_permutation_mapping",
+      "value": "We use the convention that `perm = 1` specifies SPO, `perm = 2` specifies POS and `perm = 3` specifies OSP.",
+      "normalized_value": "We use the convention that `perm = 1` specifies SPO, `perm = 2` specifies POS and `perm = 3` specifies OSP",
+      "evidence": "We use the convention that `perm = 1` specifies SPO, `perm = 2` specifies POS and `perm = 3` specifies OSP.",
+      "evidence_location": "200-203; Querying an index",
+      "confidence": "high",
+      "reason": "Maps query permutation argument values to RDF component orders."
+    },
+    {
+      "field": "query_example_command",
+      "value": "./queries pef_3t 1 wordnet31.pef_3t.bin -q ../test_data/wordnet31.mapped.unsorted.queries.5000 -n 5000 -w 1",
+      "normalized_value": "./queries pef_3t 1 wordnet31.pef_3t.bin -q ../test_data/wordnet31.mapped.unsorted.queries.5000 -n 5000 -w 1",
+      "evidence": "./queries pef_3t 1 wordnet31.pef_3t.bin -q ../test_data/wordnet31.mapped.unsorted.queries.5000 -n 5000 -w 1",
+      "evidence_location": "216-220; Querying an index",
+      "confidence": "high",
+      "reason": "Provides a concrete query invocation."
+    },
+    {
+      "field": "query_example_behavior",
+      "value": "5000 SP? queries",
+      "normalized_value": "5000 SP? queries",
+      "evidence": "will execute 5000 SP? queries.",
+      "evidence_location": "218-220; Querying an index",
+      "confidence": "high",
+      "reason": "States the query pattern and query count produced by the example."
+    },
+    {
+      "field": "statistics_command",
+      "value": "./statistics <type> <index_filename>",
+      "normalized_value": "./statistics <type> <index_filename>",
+      "evidence": "./statistics <type> <index_filename>",
+      "evidence_location": "225-228; Statistics",
+      "confidence": "high",
+      "reason": "Defines the command for inspecting index statistics."
+    },
+    {
+      "field": "testing_command",
+      "value": "python ../test/check_everything.py ../test_data/wordnet31.mapped.sorted . wordnet",
+      "normalized_value": "python ../test/check_everything.py ../test_data/wordnet31.mapped.sorted . wordnet",
+      "evidence": "python ../test/check_everything.py ../test_data/wordnet31.mapped.sorted . wordnet",
+      "evidence_location": "237-240; Testing",
+      "confidence": "high",
+      "reason": "Provides the documented exhaustive test command."
+    },
+    {
+      "field": "testing_scope",
+      "value": "This script will check every triple selection pattern for all the different types of indexes.",
+      "normalized_value": "This script will check every triple selection pattern for all the different types of indexes",
+      "evidence": "This script will check every triple selection pattern\nfor all the different types of indexes.",
+      "evidence_location": "242-243; Testing",
+      "confidence": "high",
+      "reason": "Describes the coverage of the testing procedure."
+    },
+    {
+      "field": "custom_encoder_interface",
+      "value": "```C++\nstruct iterator;\nvoid build(compact_vector::builder const& from,\n           compact_vector::builder const& pointers);\ninline uint64_t access(uint64_t pos) const;\ninline uint64_t access(range const& r, uint64_t pos);\niterator begin() const;\niterator end() const;\niterator at(range const& r, uint64_t pos) const;\nuint64_t find(range const& r, uint64_t id);\nuint64_t size() const;\nsize_t bytes() const;\nvoid save(std::ostream& os) const;\nvoid load(std::istream& is);\n```",
+      "normalized_value": "```C++ struct iterator; void build(compact_vector::builder const& from, compact_vector::builder const& pointers); inline uint64_t access(uint64_t pos) const; inline uint64_t access(range const& r, uint64_t pos); iterator begin() const; iterator end() const; iterator at(range const& r, uint64_t pos) const; uint64_t find(range const& r, uint64_t id); uint64_t size() const; size_t bytes() const; void save(std::ostream& os) const; void load(std::istream& is); ```",
+      "evidence": "```C++\nstruct iterator;\nvoid build(compact_vector::builder const& from,\n           compact_vector::builder const& pointers);\ninline uint64_t access(uint64_t pos) const;\ninline uint64_t access(range const& r, uint64_t pos);\niterator begin() const;\niterator end() const;\niterator at(range const& r, uint64_t pos) const;\nuint64_t find(range const& r, uint64_t id);\nuint64_t size() const;\nsize_t bytes() const;\nvoid save(std::ostream& os) const;\nvoid load(std::istream& is);\n```",
+      "evidence_location": "250-268; Extending the software",
+      "confidence": "high",
+      "reason": "Specifies the interface required for a custom integer-sequence encoder."
+    },
+    {
+      "field": "repository_author",
+      "value": "Giulio Ermanno Pibiri",
+      "normalized_value": "Giulio Ermanno Pibiri",
+      "evidence": "* [Giulio Ermanno Pibiri](http://pages.di.unipi.it/pibiri/), <giulio.ermanno.pibiri@isti.cnr.it>",
+      "evidence_location": "271-273; Authors",
+      "confidence": "high",
+      "reason": "Identifies the listed author and provides an author contact."
+    },
+    {
+      "field": "citation",
+      "value": "* [1] Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini. *Compressed Indexes for Fast Search of Semantic Data*. 2020. IEEE Transactions on Knowledge and Data Engineering (TKDE). 12 pages.",
+      "normalized_value": "* [1] Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini. *Compressed Indexes for Fast Search of Semantic Data*. 2020. IEEE Transactions on Knowledge and Data Engineering (TKDE). 12 pages",
+      "evidence": "* [1] Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini. *Compressed Indexes for Fast Search of Semantic Data*. 2020. IEEE Transactions on Knowledge and Data Engineering (TKDE). 12 pages.",
+      "evidence_location": "276-278; References",
+      "confidence": "high",
+      "reason": "Provides the bibliographic citation for the associated research paper."
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Approaching an unknown communication system by latent space exploration and causal inference",
+      "normalized_value": "Approaching an unknown communication system by latent space exploration and causal inference",
+      "evidence": "# Approaching an unknown communication system by latent space exploration and causal inference",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Primary title/name of the artifact"
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/andleb/Approaching-an-unknown-communication-system",
+      "normalized_value": "https://github.com/andleb/Approaching-an-unknown-communication-system",
+      "evidence": "[This repository](https://github.com/andleb/Approaching-an-unknown-communication-system)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Primary repository location for the artifact"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2303.10931",
+      "normalized_value": "https://arxiv.org/abs/2303.10931",
+      "evidence": "[the paper (preprint)](https://arxiv.org/abs/2303.10931)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Link to associated research paper"
+    },
+    {
+      "field": "purpose_description",
+      "value": "uses generative models to help determine the meaningful building blocks of sperm whale communication",
+      "normalized_value": "uses generative models to help determine the meaningful building blocks of sperm whale communication",
+      "evidence": "uses generative models to help determine the meaningful building blocks of sperm whale communication",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Clear statement of the artifact's purpose and application domain"
+    },
+    {
+      "field": "method_name",
+      "value": "causal disentanglement with extreme values (CDEV)",
+      "normalized_value": "causal disentanglement with extreme values (CDEV)",
+      "evidence": "causal disentanglement with extreme values (CDEV)",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Names the specific methodology used in the research"
+    },
+    {
+      "field": "model_architecture",
+      "value": "fiwGAN",
+      "normalized_value": "fiwGAN",
+      "evidence": "The `fiwGAN` architecture implementation in `pytorch`",
+      "evidence_location": "21-23",
+      "confidence": "high",
+      "reason": "Specifies the generative model architecture used"
+    },
+    {
+      "field": "framework",
+      "value": "pytorch",
+      "normalized_value": "pytorch",
+      "evidence": "The `fiwGAN` architecture implementation in `pytorch`",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Specifies the deep learning framework used"
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "16-18",
+      "confidence": "high",
+      "reason": "Command for installing dependencies"
+    },
+    {
+      "field": "training_command",
+      "value": "python train.py --fiw --num_categ 5 --datadir training_directory --logdir log_directory --num_epochs 15000 --slice_len 65536",
+      "normalized_value": "python train.py --fiw --num_categ 5 --datadir training_directory --logdir log_directory --num_epochs 15000 --slice_len 65536",
+      "evidence": "python train.py --fiw --num_categ 5 --datadir training_directory --logdir log_directory\\\n--num_epochs 15000 --slice_len 65536",
+      "evidence_location": "27-30",
+      "confidence": "high",
+      "reason": "Command with hyperparameters for model training"
+    },
+    {
+      "field": "training_data_description",
+      "value": "2209 coda samples of less than 2s in length, encoded in 32 kHZ mono wav format",
+      "normalized_value": "2209 coda samples of less than 2s in length, encoded in 32 kHZ mono wav format",
+      "evidence": "The training data thus consisted of 2209 *coda* samples of less than 2s in length, encoded in 32 kHZ mono `wav` format.",
+      "evidence_location": "40",
+      "confidence": "high",
+      "reason": "Describes the training dataset characteristics"
+    },
+    {
+      "field": "model_checkpoint_url",
+      "value": "https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/model/model.pt",
+      "normalized_value": "https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/model/model.pt",
+      "evidence": "[here](https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/model/model.pt)",
+      "evidence_location": "46-47",
+      "confidence": "high",
+      "reason": "URL to download the main trained model"
+    },
+    {
+      "field": "replication_model_url",
+      "value": "https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/replication_model/model-6cat.pt",
+      "normalized_value": "https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/replication_model/model-6cat.pt",
+      "evidence": "[here](https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/replication_model/model-6cat.pt)",
+      "evidence_location": "49",
+      "confidence": "high",
+      "reason": "URL to download the replication model for robustness checks"
+    },
+    {
+      "field": "model_loading_code",
+      "value": "import torch\nfrom infowavegan import WaveGANGenerator\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n\nG = WaveGANGenerator(slice_len=2**16)\nG.load_state_dict(torch.load(\"model.pt\", map_location=device))\nG.to(device)",
+      "normalized_value": "import torch\nfrom infowavegan import WaveGANGenerator\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n\nG = WaveGANGenerator(slice_len=2**16)\nG.load_state_dict(torch.load(\"model.pt\", map_location=device))\nG.to(device)",
+      "evidence": "import torch\nfrom infowavegan import WaveGANGenerator\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n\nG = WaveGANGenerator(slice_len=2**16)\nG.load_state_dict(torch.load(\"model.pt\", map_location=device))\nG.to(device)",
+      "evidence_location": "54-63",
+      "confidence": "high",
+      "reason": "Code snippet for loading the trained model"
+    },
+    {
+      "field": "training_hardware",
+      "value": "single Nvidia 1080Ti (11 GB GPU memory) on a cluster-based instance running on Intel Xeon E5-2623",
+      "normalized_value": "single Nvidia 1080Ti (11 GB GPU memory) on a cluster-based instance running on Intel Xeon E5-2623",
+      "evidence": "The model was trained across approximately 3 days on a single Nvidia 1080Ti (11 GB GPU memory) on a cluster-based instance running on Intel Xeon E5-2623.",
+      "evidence_location": "68",
+      "confidence": "high",
+      "reason": "Hardware specifications used for model training"
+    },
+    {
+      "field": "training_time",
+      "value": "approximately 3 days",
+      "normalized_value": "approximately 3 days",
+      "evidence": "The model was trained across approximately 3 days",
+      "evidence_location": "68",
+      "confidence": "high",
+      "reason": "Time required for model training"
+    },
+    {
+      "field": "analysis_hardware",
+      "value": "four Nvidia T4 GPUs on an g4dn.12xlarge AWS instance",
+      "normalized_value": "four Nvidia T4 GPUs on an g4dn.12xlarge AWS instance",
+      "evidence": "The data generation and calculation of the quantities of interest was done in parallel on four Nvidia T4 GPUs\non an `g4dn.12xlarge` AWS instance",
+      "evidence_location": "120-121",
+      "confidence": "high",
+      "reason": "Hardware used for data generation and analysis"
+    },
+    {
+      "field": "analysis_time",
+      "value": "about a day for each of the two outcome types presented: click number and spacing, and audio properties",
+      "normalized_value": "about a day for each of the two outcome types presented: click number and spacing, and audio properties",
+      "evidence": "taking about a day for each of the two outcome types presented: click number and spacing,\nand audio properties.",
+      "evidence_location": "121-122",
+      "confidence": "high",
+      "reason": "Time required for data generation and analysis"
+    },
+    {
+      "field": "analysis_scripts",
+      "value": "dataGenClick.py, dataGenAudio.py",
+      "normalized_value": "dataGenClick.py, dataGenAudio.py",
+      "evidence": "running the [dataGenClick](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/dataGenClick.py)\nscript\n\nby running the [dataGenAudio](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/dataGenAudio.py)\nscript",
+      "evidence_location": "86-93",
+      "confidence": "high",
+      "reason": "Scripts used for generating analysis data"
+    },
+    {
+      "field": "analysis_notebooks",
+      "value": "nClicks.ipynb, ICI.ipynb, acoustic.ipynb, robustness.ipynb",
+      "normalized_value": "nClicks.ipynb, ICI.ipynb, acoustic.ipynb, robustness.ipynb",
+      "evidence": "- [nClicks.ipynb](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/nClicks.ipynb)\n\n- [ICI.ipynb](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/ICI.ipynb)\n\n- [acoustic.ipynb](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/acoustic.ipynb)\n\nA quick replication of the number of clicks encoding result using an independently trained model with a different number\nof specified encodings is provided in `robustness.ipynb`.",
+      "evidence_location": "101-115",
+      "confidence": "high",
+      "reason": "Jupyter notebooks for reproducing analysis results"
+    },
+    {
+      "field": "citation_file",
+      "value": "CITATION.cff",
+      "normalized_value": "CITATION.cff",
+      "evidence": "please refer to the [citation file](https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/CITATION.cff)",
+      "evidence_location": "128",
+      "confidence": "high",
+      "reason": "File containing citation information"
+    },
+    {
+      "field": "license",
+      "value": "BSD 3-Clause License",
+      "normalized_value": "BSD 3-Clause License",
+      "evidence": "All content in this repository is licensed under the [BSD 3-Clause License](LICENSE).",
+      "evidence_location": "133",
+      "confidence": "high",
+      "reason": "License information for reuse"
+    }
+  ]
+}

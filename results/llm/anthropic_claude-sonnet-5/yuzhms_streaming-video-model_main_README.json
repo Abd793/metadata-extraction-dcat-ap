@@ -1,0 +1,220 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Streaming Video Model",
+      "normalized_value": "Streaming Video Model",
+      "evidence": "# Streaming Video Model",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Title of the artifact as given in the README header"
+    },
+    {
+      "field": "authors",
+      "value": "Yucheng Zhao, Chong Luo, Chuanxin Tang, Dongdong Chen, Noel Codella, Zheng-Jun Zha",
+      "normalized_value": "Yucheng Zhao, Chong Luo, Chuanxin Tang, Dongdong Chen, Noel Codella, Zheng-Jun Zha",
+      "evidence": "> Yucheng Zhao, Chong Luo, Chuanxin Tang, Dongdong Chen, Noel Codella, Zheng-Jun Zha <br>",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Names the authors of the work associated with this artifact"
+    },
+    {
+      "field": "publication_venue",
+      "value": "CVPR 2023",
+      "normalized_value": "CVPR 2023",
+      "evidence": "> *CVPR 2023* <br>",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Identifies the conference and year of publication for citation/context purposes"
+    },
+    {
+      "field": "paper_link",
+      "value": "https://openaccess.thecvf.com/content/CVPR2023/html/Zhao_Streaming_Video_Model_CVPR_2023_paper.html",
+      "normalized_value": "https://openaccess.thecvf.com/content/CVPR2023/html/Zhao_Streaming_Video_Model_CVPR_2023_paper.html",
+      "evidence": "[[Paper](https://openaccess.thecvf.com/content/CVPR2023/html/Zhao_Streaming_Video_Model_CVPR_2023_paper.html)] ",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Direct link to the official published paper"
+    },
+    {
+      "field": "arxiv_link",
+      "value": "https://arxiv.org/abs/2303.17228",
+      "normalized_value": "https://arxiv.org/abs/2303.17228",
+      "evidence": "[[arXiv](https://arxiv.org/abs/2303.17228)] ",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Direct link to arXiv preprint version of the paper"
+    },
+    {
+      "field": "description",
+      "value": "Streaming video model is a general video model, which is applicable to general video understanding tasks. Traditionally, video understanding tasks have been modeled by two separate architectures, specially tailored for two distinct tasks. Streaming video model is the first deep learning architecture that unifies video understanding tasks. We build an instance of streaming video model, namely the streaming video Transformer (S-ViT).S-ViT first produces frame-level features with a memory-enabled temporally-aware spatial encoder to serve the frame-based video tasks. Then the frame features are input into a task-related temporal decoder to obtain spatiotemporal features for sequence-based tasks. The efficiency and efficacy of S-ViT is demonstrated by the state-of-the-art accuracy in the sequence-based action recognition task and the competitive advantage over conventional architecture in the frame-based MOT task.",
+      "normalized_value": "Streaming video model is a general video model, which is applicable to general video understanding tasks. Traditionally, video understanding tasks have been modeled by two separate architectures, specially tailored for two distinct tasks. Streaming video model is the first deep learning architecture that unifies video understanding tasks. We build an instance of streaming video model, namely the streaming video Transformer (S-ViT).S-ViT first produces frame-level features with a memory-enabled temporally-aware spatial encoder to serve the frame-based video tasks. Then the frame features are input into a task-related temporal decoder to obtain spatiotemporal features for sequence-based tasks. The efficiency and efficacy of S-ViT is demonstrated by the state-of-the-art accuracy in the sequence-based action recognition task and the competitive advantage over conventional architecture in the frame-based MOT task.",
+      "evidence": "**Streaming video model** is a general video model, which is applicable to general video understanding tasks. Traditionally, video understanding tasks have been modeled by two separate architectures, specially tailored for two distinct tasks. Streaming video model is the first deep learning architecture that unifies video understanding tasks. We build an instance of streaming video model, namely the streaming video Transformer (S-ViT).S-ViT first produces frame-level features with a memory-enabled temporally-aware spatial encoder to serve the frame-based video tasks. Then the\nframe features are input into a task-related temporal decoder to obtain spatiotemporal features for sequence-based tasks. The efficiency and efficacy of S-ViT is demonstrated by the state-of-the-art accuracy in the sequence-based action recognition task and the competitive advantage over conventional architecture in the frame-based MOT task. ",
+      "evidence_location": "lines 12-13, ## Description",
+      "confidence": "high",
+      "reason": "Core description of the artifact's purpose, method, and evaluated tasks"
+    },
+    {
+      "field": "method_name",
+      "value": "streaming video Transformer (S-ViT)",
+      "normalized_value": "S-ViT",
+      "evidence": "We build an instance of streaming video model, namely the streaming video Transformer (S-ViT).",
+      "evidence_location": "line 12, ## Description",
+      "confidence": "high",
+      "reason": "Names the specific model instance/method implemented in this repo"
+    },
+    {
+      "field": "task",
+      "value": "sequence-based action recognition task and the frame-based MOT task",
+      "normalized_value": "action recognition and multi-object tracking (MOT)",
+      "evidence": "The efficiency and efficacy of S-ViT is demonstrated by the state-of-the-art accuracy in the sequence-based action recognition task and the competitive advantage over conventional architecture in the frame-based MOT task.",
+      "evidence_location": "line 13, ## Description",
+      "confidence": "high",
+      "reason": "Identifies the benchmark tasks the artifact is evaluated on"
+    },
+    {
+      "field": "installation_commands",
+      "value": "conda create -n svm python=3.7 -y\nconda activate svm\nconda install pytorch==1.12.0 torchvision==0.13.0 cudatoolkit=11.3 -c pytorch\npip install git+https://github.com/JonathonLuiten/TrackEval.git\npip install mmcv-full==1.7.0 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.12/index.html\npip install mmdet==2.26.0\npip install -r requirements/build.txt\npip install --user -v -e .\npip install einops\npip install future tensorboard\npip install -U fvcore\npip install click imageio[ffmpeg] path",
+      "normalized_value": "conda create -n svm python=3.7 -y; conda activate svm; conda install pytorch==1.12.0 torchvision==0.13.0 cudatoolkit=11.3 -c pytorch; pip install git+https://github.com/JonathonLuiten/TrackEval.git; pip install mmcv-full==1.7.0 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.12/index.html; pip install mmdet==2.26.0; pip install -r requirements/build.txt; pip install --user -v -e .; pip install einops; pip install future tensorboard; pip install -U fvcore; pip install click imageio[ffmpeg] path",
+      "evidence": "conda create -n svm python=3.7 -y\nconda activate svm\nconda install pytorch==1.12.0 torchvision==0.13.0 cudatoolkit=11.3 -c pytorch\npip install git+https://github.com/JonathonLuiten/TrackEval.git\npip install mmcv-full==1.7.0 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.12/index.html\npip install mmdet==2.26.0\npip install -r requirements/build.txt\npip install --user -v -e .\npip install einops\npip install future tensorboard\npip install -U fvcore\npip install click imageio[ffmpeg] path",
+      "evidence_location": "lines 20-33, ### Installation",
+      "confidence": "high",
+      "reason": "Complete setup command sequence needed to reproduce the environment"
+    },
+    {
+      "field": "environment",
+      "value": "python=3.7, pytorch==1.12.0, torchvision==0.13.0, cudatoolkit=11.3",
+      "normalized_value": "Python 3.7, PyTorch 1.12.0, torchvision 0.13.0, CUDA toolkit 11.3",
+      "evidence": "conda create -n svm python=3.7 -y\nconda activate svm\nconda install pytorch==1.12.0 torchvision==0.13.0 cudatoolkit=11.3 -c pytorch",
+      "evidence_location": "lines 21-23, ### Installation",
+      "confidence": "high",
+      "reason": "Specifies the required software environment versions for reproducibility"
+    },
+    {
+      "field": "dependency",
+      "value": "mmcv-full==1.7.0",
+      "normalized_value": "mmcv-full 1.7.0",
+      "evidence": "pip install mmcv-full==1.7.0 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.12/index.html",
+      "evidence_location": "line 25, ### Installation",
+      "confidence": "high",
+      "reason": "Specific pinned dependency version required for reproduction"
+    },
+    {
+      "field": "dependency",
+      "value": "mmdet==2.26.0",
+      "normalized_value": "mmdet 2.26.0",
+      "evidence": "pip install mmdet==2.26.0",
+      "evidence_location": "line 26, ### Installation",
+      "confidence": "high",
+      "reason": "Specific pinned dependency version required for reproduction"
+    },
+    {
+      "field": "dataset",
+      "value": "MOT17",
+      "normalized_value": "MOT17",
+      "evidence": "Download [MOT17](https://motchallenge.net/data/MOT17/), [crowdhuman](https://www.crowdhuman.org/), and [MOTSynth](https://motchallenge.net/) datasets and put them under the data directory.",
+      "evidence_location": "line 37, ### Dataset preparation",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset used for training/evaluation with source link"
+    },
+    {
+      "field": "dataset",
+      "value": "crowdhuman",
+      "normalized_value": "CrowdHuman",
+      "evidence": "Download [MOT17](https://motchallenge.net/data/MOT17/), [crowdhuman](https://www.crowdhuman.org/), and [MOTSynth](https://motchallenge.net/) datasets and put them under the data directory.",
+      "evidence_location": "line 37, ### Dataset preparation",
+      "confidence": "high",
+      "reason": "Names a dataset used for training with source link"
+    },
+    {
+      "field": "dataset",
+      "value": "MOTSynth",
+      "normalized_value": "MOTSynth",
+      "evidence": "Download [MOT17](https://motchallenge.net/data/MOT17/), [crowdhuman](https://www.crowdhuman.org/), and [MOTSynth](https://motchallenge.net/) datasets and put them under the data directory.",
+      "evidence_location": "line 37, ### Dataset preparation",
+      "confidence": "high",
+      "reason": "Names a dataset used for training with source link"
+    },
+    {
+      "field": "dataset_conversion_commands",
+      "value": "python ./tools/convert_datasets/crowdhuman2coco.py -i ./data/crowdhuman -o ./data/crowdhuman/annotations\npython ./tools/convert_datasets/mot2coco.py -i ./data/MOT17/ -o ./data/MOT17/annotations --split-train --convert-det\npython ./tools/convert_datasets/extract_motsynth.py --input_dir_path ./data/MOTSynth/video --out_dir_path ./data/MOTSynth/train/\npython ./tools/convert_datasets/motsynth2coco.py --anns ./data/MOTSynth/annotations --out ./data/MOTSynth/all_cocoformat.json",
+      "normalized_value": "python ./tools/convert_datasets/crowdhuman2coco.py -i ./data/crowdhuman -o ./data/crowdhuman/annotations; python ./tools/convert_datasets/mot2coco.py -i ./data/MOT17/ -o ./data/MOT17/annotations --split-train --convert-det; python ./tools/convert_datasets/extract_motsynth.py --input_dir_path ./data/MOTSynth/video --out_dir_path ./data/MOTSynth/train/; python ./tools/convert_datasets/motsynth2coco.py --anns ./data/MOTSynth/annotations --out ./data/MOTSynth/all_cocoformat.json",
+      "evidence": "python ./tools/convert_datasets/crowdhuman2coco.py -i ./data/crowdhuman -o ./data/crowdhuman/annotations\n\n# MOT17\npython ./tools/convert_datasets/mot2coco.py -i ./data/MOT17/ -o ./data/MOT17/annotations --split-train --convert-det\n\n# MOTSynth\npython ./tools/convert_datasets/extract_motsynth.py --input_dir_path ./data/MOTSynth/video --out_dir_path ./data/MOTSynth/train/\npython ./tools/convert_datasets/motsynth2coco.py --anns ./data/MOTSynth/annotations --out ./data/MOTSynth/all_cocoformat.json",
+      "evidence_location": "lines 63-71, ### Dataset preparation",
+      "confidence": "high",
+      "reason": "Commands required to convert datasets into COCO format for training/evaluation"
+    },
+    {
+      "field": "pretrained_model_source",
+      "value": "CLIP pretrained ViT models",
+      "normalized_value": "CLIP pretrained ViT models",
+      "evidence": "We use CLIP pretrained ViT models. You can download them from [here](https://github.com/openai/CLIP/tree/main) and put them under the `pretrain` directory. ",
+      "evidence_location": "line 113, ### Pretrained models",
+      "confidence": "high",
+      "reason": "Specifies the source of pretrained backbone weights needed for training"
+    },
+    {
+      "field": "training_command",
+      "value": "bash ./tools/dist_train.sh configs/mot/svm/svm_base.py 8 --cfg-options \\\n   model.detector.backbone.pretrain=./pretrain/ViT-B-16.pt",
+      "normalized_value": "bash ./tools/dist_train.sh configs/mot/svm/svm_base.py 8 --cfg-options model.detector.backbone.pretrain=./pretrain/ViT-B-16.pt",
+      "evidence": "bash ./tools/dist_train.sh configs/mot/svm/svm_base.py 8 --cfg-options \\\n   model.detector.backbone.pretrain=./pretrain/ViT-B-16.pt",
+      "evidence_location": "lines 118-119, ### Training and Evaluation",
+      "confidence": "high",
+      "reason": "Command to train the model on a single node, key to reproducing training"
+    },
+    {
+      "field": "evaluation_command",
+      "value": "bash ./tools/dist_test.sh configs/mot/svm/svm_test.py 8 \\\n   --eval bbox track --checkpoint svm_motsync_ch_mot17half.pth",
+      "normalized_value": "bash ./tools/dist_test.sh configs/mot/svm/svm_test.py 8 --eval bbox track --checkpoint svm_motsync_ch_mot17half.pth",
+      "evidence": "bash ./tools/dist_test.sh configs/mot/svm/svm_test.py 8 \\\n   --eval bbox track --checkpoint svm_motsync_ch_mot17half.pth",
+      "evidence_location": "lines 123-124, ### Training and Evaluation",
+      "confidence": "high",
+      "reason": "Command to evaluate the model on the MOT17 half validation set, key for reproducing results"
+    },
+    {
+      "field": "benchmark_result",
+      "value": "SVM | MOT17 | MOT17 half-train + crowdhuman + MOTSynth | 79.7 | 68.1 | 80.9",
+      "normalized_value": "SVM on MOT17 (train data: MOT17 half-train + crowdhuman + MOTSynth): MOTA 79.7, HOTA 68.1, IDF1 80.9",
+      "evidence": "| SVM | MOT17 | MOT17 half-train + crowdhuman + MOTSynth | 79.7 | 68.1 | 80.9 | [model](https://github.com/yuzhms/Streaming-Video-Model/releases/download/v1.0/svm_mot17-half-val.pth) |",
+      "evidence_location": "line 131, ## Main Results",
+      "confidence": "high",
+      "reason": "Reports quantitative benchmark results (MOTA, HOTA, IDF1) for reproducibility/comparison"
+    },
+    {
+      "field": "model_checkpoint",
+      "value": "https://github.com/yuzhms/Streaming-Video-Model/releases/download/v1.0/svm_mot17-half-val.pth",
+      "normalized_value": "https://github.com/yuzhms/Streaming-Video-Model/releases/download/v1.0/svm_mot17-half-val.pth",
+      "evidence": "[model](https://github.com/yuzhms/Streaming-Video-Model/releases/download/v1.0/svm_mot17-half-val.pth)",
+      "evidence_location": "line 131, ## Main Results",
+      "confidence": "high",
+      "reason": "Direct link to a downloadable pretrained model checkpoint for reuse"
+    },
+    {
+      "field": "citation",
+      "value": "@InProceedings{Zhao_2023_CVPR,\n    author    = {Zhao, Yucheng and Luo, Chong and Tang, Chuanxin and Chen, Dongdong and Codella, Noel and Zha, Zheng-Jun},\n    title     = {Streaming Video Model},\n    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n    month     = {June},\n    year      = {2023},\n    pages     = {14602-14612}\n}",
+      "normalized_value": "@InProceedings{Zhao_2023_CVPR, author = {Zhao, Yucheng and Luo, Chong and Tang, Chuanxin and Chen, Dongdong and Codella, Noel and Zha, Zheng-Jun}, title = {Streaming Video Model}, booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, month = {June}, year = {2023}, pages = {14602-14612}}",
+      "evidence": "@InProceedings{Zhao_2023_CVPR,\n    author    = {Zhao, Yucheng and Luo, Chong and Tang, Chuanxin and Chen, Dongdong and Codella, Noel and Zha, Zheng-Jun},\n    title     = {Streaming Video Model},\n    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n    month     = {June},\n    year      = {2023},\n    pages     = {14602-14612}\n}",
+      "evidence_location": "lines 136-143, ## Citation",
+      "confidence": "high",
+      "reason": "Formal citation for referencing the work"
+    },
+    {
+      "field": "acknowledged_dependency",
+      "value": "MMTracking",
+      "normalized_value": "MMTracking",
+      "evidence": "Our code are built on top of [MMTracking](https://github.com/open-mmlab/mmtracking/) and [CLIP](https://github.com/openai/CLIP). Many thanks for their wonderful works.",
+      "evidence_location": "line 146, ## Acknowledgement",
+      "confidence": "high",
+      "reason": "Names a codebase this artifact is built upon, relevant for understanding provenance"
+    },
+    {
+      "field": "acknowledged_dependency",
+      "value": "CLIP",
+      "normalized_value": "CLIP",
+      "evidence": "Our code are built on top of [MMTracking](https://github.com/open-mmlab/mmtracking/) and [CLIP](https://github.com/openai/CLIP). Many thanks for their wonderful works.",
+      "evidence_location": "line 146, ## Acknowledgement",
+      "confidence": "high",
+      "reason": "Names a codebase this artifact is built upon, relevant for understanding provenance"
+    }
+  ]
+}

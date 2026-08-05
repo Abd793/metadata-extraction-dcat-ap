@@ -1,0 +1,202 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "ActionFormer: Localizing Moments of Actions with Transformers",
+      "normalized_value": "ActionFormer: Localizing Moments of Actions with Transformers",
+      "evidence": "# ActionFormer: Localizing Moments of Actions with Transformers",
+      "evidence_location": "line 1, title",
+      "confidence": "high",
+      "reason": "Provides the artifact's explicit name and project title."
+    },
+    {
+      "field": "task",
+      "value": "temporal action localization",
+      "normalized_value": "temporal action localization",
+      "evidence": "This code repo implements Actionformer, one of the first Transformer-based model for temporal action localization --- detecting the onsets and offsets of action instances and recognizing their action categories.",
+      "evidence_location": "lines 3-4, Introduction",
+      "confidence": "high",
+      "reason": "Defines the primary task addressed by the artifact."
+    },
+    {
+      "field": "method",
+      "value": "a Transformer based model for temporal action localization that adapts local self-attention to model temporal context in untrimmed videos, classifies every moment, and regresses action boundaries without action proposals or pre-defined anchor windows",
+      "normalized_value": "a Transformer based model for temporal action localization that adapts local self-attention to model temporal context in untrimmed videos, classifies every moment, and regresses action boundaries without action proposals or pre-defined anchor windows",
+      "evidence": "Specifically, we adopt a minimalist design and develop a Transformer based model for temporal action localization, inspired by the recent success of Transformers in NLP and vision. Our method, illustrated in the figure, adapts local self-attention to model temporal context in untrimmed videos, classifies every moment in an input video, and regresses their corresponding action boundaries. The result is a deep model that is trained using standard classification and regression loss, and can localize moments of actions in a single shot, without using action proposals or pre-defined anchor windows.",
+      "evidence_location": "lines 12-12, Introduction",
+      "confidence": "high",
+      "reason": "Summarizes the explicitly described model design and inference formulation."
+    },
+    {
+      "field": "paper",
+      "value": "https://arxiv.org/abs/2202.07925",
+      "normalized_value": "https://arxiv.org/abs/2202.07925",
+      "evidence": "Our paper is accepted to ECCV 2022 and an arXiv version can be found at [this link](https://arxiv.org/abs/2202.07925).",
+      "evidence_location": "line 4, Introduction",
+      "confidence": "high",
+      "reason": "Provides the project's associated paper and publication venue."
+    },
+    {
+      "field": "headline_result",
+      "value": "71.0% mAP at tIoU=0.5 on THUMOS14",
+      "normalized_value": "71.0% mAP at tIoU=0.5 on THUMOS14",
+      "evidence": "Without bells and whistles, ActionFormer achieves 71.0% mAP at tIoU=0.5 on THUMOS14, outperforming the best prior model by 14.1 absolute percentage points and crossing the 60% mAP for the first time.",
+      "evidence_location": "line 4, Introduction",
+      "confidence": "high",
+      "reason": "Gives a concrete benchmark result for the primary method."
+    },
+    {
+      "field": "benchmark_results",
+      "value": "ActivityNet 1.3 (36.56% average mAP) and EPIC-Kitchens 100 (+13.5% average mAP over prior works)",
+      "normalized_value": "ActivityNet 1.3 (36.56% average mAP) and EPIC-Kitchens 100 (+13.5% average mAP over prior works)",
+      "evidence": "Further, ActionFormer demonstrates strong results on ActivityNet 1.3 (36.56% average mAP) and the more challenging EPIC-Kitchens 100 (+13.5% average mAP over prior works).",
+      "evidence_location": "line 4, Introduction",
+      "confidence": "high",
+      "reason": "Records concrete results on two additional named benchmarks."
+    },
+    {
+      "field": "ego4d_challenge_result",
+      "value": "ranked 2nd with a record 21.76% average mAP and 42.54% Recall@1x, tIoU=0.5",
+      "normalized_value": "ranked 2nd with a record 21.76% average mAP and 42.54% Recall@1x, tIoU=0.5",
+      "evidence": "Our submission in particular is ranked 2nd with a record 21.76% average mAP and 42.54% Recall@1x, tIoU=0.5, nearly three times higher than the official baseline.",
+      "evidence_location": "line 6, Introduction",
+      "confidence": "high",
+      "reason": "Provides the project's explicitly reported Ego4D Moment Queries Challenge result."
+    },
+    {
+      "field": "installation",
+      "value": "Follow INSTALL.md for installing necessary dependencies and compiling the code.",
+      "normalized_value": "Follow INSTALL.md for installing necessary dependencies and compiling the code.",
+      "evidence": "* Follow INSTALL.md for installing necessary dependencies and compiling the code.",
+      "evidence_location": "lines 41-42, Installation",
+      "confidence": "high",
+      "reason": "Identifies the documented installation procedure and dependency setup."
+    },
+    {
+      "field": "thumos_data",
+      "value": "thumos.tar.gz (md5sum 375f76ffbf7447af1035e694971ec9b2)",
+      "normalized_value": "thumos.tar.gz (md5sum 375f76ffbf7447af1035e694971ec9b2)",
+      "evidence": "* Download *thumos.tar.gz* (`md5sum 375f76ffbf7447af1035e694971ec9b2`) from [this Box link](https://uwmadison.box.com/s/glpuxadymf3gd01m1cj6g5c3bn39qbgr) or [this Google Drive link](https://drive.google.com/file/d/1zt2eoldshf99vJMDuu8jqxda55dCyhZP/view?usp=sharing) or [this BaiduYun link](https://pan.baidu.com/s/1TgS91LVV-vzFTgIHl1AEGA?pwd=74eh).",
+      "evidence_location": "line 50, To Reproduce Our Results on THUMOS14",
+      "confidence": "high",
+      "reason": "Names the reproducibility archive, checksum, and download locations."
+    },
+    {
+      "field": "thumos_features",
+      "value": "I3D features, action annotations in json format (similar to ActivityNet annotation format), and external classification scores",
+      "normalized_value": "I3D features, action annotations in json format (similar to ActivityNet annotation format), and external classification scores",
+      "evidence": "* The file includes I3D features, action annotations in json format (similar to ActivityNet annotation format), and external classification scores.",
+      "evidence_location": "line 51, To Reproduce Our Results on THUMOS14",
+      "confidence": "high",
+      "reason": "Describes the contents of the THUMOS14 input archive."
+    },
+    {
+      "field": "thumos_feature_extraction",
+      "value": "two-stream I3D models pretrained on Kinetics using clips of 16 frames at the video frame rate (~30 fps) and a stride of 4 frames; one feature vector per 4/30 ~= 0.1333 seconds",
+      "normalized_value": "two-stream I3D models pretrained on Kinetics using clips of 16 frames at the video frame rate (~30 fps) and a stride of 4 frames; one feature vector per 4/30 ~= 0.1333 seconds",
+      "evidence": "**Details**: The features are extracted from two-stream I3D models pretrained on Kinetics using clips of `16 frames` at the video frame rate (`~30 fps`) and a stride of `4 frames`. This gives one feature vector per `4/30 ~= 0.1333` seconds.",
+      "evidence_location": "line 53, To Reproduce Our Results on THUMOS14",
+      "confidence": "high",
+      "reason": "Records the feature source and temporal sampling needed for reproduction."
+    },
+    {
+      "field": "thumos_training_command",
+      "value": "python ./train.py ./configs/thumos_i3d.yaml --output reproduce",
+      "normalized_value": "python ./train.py ./configs/thumos_i3d.yaml --output reproduce",
+      "evidence": "```shell\npython ./train.py ./configs/thumos_i3d.yaml --output reproduce\n```",
+      "evidence_location": "lines 74-78, Training and Evaluation",
+      "confidence": "high",
+      "reason": "Provides the exact command to train on THUMOS14 I3D features."
+    },
+    {
+      "field": "thumos_evaluation_command",
+      "value": "python ./eval.py ./configs/thumos_i3d.yaml ./ckpt/thumos_i3d_reproduce",
+      "normalized_value": "python ./eval.py ./configs/thumos_i3d.yaml ./ckpt/thumos_i3d_reproduce",
+      "evidence": "```shell\npython ./eval.py ./configs/thumos_i3d.yaml ./ckpt/thumos_i3d_reproduce\n```",
+      "evidence_location": "lines 83-86, Training and Evaluation",
+      "confidence": "high",
+      "reason": "Provides the exact command to evaluate a trained THUMOS14 model."
+    },
+    {
+      "field": "gpu_requirement",
+      "value": "Training our model on THUMOS requires ~4.5GB GPU memory, yet the inference might require over 10GB GPU memory. We recommend using a GPU with at least 12 GB of memory.",
+      "normalized_value": "Training our model on THUMOS requires ~4.5GB GPU memory, yet the inference might require over 10GB GPU memory. We recommend using a GPU with at least 12 GB of memory.",
+      "evidence": "* Training our model on THUMOS requires ~4.5GB GPU memory, yet the inference might require over 10GB GPU memory. We recommend using a GPU with at least 12 GB of memory.",
+      "evidence_location": "line 87, Training and Evaluation",
+      "confidence": "high",
+      "reason": "Specifies hardware resources relevant to running and reproducing the model."
+    },
+    {
+      "field": "thumos_pretrained_checkpoint",
+      "value": "./pretrained/thumos_i3d_reproduce/epoch_034.pth.tar",
+      "normalized_value": "./pretrained/thumos_i3d_reproduce/epoch_034.pth.tar",
+      "evidence": "* The pre-trained model is *./pretrained/thumos_i3d_reproduce/epoch_034.pth.tar*.",
+      "evidence_location": "line 113, Evaluating Our Pre-trained Model",
+      "confidence": "high",
+      "reason": "Identifies the documented THUMOS14 checkpoint path."
+    },
+    {
+      "field": "thumos_pretrained_results",
+      "value": "ActionFormer | 82.13 | 77.80 | 70.95 | 59.40 | 43.87 | 66.83",
+      "normalized_value": "ActionFormer | 82.13 | 77.80 | 70.95 | 59.40 | 43.87 | 66.83",
+      "evidence": "| ActionFormer      | 82.13 | 77.80 | 70.95 | 59.40 | 43.87 | 66.83 |",
+      "evidence_location": "lines 118-123, Evaluating Our Pre-trained Model",
+      "confidence": "high",
+      "reason": "Provides the reported THUMOS14 mAP results across tIoU thresholds and average."
+    },
+    {
+      "field": "activitynet_pretrained_results",
+      "value": "ActionFormer | 54.67 | 37.81 | 8.36 | 36.56",
+      "normalized_value": "ActionFormer | 54.67 | 37.81 | 8.36 | 36.56",
+      "evidence": "| ActionFormer      | 54.67 | 37.81 |  8.36 | 36.56 |",
+      "evidence_location": "lines 195-199, Evaluating Our Pre-trained Model",
+      "confidence": "high",
+      "reason": "Provides the reported ActivityNet 1.3 mAP results at the listed tIoUs and average."
+    },
+    {
+      "field": "epic_kitchens_training_commands",
+      "value": "python ./train.py ./configs/epic_slowfast_verb.yaml --output reproduce\npython ./train.py ./configs/epic_slowfast_noun.yaml --output reproduce",
+      "normalized_value": "python ./train.py ./configs/epic_slowfast_verb.yaml --output reproduce python ./train.py ./configs/epic_slowfast_noun.yaml --output reproduce",
+      "evidence": "* On EPIC Kitchens, we train separate models for nouns and verbs.\n* To train our ActionFormer on verbs with SlowFast features, use\n```shell\npython ./train.py ./configs/epic_slowfast_verb.yaml --output reproduce\n```\n* To train our ActionFormer on nouns with SlowFast features, use\n```shell\npython ./train.py ./configs/epic_slowfast_noun.yaml --output reproduce\n```",
+      "evidence_location": "lines 257-266, Training and Evaluation",
+      "confidence": "high",
+      "reason": "Documents the separate verb and noun training procedures for EPIC Kitchens 100."
+    },
+    {
+      "field": "epic_kitchens_results",
+      "value": "ActionFormer (verb) average mAP 23.51; ActionFormer (noun) average mAP 21.88",
+      "normalized_value": "ActionFormer (verb) average mAP 23.51; ActionFormer (noun) average mAP 21.88",
+      "evidence": "| ActionFormer (verb) | 26.58 | 25.42 | 24.15 | 22.29 | 19.09 | 23.51 |\n| ActionFormer (noun) | 25.21 | 24.11 | 22.66 | 20.47 | 16.97 | 21.88 |",
+      "evidence_location": "lines 314-319, Evaluating Our Pre-trained Model",
+      "confidence": "high",
+      "reason": "Captures the reported average mAP for both EPIC Kitchens model variants."
+    },
+    {
+      "field": "ego4d_conversion_script",
+      "value": "./tools/convert_ego4d_trainval.py",
+      "normalized_value": "./tools/convert_ego4d_trainval.py",
+      "evidence": "Please note that we are not authorized to release the features and annotations. Instead, we provide our script for feature and annotation conversion at `./tools/convert_ego4d_trainval.py`.",
+      "evidence_location": "line 323, To Reproduce Our Results on Ego4D Moment Queries Benchmark",
+      "confidence": "high",
+      "reason": "Identifies the provided conversion script needed because the source features and annotations are not released."
+    },
+    {
+      "field": "ego4d_feature_sampling",
+      "value": "All features are extracted at 1.875 fps from videos at 30 fps. This gives one feature vector per ~0.5333 seconds.",
+      "normalized_value": "All features are extracted at 1.875 fps from videos at 30 fps. This gives one feature vector per ~0.5333 seconds.",
+      "evidence": "**Details**: All features are extracted at `1.875 fps` from videos at `30 fps`. This gives one feature vector per `~0.5333` seconds. Please refer to Ego4D and EgoVLP's documentation for more details on feature extraction.",
+      "evidence_location": "line 325, To Reproduce Our Results on Ego4D Moment Queries Benchmark",
+      "confidence": "high",
+      "reason": "Records the temporal sampling specification for Ego4D inputs."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{zhang2022actionformer,\n  title={ActionFormer: Localizing Moments of Actions with Transformers},\n  author={Zhang, Chen-Lin and Wu, Jianxin and Li, Yin},\n  booktitle={European Conference on Computer Vision},\n  series={LNCS},\n  volume={13664},\n  pages={492-510},\n  year={2022}\n}",
+      "normalized_value": "@inproceedings{zhang2022actionformer, title={ActionFormer: Localizing Moments of Actions with Transformers}, author={Zhang, Chen-Lin and Wu, Jianxin and Li, Yin}, booktitle={European Conference on Computer Vision}, series={LNCS}, volume={13664}, pages={492-510}, year={2022} }",
+      "evidence": "```\n@inproceedings{zhang2022actionformer,\n  title={ActionFormer: Localizing Moments of Actions with Transformers},\n  author={Zhang, Chen-Lin and Wu, Jianxin and Li, Yin},\n  booktitle={European Conference on Computer Vision},\n  series={LNCS},\n  volume={13664},\n  pages={492-510},\n  year={2022}\n}\n```",
+      "evidence_location": "lines 420-432, References",
+      "confidence": "high",
+      "reason": "Provides the artifact's explicit BibTeX citation for reuse and attribution."
+    }
+  ]
+}

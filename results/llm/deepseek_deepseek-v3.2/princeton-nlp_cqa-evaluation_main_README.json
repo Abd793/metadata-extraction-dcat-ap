@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "normalized_value": "Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "evidence": "# Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Identifies the name/title of the artifact for indexing."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2112.08812.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2112.08812.pdf",
+      "evidence": "[Ditch the Gold Standard: Re-evaluating Conversational Question Answering](https://arxiv.org/pdf/2112.08812.pdf)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper for citation and context."
+    },
+    {
+      "field": "slides_url",
+      "value": "https://github.com/princeton-nlp/EvalConvQA/blob/main/ACL%202022%20Video%20talk.pdf",
+      "normalized_value": "https://github.com/princeton-nlp/EvalConvQA/blob/main/ACL%202022%20Video%20talk.pdf",
+      "evidence": "[here](https://github.com/princeton-nlp/EvalConvQA/blob/main/ACL%202022%20Video%20talk.pdf)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Link to presentation slides for additional project information."
+    },
+    {
+      "field": "human_evaluation_dataset_path",
+      "value": "data/human_annotation_data.json",
+      "normalized_value": "data/human_annotation_data.json",
+      "evidence": "You can download the human annotation dataset from `data/human_annotation_data.json`.",
+      "evidence_location": "line 28",
+      "confidence": "high",
+      "reason": "Specifies the location of the released human evaluation dataset for reuse."
+    },
+    {
+      "field": "evaluation_protocols",
+      "value": "Auto-Pred, Auto-Replace and Auto-Rewrite",
+      "normalized_value": "Auto-Pred, Auto-Replace and Auto-Rewrite",
+      "evidence": "including `Auto-Pred`, `Auto-Replace` and our proposed evaluation protocol, `Auto-Rewrite`",
+      "evidence_location": "line 75",
+      "confidence": "high",
+      "reason": "Names the automatic evaluation protocols compared and proposed, crucial for understanding the methodology."
+    },
+    {
+      "field": "dependencies_installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "lines 84-86",
+      "confidence": "high",
+      "reason": "Command for installing dependencies, essential for environment setup."
+    },
+    {
+      "field": "datasets_used",
+      "value": "QuAC dataset for passages and conversations, and the test set of CANARD dataset for context-independent questions in Auto-Replace.",
+      "normalized_value": "QuAC dataset for passages and conversations, and the test set of CANARD dataset for context-independent questions in Auto-Replace.",
+      "evidence": "Our experiments use [QuAC dataset](https://quac.ai) for passages and conversations, and the test set of [CANARD dataset](https://sites.google.com/view/qanta/projects/canard) for context-independent questions in `Auto-Replace`.",
+      "evidence_location": "lines 90-91",
+      "confidence": "high",
+      "reason": "Identifies the datasets used, necessary for reproducing experiments."
+    },
+    {
+      "field": "models_evaluated",
+      "value": "BERT, GraphFlow, HAM, ExCorD",
+      "normalized_value": "BERT, GraphFlow, HAM, ExCorD",
+      "evidence": "We provide our implementations for the four models that we used in our paper: BERT, [GraphFlow](https://www.ijcai.org/Proceedings/2020/171), [HAM](https://dl.acm.org/doi/abs/10.1145/3357384.3357905), [ExCorD](https://aclanthology.org/2021.acl-long.478/).",
+      "evidence_location": "line 94",
+      "confidence": "high",
+      "reason": "Lists the specific models evaluated, key for understanding scope."
+    },
+    {
+      "field": "bert_evaluation_command",
+      "value": "python run_quac_eval.py \\\n  --type bert \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --rewrite \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "normalized_value": "python run_quac_eval.py  --type bert  --output_dir ${directory-to-model-checkpoint}  --write_dir ${directory-to-write-evaluation-result}  --predict_file val_v0.2.json  --max_seq_length 512  --doc_stride 128  --max_query_length 64  --match_metric f1  --add_background  --skip_entity  --rewrite  --start_i ${index_of_first_passage_to_eval}  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence": "python run_quac_eval.py \\\n  --type bert \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --rewrite \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence_location": "lines 118-132",
+      "confidence": "high",
+      "reason": "Command for evaluating the BERT model with Auto-Rewrite protocol, essential for reproduction."
+    },
+    {
+      "field": "graphflow_evaluation_command",
+      "value": "python run_quac_eval.py \\\n    --type graphflow \\\n    --predict_file ${path-to-annotated-dev-json-file} \\\n    --output_dir ${directory-to-model-checkpoint} \\\n    --saved_vocab_file ${directory-to-saved-model-vocab} \\\n    --pretrained ${directory-to-model-checkpoint} \\\n    --write_dir /n/fs/scratch/huihanl/unified/graphflow/write \\\n    --match_metric f1 \\\n    --add_background \\\n    --skip_entity \\\n    --rewrite \\\n    --fix_vocab_embed \\\n    --f_qem \\\n    --f_pos \\\n    --f_ner \\\n    --use_ques_marker \\\n    --use_gnn \\\n    --temporal_gnn \\\n    --use_bert \\\n    --use_bert_weight \\\n    --shuffle \\\n    --out_predictions \\\n    --predict_raw_text \\\n    --out_pred_in_folder \\\n    --optimizer adamax \\\n    --start_i ${index_of_first_passage_to_eval} \\\n    --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "normalized_value": "python run_quac_eval.py  --type graphflow  --predict_file ${path-to-annotated-dev-json-file}  --output_dir ${directory-to-model-checkpoint}  --saved_vocab_file ${directory-to-saved-model-vocab}  --pretrained ${directory-to-model-checkpoint}  --write_dir /n/fs/scratch/huihanl/unified/graphflow/write  --match_metric f1  --add_background  --skip_entity  --rewrite  --fix_vocab_embed  --f_qem  --f_pos  --f_ner  --use_ques_marker  --use_gnn  --temporal_gnn  --use_bert  --use_bert_weight  --shuffle  --out_predictions  --predict_raw_text  --out_pred_in_folder  --optimizer adamax  --start_i ${index_of_first_passage_to_eval}  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence": "python run_quac_eval.py \\\n    --type graphflow \\\n    --predict_file ${path-to-annotated-dev-json-file} \\\n    --output_dir ${directory-to-model-checkpoint} \\\n    --saved_vocab_file ${directory-to-saved-model-vocab} \\\n    --pretrained ${directory-to-model-checkpoint} \\\n    --write_dir /n/fs/scratch/huihanl/unified/graphflow/write \\\n    --match_metric f1 \\\n    --add_background \\\n    --skip_entity \\\n    --rewrite \\\n    --fix_vocab_embed \\\n    --f_qem \\\n    --f_pos \\\n    --f_ner \\\n    --use_ques_marker \\\n    --use_gnn \\\n    --temporal_gnn \\\n    --use_bert \\\n    --use_bert_weight \\\n    --shuffle \\\n    --out_predictions \\\n    --predict_raw_text \\\n    --out_pred_in_folder \\\n    --optimizer adamax \\\n    --start_i ${index_of_first_passage_to_eval} \\\n    --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence_location": "lines 148-175",
+      "confidence": "high",
+      "reason": "Command for evaluating GraphFlow model with Auto-Rewrite protocol, essential for reproduction."
+    },
+    {
+      "field": "ham_evaluation_command",
+      "value": "python run_quac_eval.py \\\n  --type ham \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --do_lower_case \\\n  --history_len 6 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --replace \\\n  --init_checkpoint ${directory-to-model-checkpoint}/model_52000.ckpt \\\n  --bert_config_file ${directory-to-pretrained-bert-large-uncased}/bert_config.json \\\n  --vocab_file ${directory-to-model-checkpoint}/vocab.txt \\\n  --MTL_mu 0.8 \\\n  --MTL_lambda 0.1 \\\n  --mtl_input reduce_mean \\\n  --max_answer_length 40 \\\n  --max_considered_history_turns 4 \\\n  --bert_hidden 1024 \\\n  --fine_grained_attention \\\n  --better_hae \\\n  --MTL \\\n  --use_history_answer_marker \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "normalized_value": "python run_quac_eval.py  --type ham  --output_dir ${directory-to-model-checkpoint}  --write_dir ${directory-to-write-evaluation-result}  --predict_file val_v0.2.json  --max_seq_length 512  --doc_stride 128  --max_query_length 64  --do_lower_case  --history_len 6  --match_metric f1  --add_background  --skip_entity  --replace  --init_checkpoint ${directory-to-model-checkpoint}/model_52000.ckpt  --bert_config_file ${directory-to-pretrained-bert-large-uncased}/bert_config.json  --vocab_file ${directory-to-model-checkpoint}/vocab.txt  --MTL_mu 0.8  --MTL_lambda 0.1  --mtl_input reduce_mean  --max_answer_length 40  --max_considered_history_turns 4  --bert_hidden 1024  --fine_grained_attention  --better_hae  --MTL  --use_history_answer_marker  --start_i ${index_of_first_passage_to_eval}  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence": "python run_quac_eval.py \\\n  --type ham \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --do_lower_case \\\n  --history_len 6 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --replace \\\n  --init_checkpoint ${directory-to-model-checkpoint}/model_52000.ckpt \\\n  --bert_config_file ${directory-to-pretrained-bert-large-uncased}/bert_config.json \\\n  --vocab_file ${directory-to-model-checkpoint}/vocab.txt \\\n  --MTL_mu 0.8 \\\n  --MTL_lambda 0.1 \\\n  --mtl_input reduce_mean \\\n  --max_answer_length 40 \\\n  --max_considered_history_turns 4 \\\n  --bert_hidden 1024 \\\n  --fine_grained_attention \\\n  --better_hae \\\n  --MTL \\\n  --use_history_answer_marker \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence_location": "lines 183-212",
+      "confidence": "medium",
+      "reason": "Command for evaluating HAM model, but uses '--replace' flag while the section comment mentions Auto-Rewrite; specific protocol for this command is ambiguous."
+    },
+    {
+      "field": "excord_evaluation_command",
+      "value": "python run_quac_eval.py \\\n  --type excord \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --rewrite \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "normalized_value": "python run_quac_eval.py  --type excord  --output_dir ${directory-to-model-checkpoint}  --write_dir ${directory-to-write-evaluation-result}  --predict_file val_v0.2.json  --max_seq_length 512  --doc_stride 128  --max_query_length 64  --match_metric f1  --add_background  --skip_entity  --rewrite  --start_i ${index_of_first_passage_to_eval}  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence": "python run_quac_eval.py \\\n  --type excord \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --rewrite \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence_location": "lines 220-234",
+      "confidence": "high",
+      "reason": "Command for evaluating ExCorD model with Auto-Rewrite protocol, essential for reproduction."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{li2022ditch,\n    title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\",\n    author = \"Li, Huihan  and\n      Gao, Tianyu  and\n      Goenka, Manan  and\n      Chen, Danqi\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.555\",\n    pages = \"8074--8085\",\n}",
+      "normalized_value": "@inproceedings{li2022ditch,\n    title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\",\n    author = \"Li, Huihan  and\n      Gao, Tianyu  and\n      Goenka, Manan  and\n      Chen, Danqi\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.555\",\n    pages = \"8074--8085\",\n}",
+      "evidence": "@inproceedings{li2022ditch,\n    title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\",\n    author = \"Li, Huihan  and\n      Gao, Tianyu  and\n      Goenka, Manan  and\n      Chen, Danqi\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.555\",\n    pages = \"8074--8085\",\n}",
+      "evidence_location": "lines 242-253",
+      "confidence": "high",
+      "reason": "Complete BibTeX citation for proper attribution and reference."
+    },
+    {
+      "field": "custom_model_evaluation_instructions",
+      "value": "add a directory under `models` and write a customized model class following the template `interface.py` and our example implementations.",
+      "normalized_value": "add a directory under `models` and write a customized model class following the template `interface.py` and our example implementations.",
+      "evidence": "To do so, please add a directory under `models` and write a customized model class following the template `interface.py` and our example implementations.",
+      "evidence_location": "line 237",
+      "confidence": "high",
+      "reason": "Instructions for extending the framework to evaluate custom models, important for reuse."
+    }
+  ]
+}

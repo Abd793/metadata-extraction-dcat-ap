@@ -1,0 +1,229 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "reachml",
+      "normalized_value": "reachml",
+      "evidence": "# reachml",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the artifact."
+    },
+    {
+      "field": "description",
+      "value": "`reachml` is a library for recourse verification.",
+      "normalized_value": "`reachml` is a library for recourse verification.",
+      "evidence": "`reachml` is a library for recourse verification.",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "States the artifact's primary purpose."
+    },
+    {
+      "field": "recourse_concepts",
+      "value": "*Recourse* is the ability of a decision subject to change the prediction of a machine learning model through actions on their features. *Recourse verification* aims to tell if a decision subject is assigned a prediction that is fixed.",
+      "normalized_value": "*Recourse* is the ability of a decision subject to change the prediction of a machine learning model through actions on their features. *Recourse verification* aims to tell if a decision subject is assigned a prediction that is fixed.",
+      "evidence": "*Recourse* is the ability of a decision subject to change the prediction of a machine learning model through actions on their features. *Recourse verification* aims to tell if a decision subject is assigned a prediction that is fixed.",
+      "evidence_location": "12 (Background)",
+      "confidence": "high",
+      "reason": "Defines the central concepts addressed by the library."
+    },
+    {
+      "field": "python_version",
+      "value": "Python 3.10",
+      "normalized_value": "Python 3.10",
+      "evidence": "[![python](https://img.shields.io/badge/Python-3.10-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Specifies the Python version associated with the artifact."
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "normalized_value": "MIT",
+      "evidence": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "States the reuse license."
+    },
+    {
+      "field": "arxiv_url",
+      "value": "https://arxiv.org/abs/2308.12820",
+      "normalized_value": "https://arxiv.org/abs/2308.12820",
+      "evidence": "[![arXiv](https://img.shields.io/badge/arXiv-2308.12820-b31b1b.svg)](https://arxiv.org/abs/2308.12820)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Provides an arXiv access link associated with the artifact."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install \"git+https://github.com/ustunb/reachml#egg=reachml[cplex]\"",
+      "normalized_value": "pip install \"git+https://github.com/ustunb/reachml#egg=reachml[cplex]\"",
+      "evidence": "```\npip install \"git+https://github.com/ustunb/reachml#egg=reachml[cplex]\"\n```",
+      "evidence_location": "14-19 (Installation)",
+      "confidence": "high",
+      "reason": "Provides the documented installation command."
+    },
+    {
+      "field": "solver_dependency",
+      "value": "CPLEX",
+      "normalized_value": "CPLEX",
+      "evidence": "Many of the functions in `reach-ml` will require [CPLEX](https://www.ibm.com/products/ilog-cplex-optimization-studio) to run properly. The command above will install CPLEX Community Edition. The community edition has a strict limit on the number of constraints it can support. To avoid these, you will want install reachml without the cplex option, and download and install the full version of IBM CPLEX [following these instructions](https://github.com/ustunb/risk-slim/blob/master/docs/cplex_instructions.md).",
+      "evidence_location": "21 (Installation)",
+      "confidence": "high",
+      "reason": "Identifies the optimization dependency required by many functions."
+    },
+    {
+      "field": "cplex_distribution",
+      "value": "CPLEX Community Edition",
+      "normalized_value": "CPLEX Community Edition",
+      "evidence": "Many of the functions in `reach-ml` will require [CPLEX](https://www.ibm.com/products/ilog-cplex-optimization-studio) to run properly. The command above will install CPLEX Community Edition. The community edition has a strict limit on the number of constraints it can support. To avoid these, you will want install reachml without the cplex option, and download and install the full version of IBM CPLEX [following these instructions](https://github.com/ustunb/risk-slim/blob/master/docs/cplex_instructions.md).",
+      "evidence_location": "21 (Installation)",
+      "confidence": "high",
+      "reason": "Clarifies which CPLEX edition the installation command installs."
+    },
+    {
+      "field": "cplex_constraint_limit",
+      "value": "The community edition has a strict limit on the number of constraints it can support.",
+      "normalized_value": "The community edition has a strict limit on the number of constraints it can support.",
+      "evidence": "Many of the functions in `reach-ml` will require [CPLEX](https://www.ibm.com/products/ilog-cplex-optimization-studio) to run properly. The command above will install CPLEX Community Edition. The community edition has a strict limit on the number of constraints it can support. To avoid these, you will want install reachml without the cplex option, and download and install the full version of IBM CPLEX [following these instructions](https://github.com/ustunb/risk-slim/blob/master/docs/cplex_instructions.md).",
+      "evidence_location": "21 (Installation)",
+      "confidence": "high",
+      "reason": "Documents an important limitation affecting reproducibility and scale."
+    },
+    {
+      "field": "full_cplex_instructions_url",
+      "value": "https://github.com/ustunb/risk-slim/blob/master/docs/cplex_instructions.md",
+      "normalized_value": "https://github.com/ustunb/risk-slim/blob/master/docs/cplex_instructions.md",
+      "evidence": "Many of the functions in `reach-ml` will require [CPLEX](https://www.ibm.com/products/ilog-cplex-optimization-studio) to run properly. The command above will install CPLEX Community Edition. The community edition has a strict limit on the number of constraints it can support. To avoid these, you will want install reachml without the cplex option, and download and install the full version of IBM CPLEX [following these instructions](https://github.com/ustunb/risk-slim/blob/master/docs/cplex_instructions.md).",
+      "evidence_location": "21 (Installation)",
+      "confidence": "high",
+      "reason": "Links to the documented instructions for installing full IBM CPLEX."
+    },
+    {
+      "field": "action_set_inference",
+      "value": "`ActionSet` infers the type and bounds on each feature from `X`.",
+      "normalized_value": "`ActionSet` infers the type and bounds on each feature from `X`.",
+      "evidence": "# `ActionSet` infers the type and bounds on each feature from `X`. To see them:",
+      "evidence_location": "47 (Quickstart)",
+      "confidence": "high",
+      "reason": "Explains how feature types and bounds are initialized in the quickstart."
+    },
+    {
+      "field": "actionability_configuration",
+      "value": "action_set[[\"age\", \"marital_status\"]].actionable = False # these features cannot or should not change\naction_set[\"years_since_last_default\"].ub = 100 # set maximum value of feature to 100\naction_set[\"years_since_last_default\"].step_direction = 1 # actions can only increase value\naction_set[\"years_since_last_default\"].step_ub = 1 # limit actions to changes value by 1",
+      "normalized_value": "action_set[[\"age\", \"marital_status\"]].actionable = False # these features cannot or should not change action_set[\"years_since_last_default\"].ub = 100 # set maximum value of feature to 100 action_set[\"years_since_last_default\"].step_direction = 1 # actions can only increase value action_set[\"years_since_last_default\"].step_ub = 1 # limit actions to changes value by 1",
+      "evidence": "# Specify constraints on individual features\naction_set[[\"age\", \"marital_status\"]].actionable = False # these features cannot or should not change\naction_set[\"years_since_last_default\"].ub = 100 # set maximum value of feature to 100\naction_set[\"years_since_last_default\"].step_direction = 1 # actions can only increase value\naction_set[\"years_since_last_default\"].step_ub = 1 # limit actions to changes value by 1",
+      "evidence_location": "62-66 (Quickstart)",
+      "confidence": "high",
+      "reason": "Provides concrete feature actionability, bound, direction, and step-size settings."
+    },
+    {
+      "field": "one_hot_encoding_constraint",
+      "value": "OneHotEncoding(names=[\"job_type_a\", \"job_type_b\", \"job_type_c\"])",
+      "normalized_value": "OneHotEncoding(names=[\"job_type_a\", \"job_type_b\", \"job_type_c\"])",
+      "evidence": "# Specify constraint to maintain one hot-encoding on `job_type`\naction_set.constraints.add(\n    constraint=OneHotEncoding(names=[\"job_type_a\", \"job_type_b\", \"job_type_c\"])\n)",
+      "evidence_location": "68-71 (Quickstart)",
+      "confidence": "high",
+      "reason": "Shows how the example preserves one-hot encoding for the categorical features."
+    },
+    {
+      "field": "directional_linkage_constraint",
+      "value": "DirectionalLinkage(\n        names=[\"years_since_last_default\", \"age\"], scales=[1, 1]\n    )",
+      "normalized_value": "DirectionalLinkage( names=[\"years_since_last_default\", \"age\"], scales=[1, 1] )",
+      "evidence": "# Specify deterministic causal relationships\n# if `years_since_last_default` increases, then `age` must increase commensurately\n# This will force `age` to change even though it is not immediately actionable\naction_set.constraints.add(\n    constraint=DirectionalLinkage(\n        names=[\"years_since_last_default\", \"age\"], scales=[1, 1]\n    )\n)",
+      "evidence_location": "73-79 (Quickstart)",
+      "confidence": "high",
+      "reason": "Documents the constraint used to link changes in years since default and age."
+    },
+    {
+      "field": "action_set_validation",
+      "value": "assert action_set.validate(X)",
+      "normalized_value": "assert action_set.validate(X)",
+      "evidence": "# Check that `ActionSet` is consistent with observed data\n# For example, if features must obey one-hot encoding, this should be the case for X\nassert action_set.validate(X)",
+      "evidence_location": "82-84 (Quickstart)",
+      "confidence": "high",
+      "reason": "Provides the documented consistency check for the action set and observed data."
+    },
+    {
+      "field": "reachable_database_generation",
+      "value": "db = ReachableSetDatabase(action_set, path=\"reachable_db.h5\")\ndb.generate(data, overwrite=True)",
+      "normalized_value": "db = ReachableSetDatabase(action_set, path=\"reachable_db.h5\") db.generate(data, overwrite=True)",
+      "evidence": "# Build a database of reachable sets for all points\ndb = ReachableSetDatabase(action_set, path=\"reachable_db.h5\") #database stored in file `./reachable_db.h5`\ndb.generate(data, overwrite=True)",
+      "evidence_location": "86-88 (Quickstart)",
+      "confidence": "medium",
+      "reason": "Documents the database construction and generation commands, but the quickstart uses `data` here while the feature matrix earlier is named `X`."
+    },
+    {
+      "field": "reachable_set_lookup",
+      "value": "x = data.iloc[0]\nreachable_set = db[x]",
+      "normalized_value": "x = data.iloc[0] reachable_set = db[x]",
+      "evidence": "# Pull reachable set for first point in dataset\nx = data.iloc[0]\nreachable_set = db[x]",
+      "evidence_location": "90-92 (Quickstart)",
+      "confidence": "medium",
+      "reason": "Shows how the reachable set for the first dataset point is retrieved, with the same documented `data` naming issue."
+    },
+    {
+      "field": "recourse_check",
+      "value": "np.any(clf.predict(reachable_set.X))",
+      "normalized_value": "np.any(clf.predict(reachable_set.X))",
+      "evidence": "Given a classifier `clf` with a predict method, you can test if a point has recourse as `np.any(clf.predict(reachable_set.X))`",
+      "evidence_location": "102 (Quickstart)",
+      "confidence": "high",
+      "reason": "Provides the documented classifier-based test for whether a point has recourse."
+    },
+    {
+      "field": "example_script_url",
+      "value": "https://github.com/ustunb/reachml/blob/main/research/iclr2024/scripts/setup_dataset_actionset_fico.py",
+      "normalized_value": "https://github.com/ustunb/reachml/blob/main/research/iclr2024/scripts/setup_dataset_actionset_fico.py",
+      "evidence": "For more examples, check out [this\nscript](https://github.com/ustunb/reachml/blob/main/research/iclr2024/scripts/setup_dataset_actionset_fico.py) which sets up the action set for the FICO dataset.",
+      "evidence_location": "104-105",
+      "confidence": "high",
+      "reason": "Links to a concrete example for configuring an action set on the FICO dataset."
+    },
+    {
+      "field": "paper_title",
+      "value": "Prediction without Preclusion",
+      "normalized_value": "Prediction without Preclusion",
+      "evidence": "For more about recourse verification, check out our paper ICLR 2024 spotlight paper: [Prediction without Preclusion](https://openreview.net/forum?id=SCQfYpdoGE)",
+      "evidence_location": "109 (Resources and Citation)",
+      "confidence": "high",
+      "reason": "Identifies the paper associated with the artifact."
+    },
+    {
+      "field": "paper_status",
+      "value": "ICLR 2024 spotlight paper",
+      "normalized_value": "ICLR 2024 spotlight paper",
+      "evidence": "For more about recourse verification, check out our paper ICLR 2024 spotlight paper: [Prediction without Preclusion](https://openreview.net/forum?id=SCQfYpdoGE)",
+      "evidence_location": "109 (Resources and Citation)",
+      "confidence": "high",
+      "reason": "States the paper's conference and spotlight status."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://openreview.net/forum?id=SCQfYpdoGE",
+      "normalized_value": "https://openreview.net/forum?id=SCQfYpdoGE",
+      "evidence": "For more about recourse verification, check out our paper ICLR 2024 spotlight paper: [Prediction without Preclusion](https://openreview.net/forum?id=SCQfYpdoGE)",
+      "evidence_location": "109 (Resources and Citation)",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated paper."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{kothari2024prediction,\n    title={Prediction without Preclusion: Recourse Verification with Reachable Sets},\n    author={Avni Kothari and Bogdan Kulynych and Tsui-Wei Weng and Berk Ustun},\n    booktitle={The Twelfth International Conference on Learning Representations},\n    year={2024},\n    url={https://openreview.net/forum?id=SCQfYpdoGE}\n}",
+      "normalized_value": "@inproceedings{kothari2024prediction, title={Prediction without Preclusion: Recourse Verification with Reachable Sets}, author={Avni Kothari and Bogdan Kulynych and Tsui-Wei Weng and Berk Ustun}, booktitle={The Twelfth International Conference on Learning Representations}, year={2024}, url={https://openreview.net/forum?id=SCQfYpdoGE} }",
+      "evidence": "```\n@inproceedings{kothari2024prediction,\n    title={Prediction without Preclusion: Recourse Verification with Reachable Sets},\n    author={Avni Kothari and Bogdan Kulynych and Tsui-Wei Weng and Berk Ustun},\n    booktitle={The Twelfth International Conference on Learning Representations},\n    year={2024},\n    url={https://openreview.net/forum?id=SCQfYpdoGE}\n}\n```",
+      "evidence_location": "112-120 (citation code block)",
+      "confidence": "high",
+      "reason": "Provides a reusable bibliographic citation for attribution."
+    },
+    {
+      "field": "research_code_url",
+      "value": "https://github.com/ustunb/reachml/tree/main/research/iclr2024/",
+      "normalized_value": "https://github.com/ustunb/reachml/tree/main/research/iclr2024/",
+      "evidence": "The code for the paper is available under [research/iclr2024](https://github.com/ustunb/reachml/tree/main/research/iclr2024/).",
+      "evidence_location": "122",
+      "confidence": "high",
+      "reason": "Links to the research code associated with the paper."
+    }
+  ]
+}

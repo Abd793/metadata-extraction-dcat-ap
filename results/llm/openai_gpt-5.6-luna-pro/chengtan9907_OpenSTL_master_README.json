@@ -1,0 +1,229 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "OpenSTL",
+      "normalized_value": "OpenSTL",
+      "evidence": "# OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning",
+      "evidence_location": "5; title",
+      "confidence": "high",
+      "reason": "Identifies the artifact by name."
+    },
+    {
+      "field": "description",
+      "value": "comprehensive benchmark for spatio-temporal predictive learning",
+      "normalized_value": "comprehensive benchmark for spatio-temporal predictive learning",
+      "evidence": "OpenSTL is a comprehensive benchmark for spatio-temporal predictive learning",
+      "evidence_location": "33; Introduction",
+      "confidence": "high",
+      "reason": "States the artifact's primary purpose."
+    },
+    {
+      "field": "application_domains",
+      "value": "synthetic moving object trajectories to real-world scenarios such as human motion, driving scenes, traffic flow, and weather forecasting",
+      "normalized_value": "synthetic moving object trajectories to real-world scenarios such as human motion, driving scenes, traffic flow, and weather forecasting",
+      "evidence": "ranging from synthetic moving object trajectories to real-world scenarios such as human motion, driving scenes, traffic flow, and weather forecasting.",
+      "evidence_location": "33; Introduction",
+      "confidence": "high",
+      "reason": "Summarizes the explicitly supported predictive-learning application domains."
+    },
+    {
+      "field": "implementation_variants",
+      "value": "PyTorch Lightning implementation [OpenSTL-Lightning](https://github.com/chengtan9907/OpenSTL/tree/OpenSTL-Lightning) (recommended) and naive PyTorch version [OpenSTL](https://github.com/chengtan9907/OpenSTL/tree/OpenSTL)",
+      "normalized_value": "PyTorch Lightning implementation [OpenSTL-Lightning](https://github.com/chengtan9907/OpenSTL/tree/OpenSTL-Lightning) (recommended) and naive PyTorch version [OpenSTL](https://github.com/chengtan9907/OpenSTL/tree/OpenSTL)",
+      "evidence": "We support PyTorch Lightning implementation [OpenSTL-Lightning](https://github.com/chengtan9907/OpenSTL/tree/OpenSTL-Lightning) (recommended) and naive PyTorch version [OpenSTL](https://github.com/chengtan9907/OpenSTL/tree/OpenSTL).",
+      "evidence_location": "33; Introduction",
+      "confidence": "high",
+      "reason": "Specifies the two available implementations and identifies the recommended one."
+    },
+    {
+      "field": "framework_layers",
+      "value": "core layer, algorithm layer, and user interface layer",
+      "normalized_value": "core layer, algorithm layer, and user interface layer",
+      "evidence": "The codebase is organized into three abstracted layers, namely the core layer, algorithm layer, and user interface layer, arranged from the bottom to the top.",
+      "evidence_location": "33; Introduction",
+      "confidence": "high",
+      "reason": "Describes the artifact's high-level software architecture."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/chengtan9907/OpenSTL",
+      "normalized_value": "https://github.com/chengtan9907/OpenSTL",
+      "evidence": "git clone https://github.com/chengtan9907/OpenSTL",
+      "evidence_location": "85; Installation",
+      "confidence": "high",
+      "reason": "Provides the source repository needed to obtain the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2306.11249",
+      "normalized_value": "https://arxiv.org/abs/2306.11249",
+      "evidence": "<a href=\"https://arxiv.org/abs/2306.11249\" alt=\"arXiv\">",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Links to the paper associated with the benchmark."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://openstl.readthedocs.io/en/latest/",
+      "normalized_value": "https://openstl.readthedocs.io/en/latest/",
+      "evidence": "[📘Documentation](https://openstl.readthedocs.io/en/latest/)",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Provides the primary documentation resource."
+    },
+    {
+      "field": "benchmark_url",
+      "value": "https://github.com/chengtan9907/OpenSTL/tree/master/docs/en/model_zoos",
+      "normalized_value": "https://github.com/chengtan9907/OpenSTL/tree/master/docs/en/model_zoos",
+      "evidence": "[benchmarks](https://github.com/chengtan9907/OpenSTL/tree/master/docs/en/model_zoos)",
+      "evidence_location": "138; Overview of Model Zoo and Datasets",
+      "confidence": "high",
+      "reason": "Links to benchmark documentation and results for STL datasets."
+    },
+    {
+      "field": "installation_commands",
+      "value": "git clone https://github.com/chengtan9907/OpenSTL\ncd OpenSTL\nconda env create -f environment.yml\nconda activate OpenSTL\npython setup.py develop",
+      "normalized_value": "git clone https://github.com/chengtan9907/OpenSTL cd OpenSTL conda env create -f environment.yml conda activate OpenSTL python setup.py develop",
+      "evidence": "```shell\ngit clone https://github.com/chengtan9907/OpenSTL\ncd OpenSTL\nconda env create -f environment.yml\nconda activate OpenSTL\npython setup.py develop\n```",
+      "evidence_location": "84-90; Installation",
+      "confidence": "high",
+      "reason": "Defines the documented environment creation and installation procedure."
+    },
+    {
+      "field": "dependencies",
+      "value": "argparse, dask, decord, fvcore, hickle, lpips, matplotlib, netcdf4, numpy, opencv-python, packaging, pandas, python<=3.10.8, scikit-image, scikit-learn, torch, timm, tqdm, xarray==0.19.0",
+      "normalized_value": "argparse, dask, decord, fvcore, hickle, lpips, matplotlib, netcdf4, numpy, opencv-python, packaging, pandas, python<=3.10.8, scikit-image, scikit-learn, torch, timm, tqdm, xarray==0.19.0",
+      "evidence": "* argparse\n* dask\n* decord\n* fvcore\n* hickle\n* lpips\n* matplotlib\n* netcdf4\n* numpy\n* opencv-python\n* packaging\n* pandas\n* python<=3.10.8\n* scikit-image\n* scikit-learn\n* torch\n* timm\n* tqdm\n* xarray==0.19.0",
+      "evidence_location": "95-113; Dependencies",
+      "confidence": "high",
+      "reason": "Lists the packages and explicit version constraints needed to reproduce the environment."
+    },
+    {
+      "field": "cli_entrypoints",
+      "value": "`tools/train.py` and `tools/test.py`",
+      "normalized_value": "`tools/train.py` and `tools/test.py`",
+      "evidence": "- `tools/` contains the executable python files `tools/train.py` and `tools/test.py` with possible arguments for training, validating, and testing pipelines.",
+      "evidence_location": "69; Code Structures",
+      "confidence": "high",
+      "reason": "Identifies the executable training, validation, and testing entrypoints."
+    },
+    {
+      "field": "training_example",
+      "value": "bash tools/prepare_data/download_mmnist.sh\npython tools/train.py -d mmnist --lr 1e-3 -c configs/mmnist/simvp/SimVP_gSTA.py --ex_name mmnist_simvp_gsta",
+      "normalized_value": "bash tools/prepare_data/download_mmnist.sh python tools/train.py -d mmnist --lr 1e-3 -c configs/mmnist/simvp/SimVP_gSTA.py --ex_name mmnist_simvp_gsta",
+      "evidence": "```shell\nbash tools/prepare_data/download_mmnist.sh\npython tools/train.py -d mmnist --lr 1e-3 -c configs/mmnist/simvp/SimVP_gSTA.py --ex_name mmnist_simvp_gsta\n```",
+      "evidence_location": "121-124; Getting Started",
+      "confidence": "high",
+      "reason": "Provides a concrete single-GPU SimVP+gSTA training reproduction command on Moving MNIST."
+    },
+    {
+      "field": "custom_data_tutorial",
+      "value": "`tutorial.ipynb` in the `examples/` directory",
+      "normalized_value": "`tutorial.ipynb` in the `examples/` directory",
+      "evidence": "For more details, please refer to the [`tutorial.ipynb`](examples/tutorial.ipynb) in the `examples/` directory.",
+      "evidence_location": "128; Tutorial on using Custom Data",
+      "confidence": "high",
+      "reason": "Points to the documented workflow for training, evaluating, and visualizing on custom data."
+    },
+    {
+      "field": "custom_data_colab_url",
+      "value": "https://colab.research.google.com/drive/19uShc-1uCcySrjrRP3peXf2RUNVzCjHh?usp=sharing",
+      "normalized_value": "https://colab.research.google.com/drive/19uShc-1uCcySrjrRP3peXf2RUNVzCjHh?usp=sharing",
+      "evidence": "<a href=\"https://colab.research.google.com/drive/19uShc-1uCcySrjrRP3peXf2RUNVzCjHh?usp=sharing\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>",
+      "evidence_location": "132; Tutorial on using Custom Data",
+      "confidence": "high",
+      "reason": "Provides an executable Colab demo for the custom-data tutorial."
+    },
+    {
+      "field": "dataset_preparation_resources",
+      "value": "https://github.com/chengtan9907/OpenSTL/tree/master/tools/prepare_data or https://pan.baidu.com/s/1fudsBHyrf3nbt-7d42YWWg?pwd=kjfk",
+      "normalized_value": "https://github.com/chengtan9907/OpenSTL/tree/master/tools/prepare_data or https://pan.baidu.com/s/1fudsBHyrf3nbt-7d42YWWg?pwd=kjfk",
+      "evidence": "* Spatiotemporal Predictive Learning Benchmarks ([prepare_data](https://github.com/chengtan9907/OpenSTL/tree/master/tools/prepare_data) or [Baidu Cloud](https://pan.baidu.com/s/1fudsBHyrf3nbt-7d42YWWg?pwd=kjfk)).",
+      "evidence_location": "180; Overview of Model Zoo and Datasets",
+      "confidence": "high",
+      "reason": "Identifies the documented dataset preparation and alternative download resources."
+    },
+    {
+      "field": "supported_methods",
+      "value": "ConvLSTM, PredRNN, PredRNN++, E3D-LSTM, MIM, PhyDNet, MAU, PredRNN.V2, SimVP, SimVP.V2, TAU, MMVP, SwinLSTM, WaST",
+      "normalized_value": "ConvLSTM, PredRNN, PredRNN++, E3D-LSTM, MIM, PhyDNet, MAU, PredRNN.V2, SimVP, SimVP.V2, TAU, MMVP, SwinLSTM, WaST",
+      "evidence": "    - [x] [ConvLSTM](https://arxiv.org/abs/1506.04214) (NeurIPS'2015)\n    - [x] [PredRNN](https://dl.acm.org/doi/abs/10.5555/3294771.3294855) (NeurIPS'2017)\n    - [x] [PredRNN++](https://arxiv.org/abs/1804.06300) (ICML'2018)\n    - [x] [E3D-LSTM](https://openreview.net/forum?id=B1lKS2AqtX) (ICLR'2018)\n    - [x] [MIM](https://arxiv.org/abs/1811.07490) (CVPR'2019)\n    - [x] [PhyDNet](https://arxiv.org/abs/2003.01460) (CVPR'2020)\n    - [x] [MAU](https://openreview.net/forum?id=qwtfY-3ibt7) (NeurIPS'2021)\n    - [x] [PredRNN.V2](https://arxiv.org/abs/2103.09504v4) (TPAMI'2022)\n    - [x] [SimVP](https://arxiv.org/abs/2206.05099) (CVPR'2022)\n    - [x] [SimVP.V2](https://arxiv.org/abs/2211.12509) (ArXiv'2022)\n    - [x] [TAU](https://arxiv.org/abs/2206.12126) (CVPR'2023)\n    - [x] [MMVP](https://arxiv.org/abs/2308.16154) (ICCV'2023)\n    - [x] [SwinLSTM](https://arxiv.org/abs/2308.09891) (ICCV'2023)\n    - [x] WaST (AAAI'2024)",
+      "evidence_location": "145-158; Currently supported methods",
+      "confidence": "high",
+      "reason": "Enumerates the spatiotemporal prediction methods explicitly marked as supported."
+    },
+    {
+      "field": "supported_metaformer_models",
+      "value": "ViT (Vision Transformer), Swin-Transformer, MLP-Mixer, ConvMixer, UniFormer, PoolFormer, ConvNeXt, VAN, IncepU (SimVP.V1), gSTA (SimVP.V2), HorNet, MogaNet",
+      "normalized_value": "ViT (Vision Transformer), Swin-Transformer, MLP-Mixer, ConvMixer, UniFormer, PoolFormer, ConvNeXt, VAN, IncepU (SimVP.V1), gSTA (SimVP.V2), HorNet, MogaNet",
+      "evidence": "    - [x] [ViT (Vision Transformer)](https://arxiv.org/abs/2010.11929) (ICLR'2021)\n    - [x] [Swin-Transformer](https://arxiv.org/abs/2103.14030) (ICCV'2021)\n    - [x] [MLP-Mixer](https://arxiv.org/abs/2105.01601) (NeurIPS'2021)\n    - [x] [ConvMixer](https://arxiv.org/abs/2201.09792) (Openreview'2021)\n    - [x] [UniFormer](https://arxiv.org/abs/2201.09450) (ICLR'2022)\n    - [x] [PoolFormer](https://arxiv.org/abs/2111.11418) (CVPR'2022)\n    - [x] [ConvNeXt](https://arxiv.org/abs/2201.03545) (CVPR'2022)\n    - [x] [VAN](https://arxiv.org/abs/2202.09741) (ArXiv'2022)\n    - [x] [IncepU (SimVP.V1)](https://arxiv.org/abs/2206.05099) (CVPR'2022)\n    - [x] [gSTA (SimVP.V2)](https://arxiv.org/abs/2211.12509) (ArXiv'2022)\n    - [x] [HorNet](https://arxiv.org/abs/2207.14284) (NeurIPS'2022)\n    - [x] [MogaNet](https://arxiv.org/abs/2211.03295) (ArXiv'2022)",
+      "evidence_location": "165-176; Currently supported MetaFormer models for SimVP",
+      "confidence": "high",
+      "reason": "Enumerates the supported MetaFormer architectures available for SimVP."
+    },
+    {
+      "field": "supported_datasets",
+      "value": "BAIR Robot Pushing, Human3.6M, KTH Action, KittiCaltech Pedestrian, Kinetics-400, Moving MNIST, Moving FMNIST, TaxiBJ, WeatherBench",
+      "normalized_value": "BAIR Robot Pushing, Human3.6M, KTH Action, KittiCaltech Pedestrian, Kinetics-400, Moving MNIST, Moving FMNIST, TaxiBJ, WeatherBench",
+      "evidence": "    - [x] [BAIR Robot Pushing](https://arxiv.org/abs/1710.05268) (CoRL'2017) [[download](https://sites.google.com/berkeley.edu/robotic-interaction-datasets)] [[config](configs/bair)]\n    - [x] [Human3.6M](http://vision.imar.ro/human3.6m/pami-h36m.pdf) (TPAMI'2014) [[download](http://vision.imar.ro/human3.6m/description.php)] [[config](configs/human)]\n    - [x] [KTH Action](https://ieeexplore.ieee.org/document/1334462) (ICPR'2004) [[download](https://www.csc.kth.se/cvap/actions/)] [[config](configs/kth)]\n    - [x] [KittiCaltech Pedestrian](https://dl.acm.org/doi/10.1177/0278364913491297) (IJRR'2013) [[download](https://www.dropbox.com/s/rpwlnn6j39jjme4/kitti_data.zip)] [[config](configs/kitticaltech)]\n    - [x] [Kinetics-400](https://arxiv.org/abs/1705.06950) (ArXiv'2017) [[download](https://deepmind.com/research/open-source/kinetics)] [[config](configs/kinetics)]\n    - [x] [Moving MNIST](http://arxiv.org/abs/1502.04681) (ICML'2015) [[download](http://www.cs.toronto.edu/~nitish/unsupervised_video/)] [[config](configs/mmnist)]\n    - [x] [Moving FMNIST](http://arxiv.org/abs/1502.04681) (ICML'2015) [[download](https://pan.baidu.com/s/1fudsBHyrf3nbt-7d42YWWg?pwd=kjfk)] [[config](configs/mfmnist)]\n    - [x] [TaxiBJ](https://arxiv.org/abs/1610.00081) (AAAI'2017) [[download](https://github.com/TolicWang/DeepST/tree/master/data/TaxiBJ)] [[config](configs/taxibj)]\n    - [x] [WeatherBench](https://arxiv.org/abs/2002.00469) (ArXiv'2020) [[download](https://github.com/pangeo-data/WeatherBench)] [[config](configs/weather)]",
+      "evidence_location": "185-193; Currently supported datasets",
+      "confidence": "high",
+      "reason": "Lists the benchmark datasets and indicates that each is supported."
+    },
+    {
+      "field": "latest_release",
+      "value": "2023-12-15: OpenSTL-Lightning (OpenSTL v1.0.0)",
+      "normalized_value": "2023-12-15: OpenSTL-Lightning (OpenSTL v1.0.0)",
+      "evidence": "[2023-12-15] [OpenSTL-Lightning](https://github.com/chengtan9907/OpenSTL/tree/OpenSTL-Lightning) (`OpenSTL` v1.0.0) is released.",
+      "evidence_location": "75; News and Updates",
+      "confidence": "high",
+      "reason": "Records the explicitly announced release and version."
+    },
+    {
+      "field": "publication_track",
+      "value": "NeurIPS 2023 Dataset and Benchmark Track",
+      "normalized_value": "NeurIPS 2023 Dataset and Benchmark Track",
+      "evidence": "[2023-09-23] The OpenSTL paper has been accepted by NeurIPS 2023 Dataset and Benchmark Track!",
+      "evidence_location": "77; News and Updates",
+      "confidence": "high",
+      "reason": "Provides the stated publication venue and track for the benchmark paper."
+    },
+    {
+      "field": "license",
+      "value": "Apache 2.0 license",
+      "normalized_value": "Apache 2.0 license",
+      "evidence": "This project is released under the [Apache 2.0 license](LICENSE). See `LICENSE` for more information.",
+      "evidence_location": "243; License",
+      "confidence": "high",
+      "reason": "States the license governing reuse of the project."
+    },
+    {
+      "field": "primary_citation_bibtex",
+      "value": "@inproceedings{tan2023openstl,\n  title={OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning},\n  author={Tan, Cheng and Li, Siyuan and Gao, Zhangyang and Guan, Wenfei and Wang, Zedong and Liu, Zicheng and Wu, Lirong and Li, Stan Z},\n  booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year={2023}\n}",
+      "normalized_value": "@inproceedings{tan2023openstl, title={OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning}, author={Tan, Cheng and Li, Siyuan and Gao, Zhangyang and Guan, Wenfei and Wang, Zedong and Liu, Zicheng and Wu, Lirong and Li, Stan Z}, booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track}, year={2023} }",
+      "evidence": "@inproceedings{tan2023openstl,\n  title={OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning},\n  author={Tan, Cheng and Li, Siyuan and Gao, Zhangyang and Guan, Wenfei and Wang, Zedong and Liu, Zicheng and Wu, Lirong and Li, Stan Z},\n  booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year={2023}\n}",
+      "evidence_location": "254-259; Citation",
+      "confidence": "high",
+      "reason": "Provides a directly reusable BibTeX citation for the primary OpenSTL paper."
+    },
+    {
+      "field": "organization",
+      "value": "CAIRI AI Lab",
+      "normalized_value": "CAIRI AI Lab",
+      "evidence": "OpenSTL is an open-source project for STL algorithms created by researchers in **CAIRI AI Lab**.",
+      "evidence_location": "247; Acknowledgement",
+      "confidence": "high",
+      "reason": "Identifies the research organization associated with the project."
+    },
+    {
+      "field": "contact_information",
+      "value": "- Siyuan Li (lisiyuan@westlake.edu.cn), Westlake University & Zhejiang University\n- Cheng Tan (tancheng@westlake.edu.cn), Westlake University & Zhejiang University\n- Zhangyang Gao (gaozhangyang@westlake.edu.cn), Westlake University & Zhejiang University",
+      "normalized_value": "- Siyuan Li (lisiyuan@westlake.edu.cn), Westlake University & Zhejiang University - Cheng Tan (tancheng@westlake.edu.cn), Westlake University & Zhejiang University - Zhangyang Gao (gaozhangyang@westlake.edu.cn), Westlake University & Zhejiang University",
+      "evidence": "- Siyuan Li (lisiyuan@westlake.edu.cn), Westlake University & Zhejiang University\n- Cheng Tan (tancheng@westlake.edu.cn), Westlake University & Zhejiang University\n- Zhangyang Gao (gaozhangyang@westlake.edu.cn), Westlake University & Zhejiang University",
+      "evidence_location": "286-288; Contribution and Contact",
+      "confidence": "high",
+      "reason": "Provides named project contacts and their stated affiliations."
+    }
+  ]
+}

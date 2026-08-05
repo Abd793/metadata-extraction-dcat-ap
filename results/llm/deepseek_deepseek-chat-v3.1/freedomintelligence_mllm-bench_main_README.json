@@ -1,0 +1,175 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "MLLM-Bench",
+      "normalized_value": "MLLM-Bench",
+      "evidence": "MLLM-Bench",
+      "evidence_location": "1-2",
+      "confidence": "high",
+      "reason": "Primary name of the artifact/project"
+    },
+    {
+      "field": "project_description",
+      "value": "Evaluating Multimodal LLMs with Per-sample Criteria",
+      "normalized_value": "Evaluating Multimodal LLMs with Per-sample Criteria",
+      "evidence": "MLLM-Bench: Evaluating Multimodal LLMs with Per-sample Criteria",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Clear statement of project purpose and scope"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2311.13951",
+      "normalized_value": "https://arxiv.org/abs/2311.13951",
+      "evidence": "https://arxiv.org/abs/2311.13951",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Link to associated research paper"
+    },
+    {
+      "field": "website_url",
+      "value": "https://mllm-bench.llmzoo.com/",
+      "normalized_value": "https://mllm-bench.llmzoo.com/",
+      "evidence": "https://mllm-bench.llmzoo.com/",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Link to project website"
+    },
+    {
+      "field": "huggingface_url",
+      "value": "huggingface.com",
+      "normalized_value": "huggingface.com",
+      "evidence": "huggingface.com",
+      "evidence_location": "9",
+      "confidence": "medium",
+      "reason": "Link to HuggingFace presence, though URL format is incomplete"
+    },
+    {
+      "field": "python_version",
+      "value": "Python 3.9+",
+      "normalized_value": "Python 3.9+",
+      "evidence": "Python 3.9+",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Required Python version for environment setup"
+    },
+    {
+      "field": "pytorch_version",
+      "value": "PyTorch 2.0+",
+      "normalized_value": "PyTorch 2.0+",
+      "evidence": "PyTorch 2.0+",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Required PyTorch version for environment setup"
+    },
+    {
+      "field": "transformers_version",
+      "value": "transformers 4.36.0.dev0+",
+      "normalized_value": "transformers 4.36.0.dev0+",
+      "evidence": "transformers 4.36.0.dev0+",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Required transformers library version"
+    },
+    {
+      "field": "accelerate_version",
+      "value": "accelerate 0.22+",
+      "normalized_value": "accelerate 0.22+",
+      "evidence": "accelerate 0.22+",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Required accelerate library version"
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "59-61",
+      "confidence": "high",
+      "reason": "Primary installation command for dependencies"
+    },
+    {
+      "field": "transformers_installation_command",
+      "value": "pip install git+https://github.com/huggingface/transformers",
+      "normalized_value": "pip install git+https://github.com/huggingface/transformers",
+      "evidence": "pip install git+https://github.com/huggingface/transformers",
+      "evidence_location": "64-65",
+      "confidence": "high",
+      "reason": "Specific installation command for transformers library"
+    },
+    {
+      "field": "hardware_precision_note",
+      "value": "We use `bf16` inference by default. If this is not supported by your device, set `downcast_bf16` to `false` and `mixed_precision` to `fp16`.",
+      "normalized_value": "We use `bf16` inference by default. If this is not supported by your device, set `downcast_bf16` to `false` and `mixed_precision` to `fp16`.",
+      "evidence": "We use `bf16` inference by default. If this is not supported by your device, set `downcast_bf16` to `false` and `mixed_precision` to `fp16`.",
+      "evidence_location": "74",
+      "confidence": "high",
+      "reason": "Important hardware compatibility information for inference"
+    },
+    {
+      "field": "answer_generation_script",
+      "value": "bash generate.sh",
+      "normalized_value": "bash generate.sh",
+      "evidence": "bash generate.sh",
+      "evidence_location": "81",
+      "confidence": "high",
+      "reason": "Command to run answer generation"
+    },
+    {
+      "field": "evaluation_script",
+      "value": "bash evaluate.sh",
+      "normalized_value": "bash evaluate.sh",
+      "evidence": "bash evaluate.sh",
+      "evidence_location": "95",
+      "confidence": "high",
+      "reason": "Command to run evaluation"
+    },
+    {
+      "field": "elo_rating_script",
+      "value": "cd scripts & bash evaluate4elo.sh",
+      "normalized_value": "cd scripts & bash evaluate4elo.sh",
+      "evidence": "cd scripts & bash evaluate4elo.sh",
+      "evidence_location": "97",
+      "confidence": "high",
+      "reason": "Command to calculate ELO ratings"
+    },
+    {
+      "field": "required_openai_model",
+      "value": "gpt-4-vision-preview",
+      "normalized_value": "gpt-4-vision-preview",
+      "evidence": "gpt-4-vision-preview",
+      "evidence_location": "93",
+      "confidence": "high",
+      "reason": "Specific OpenAI model required for evaluation"
+    },
+    {
+      "field": "citation",
+      "value": "@misc{ge2024mllmbench,\n      title={MLLM-Bench: Evaluating Multimodal LLMs with Per-sample Criteria}, \n      author={Wentao Ge and Shunian Chen and Guiming Hardy Chen and Zhihong Chen and Junying Chen and Shuo Yan and Chenghao Zhu and Ziyue Lin and Wenya Xie and Xinyi Zhang and Yichen Chai and Xiaoyu Liu and Nuo Chen and Dingjie Song and Xidong Wang and Anningzhe Gao and Zhiyi Zhang and Jianquan Li and Xiang Wan and Benyou Wang},\n      year={2024},\n      eprint={2311.13951},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL}\n}",
+      "normalized_value": "@misc{ge2024mllmbench, title={MLLM-Bench: Evaluating Multimodal LLMs with Per-sample Criteria}, author={Wentao Ge and Shunian Chen and Guiming Hardy Chen and Zhihong Chen and Junying Chen and Shuo Yan and Chenghao Zhu and Ziyue Lin and Wenya Xie and Xinyi Zhang and Yichen Chai and Xiaoyu Liu and Nuo Chen and Dingjie Song and Xidong Wang and Anningzhe Gao and Zhiyi Zhang and Jianquan Li and Xiang Wan and Benyou Wang}, year={2024}, eprint={2311.13951}, archivePrefix={arXiv}, primaryClass={cs.CL}}",
+      "evidence": "@misc{ge2024mllmbench,\n      title={MLLM-Bench: Evaluating Multimodal LLMs with Per-sample Criteria}, \n      author={Wentao Ge and Shunian Chen and Guiming Hardy Chen and Zhihong Chen and Junying Chen and Shuo Yan and Chenghao Zhu and Ziyue Lin and Wenya Xie and Xinyi Zhang and Yichen Chai and Xiaoyu Liu and Nuo Chen and Dingjie Song and Xidong Wang and Anningzhe Gao and Zhiyi Zhang and Jianquan Li and Xiang Wan and Benyou Wang},\n      year={2024},\n      eprint={2311.13951},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL}\n}",
+      "evidence_location": "108-117",
+      "confidence": "high",
+      "reason": "Complete citation information for the project"
+    },
+    {
+      "field": "evaluation_criteria",
+      "value": "Perception, Understanding, Applying, Analyzing, Evaluation, Creation",
+      "normalized_value": "Perception, Understanding, Applying, Analyzing, Evaluation, Creation",
+      "evidence": "| **Rank** | **Models**       | **Perception**  | **Understanding** | **Applying** | **Analyzing** | **Evaluation** | **Creation** |",
+      "evidence_location": "27-28",
+      "confidence": "high",
+      "reason": "List of evaluation criteria used in the benchmark"
+    },
+    {
+      "field": "submission_instructions_url",
+      "value": "https://mllm-bench.llmzoo.com/static/submit.html",
+      "normalized_value": "https://mllm-bench.llmzoo.com/static/submit.html",
+      "evidence": "https://mllm-bench.llmzoo.com/static/submit.html",
+      "evidence_location": "16,104",
+      "confidence": "high",
+      "reason": "Link to submission instructions for leaderboard participation"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "Ref-NMS",
+      "normalized_value": "Ref-NMS",
+      "evidence": "# Ref-NMS",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the project name as stated in the title header."
+    },
+    {
+      "field": "project_description",
+      "value": "Official codebase for AAAI 2021 paper [\"Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding\"](https://arxiv.org/abs/2009.01449).",
+      "normalized_value": "Official codebase for AAAI 2021 paper [\"Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding\"](https://arxiv.org/abs/2009.01449).",
+      "evidence": "Official codebase for AAAI 2021 paper [\"Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding\"](https://arxiv.org/abs/2009.01449).",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Describes the purpose and background context of the repository."
+    },
+    {
+      "field": "paper_title",
+      "value": "Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding",
+      "normalized_value": "Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding",
+      "evidence": "Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "The exact title of the associated research paper."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2009.01449",
+      "normalized_value": "https://arxiv.org/abs/2009.01449",
+      "evidence": "https://arxiv.org/abs/2009.01449",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Direct link to the research paper on arXiv."
+    },
+    {
+      "field": "publication_venue",
+      "value": "AAAI 2021",
+      "normalized_value": "AAAI 2021",
+      "evidence": "AAAI 2021",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Academic conference where the paper was published."
+    },
+    {
+      "field": "environment_file",
+      "value": "environment.yml",
+      "normalized_value": "environment.yml",
+      "evidence": "[environment.yml](environment.yml)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Reference to the Conda/YAML environment configuration file."
+    },
+    {
+      "field": "software_dependencies",
+      "value": "- python 3.7.6\n- pytorch 1.1.0\n- torchvision 0.3.0\n- tensorboard 2.1.0\n- spacy 2.2.3",
+      "normalized_value": "- python 3.7.6 - pytorch 1.1.0 - torchvision 0.3.0 - tensorboard 2.1.0 - spacy 2.2.3",
+      "evidence": "- python 3.7.6\n- pytorch 1.1.0\n- torchvision 0.3.0\n- tensorboard 2.1.0\n- spacy 2.2.3",
+      "evidence_location": "6-10",
+      "confidence": "high",
+      "reason": "Explicitly listed dependency software versions required to run the project."
+    },
+    {
+      "field": "data_preparation_command",
+      "value": "sh scripts/prepare_data.sh",
+      "normalized_value": "sh scripts/prepare_data.sh",
+      "evidence": "sh scripts/prepare_data.sh",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Command executed to set up the cache directory and prepare required dataset databases."
+    },
+    {
+      "field": "training_command",
+      "value": "PYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc",
+      "normalized_value": "PYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc",
+      "evidence": "PYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Command to train the model with binary cross-entropy loss."
+    },
+    {
+      "field": "training_command",
+      "value": "PYTHONPATH=$PWD python tools/train_att_rank.py --dataset refcoco --split-by unc",
+      "normalized_value": "PYTHONPATH=$PWD python tools/train_att_rank.py --dataset refcoco --split-by unc",
+      "evidence": "PYTHONPATH=$PWD python tools/train_att_rank.py --dataset refcoco --split-by unc",
+      "evidence_location": "34",
+      "confidence": "high",
+      "reason": "Command to train the model with ranking loss."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "PYTHONPATH=$PWD python tools/eval_proposal_hit_rate.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>",
+      "normalized_value": "PYTHONPATH=$PWD python tools/eval_proposal_hit_rate.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>",
+      "evidence": "PYTHONPATH=$PWD python tools/eval_proposal_hit_rate.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>",
+      "evidence_location": "48",
+      "confidence": "high",
+      "reason": "Command to evaluate recall hit rate on the referent object."
+    },
+    {
+      "field": "related_repository",
+      "value": "https://github.com/ChopinSharp/MAttNet",
+      "normalized_value": "https://github.com/ChopinSharp/MAttNet",
+      "evidence": "https://github.com/ChopinSharp/MAttNet",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Link to altered repository for MAttNet downstream evaluation."
+    },
+    {
+      "field": "related_repository",
+      "value": "https://github.com/ChopinSharp/CM-Erase-REG",
+      "normalized_value": "https://github.com/ChopinSharp/CM-Erase-REG",
+      "evidence": "https://github.com/ChopinSharp/CM-Erase-REG",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Link to altered repository for CM-A-E downstream evaluation."
+    },
+    {
+      "field": "pretrained_model_download_url",
+      "value": "https://drive.google.com/drive/folders/1BPqWW0LrAEBFna7b-ORF2TcrY7K_DDvM?usp=sharing",
+      "normalized_value": "https://drive.google.com/drive/folders/1BPqWW0LrAEBFna7b-ORF2TcrY7K_DDvM?usp=sharing",
+      "evidence": "https://drive.google.com/drive/folders/1BPqWW0LrAEBFna7b-ORF2TcrY7K_DDvM?usp=sharing",
+      "evidence_location": "79",
+      "confidence": "high",
+      "reason": "Google Drive URL providing pre-trained model weights and detection files."
+    },
+    {
+      "field": "pretrained_model_download_url",
+      "value": "https://pan.baidu.com/s/1G4k7APKSUs-_5StXoYaNrA",
+      "normalized_value": "https://pan.baidu.com/s/1G4k7APKSUs-_5StXoYaNrA",
+      "evidence": "https://pan.baidu.com/s/1G4k7APKSUs-_5StXoYaNrA",
+      "evidence_location": "79",
+      "confidence": "high",
+      "reason": "Baidu Disk URL providing pre-trained model weights and detection files."
+    },
+    {
+      "field": "baidu_disk_extraction_code",
+      "value": "5a9r",
+      "normalized_value": "5a9r",
+      "evidence": "extraction code: 5a9r",
+      "evidence_location": "79",
+      "confidence": "high",
+      "reason": "Access passcode required to extract downloadable files from Baidu Disk."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{chen2021ref,\n  title={Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding},\n  author={Chen, Long and Ma, Wenbo and Xiao, Jun and Zhang, Hanwang and Chang, Shih-Fu},\n  booktitle={AAAI},\n  year={2021}\n}",
+      "normalized_value": "@inproceedings{chen2021ref, title={Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding}, author={Chen, Long and Ma, Wenbo and Xiao, Jun and Zhang, Hanwang and Chang, Shih-Fu}, booktitle={AAAI}, year={2021} }",
+      "evidence": "```\n@inproceedings{chen2021ref,\n  title={Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding},\n  author={Chen, Long and Ma, Wenbo and Xiao, Jun and Zhang, Hanwang and Chang, Shih-Fu},\n  booktitle={AAAI},\n  year={2021}\n}\n```",
+      "evidence_location": "82-89",
+      "confidence": "high",
+      "reason": "BibTeX citation entry for referencing this work in academic literature."
+    }
+  ]
+}

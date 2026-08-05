@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "TAG-CF: Test-time Aggregation for CF",
+      "normalized_value": "TAG-CF: Test-time Aggregation for CF",
+      "evidence": "# TAG-CF: Test-time Aggregation for CF",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "This is the title of the repository/artifact as given in the top-level header."
+    },
+    {
+      "field": "paper_title",
+      "value": "How Does Message Passing Improve Collaborative Filtering?",
+      "normalized_value": "How Does Message Passing Improve Collaborative Filtering?",
+      "evidence": "Source code for the paper **[How Does Message Passing Improve Collaborative Filtering?](https://arxiv.org/abs/2404.08660)** accepted at NeurIPS 2024.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Names the paper this code accompanies, useful for citation and identification."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2404.08660",
+      "normalized_value": "https://arxiv.org/abs/2404.08660",
+      "evidence": "https://arxiv.org/abs/2404.08660",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Direct link to the paper on arXiv for access/reproducibility."
+    },
+    {
+      "field": "venue",
+      "value": "NeurIPS 2024",
+      "normalized_value": "NeurIPS 2024",
+      "evidence": "accepted at NeurIPS 2024.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "States the publication venue and year of the paper."
+    },
+    {
+      "field": "authors",
+      "value": "Mingxuan Ju, William Shiao, Zhichun Guo, Fanny Ye, Yozen Liu, Neil Shah and Tong Zhao",
+      "normalized_value": "Mingxuan Ju, William Shiao, Zhichun Guo, Fanny Ye, Yozen Liu, Neil Shah, Tong Zhao",
+      "evidence": ">by [Mingxuan Ju](https://scholar.google.com/citations?user=qNoO67AAAAAJ&hl=en&oi=ao), [William Shiao](https://scholar.google.com/citations?user=TIq-P5AAAAAJ&hl=en&oi=ao), [Zhichun Guo](https://scholar.google.com/citations?user=BOFfWR0AAAAJ&hl=en&oi=ao), [Fanny Ye](https://scholar.google.com/citations?user=egjr888AAAAJ&hl=en&oi=ao), [Yozen Liu](https://scholar.google.com/citations?user=i3U2JjEAAAAJ&hl=en&oi=ao), [Neil Shah](https://scholar.google.com/citations?user=Qut69OgAAAAJ&hl=en&oi=ao) and [Tong Zhao](https://scholar.google.com/citations?user=05cRc-MAAAAJ&hl=en&oi=ao).",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Lists the paper's authors, useful for attribution and citation."
+    },
+    {
+      "field": "description",
+      "value": "The paper proposes TAG-CF which is a test-time aggregation framework that can be utilized as a plug-and-play module to enhance the performance of matrix factorization models.",
+      "normalized_value": "The paper proposes TAG-CF which is a test-time aggregation framework that can be utilized as a plug-and-play module to enhance the performance of matrix factorization models.",
+      "evidence": "The paper proposes TAG-CF which is a test-time aggregation framework that can be utilized as a plug-and-play module to enhance the performance of matrix factorization models.",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Describes the purpose and functionality of the artifact (TAG-CF method)."
+    },
+    {
+      "field": "installation_command",
+      "value": "conda create --name <env> --file requirements.txt",
+      "normalized_value": "conda create --name <env> --file requirements.txt",
+      "evidence": "conda create --name <env> --file requirements.txt",
+      "evidence_location": "lines 11-13",
+      "confidence": "high",
+      "reason": "Explicit command for setting up the environment and installing dependencies."
+    },
+    {
+      "field": "dependency_file",
+      "value": "requirements.txt",
+      "normalized_value": "requirements.txt",
+      "evidence": "conda create --name <env> --file requirements.txt",
+      "evidence_location": "lines 11-13",
+      "confidence": "high",
+      "reason": "Names the dependency specification file used for installation."
+    },
+    {
+      "field": "data_download_instructions",
+      "value": "Please download the data following the [instruction](./dataset/README.md).",
+      "normalized_value": "Please download the data following the instruction (./dataset/README.md).",
+      "evidence": "Please download the data following the [instruction](./dataset/README.md).",
+      "evidence_location": "line 17",
+      "confidence": "high",
+      "reason": "Points to where dataset acquisition instructions can be found, necessary for reproducibility."
+    },
+    {
+      "field": "training_command",
+      "value": "make run_pipeline MODEL_YAML_PATH=config/MF.yaml DATA_YAML_PATH=config/bpr_ml.yaml",
+      "normalized_value": "make run_pipeline MODEL_YAML_PATH=config/MF.yaml DATA_YAML_PATH=config/bpr_ml.yaml",
+      "evidence": "# Train a basic matrix factorization model\nmake run_pipeline MODEL_YAML_PATH=config/MF.yaml DATA_YAML_PATH=config/bpr_ml.yaml",
+      "evidence_location": "lines 22-23",
+      "confidence": "high",
+      "reason": "Command to train a basic matrix factorization model, part of reproduction steps."
+    },
+    {
+      "field": "training_command",
+      "value": "make run_pipeline MODEL_YAML_PATH=config/LGCN.yaml DATA_YAML_PATH=config/bpr_ml.yaml",
+      "normalized_value": "make run_pipeline MODEL_YAML_PATH=config/LGCN.yaml DATA_YAML_PATH=config/bpr_ml.yaml",
+      "evidence": "# Train a LightGCN model.\nmake run_pipeline MODEL_YAML_PATH=config/LGCN.yaml DATA_YAML_PATH=config/bpr_ml.yaml",
+      "evidence_location": "lines 25-26",
+      "confidence": "high",
+      "reason": "Command to train a LightGCN model, an alternative baseline model in the reproduction pipeline."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "make run_pipeline MODEL_YAML_PATH=config/TAGCF_bpr_ml.yaml  DATA_YAML_PATH=config/bpr_ml.yaml",
+      "normalized_value": "make run_pipeline MODEL_YAML_PATH=config/TAGCF_bpr_ml.yaml DATA_YAML_PATH=config/bpr_ml.yaml",
+      "evidence": "# Conduct test-time aggregation on matrix factorization model.\nmake run_pipeline MODEL_YAML_PATH=config/TAGCF_bpr_ml.yaml  DATA_YAML_PATH=config/bpr_ml.yaml",
+      "evidence_location": "lines 28-29",
+      "confidence": "high",
+      "reason": "Command that applies the TAG-CF method (the core contribution) on a matrix factorization model, key reproduction step."
+    },
+    {
+      "field": "example_dataset",
+      "value": "Movielens-1M with BPR",
+      "normalized_value": "MovieLens-1M with BPR",
+      "evidence": "This is one example of reproducing results for Movielens-1M with BPR. Please use other provided config files to reproduce results for other datasets.",
+      "evidence_location": "line 20",
+      "confidence": "high",
+      "reason": "Specifies the dataset and training method used in the example reproduction commands."
+    },
+    {
+      "field": "config_folder",
+      "value": "./config",
+      "normalized_value": "./config",
+      "evidence": "We provide hyper-parameter configs in [the config folder](./config).",
+      "evidence_location": "line 33",
+      "confidence": "high",
+      "reason": "Points to the location of hyperparameter configuration files needed for reproduction."
+    },
+    {
+      "field": "benchmark_datasets",
+      "value": "Amazon-Book, Yelp-2018, Gowalla, MovieLens-1M",
+      "normalized_value": "Amazon-Book, Yelp-2018, Gowalla, MovieLens-1M",
+      "evidence": "||||Amazon-Book\n...||||Yelp-2018\n...||||Gowalla\n...||||MovieLens-1M",
+      "evidence_location": "lines 37-52",
+      "confidence": "high",
+      "reason": "Lists the benchmark datasets used for evaluating TAG-CF performance."
+    },
+    {
+      "field": "result_metric",
+      "value": "MovieLens-1M NDCG@10: BPR 0.1528 -> +TAGCF 0.1571 (2.82% improvement); DirectAU 0.1521 -> +TAGCF 0.2085 (37.03% improvement)",
+      "normalized_value": "MovieLens-1M NDCG@10: BPR 0.1528 -> +TAGCF 0.1571 (2.82%); DirectAU 0.1521 -> +TAGCF 0.2085 (37.03%)",
+      "evidence": "NDCG@10   | 0.1521 | 0.2085 | 37.03% | 0.1528 | 0.1571 | 2.82%",
+      "evidence_location": "line 55",
+      "confidence": "high",
+      "reason": "Concrete quantitative result showing performance improvement from applying TAG-CF, useful for benchmarking and reproduction verification."
+    },
+    {
+      "field": "citation",
+      "value": "@article{ju2024does,\n  title={How Does Message Passing Improve Collaborative Filtering?},\n  author={Ju, Mingxuan and Shiao, William and Guo, Zhichun and Ye, Yanfang and Liu, Yozen and Shah, Neil and Zhao, Tong},\n  journal={Advances in neural information processing systems},\n  year={2024}\n}",
+      "normalized_value": "@article{ju2024does, title={How Does Message Passing Improve Collaborative Filtering?}, author={Ju, Mingxuan and Shiao, William and Guo, Zhichun and Ye, Yanfang and Liu, Yozen and Shah, Neil and Zhao, Tong}, journal={Advances in neural information processing systems}, year={2024}}",
+      "evidence": "@article{ju2024does,\n  title={How Does Message Passing Improve Collaborative Filtering?},\n  author={Ju, Mingxuan and Shiao, William and Guo, Zhichun and Ye, Yanfang and Liu, Yozen and Shah, Neil and Zhao, Tong},\n  journal={Advances in neural information processing systems},\n  year={2024}\n}",
+      "evidence_location": "lines 62-67",
+      "confidence": "high",
+      "reason": "Provides the exact BibTeX citation for referencing this work."
+    },
+    {
+      "field": "contact_email",
+      "value": "mju@snap.com",
+      "normalized_value": "mju@snap.com",
+      "evidence": "Please contact mju@snap.com for any questions.",
+      "evidence_location": "line 71",
+      "confidence": "high",
+      "reason": "Provides a contact point for questions about the artifact, useful for reuse and support."
+    }
+  ]
+}

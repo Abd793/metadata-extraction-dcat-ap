@@ -1,0 +1,211 @@
+{
+  "metadata": [
+    {
+      "field": "paper_title",
+      "value": "\"Y-Autoencoders: disentangling latent representations via sequential-encoding\"",
+      "normalized_value": "\"Y-Autoencoders: disentangling latent representations via sequential-encoding\"",
+      "evidence": "*\"Y-Autoencoders: disentangling latent representations via sequential-encoding\"*, Massimiliano Patacchiola, Patrick Fox-Roberts, Edward Rosten. Pattern Recognition Letters, vol. 140, pp. 59-65. [[download paper from arxiv]](https://arxiv.org/pdf/1907.10949.pdf)",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Identifies the core research paper the artifact implements and provides a direct citation."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/pdf/1907.10949.pdf",
+      "normalized_value": "https://arxiv.org/pdf/1907.10949.pdf",
+      "evidence": "*\"Y-Autoencoders: disentangling latent representations via sequential-encoding\"*, Massimiliano Patacchiola, Patrick Fox-Roberts, Edward Rosten. Pattern Recognition Letters, vol. 140, pp. 59-65. [[download paper from arxiv]](https://arxiv.org/pdf/1907.10949.pdf)",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Provides the direct download link for the underlying research paper."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{patacchiola2020yautoencoders,\n  title={Y-Autoencoders: disentangling latent representations via sequential-encoding},\n  author={Patacchiola, Massimiliano and Fox-Roberts, Patrick and Rosten, Edward},\n  journal={Pattern Recognition Letters},\n  volume={140},\n  pages={59--65},\n  year={2020}\n}",
+      "normalized_value": "@article{patacchiola2020yautoencoders,\n  title={Y-Autoencoders: disentangling latent representations via sequential-encoding},\n  author={Patacchiola, Massimiliano and Fox-Roberts, Patrick and Rosten, Edward},\n  journal={Pattern Recognition Letters},\n  volume={140},\n  pages={59--65},\n  year={2020}\n}",
+      "evidence": "@article{patacchiola2020yautoencoders,\n  title={Y-Autoencoders: disentangling latent representations via sequential-encoding},\n  author={Patacchiola, Massimiliano and Fox-Roberts, Patrick and Rosten, Edward},\n  journal={Pattern Recognition Letters},\n  volume={140},\n  pages={59--65},\n  year={2020}\n}",
+      "evidence_location": "lines 12-21",
+      "confidence": "high",
+      "reason": "Provides the exact BibTeX citation for the paper, required for proper attribution."
+    },
+    {
+      "field": "purpose",
+      "value": "This code allows reproducing the quantitative results reported in the paper. In particular the ablation experiment (Section 3.2) and the comparison against baselines experiment (Section 3.3).",
+      "normalized_value": "This code allows reproducing the quantitative results reported in the paper. In particular the ablation experiment (Section 3.2) and the comparison against baselines experiment (Section 3.3).",
+      "evidence": "This code allows reproducing the quantitative results reported in the paper. In particular the ablation experiment (Section 3.2) and the comparison against baselines experiment (Section 3.3).",
+      "evidence_location": "lines 23-24",
+      "confidence": "high",
+      "reason": "Clearly states the artifact's purpose: to reproduce specific experiments from the paper."
+    },
+    {
+      "field": "tested_os",
+      "value": "Ubuntu 18.04.2 LTS",
+      "normalized_value": "Ubuntu 18.04.2 LTS",
+      "evidence": "The code has been tested on `Ubuntu 18.04.2 LTS`, with `Python 2.7` , `Tensorflow 1.10` and `Numpy 1.15.1`. In the test phase `OpenCV 3.4.3.18` and `Scikit-image 0.14.2` have been used to manipulate and visualize the samples.",
+      "evidence_location": "lines 28-29",
+      "confidence": "high",
+      "reason": "Specifies the operating system the artifact was tested on, essential for environment setup."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python 2.7",
+      "normalized_value": "Python 2.7",
+      "evidence": "The code has been tested on `Ubuntu 18.04.2 LTS`, with `Python 2.7` , `Tensorflow 1.10` and `Numpy 1.15.1`. In the test phase `OpenCV 3.4.3.18` and `Scikit-image 0.14.2` have been used to manipulate and visualize the samples.",
+      "evidence_location": "lines 28-29",
+      "confidence": "high",
+      "reason": "Identifies the specific Python version required, a key dependency."
+    },
+    {
+      "field": "dependencies",
+      "value": "Tensorflow 1.10, Numpy 1.15.1, OpenCV 3.4.3.18, scikit-image 0.14.2",
+      "normalized_value": "Tensorflow 1.10, Numpy 1.15.1, OpenCV 3.4.3.18, scikit-image 0.14.2",
+      "evidence": "The code has been tested on `Ubuntu 18.04.2 LTS`, with `Python 2.7` , `Tensorflow 1.10` and `Numpy 1.15.1`. In the test phase `OpenCV 3.4.3.18` and `Scikit-image 0.14.2` have been used to manipulate and visualize the samples.",
+      "evidence_location": "lines 28-29",
+      "confidence": "high",
+      "reason": "Lists the core ML/library dependencies and their specific versions needed for reproducibility."
+    },
+    {
+      "field": "tested_hardware",
+      "value": "GeForce GTX 1060",
+      "normalized_value": "GeForce GTX 1060",
+      "evidence": "Even though training and test have been performend on the GeForce GTX 1060, a GPU is not strictly required, but a decent amount of RAM may be necessary in order to load the model and the dataset.",
+      "evidence_location": "line会给 28-29",
+      "confidence": "high",
+      "reason": "Specifies the hardware used for testing and training, useful for performance expectations."
+    },
+    {
+      "field": "install_command_tensorflow_gpu",
+      "value": "pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.10.0-cp27-none-linux_x86_64.whl",
+      "normalized_value": "pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.10.0-cp27-none-linux_x86_64.whl",
+      "evidence": "pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.10.0-cp27-none-linux_x86_64.whl",
+      "evidence_location": "lines 38-40",
+      "confidence": "high",
+      "reason": "Provides the exact command to install the GPU version of a core dependency."
+    },
+    {
+      "field": "install_command_tensorflow_cpu",
+      "value": "pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.10.0-cp27-none-linux_x86_64.whl",
+      "normalized_value": "pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.10.0-cp27-none-linux_x86_64.whl",
+      "evidence": "pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.10.0-cp27-none-linux_x86_64.whl",
+      "evidence_location": "lines发放 44-46",
+      "confidence": "high",
+      "reason": "Provides the exact command to install the CPU version of a core dependency."
+    },
+    {
+      "field": "install_command_opencv",
+      "value": "pip install opencv-python==3.4.3",
+      "normalized_value": "pip install opencv-python==3.4.3",
+      "evidence": "pip install opencv-python==3.4.3",
+      "evidence_location": "line 51",
+      "confidence": "high",
+      "reason": "Provides the exact command to install a specific version of a required library."
+    },
+    {
+      "field": "install_command_scikit_image",
+      "value": "pip install scikit-image==0.14",
+      "normalized_value": "pip install scikit-image==0.14",
+      "evidence": "pip install scikit-image==0.14",
+      "evidence_location": "line 52",
+      "confidence": "high",
+      "reason": "Provides the exact command to install a specific version of a required library."
+    },
+    {
+      "field": "dataset_setup_command",
+      "value": "unzip ./datasets/mnist.zip -d ./datasets/",
+      "normalized_value": "unzip ./datasets/mnist.zip -d ./datasets/",
+      "evidence": "unzip ./datasets/mnist.zip -d ./datasets/",
+      "evidence_location": "lines 58-60",
+      "confidence": "high",
+      "reason": "Provides the command to prepare the included dataset, a necessary step for experiments."
+    },
+    {
+      "field": "dataset_description",
+      "value": "MNIST dataset is included in the package",
+      "normalized_value": "MNIST dataset is included in the package",
+      "evidence": "The MNIST dataset is included in the package but it must be unziped, on a Unix machine run the following command:",
+      "evidence_location": "lines 56-57",
+      "confidence": "high",
+      "reason": "Identifies the dataset used in the experiments and its availability."
+    },
+    {
+      "field": "training_script",
+      "value": "train.py",
+      "normalized_value": "train.py",
+      "evidence": "The file `train.py` allows training the architectures with given hyperparameters.",
+      "evidence_location": "line 67",
+      "confidence": "high",
+      "reason": "Names the main script for training, a key component for running the experiments."
+    },
+    {
+      "field": "default_training_hyperparameters",
+      "value": "number of epochs=100, learning rate=0.0001, implicit units=32, lambda explicit=1.0, lambda implicit=1.0",
+      "normalized_value": "number of epochs=100, learning rate=0.0001, implicit units=32, lambda explicit=1.0, lambda implicit=1.0",
+      "evidence": "By default those are set in agreement with the baseline condition reported in the paper: number of epochs=100, learning rate=0.0001, implicit units=32, lambda explicit=1.0, lambda implicit=1.0.",
+      "evidence_location": "lines 67-68",
+      "confidence": "high",
+      "reason": "Lists the default hyperparameter values used for the baseline model."
+    },
+    {
+      "field": "ablation_study_commands",
+      "value": "python train.py --arch=\"yae\" --lambda_e=0.0 --lambda_i=0.0\npython train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=0.0\npython train.py --arch=\"yae\" --lambda_e=0.0 --lambda_i=1.0\npython train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=1.0",
+      "normalized_value": "python train.py --arch=\"yae\" --lambda_e=0.0 --lambda_i=0.0\npython train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=0.0\npython train.py --arch=\"yae\" --lambda_e=0.0 --lambda_i=1.0\npython train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=1.0",
+      "evidence": "**Condition lambda_e=0.0 and lambda_i=0.0**\n\n```\npython train.py --arch=\"yae\" --lambda_e=0.0 --lambda_i=0.0\n```\n\n**Condition lambda_e=1.0 and lambda_i=0.0**\n\n```\npython train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=0.0\n```\n\n**Condition lambda_e=0.0 and lambda_i=1.0**\n\n```\npython train.py --arch=\"yae\" --lambda_e=0.0 --lambda_i=1.0\n```\n\n**Condition lambda_e=1.0 and lambda_i=1.0**\n\n```\npython train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=1.0\n```",
+      "evidence_location": "lines 73-95",
+      "confidence": "high",
+      "reason": "Provides the exact training commands to reproduce the ablation study, critical for replication."
+    },
+    {
+      "field": "baseline_comparison_commands",
+      "value": "python train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=1.0\npython train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=0.0\npython train.py --arch=\"cae\"\npython train.py --arch=\"cae\" --epochs=20 --implicit_units=16 --wdecay=0.0001\npython train.py --arch=\"aae\" --epochs=20 --implicit_units=16 --wdecay=0.0001\npython train.py --arch=\"vae\"\npython train.py --arch=\"vae\" --beta=2.0",
+      "normalized_value": "python train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=1.0\npython train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=0.0\npython train.py --arch=\"cae\"\npython train.py --arch=\"cae\" --epochs=20 --implicit_units=16 --wdecay=0.0001\npython train.py --arch=\"aae\" --epochs=20 --implicit_units=16 --wdecay=0.0001\npython train.py --arch=\"vae\"\npython train.py --arch=\"vae\" --beta=2.0",
+      "evidence": "**Y-AE**\n\n```\npython train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=1.0\n```\n\n**Y-AE + ablation**\n\n```\npython train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=0.0\n```\n\n**cAE**\n\n```\npython train.py --arch=\"cae\"\n```\n\n**cAE + regularization**\n\n```\npython train.py --arch=\"cae\" --epochs=20 --implicit_units=16 --wdecay=0.0001\n```\n\n**adversarial-AE + regularization**\n\n```\npython train.py --arch=\"aae\" --epochs=20 --implicit_units=16 --wdecay=0.0001\n```\n\n**VAE**\n\n```\npython train.py --arch=\"vae\"\n```\n\n**beta-VAE**\n\n```\npython train.py --arch=\"vae\" --beta=2.0\n```",
+      "evidence_location": "lines 101-141",
+      "confidence": "high",
+      "reason": "Provides the exact training commands to reproduce comparisons against baselines, critical for replication."
+    },
+    {
+      "field": "lenet_training_command",
+      "value": "python train.py --arch=\"lenet\" --epochs=30 --lrate=0.0001 --wdecay=0.0001",
+      "normalized_value": "python train.py --arch=\"lenet\" --epochs=30 --lrate=0.0001 --wdecay=0.0001",
+      "evidence": "```\npython train.py --arch=\"lenet\" --epochs=30 --lrate=0.0001 --wdecay=0.0001\n```",
+      "evidence_location": "lines 156-158",
+      "confidence": "high",
+      "reason": "Provides the command to train the LeNet classifier used in evaluation metrics."
+    },
+    {
+      "field": "test_script",
+      "value": "test.py",
+      "normalized_value": "test.py",
+      "evidence": "It is possible to load a pretrained model in order to measure the losses on the test set.\n\n```\npython test.py",
+      "evidence_location": "lines 169-172",
+      "confidence": "high",
+      "reason": "Names the main script for testing and evaluation."
+    },
+    {
+      "field": "metrics",
+      "value": "MSE and SSMI",
+      "normalized_value": "MSE and SSMI",
+      "evidence": "Given the artificial data generated in the previous step it is now possible to measure the internal MSE and SSMI.",
+      "evidence_location": "lines 193-194",
+      "confidence": "high",
+      "reason": "Identifies the specific metrics (MSE, SSMI) used for quantitative evaluation of the artifact."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "MIT License",
+      "evidence_location": "line 217",
+      "confidence": "high",
+      "reason": "Specifies the software license governing reuse and distribution."
+    },
+    {
+      "field": "copyright_holders",
+      "value": "Massimiliano Patacchiola, Patrick Fox-Roberts, Edward Rosten",
+      "normalized_value": "Massimiliano Patacchiola, Patrick Fox-Roberts, Edward Rosten",
+      "evidence": "Copyright (c) 2019 Massimiliano Patacchiola, Patrick Fox-Roberts, Edward Rosten",
+      "evidence_location": "line 219",
+      "confidence": "high",
+      "reason": "Identifies the copyright holders, important for attribution and legal compliance."
+    }
+  ]
+}

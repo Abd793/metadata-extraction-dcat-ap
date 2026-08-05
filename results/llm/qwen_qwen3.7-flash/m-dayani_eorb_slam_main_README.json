@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "EORB-SLAM",
+      "normalized_value": "EORB-SLAM",
+      "evidence": "# EORB-SLAM: An Event-based ORB-SLAM",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the main heading."
+    },
+    {
+      "field": "description",
+      "value": "This project is a feature-based odometry/SLAM algorithm that is used to estimate the 6DoF pose of a robot and reconstruct the 3D point cloud of the scene using a variety of sensors.",
+      "normalized_value": "This project is a feature-based odometry/SLAM algorithm that is used to estimate the 6DoF pose of a robot and reconstruct the 3D point cloud of the scene using a variety of sensors.",
+      "evidence": "This project is a feature-based odometry/SLAM algorithm that is used to estimate the 6DoF pose of a robot and reconstruct the 3D point cloud of the scene using a variety of sensors.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Clearly defines the core purpose and functionality of the software."
+    },
+    {
+      "field": "base_project",
+      "value": "ORB-SLAM",
+      "normalized_value": "ORB-SLAM",
+      "evidence": "This project is built on an older version of the [ORB-SLAM](https://github.com/UZ-SLAMLab/ORB_SLAM3) algorithm.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the foundational open-source algorithm this extension modifies."
+    },
+    {
+      "field": "supported_sensors",
+      "value": "monocular DAVIS event camera",
+      "normalized_value": "monocular DAVIS event camera",
+      "evidence": "It extends ORB-SLAM, which allows simultaneous localization and mapping using a monocular [DAVIS event camera](https://en.wikipedia.org/wiki/Event_camera).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Specifies the primary hardware sensor type the algorithm is designed to process."
+    },
+    {
+      "field": "supported_modes",
+      "value": "Event-only, Event-IMU, Event-Image, and Event-Image-IMU",
+      "normalized_value": "Event-only, Event-IMU, Event-Image, and Event-Image-IMU",
+      "evidence": "In addition to the configurations in the original work, this project supports Event-only, Event-IMU, Event-Image, and Event-Image-IMU modes.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Lists the distinct operational configuration modes available for different sensor setups."
+    },
+    {
+      "field": "reference_paper_url",
+      "value": "https://arxiv.org/abs/2301.00618",
+      "normalized_value": "https://arxiv.org/abs/2301.00618",
+      "evidence": "Please refer to [this article](https://arxiv.org/abs/2301.00618) for an explanation of the event-based configuration (no image).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides the direct link to the associated academic publication for technical details and citation."
+    },
+    {
+      "field": "operating_system",
+      "value": "Ubuntu 20.04 LTS",
+      "normalized_value": "Ubuntu 20.04 LTS",
+      "evidence": "These instructions are for Ubuntu 20.04 LTS.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Specifies the target Linux distribution and version for installation and execution."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "about 16 GB RAM",
+      "normalized_value": "about 16 GB RAM",
+      "evidence": "A successful build requires a stable internet connection (downloads more than 2 GB of data!) and a powerful machine with about 16 GB RAM.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "States the minimum memory requirement needed to successfully build the project."
+    },
+    {
+      "field": "programming_language",
+      "value": "C++11 or C++0x",
+      "normalized_value": "C++11 or C++0x",
+      "evidence": "### C++11 or C++0x Compiler",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Indicates the required compiler standard and language version for the codebase."
+    },
+    {
+      "field": "dependencies",
+      "value": "Pangolin, Eigen3, Ceres-solver 1.14, Boost, OpenCV 3.4.1, ROS (optional)",
+      "normalized_value": "Pangolin, Eigen3, Ceres-solver 1.14, Boost, OpenCV 3.4.1, ROS (optional)",
+      "evidence": "### Pangolin\n\n[Pangolin project page](https://github.com/stevenlovegrove/Pangolin)\n\n### Eigen3\n\n`sudo apt install libeigen3-dev`\n\n### Ceres-solver 1.14\n\nFollow [these steps](http://ceres-solver.org/installation.html) to install Ceres-solver 1.14.\n\n### Boost\n\n`sudo apt-get install -y libboost-all-dev`\n\n### The OpenCV hell!\n\nFollow the steps in [Install OpenCV-3.4.1 with CUDA](https://gist.github.com/raulqf/a3caa97db3f8760af33266a1475d0e5e) and [Install OpenCV-3.4.1 on Ubuntu 17.10](https://gist.github.com/okanon/c09669f3ff3351c864742bc2754b01ea) to install `OpenCV 3.4.1` on your machine.\n\n### ROS (optional)",
+      "evidence_location": "27-49",
+      "confidence": "high",
+      "reason": "Compiles all explicitly named third-party libraries and frameworks required for compilation."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/m-dayani/EORB_SLAM.git",
+      "normalized_value": "https://github.com/m-dayani/EORB_SLAM.git",
+      "evidence": "git clone https://github.com/m-dayani/EORB_SLAM.git",
+      "evidence_location": "56",
+      "confidence": "high",
+      "reason": "Direct URL to the source code repository for cloning."
+    },
+    {
+      "field": "installation_commands",
+      "value": "```bash\ngit clone https://github.com/m-dayani/EORB_SLAM.git\ncd EORB_SLAM\n\nmkdir build\ncd build\ncmake ..\nmake -j4\n```",
+      "normalized_value": "git clone https://github.com/m-dayani/EORB_SLAM.git cd EORB_SLAM mkdir build cd build cmake .. make -j4",
+      "evidence": "```bash\ngit clone https://github.com/m-dayani/EORB_SLAM.git\ncd EORB_SLAM\n\nmkdir build\ncd build\ncmake ..\nmake -j4\n```",
+      "evidence_location": "55-63",
+      "confidence": "high",
+      "reason": "Provides the exact sequential commands to clone, configure, and compile the project from source."
+    },
+    {
+      "field": "alternative_setup_methods",
+      "value": "bash script (build_eorb_slam.sh) and a Docker file",
+      "normalized_value": "bash script (build_eorb_slam.sh) and a Docker file",
+      "evidence": "To make life easier for you, I included a bash script (`build_eorb_slam.sh`) and a Docker file that contains all the necessary commands to download and install the required packages.",
+      "evidence_location": "65",
+      "confidence": "high",
+      "reason": "Indicates automated setup options available to simplify dependency management and installation."
+    },
+    {
+      "field": "dataset_links",
+      "value": "https://rpg.ifi.uzh.ch/davis_data.html, https://daniilidis-group.github.io/mvsec/, https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets",
+      "normalized_value": "https://rpg.ifi.uzh.ch/davis_data.html https://daniilidis-group.github.io/mvsec/ https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets",
+      "evidence": "- [The Public Event dataset](https://rpg.ifi.uzh.ch/davis_data.html)\n    - [The MVSEC dataset](https://daniilidis-group.github.io/mvsec/)\n2. You can also use a non-event-based dataset to explore the visual and inertial modes:\n    - [The EuRoC dataset](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets)",
+      "evidence_location": "70-73",
+      "confidence": "high",
+      "reason": "Lists external benchmark datasets recommended for testing and evaluating the algorithm."
+    },
+    {
+      "field": "usage_command",
+      "value": "./Examples/Event/fmt_ev_ethz ./Examples/Event/EvETHZ.yaml",
+      "normalized_value": "./Examples/Event/fmt_ev_ethz ./Examples/Event/EvETHZ.yaml",
+      "evidence": "  `./Examples/Event/fmt_ev_ethz ./Examples/Event/EvETHZ.yaml`",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Shows a concrete example command for executing the algorithm with a specific dataset and configuration file."
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Scaffolding Learning Regime (SLR)",
+      "normalized_value": "Scaffolding Learning Regime (SLR)",
+      "evidence": "# Scaffolding Learning Regime (SLR)",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Names the artifact, essential for identification and indexing."
+    },
+    {
+      "field": "description",
+      "value": "A PyTorch implementation of the Scaffolding Learning Regime (SLR) for training obstacle detection models for aquatic domains.",
+      "normalized_value": "A PyTorch implementation of the Scaffolding Learning Regime (SLR) for training obstacle detection models for aquatic domains.",
+      "evidence": "A PyTorch implementation of the Scaffolding Learning Regime (SLR) for training obstacle detection models for aquatic domains.",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Summarizes the artifact's purpose and framework."
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "A PyTorch implementation of the Scaffolding Learning Regime (SLR) for training obstacle detection models for aquatic domains.",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Identifies the deep learning framework required to use the code."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2206.13263",
+      "normalized_value": "https://arxiv.org/abs/2206.13263",
+      "evidence": "[![paper](https://img.shields.io/badge/paper-52b69a?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2206.13263)",
+      "evidence_location": "line 3, badge",
+      "confidence": "high",
+      "reason": "Direct link to the associated paper for citation and further reading."
+    },
+    {
+      "field": "presentation_url",
+      "value": "https://www.youtube.com/watch?v=F4sLbbMsoHw",
+      "normalized_value": "https://www.youtube.com/watch?v=F4sLbbMsoHw",
+      "evidence": "[![presentation](https://img.shields.io/badge/presentation-168aad?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=F4sLbbMsoHw)",
+      "evidence_location": "line 5, badge",
+      "confidence": "high",
+      "reason": "Link to a video presentation of the work."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/lojzezust/SLR",
+      "normalized_value": "https://github.com/lojzezust/SLR",
+      "evidence": "git clone https://github.com/lojzezust/SLR",
+      "evidence_location": "line 39, Installation code block",
+      "confidence": "high",
+      "reason": "Canonical repository URL needed to obtain the code."
+    },
+    {
+      "field": "publication_venue",
+      "value": "Sensors",
+      "normalized_value": "Sensors",
+      "evidence": "**November 2022**: Published in Sensors.",
+      "evidence_location": "line 16",
+      "confidence": "high",
+      "reason": "Identifies the journal where the work was published."
+    },
+    {
+      "field": "prior_presentation",
+      "value": "Preliminary version presented at WACV 2022",
+      "normalized_value": "Preliminary version presented at WACV 2022",
+      "evidence": "**January 2022**: Preliminary version presented at WACV 2022.",
+      "evidence_location": "line 17",
+      "confidence": "high",
+      "reason": "Documents the earlier conference version of the work."
+    },
+    {
+      "field": "method_summary",
+      "value": "SLR is a method for training semantic segmentation models for maritime obstacle detection using only weak annotations (obstacle bounding boxes and water-edge poly-line).",
+      "normalized_value": "SLR is a method for training semantic segmentation models for maritime obstacle detection using only weak annotations (obstacle bounding boxes and water-edge poly-line).",
+      "evidence": "Scaffolding Learning Regime (SLR) is a method for training semantic segmentation models for maritime obstacle detection using only weak annotations (obstacle bounding boxes and water-edge poly-line).",
+      "evidence_location": "line 21, About SLR section",
+      "confidence": "high",
+      "reason": "Describes the task, method type, and supervision signal, key for scientific indexing."
+    },
+    {
+      "field": "annotation_time_reduction",
+      "value": "20x",
+      "normalized_value": "20x",
+      "evidence": "Despite a **signifficant reduction in annotation time (20x)**, SLR training **improves robustness** of networks for obstacle detection, which is a remarkable result.",
+      "evidence_location": "line 21, About SLR section",
+      "confidence": "high",
+      "reason": "Concrete quantitative claim about annotation cost savings."
+    },
+    {
+      "field": "method_steps",
+      "value": "1) warm-up using object-wise and global objectives derived from weak annotations and IMU; 2) estimate pseudo labels from learned encoder features and model predictions; 3) fine-tune the network on the estimated pseudo labels",
+      "normalized_value": "1) warm-up using object-wise and global objectives derived from weak annotations and IMU; 2) estimate pseudo labels from learned encoder features and model predictions; 3) fine-tune the network on the estimated pseudo labels",
+      "evidence": "SLR is comprised of three steps.\n1) The model is warmed-up using object-wise and global objectives derived from weak annotations and IMU.\n2) he learned encoder features and model predictions are used to estimate the pseudo labels.\n3) The network is fine-tuned on the estimated pseudo labels.",
+      "evidence_location": "lines 25-28, About SLR section",
+      "confidence": "high",
+      "reason": "Describes the pipeline structure needed to understand and reproduce the method."
+    },
+    {
+      "field": "installation_command",
+      "value": "git clone https://github.com/lojzezust/SLR && cd SLR && pip install -r requirements.txt && pip install -e .",
+      "normalized_value": "git clone https://github.com/lojzezust/SLR && cd SLR && pip install -r requirements.txt && pip install -e .",
+      "evidence": "1. Clone the repository\n    ```bash\n    git clone https://github.com/lojzezust/SLR\n    cd SLR\n    ```\n2. Install the requirements\n    ```bash\n    pip install -r requirements.txt\n    ```\n3. Install SLR. Use the `-e` flag if you want to make changes.\n    ```bash\n    pip install -e .\n    ```",
+      "evidence_location": "lines 37-49, Installation section",
+      "confidence": "high",
+      "reason": "Defines the installation steps required to set up the artifact."
+    },
+    {
+      "field": "training_dataset",
+      "value": "MaSTr1325 dataset",
+      "normalized_value": "MaSTr1325 dataset",
+      "evidence": "1. Download the [MaSTr1325 dataset](https://box.vicos.si/borja/viamaro/index.html) and corresponding [weak annotations](https://github.com/lojzezust/SLR/releases/download/weights_v2/mastr_slr.zip).",
+      "evidence_location": "line 58, Preparing the data section",
+      "confidence": "high",
+      "reason": "Names the dataset required for training, with download links."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://box.vicos.si/borja/viamaro/index.html",
+      "normalized_value": "https://box.vicos.si/borja/viamaro/index.html",
+      "evidence": "[MaSTr1325 dataset](https://box.vicos.si/borja/viamaro/index.html)",
+      "evidence_location": "line 58, Preparing the data section",
+      "confidence": "high",
+      "reason": "Download link for the training dataset."
+    },
+    {
+      "field": "weak_annotations_url",
+      "value": "https://github.com/lojzezust/SLR/releases/download/weights_v2/mastr_slr.zip",
+      "normalized_value": "https://github.com/lojzezust/SLR/releases/download/weights_v2/mastr_slr.zip",
+      "evidence": "[weak annotations](https://github.com/lojzezust/SLR/releases/download/weights_v2/mastr_slr.zip)",
+      "evidence_location": "line 58, Preparing the data section",
+      "confidence": "high",
+      "reason": "Download link for the weak annotations required by the method."
+    },
+    {
+      "field": "data_preparation_command",
+      "value": "python tools/prepare_data.py",
+      "normalized_value": "python tools/prepare_data.py",
+      "evidence": "    ```bash\n    python tools/prepare_data.py\n    ```",
+      "evidence_location": "lines 60-62, Preparing the data section",
+      "confidence": "high",
+      "reason": "Command to prepare the dataset for training."
+    },
+    {
+      "field": "training_command",
+      "value": "chmod +x tools/train_slr.sh && tools/train_slr.sh",
+      "normalized_value": "chmod +x tools/train_slr.sh && tools/train_slr.sh",
+      "evidence": "```bash\nchmod +x tools/train_slr.sh\ntools/train_slr.sh\n```",
+      "evidence_location": "lines 74-77, SLR Training section",
+      "confidence": "high",
+      "reason": "Command to run the full SLR training pipeline."
+    },
+    {
+      "field": "training_configuration_variables",
+      "value": "MASTR_DIR, ARCHITECTURE, MODEL_NAME, BATCH_SIZE, WARMUP_EPOCHS, FINETUNE_EPOCHS, NUM_ITER",
+      "normalized_value": "MASTR_DIR, ARCHITECTURE, MODEL_NAME, BATCH_SIZE, WARMUP_EPOCHS, FINETUNE_EPOCHS, NUM_ITER",
+      "evidence": "- `MASTR_DIR`: Location of the dataset used for training.\n- `ARCHITECTURE`: Which architecture to use (use `python tools/train.py warmup --help` for more info).\n- `MODEL_NAME`: Name of the model. Used for saving logs and weights.\n- `BATCH_SIZE`: Batch size per gpu.\n- `WARMUP_EPOCHS`: Number of epochs for the warm-up phase.\n- `FINETUNE_EPOCHS`: Number of epochs for the fine-tuning phase.\n- `NUM_ITER`: Number of iterations of the SLR pseudo label estimation and fine-tuning.",
+      "evidence_location": "lines 81-87, SLR Training section",
+      "confidence": "high",
+      "reason": "Lists configurable variables for reproducing or customizing training."
+    },
+    {
+      "field": "warmup_command",
+      "value": "export CUDA_VISIBLE_DEVICES=0,1; python tools/train.py warmup --architecture wasr_resnet101_imu --model-name wasr_slr_warmup --batch-size 4",
+      "normalized_value": "export CUDA_VISIBLE_DEVICES=0,1; python tools/train.py warmup --architecture wasr_resnet101_imu --model-name wasr_slr_warmup --batch-size 4",
+      "evidence": "```bash\nexport CUDA_VISIBLE_DEVICES=0,1\npython tools/train.py warmup \\\n--architecture wasr_resnet101_imu \\\n--model-name wasr_slr_warmup \\\n--batch-size 4\n```",
+      "evidence_location": "lines 96-102, Step I: Feature warm-up section",
+      "confidence": "high",
+      "reason": "Command for the first training step (feature warm-up)."
+    },
+    {
+      "field": "pseudo_label_generation_command",
+      "value": "export CUDA_VISIBLE_DEVICES=0,1; python tools/generate_pseudo_labels.py --architecture wasr_resnet101_imu --weights-file output/logs/wasr_slr_warmup/version_0/checkpoints/last.ckpt --output-dir output/pseudo_labels/wasr_slr_warmup_v0",
+      "normalized_value": "export CUDA_VISIBLE_DEVICES=0,1; python tools/generate_pseudo_labels.py --architecture wasr_resnet101_imu --weights-file output/logs/wasr_slr_warmup/version_0/checkpoints/last.ckpt --output-dir output/pseudo_labels/wasr_slr_warmup_v0",
+      "evidence": "```bash\nexport CUDA_VISIBLE_DEVICES=0,1\npython tools/generate_pseudo_labels.py \\\n--architecture wasr_resnet101_imu \\\n--weights-file output/logs/wasr_slr_warmup/version_0/checkpoints/last.ckpt \\\n--output-dir output/pseudo_labels/wasr_slr_warmup_v0\n```",
+      "evidence_location": "lines 110-116, Step II: Generate pseudo labels section",
+      "confidence": "high",
+      "reason": "Command for the second pipeline step (pseudo-label generation)."
+    },
+    {
+      "field": "finetune_command",
+      "value": "export CUDA_VISIBLE_DEVICES=0,1; python tools/train.py finetune --architecture wasr_resnet101_imu --model-name wasr_slr --batch-size 4 --pretrained-weights output/logs/wasr_slr_warmup/version_0/checkpoints/last.ckpt --mask-dir output/pseudo_labels/wasr_slr_warmup_v0",
+      "normalized_value": "export CUDA_VISIBLE_DEVICES=0,1; python tools/train.py finetune --architecture wasr_resnet101_imu --model-name wasr_slr --batch-size 4 --pretrained-weights output/logs/wasr_slr_warmup/version_0/checkpoints/last.ckpt --mask-dir output/pseudo_labels/wasr_slr_warmup_v0",
+      "evidence": "```bash\nexport CUDA_VISIBLE_DEVICES=0,1\npython tools/train.py finetune \\\n--architecture wasr_resnet101_imu \\\n--model-name wasr_slr \\\n--batch-size 4 \\\n--pretrained-weights output/logs/wasr_slr_warmup/version_0/checkpoints/last.ckpt \\\n--mask-dir output/pseudo_labels/wasr_slr_warmup_v0\n```",
+      "evidence_location": "lines 128-136, Step III: Fine-tune model section",
+      "confidence": "high",
+      "reason": "Command for the third pipeline step (fine-tuning on pseudo labels)."
+    },
+    {
+      "field": "inference_command",
+      "value": "export CUDA_VISIBLE_DEVICES=0,1; python tools/general_inference.py --architecture wasr_resnet101 --weights-file output/logs/wasr_slr_v2_it1/version_0/checkpoints/last.ckpt --image-dir data/example_dir --output-dir output/predictions/test_predictions",
+      "normalized_value": "export CUDA_VISIBLE_DEVICES=0,1; python tools/general_inference.py --architecture wasr_resnet101 --weights-file output/logs/wasr_slr_v2_it1/version_0/checkpoints/last.ckpt --image-dir data/example_dir --output-dir output/predictions/test_predictions",
+      "evidence": "```bash\nexport CUDA_VISIBLE_DEVICES=0,1\npython tools/general_inference.py \\\n--architecture wasr_resnet101 \\\n--weights-file output/logs/wasr_slr_v2_it1/version_0/checkpoints/last.ckpt \\\n--image-dir data/example_dir \\\n--output-dir output/predictions/test_predictions\n```",
+      "evidence_location": "lines 147-154, General inference section",
+      "confidence": "high",
+      "reason": "Command to run inference with a trained model."
+    },
+    {
+      "field": "evaluation_benchmark",
+      "value": "MODS benchmark",
+      "normalized_value": "MODS benchmark",
+      "evidence": "`tools/mods_inference.py` can be used in a similar fashion to run inference on the MODS benchmark.",
+      "evidence_location": "line 166, MODS inference section",
+      "confidence": "high",
+      "reason": "Names the benchmark used for evaluation."
+    },
+    {
+      "field": "evaluation_benchmark_url",
+      "value": "https://github.com/bborja/mods_evaluation",
+      "normalized_value": "https://github.com/bborja/mods_evaluation",
+      "evidence": "evaluated on the [MODS benchmark](https://github.com/bborja/mods_evaluation)",
+      "evidence_location": "line 173, Pretrained models section",
+      "confidence": "high",
+      "reason": "Link to the evaluation benchmark repository."
+    },
+    {
+      "field": "evaluation_metric",
+      "value": "F1 obstacle detection scores reported overall and within the 15m critical danger zone around the boat",
+      "normalized_value": "F1 obstacle detection scores reported overall and within the 15m critical danger zone around the boat",
+      "evidence": "F1 obstacle detection scores are reported overall and separately within the 15m critical danger zone around the boat.",
+      "evidence_location": "line 175, Pretrained models section",
+      "confidence": "high",
+      "reason": "Defines the evaluation metrics used to report results."
+    },
+    {
+      "field": "pretrained_model",
+      "value": "wasr_resnet101 (ResNet-101 backbone, no IMU): F1 94.4, F1_D 92.0",
+      "normalized_value": "wasr_resnet101 (ResNet-101 backbone, no IMU): F1 94.4, F1_D 92.0",
+      "evidence": "| wasr_resnet101     | ResNet-101 |     | [weights](https://github.com/lojzezust/SLR/releases/download/weights_v2/wasr_slr_v2_rn101.pth)             | 94.4          | 92.0            |",
+      "evidence_location": "line 179, Pretrained models table",
+      "confidence": "high",
+      "reason": "Identifies an available pretrained checkpoint with its architecture and reported scores."
+    },
+    {
+      "field": "pretrained_model",
+      "value": "wasr_resnet101_imu (ResNet-101 backbone, with IMU): F1 94.9, F1_D 93.7",
+      "normalized_value": "wasr_resnet101_imu (ResNet-101 backbone, with IMU): F1 94.9, F1_D 93.7",
+      "evidence": "| wasr_resnet101_imu | ResNet-101 |  ✓  | [weights](https://github.com/lojzezust/SLR/releases/download/weights_v2/wasr_slr_v2_rn101_imu.pth)         | 94.9          | 93.7            |",
+      "evidence_location": "line 180, Pretrained models table",
+      "confidence": "high",
+      "reason": "Identifies an available pretrained checkpoint with its architecture and reported scores."
+    },
+    {
+      "field": "pretrained_weights_url",
+      "value": "https://github.com/lojzezust/SLR/releases/download/weights_v2/wasr_slr_v2_rn101.pth",
+      "normalized_value": "https://github.com/lojzezust/SLR/releases/download/weights_v2/wasr_slr_v2_rn101.pth",
+      "evidence": "[weights](https://github.com/lojzezust/SLR/releases/download/weights_v2/wasr_slr_v2_rn101.pth)",
+      "evidence_location": "line 179, Pretrained models table",
+      "confidence": "high",
+      "reason": "Direct download link for a pretrained model checkpoint."
+    },
+    {
+      "field": "pretrained_weights_url",
+      "value": "https://github.com/lojzezust/SLR/releases/download/weights_v2/wasr_slr_v2_rn101_imu.pth",
+      "normalized_value": "https://github.com/lojzezust/SLR/releases/download/weights_v2/wasr_slr_v2_rn101_imu.pth",
+      "evidence": "[weights](https://github.com/lojzezust/SLR/releases/download/weights_v2/wasr_slr_v2_rn101_imu.pth)",
+      "evidence_location": "line 180, Pretrained models table",
+      "confidence": "high",
+      "reason": "Direct download link for a pretrained model checkpoint."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{Zust2022Learning,\n    author = {Žust, Lojze and Kristan, Matej},\n    title = {Learning with Weak Annotations for Robust Maritime Obstacle Detection},\n    journal = {Sensors},\n    volume = {22},\n    year = {2022},\n    number = {23},\n    article-number = {9139},\n    url = {https://www.mdpi.com/1424-8220/22/23/9139},\n    issn = {1424-8220},\n    doi = {10.3390/s22239139}\n}",
+      "normalized_value": "@article{Zust2022Learning, author = {Žust, Lojze and Kristan, Matej}, title = {Learning with Weak Annotations for Robust Maritime Obstacle Detection}, journal = {Sensors}, volume = {22}, year = {2022}, number = {23}, article-number = {9139}, url = {https://www.mdpi.com/1424-8220/22/23/9139}, issn = {1424-8220}, doi = {10.3390/s22239139} }",
+      "evidence": "```bibtex\n@article{Zust2022Learning,\n    author = {Žust, Lojze and Kristan, Matej},\n    title = {Learning with Weak Annotations for Robust Maritime Obstacle Detection},\n    journal = {Sensors},\n    volume = {22},\n    year = {2022},\n    number = {23},\n    article-number = {9139},\n    url = {https://www.mdpi.com/1424-8220/22/23/9139},\n    issn = {1424-8220},\n    doi = {10.3390/s22239139}\n}\n```",
+      "evidence_location": "lines 187-200, Cite section",
+      "confidence": "high",
+      "reason": "Provides the official citation for attributing the work."
+    },
+    {
+      "field": "doi",
+      "value": "10.3390/s22239139",
+      "normalized_value": "10.3390/s22239139",
+      "evidence": "    doi = {10.3390/s22239139}",
+      "evidence_location": "line 198, Cite section",
+      "confidence": "high",
+      "reason": "Persistent identifier for the associated publication."
+    }
+  ]
+}

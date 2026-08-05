@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "tcn3r",
+      "normalized_value": "tcn3r",
+      "evidence": "# tcn3r",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Identifies the artifact by name."
+    },
+    {
+      "field": "artifact_description",
+      "value": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "normalized_value": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "evidence": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Describes the artifact's purpose."
+    },
+    {
+      "field": "related_article_url",
+      "value": "[the related article](https://arxiv.org/pdf/2002.08103.pdf)",
+      "normalized_value": "[the related article](https://arxiv.org/pdf/2002.08103.pdf)",
+      "evidence": "[the related article](https://arxiv.org/pdf/2002.08103.pdf)",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Provides link to a detailed description, aiding understanding and citation."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{Monnin2020,\n  author    = {Pierre Monnin and\n               Miguel Couceiro and\n               Amedeo Napoli and\n               Adrien Coulet},\n  editor    = {Mehwish Alam and\n               Tanya Braun and\n               Bruno Yun},\n  title     = {Knowledge-Based Matching of n-ary Tuples},\n  booktitle = {Ontologies and Concepts in Mind and Machine - 25th International Conference\n               on Conceptual Structures, {ICCS} 2020, Bolzano, Italy, September 18-20,\n               2020, Proceedings},\n  series    = {Lecture Notes in Computer Science},\n  volume    = {12277},\n  pages     = {48--56},\n  publisher = {Springer},\n  year      = {2020},\n  url       = {https://doi.org/10.1007/978-3-030-57855-8_4},\n  doi       = {10.1007/978-3-030-57855-8_4},\n}",
+      "normalized_value": "@inproceedings{Monnin2020,\n  author    = {Pierre Monnin and\n               Miguel Couceiro and\n               Amedeo Napoli and\n               Adrien Coulet},\n  editor    = {Mehwish Alam and\n               Tanya Braun and\n               Bruno Yun},\n  title     = {Knowledge-Based Matching of n-ary Tuples},\n  booktitle = {Ontologies and Concepts in Mind and Machine - 25th International Conference\n               on Conceptual Structures, {ICCS} 2020, Bolzano, Italy, September 18-20,\n               2020, Proceedings},\n  series    = {Lecture Notes in Computer Science},\n  volume    = {12277},\n  pages     = {48--56},\n  publisher = {Springer},\n  year      = {2020},\n  url       = {https://doi.org/10.1007/978-3-030-57855-8_4},\n  doi       = {10.1007/978-3-030-57855-8_4},\n}",
+      "evidence": "@inproceedings{Monnin2020,\n  author    = {Pierre Monnin and\n               Miguel Couceiro and\n               Amedeo Napoli and\n               Adrien Coulet},\n  editor    = {Mehwish Alam and\n               Tanya Braun and\n               Bruno Yun},\n  title     = {Knowledge-Based Matching of n-ary Tuples},\n  booktitle = {Ontologies and Concepts in Mind and Machine - 25th International Conference\n               on Conceptual Structures, {ICCS} 2020, Bolzano, Italy, September 18-20,\n               2020, Proceedings},\n  series    = {Lecture Notes in Computer Science},\n  volume    = {12277},\n  pages     = {48--56},\n  publisher = {Springer},\n  year      = {2020},\n  url       = {https://doi.org/10.1007/978-3-030-57855-8_4},\n  doi       = {10.1007/978-3-030-57855-8_4},\n}",
+      "evidence_location": "lines 19-38",
+      "confidence": "high",
+      "reason": "Provides the full citation in BibTeX format for proper attribution."
+    },
+    {
+      "field": "execution_mode",
+      "value": "batch",
+      "normalized_value": "batch",
+      "evidence": "### ``batch`` mode",
+      "evidence_location": "line 43",
+      "confidence": "high",
+      "reason": "Identifies one of the execution modes."
+    },
+    {
+      "field": "execution_mode",
+      "value": "explain",
+      "normalized_value": "explain",
+      "evidence": "### ``explain`` mode",
+      "evidence_location": "line 77",
+      "confidence": "high",
+      "reason": "Identifies another execution mode."
+    },
+    {
+      "field": "command_batch_mode",
+      "value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads",
+      "normalized_value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads",
+      "evidence": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads",
+      "evidence_location": "line 50",
+      "confidence": "high",
+      "reason": "Defines the command for batch mode execution, crucial for reproduction."
+    },
+    {
+      "field": "command_batch_mode_docker",
+      "value": "docker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4",
+      "normalized_value": "docker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4",
+      "evidence": "docker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4",
+      "evidence_location": "line 68",
+      "confidence": "high",
+      "reason": "Provides Docker command for batch mode, aiding reproducible environment."
+    },
+    {
+      "field": "command_explain_mode",
+      "value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR --explain true",
+      "normalized_value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR --explain true",
+      "evidence": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR --explain true",
+      "evidence_location": "line 82",
+      "confidence": "high",
+      "reason": "Defines the command for explain mode execution."
+    },
+    {
+      "field": "configuration_example",
+      "value": "{\n    \"server-address\": \"http://pgxlod.loria.fr/sparql\",\n    \"url-json-conf-attribute\": \"format\",\n    \"url-json-conf-value\": \"application/sparql-results+json\",\n    \"url-default-graph-attribute\": \"default-graph-uri\",\n    \"url-default-graph-value\": \"http://pgxlod.loria.fr/\",\n    \"url-query-attribute\": \"query\",\n    \"timeout\": 10000000,\n    \"relation-types\": [\n        \"http://pgxo.loria.fr/PharmacogenomicRelationship\"\n    ],\n    \"dimensions\": {\n        \"GeneticFactor\": {\n            \"ind-types\": [\n                \"http://pgxo.loria.fr/GeneticFactor\"\n            ],\n            \"rel2ind-predicates\": [\n                \"http://pgxo.loria.fr/isAssociatedWith\",\n                \"http://pgxo.loria.fr/isNotAssociatedWith\"\n            ],\n            \"ind2dep-predicates\": [\n            ],\n            \"preorder\": \"Individuals\",\n            \"ind-leq-predicates\": [\n                \"http://purl.obolibrary.org/obo/BFO_0000050\"\n            ],\n            \"ind-geq-predicates\": [\n                \"http://purl.obolibrary.org/obo/BFO_0000051\"\n            ]\n        },\n        \"Drug\": {\n            \"ind-types\": [\n                \"http://pgxo.loria.fr/Drug\"\n            ],\n            \"rel2ind-predicates\": [\n                \"http://pgxo.loria.fr/isAssociatedWith\",\n                \"http://pgxo.loria.fr/isNotAssociatedWith\"\n            ],\n            \"ind2dep-predicates\": [\n            ],\n            \"preorder\": \"Annotations\",\n            \"ann-base-uris\": [\n                \"http://purl.obolibrary.org/obo/CHEBI_\",\n                \"http://bio2rdf.org/chebi:\",\n                \"http://identifiers.org/chebi/\",\n                \"http://purl.bioontology.org/ontology/UATC/\",\n                \"http://bio2rdf.org/atc:\",\n                \"http://identifiers.org/atc/\"\n            ],\n            \"ind2ann-predicates\": [\n                \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\"\n            ],\n            \"ann-leq-predicates\": [\n                \"http://www.w3.org/2000/01/rdf-schema#subClassOf\"\n            ],\n            \"ann-geq-predicates\": [\n            ]\n        },\n        \"Phenotype\": {\n            \"ind-types\": [\n                \"http://pgxo.loria.fr/Phenotype\"\n            ],\n            \"rel2ind-predicates\": [\n                \"http://pgxo.loria.fr/isAssociatedWith\",\n                \"http://pgxo.loria.fr/isNotAssociatedWith\"\n            ],\n            \"ind2dep-predicates\": [\n                \"http://purl.obolibrary.org/obo/RO_0002502\"\n            ],\n            \"preorder\": \"Annotations\",\n            \"ann-base-uris\": [\n                \"http://purl.bioontology.org/ontology/MESH/\",\n                \"http://bio2rdf.org/mesh:\",\n                \"http://identifiers.org/mesh/\"\n            ],\n            \"ind2ann-predicates\": [\n                \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\"\n            ],\n            \"ann-leq-predicates\": [\n                \"http://www.w3.org/2000/01/rdf-schema#subClassOf\"\n            ],\n            \"ann-geq-predicates\": [\n            ]\n        }\n    },\n    \"output-pred-equal\": \"http://www.w3.org/2002/07/owl#sameAs\",\n    \"output-pred-equiv\": \"http://www.w3.org/2004/02/skos/core#closeMatch\",\n    \"output-pred-leq\": \"http://www.w3.org/2004/02/skos/core#broadMatch\",\n    \"output-pred-geq\": \"http://www.w3.org/2004/02/skos/core#narrowMatch\",\n    \"output-pred-comparable\": \"http://www.w3.org/2004/02/skos/core#relatedMatch\",\n    \"output-pred-dependency-related\": \"http://www.w3.org/2004/02/skos/core#related\"\n}",
+      "normalized_value": "{\n    \"server-address\": \"http://pgxlod.loria.fr/sparql\",\n    \"url-json-conf-attribute\": \"format\",\n    \"url-json-conf-value\": \"application/sparql-results+json\",\n    \"url-default-graph-attribute\": \"default-graph-uri\",\n    \"url-default-graph-value\": \"http://pgxlod.loria.fr/\",\n    \"url-query-attribute\": \"query\",\n    \"timeout\": 10000000,\n    \"relation-types\": [\n        \"http://pgxo.loria.fr/PharmacogenomicRelationship\"\n    ],\n    \"dimensions\": {\n        \"GeneticFactor\": {\n            \"ind-types\": [\n                \"http://pgxo.loria.fr/GeneticFactor\"\n            ],\n            \"rel2ind-predicates\": [\n                \"http://pgxo.loria.fr/isAssociatedWith\",\n                \"http://pgxo.loria.fr/isNotAssociatedWith\"\n            ],\n            \"ind2dep-predicates\": [\n            ],\n            \"preorder\": \"Individuals\",\n            \"ind-leq-predicates\": [\n                \"http://purl.obolibrary.org/obo/BFO_0000050\"\n            ],\n            \"ind-geq-predicates\": [\n                \"http://purl.obolibrary.org/obo/BFO_0000051\"\n            ]\n        },\n        \"Drug\": {\n            \"ind-types\": [\n                \"http://pgxo.loria.fr/Drug\"\n            ],\n            \"rel2ind-predicates\": [\n                \"http://pgxo.loria.fr/isAssociatedWith\",\n                \"http://pgxo.loria.fr/isNotAssociatedWith\"\n            ],\n            \"ind2dep-predicates\": [\n            ],\n            \"preorder\": \"Annotations\",\n            \"ann-base-uris\": [\n                \"http://purl.obolibrary.org/obo/CHEBI_\",\n                \"http://bio2rdf.org/chebi:\",\n                \"http://identifiers.org/chebi/\",\n                \"http://purl.bioontology.org/ontology/UATC/\",\n                \"http://bio2rdf.org/atc:\",\n                \"http://identifiers.org/atc/\"\n            ],\n            \"ind2ann-predicates\": [\n                \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\"\n            ],\n            \"ann-leq-predicates\": [\n                \"http://www.w3.org/2000/01/rdf-schema#subClassOf\"\n            ],\n            \"ann-geq-predicates\": [\n            ]\n        },\n        \"Phenotype\": {\n            \"ind-types\": [\n                \"http://pgxo.loria.fr/Phenotype\"\n            ],\n            \"rel2ind-predicates\": [\n                \"http://pgxo.loria.fr/isAssociatedWith\",\n                \"http://pgxo.loria.fr/isNotAssociatedWith\"\n            ],\n            \"ind2dep-predicates\": [\n                \"http://purl.obolibrary.org/obo/RO_0002502\"\n            ],\n            \"preorder\": \"Annotations\",\n            \"ann-base-uris\": [\n                \"http://purl.bioontology.org/ontology/MESH/\",\n                \"http://bio2rdf.org/mesh:\",\n                \"http://identifiers.org/mesh/\"\n            ],\n            \"ind2ann-predicates\": [\n                \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\"\n            ],\n            \"ann-leq-predicates\": [\n                \"http://www.w3.org/2000/01/rdf-schema#subClassOf\"\n            ],\n            \"ann-geq-predicates\": [\n            ]\n        }\n    },\n    \"output-pred-equal\": \"http://www.w3.org/2002/07/owl#sameAs\",\n    \"output-pred-equiv\": \"http://www.w3.org/2004/02/skos/core#closeMatch\",\n    \"output-pred-leq\": \"http://www.w3.org/2004/02/skos/core#broadMatch\",\n    \"output-pred-geq\": \"http://www.w3.org/2004/02/skos/core#narrowMatch\",\n    \"output-pred-comparable\": \"http://www.w3.org/2004/02/skos/core#relatedMatch\",\n    \"output-pred-dependency-related\": \"http://www.w3.org/2004/02/skos/core#related\"\n}",
+      "evidence": "{\n    \"server-address\": \"http://pgxlod.loria.fr/sparql\",\n    \"url-json-conf-attribute\": \"format\",\n    \"url-json-conf-value\": \"application/sparql-results+json\",\n    \"url-default-graph-attribute\": \"default-graph-uri\",\n    \"url-default-graph-value\": \"http://pgxlod.loria.fr/\",\n    \"url-query-attribute\": \"query\",\n    \"timeout\": 10000000,\n    \"relation-types\": [\n        \"http://pgxo.loria.fr/PharmacogenomicRelationship\"\n    ],\n    \"dimensions\": {\n        \"GeneticFactor\": {\n            \"ind-types\": [\n                \"http://pgxo.loria.fr/GeneticFactor\"\n            ],\n            \"rel2ind-predicates\": [\n                \"http://pgxo.loria.fr/isAssociatedWith\",\n                \"http://pgxo.loria.fr/isNotAssociatedWith\"\n            ],\n            \"ind2dep-predicates\": [\n            ],\n            \"preorder\": \"Individuals\",\n            \"ind-leq-predicates\": [\n                \"http://purl.obolibrary.org/obo/BFO_0000050\"\n            ],\n            \"ind-geq-predicates\": [\n                \"http://purl.obolibrary.org/obo/BFO_0000051\"\n            ]\n        },\n        \"Drug\": {\n            \"ind-types\": [\n                \"http://pgxo.loria.fr/Drug\"\n            ],\n            \"rel2ind-predicates\": [\n                \"http://pgxo.loria.fr/isAssociatedWith\",\n                \"http://pgxo.loria.fr/isNotAssociatedWith\"\n            ],\n            \"ind2dep-predicates\": [\n            ],\n            \"preorder\": \"Annotations\",\n            \"ann-base-uris\": [\n                \"http://purl.obolibrary.org/obo/CHEBI_\",\n                \"http://bio2rdf.org/chebi:\",\n                \"http://identifiers.org/chebi/\",\n                \"http://purl.bioontology.org/ontology/UATC/\",\n                \"http://bio2rdf.org/atc:\",\n                \"http://identifiers.org/atc/\"\n            ],\n            \"ind2ann-predicates\": [\n                \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\"\n            ],\n            \"ann-leq-predicates\": [\n                \"http://www.w3.org/2000-01/rdf-schema#subClassOf\"\n            ],\n            \"ann-geq-predicates\": [\n            ]\n        },\n        \"Phenotype\": {\n            \"ind-types\": [\n                \"http://pgxo.loria.fr/Phenotype\"\n            ],\n            \"rel2ind-predicates\": [\n                \"http://pgxo.loria.fr/isAssociatedWith\",\n                \"http://pgxo.loria.fr/isNotAssociatedWith\"\n            ],\n            \"ind2dep-predicates\": [\n                \"http://purl.obolibrary.org/obo/RO_0002502\"\n            ],\n            \"preorder\": \"Annotations\",\n            \"ann-base-uris\": [\n                \"http://purl.bioontology.org/ontology/MESH/\",\n                \"http://bio2rdf.org/mesh:\",\n                \"http://identifiers.org/mesh/\"\n            ],\n            \"ind2ann-predicates\": [\n                \"http://www.w3.org/1999/02/22-rdf-syntax-ns#type\"\n            ],\n            \"ann-leq-predicates\": [\n                \"http://www.w3.org/2000-01/rdf-schema#subClassOf\"\n            ],\n            \"ann-geq-predicates\": [\n            ]\n        }\n    },\n    \"output-pred-equal\": \"http://www.w3.org/2002/07/owl#sameAs\",\n    \"output-pred-equiv\": \"http://www.w3.org/2004/02/skos/core#closeMatch\",\n    \"output-pred-leq\": \"http://www.w3.org/2004/02/skos/core#broadMatch\",\n    \"output-pred-geq\": \"http://www.w3.org/2004/02/skos/core#narrowMatch\",\n    \"output-pred-comparable\": \"http://www.w3.org/2004/02/skos/core#relatedMatch\",\n    \"output-pred-dependency-related\": \"http://www.w3.org/2004/02/skos/core#related\"\n}",
+      "evidence_location": "lines 107-200",
+      "confidence": "high",
+      "reason": "Provides a full example configuration file in JSON format, essential for setting up the artifact."
+    },
+    {
+      "field": "test_file",
+      "value": "A [test/pgxo+test.owl](test/pgxo+test.owl) file is available to test tcn3r.",
+      "normalized_value": "A [test/pgxo+test.owl](test/pgxo+test.owl) file is available to test tcn3r.",
+      "evidence": "A [test/pgxo+test.owl](test/pgxo+test.owl) file is available to test tcn3r.",
+      "evidence_location": "line 235",
+      "confidence": "high",
+      "reason": "Specifies the test dataset file, important for validation."
+    },
+    {
+      "field": "test_configuration",
+      "value": "run tcn3r using the test configuration provided in [test/test-conf.json](test/test-conf.json) and the following parameters\n``--simlimit 0.85 --complimit 3 --dimensionlimit 3``.",
+      "normalized_value": "run tcn3r using the test configuration provided in [test/test-conf.json](test/test-conf.json) and the following parameters ``--simlimit 0.85 --complimit 3 --dimensionlimit 3``.",
+      "evidence": "run tcn3r using the test configuration provided in [test/test-conf.json](test/test-conf.json) and the following parameters\n``--simlimit 0.85 --complimit 3 --dimensionlimit 3``.",
+      "evidence_location": "lines華 and 238",
+      "confidence": "high",
+      "reason": "Provides the test configuration file and parameters for validation."
+    },
+    {
+      "field": "dependencies",
+      "value": "* C++17\n* boost\n* libcurl\n* OpenMP",
+      "normalized_value": "* C++17 * boost * libcurl * OpenMP",
+      "evidence": "* C++17\n* boost\n* libcurl\n* OpenMP",
+      "evidence_location": "lines 244-247",
+      "confidence": "high",
+      "reason": "Lists software dependencies required to build and run the artifact."
+    }
+  ]
+}

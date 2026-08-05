@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "paper_title",
+      "value": "Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "normalized_value": "Ditch the Gold Standard: Re-evaluating Conversational Question Answering",
+      "evidence": "[Ditch the Gold Standard: Re-evaluating Conversational Question Answering](https://arxiv.org/pdf/2112.08812.pdf)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Identifies the research paper this repository supports"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2112.08812.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2112.08812.pdf",
+      "evidence": "[Ditch the Gold Standard: Re-evaluating Conversational Question Answering](https://arxiv.org/pdf/2112.08812.pdf)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Direct link to the research paper"
+    },
+    {
+      "field": "slides_url",
+      "value": "https://github.com/princeton-nlp/EvalConvQA/blob/main/ACL%202022%20Video%20talk.pdf",
+      "normalized_value": "https://github.com/princeton-nlp/EvalConvQA/blob/main/ACL%202022%20Video%20talk.pdf",
+      "evidence": "the slides for our ACL presentation can be found [here](https://github.com/princeton-nlp/EvalConvQA/blob/main/ACL%202022%20Video%20talk.pdf)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Link to presentation slides for the paper"
+    },
+    {
+      "field": "purpose",
+      "value": "conduct the first large-scale human evaluation of state-of-the-art conversational QA systems",
+      "normalized_value": "conduct the first large-scale human evaluation of state-of-the-the-art conversational QA systems",
+      "evidence": "In this work, we conduct the first large-scale human evaluation of state-of-the-art conversational QA systems.",
+      "evidence_location": "line 21",
+      "confidence": "high",
+      "reason": "Describes the primary purpose of the research"
+    },
+    {
+      "field": "problem_identified",
+      "value": "the automatic evaluation does not always agree with the human evaluation",
+      "normalized_value": "the automatic evaluation does not always agree with the human evaluation",
+      "evidence": "By comparison, we find that the automatic evaluation does not always agree with the human evaluation.",
+      "evidence_location": "line 23",
+      "confidence": "high",
+      "reason": "Identifies the key problem addressed by the research"
+    },
+    {
+      "field": "proposed_solution",
+      "value": "a new evaluation protocol that is based on predicted history and question rewriting",
+      "normalized_value": "a new evaluation protocol that is based on predicted history and question rewriting",
+      "evidence": "We propose a new evaluation protocol that is based on predicted history and question rewriting.",
+      "evidence_location": "line 23",
+      "confidence": "high",
+      "reason": "Describes the proposed solution to the identified problem"
+    },
+    {
+      "field": "human_evaluation_dataset_location",
+      "value": "data/human_annotation_data.json",
+      "normalized_value": "data/human_annotation_data.json",
+      "evidence": "You can download the human annotation dataset from `data/human_annotation_data.json`.",
+      "evidence_location": "line 28",
+      "confidence": "high",
+      "reason": "Location of the human evaluation dataset in the repository"
+    },
+    {
+      "field": "human_evaluation_dataset_schema",
+      "value": "{\"data\": \n      [{\n       # The model evaluated. One of `bert4quac`, `graphflow`, `ham`, `excord`\n       \"model_name\": \"graphflow\",\n\n       # The passage used in this conversation.\n       \"context\": \"Azaria wrote and directed the 2004 short film Nobody's Perfect, ...\",\n\n       # The ID from the original QuAC dataset.\n       \"dialog_id\": \"C_f0555dd820d84564a189474bbfffd4a1_1_0\",\n\n       # The conversation, which contains a list of QA pairs.\n       \"qas\": [{\n\n         # The number of the turn\n         \"turn_id\": 0,\n\n         # The question from the human annotator\n         \"question\": \"What is some voice work he's done?\",\n\n         # The answer from the model\n         \"answer\": \"Azaria wrote and directed the 2004 short film Nobody's Perfect,\",\n\n         # Whether the question is valid (annotated by our human annotator)\n         \"valid\": \"y\",\n\n         # Whether the question is answerable (annotated by our human annotator)\n         \"answerable\": \"y\",\n\n         # Whether the model's answer is correct (annotated by our human annotator)\n         \"correct\": \"y\",\n         \n         # Human annotator selects an answer, ONLY IF they marked the answer as incorrect\n         \"gold_anno\": [\"Azaria wrote and directed ...\"]\n         },\n         ...\n       ]\n      },\n      ...\n]",
+      "normalized_value": "{\"data\": [{\"model_name\": \"graphflow\", \"context\": \"Azaria wrote and directed the 2004 short film Nobody's Perfect, ...\", \"dialog_id\": \"C_f0555dd820d84564a189474bbfffd4a1_1_0\", \"qas\": [{\"turn_id\": 0, \"question\": \"What is some voice work he's done?\", \"answer\": \"Azaria wrote and directed the 2004 short film Nobody's Perfect,\", \"valid\": \"y\", \"answerable\": \"y\", \"correct\": \"y\", \"gold_anno\": [\"Azaria wrote and directed ...\"]}, ...]}, ...]}",
+      "evidence": "```\n{\"data\": \n      [{\n       # The model evaluated. One of `bert4quac`, `graphflow`, `ham`, `excord`\n       \"model_name\": \"graphflow\",\n\n       # The passage used in this conversation.\n       \"context\": \"Azaria wrote and directed the 2004 short film Nobody's Perfect, ...\",\n\n       # The ID from the original QuAC dataset.\n       \"dialog_id\": \"C_f0555dd820d84564a189474bbfffd4a1_1_0\",\n\n       # The conversation, which contains a list of QA pairs.\n       \"qas\": [{\n\n         # The number of the turn\n         \"turn_id\": 0,\n\n         # The question from the human annotator\n         \"question\": \"What is some voice work he's done?\",\n\n         # The answer from the model\n         \"answer\": \"Azaria wrote and directed the 2004 short film Nobody's Perfect,\",\n\n         # Whether the question is valid (annotated by our human annotator)\n         \"valid\": \"y\",\n\n         # Whether the question is answerable (annotated by our human annotator)\n         \"answerable\": \"y\",\n\n         # Whether the model's answer is correct (annotated by our human annotator)\n         \"correct\": \"y\",\n         \n         # Human annotator selects an answer, ONLY IF they marked the answer as incorrect\n         \"gold_anno\": [\"Azaria wrote and directed ...\"]\n         },\n         ...\n       ]\n      },\n      ...\n]\n```",
+      "evidence_location": "lines 31-71",
+      "confidence": "high",
+      "reason": "Schema and structure of the human evaluation dataset"
+    },
+    {
+      "field": "evaluation_protocols",
+      "value": "Auto-Pred, Auto-Replace and our proposed evaluation protocol, Auto-Rewrite",
+      "normalized_value": "Auto-Pred, Auto-Replace and our proposed evaluation protocol, Auto-Rewrite",
+      "evidence": "including `Auto-Pred`, `Auto-Replace` and our proposed evaluation protocol, `Auto-Rewrite`",
+      "evidence_location": "line 75",
+      "confidence": "high",
+      "reason": "Lists the evaluation protocols compared in the paper"
+    },
+    {
+      "field": "proposed_evaluation_protocol",
+      "value": "Auto-Rewrite",
+      "normalized_value": "Auto-Rewrite",
+      "evidence": "our proposed evaluation protocol, `Auto-Rewrite`",
+      "evidence_location": "line 75",
+      "confidence": "high",
+      "reason": "Identifies the new evaluation protocol proposed in the paper"
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "```bash\npip install -r requirements.txt\n```",
+      "evidence_location": "lines 84-86",
+      "confidence": "high",
+      "reason": "Command to install dependencies for reproducing the work"
+    },
+    {
+      "field": "datasets_used",
+      "value": "QuAC dataset for passages and conversations, and the test set of CANARD dataset for context-independent questions in Auto-Replace",
+      "normalized_value": "QuAC dataset for passages and conversations, and the test set of CANARD dataset for context-independent questions in Auto-Replace",
+      "evidence": "Our experiments use [QuAC dataset](https://quac.ai) for passages and conversations, and the test set of [CANARD dataset](https://sites.google.com/view/qanta/projects/canard) for context-independent questions in `Auto-Replace`.",
+      "evidence_location": "line 90",
+      "confidence": "high",
+      "reason": "Identifies the datasets required for reproduction"
+    },
+    {
+      "field": "models_evaluated",
+      "value": "BERT, GraphFlow, HAM, ExCorD",
+      "normalized_value": "BERT, GraphFlow, HAM, ExCorD",
+      "evidence": "the four models that we used in our paper: BERT, [GraphFlow](https://www.ijcai.org/Proceedings/2020/171), [HAM](https://dl.acm.org/doi/abs/10.1145/3357384.3357905), [ExCorD](https://aclanthology.org/2021.acl-long.478/)",
+      "evidence_location": "line 94",
+      "confidence": "high",
+      "reason": "Lists the conversational QA models evaluated in the research"
+    },
+    {
+      "field": "bert_training_command",
+      "value": "python run_quac_train.py \\\n  --type bert \\\n  --model_name_or_path bert-base-uncased \\\n  --do_train \\\n  --output_dir ${directory_to_save_model} \\\n  --overwrite_output_dir \\\n  --train_file ${path_to_quac_train_file} \\\n  --train_batch_size 8 \\\n  --gradient_accumulation_steps 4 \\\n  --max_seq_length 512 \\\n  --learning_rate 3e-5 \\\n  --history_len 2 \\\n  --warmup_proportion 0.1 \\\n  --max_grad_norm -1 \\\n  --weight_decay 0.01 \\\n  --rationale_beta 0",
+      "normalized_value": "python run_quac_train.py --type bert --model_name_or_path bert-base-uncased --do_train --output_dir ${directory_to_save_model} --overwrite_output_dir --train_file ${path_to_quac_train_file} --train_batch_size 8 --gradient_accumulation_steps 4 --max_seq_length 512 --learning_rate 3e-5 --history_len 2 --warmup_proportion 0.1 --max_grad_norm -1 --weight_decay 0.01 --rationale_beta 0",
+      "evidence": "```bash\n# Run Training\npython run_quac_train.py \\\n  --type bert \\\n  --model_name_or_path bert-base-uncased \\\n  --do_train \\\n  --output_dir ${directory_to_save_model} \\\n  --overwrite_output_dir \\\n  --train_file ${path_to_quac_train_file} \\\n  --train_batch_size 8 \\\n  --gradient_accumulation_steps 4 \\\n  --max_seq_length 512 \\\n  --learning_rate 3e-5 \\\n  --history_len 2 \\\n  --warmup_proportion 0.1 \\\n  --max_grad_norm -1 \\\n  --weight_decay 0.01 \\\n  --rationale_beta 0 \\ # important for BERT\n```",
+      "evidence_location": "lines 99-116",
+      "confidence": "high",
+      "reason": "Training command for BERT model reproduction"
+    },
+    {
+      "field": "bert_evaluation_command",
+      "value": "python run_quac_eval.py \\\n  --type bert \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --rewrite \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "normalized_value": "python run_quac_eval.py --type bert --output_dir ${directory-to-model-checkpoint} --write_dir ${directory-to-write-evaluation-result} --predict_file val_v0.2.json --max_seq_length 512 --doc_stride 128 --max_query_length 64 --match_metric f1 --add_background --skip_entity --rewrite --start_i ${index_of_first_passage_to_eval} --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence": "```bash\n# Run Evaluation (Auto-Rewrite as example)\npython run_quac_eval.py \\\n  --type bert \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --rewrite \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}\n```",
+      "evidence_location": "lines 118-132",
+      "confidence": "high",
+      "reason": "Evaluation command for BERT model using Auto-Rewrite protocol"
+    },
+    {
+      "field": "graphflow_setup_command",
+      "value": "wget https://nlp.stanford.edu/software/stanford-corenlp-latest.zip\nunzip stanford-corenlp-latest.zip\nrm -f stanford-corenlp-latest.zip\njava -mx4g -cp \"${directory_to_standford_corenlp_package}\" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 &",
+      "normalized_value": "wget https://nlp.stanford.edu/software/stanford-corenlp-latest.zip unzip stanford-corenlp-latest.zip rm -f stanford-corenlp-latest.zip java -mx4g -cp \"${directory_to_standford_corenlp_package}\" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 &",
+      "evidence": "```bash\n# Download Stanford CoreNLP package\nwget https://nlp.stanford.edu/software/stanford-corenlp-latest.zip\nunzip stanford-corenlp-latest.zip\nrm -f stanford-corenlp-latest.zip\n\n# Start StanfordCoreNLP server\njava -mx4g -cp \"${directory_to_standford_corenlp_package}\" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 &\n```",
+      "evidence_location": "lines 139-145",
+      "confidence": "high",
+      "reason": "Setup commands required for GraphFlow evaluation"
+    },
+    {
+      "field": "graphflow_evaluation_command",
+      "value": "python run_quac_eval.py \\\n    --type graphflow \\\n    --predict_file ${path-to-annotated-dev-json-file} \\\n    --output_dir ${directory-to-model-checkpoint} \\\n    --saved_vocab_file ${directory-to-saved-model-vocab} \\\n    --pretrained ${directory-to-model-checkpoint} \\\n    --write_dir /n/fs/scratch/huihanl/unified/graphflow/write \\\n    --match_metric f1 \\\n    --add_background \\\n    --skip_entity \\\n    --rewrite \\\n    --fix_vocab_embed \\\n    --f_qem \\\n    --f_pos \\\n    --f_ner \\\n    --use_ques_marker \\\n    --use_gnn \\\n    --temporal_gnn \\\n    --use_bert \\\n    --use_bert_weight \\\n    --shuffle \\\n    --out_predictions \\\n    --predict_raw_text \\\n    --out_pred_in_folder \\\n    --optimizer adamax \\\n    --start_i ${index_of_first_passage_to_eval} \\\n    --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "normalized_value": "python run_quac_eval.py --type graphflow --predict_file ${path-to-annotated-dev-json-file} --output_dir ${directory-to-model-checkpoint} --saved_vocab_file ${directory-to-saved-model-vocab} --pretrained ${directory-to-model-checkpoint} --write_dir /n/fs/scratch/huihanl/unified/graphflow/write --match_metric f1 --add_background --skip_entity --rewrite --fix_vocab_embed --f_qem --f_pos --f_ner --use_ques_marker --use_gnn --temporal_gnn --use_bert --use_bert_weight --shuffle --out_predictions --predict_raw_text --out_pred_in_folder --optimizer adamax --start_i ${index_of_first_passage_to_eval} --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence": "```bash\n# Run Evaluation (Auto-Rewrite as example)\npython run_quac_eval.py \\\n    --type graphflow \\\n    --predict_file ${path-to-annotated-dev-json-file} \\\n    --output_dir ${directory-to-model-checkpoint} \\\n    --saved_vocab_file ${directory-to-saved-model-vocab} \\\n    --pretrained ${directory-to-model-checkpoint} \\\n    --write_dir /n/fs/scratch/huihanl/unified/graphflow/write \\\n    --match_metric f1 \\\n    --add_background \\\n    --skip_entity \\\n    --rewrite \\\n    --fix_vocab_embed \\\n    --f_qem \\\n    --f_pos \\\n    --f_ner \\\n    --use_ques_marker \\\n    --use_gnn \\\n    --temporal_gnn \\\n    --use_bert \\\n    --use_bert_weight \\\n    --shuffle \\\n    --out_predictions \\\n    --predict_raw_text \\\n    --out_pred_in_folder \\\n    --optimizer adamax \\\n    --start_i ${index_of_first_passage_to_eval} \\\n    --end_i ${index_of_last_passage_to_eval_exclusive}\n```",
+      "evidence_location": "lines 147-175",
+      "confidence": "high",
+      "reason": "Evaluation command for GraphFlow model using Auto-Rewrite protocol"
+    },
+    {
+      "field": "ham_evaluation_command",
+      "value": "python run_quac_eval.py \\\n  --type ham \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --do_lower_case \\\n  --history_len 6 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --replace \\\n  --init_checkpoint ${directory-to-model-checkpoint}/model_52000.ckpt \\\n  --bert_config_file ${directory-to-pretrained-bert-large-uncased}/bert_config.json \\\n  --vocab_file ${directory-to-model-checkpoint}/vocab.txt \\\n  --MTL_mu 0.8 \\\n  --MTL_lambda 0.1 \\\n  --mtl_input reduce_mean \\\n  --max_answer_length 40 \\\n  --max_considered_history_turns 4 \\\n  --bert_hidden 1024 \\\n  --fine_grained_attention \\\n  --better_hae \\\n  --MTL \\\n  --use_history_answer_marker \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "normalized_value": "python run_quac_eval.py --type ham --output_dir ${directory-to-model-checkpoint} --write_dir ${directory-to-write-evaluation-result} --predict_file val_v0.2.json --max_seq_length 512 --doc_stride 128 --max_query_length 64 --do_lower_case --history_len 6 --match_metric f1 --add_background --skip_entity --replace --init_checkpoint ${directory-to-model-checkpoint}/model_52000.ckpt --bert_config_file ${directory-to-pretrained-bert-large-uncased}/bert_config.json --vocab_file ${directory-to-model-checkpoint}/vocab.txt --MTL_mu 0.8 --MTL_lambda 0.1 --mtl_input reduce_mean --max_answer_length 40 --max_considered_history_turns 4 --bert_hidden 1024 --fine_grained_attention --better_hae --MTL --use_history_answer_marker --start_i ${index_of_first_passage_to_eval} --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence": "```bash\n# Run Evaluation (Auto-Rewrite as example)\npython run_quac_eval.py \\\n  --type ham \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --do_lower_case \\\n  --history_len 6 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --replace \\\n  --init_checkpoint ${directory-to-model-checkpoint}/model_52000.ckpt \\\n  --bert_config_file ${directory-to-pretrained-bert-large-uncased}/bert_config.json \\\n  --vocab_file ${directory-to-model-checkpoint}/vocab.txt \\\n  --MTL_mu 0.8 \\\n  --MTL_lambda 0.1 \\\n  --mtl_input reduce_mean \\\n  --max_answer_length 40 \\\n  --max_considered_history_turns 4 \\\n  --bert_hidden 1024 \\\n  --fine_grained_attention \\\n  --better_hae \\\n  --MTL \\\n  --use_history_answer_marker \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}\n```",
+      "evidence_location": "lines 181-212",
+      "confidence": "high",
+      "reason": "Evaluation command for HAM model using Auto-Replace protocol"
+    },
+    {
+      "field": "excord_evaluation_command",
+      "value": "python run_quac_eval.py \\\n  --type excord \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --rewrite \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "normalized_value": "python run_quac_eval.py --type excord --output_dir ${directory-to-model-checkpoint} --write_dir ${directory-to-write-evaluation-result} --predict_file val_v0.2.json --max_seq_length 512 --doc_stride 128 --max_query_length 64 --match_metric f1 --add_background --skip_entity --rewrite --start_i ${index_of_first_passage_to_eval} --end_i ${index_of_last_passage_to_eval_exclusive}",
+      "evidence": "```bash\n# Run Evaluation (Auto-Rewrite as example)\npython run_quac_eval.py \\\n  --type excord \\\n  --output_dir ${directory-to-model-checkpoint} \\\n  --write_dir ${directory-to-write-evaluation-result} \\\n  --predict_file val_v0.2.json \\\n  --max_seq_length 512 \\\n  --doc_stride 128 \\\n  --max_query_length 64 \\\n  --match_metric f1 \\\n  --add_background \\\n  --skip_entity \\\n  --rewrite \\\n  --start_i ${index_of_first_passage_to_eval} \\\n  --end_i ${index_of_last_passage_to_eval_exclusive}\n```",
+      "evidence_location": "lines 218-234",
+      "confidence": "high",
+      "reason": "Evaluation command for ExCorD model using Auto-Rewrite protocol"
+    },
+    {
+      "field": "custom_model_evaluation_instruction",
+      "value": "add a directory under `models` and write a customized model class following the template `interface.py` and our example implementations",
+      "normalized_value": "add a directory under `models` and write a customized model class following the template `interface.py` and our example implementations",
+      "evidence": "To do so, please add a directory under `models` and write a customized model class following the template `interface.py` and our example implementations.",
+      "evidence_location": "line 237",
+      "confidence": "high",
+      "reason": "Instructions for evaluating custom models using the framework"
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{li2022ditch,\n    title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\",\n    author = \"Li, Huihan  and\n      Gao, Tianyu  and\n      Goenka, Manan  and\n      Chen, Danqi\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.555\",\n    pages = \"8074--8085\",\n}",
+      "normalized_value": "@inproceedings{li2022ditch, title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\", author = \"Li, Huihan and Gao, Tianyu and Goenka, Manan and Chen, Danqi\", booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\", year = \"2022\", url = \"https://aclanthology.org/2022.acl-long.555\", pages = \"8074--8085\",}",
+      "evidence": "```bibtex\n@inproceedings{li2022ditch,\n    title = \"Ditch the Gold Standard: Re-evaluating Conversational Question Answering\",\n    author = \"Li, Huihan  and\n      Gao, Tianyu  and\n      Goenka, Manan  and\n      Chen, Danqi\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    year = \"2022\",\n    url = \"https://aclanthology.org/2022.acl-long.555\",\n    pages = \"8074--8085\",\n}\n```",
+      "evidence_location": "lines 242-252",
+      "confidence": "high",
+      "reason": "BibTeX citation for the paper"
+    }
+  ]
+}

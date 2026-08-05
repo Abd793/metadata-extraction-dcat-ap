@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "# Debt-Financed Collateral",
+      "normalized_value": "Debt-Financed Collateral",
+      "evidence": "# Debt-Financed Collateral",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Provides the explicit title of the repository for identification and indexing."
+    },
+    {
+      "field": "paper_title",
+      "value": "\"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\"",
+      "normalized_value": "Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem",
+      "evidence": "\"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\"",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the associated academic publication for citation and scientific context."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2204.11107",
+      "normalized_value": "https://arxiv.org/abs/2204.11107",
+      "evidence": "https://arxiv.org/abs/2204.11107",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Direct access link to the preprint/paper, enabling verification of methodology and results."
+    },
+    {
+      "field": "database_system",
+      "value": "MariaDB",
+      "normalized_value": "MariaDB",
+      "evidence": "MariaDB",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Specifies the database engine used to store the project's underlying data."
+    },
+    {
+      "field": "dataset_export_url",
+      "value": "https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_",
+      "normalized_value": "https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_",
+      "evidence": "https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides direct download access to the exported dataset for reproduction or independent analysis."
+    },
+    {
+      "field": "programming_language_python",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "- **Large-scale data collection (Python)**",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Indicates the primary language used for large-scale data scraping."
+    },
+    {
+      "field": "programming_language_nodejs",
+      "value": "NodeJS",
+      "normalized_value": "NodeJS",
+      "evidence": "- **One-off data collection (NodeJS)**",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Indicates the runtime/language used for targeted data collection scripts."
+    },
+    {
+      "field": "programming_language_r",
+      "value": "R",
+      "normalized_value": "R",
+      "evidence": "*analysis.r* contains the R code used to create charts and tables for the final paper.",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Identifies the statistical computing environment used for final visualization and reporting."
+    },
+    {
+      "field": "data_collection_platform",
+      "value": "Google's BigQuery service",
+      "normalized_value": "Google's BigQuery service",
+      "evidence": "Google's BigQuery service",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Specifies the cloud infrastructure used for initial data extraction, critical for environment replication."
+    },
+    {
+      "field": "algorithm_notebook",
+      "value": "algo.ipynb",
+      "normalized_value": "algo.ipynb",
+      "evidence": "*algo.ipynb*",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Points to the specific file implementing the core estimation logic for debt-financed collateral."
+    },
+    {
+      "field": "analysis_script",
+      "value": "analysis.r",
+      "normalized_value": "analysis.r",
+      "evidence": "*analysis.r*",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Identifies the script responsible for generating the paper's final charts and tables."
+    },
+    {
+      "field": "python_collection_scripts",
+      "value": "defiEvents.py, collectEvents.py",
+      "normalized_value": "defiEvents.py, collectEvents.py",
+      "evidence": "- *defiEvents.py*: collection of classes used for data collection.\n    - *collectEvents.py*: script to collect data.",
+      "evidence_location": "10-11",
+      "confidence": "high",
+      "reason": "Lists the exact Python modules handling automated data ingestion, enabling code-level reproduction."
+    },
+    {
+      "field": "nodejs_collection_scripts",
+      "value": "mkrVaults.js, mkrRateAdjust.js, uniExchanges.js, usdValues.js",
+      "normalized_value": "mkrVaults.js, mkrRateAdjust.js, uniExchanges.js, usdValues.js",
+      "evidence": "- *mkrVaults.js*: Collect data on all existing Maker vaults, including all addresses associated to the vault (owner, DSProxy, and UrnHandler addresses).\n    - *mkrRateAdjust.js*: Collect information to adjust DAI amounts recorded in frob transactions. Frob transaction amounts (specifically for debt withdrawal/repayment) are recorded without interest rate adjustments. This file collects information to adjust DAI amounts according to the prevailing cumulative interest rate in the Maker Vat contract.\n    - *uniExchanges.js*: Collect pair addresses from Uniswap for all tokens used in the final analysis.\n    - *usdValues.js*: Collect hourly USD pricing data from Coinbase and update each transaction with the most recent USD price.",
+      "evidence_location": "13-16",
+      "confidence": "high",
+      "reason": "Details the specific NodeJS scripts used for targeted blockchain data fetching and price normalization."
+    },
+    {
+      "field": "utility_scripts",
+      "value": "abi.js, addr.js, eventLib.js",
+      "normalized_value": "abi.js, addr.js, eventLib.js",
+      "evidence": "- *abi.js*: ABIs for relevant contracts\n- *addr.js*: relevant addresses\n- *eventLib.js*: helper functions",
+      "evidence_location": "29-31",
+      "confidence": "high",
+      "reason": "Identifies supporting configuration and helper files required to run the NodeJS collection pipeline."
+    }
+  ]
+}

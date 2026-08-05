@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Rethinking the Truly Unsupervised Image-to-Image Translation<br/>(ICCV 2021)",
+      "normalized_value": "Rethinking the Truly Unsupervised Image-to-Image Translation<br/>(ICCV 2021)",
+      "evidence": "## Rethinking the Truly Unsupervised Image-to-Image Translation<br/>(ICCV 2021)",
+      "evidence_location": "line 1; title",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its publication venue and year."
+    },
+    {
+      "field": "implementation_status",
+      "value": "Official pytorch implementation",
+      "normalized_value": "Official pytorch implementation",
+      "evidence": "__Official pytorch implementation of \"Rethinking the Truly Unsupervised Image-to-Image Translation\"__",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Clarifies that the repository provides the official implementation associated with the paper."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2006.06500",
+      "normalized_value": "https://arxiv.org/abs/2006.06500",
+      "evidence": "> __[Rethinking the Truly Unsupervised Image-to-Image Translation](https://arxiv.org/abs/2006.06500)__   ",
+      "evidence_location": "line 7; paper reference",
+      "confidence": "high",
+      "reason": "Provides the associated paper for background and citation."
+    },
+    {
+      "field": "purpose",
+      "value": "we propose a truly unsupervised image-to-image translation model (TUNIT) that simultaneously learns to separate image domains and translates input images into the estimated domains.",
+      "normalized_value": "we propose a truly unsupervised image-to-image translation model (TUNIT) that simultaneously learns to separate image domains and translates input images into the estimated domains.",
+      "evidence": "> __Absract__ _Every recent image-to-image translation model inherently requires either image-level (i.e. input-output pairs) or set-level (i.e. domain labels) supervision. However, even set-level supervision can be a severe bottleneck for data collection in practice. In this paper, we tackle image-to-image translation in a fully unsupervised setting, i.e., neither paired images nor domain labels. To this end, we propose a truly unsupervised image-to-image translation model (TUNIT) that simultaneously learns to separate image domains and translates input images into the estimated domains. Experimental results show that our model achieves comparable or even better performance than the set-level supervised model trained with full labels, generalizes well on various datasets, and is robust against the choice of hyperparameters (e.g. the preset number of pseudo domains). Furthermore, TUNIT can be easily extended to semi-supervised learning with a few labeled data._",
+      "evidence_location": "line 14; abstract",
+      "confidence": "high",
+      "reason": "States the model's task, supervision setting, and core behavior."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "```\npip install -r requirements.txt\n\n* pytorch==1.1.0 or 1.2.0  \n* tqdm  \n* opencv-python  \n* scipy  \n* sklearn\n* matplotlib  \n* pillow  \n* tensorboardX \n```",
+      "evidence_location": "lines 18-29; Requirement > Library",
+      "confidence": "high",
+      "reason": "Provides the documented installation step."
+    },
+    {
+      "field": "dependencies",
+      "value": "pytorch==1.1.0 or 1.2.0; tqdm; opencv-python; scipy; sklearn; matplotlib; pillow; tensorboardX",
+      "normalized_value": "pytorch==1.1.0 or 1.2.0; tqdm; opencv-python; scipy; sklearn; matplotlib; pillow; tensorboardX",
+      "evidence": "```\npip install -r requirements.txt\n\n* pytorch==1.1.0 or 1.2.0  \n* tqdm  \n* opencv-python  \n* scipy  \n* sklearn\n* matplotlib  \n* pillow  \n* tensorboardX \n```",
+      "evidence_location": "lines 18-29; Requirement > Library",
+      "confidence": "high",
+      "reason": "Lists the software dependencies and the supported PyTorch versions."
+    },
+    {
+      "field": "datasets",
+      "value": "AFHQ (StarGANv2) / AnimalFaces (FUNIT)",
+      "normalized_value": "AFHQ (StarGANv2) / AnimalFaces (FUNIT)",
+      "evidence": "* Download : [AFHQ (StarGANv2)](https://www.dropbox.com/s/t9l9o3vsx2jai3z/afhq.zip?dl=0) / [AnimalFaces (FUNIT)](https://github.com/NVlabs/FUNIT)",
+      "evidence_location": "line 33; Requirement > Dataset",
+      "confidence": "high",
+      "reason": "Names the documented datasets and provides their download or project links."
+    },
+    {
+      "field": "dataset_format",
+      "value": "This repo. utilizes the variant of \"ImageFolder\".",
+      "normalized_value": "This repo. utilizes the variant of \"ImageFolder\".",
+      "evidence": "* This repo. utilizes the variant of \"ImageFolder\".",
+      "evidence_location": "line 32; Requirement > Dataset",
+      "confidence": "high",
+      "reason": "Describes the expected dataset organization format."
+    },
+    {
+      "field": "hardware",
+      "value": "This source code is mainly tested on V100 and P40.",
+      "normalized_value": "This source code is mainly tested on V100 and P40.",
+      "evidence": "* This source code is mainly tested on V100 and P40.",
+      "evidence_location": "line 64; Requirement > Hardware",
+      "confidence": "high",
+      "reason": "Provides the hardware environments documented as tested."
+    },
+    {
+      "field": "training_commands",
+      "value": "Supervised\npython main.py --gpu $GPU_TO_USE --p_semi 1.0 --dataset animal_faces --data_path='../data'\n\nSemi-supervised\npython main.py --gpu $GPU_TO_USE --p_semi 0.5 --dataset animal_faces --data_path='../data'\n\nUnsupervised\npython main.py --gpu $GPU_TO_USE --p_semi 0.0 --dataset animal_faces --data_path='../data'",
+      "normalized_value": "Supervised python main.py --gpu $GPU_TO_USE --p_semi 1.0 --dataset animal_faces --data_path='../data' Semi-supervised python main.py --gpu $GPU_TO_USE --p_semi 0.5 --dataset animal_faces --data_path='../data' Unsupervised python main.py --gpu $GPU_TO_USE --p_semi 0.0 --dataset animal_faces --data_path='../data'",
+      "evidence": "```\nSupervised\npython main.py --gpu $GPU_TO_USE --p_semi 1.0 --dataset animal_faces --data_path='../data'\n\nSemi-supervised\npython main.py --gpu $GPU_TO_USE --p_semi 0.5 --dataset animal_faces --data_path='../data'\n\nUnsupervised\npython main.py --gpu $GPU_TO_USE --p_semi 0.0 --dataset animal_faces --data_path='../data'\n```",
+      "evidence_location": "lines 70-79; How to Run (Quick Start) > Train on local",
+      "confidence": "high",
+      "reason": "Documents reproducible supervised, semi-supervised, and unsupervised training invocations."
+    },
+    {
+      "field": "validation_command",
+      "value": "python main.py --gpu $GPU_TO_USE --validation --load_model $DIR_TO_LOAD --dataset animal_faces",
+      "normalized_value": "python main.py --gpu $GPU_TO_USE --validation --load_model $DIR_TO_LOAD --dataset animal_faces",
+      "evidence": "```\npython main.py --gpu $GPU_TO_USE --validation --load_model $DIR_TO_LOAD --dataset animal_faces\n```",
+      "evidence_location": "lines 81-84; How to Run (Quick Start) > Test on local",
+      "confidence": "high",
+      "reason": "Provides the documented command for running validation with a saved model."
+    },
+    {
+      "field": "monitoring_command",
+      "value": "tensorboard --logdir=$DIR/events --port=$PORT",
+      "normalized_value": "tensorboard --logdir=$DIR/events --port=$PORT",
+      "evidence": "```\ntensorboard --logdir=$DIR/events --port=$PORT\n```",
+      "evidence_location": "lines 86-89; How to Run (Quick Start) > Monitoring",
+      "confidence": "high",
+      "reason": "Provides the command for monitoring logged runs with TensorBoard."
+    },
+    {
+      "field": "evaluation_metric",
+      "value": "FID",
+      "normalized_value": "FID",
+      "evidence": "* validation.py\n         * Generate fake samples and calculate FID.",
+      "evidence_location": "lines 202-204; Explanation for codes > Code Structure",
+      "confidence": "high",
+      "reason": "Names the metric calculated during validation."
+    },
+    {
+      "field": "pretrained_model_link",
+      "value": "https://1drv.ms/u/s!AprVWp5MreFV8BLY22ias4Gt1ZtO?e=IYsUwX",
+      "normalized_value": "https://1drv.ms/u/s!AprVWp5MreFV8BLY22ias4Gt1ZtO?e=IYsUwX",
+      "evidence": "[One Drive](https://1drv.ms/u/s!AprVWp5MreFV8BLY22ias4Gt1ZtO?e=IYsUwX)",
+      "evidence_location": "line 111; Pretrained Model > Download",
+      "confidence": "high",
+      "reason": "Provides access to the pretrained models."
+    },
+    {
+      "field": "pretrained_model_setup",
+      "value": "Download folders to load, then place the folder under 'logs'.",
+      "normalized_value": "Download folders to load, then place the folder under 'logs'.",
+      "evidence": "* Download folders to load, then place the folder under 'logs'.",
+      "evidence_location": "line 112; Pretrained Model > Download",
+      "confidence": "high",
+      "reason": "Explains where downloaded pretrained model folders must be placed."
+    },
+    {
+      "field": "pretrained_model_command",
+      "value": "python main.py --gpu 0 --dataset animal_faces --output_k 10 --img_size 128 --data_path $DATAPATH --validation --load_model animalFaces10_0_00 --p_semi 0.0",
+      "normalized_value": "python main.py --gpu 0 --dataset animal_faces --output_k 10 --img_size 128 --data_path $DATAPATH --validation --load_model animalFaces10_0_00 --p_semi 0.0",
+      "evidence": "Then, RUN\npython main.py --gpu 0 --dataset animal_faces --output_k 10 --img_size 128 --data_path $DATAPATH --validation --load_model animalFaces10_0_00 --p_semi 0.0",
+      "evidence_location": "lines 126-128; Pretrained Model > Download",
+      "confidence": "high",
+      "reason": "Provides a reproducible command for evaluating a downloaded pretrained model."
+    },
+    {
+      "field": "model_architecture",
+      "value": "The architecture is based on StarGANv2, but it contains two residual blocks for each resolution.",
+      "normalized_value": "The architecture is based on StarGANv2, but it contains two residual blocks for each resolution.",
+      "evidence": "    * discriminator.py\n         * Definition of discriminator.\n         * The architecture is based on StarGANv2, but it contains two residual blocks for each resolution.",
+      "evidence_location": "lines 178-180; Explanation for codes > Code Structure",
+      "confidence": "high",
+      "reason": "Identifies a concrete architectural basis and modification."
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "normalized_value": "MIT",
+      "evidence": "TUNIT is distributed under MIT unless the header specifies another license. ",
+      "evidence_location": "lines 223-224; License",
+      "confidence": "high",
+      "reason": "States the reuse license for TUNIT."
+    },
+    {
+      "field": "pretrained_model_license",
+      "value": "Creative Commons BY-NC 4.0 license by NAVER Corporation",
+      "normalized_value": "Creative Commons BY-NC 4.0 license by NAVER Corporation",
+      "evidence": "The pretrained models is covered by Creative Commons BY-NC 4.0 license by NAVER Corporation. ",
+      "evidence_location": "line 248; License",
+      "confidence": "high",
+      "reason": "Specifies the separate license governing the pretrained models."
+    },
+    {
+      "field": "pretrained_model_terms",
+      "value": "You can use, copy, tranform and build upon the material for non-commercial purposes as long as you give appropriate credit by citing our paper, and indicate if changes were made.",
+      "normalized_value": "You can use, copy, tranform and build upon the material for non-commercial purposes as long as you give appropriate credit by citing our paper, and indicate if changes were made.",
+      "evidence": "You can use, copy, tranform and build upon the material for non-commercial purposes as long as you give appropriate credit by citing our paper, and indicate if changes were made.",
+      "evidence_location": "line 249; License",
+      "confidence": "high",
+      "reason": "Documents the non-commercial use, attribution, and modification-notice requirements for pretrained models."
+    },
+    {
+      "field": "citation",
+      "value": "@InProceedings{Baek_2021_ICCV,\n    author    = {Baek, Kyungjune and Choi, Yunjey and Uh, Youngjung and Yoo, Jaejun and Shim, Hyunjung},\n    title     = {Rethinking the Truly Unsupervised Image-to-Image Translation},\n    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n    month     = {October},\n    year      = {2021},\n    pages     = {14154-14163}\n}",
+      "normalized_value": "@InProceedings{Baek_2021_ICCV, author = {Baek, Kyungjune and Choi, Yunjey and Uh, Youngjung and Yoo, Jaejun and Shim, Hyunjung}, title = {Rethinking the Truly Unsupervised Image-to-Image Translation}, booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}, month = {October}, year = {2021}, pages = {14154-14163} }",
+      "evidence": "```\n@InProceedings{Baek_2021_ICCV,\n    author    = {Baek, Kyungjune and Choi, Yunjey and Uh, Youngjung and Yoo, Jaejun and Shim, Hyunjung},\n    title     = {Rethinking the Truly Unsupervised Image-to-Image Translation},\n    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n    month     = {October},\n    year      = {2021},\n    pages     = {14154-14163}\n}\n```",
+      "evidence_location": "lines 251-261; Citation",
+      "confidence": "high",
+      "reason": "Provides the complete bibliographic citation for scholarly reuse."
+    }
+  ]
+}

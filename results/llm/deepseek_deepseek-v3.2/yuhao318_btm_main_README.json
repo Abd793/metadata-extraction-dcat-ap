@@ -1,0 +1,175 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "BTM",
+      "normalized_value": "BTM",
+      "evidence": "# BTM",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Name of the artifact."
+    },
+    {
+      "field": "paper_title",
+      "value": "Reviving Undersampling for Long-Tailed Learning",
+      "normalized_value": "Reviving Undersampling for Long-Tailed Learning",
+      "evidence": "**Reviving Undersampling for Long-Tailed Learning**",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Title of the associated research paper."
+    },
+    {
+      "field": "authors",
+      "value": "Hao Yu, Yingxiao Du, Jianxin Wu",
+      "normalized_value": "Hao Yu, Yingxiao Du, Jianxin Wu",
+      "evidence": "**Authors**: Hao Yu, Yingxiao Du, Jianxin Wu",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "List of authors."
+    },
+    {
+      "field": "arxiv_link",
+      "value": "https://arxiv.org/pdf/2401.16811.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2401.16811.pdf",
+      "evidence": "[[`arXiv`](https://arxiv.org/pdf/2401.16811.pdf)]",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Link to the paper on arXiv."
+    },
+    {
+      "field": "purpose",
+      "value": "enhance the accuracy of the worst-performing categories and utilize the harmonic mean and geometric mean to assess the model's performance",
+      "normalized_value": "enhance the accuracy of the worst-performing categories and utilize the harmonic mean and geometric mean to assess the model's performance",
+      "evidence": "We aim to enhance the accuracy of the worst-performing categories and utilize the harmonic mean and geometric mean to assess the model's performance.",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Describes the goal of the artifact."
+    },
+    {
+      "field": "base_implementation",
+      "value": "MiSLAS (https://github.com/dvlab-research/MiSLAS)",
+      "normalized_value": "MiSLAS (https://github.com/dvlab-research/MiSLAS)",
+      "evidence": "based on [MiSLAS](https://github.com/dvlab-research/MiSLAS)",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Indicates the repository this implementation is based on."
+    },
+    {
+      "field": "software_dependencies",
+      "value": "Python 3.8, torchvision 0.13.0, Pytorch 1.12.0",
+      "normalized_value": "Python 3.8, torchvision 0.13.0, Pytorch 1.12.0",
+      "evidence": "* Python 3.8\n* torchvision 0.13.0\n* Pytorch 1.12.0",
+      "evidence_location": "lines 15-18",
+      "confidence": "high",
+      "reason": "Lists required software for installation."
+    },
+    {
+      "field": "datasets",
+      "value": "ImageNet-LT, iNaturalist 2018, Places-LT",
+      "normalized_value": "ImageNet-LT, iNaturalist 2018, Places-LT",
+      "evidence": "* [ImageNet-LT](http://image-net.org/index)\n* [iNaturalist 2018](https://github.com/visipedia/inat_comp/tree/master/2018)\n* [Places-LT](http://places2.csail.mit.edu/download.html)",
+      "evidence_location": "lines 20-23",
+      "confidence": "high",
+      "reason": "Identifies datasets used in the project."
+    },
+    {
+      "field": "configuration_note",
+      "value": "Change the `data_path` in `config/*/*.yaml` accordingly.",
+      "normalized_value": "Change the `data_path` in `config/*/*.yaml` accordingly.",
+      "evidence": "Change the `data_path` in `config/*/*.yaml` accordingly.",
+      "evidence_location": "line 24",
+      "confidence": "high",
+      "reason": "Instruction for dataset path configuration."
+    },
+    {
+      "field": "dataset_options",
+      "value": "imagenet, ina2018, places",
+      "normalized_value": "imagenet, ina2018, places",
+      "evidence": "`DATASETNAME` can be selected from `imagenet`, `ina2018`, and `places`.",
+      "evidence_location": "line 36",
+      "confidence": "high",
+      "reason": "Lists available dataset names for configuration."
+    },
+    {
+      "field": "architecture_options",
+      "value": "resnet50/101/152 for imagenet, resnet50 for ina2018, resnet152 for places",
+      "normalized_value": "resnet50/101/152 for imagenet, resnet50 for ina2018, resnet152 for places",
+      "evidence": "`ARCH` can be `resnet50/101/152` for `imagenet`, `resnet50` for `ina2018`, and `resnet152` for `places`, respectively.",
+      "evidence_location": "lines 37-38",
+      "confidence": "high",
+      "reason": "Specifies model architectures per dataset."
+    },
+    {
+      "field": "training_command_stage1",
+      "value": "python train_stage1.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml",
+      "normalized_value": "python train_stage1.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml",
+      "evidence": "```\npython train_stage1.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml\n```",
+      "evidence_location": "lines 32-34",
+      "confidence": "high",
+      "reason": "Command to train the Stage-1 model."
+    },
+    {
+      "field": "training_command_btm",
+      "value": "python train_stage1_bl_10_classifier.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup_bl_10_calssifier.yaml",
+      "normalized_value": "python train_stage1_bl_10_classifier.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup_bl_10_calssifier.yaml",
+      "evidence": "```\npython train_stage1_bl_10_classifier.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup_bl_10_calssifier.yaml\n```",
+      "evidence_location": "lines 43-45",
+      "confidence": "high",
+      "reason": "Command to train the BTM undersampling model."
+    },
+    {
+      "field": "merge_command",
+      "value": "python merge.py",
+      "normalized_value": "python merge.py",
+      "evidence": "```\npython merge.py\n```",
+      "evidence_location": "lines 50-52",
+      "confidence": "high",
+      "reason": "Command to merge models for ensemble."
+    },
+    {
+      "field": "training_command_stage2",
+      "value": "python train_stage2.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/BTM",
+      "normalized_value": "python train_stage2.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/BTM",
+      "evidence": "```\npython train_stage2.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/BTM\n```",
+      "evidence_location": "lines 61-63",
+      "confidence": "high",
+      "reason": "Command to train the Stage-2 model."
+    },
+    {
+      "field": "evaluation_commands",
+      "value": "python eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml  resume /path/to/checkpoint/stage1\npython eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/stage2",
+      "normalized_value": "python eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml  resume /path/to/checkpoint/stage1\npython eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/stage2",
+      "evidence": "```\npython eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml  resume /path/to/checkpoint/stage1\npython eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/stage2\n```",
+      "evidence_location": "lines 81-84",
+      "confidence": "high",
+      "reason": "Commands to evaluate trained models."
+    },
+    {
+      "field": "output_structure",
+      "value": "MiSLAS\n├── saved\n│   ├── modelname_date\n│   │   ├── ckps\n│   │   │   ├── current.pth.tar\n│   │   │   └── model_best.pth.tar\n│   │   └── logs\n│   │       └── modelname.txt\n│   ...",
+      "normalized_value": "MiSLAS\n├── saved\n│   ├── modelname_date\n│   │   ├── ckps\n│   │   │   ├── current.pth.tar\n│   │   │   └── model_best.pth.tar\n│   │   └── logs\n│   │       └── modelname.txt\n│   ...",
+      "evidence": "```\nMiSLAS\n├── saved\n│   ├── modelname_date\n│   │   ├── ckps\n│   │   │   ├── current.pth.tar\n│   │   │   └── model_best.pth.tar\n│   │   └── logs\n│   │       └── modelname.txt\n│   ...   \n```",
+      "evidence_location": "lines 66-75",
+      "confidence": "high",
+      "reason": "Shows the organization of saved models and logs."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{yu2024reviving,\n  title={Reviving Undersampling for Long-Tailed Learning},\n  author={Yu, Hao and Du, Yingxiao and Wu, Jianxin},\n  journal={arXiv preprint arXiv:2401.16811},\n  year={2024}\n}",
+      "normalized_value": "@article{yu2024reviving,\n  title={Reviving Undersampling for Long-Tailed Learning},\n  author={Yu, Hao and Du, Yingxiao and Wu, Jianxin},\n  journal={arXiv preprint arXiv:2401.16811},\n  year={2024}\n}",
+      "evidence": "```bib\n@article{yu2024reviving,\n  title={Reviving Undersampling for Long-Tailed Learning},\n  author={Yu, Hao and Du, Yingxiao and Wu, Jianxin},\n  journal={arXiv preprint arXiv:2401.16811},\n  year={2024}\n}\n```",
+      "evidence_location": "lines 88-94",
+      "confidence": "high",
+      "reason": "BibTeX citation for the paper."
+    },
+    {
+      "field": "contact",
+      "value": "Hao Yu: yuh@lamda.nju.edu.cn or Github issues",
+      "normalized_value": "Hao Yu: yuh@lamda.nju.edu.cn or Github issues",
+      "evidence": "If you have any questions about our work, feel free to contact us through email (Hao Yu: yuh@lamda.nju.edu.cn) or Github issues.",
+      "evidence_location": "line 99",
+      "confidence": "high",
+      "reason": "Contact information for questions."
+    }
+  ]
+}

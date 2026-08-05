@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Para-DPMM model",
+      "normalized_value": "Para-DPMM model",
+      "evidence": "Source code and datasets of Para-DPMM model for single cell transcriptomic clustering to reproduce results in paper \"[Parallel Clustering of Single Cell Transcriptomic Data with Split-Merge Sampling on Dirichlet Process Mixtures](https://arxiv.org/pdf/1812.10048.pdf)\", Author: Tiehang Duan; José P. Pinto; Xiaohui Xie;",
+      "evidence_location": "Line 4",
+      "confidence": "high",
+      "reason": "Explicitly identifies the name of the computational model and project."
+    },
+    {
+      "field": "purpose",
+      "value": "single cell transcriptomic clustering",
+      "normalized_value": "single cell transcriptomic clustering",
+      "evidence": "for single cell transcriptomic clustering to reproduce results in paper \"[Parallel Clustering of Single Cell Transcriptomic Data with Split-Merge Sampling on Dirichlet Process Mixtures](https://arxiv.org/pdf/1812.10048.pdf)\"",
+      "evidence_location": "Line 4",
+      "confidence": "high",
+      "reason": "Clearly states the primary scientific task the artifact is designed to perform."
+    },
+    {
+      "field": "paper_title",
+      "value": "Parallel Clustering of Single Cell Transcriptomic Data with Split-Merge Sampling on Dirichlet Process Mixtures",
+      "normalized_value": "Parallel Clustering of Single Cell Transcriptomic Data with Split-Merge Sampling on Dirichlet Process Mixtures",
+      "evidence": "[Parallel Clustering of Single Cell Transcriptomic Data with Split-Merge Sampling on Dirichlet Process Mixtures](https://arxiv.org/pdf/1812.10048.pdf)",
+      "evidence_location": "Line 4",
+      "confidence": "high",
+      "reason": "Provides the exact title of the associated peer-reviewed paper for citation and context."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/1812.10048.pdf",
+      "normalized_value": "https://arxiv.org/pdf/1812.10048.pdf",
+      "evidence": "(https://arxiv.org/pdf/1812.10048.pdf)",
+      "evidence_location": "Line 4",
+      "confidence": "high",
+      "reason": "Direct link to the paper PDF, enabling users to read the methodology and reproduce experiments."
+    },
+    {
+      "field": "authors",
+      "value": "Tiehang Duan; José P. Pinto; Xiaohui Xie",
+      "normalized_value": "Tiehang Duan; José P. Pinto; Xiaohui Xie",
+      "evidence": "Author: Tiehang Duan; José P. Pinto; Xiaohui Xie;",
+      "evidence_location": "Line 4",
+      "confidence": "high",
+      "reason": "Lists the creators of the project and paper, essential for attribution and contact."
+    },
+    {
+      "field": "dataset_source",
+      "value": "https://support.10xgenomics.com/single-cell-gene-expression/datasets",
+      "normalized_value": "https://support.10xgenomics.com/single-cell-gene-expression/datasets",
+      "evidence": "Download raw datasets from 10X genomics website (https://support.10xgenomics.com/single-cell-gene-expression/datasets) and store the files in the datasets folder;",
+      "evidence_location": "Line 12",
+      "confidence": "high",
+      "reason": "Specifies the official repository where users can obtain the raw single-cell data for reproduction."
+    },
+    {
+      "field": "software_environment",
+      "value": "Matlab2015a and gcc/4.8.4",
+      "normalized_value": "Matlab2015a and gcc/4.8.4",
+      "evidence": "We tested the code with Matlab2015a and gcc/4.8.4 (gcc/4.6.X and gcc/4.7.X should also work), the installation of following two libraries is needed:",
+      "evidence_location": "Line 33",
+      "confidence": "high",
+      "reason": "Documents the verified runtime environment and compiler versions required for successful execution."
+    },
+    {
+      "field": "dependencies",
+      "value": "1) GNU Scientific Library: http://www.gnu.org/software/gsl/\n2) Eigen library: http://eigen.tuxfamily.org/",
+      "normalized_value": "1) GNU Scientific Library: http://www.gnu.org/software/gsl/ 2) Eigen library: http://eigen.tuxfamily.org/",
+      "evidence": "1) GNU Scientific Library: http://www.gnu.org/software/gsl/\n2) Eigen library: http://eigen.tuxfamily.org/",
+      "evidence_location": "Lines 35-36",
+      "confidence": "high",
+      "reason": "Lists mandatory external C/C++ libraries needed to compile and run the source code."
+    },
+    {
+      "field": "compilation_command",
+      "value": "compile_MEX.m",
+      "normalized_value": "compile_MEX.m",
+      "evidence": "In Matlab, run compile_MEX.m;",
+      "evidence_location": "Line 45",
+      "confidence": "high",
+      "reason": "Identifies the specific MATLAB script required to compile MEX extensions before running the main algorithm."
+    },
+    {
+      "field": "execution_command",
+      "value": "./Para_DPMM",
+      "normalized_value": "./Para_DPMM",
+      "evidence": "4> ./Para_DPMM",
+      "evidence_location": "Line 76",
+      "confidence": "high",
+      "reason": "Provides the exact shell command to launch the pre-compiled binary on supported HPC systems."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "AR is Adjusted Random Index, RI is Random Index benchmark, MI is \"Mirkin's\" index and HI is \"Hubert's\" index",
+      "normalized_value": "AR is Adjusted Random Index, RI is Random Index benchmark, MI is \"Mirkin's\" index and HI is \"Hubert's\" index",
+      "evidence": "where z is the clustering result of Para_DPMM model, label is the ground truth cluster label, AR is Adjusted Random Index, RI is Random Index benchmark, MI is \"Mirkin's\" index and HI is \"Hubert's\" index.",
+      "evidence_location": "Line 57",
+      "confidence": "high",
+      "reason": "Defines the specific clustering quality metrics reported in the output files for evaluation."
+    },
+    {
+      "field": "license_reuse",
+      "value": "Please feel free to use it for academic purposes.",
+      "normalized_value": "Please feel free to use it for academic purposes.",
+      "evidence": "Please feel free to use it for academic purposes.",
+      "evidence_location": "Line 107",
+      "confidence": "high",
+      "reason": "States the permitted scope of use, clarifying that the artifact is intended for non-commercial academic research."
+    },
+    {
+      "field": "attribution_dependency",
+      "value": "The Para-DPMM project depend heavily on the open source Dirichlet Process Mixtures package(http://people.csail.mit.edu/jchang7/code.php) written by Jason Chang.",
+      "normalized_value": "The Para-DPMM project depend heavily on the open source Dirichlet Process Mixtures package(http://people.csail.mit.edu/jchang7/code.php) written by Jason Chang.",
+      "evidence": "Note: The Para-DPMM project depend heavily on the open source Dirichlet Process Mixtures package(http://people.csail.mit.edu/jchang7/code.php) written by Jason Chang.",
+      "evidence_location": "Line 110",
+      "confidence": "high",
+      "reason": "Identifies a critical foundational dependency and provides attribution/link for proper credit and further reference."
+    },
+    {
+      "field": "hpc_module_commands",
+      "value": "      1> module load gcc/6.1.0\n\n      2> module load gsl/2.3\n\n      3> module load MATLAB/r2017b",
+      "normalized_value": "1> module load gcc/6.1.0 2> module load gsl/2.3 3> module load MATLAB/r2017b",
+      "evidence": "      1> module load gcc/6.1.0\n\n      2> module load gsl/2.3\n\n      3> module load MATLAB/r2017b",
+      "evidence_location": "Lines 70-74",
+      "confidence": "high",
+      "reason": "Provides exact environment module loading commands required to configure the HPC cluster for running the compiled package."
+    }
+  ]
+}

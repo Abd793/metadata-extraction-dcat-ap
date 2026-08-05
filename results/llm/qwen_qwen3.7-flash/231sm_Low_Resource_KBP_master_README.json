@@ -1,0 +1,94 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Low_Resource_KBP",
+      "normalized_value": "Low_Resource_KBP",
+      "evidence": "# Low_Resource_KBP",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the repository/project name at the top of the README."
+    },
+    {
+      "field": "description",
+      "value": "knowledge graph population in low resource conditions",
+      "normalized_value": "knowledge graph population in low resource conditions",
+      "evidence": "knowledge graph population in low resource conditions",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Clearly defines the primary task and domain focus of the artifact."
+    },
+    {
+      "field": "dataset_name",
+      "value": "FewEvent",
+      "normalized_value": "FewEvent",
+      "evidence": "is the ***FewEvent*** dataset",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Identifies the specific dataset provided in the repository."
+    },
+    {
+      "field": "paper_title",
+      "value": "Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection",
+      "normalized_value": "Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection",
+      "evidence": "***[\"Meta-Learning with Dynamic-Memory-Based Prototypical Network for Few-Shot Event Detection\"](https://arxiv.org/abs/1910.11621)***",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Provides the exact title of the associated research paper for citation and context."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/1910.11621",
+      "normalized_value": "https://arxiv.org/abs/1910.11621",
+      "evidence": "(https://arxiv.org/abs/1910.11621)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Direct link to the paper, enabling access to methodology and experimental details."
+    },
+    {
+      "field": "publication_venue",
+      "value": "WSDM 2020",
+      "normalized_value": "WSDM 2020",
+      "evidence": "accepted by WSDM 2020",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Indicates the conference where the related work was published, establishing scientific credibility."
+    },
+    {
+      "field": "data_file",
+      "value": "Few-Shot_ED.json.zip",
+      "normalized_value": "Few-Shot_ED.json.zip",
+      "evidence": "The file \"*Few-Shot_ED.json.zip*\"",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Specifies the exact filename containing the dataset archive."
+    },
+    {
+      "field": "raw_data_sources",
+      "value": "ACE-2005 corpus, TAC-KBP-2017 Event Track Data, automatically-labeled event data from Freebase and Wikipedia",
+      "normalized_value": "ACE-2005 corpus, TAC-KBP-2017 Event Track Data, automatically-labeled event data from Freebase and Wikipedia",
+      "evidence": "including the [ACE-2005 corpus](http://projects.ldc.upenn.edu/ace/), and [TAC-KBP-2017 Event Track Data](https://tac.nist.gov/2017/KBP/Event/index.html).\n\n* We then import and extend some new event types based on an [automatically-labeled event data](https://github.com/acl2017submission/event-data), from Freebase and Wikipedia",
+      "evidence_location": "9-11",
+      "confidence": "medium",
+      "reason": "Aggregates provenance information from adjacent sections to describe dataset origins, which is critical for reproducibility and legal compliance."
+    },
+    {
+      "field": "data_format",
+      "value": "JSON",
+      "normalized_value": "JSON",
+      "evidence": "In \"*Few-Shot_ED.json.zip*\"，the key is \"*event type label*\", the value is the event instances.\n\n{event_type_label1: \\[instance1, instance2, ...\\], event_type_label2: ...}",
+      "evidence_location": "14-16",
+      "confidence": "high",
+      "reason": "Defines the serialization format and hierarchical structure of the dataset files."
+    },
+    {
+      "field": "event_instance_schema",
+      "value": "event mention, trigger, distance to beginning, distance to ending, sentence length",
+      "normalized_value": "event mention, trigger, distance to beginning, distance to ending, sentence length",
+      "evidence": "\"In trucks and on foot they came to the town of Safwan\" is an event mention\n* \"came\" is trigger\n* 7 means the distance from trigger \"came\" to the beginning of the sentence\n* 6 means the distance from trigger \"came\" to the ending of the sentence\n* 12 means the sentence length",
+      "evidence_location": "23-27",
+      "confidence": "high",
+      "reason": "Details the exact fields and their semantic meaning within each data instance, essential for parsing and reproducing experiments."
+    }
+  ]
+}

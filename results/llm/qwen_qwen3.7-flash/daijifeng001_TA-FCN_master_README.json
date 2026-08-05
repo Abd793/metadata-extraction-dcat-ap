@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "FCIS",
+      "normalized_value": "FCIS",
+      "evidence": "**FCIS** is a fully convolutional end-to-end solution for instance segmentation",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Explicitly identifies the project acronym used throughout the documentation."
+    },
+    {
+      "field": "description",
+      "value": "fully convolutional end-to-end solution for instance segmentation",
+      "normalized_value": "fully convolutional end-to-end solution for instance segmentation",
+      "evidence": "**FCIS** is a fully convolutional end-to-end solution for instance segmentation, which won the first place in COCO segmentation challenge 2016.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Provides a concise technical description of the artifact's primary function."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/msracver/FCIS.git",
+      "normalized_value": "https://github.com/msracver/FCIS.git",
+      "evidence": "git clone https://github.com/msracver/FCIS.git",
+      "evidence_location": "84",
+      "confidence": "high",
+      "reason": "Direct clone URL for accessing the complete source code repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/1611.07709",
+      "normalized_value": "https://arxiv.org/abs/1611.07709",
+      "evidence": "FCIS is initially described in a [CVPR 2017 spotlight paper](https://arxiv.org/abs/1611.07709).",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Links to the peer-reviewed publication describing the methodology."
+    },
+    {
+      "field": "framework",
+      "value": "MXNet",
+      "normalized_value": "MXNet",
+      "evidence": "This is an official implementation for [Fully Convolutional Instance-aware Semantic Segmentation](https://arxiv.org/abs/1611.07709) (FCIS) based on MXNet.",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Identifies the core deep learning framework required to run the code."
+    },
+    {
+      "field": "framework_version",
+      "value": "commit 62ecb60",
+      "normalized_value": "commit 62ecb60",
+      "evidence": "We tested our code on [MXNet@(commit 62ecb60)](https://github.com/dmlc/mxnet/tree/62ecb60)",
+      "evidence_location": "28",
+      "confidence": "medium",
+      "reason": "Specifies the exact MXNet commit tested; the doc later recommends rolling back to commit 998378a for training due to parallel execution issues, indicating version sensitivity."
+    },
+    {
+      "field": "license",
+      "value": "MIT license",
+      "normalized_value": "MIT license",
+      "evidence": "© Microsoft, 2017. Licensed under an MIT license.",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Clearly states the open-source license governing reuse and distribution."
+    },
+    {
+      "field": "copyright_holder",
+      "value": "Microsoft, 2017",
+      "normalized_value": "Microsoft, 2017",
+      "evidence": "© Microsoft, 2017. Licensed under an MIT license.",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Identifies the legal copyright owner and year of publication."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "Any NVIDIA GPUs with at least 5GB memory",
+      "normalized_value": "Any NVIDIA GPUs with at least 5GB memory",
+      "evidence": "Any NVIDIA GPUs with at least 5GB memory should be OK",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Specifies the minimum GPU VRAM required to execute the models."
+    },
+    {
+      "field": "tested_os",
+      "value": "Ubuntu 14.04, Windows Server 2012 R2",
+      "normalized_value": "Ubuntu 14.04, Windows Server 2012 R2",
+      "evidence": "- Ubuntu 14.04 with a Maxwell Titan X GPU and Intel Xeon CPU E5-2620 v2 @ 2.10GHz\n- Windows Server 2012 R2 with 8 K40 GPUs and Intel Xeon CPU E5-2650 v2 @ 2.60GHz\n- Windows Server 2012 R2 with 4 Pascal Titan X GPUs and Intel Xeon CPU E5-2650 v4 @ 2.30GHz",
+      "evidence_location": "177-181",
+      "confidence": "high",
+      "reason": "Lists the operating systems and specific hardware configurations where successful execution was verified."
+    },
+    {
+      "field": "backbone_model",
+      "value": "ResNet-v1-101",
+      "normalized_value": "ResNet-v1-101",
+      "evidence": "We trained our model based on the ImageNet pre-trained [ResNet-v1-101](https://github.com/KaimingHe/deep-residual-networks)",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Identifies the specific pre-trained neural network architecture used as the feature extractor."
+    },
+    {
+      "field": "datasets_used",
+      "value": "VOC 2012, COCO",
+      "normalized_value": "VOC 2012, COCO",
+      "evidence": "FCIS, ResNet-v1-101             | VOC 2012 train | VOC 2012 val | 66.0      | 51.9      |   0.23s    |\n| <sub>FCIS, ResNet-v1-101, OHEM </sub> | <sub>coco trainval35k</sub> | <sub>coco minival</sub> | 29.2 | 50.8 | 29.7 | 7.9 | 31.4 | 51.1 |",
+      "evidence_location": "53-58",
+      "confidence": "high",
+      "reason": "Tables explicitly list the standard computer vision benchmarks used for training and evaluation."
+    },
+    {
+      "field": "metrics_reported",
+      "value": "mAP^r@0.5, mAP^r@0.7, time",
+      "normalized_value": "mAP^r@0.5, mAP^r@0.7, time",
+      "evidence": "|                                 | training data  | testing data | mAP^r@0.5 | mAP^r@0.7 | time   |",
+      "evidence_location": "51",
+      "confidence": "high",
+      "reason": "Column headers define the quantitative evaluation metrics tracked for performance reporting."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{li2016fully,\n  Author = {Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji and Yichen Wei}\n  Title = {Fully Convolutional Instance-aware Semantic Segmentation},\n  Conference = {CVPR},\n  year = {2017}\n}",
+      "normalized_value": "@inproceedings{li2016fully,\n  Author = {Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji and Yichen Wei}\n  Title = {Fully Convolutional Instance-aware Semantic Segmentation},\n  Conference = {CVPR},\n  year = {2017}\n}",
+      "evidence": "```\n@inproceedings{li2016fully,\n  Author = {Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji and Yichen Wei}\n  Title = {Fully Convolutional Instance-aware Semantic Segmentation},\n  Conference = {CVPR},\n  year = {2017}\n}\n```",
+      "evidence_location": "40-47",
+      "confidence": "high",
+      "reason": "Provides the exact BibTeX entry required for academic attribution."
+    },
+    {
+      "field": "training_command_example",
+      "value": "python experiments/fcis/fcis_end2end_train_test.py --cfg experiments/fcis/cfgs/resnet_v1_101_coco_fcis_end2end_ohem.yaml",
+      "normalized_value": "python experiments/fcis/fcis_end2end_train_test.py --cfg experiments/fcis/cfgs/resnet_v1_101_coco_fcis_end2end_ohem.yaml",
+      "evidence": "python experiments/fcis/fcis_end2end_train_test.py --cfg experiments/fcis/cfgs/resnet_v1_101_coco_fcis_end2end_ohem.yaml",
+      "evidence_location": "170",
+      "confidence": "high",
+      "reason": "Concrete shell command demonstrating how to launch training and evaluation with a specific YAML configuration."
+    },
+    {
+      "field": "demo_command",
+      "value": "python ./fcis/demo.py",
+      "normalized_value": "python ./fcis/demo.py",
+      "evidence": "python ./fcis/demo.py",
+      "evidence_location": "137",
+      "confidence": "high",
+      "reason": "Command to execute the provided inference demonstration script using a pretrained checkpoint."
+    },
+    {
+      "field": "python_dependencies",
+      "value": "cython, opencv-python >= 3.2.0, easydict, hickle",
+      "normalized_value": "cython, opencv-python >= 3.2.0, easydict, hickle",
+      "evidence": "Python packages might missing: cython, opencv-python >= 3.2.0, easydict. If `pip` is set up on your system, those packages should be able to be fetched and installed by running\n\t```\npip install Cython\n\tpip install opencv-python==3.2.0.6\n\tpip install easydict==1.6\n\tpip install hickle\n\t```",
+      "evidence_location": "66-72",
+      "confidence": "high",
+      "reason": "Lists all required third-party Python libraries and pinned versions necessary for environment setup."
+    }
+  ]
+}

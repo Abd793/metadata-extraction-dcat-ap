@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "conditional-probing",
+      "normalized_value": "conditional-probing",
+      "evidence": "conditional-probing",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "The name of the artifact, from the main header."
+    },
+    {
+      "field": "description",
+      "value": "Codebase for easy specification of (conditional) (V-information) probing experiments.",
+      "normalized_value": "Codebase for easy specification of (conditional) (V-information) probing experiments.",
+      "evidence": "Codebase for easy specification of (conditional) (V-information) probing experiments.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Brief summary of the artifact's purpose."
+    },
+    {
+      "field": "paper_title",
+      "value": "Conditional probing: measuring usable information beyond a baseline (EMNLP 2021)",
+      "normalized_value": "Conditional probing: measuring usable information beyond a baseline (EMNLP 2021)",
+      "evidence": "Conditional probing: measuring usable information beyond a baseline (EMNLP 2021)",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "The associated research paper, which provides scientific context."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2109.09234.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2109.09234.pdf",
+      "evidence": "[Conditional probing: measuring usable information beyond a baseline (EMNLP 2021)](https://arxiv.org/pdf/2109.09234.pdf)",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Link to the PDF of the associated paper."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/john-hewitt/vinfo-probing-internal/",
+      "normalized_value": "https://github.com/john-hewitt/vinfo-probing-internal/",
+      "evidence": "git clone https://github.com/john-hewitt/vinfo-probing-internal/",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Clone URL for the repository."
+    },
+    {
+      "field": "programming_language",
+      "value": "python3",
+      "normalized_value": "python3",
+      "evidence": "Only `python3` is supported.",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Specifies the required programming language version."
+    },
+    {
+      "field": "installation_command",
+      "value": "conda install --file requirements.txt",
+      "normalized_value": "conda install --file requirements.txt",
+      "evidence": "conda install --file requirements.txt",
+      "evidence_location": "34",
+      "confidence": "high",
+      "reason": "Command to install dependencies."
+    },
+    {
+      "field": "example_command",
+      "value": "python vinfo/experiment.py example/roberta768-upos-layer5-example-cpu.yaml",
+      "normalized_value": "python vinfo/experiment.py example/roberta768-upos-layer5-example-cpu.yaml",
+      "evidence": "python vinfo/experiment.py example/roberta768-upos-layer5-example-cpu.yaml",
+      "evidence_location": "38",
+      "confidence": "high",
+      "reason": "Command to run an example experiment, useful for initial reproduction."
+    },
+    {
+      "field": "example_config_file",
+      "value": "example/roberta768-upos-layer5-example.yaml",
+      "normalized_value": "example/roberta768-upos-layer5-example.yaml",
+      "evidence": "Take a look at the config file, `example/roberta768-upos-layer5-example.yaml`.",
+      "evidence_location": "40",
+      "confidence": "high",
+      "reason": "Key configuration file for an example experiment."
+    },
+    {
+      "field": "framework_integration",
+      "value": "huggingface",
+      "normalized_value": "huggingface",
+      "evidence": "Integration with huggingface for specifying representation.",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Integration with a major ML framework, important for reuse."
+    },
+    {
+      "field": "heuristic_alignment_reference",
+      "value": "Heuristic subword-token-to-token alignment of Tenney et al., 2019",
+      "normalized_value": "Heuristic subword-token-to-token alignment of Tenney et al., 2019",
+      "evidence": "Heuristic subword-token-to-token alignment of [Tenney et al., 2019](https://openreview.net/forum?id=SJzSgnRcKX) performed per-model.",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "References a specific technique used in the codebase, important for methodology."
+    },
+    {
+      "field": "heuristic_alignment_url",
+      "value": "https://openreview.net/forum?id=SJzSgnRcKX",
+      "normalized_value": "https://openreview.net/forum?id=SJzSgnRcKX",
+      "evidence": "[Tenney et al., 2019](https://openreview.net/forum?id=SJzSgnRcKX)",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Link to the paper detailing the alignment method used."
+    },
+    {
+      "field": "tasks",
+      "value": "ptb_pos, upos, dep_rel, named_entities, sst2",
+      "normalized_value": "ptb_pos, upos, dep_rel, named_entities, sst2",
+      "evidence": "where `task_name` is one of `ptb_pos, upos, dep_rel, named_entities, sst2`.",
+      "evidence_location": "262",
+      "confidence": "high",
+      "reason": "Lists the specific NLP tasks supported in the experiments."
+    },
+    {
+      "field": "output_files_description",
+      "value": "The `v_entropy` files store a single float: the variational entropy as estimated on the `{dev,train}` set. The `label_acc` files store a single float: the part-of-speech tagging accuracies on the `{dev,train}` set. The `params` file stores the probe parameters.",
+      "normalized_value": "The `v_entropy` files store a single float: the variational entropy as estimated on the `{dev,train}` set. The `label_acc` files store a single float: the part-of-speech tagging accuracies on the `{dev,train}` set. The `params` file stores the probe parameters.",
+      "evidence": "The `v_entropy` files store a single float: the variational entropy as estimated on the `{dev,train}` set. The `label_acc` files store a single float: the part-of-speech tagging accuracies on the `{dev,train}` set. The `params` file stores the probe parameters.",
+      "evidence_location": "48",
+      "confidence": "high",
+      "reason": "Describes the key output files and their contents, crucial for understanding and evaluating results."
+    },
+    {
+      "field": "config_location",
+      "value": "configs/codalab/round1/{task_name}/{roberta768,elmo}/layer-*.yaml",
+      "normalized_value": "configs/codalab/round1/{task_name}/{roberta768,elmo}/layer-*.yaml",
+      "evidence": "configs/codalab/round1/{task_name}/{roberta768,elmo}/layer-*.yaml",
+      "evidence_location": "260",
+      "confidence": "high",
+      "reason": "Location of configuration files for reproducing the paper results."
+    },
+    {
+      "field": "reproducibility_url",
+      "value": "https://worksheets.codalab.org/worksheets/0x46190ef741004a43a2676a3b46ea0c76",
+      "normalized_value": "https://worksheets.codalab.org/worksheets/0x46190ef741004a43a2676a3b46ea0c76",
+      "evidence": "[CodaLab executable paper](https://worksheets.codalab.org/worksheets/0x46190ef741004a43a2676a3b46ea0c76)",
+      "evidence_location": "257",
+      "confidence": "high",
+      "reason": "Link to a CodaLab worksheet containing exact reproduction scripts."
+    },
+    {
+      "field": "data_source_license",
+      "value": "LDC2013T19",
+      "normalized_value": "LDC2013T19",
+      "evidence": "Let `ldc_ontonotes_path` be the path to your LDC download of `Ontonotes 5.0`, that is, `LDC2013T19`.",
+      "evidence_location": "283",
+      "confidence": "high",
+      "reason": "Specifies the licensed data source required (LDC corpus), important for legal/reuse."
+    },
+    {
+      "field": "data_split_urls",
+      "value": "https://cemantix.org/conll/2012/download/ conll-2012-train.v4.tar.gz, conll-2012-development.v4.tar.gz, conll-2012-test-key.tar.gz",
+      "normalized_value": "https://cemantix.org/conll/2012/download/ conll-2012-train.v4.tar.gz, conll-2012-development.v4.tar.gz, conll-2012-test-key.tar.gz",
+      "evidence": "https://cemantix.org/conll/2012/download/ and manually download `conll-2012-train.v4.tar.gz`, `conll-2012-development.v4.tar.gz`, and then navigate to the `test` folder and download `conll-2012-test-key.tar.gz`.",
+      "evidence_location": "287-289",
+      "confidence": "high",
+      "reason": "URLs and filenames for downloading necessary data splits."
+    },
+    {
+      "field": "data_preparation_command",
+      "value": "bash prep_ontonotes_v4.sh $ldc_onotonotes_path",
+      "normalized_value": "bash prep_ontonotes_v4.sh $ldc_onotonotes_path",
+      "evidence": "bash prep_ontonotes_v4.sh $ldc_onotonotes_path",
+      "evidence_location": "296",
+      "confidence": "high",
+      "reason": "Command to prepare the Ontonotes dataset."
+    },
+    {
+      "field": "row_count_statistics",
+      "value": "| Train | Dev | Test | | Sentences | 59,924 | 8,528 | 8,262 | | Tokens | 1,088,503 | 147,724 | 152,728 |",
+      "normalized_value": "| Train | Dev | Test | | Sentences | 59,924 | 8,528 | 8,262 | | Tokens | 1,088,503 | 147,724 | 152,728 |",
+      "evidence": "|                     | Train     | Dev     | Test    |\n|---------------------|-----------|---------|---------|\n| Sentences           |  59,924   | 8,528   | 8,262   |\n| Tokens              | 1,088,503 | 147,724 | 152,728 |",
+      "evidence_location": "303-307",
+      "confidence": "high",
+      "reason": "Concrete dataset statistics (sentence/token counts) for reproducibility."
+    },
+    {
+      "field": "citation",
+      "value": "@InProceedings{hewitt2021conditional, author = \"Hewitt, John and Ethayarajh, Kawin and Liang, Percy and Manning, Christopher D.\", title = \"Conditional probing: measuring usable information beyond a baseline\", booktitle = \"Conference on Empirical Methods in Natural Language Processing\", year = \"2021\", publisher = \"Association for Computational Linguistics\", location = \"Punta Cana, Dominican Republic\", }",
+      "normalized_value": "@InProceedings{hewitt2021conditional, author = \"Hewitt, John and Ethayarajh, Kawin and Liang, Percy and Manning, Christopher D.\", title = \"Conditional probing: measuring usable information beyond a baseline\", booktitle = \"Conference on Empirical Methods in Natural Language Processing\", year = \"2021\", publisher = \"Association for Computational Linguistics\", location = \"Punta Cana, Dominican Republic\", }",
+      "evidence": "@InProceedings{hewitt2021conditional,\n  author =      \"Hewitt, John and Ethayarajh, Kawin and Liang, Percy and Manning, Christopher D.\",\n  title =       \"Conditional probing: measuring usable information beyond a baseline\",\n  booktitle =   \"Conference on Empirical Methods in Natural Language Processing\",\n  year =        \"2021\",\n  publisher =   \"Association for Computational Linguistics\",\n  location =    \"Punta Cana, Dominican Republic\",\n}",
+      "evidence_location": "312-319",
+      "confidence": "high",
+      "reason": "Full BibTeX citation for the paper, required for attribution."
+    }
+  ]
+}

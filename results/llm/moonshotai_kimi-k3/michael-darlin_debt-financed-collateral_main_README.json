@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Debt-Financed Collateral",
+      "normalized_value": "Debt-Financed Collateral",
+      "evidence": "# Debt-Financed Collateral",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Repository title identifying the artifact."
+    },
+    {
+      "field": "artifact_purpose",
+      "value": "This repository documents the data analysis performed for the paper \"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\"",
+      "normalized_value": "This repository documents the data analysis performed for the paper \"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\"",
+      "evidence": "This repository documents the data analysis performed for the paper \"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\"",
+      "evidence_location": "line 3, Overview section",
+      "confidence": "high",
+      "reason": "States the purpose of the repository: documenting data analysis for a specific paper."
+    },
+    {
+      "field": "associated_paper",
+      "value": "Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem",
+      "normalized_value": "Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem",
+      "evidence": "\"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\" ([ArXiv](https://arxiv.org/abs/2204.11107))",
+      "evidence_location": "line 3, Overview section",
+      "confidence": "high",
+      "reason": "Names the research paper this artifact supports, with its ArXiv link."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2204.11107",
+      "normalized_value": "https://arxiv.org/abs/2204.11107",
+      "evidence": "[ArXiv](https://arxiv.org/abs/2204.11107)",
+      "evidence_location": "line 3, Overview section",
+      "confidence": "high",
+      "reason": "Direct access link to the associated paper on ArXiv."
+    },
+    {
+      "field": "database_system",
+      "value": "MariaDB",
+      "normalized_value": "MariaDB",
+      "evidence": "All relevant data was stored in a MariaDB database",
+      "evidence_location": "line 3, Overview section",
+      "confidence": "high",
+      "reason": "Identifies the database technology used to store the analysis data, relevant for reproduction."
+    },
+    {
+      "field": "data_export_link",
+      "value": "https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_",
+      "normalized_value": "https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_",
+      "evidence": "an export of the table data is available [here](https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_)",
+      "evidence_location": "line 3, Overview section",
+      "confidence": "high",
+      "reason": "Provides access to the exported dataset needed to reproduce the analysis."
+    },
+    {
+      "field": "data_collection_platform",
+      "value": "Google's BigQuery service",
+      "normalized_value": "Google's BigQuery service",
+      "evidence": "The majority of event data was collected through Google's BigQuery service, using Python.",
+      "evidence_location": "line 9, Files/folders section, 1-scrape",
+      "confidence": "high",
+      "reason": "Names the external data platform used for large-scale event data collection."
+    },
+    {
+      "field": "programming_languages",
+      "value": "Python, NodeJS, R",
+      "normalized_value": "Python, NodeJS, R",
+      "evidence": "**Large-scale data collection (Python)**\n\n**One-off data collection (NodeJS)**\n\n*analysis.r* contains the R code used to create charts and tables for the final paper.",
+      "evidence_location": "lines 9, 12, 24, Files/folders section",
+      "confidence": "high",
+      "reason": "Identifies the languages used across the pipeline, relevant for environment setup and reuse."
+    },
+    {
+      "field": "pipeline_stage_scrape",
+      "value": "1-scrape: data collection via defiEvents.py (classes) and collectEvents.py (collection script run once per project), plus NodeJS one-off scripts mkrVaults.js, mkrRateAdjust.js, uniExchanges.js, usdValues.js",
+      "normalized_value": "1-scrape: data collection via defiEvents.py (classes) and collectEvents.py (collection script run once per project), plus NodeJS one-off scripts mkrVaults.js, mkrRateAdjust.js, uniExchanges.js, usdValues.js",
+      "evidence": "**1-scrape**\n\n- **Large-scale data collection (Python)** - The majority of event data was collected through Google's BigQuery service, using Python. \n    - *defiEvents.py*: collection of classes used for data collection.\n    - *collectEvents.py*: script to collect data. This script was run once for each project. Code was written to collect data across multiple protocol versions (e.g. both Version 1 and Version 2 of Uniswap), but only data from the most recent protocol was used.\n- **One-off data collection (NodeJS)** - These scripts were used to collect more targeted information.\n    - *mkrVaults.js*: Collect data on all existing Maker vaults, including all addresses associated to the vault (owner, DSProxy, and UrnHandler addresses).\n    - *mkrRateAdjust.js*: Collect information to adjust DAI amounts recorded in frob transactions. Frob transaction amounts (specifically for debt withdrawal/repayment) are recorded without interest rate adjustments. This file collects information to adjust DAI amounts according to the prevailing cumulative interest rate in the Maker Vat contract.\n    - *uniExchanges.js*: Collect pair addresses from Uniswap for all tokens used in the final analysis.\n    - *usdValues.js*: Collect hourly USD pricing data from Coinbase and update each transaction with the most recent USD price.",
+      "evidence_location": "lines 7-16, Files/folders section",
+      "confidence": "high",
+      "reason": "Describes the data collection stage and its scripts, essential for reproducing data gathering."
+    },
+    {
+      "field": "core_algorithm_file",
+      "value": "algo.ipynb",
+      "normalized_value": "algo.ipynb",
+      "evidence": "*algo.ipynb* contains the algorithm used to estimate the percentage of debt-financed collateral",
+      "evidence_location": "line 20, Files/folders section, 2-transform",
+      "confidence": "high",
+      "reason": "Identifies the notebook implementing the core estimation algorithm of the study."
+    },
+    {
+      "field": "analysis_code_file",
+      "value": "analysis.r",
+      "normalized_value": "analysis.r",
+      "evidence": "*analysis.r* contains the R code used to create charts and tables for the final paper.",
+      "evidence_location": "line 24, Files/folders section, 3-analyze",
+      "confidence": "high",
+      "reason": "Identifies the script that generates the paper's charts and tables, key for reproducing results."
+    },
+    {
+      "field": "pricing_data_source",
+      "value": "Coinbase",
+      "normalized_value": "Coinbase",
+      "evidence": "*usdValues.js*: Collect hourly USD pricing data from Coinbase and update each transaction with the most recent USD price.",
+      "evidence_location": "line 16, Files/folders section, 1-scrape",
+      "confidence": "high",
+      "reason": "Names the external source of USD pricing data used to value transactions."
+    },
+    {
+      "field": "studied_protocols",
+      "value": "Maker, Uniswap",
+      "normalized_value": "Maker, Uniswap",
+      "evidence": "*mkrVaults.js*: Collect data on all existing Maker vaults, including all addresses associated to the vault (owner, DSProxy, and UrnHandler addresses).\n    - *mkrRateAdjust.js*: Collect information to adjust DAI amounts recorded in frob transactions. Frob transaction amounts (specifically for debt withdrawal/repayment) are recorded without interest rate adjustments. This file collects information to adjust DAI amounts according to the prevailing cumulative interest rate in the Maker Vat contract.\n    - *uniExchanges.js*: Collect pair addresses from Uniswap for all tokens used in the final analysis.",
+      "evidence_location": "lines 13-15, Files/folders section, 1-scrape",
+      "confidence": "high",
+      "reason": "Names the DeFi protocols whose on-chain data was collected, defining the study's scope."
+    },
+    {
+      "field": "research_domain",
+      "value": "DeFi ecosystem stability risks from debt-financed collateral",
+      "normalized_value": "DeFi ecosystem stability risks from debt-financed collateral",
+      "evidence": "the paper \"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\"",
+      "evidence_location": "line 3, Overview section",
+      "confidence": "high",
+      "reason": "Establishes the scientific context: decentralized finance and collateral-related stability risk."
+    },
+    {
+      "field": "utility_files",
+      "value": "utils folder: abi.js (ABIs for relevant contracts), addr.js (relevant addresses), eventLib.js (helper functions)",
+      "normalized_value": "utils folder: abi.js (ABIs for relevant contracts), addr.js (relevant addresses), eventLib.js (helper functions)",
+      "evidence": "This folder contains several files used by NodeJS scripts:\n- *abi.js*: ABIs for relevant contracts\n- *addr.js*: relevant addresses\n- *eventLib.js*: helper functions",
+      "evidence_location": "lines 28-31, Files/folders section, utils",
+      "confidence": "high",
+      "reason": "Documents supporting files (contract ABIs, addresses, helpers) needed to run the NodeJS collection scripts."
+    }
+  ]
+}

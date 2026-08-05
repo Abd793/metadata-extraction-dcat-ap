@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "story-distiller",
+      "normalized_value": "story-distiller",
+      "evidence": "# story-distiller",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Identifies the artifact by its repository/project name."
+    },
+    {
+      "field": "description",
+      "value": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc. The music tracks are fitted to a fixed narrative template based on the output of a machine learning model, which itself distills each track down to its narrative essence.",
+      "normalized_value": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc. The music tracks are fitted to a fixed narrative template based on the output of a machine learning model, which itself distills each track down to its narrative essence.",
+      "evidence": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc. The music tracks are fitted to a fixed narrative template based on the output of a machine learning model, which itself distills each track down to its narrative essence.",
+      "evidence_location": "line 5, introductory paragraph",
+      "confidence": "high",
+      "reason": "States the purpose and method of the artifact, essential for understanding and indexing."
+    },
+    {
+      "field": "associated_paper",
+      "value": "On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media by Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber",
+      "normalized_value": "On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media by Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber",
+      "evidence": "see *On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media* by Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber.",
+      "evidence_location": "line 5, introductory paragraph",
+      "confidence": "high",
+      "reason": "Names the research paper and authors underlying the artifact, useful for citation and scientific context."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "This project is implemented in [Python](https://www.python.org/) and uses models learned with [PyTorch](https://pytorch.org).",
+      "evidence_location": "line 10, Installation section",
+      "confidence": "high",
+      "reason": "Identifies the implementation language, needed for environment setup and reuse."
+    },
+    {
+      "field": "ml_framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "This project is implemented in [Python](https://www.python.org/) and uses models learned with [PyTorch](https://pytorch.org).",
+      "evidence_location": "line 10, Installation section",
+      "confidence": "high",
+      "reason": "Identifies the machine learning framework used for the models, relevant to dependencies and reproduction."
+    },
+    {
+      "field": "code_style",
+      "value": "black",
+      "normalized_value": "black",
+      "evidence": "[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)",
+      "evidence_location": "line 3, badge",
+      "confidence": "high",
+      "reason": "Badge indicates the code formatter used, useful for contributors."
+    },
+    {
+      "field": "repository_url",
+      "value": "git@github.com:dylanashley/story-distiller.git",
+      "normalized_value": "git@github.com:dylanashley/story-distiller.git",
+      "evidence": "git clone --sparse git@github.com:dylanashley/story-distiller.git",
+      "evidence_location": "lines 13-15, Installation section code block",
+      "confidence": "high",
+      "reason": "Provides the repository access URL needed to obtain the artifact."
+    },
+    {
+      "field": "installation_command",
+      "value": "git clone --sparse git@github.com:dylanashley/story-distiller.git",
+      "normalized_value": "git clone --sparse git@github.com:dylanashley/story-distiller.git",
+      "evidence": "Before installation, first, ensure you have a recent version of Python and pip, then clone the repository using the `--sparse` option:\n```bash\ngit clone --sparse git@github.com:dylanashley/story-distiller.git\n```",
+      "evidence_location": "lines 12-15, Installation section",
+      "confidence": "high",
+      "reason": "Defines the first installation step (sparse clone) for setting up the tool."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "Afterwards, install the Python dependencies using pip:\n```bash\npip install -r requirements.txt\n```",
+      "evidence_location": "lines 17-20, Installation section",
+      "confidence": "high",
+      "reason": "Defines the dependency installation step required to run the tool."
+    },
+    {
+      "field": "external_dependency",
+      "value": "ffmpeg",
+      "normalized_value": "ffmpeg",
+      "evidence": "To use the full suite of file types supported by the tool, it is also necessary to separately install the [ffmpeg](https://ffmpeg.org/) tool by following the instructions for your operating system provided on [their website](https://ffmpeg.org/download.html).",
+      "evidence_location": "line 22, Installation section",
+      "confidence": "high",
+      "reason": "Names an external system dependency required for full file-type support."
+    },
+    {
+      "field": "build_and_install_command",
+      "value": "make all\nsudo make install",
+      "normalized_value": "make all\nsudo make install",
+      "evidence": "You can now run the tool by directly executing the `__main__.py` file, or—if you're using Linux or macOS—you can use the makefile to compile and then install an executable Python zip archive:\n```bash\nmake all\nsudo make install\n```",
+      "evidence_location": "lines 24-28, Installation section",
+      "confidence": "high",
+      "reason": "Defines the optional build/install steps producing an executable Python zip archive on Linux or macOS."
+    },
+    {
+      "field": "supported_platforms",
+      "value": "Linux or macOS",
+      "normalized_value": "Linux or macOS",
+      "evidence": "or—if you're using Linux or macOS—you can use the makefile to compile and then install an executable Python zip archive",
+      "evidence_location": "line 24, Installation section",
+      "confidence": "medium",
+      "reason": "Indicates the platforms on which the makefile-based install path is supported; the tool itself may run elsewhere via __main__.py."
+    },
+    {
+      "field": "cli_usage_command",
+      "value": "sdistil files [files ...] >> playlist.txt",
+      "normalized_value": "sdistil files [files ...] >> playlist.txt",
+      "evidence": "To run the program, execute it while passing the audio files as command-line arguments:\n```bash\nsdistil files [files ...] >> playlist.txt\n```",
+      "evidence_location": "lines 33-36, Command-line Tool Usage section",
+      "confidence": "high",
+      "reason": "Defines how to run the command-line tool for inference (sequencing audio files into a playlist)."
+    },
+    {
+      "field": "audio_processing_library",
+      "value": "librosa",
+      "normalized_value": "librosa",
+      "evidence": "[librosa](https://librosa.org/doc/latest/index.html) is used to process the audio files, so most common audio file types are supported.",
+      "evidence_location": "line 38, Command-line Tool Usage section",
+      "confidence": "high",
+      "reason": "Names the audio processing dependency and explains supported input file types."
+    },
+    {
+      "field": "cli_template_option",
+      "value": "-t",
+      "normalized_value": "-t",
+      "evidence": "If you want to try out a different template, pass the `-t` argument to the program with the template file as an argument. Several learned templates are included in the templates directory:",
+      "evidence_location": "line 40, Command-line Tool Usage section",
+      "confidence": "high",
+      "reason": "Documents the configuration option for selecting a narrative template and notes bundled learned templates."
+    },
+    {
+      "field": "web_app_command",
+      "value": "./app.py",
+      "normalized_value": "./app.py",
+      "evidence": "To run the web app, simply execute the `app.py` file:\n```bash\n./app.py\n```",
+      "evidence_location": "lines 47-50, Web App Usage section",
+      "confidence": "high",
+      "reason": "Defines how to launch the web application interface of the tool."
+    },
+    {
+      "field": "reproduction_components",
+      "value": "album_extractor.py, movie_extractor.py, template_learner.py, fit_values in __main__.py, data/, results/",
+      "normalized_value": "album_extractor.py, movie_extractor.py, template_learner.py, fit_values in __main__.py, data/, results/",
+      "evidence": "- the scripts needed to learn the PyTorch models for extracting the narrative essence from either music albums (`album_extractor.py`) or movie frames (`movie_extractor.py`) and compute the lower bounds for the mutual information of the different features,\n- the scripts for learning a set of template curves from scalar descriptions of items in a set of collections (`template_learner.py`),\n- the code that can fit the scalar descriptions of items in a collection to a given template curve (`fit_values` in `__main__.py`),\n- the preprocessed album data used to train the original PyTorch models for the music albums (`data/`), and\n- the learned PyTorch models and template curves (`results/`).",
+      "evidence_location": "lines 56-60, Extras section list",
+      "confidence": "high",
+      "reason": "Enumerates the training scripts, fitting code, preprocessed data, and learned models/templates included for reproducing the paper's results."
+    },
+    {
+      "field": "full_clone_command",
+      "value": "git clone git@github.com:dylanashley/story-distiller.git",
+      "normalized_value": "git clone git@github.com:dylanashley/story-distiller.git",
+      "evidence": "Note that to obtain the preprocessed data and the learned PyTorch models and template curves, you will have to clone the repository without using the `--sparse` option:\n```bash\ngit clone git@github.com:dylanashley/story-distiller.git\n```",
+      "evidence_location": "lines 62-65, Extras section",
+      "confidence": "high",
+      "reason": "Defines the clone step required to obtain the preprocessed data and learned models needed for reproduction."
+    },
+    {
+      "field": "data_availability_note",
+      "value": "the raw data used to train the movie frame extractor is not possible to release due to copyright issues",
+      "normalized_value": "the raw data used to train the movie frame extractor is not possible to release due to copyright issues",
+      "evidence": "At this time, the raw data used to train the movie frame extractor is not possible to release due to copyright issues. However, `movie_extractor.py` should work on any similar collection with minimal changes.",
+      "evidence_location": "line 67, Extras section",
+      "confidence": "high",
+      "reason": "Documents a legal/availability limitation on training data, important for reproducibility expectations."
+    },
+    {
+      "field": "preprocessing_tool",
+      "value": "official CLIP implementation (https://github.com/openai/CLIP)",
+      "normalized_value": "official CLIP implementation (https://github.com/openai/CLIP)",
+      "evidence": "Preprocessing to extract CLIP features from images can be done straightforwardly using the [official implementation](https://github.com/openai/CLIP).",
+      "evidence_location": "line 67, Extras section",
+      "confidence": "high",
+      "reason": "Names the external tool and repository for extracting CLIP features during preprocessing of image data."
+    }
+  ]
+}

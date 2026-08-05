@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_title",
+      "value": "# Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications",
+      "normalized_value": "# Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications",
+      "evidence": "# Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project/paper title for identification and indexing."
+    },
+    {
+      "field": "paper_url",
+      "value": "[Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications](https://arxiv.org/abs/2310.14103)",
+      "normalized_value": "[Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications](https://arxiv.org/abs/2310.14103)",
+      "evidence": "[Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications](https://arxiv.org/abs/2310.14103)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated academic paper for context and verification."
+    },
+    {
+      "field": "conference",
+      "value": "EMNLP 2023",
+      "normalized_value": "EMNLP 2023",
+      "evidence": "EMNLP 2023",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Indicates the publication venue and year, crucial for scientific context and citation tracking."
+    },
+    {
+      "field": "authors",
+      "value": "author={Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo},",
+      "normalized_value": "author={Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo},",
+      "evidence": "author={Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo},",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Lists the creators for proper attribution and citation."
+    },
+    {
+      "field": "publication_year",
+      "value": "year={2023},",
+      "normalized_value": "year={2023},",
+      "evidence": "year={2023},",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Establishes the temporal context for the research and code versioning."
+    },
+    {
+      "field": "arxiv_id",
+      "value": "eprint={2310.14103},",
+      "normalized_value": "eprint={2310.14103},",
+      "evidence": "eprint={2310.14103},",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Standard identifier for locating the preprint and cross-referencing academic databases."
+    },
+    {
+      "field": "research_domain",
+      "value": "primaryClass={cs.LG}",
+      "normalized_value": "primaryClass={cs.LG}",
+      "evidence": "primaryClass={cs.LG}",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Specifies the computer science classification, aiding in subject-based filtering and search."
+    },
+    {
+      "field": "project_purpose",
+      "value": "This repository contains code, data and experimental results for all experiments in the paper.",
+      "normalized_value": "This repository contains code, data and experimental results for all experiments in the paper.",
+      "evidence": "This repository contains code, data and experimental results for all experiments in the paper.",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Clearly defines the scope and contents of the repository for users seeking reproduction materials."
+    },
+    {
+      "field": "dataset_paths",
+      "value": "In `data/fractial_mixes`, you will find the various instruction training sets used for both parts of the paper,\nevaluation of all scorers (Section 2) and investigations of learning dynamics (Section 3).\nEach folder contains data where n samples from the folder name category are included in the training set, along with the \nrest of the synthetic samples from the Alpaca train set. Refer to the paper for more details.\nSome task categories are synthetically generated through the Alpaca paradigm, others are manually labeled more classic\nNLP tasks (Xsum, SST2, Squad, CONLL) and are used as target tasks in most of the paper's experiments.\n\nThe experimental results are added in `data/results`, per experiment as CSV files.\nRaw JSON files for all models and experiments are also included in `data/results/results_new.zip`.",
+      "normalized_value": "In `data/fractial_mixes`, you will find the various instruction training sets used for both parts of the paper, evaluation of all scorers (Section 2) and investigations of learning dynamics (Section 3). Each folder contains data where n samples from the folder name category are included in the training set, along with the rest of the synthetic samples from the Alpaca train set. Refer to the paper for more details. Some task categories are synthetically generated through the Alpaca paradigm, others are manually labeled more classic NLP tasks (Xsum, SST2, Squad, CONLL) and are used as target tasks in most of the paper's experiments. The experimental results are added in `data/results`, per experiment as CSV files. Raw JSON files for all models and experiments are also included in `data/results/results_new.zip`.",
+      "evidence": "In `data/fractial_mixes`, you will find the various instruction training sets used for both parts of the paper,\nevaluation of all scorers (Section 2) and investigations of learning dynamics (Section 3).\nEach folder contains data where n samples from the folder name category are included in the training set, along with the \nrest of the synthetic samples from the Alpaca train set. Refer to the paper for more details.\nSome task categories are synthetically generated through the Alpaca paradigm, others are manually labeled more classic\nNLP tasks (Xsum, SST2, Squad, CONLL) and are used as target tasks in most of the paper's experiments.\n\nThe experimental results are added in `data/results`, per experiment as CSV files.\nRaw JSON files for all models and experiments are also included in `data/results/results_new.zip`.",
+      "evidence_location": "33-41",
+      "confidence": "high",
+      "reason": "Identifies exact directory paths for training data, validation/test splits, and result files, essential for data access and reproduction."
+    },
+    {
+      "field": "baseline_inspiration",
+      "value": "It is heavily inspired by tloen's Alpaca-Lora.",
+      "normalized_value": "It is heavily inspired by tloen's Alpaca-Lora.",
+      "evidence": "It is heavily inspired by tloen's Alpaca-Lora.",
+      "evidence_location": "59",
+      "confidence": "high",
+      "reason": "Points to a foundational implementation that users can reference for architectural or methodological context."
+    },
+    {
+      "field": "training_command",
+      "value": "```bash\nsbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8     --output=frac_100u.out     --error=frac_100u.err     --wrap=\"python model_training/finetune.py       --train_data_path data/fractial_code/fractial_code_100_train.jsonl      --output_dir models/fractial_code_100       --micro_batch_size 32       --num_epochs 2       --cutoff_len 512       --val_data_path data/fractial_code/fractial_code_1000_validation.jsonl       --test_data_path data/fractial_code/fractial_code_only_test.jsonl\"\n```",
+      "normalized_value": "sbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8 --output=frac_100u.out --error=frac_100u.err --wrap=\"python model_training/finetune.py --train_data_path data/fractial_code/fractial_code_100_train.jsonl --output_dir models/fractial_code_100 --micro_batch_size 32 --num_epochs 2 --cutoff_len 512 --val_data_path data/fractial_code/fractial_code_1000_validation.jsonl --test_data_path data/fractial_code/fractial_code_only_test.jsonl\"",
+      "evidence": "```bash\nsbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8     --output=frac_100u.out     --error=frac_100u.err     --wrap=\"python model_training/finetune.py       --train_data_path data/fractial_code/fractial_code_100_train.jsonl      --output_dir models/fractial_code_100       --micro_batch_size 32       --num_epochs 2       --cutoff_len 512       --val_data_path data/fractial_code/fractial_code_1000_validation.jsonl       --test_data_path data/fractial_code/fractial_code_only_test.jsonl\"\n```",
+      "evidence_location": "62-64",
+      "confidence": "high",
+      "reason": "Provides a concrete, reproducible SLURM job submission command with hyperparameters and file paths for model training."
+    },
+    {
+      "field": "evaluation_scorers",
+      "value": "- Any scorer available through HuggingFace Evaluate\n- BertScore\n- SentenceBert\n- A Reward model trained by OpenAssistant\n- API-access LLMs like GPT4 or GPT3.5\n- Support for Custom heuristics on custom datasets",
+      "normalized_value": "- Any scorer available through HuggingFace Evaluate - BertScore - SentenceBert - A Reward model trained by OpenAssistant - API-access LLMs like GPT4 or GPT3.5 - Support for Custom heuristics on custom datasets",
+      "evidence": "- Any scorer available through HuggingFace Evaluate\n- BertScore\n- SentenceBert\n- A Reward model trained by OpenAssistant\n- API-access LLMs like GPT4 or GPT3.5\n- Support for Custom heuristics on custom datasets",
+      "evidence_location": "72-77",
+      "confidence": "high",
+      "reason": "Details the specific metrics and tools used for evaluation, critical for reproducing experimental results and comparing outputs."
+    },
+    {
+      "field": "analysis_notebook",
+      "value": "To process them for further analysis, a notebook is contained in `scripts/result_aggregation/results_viz.ipynb`.",
+      "normalized_value": "To process them for further analysis, a notebook is contained in `scripts/result_aggregation/results_viz.ipynb`.",
+      "evidence": "To process them for further analysis, a notebook is contained in `scripts/result_aggregation/results_viz.ipynb`.",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "Points to a ready-to-use script for post-processing and visualizing experimental results, aiding rapid reuse."
+    },
+    {
+      "field": "external_api_dependency",
+      "value": "The `illuin_llm_tools` package is a proprietary package, which is simply a wrapper around the OpenAI API to \nenable easier parallelization and caching of the API requests.",
+      "normalized_value": "The `illuin_llm_tools` package is a proprietary package, which is simply a wrapper around the OpenAI API to enable easier parallelization and caching of the API requests.",
+      "evidence": "The `illuin_llm_tools` package is a proprietary package, which is simply a wrapper around the OpenAI API to \nenable easier parallelization and caching of the API requests.",
+      "evidence_location": "88-89",
+      "confidence": "high",
+      "reason": "Identifies a required third-party dependency and its underlying service, necessary for environment setup and API configuration."
+    }
+  ]
+}

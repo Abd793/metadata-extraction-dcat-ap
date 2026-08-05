@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "Vec2Sent",
+      "normalized_value": "Vec2Sent",
+      "evidence": "# Vec2Sent<br><sub><sup>Probing Sentence Embeddings with Natural Language Generation</sup></sub>",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Project name explicitly stated in title"
+    },
+    {
+      "field": "project_description",
+      "value": "Probing Sentence Embeddings with Natural Language Generation",
+      "normalized_value": "Probing Sentence Embeddings with Natural Language Generation",
+      "evidence": "# Vec2Sent<br><sub><sup>Probing Sentence Embeddings with Natural Language Generation</sup></sub>",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Clear description of project purpose from subtitle"
+    },
+    {
+      "field": "abstract",
+      "value": "We introspect black-box sentence embeddings by conditionally generating from them with the objective to retrieve the underlying discrete sentence. We perceive of this as a new unsupervised probing task and show that it correlates well with downstream task performance. We also illustrate how the language generated from different encoders differs. We apply our approach to generate sentence analogies from sentence embeddings.",
+      "normalized_value": "We introspect black-box sentence embeddings by conditionally generating from them with the objective to retrieve the underlying discrete sentence. We perceive of this as a new unsupervised probing task and show that it correlates well with downstream task performance. We also illustrate how the language generated from different encoders differs. We apply our approach to generate sentence analogies from sentence embeddings.",
+      "evidence": "We introspect black-box sentence embeddings by conditionally generating from them with the objective to retrieve the underlying discrete sentence. We perceive of this as a new unsupervised probing task and show that it correlates well with downstream task performance. We also illustrate how the language generated from different encoders differs. We apply our approach to generate sentence analogies from sentence embeddings.",
+      "evidence_location": "4-8",
+      "confidence": "high",
+      "reason": "Detailed abstract explaining project methodology and purpose"
+    },
+    {
+      "field": "arxiv_paper_url",
+      "value": "https://arxiv.org/abs/2011.00592",
+      "normalized_value": "https://arxiv.org/abs/2011.00592",
+      "evidence": "[![arXiv](https://img.shields.io/badge/View%20on%20arXiv-B31B1B?logo=arxiv&labelColor=gray)](https://arxiv.org/abs/2011.00592)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Link to associated research paper"
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install \"vec2sent @ git+https://github.com/maruker/vec2sent.git\"",
+      "normalized_value": "pip install \"vec2sent @ git+https://github.com/maruker/vec2sent.git\"",
+      "evidence": "pip install \"vec2sent @ git+https://github.com/maruker/vec2sent.git\"",
+      "evidence_location": "14-16",
+      "confidence": "high",
+      "reason": "Primary installation command for the package"
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/maruker/vec2sent.git",
+      "normalized_value": "https://github.com/maruker/vec2sent.git",
+      "evidence": "pip install \"vec2sent @ git+https://github.com/maruker/vec2sent.git\"",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "GitHub repository URL embedded in installation command"
+    },
+    {
+      "field": "usage_command_arithmetic",
+      "value": "vec2sent_arithmetic -s infersent -c maruker/vec2sent-infersent",
+      "normalized_value": "vec2sent_arithmetic -s infersent -c maruker/vec2sent-infersent",
+      "evidence": "vec2sent_arithmetic -s infersent -c maruker/vec2sent-infersent",
+      "evidence_location": "22-24",
+      "confidence": "high",
+      "reason": "Command for vector arithmetic operations"
+    },
+    {
+      "field": "usage_command_generation",
+      "value": "vec2sent_generate -s hier -c maruker/vec2sent-hier -d data/test.en.2008 -o hier.txt",
+      "normalized_value": "vec2sent_generate -s hier -c maruker/vec2sent-hier -d data/test.en.2008 -o hier.txt",
+      "evidence": "vec2sent_generate -s hier -c maruker/vec2sent-hier -d data/test.en.2008 -o hier.txt",
+      "evidence_location": "39-41",
+      "confidence": "high",
+      "reason": "Command for sentence generation"
+    },
+    {
+      "field": "usage_command_evaluation",
+      "value": "vec2sent_evaluate --metric BLEU --file hier.txt",
+      "normalized_value": "vec2sent_evaluate --metric BLEU --file hier.txt",
+      "evidence": "vec2sent_evaluate --metric BLEU --file hier.txt",
+      "evidence_location": "47-49",
+      "confidence": "high",
+      "reason": "Command for evaluating generated sentences"
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "ID, PERM, ID_PERM, BLEU, MOVER",
+      "normalized_value": "ID, PERM, ID_PERM, BLEU, MOVER",
+      "evidence": "| Parameter | Explanation                                                                       |\n|-----------|-----------------------------------------------------------------------------------|\n| ID        | Fraction of all sentences where the output is identical to the input              |\n| PERM      | Fraction of all output sentences that can be formed as a permutation of the input |\n| ID_PERM   | Fraction of all permuations that are identical to the input                       |\n| BLEU      | Document BLEU score                                                               |\n| MOVER     | Average Mover Score between input and output sentences                            |",
+      "evidence_location": "53-60",
+      "confidence": "high",
+      "reason": "Available evaluation metrics with explanations"
+    },
+    {
+      "field": "available_models",
+      "value": "avg, hier, gem, sent2vec, infersent, sbert-large",
+      "normalized_value": "avg, hier, gem, sent2vec, infersent, sbert-large",
+      "evidence": "| Sentence embedding name `-s` | Checkpoint `-c`              | Explanation                                                                       |\n|------------------------------|------------------------------|-----------------------------------------------------------------------------------|\n| avg                          | maruker/vec2sent-avg         | Average pooling on [BPEmb](https://github.com/bheinzerling/bpemb) word embeddings |\n| hier                         | maruker/vec2sent-hier        | Hierarchical pooling on [BPEmb](https://github.com/bheinzerling/bpemb)            |\n| gem                          | maruker/vec2sent-gem         | [Geometric Embeddings](https://github.com/fursovia/geometric_embedding)           |\n| sent2vec                     | maruker/vec2sent-sent2vec    | [Sent2Vec](https://github.com/epfml/sent2vec)                                     |\n| infersent                    | maruker/vec2sent-infersent   | [InferSent](https://github.com/facebookresearch/InferSent)                        |\n| sbert-large                  | maruker/vec2sent-sbert-large | [SBERT](https://github.com/UKPLab/sentence-transformers)                          |",
+      "evidence_location": "69-76",
+      "confidence": "high",
+      "reason": "List of supported sentence embedding models and their checkpoints"
+    },
+    {
+      "field": "model_repository",
+      "value": "Hugging Face Hub",
+      "normalized_value": "Hugging Face Hub",
+      "evidence": "We upload our models to the Hugging Face Hub.",
+      "evidence_location": "67",
+      "confidence": "high",
+      "reason": "Location where models are hosted"
+    },
+    {
+      "field": "cleanup_command",
+      "value": "vec2sent_cleanup",
+      "normalized_value": "vec2sent_cleanup",
+      "evidence": "`vec2sent_cleanup`",
+      "evidence_location": "63",
+      "confidence": "high",
+      "reason": "Command to delete downloaded models to free up space"
+    },
+    {
+      "field": "source_installation_command",
+      "value": "pip install .",
+      "normalized_value": "pip install .",
+      "evidence": "pip install .",
+      "evidence_location": "97-99",
+      "confidence": "high",
+      "reason": "Alternative installation method from source"
+    },
+    {
+      "field": "virtual_environment_setup",
+      "value": "python -m venv venv\nsource venv/bin/activate",
+      "normalized_value": "python -m venv venv source venv/bin/activate",
+      "evidence": "python -m venv venv\nsource venv/bin/activate",
+      "evidence_location": "84-87",
+      "confidence": "high",
+      "reason": "Commands for setting up virtual environment"
+    },
+    {
+      "field": "dependency_setup_command",
+      "value": "git submodule update --init",
+      "normalized_value": "git submodule update --init",
+      "evidence": "git submodule update --init",
+      "evidence_location": "91-93",
+      "confidence": "high",
+      "reason": "Command to initialize git submodules for dependencies"
+    },
+    {
+      "field": "extension_class",
+      "value": "vec2sent.sentence_embeddings.abstract_sentence_embedding.AbstractEmbedding",
+      "normalized_value": "vec2sent.sentence_embeddings.abstract_sentence_embedding.AbstractEmbedding",
+      "evidence": "Additional sentence embeddings can be used by extending the class ``vec2sent.sentence_embeddings.abstract_sentence_embedding.AbstractEmbedding``.",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Base class for extending with additional sentence embeddings"
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{kerscher-eger-2020-vec2sent,\n    title = \"{V}ec2{S}ent: Probing Sentence Embeddings with Natural Language Generation\",\n    author = \"Kerscher, Martin  and\n      Eger, Steffen\",\n    booktitle = \"Proceedings of the 28th International Conference on Computational Linguistics\",\n    month = dec,\n    year = \"2020\",\n    address = \"Barcelona, Spain (Online)\",\n    publisher = \"International Committee on Computational Linguistics\",\n    url = \"https://www.aclweb.org/anthology/2020.coling-main.152\",\n    pages = \"1729--1736\",\n    abstract = \"We introspect black-box sentence embeddings by conditionally generating from them with the objective to retrieve the underlying discrete sentence. We perceive of this as a new unsupervised probing task and show that it correlates well with downstream task performance. We also illustrate how the language generated from different encoders differs. We apply our approach to generate sentence analogies from sentence embeddings.\",\n}",
+      "normalized_value": "@inproceedings{kerscher-eger-2020-vec2sent, title = \"{V}ec2{S}ent: Probing Sentence Embeddings with Natural Language Generation\", author = \"Kerscher, Martin and Eger, Steffen\", booktitle = \"Proceedings of the 28th International Conference on Computational Linguistics\", month = dec, year = \"2020\", address = \"Barcelona, Spain (Online)\", publisher = \"International Committee on Computational Linguistics\", url = \"https://www.aclweb.org/anthology/2020.coling-main.152\", pages = \"1729--1736\", abstract = \"We introspect black-box sentence embeddings by conditionally generating from them with the objective to retrieve the underlying discrete sentence. We perceive of this as a new unsupervised probing task and show that it correlates well with downstream task performance. We also illustrate how the language generated from different encoders differs. We apply our approach to generate sentence analogies from sentence embeddings.\", }",
+      "evidence": "@inproceedings{kerscher-eger-2020-vec2sent,\n    title = \"{V}ec2{S}ent: Probing Sentence Embeddings with Natural Language Generation\",\n    author = \"Kerscher, Martin  and\n      Eger, Steffen\",\n    booktitle = \"Proceedings of the 28th International Conference on Computational Linguistics\",\n    month = dec,\n    year = \"2020\",\n    address = \"Barcelona, Spain (Online)\",\n    publisher = \"International Committee on Computational Linguistics\",\n    url = \"https://www.aclweb.org/anthology/2020.coling-main.152\",\n    pages = \"1729--1736\",\n    abstract = \"We introspect black-box sentence embeddings by conditionally generating from them with the objective to retrieve the underlying discrete sentence. We perceive of this as a new unsupervised probing task and show that it correlates well with downstream task performance. We also illustrate how the language generated from different encoders differs. We apply our approach to generate sentence analogies from sentence embeddings.\",\n}",
+      "evidence_location": "104-116",
+      "confidence": "high",
+      "reason": "BibTeX citation for academic attribution"
+    }
+  ]
+}

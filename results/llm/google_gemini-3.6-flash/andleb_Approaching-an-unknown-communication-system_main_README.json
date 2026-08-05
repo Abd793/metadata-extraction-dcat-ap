@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "title",
+      "value": "Approaching an unknown communication system by latent space exploration and causal inference",
+      "normalized_value": "Approaching an unknown communication system by latent space exploration and causal inference",
+      "evidence": "# Approaching an unknown communication system by latent space exploration and causal inference",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Title of the repository and research paper."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/andleb/Approaching-an-unknown-communication-system",
+      "normalized_value": "https://github.com/andleb/Approaching-an-unknown-communication-system",
+      "evidence": "https://github.com/andleb/Approaching-an-unknown-communication-system",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "URL of the GitHub repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2303.10931",
+      "normalized_value": "https://arxiv.org/abs/2303.10931",
+      "evidence": "https://arxiv.org/abs/2303.10931",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "URL of the associated research paper preprint on arXiv."
+    },
+    {
+      "field": "target_domain",
+      "value": "sperm whale communication",
+      "normalized_value": "sperm whale communication",
+      "evidence": "sperm whale communication",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Target subject domain studied in the paper and repository."
+    },
+    {
+      "field": "methodology_name",
+      "value": "causal disentanglement with extreme values (CDEV)",
+      "normalized_value": "causal disentanglement with extreme values (CDEV)",
+      "evidence": "causal disentanglement with extreme values (CDEV)",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Name of the methodology proposed in the paper."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "```shell\npip install -r requirements.txt\n```",
+      "evidence_location": "16-18",
+      "confidence": "high",
+      "reason": "Command to install python dependencies required for running the model and analysis."
+    },
+    {
+      "field": "model_architecture",
+      "value": "fiwGAN",
+      "normalized_value": "fiwGAN",
+      "evidence": "`fiwGAN`",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Neural network architecture implemented and used in the artifact."
+    },
+    {
+      "field": "framework",
+      "value": "pytorch",
+      "normalized_value": "pytorch",
+      "evidence": "`pytorch`",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Deep learning framework used for implementing the model."
+    },
+    {
+      "field": "original_fork_repository",
+      "value": "https://github.com/andleb/ciwganfiwgan-pytorch",
+      "normalized_value": "https://github.com/andleb/ciwganfiwgan-pytorch",
+      "evidence": "https://github.com/andleb/ciwganfiwgan-pytorch",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "URL of the original source fork repository for the architecture implementation."
+    },
+    {
+      "field": "training_command",
+      "value": "python train.py --fiw --num_categ 5 --datadir training_directory --logdir log_directory\\\n--num_epochs 15000 --slice_len 65536",
+      "normalized_value": "python train.py --fiw --num_categ 5 --datadir training_directory --logdir log_directory\\ --num_epochs 15000 --slice_len 65536",
+      "evidence": "```shell\npython train.py --fiw --num_categ 5 --datadir training_directory --logdir log_directory\\\n--num_epochs 15000 --slice_len 65536\n```",
+      "evidence_location": "27-30",
+      "confidence": "high",
+      "reason": "Command line invocation used to train the model."
+    },
+    {
+      "field": "dataset_description",
+      "value": "2209 *coda* samples of less than 2s in length, encoded in 32 kHZ mono `wav` format",
+      "normalized_value": "2209 *coda* samples of less than 2s in length, encoded in 32 kHZ mono `wav` format",
+      "evidence": "2209 *coda* samples of less than 2s in length, encoded in 32 kHZ mono `wav` format",
+      "evidence_location": "40",
+      "confidence": "high",
+      "reason": "Description of sample size, duration, sampling frequency, and format of the dataset."
+    },
+    {
+      "field": "model_checkpoint_url",
+      "value": "https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/model/model.pt",
+      "normalized_value": "https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/model/model.pt",
+      "evidence": "https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/model/model.pt",
+      "evidence_location": "47",
+      "confidence": "high",
+      "reason": "Direct download link for the main trained model generator checkpoint."
+    },
+    {
+      "field": "replication_model_checkpoint_url",
+      "value": "https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/replication_model/model-6cat.pt",
+      "normalized_value": "https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/replication_model/model-6cat.pt",
+      "evidence": "https://github.com/andleb/Approaching-an-unknown-communication-system/releases/download/replication_model/model-6cat.pt",
+      "evidence_location": "49",
+      "confidence": "high",
+      "reason": "Direct download link for the separately trained replication model checkpoint."
+    },
+    {
+      "field": "model_loading_code",
+      "value": "import torch\nfrom infowavegan import WaveGANGenerator\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n\nG = WaveGANGenerator(slice_len=2**16)\nG.load_state_dict(torch.load(\"model.pt\", map_location=device))\nG.to(device)",
+      "normalized_value": "import torch from infowavegan import WaveGANGenerator device = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\") G = WaveGANGenerator(slice_len=2**16) G.load_state_dict(torch.load(\"model.pt\", map_location=device)) G.to(device)",
+      "evidence": "```python\nimport torch\nfrom infowavegan import WaveGANGenerator\n\ndevice = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n\nG = WaveGANGenerator(slice_len=2**16)\nG.load_state_dict(torch.load(\"model.pt\", map_location=device))\nG.to(device)\n```",
+      "evidence_location": "54-63",
+      "confidence": "high",
+      "reason": "Python code snippet showing how to instantiate and load the pre-trained generator model."
+    },
+    {
+      "field": "training_hardware",
+      "value": "single Nvidia 1080Ti (11 GB GPU memory) on a cluster-based instance running on Intel Xeon E5-2623",
+      "normalized_value": "single Nvidia 1080Ti (11 GB GPU memory) on a cluster-based instance running on Intel Xeon E5-2623",
+      "evidence": "single Nvidia 1080Ti (11 GB GPU memory) on a cluster-based instance running on Intel Xeon E5-2623",
+      "evidence_location": "68",
+      "confidence": "high",
+      "reason": "Hardware specifications used for training the model."
+    },
+    {
+      "field": "training_duration",
+      "value": "approximately 3 days",
+      "normalized_value": "approximately 3 days",
+      "evidence": "approximately 3 days",
+      "evidence_location": "68",
+      "confidence": "high",
+      "reason": "Total runtime taken to train the model."
+    },
+    {
+      "field": "analysis_hardware",
+      "value": "four Nvidia T4 GPUs on an `g4dn.12xlarge` AWS instance",
+      "normalized_value": "four Nvidia T4 GPUs on an `g4dn.12xlarge` AWS instance",
+      "evidence": "four Nvidia T4 GPUs\non an `g4dn.12xlarge` AWS instance",
+      "evidence_location": "120-121",
+      "confidence": "high",
+      "reason": "Hardware setup used to execute data generation and analysis routines."
+    },
+    {
+      "field": "citation_file_url",
+      "value": "https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/CITATION.cff",
+      "normalized_value": "https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/CITATION.cff",
+      "evidence": "https://github.com/andleb/Approaching-an-unknown-communication-system/blob/main/CITATION.cff",
+      "evidence_location": "128",
+      "confidence": "high",
+      "reason": "Link to the citation file for citing the codebase."
+    },
+    {
+      "field": "license",
+      "value": "BSD 3-Clause License",
+      "normalized_value": "BSD 3-Clause License",
+      "evidence": "[BSD 3-Clause License](LICENSE)",
+      "evidence_location": "133",
+      "confidence": "high",
+      "reason": "Open source license under which the repository content is made available."
+    },
+    {
+      "field": "author",
+      "value": "Andrej Leban",
+      "normalized_value": "Andrej Leban",
+      "evidence": "Andrej Leban",
+      "evidence_location": "134",
+      "confidence": "high",
+      "reason": "Author of the repository and project."
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "NetCov",
+      "normalized_value": "NetCov",
+      "evidence": "# NetCov",
+      "evidence_location": "Line 1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the repository title."
+    },
+    {
+      "field": "description",
+      "value": "NetCov is an open-source tool that can be used with [Batfish](https://github.com/batfish/batfish) to analyze test coverage for network configurations. Given a set of Batfish queries, it analyzes which lines of configurations has/has not been covered. The result can be used to assess the rigorousness of the test suite and help discover the blind spots.",
+      "normalized_value": "NetCov is an open-source tool that can be used with [Batfish](https://github.com/batfish/batfish) to analyze test coverage for network configurations. Given a set of Batfish queries, it analyzes which lines of configurations has/has not been covered. The result can be used to assess the rigorousness of the test suite and help discover the blind spots.",
+      "evidence": "NetCov is an open-source tool that can be used with [Batfish](https://github.com/batfish/batfish) to analyze test coverage for network configurations. Given a set of Batfish queries, it analyzes which lines of configurations has/has not been covered. The result can be used to assess the rigorousness of the test suite and help discover the blind spots.",
+      "evidence_location": "Line 2",
+      "confidence": "high",
+      "reason": "Clearly defines the tool's purpose, core functionality, and intended use case."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "NetCov is written in Python and can be used in concert with [pybatfish](https://pybatfish.readthedocs.io/en/latest/notebooks/interacting.html), Batfish's Python API.",
+      "evidence_location": "Line 5",
+      "confidence": "high",
+      "reason": "Explicitly identifies the implementation language."
+    },
+    {
+      "field": "runtime_dependencies",
+      "value": "Batfish, pybatfish",
+      "normalized_value": "Batfish, pybatfish",
+      "evidence": "NetCov is written in Python and can be used in concert with [pybatfish](https://pybatfish.readthedocs.io/en/latest/notebooks/interacting.html), Batfish's Python API.",
+      "evidence_location": "Line 5",
+      "confidence": "high",
+      "reason": "Lists the primary external libraries required for the tool to function."
+    },
+    {
+      "field": "optional_dependencies",
+      "value": "LCOV",
+      "normalized_value": "LCOV",
+      "evidence": "NetCov leverages [LCOV](https://github.com/linux-test-project/lcov) to generate HTML report. If you would like to use this feature, install LCOV using Homebrew (MacOS) or apt (Ubuntu):",
+      "evidence_location": "Line 51",
+      "confidence": "high",
+      "reason": "Identifies an optional dependency specifically for generating HTML coverage reports."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install netcov",
+      "normalized_value": "pip install netcov",
+      "evidence": "$ pip install netcov",
+      "evidence_location": "Line 48",
+      "confidence": "high",
+      "reason": "Provides the standard command to install the package via pip."
+    },
+    {
+      "field": "recommended_python_version",
+      "value": "3.7",
+      "normalized_value": "3.7",
+      "evidence": "A virtual environment and Python version 3.7 is recommended.",
+      "evidence_location": "Line 46",
+      "confidence": "high",
+      "reason": "Specifies the recommended runtime environment version for compatibility."
+    },
+    {
+      "field": "supported_vendors",
+      "value": "Cisco, Juniper, Arista, Palo Alto Networks, SONiC",
+      "normalized_value": "Cisco, Juniper, Arista, Palo Alto Networks, SONiC",
+      "evidence": "| Cisco              | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |\n| Juniper            | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |\n| Arista             | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |\n| Palo Alto Networks | :heavy_check_mark: |                    |                    |                    |                    |                    |\n| SONiC              |                    | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |",
+      "evidence_location": "Lines 23-27",
+      "confidence": "high",
+      "reason": "Explicitly lists network device vendors whose configuration syntax is supported."
+    },
+    {
+      "field": "supported_batfish_questions",
+      "value": "Reachability test via traceroute question, Routing policy evaluation via testRoutePolicies question, Direct inspection of routing tables via routes and bgpRib questions, Querying interfaces via interfaceProperties question",
+      "normalized_value": "Reachability test via traceroute question, Routing policy evaluation via testRoutePolicies question, Direct inspection of routing tables via routes and bgpRib questions, Querying interfaces via interfaceProperties question",
+      "evidence": "- Reachability test via [traceroute](https://pybatfish.readthedocs.io/en/latest/notebooks/forwarding.html#Traceroute) question\n- Routing policy evaluation via [testRoutePolicies](https://pybatfish.readthedocs.io/en/latest/notebooks/routingProtocols.html#Test-Route-Policies) question\n- Direct inspection of routing tables via [routes](https://pybatfish.readthedocs.io/en/latest/notebooks/routingTables.html#Routes) and [bgpRib](https://pybatfish.readthedocs.io/en/latest/notebooks/routingTables.html#BGP-RIB) questions\n- Querying interfaces via [interfaceProperties](https://pybatfish.readthedocs.io/en/latest/notebooks/configProperties.html#Interface-Properties) question",
+      "evidence_location": "Lines 13-16",
+      "confidence": "high",
+      "reason": "Details the specific analysis capabilities and Batfish query types integrated into the tool."
+    },
+    {
+      "field": "demo_video_url",
+      "value": "https://youtube.com/video/FcBD2LhxqOQ",
+      "normalized_value": "https://youtube.com/video/FcBD2LhxqOQ",
+      "evidence": "[<img src=\"screenshot_demo_video.png\"  width=\"500\">](https://youtube.com/video/FcBD2LhxqOQ)",
+      "evidence_location": "Line 7",
+      "confidence": "high",
+      "reason": "Provides a direct link to a visual demonstration of the tool in action."
+    },
+    {
+      "field": "example_notebook_path",
+      "value": "examples/demo.ipynb",
+      "normalized_value": "examples/demo.ipynb",
+      "evidence": "We provide a [demo video](https://www.youtube.com/watch?v=FcBD2LhxqOQ) and an [example](examples/demo.ipynb) to help you get started.",
+      "evidence_location": "Line 81",
+      "confidence": "high",
+      "reason": "Points to a concrete example file for users to quickly understand usage patterns."
+    },
+    {
+      "field": "coverage_report_example_url",
+      "value": "https://rawcdn.githack.com/UWNetworksLab/netcov/main/examples/fattree4/coverage/HTML_REPORT/index.html",
+      "normalized_value": "https://rawcdn.githack.com/UWNetworksLab/netcov/main/examples/fattree4/coverage/HTML_REPORT/index.html",
+      "evidence": "You can find an example of the coverage report [here](https://rawcdn.githack.com/UWNetworksLab/netcov/main/examples/fattree4/coverage/HTML_REPORT/index.html).",
+      "evidence_location": "Line 40",
+      "confidence": "high",
+      "reason": "Links to a live preview of the tool's output format for verification."
+    },
+    {
+      "field": "issue_tracker_url",
+      "value": "https://github.com/UWNetworksLab/netcov/issues",
+      "normalized_value": "https://github.com/UWNetworksLab/netcov/issues",
+      "evidence": "let us know via [GitHub issue](https://github.com/UWNetworksLab/netcov/issues).",
+      "evidence_location": "Line 30",
+      "confidence": "high",
+      "reason": "Provides the official channel for bug reports, feature requests, and vendor support inquiries."
+    },
+    {
+      "field": "paper_title",
+      "value": "Test Coverage for Network Configurations",
+      "normalized_value": "Test Coverage for Network Configurations",
+      "evidence": "  title = {Test Coverage for Network Configurations},",
+      "evidence_location": "Line 111",
+      "confidence": "high",
+      "reason": "Extracted from the BibTeX citation block for academic referencing."
+    },
+    {
+      "field": "paper_authors",
+      "value": "Xieyang Xu and Weixin Deng and Ryan Beckett and Ratul Mahajan and David Walker",
+      "normalized_value": "Xieyang Xu and Weixin Deng and Ryan Beckett and Ratul Mahajan and David Walker",
+      "evidence": "  author = {Xieyang Xu and Weixin Deng and Ryan Beckett and Ratul Mahajan and David Walker},",
+      "evidence_location": "Line 110",
+      "confidence": "high",
+      "reason": "Identifies the authors for proper academic attribution and citation."
+    },
+    {
+      "field": "paper_venue",
+      "value": "20th USENIX Symposium on Networked Systems Design and Implementation (NSDI 23)",
+      "normalized_value": "20th USENIX Symposium on Networked Systems Design and Implementation (NSDI 23)",
+      "evidence": "  booktitle = {20th USENIX Symposium on Networked Systems Design and Implementation (NSDI 23)},",
+      "evidence_location": "Line 112",
+      "confidence": "high",
+      "reason": "Specifies the peer-reviewed publication venue for scientific context."
+    },
+    {
+      "field": "paper_year",
+      "value": "2023",
+      "normalized_value": "2023",
+      "evidence": "  year = {2023},",
+      "evidence_location": "Line 113",
+      "confidence": "high",
+      "reason": "Publication year required for accurate citation formatting."
+    }
+  ]
+}

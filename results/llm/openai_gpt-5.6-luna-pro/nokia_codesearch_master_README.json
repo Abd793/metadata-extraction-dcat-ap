@@ -1,0 +1,274 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Code search",
+      "normalized_value": "Code search",
+      "evidence": "# Code search",
+      "evidence_location": "1; Markdown H1",
+      "confidence": "high",
+      "reason": "Identifies the artifact."
+    },
+    {
+      "field": "artifact_purpose",
+      "value": "This project contains the code to reproduce the experiments in the paper [Neural Code Search Revisited: Enhancing Code Snippet Retrieval through Natural Language Intent](https://arxiv.org/abs/2008.12193).",
+      "normalized_value": "This project contains the code to reproduce the experiments in the paper [Neural Code Search Revisited: Enhancing Code Snippet Retrieval through Natural Language Intent](https://arxiv.org/abs/2008.12193)",
+      "evidence": "This project contains the code to reproduce the experiments in the paper [Neural Code Search Revisited: Enhancing Code Snippet Retrieval through Natural Language Intent](https://arxiv.org/abs/2008.12193).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "States the project's primary reproducibility purpose and associated paper."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2008.12193",
+      "normalized_value": "https://arxiv.org/abs/2008.12193",
+      "evidence": "[Neural Code Search Revisited: Enhancing Code Snippet Retrieval through Natural Language Intent](https://arxiv.org/abs/2008.12193)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides the paper link associated with the experiments."
+    },
+    {
+      "field": "retrieval_task",
+      "value": "It implements retrieval systems for annotated code snippets: pairs of a code snippet and a short natural language description.",
+      "normalized_value": "It implements retrieval systems for annotated code snippets: pairs of a code snippet and a short natural language description",
+      "evidence": "It implements retrieval systems for annotated code snippets: pairs of a code snippet and a short natural language description.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Defines the retrieval task and the structure of annotated snippets."
+    },
+    {
+      "field": "pretrained_resource_url",
+      "value": "https://zenodo.org/record/4001602",
+      "normalized_value": "https://zenodo.org/record/4001602",
+      "evidence": "Our pretrained models and datasets are hosted on Zenodo (https://zenodo.org/record/4001602).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides the hosting location for pretrained models and datasets."
+    },
+    {
+      "field": "automatic_download_behavior",
+      "value": "The models and datasets will be downloaded automatically when calling `load_model`, `load_snippet_collection`, etc. (see the code examples below).",
+      "normalized_value": "The models and datasets will be downloaded automatically when calling `load_model`, `load_snippet_collection`, etc. (see the code examples below)",
+      "evidence": "The models and datasets will be downloaded automatically when calling `load_model`, `load_snippet_collection`, etc. (see the code examples below).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Describes how required pretrained resources are retrieved."
+    },
+    {
+      "field": "code_only_retrieval_models",
+      "value": "In addition, the project also implements some *code-only* retrieval models (BM25, NCS, UNIF) for snippet collections that do not come with descriptions.",
+      "normalized_value": "In addition, the project also implements some *code-only* retrieval models (BM25, NCS, UNIF) for snippet collections that do not come with descriptions",
+      "evidence": "In addition, the project also implements some *code-only* retrieval models (BM25, NCS, UNIF) for snippet collections that do not come with descriptions.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Names concrete code-only retrieval methods and their intended data condition."
+    },
+    {
+      "field": "language_support",
+      "value": "The experiments in the paper are done on Python snippets, but the code preprocessing currently also supports java, javascript, and bash.",
+      "normalized_value": "The experiments in the paper are done on Python snippets, but the code preprocessing currently also supports java, javascript, and bash",
+      "evidence": "The experiments in the paper are done on Python snippets, but the code preprocessing currently also supports java, javascript, and bash.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Specifies the experimental language and additional preprocessing-supported languages."
+    },
+    {
+      "field": "project_affiliation",
+      "value": "The project is developed by a research team in the [Application Platforms and Software Systems Lab](https://www.bell-labs.com/our-research/areas/applications-and-platforms/) of [Nokia Bell Labs](https://www.bell-labs.com/).",
+      "normalized_value": "The project is developed by a research team in the [Application Platforms and Software Systems Lab](https://www.bell-labs.com/our-research/areas/applications-and-platforms/) of [Nokia Bell Labs](https://www.bell-labs.com/)",
+      "evidence": "The project is developed by a research team in the [Application Platforms and Software Systems Lab](https://www.bell-labs.com/our-research/areas/applications-and-platforms/) of [Nokia Bell Labs](https://www.bell-labs.com/).",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Provides project provenance and organizational affiliation."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install .",
+      "normalized_value": "pip install .",
+      "evidence": "1. Install the codesearch library: `pip install .`",
+      "evidence_location": "13; Installation",
+      "confidence": "high",
+      "reason": "Defines the primary installation step."
+    },
+    {
+      "field": "parser_installation",
+      "value": "Install the tree-sitter parsers (for preprocessing the code snippets): e.g., `codesearch install_parsers python java` or simply `codesearch install_parsers` to install parsers for all supported languages. By default, parsers are installed under the `codesearch/parsers` directory this can be customized by setting the `TREE_SITTER_DIR` variable.",
+      "normalized_value": "Install the tree-sitter parsers (for preprocessing the code snippets): e.g., `codesearch install_parsers python java` or simply `codesearch install_parsers` to install parsers for all supported languages. By default, parsers are installed under the `codesearch/parsers` directory this can be customized by setting the `TREE_SITTER_DIR` variable",
+      "evidence": "2. Install the tree-sitter parsers (for preprocessing the code snippets): e.g., `codesearch install_parsers python java` or simply `codesearch install_parsers` to install parsers for all supported languages. By default, parsers are installed under the `codesearch/parsers` directory this can be customized by setting the `TREE_SITTER_DIR` variable.",
+      "evidence_location": "14; Installation",
+      "confidence": "high",
+      "reason": "Specifies parser setup commands, supported-language installation behavior, and the parser directory override."
+    },
+    {
+      "field": "spacy_dependency",
+      "value": "python -m spacy download en_core_web_md",
+      "normalized_value": "python -m spacy download en_core_web_md",
+      "evidence": "3. Install spacy (for preprocessing descriptions/code comments): `python -m spacy download en_core_web_md`",
+      "evidence_location": "15; Installation",
+      "confidence": "high",
+      "reason": "Defines the spaCy model installation required for preprocessing."
+    },
+    {
+      "field": "retrieval_workflow",
+      "value": "load_model(\"use-embedder-pacs\"); EmbeddingRetrievalModel(embedding_model); retrieval_model.add_snippets(snippets); retrieval_model.query(query)",
+      "normalized_value": "load_model(\"use-embedder-pacs\"); EmbeddingRetrievalModel(embedding_model); retrieval_model.add_snippets(snippets); retrieval_model.query(query)",
+      "evidence": "```python\nfrom codesearch.utils import load_model\nfrom codesearch.embedding_retrieval import EmbeddingRetrievalModel\n\nquery = \"plot a bar chart\"\nsnippets = [{                           # a dummy snippet collection with 1 snippet\n    \"id\": \"1\",\n    \"description\": \"Hello world\",\n    \"code\": \"print('hello world')\",\n    \"language\": \"python\"\n    }]\n\nembedding_model = load_model(\"use-embedder-pacs\")\nretrieval_model = EmbeddingRetrievalModel(embedding_model)\nretrieval_model.add_snippets(snippets)\nretrieval_model.query(query)\n```",
+      "evidence_location": "33-49; Example: Query a snippet collection with a pretrained embedding model",
+      "confidence": "high",
+      "reason": "Shows how to load a pretrained model, add snippets, and query a collection."
+    },
+    {
+      "field": "embedding_api",
+      "value": "embedding_model.embed_queries(queries); embedding_model.embed_snippets(snippets)",
+      "normalized_value": "embedding_model.embed_queries(queries); embedding_model.embed_snippets(snippets)",
+      "evidence": "embedding_model = load_model(model_name)\nquery_embs = embedding_model.embed_queries(queries)\nsnippet_embs = embedding_model.embed_snippets(snippets)",
+      "evidence_location": "64-66; Example: Embed snippets or queries with a pre-trained embedding model",
+      "confidence": "high",
+      "reason": "Identifies the API methods for embedding queries and snippets."
+    },
+    {
+      "field": "pretrained_model_catalog",
+      "value": "ncs-embedder-so-ds-feb20 (code; so-ds-feb20; nbs/ncs/ncs.ipynb); ncs-embedder-staqc-py (code; staqc-py-cleaned; nbs/ncs/ncs.ipynb); tnbow-embedder-so-ds-feb20 (description; so-python-question-titles-feb20; nbs/tnbow/tnbow.ipynb); use-embedder-pacs (description; so-duplicates-pacsv1-train; nbs/tuse/tuse_tuned.ipynb); ensemble-embedder-pacs (description + code; staqc-py-cleaned + so-duplicates-pacs-train; nbs/ensemble/ensemble.ipynb)",
+      "normalized_value": "ncs-embedder-so-ds-feb20 (code; so-ds-feb20; nbs/ncs/ncs.ipynb); ncs-embedder-staqc-py (code; staqc-py-cleaned; nbs/ncs/ncs.ipynb); tnbow-embedder-so-ds-feb20 (description; so-python-question-titles-feb20; nbs/tnbow/tnbow.ipynb); use-embedder-pacs (description; so-duplicates-pacsv1-train; nbs/tuse/tuse_tuned.ipynb); ensemble-embedder-pacs (description + code; staqc-py-cleaned + so-duplicates-pacs-train; nbs/ensemble/ensemble.ipynb)",
+      "evidence": "| name                       | inputs             | training data                                          | notebook                    |\n|----------------------------|--------------------|--------------------------------------------------------|-----------------------------|\n| ncs-embedder-so-ds-feb20      | code               | so-ds-feb20                                            | nbs/ncs/ncs.ipynb           |\n| ncs-embedder-staqc-py      | code               | staqc-py-cleaned                              | nbs/ncs/ncs.ipynb           |\n| tnbow-embedder-so-ds-feb20 | description        | so-python-question-titles-feb20                        | nbs/tnbow/tnbow.ipynb       |\n| use-embedder-pacs          | description        | so-duplicates-pacsv1-train                             | nbs/tuse/tuse_tuned.ipynb   |\n| ensemble-embedder-pacs     | description + code | staqc-py-cleaned + so-duplicates-pacs-train | nbs/ensemble/ensemble.ipynb |",
+      "evidence_location": "73-79; Available models",
+      "confidence": "high",
+      "reason": "Catalogs the named pretrained models, their inputs, training data, and reproduction notebooks."
+    },
+    {
+      "field": "snippet_collection_interface",
+      "value": "collection_name = \"so-ds-feb20\"; snippets = load_snippet_collection(collection_name)",
+      "normalized_value": "collection_name = \"so-ds-feb20\"; snippets = load_snippet_collection(collection_name)",
+      "evidence": "```python\nfrom codesearch.data import load_snippet_collection\ncollection_name = \"so-ds-feb20\"\nsnippets = load_snippet_collection(collection_name)\n```",
+      "evidence_location": "89-93; Example: Load a snippet collection",
+      "confidence": "high",
+      "reason": "Provides the dataset-loading API and a concrete collection name."
+    },
+    {
+      "field": "snippet_collection_catalog",
+      "value": "so-ds-feb20: Mined from Python Stack Overflow posts related to data science; staqc-py-cleaned: Derived from the Python StaQC snippets with additional cleaning; conala-curated: Derived from the curated snippets of the CoNaLa benchmark; codesearchnet-{language}-{train\\|valid\\|test}: CodeSearchNet collections used for training/MRR validation/MRR testing; codesearchnet-{language}: CodeSearchNet collections used for the weights and biases benchmark, with not all snippets having descriptions",
+      "normalized_value": "so-ds-feb20: Mined from Python Stack Overflow posts related to data science; staqc-py-cleaned: Derived from the Python StaQC snippets with additional cleaning; conala-curated: Derived from the curated snippets of the CoNaLa benchmark; codesearchnet-{language}-{train\\|valid\\|test}: CodeSearchNet collections used for training/MRR validation/MRR testing; codesearchnet-{language}: CodeSearchNet collections used for the weights and biases benchmark, with not all snippets having descriptions",
+      "evidence": "| name                                          | description                                                                                                                  |\n|-----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|\n| so-ds-feb20                                   | Mined from Python Stack Overflow posts related to data science. Stack Overflow dumps can be found here: https://archive.org/details/stackexchange, [LICENSE](https://creativecommons.org/licenses/by-sa/4.0/)                                                             |\n| staqc-py-cleaned                     | Derived from the Python StaQC snippets (additional cleaning was done as decribed in the paper). See https://github.com/LittleYUYU/StackOverflow-Question-Code-Dataset, [LICENSE](https://github.com/LittleYUYU/StackOverflow-Question-Code-Dataset/blob/master/LICENSE.txt)                               |\n| conala-curated                                | Derived from the curated snippets of the CoNaLa benchmark. See https://conala-corpus.github.io/ , [LICENSE](https://creativecommons.org/licenses/by-sa/4.0/)                                                                                         |\n| codesearchnet-{language}-{train\\|valid\\|test} | The CodeSearchNet snippet collections used for training/MRR validation/MRR testing. See https://github.com/github/CodeSearchNet. Licenses of the individial snippets can be found in pkl files.                                           |\n| codesearchnet-{language}                      | The CodeSearchNet snippet collections used for the weights and biases benchmark. See https://github.com/github/CodeSearchNet. Licenses of the individial snippets can be found in pkl files. **Note**: not all of these snippets have descriptions |",
+      "evidence_location": "100-106; Available snippet collections",
+      "confidence": "high",
+      "reason": "Lists the available snippet collections, their origins, benchmark roles, and license references."
+    },
+    {
+      "field": "evaluation_dataset_interface",
+      "value": "queries, query2ids = load_eval_dataset(\"so-ds-feb20-valid\")",
+      "normalized_value": "queries, query2ids = load_eval_dataset(\"so-ds-feb20-valid\")",
+      "evidence": "```python\nfrom codesearch.data import load_eval_dataset\nqueries, query2ids = load_eval_dataset(\"so-ds-feb20-valid\")\n```",
+      "evidence_location": "113-116; Example: load an evaluation dataset",
+      "confidence": "high",
+      "reason": "Shows how to load evaluation queries and query-to-relevant-snippet mappings."
+    },
+    {
+      "field": "evaluation_dataset_catalog",
+      "value": "so-ds-feb20-{valid\\|test}; staqc-py-cleaned-{valid\\|test}; conala-curated-0.5-test",
+      "normalized_value": "so-ds-feb20-{valid\\|test}; staqc-py-cleaned-{valid\\|test}; conala-curated-0.5-test",
+      "evidence": "| name                           | description                                                                     |\n|--------------------------------|---------------------------------------------------------------------------------|\n| so-ds-feb20-{valid\\|test}      | Queries paired to relevant snippets in the so-ds-feb20 snippet collection.      |\n| staqc-py-cleaned-{valid\\|test} | Queries paired to relevant snippets in the staqc-py-cleaned snippet collection. |\n| conala-curated-0.5-test        | Queries paired to relevant snippets in the CoNaLa benchmark                     |",
+      "evidence_location": "119-123; Available evaluation datasets",
+      "confidence": "high",
+      "reason": "Names the available evaluation splits and their linked snippet collections."
+    },
+    {
+      "field": "evaluation_data_semantics",
+      "value": "Evaluation datasets link queries to relevant snippets in one of the above snippet collections.",
+      "normalized_value": "Evaluation datasets link queries to relevant snippets in one of the above snippet collections",
+      "evidence": "Evaluation datasets link queries to relevant snippets in one of the above snippet collections.",
+      "evidence_location": "108-109; Evaluation data",
+      "confidence": "high",
+      "reason": "Explains what the evaluation mappings represent."
+    },
+    {
+      "field": "snippet_collection_evaluation_mode",
+      "value": "It is also possible to load a snippet collection as evaluation data. The descriptions will be used as queries. Note that this only makes sense to evaluate code-only models (i.e., models that do not use the description field).",
+      "normalized_value": "It is also possible to load a snippet collection as evaluation data. The descriptions will be used as queries. Note that this only makes sense to evaluate code-only models (i.e., models that do not use the description field)",
+      "evidence": "It is also possible to load a snippet collection as evaluation data. The descriptions will be used as queries. Note that this only makes sense to evaluate code-only models (i.e., models that do not use the description field).",
+      "evidence_location": "126",
+      "confidence": "high",
+      "reason": "Documents an alternative evaluation mode and its restriction to code-only models."
+    },
+    {
+      "field": "training_data_description",
+      "value": "The different models we implement use different kinds of training data. Code-only models are trained on pairs of code snippets and descriptions. For these models, the snippet collections are used as training data (of course you should never train on a snippet collection when you intent to use that load that collection as evaluation data as well). The USE model is fine-tuned on titles of duplicate Stack Overflow posts. You can take a look our notebooks (e.g., nbs/ncs/ncs.ipynb, nbs/tuse/tuse_tuned) to find out how the training is done/how the training data is loaded.",
+      "normalized_value": "The different models we implement use different kinds of training data. Code-only models are trained on pairs of code snippets and descriptions. For these models, the snippet collections are used as training data (of course you should never train on a snippet collection when you intent to use that load that collection as evaluation data as well). The USE model is fine-tuned on titles of duplicate Stack Overflow posts. You can take a look our notebooks (e.g., nbs/ncs/ncs.ipynb, nbs/tuse/tuse_tuned) to find out how the training is done/how the training data is loaded",
+      "evidence": "The different models we implement use different kinds of training data. Code-only models are trained on pairs of code snippets and descriptions. For these models, the snippet collections are used as training data (of course you should never train on a snippet collection when you intent to use that load that collection as evaluation data as well). The USE model is fine-tuned on titles of duplicate Stack Overflow posts. You can take a look our notebooks (e.g., nbs/ncs/ncs.ipynb, nbs/tuse/tuse_tuned) to find out how the training is done/how the training data is loaded.",
+      "evidence_location": "136; Training data",
+      "confidence": "high",
+      "reason": "Describes the training data used by code-only models and the USE model, including relevant notebooks."
+    },
+    {
+      "field": "duplicate_training_loader",
+      "value": "load_train_dataset(\"so-duplicates-pacs-train\")",
+      "normalized_value": "load_train_dataset(\"so-duplicates-pacs-train\")",
+      "evidence": "duplicate_records = load_train_dataset(\"so-duplicates-pacs-train\")",
+      "evidence_location": "140-143; Training data",
+      "confidence": "high",
+      "reason": "Provides the command for loading duplicate Stack Overflow title-pair training data."
+    },
+    {
+      "field": "training_evaluation_overlap_control",
+      "value": "These duplicate records have been filtered to ensure that there is no overlap with the `so-ds-feb20` and `staqc-py` evaluation datasets.",
+      "normalized_value": "These duplicate records have been filtered to ensure that there is no overlap with the `so-ds-feb20` and `staqc-py` evaluation datasets",
+      "evidence": "These duplicate records have been filtered to ensure that there is no overlap with the `so-ds-feb20` and `staqc-py` evaluation datasets.",
+      "evidence_location": "145",
+      "confidence": "high",
+      "reason": "Documents a data-leakage and split-overlap precaution."
+    },
+    {
+      "field": "python_title_training_loader",
+      "value": "load_train_dataset(\"so-python-question-titles-feb20\")",
+      "normalized_value": "load_train_dataset(\"so-python-question-titles-feb20\")",
+      "evidence": "filename = load_train_dataset(\"so-python-question-titles-feb20\")",
+      "evidence_location": "149-152; Training data",
+      "confidence": "high",
+      "reason": "Provides the command for loading the Python-tagged Stack Overflow title file used by the TNBOW baseline."
+    },
+    {
+      "field": "demo_notebook",
+      "value": "nbs/demo/demo.ipynb",
+      "normalized_value": "nbs/demo/demo.ipynb",
+      "evidence": "You can run the demo notebook `nbs/demo/demo.ipynb` to quickly try out any of the pretrained models on one of the snippet collections.",
+      "evidence_location": "154-156; Demo notebook",
+      "confidence": "high",
+      "reason": "Provides a direct entry point for trying pretrained models."
+    },
+    {
+      "field": "benchmark_name",
+      "value": "PACS",
+      "normalized_value": "PACS",
+      "evidence": "## Benchmark on PACS",
+      "evidence_location": "158; Markdown H2",
+      "confidence": "high",
+      "reason": "Names the benchmark used for paper-result replication and model evaluation."
+    },
+    {
+      "field": "benchmark_reproduction_resources",
+      "value": "To replicate the results of our paper or evaluate your own model on the PACS benchmark, have a look at `nbs/evaluate.ipynb` and `codesearch/benchmark.ipynb`.",
+      "normalized_value": "To replicate the results of our paper or evaluate your own model on the PACS benchmark, have a look at `nbs/evaluate.ipynb` and `codesearch/benchmark.ipynb`",
+      "evidence": "To replicate the results of our paper or evaluate your own model on the PACS benchmark, have a look at `nbs/evaluate.ipynb` and `codesearch/benchmark.ipynb`.",
+      "evidence_location": "160; Benchmark on PACS",
+      "confidence": "high",
+      "reason": "Identifies the notebooks needed for reproducing results or evaluating custom models."
+    },
+    {
+      "field": "custom_embedding_interface",
+      "value": "A custom embedding model class should implement the `embed_snippets` and `embed_queries` functions",
+      "normalized_value": "A custom embedding model class should implement the `embed_snippets` and `embed_queries` functions",
+      "evidence": "A custom embedding model class should implement the `embed_snippets` and `embed_queries` functions",
+      "evidence_location": "160; Benchmark on PACS",
+      "confidence": "high",
+      "reason": "Defines the interface required to evaluate a custom embedding model."
+    },
+    {
+      "field": "benchmark_command",
+      "value": "benchmark_on_pacs(model_path=model_path, output_dir=output_dir)",
+      "normalized_value": "benchmark_on_pacs(model_path=model_path, output_dir=output_dir)",
+      "evidence": "```python\nfrom codesearch.benchmark import benchmark_on_pacs\n\nbenchmark_on_pacs(\n    model_path=model_path, # one of the pretrained model names or a path to a model that can be loaded with `codesearch.utils.load_model`\n    output_dir=output_dir\n)\n```",
+      "evidence_location": "164-171; Example: Benchmark a model on PACS",
+      "confidence": "high",
+      "reason": "Provides the concrete benchmark invocation for evaluating a model on PACS."
+    }
+  ]
+}

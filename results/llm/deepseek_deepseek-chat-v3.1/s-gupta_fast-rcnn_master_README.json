@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Fast R-CNN",
+      "normalized_value": "Fast R-CNN",
+      "evidence": "**Fast R-CNN** is a fast framework for object detection with deep ConvNets.",
+      "evidence_location": "7-8",
+      "confidence": "high",
+      "reason": "Identifies the name of the artifact"
+    },
+    {
+      "field": "purpose",
+      "value": "object detection with deep ConvNets",
+      "normalized_value": "object detection with deep ConvNets",
+      "evidence": "**Fast R-CNN** is a fast framework for object detection with deep ConvNets.",
+      "evidence_location": "7-8",
+      "confidence": "high",
+      "reason": "Describes the primary purpose of the artifact"
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/rbgirshick/fast-rcnn.git",
+      "normalized_value": "https://github.com/rbgirshick/fast-rcnn.git",
+      "evidence": "git clone --recursive https://github.com/rbgirshick/fast-rcnn.git",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Provides the GitHub repository URL for accessing the code"
+    },
+    {
+      "field": "paper_url",
+      "value": "http://arxiv.org/abs/1504.08083",
+      "normalized_value": "http://arxiv.org/abs/1504.08083",
+      "evidence": "Fast R-CNN was initially described in an [arXiv tech report](http://arxiv.org/abs/1504.08083).",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Links to the research paper describing the method"
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "Fast R-CNN is released under the MIT License (refer to the LICENSE file for details).",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Specifies the license terms for reuse"
+    },
+    {
+      "field": "citation",
+      "value": "@article{girshick15fastrcnn,\n    Author = {Ross Girshick},\n    Title = {Fast R-CNN},\n    Journal = {arXiv preprint arXiv:1504.08083},\n    Year = {2015}\n}",
+      "normalized_value": "@article{girshick15fastrcnn, Author = {Ross Girshick}, Title = {Fast R-CNN}, Journal = {arXiv preprint arXiv:1504.08083}, Year = {2015} }",
+      "evidence": "@article{girshick15fastrcnn,\n    Author = {Ross Girshick},\n    Title = {Fast R-CNN},\n    Journal = {arXiv preprint arXiv:1504.08083},\n    Year = {2015}\n}",
+      "evidence_location": "23-28",
+      "confidence": "high",
+      "reason": "Provides the BibTeX citation for academic reference"
+    },
+    {
+      "field": "author",
+      "value": "Ross Girshick",
+      "normalized_value": "Ross Girshick",
+      "evidence": "Created by Ross Girshick at Microsoft Research, Redmond.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the creator/author of the artifact"
+    },
+    {
+      "field": "programming_languages",
+      "value": "Python and C++/Caffe",
+      "normalized_value": "Python and C++/Caffe",
+      "evidence": "and is written in Python and C++/Caffe.",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Specifies the programming languages used"
+    },
+    {
+      "field": "software_requirements",
+      "value": "Caffe with Python layers support, cython, python-opencv, easydict, MATLAB (optional for PASCAL VOC evaluation)",
+      "normalized_value": "Caffe with Python layers support, cython, python-opencv, easydict, MATLAB (optional for PASCAL VOC evaluation)",
+      "evidence": "1. Requirements for `Caffe` and `pycaffe` (see: [Caffe installation instructions](http://caffe.berkeleyvision.org/installation.html))\n\n  **Note:** Caffe *must* be built with support for Python layers!\n\n2. Python packages you might not have: `cython`, `python-opencv`, `easydict`\n3. [optional] MATLAB (required for PASCAL VOC evaluation only)",
+      "evidence_location": "41-53",
+      "confidence": "high",
+      "reason": "Lists required software dependencies for installation"
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "For training smaller networks (CaffeNet, VGG_CNN_M_1024) a good GPU (e.g., Titan, K20, K40, ...) with at least 3G of memory suffices. For training with VGG16, you'll need a K40 (~11G of memory)",
+      "normalized_value": "For training smaller networks (CaffeNet, VGG_CNN_M_1024) a good GPU (e.g., Titan, K20, K40, ...) with at least 3G of memory suffices. For training with VGG16, you'll need a K40 (~11G of memory)",
+      "evidence": "1. For training smaller networks (CaffeNet, VGG_CNN_M_1024) a good GPU (e.g., Titan, K20, K40, ...) with at least 3G of memory suffices\n2. For training with VGG16, you'll need a K40 (~11G of memory)",
+      "evidence_location": "56-58",
+      "confidence": "high",
+      "reason": "Specifies GPU memory requirements for training"
+    },
+    {
+      "field": "clone_command",
+      "value": "git clone --recursive https://github.com/rbgirshick/fast-rcnn.git",
+      "normalized_value": "git clone --recursive https://github.com/rbgirshick/fast-rcnn.git",
+      "evidence": "git clone --recursive https://github.com/rbgirshick/fast-rcnn.git",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Provides the command to clone the repository for setup"
+    },
+    {
+      "field": "build_commands",
+      "value": "cd $FRCN_ROOT/lib\nmake\ncd $FRCN_ROOT/caffe-fast-rcnn\nmake -j8 && make pycaffe",
+      "normalized_value": "cd $FRCN_ROOT/lib make cd $FRCN_ROOT/caffe-fast-rcnn make -j8 && make pycaffe",
+      "evidence": "cd $FRCN_ROOT/lib\nmake\n\ncd $FRCN_ROOT/caffe-fast-rcnn\nmake -j8 && make pycaffe",
+      "evidence_location": "79-81, 85, 91",
+      "confidence": "high",
+      "reason": "Provides build commands for compiling the system"
+    },
+    {
+      "field": "demo_command",
+      "value": "./tools/demo.py",
+      "normalized_value": "./tools/demo.py",
+      "evidence": "./tools/demo.py",
+      "evidence_location": "111",
+      "confidence": "high",
+      "reason": "Command to run the demo after installation"
+    },
+    {
+      "field": "training_command",
+      "value": "./tools/train_net.py --gpu 0 --solver models/VGG16/solver.prototxt --weights data/imagenet_models/VGG16.v2.caffemodel",
+      "normalized_value": "./tools/train_net.py --gpu 0 --solver models/VGG16/solver.prototxt --weights data/imagenet_models/VGG16.v2.caffemodel",
+      "evidence": "./tools/train_net.py --gpu 0 --solver models/VGG16/solver.prototxt \\\n\t--weights data/imagenet_models/VGG16.v2.caffemodel",
+      "evidence_location": "207-209",
+      "confidence": "high",
+      "reason": "Example command for training a model"
+    },
+    {
+      "field": "testing_command",
+      "value": "./tools/test_net.py --gpu 1 --def models/VGG16/test.prototxt --net output/default/voc_2007_trainval/vgg16_fast_rcnn_iter_40000.caffemodel",
+      "normalized_value": "./tools/test_net.py --gpu 1 --def models/VGG16/test.prototxt --net output/default/voc_2007_trainval/vgg16_fast_rcnn_iter_40000.caffemodel",
+      "evidence": "./tools/test_net.py --gpu 1 --def models/VGG16/test.prototxt \\\n\t--net output/default/voc_2007_trainval/vgg16_fast_rcnn_iter_40000.caffemodel",
+      "evidence_location": "222-224",
+      "confidence": "high",
+      "reason": "Example command for testing a trained model"
+    },
+    {
+      "field": "benchmark_dataset",
+      "value": "PASCAL VOC",
+      "normalized_value": "PASCAL VOC",
+      "evidence": "has a significantly higher mAP on PASCAL VOC than both R-CNN and SPPnet,",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Identifies the benchmark dataset used for evaluation"
+    },
+    {
+      "field": "supported_models",
+      "value": "CaffeNet (model S), VGG_CNN_M_1024 (model M), VGG16 (model L)",
+      "normalized_value": "CaffeNet (model S), VGG_CNN_M_1024 (model M), VGG16 (model L)",
+      "evidence": "Pre-trained ImageNet models can be downloaded for the three networks described in the paper: CaffeNet (model **S**), VGG_CNN_M_1024 (model **M**), and VGG16 (model **L**).",
+      "evidence_location": "194-195",
+      "confidence": "high",
+      "reason": "Lists the neural network models supported by the framework"
+    },
+    {
+      "field": "dataset_download_urls",
+      "value": "http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/VOCtrainval_06-Nov-2007.tar, http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/VOCtest_06-Nov-2007.tar, http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/VOCdevkit_08-Jun-2007.tar",
+      "normalized_value": "http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/VOCtrainval_06-Nov-2007.tar, http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/VOCtest_06-Nov-2007.tar, http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/VOCdevkit_08-Jun-2007.tar",
+      "evidence": "wget http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/VOCtrainval_06-Nov-2007.tar\nwget http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/VOCtest_06-Nov-2007.tar\nwget http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/VOCdevkit_08-Jun-2007.tar",
+      "evidence_location": "149-151",
+      "confidence": "high",
+      "reason": "Provides URLs for downloading the PASCAL VOC dataset needed for training"
+    }
+  ]
+}

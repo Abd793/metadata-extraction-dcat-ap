@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "RuleAlign Dataset",
+      "normalized_value": "RuleAlign Dataset",
+      "evidence": "<b>RuleAlign Dataset</b>",
+      "evidence_location": "line 3, top-level title",
+      "confidence": "high",
+      "reason": "Explicitly stated as the artifact's title at the top of the README."
+    },
+    {
+      "field": "alternate_name",
+      "value": "RuleEval Dataset",
+      "normalized_value": "RuleEval Dataset",
+      "evidence": "## :books: RuleEval Dataset",
+      "evidence_location": "line 22, section header",
+      "confidence": "low",
+      "reason": "The document inconsistently refers to the dataset as both 'RuleAlign' and 'RuleEval'; it is ambiguous whether these are the same dataset or distinct artifacts."
+    },
+    {
+      "field": "description",
+      "value": "RuleAlign is a dataset designed to evaluate rule-based alignment of language models. It accompanies the paper \"Iterative Graph Reasoning\"",
+      "normalized_value": "RuleAlign is a dataset designed to evaluate rule-based alignment of language models. It accompanies the paper \"Iterative Graph Reasoning\"",
+      "evidence": "RuleAlign is a dataset designed to evaluate rule-based alignment of language models. It accompanies the paper \"Iterative Graph Reasoning\" and contains:",
+      "evidence_location": "line 24, 'RuleEval Dataset' section",
+      "confidence": "high",
+      "reason": "Directly states the dataset's purpose and its associated paper."
+    },
+    {
+      "field": "associated_paper",
+      "value": "Iterative Graph Reasoning",
+      "normalized_value": "Iterative Graph Reasoning",
+      "evidence": "It accompanies the paper \"Iterative Graph Reasoning\"",
+      "evidence_location": "line 24, 'RuleEval Dataset' section",
+      "confidence": "high",
+      "reason": "Names the research paper the dataset accompanies, useful for citation and context."
+    },
+    {
+      "field": "author",
+      "value": "Fangyuan Yu",
+      "normalized_value": "Fangyuan Yu",
+      "evidence": "<a target=\"_blank\" href=\"https://scholar.google.com.sg/citations?user=GqZfs_IAAAAJ&hl=en\">Fangyuan&#160;Yu</a><sup>1 2</sup>",
+      "evidence_location": "line 6, author block",
+      "confidence": "high",
+      "reason": "Identifies the dataset author, who is also marked as corresponding author."
+    },
+    {
+      "field": "author_affiliations",
+      "value": "Temus; Stanford University",
+      "normalized_value": "Temus; Stanford University",
+      "evidence": "<sup>1</sup>Temus&#160&#160&#160</span>\n<sup>2</sup>Stanford University</span>",
+      "evidence_location": "lines 8-9, affiliation block",
+      "confidence": "high",
+      "reason": "Lists the author's institutional affiliations, relevant for attribution."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2408.16667",
+      "normalized_value": "https://arxiv.org/abs/2408.16667",
+      "evidence": "<a href=\"https://arxiv.org/abs/2408.16667\" target=\"_blank\">",
+      "evidence_location": "line 15, header link block",
+      "confidence": "high",
+      "reason": "Provides direct access link to the associated arXiv paper."
+    },
+    {
+      "field": "dataset_statistics",
+      "value": "5 distinct rule-based scenarios; 200 training queries per scenario (low-data learning scenario); 100 test queries per scenario; weak annotations provided for each query",
+      "normalized_value": "5 distinct rule-based scenarios; 200 training queries per scenario (low-data learning scenario); 100 test queries per scenario; weak annotations provided for each query",
+      "evidence": "- 5 distinct rule-based scenarios\n- 200 training queries per scenario (low-data learning scenario)\n- 100 test queries per scenario\n- Weak annotations provided for each query",
+      "evidence_location": "lines 26-29, 'RuleEval Dataset' section bullet list",
+      "confidence": "high",
+      "reason": "Concrete dataset size and structure details needed to understand and reuse the dataset."
+    },
+    {
+      "field": "release_status",
+      "value": "Code will be released soon",
+      "normalized_value": "Code will be released soon",
+      "evidence": "<b>:fire: Code will be released soon</b>",
+      "evidence_location": "line 19, announcement banner",
+      "confidence": "high",
+      "reason": "Indicates that accompanying code is not yet available, important for reproducibility expectations."
+    },
+    {
+      "field": "release_date",
+      "value": "08/2024",
+      "normalized_value": "08/2024",
+      "evidence": "- [08/2024] [Arxiv paper](https://arxiv.org/abs/2408.16667) released.\n- [08/2024] RuleAlign dataset announced.",
+      "evidence_location": "lines 32-33, 'Updates' section",
+      "confidence": "high",
+      "reason": "Dates the paper release and dataset announcement, useful for versioning and currency."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python -m script.eval --model_name xxx",
+      "normalized_value": "python -m script.eval --model_name xxx",
+      "evidence": "```shell\npython -m script.eval --model_name xxx\n```",
+      "evidence_location": "lines 39-41, 'Evaluation' section code block",
+      "confidence": "high",
+      "reason": "Defines the command to run evaluation on the dataset, key for reproduction."
+    },
+    {
+      "field": "evaluation_command_usage",
+      "value": "Replace `xxx` with the name of the model you want to evaluate.",
+      "normalized_value": "Replace `xxx` with the name of the model you want to evaluate.",
+      "evidence": "Replace `xxx` with the name of the model you want to evaluate.",
+      "evidence_location": "line 43, 'Evaluation' section",
+      "confidence": "high",
+      "reason": "Explains how to parameterize the evaluation command."
+    },
+    {
+      "field": "citation",
+      "value": "@misc{yu2024iterativegraphreasoning,\n      title={Iterative Graph Reasoning}, \n      author={Fangyuan Yu},\n      year={2024},\n      eprint={2408.03615},\n      archivePrefix={arXiv},\n      primaryClass={cs.AI}\n}",
+      "normalized_value": "@misc{yu2024iterativegraphreasoning, title={Iterative Graph Reasoning}, author={Fangyuan Yu}, year={2024}, eprint={2408.03615}, archivePrefix={arXiv}, primaryClass={cs.AI} }",
+      "evidence": "@misc{yu2024iterativegraphreasoning,\n      title={Iterative Graph Reasoning}, \n      author={Fangyuan Yu},\n      year={2024},\n      eprint={2408.03615},\n      archivePrefix={arXiv},\n      primaryClass={cs.AI}\n}",
+      "evidence_location": "lines 49-56, 'Citation' section code block",
+      "confidence": "high",
+      "reason": "Provides the requested BibTeX citation for academic reuse of the dataset."
+    },
+    {
+      "field": "citation_arxiv_id",
+      "value": "2408.03615",
+      "normalized_value": "2408.03615",
+      "evidence": "eprint={2408.03615},",
+      "evidence_location": "line 53, 'Citation' section code block",
+      "confidence": "low",
+      "reason": "The BibTeX eprint ID (2408.03615) differs from the arXiv link elsewhere in the document (2408.16667), so the correct paper identifier is ambiguous."
+    },
+    {
+      "field": "contact",
+      "value": "Corresponding author",
+      "normalized_value": "Corresponding author",
+      "evidence": "For any questions or issues regarding the RuleEval dataset, please contact the corresponding author.",
+      "evidence_location": "line 61, 'Contact' section",
+      "confidence": "medium",
+      "reason": "Directs users to the corresponding author for questions, but no email address is explicitly given."
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "dataset_name",
+      "value": "BLEBeacon Dataset",
+      "normalized_value": "BLEBeacon Dataset",
+      "evidence": "# BLEBeacon Dataset",
+      "evidence_location": "line 1, header '# BLEBeacon Dataset'",
+      "confidence": "high",
+      "reason": "Explicit title of the artifact, identifying it as a dataset."
+    },
+    {
+      "field": "description",
+      "value": "The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month.",
+      "normalized_value": "The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE) advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month.",
+      "evidence": "The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month.",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Core description of what the dataset contains and how it was collected."
+    },
+    {
+      "field": "collection_infrastructure",
+      "value": "A network of Raspberry Pi 3 (RPi)-based edge devices were deployed inside a multi-floor facility continuously gathering BLE advertisement packets and storing them in a cloud-based environment.",
+      "normalized_value": "A network of Raspberry Pi 3 (RPi)-based edge devices were deployed inside a multi-floor facility continuously gathering BLE advertisement packets and storing them in a cloud-based environment.",
+      "evidence": "A network of Raspberry Pi 3 (RPi)-based edge devices were deployed inside a multi-floor facility continuously gathering BLE advertisement packets and storing them in a cloud-based environment.",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Names the collection hardware (Raspberry Pi 3 edge devices), deployment setting, and storage environment, useful for understanding and reproducing the setup."
+    },
+    {
+      "field": "archive_repository",
+      "value": "Community Resource for Archiving Wireless Data At Dartmouth (CRAWDAD): https://crawdad.org/unm/blebeacon/20190312/",
+      "normalized_value": "Community Resource for Archiving Wireless Data At Dartmouth (CRAWDAD): https://crawdad.org/unm/blebeacon/20190312/",
+      "evidence": "Since 2019, the BLEBeacon dataset is part of the Community Resource for Archiving Wireless Data At Dartmouth (CRAWDAD): https://crawdad.org/unm/blebeacon/20190312/",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Provides the archive where the dataset is hosted and its access URL."
+    },
+    {
+      "field": "citation",
+      "value": "Dimitrios Sikeridis, Ioannis Papapanagiotou, Michael Devetsikiotis, CRAWDAD dataset unm/blebeacon (v. 2019‑03‑12), downloaded from https://crawdad.org/unm/blebeacon/20190312, Mar 2019.",
+      "normalized_value": "Dimitrios Sikeridis, Ioannis Papapanagiotou, Michael Devetsikiotis, CRAWDAD dataset unm/blebeacon (v. 2019‑03‑12), downloaded from https://crawdad.org/unm/blebeacon/20190312, Mar 2019.",
+      "evidence": "> Dimitrios Sikeridis, Ioannis Papapanagiotou, Michael Devetsikiotis, CRAWDAD dataset unm/blebeacon (v. 2019‑03‑12), downloaded from https://crawdad.org/unm/blebeacon/20190312, Mar 2019.",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Official citation text for the dataset, including authors, version, and date."
+    },
+    {
+      "field": "bibtex_link",
+      "value": "https://crawdad.org/unm/blebeacon/20190312/",
+      "normalized_value": "https://crawdad.org/unm/blebeacon/20190312/",
+      "evidence": "> [Cite using BibTeX](https://crawdad.org/unm/blebeacon/20190312/)",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Link provided for obtaining BibTeX citation for the dataset."
+    },
+    {
+      "field": "beacon_hardware",
+      "value": "off-the-shelf Gimbal Series 10 iBeacons",
+      "normalized_value": "off-the-shelf Gimbal Series 10 iBeacons",
+      "evidence": "Users carried off-the-shelf Gimbal Series 10 iBeacons that continuously transmit BLE advertisement packets.",
+      "evidence_location": "line 19, section '## Operation'",
+      "confidence": "high",
+      "reason": "Identifies the specific beacon hardware used to generate the data."
+    },
+    {
+      "field": "beacon_configuration",
+      "value": "transmission rate 1 Hz, omni-directional antenna propagation, transmission power 0 dBm",
+      "normalized_value": "transmission rate 1 Hz, omni-directional antenna propagation, transmission power 0 dBm",
+      "evidence": "The periodic transmission rate for each beacon is set to 1 Hz, with omni-directional antenna propagation setting, and transmission power of 0 dBm.",
+      "evidence_location": "line 19, section '## Operation'",
+      "confidence": "high",
+      "reason": "Concrete beacon radio configuration parameters needed to interpret or reproduce the data collection."
+    },
+    {
+      "field": "operation_modes",
+      "value": "RSSI Report and Check-In/Check-Out Report",
+      "normalized_value": "RSSI Report and Check-In/Check-Out Report",
+      "evidence": "Regarding system operation two approaches were utilized in parallel:",
+      "evidence_location": "line 21, section '## Operation' (modes detailed in lines 25 and 29)",
+      "confidence": "high",
+      "reason": "Names the two parallel data collection approaches that define the dataset's structure."
+    },
+    {
+      "field": "rssi_report_contents",
+      "value": "beacon/user ID, the packet's Received Signal Strength Indicator (RSSI), a reception timestamp, and the ID of the RPi that received the advertisement",
+      "normalized_value": "beacon/user ID, the packet's Received Signal Strength Indicator (RSSI), a reception timestamp, and the ID of the RPi that received the advertisement",
+      "evidence": "* RSSI Report: all advertisement packet receptions from beacon devices are directly reported to a server with a message that contains the beacon/user ID, the packet's Received Signal Strength Indicator (RSSI), a reception timestamp, and finally the ID of the RPi that received the advertisement (Fig. 1).",
+      "evidence_location": "line 25, section '## Operation'",
+      "confidence": "high",
+      "reason": "Describes the message contents of the RSSI reporting mode."
+    },
+    {
+      "field": "checkout_timeout",
+      "value": "thirty-second period",
+      "normalized_value": "thirty-second period",
+      "evidence": "A thirty-second period is used to ensure that the occupant exited the RPi proximity.",
+      "evidence_location": "line 29, section '## Operation'",
+      "confidence": "high",
+      "reason": "Concrete timing parameter used in the Check-In/Check-Out report generation."
+    },
+    {
+      "field": "dataset_files",
+      "value": "RSSI Report file and Check-In Check-Out Report file",
+      "normalized_value": "RSSI Report file and Check-In Check-Out Report file",
+      "evidence": "The BLEBeacon dataset contains two files, one with the trial readings from the RSSI report operation (RSSI Report file) and the other from the Check-In/Check-Out report operation (Check-In Check-Out Report file).",
+      "evidence_location": "line 34, section '## Dataset'",
+      "confidence": "high",
+      "reason": "States the number and names of the files composing the dataset."
+    },
+    {
+      "field": "rssi_report_schema",
+      "value": "Entry_id, Beacon_id, RSSI, Timestamp, RPi_id",
+      "normalized_value": "Entry_id, Beacon_id, RSSI, Timestamp, RPi_id",
+      "evidence": "The RSSI Report file contains the following entries:\n* Entry_id: unique identifier of a packet in the dataset.\n* Beacon_id: unique identifier of the occupant/beacon.\n* RSSI: the Received Signal Strength Indicator (RSSI) in dB.\n* Timestamp: Date (Month/Day/Year) and Unix time (Hour:Second) of the advertisement packet reception moment from the Rpi.\n* RPi_id: RPi that received the packet.",
+      "evidence_location": "lines 35-40, section '## Dataset'",
+      "confidence": "high",
+      "reason": "Defines the schema/columns of the RSSI Report file, essential for using the dataset."
+    },
+    {
+      "field": "checkin_checkout_report_schema",
+      "value": "Entry_id, Beacon_id, RPi_id, In_time, Out_time",
+      "normalized_value": "Entry_id, Beacon_id, RPi_id, In_time, Out_time",
+      "evidence": "The Check-In/Check-Out Report file contains Entry_id, Beacon_id, and RPi_id as described above with the addition of two entries namely:\n* In_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the moment a user enters the RPi's vicinity and the first advertisement packet is received.\n* Out_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the last advertisement packet received from the same user by the specific RPi.",
+      "evidence_location": "lines 43-45, section '## Dataset'",
+      "confidence": "high",
+      "reason": "Defines the schema/columns of the Check-In/Check-Out Report file."
+    },
+    {
+      "field": "primary_paper",
+      "value": "D. Sikeridis, I. Papapanagiotou, M. Devetsikiotis, \"BLEBeacon: A Real-Subject Trial Dataset from Mobile Bluetooth Low Energy Beacons\", arXiv preprint arXiv:1802.08782, 2018. https://arxiv.org/abs/1802.08782",
+      "normalized_value": "D. Sikeridis, I. Papapanagiotou, M. Devetsikiotis, \"BLEBeacon: A Real-Subject Trial Dataset from Mobile Bluetooth Low Energy Beacons\", arXiv preprint arXiv:1802.08782, 2018. https://arxiv.org/abs/1802.08782",
+      "evidence": "D. Sikeridis, I. Papapanagiotou, M. Devetsikiotis,  [\"BLEBeacon: A Real-Subject Trial Dataset from Mobile Bluetooth Low Energy Beacons\"](https://arxiv.org/abs/1802.08782), arXiv preprint arXiv:1802.08782, 2018.",
+      "evidence_location": "line 50, section '# Readme'",
+      "confidence": "high",
+      "reason": "Primary publication describing the dataset, with arXiv identifier and link."
+    },
+    {
+      "field": "related_publications",
+      "value": "Four publications related to the BLEBeacon dataset (IEEE Internet of Things Journal 2018, IEEE GlobalSIP 2017, IBM Cloud Academy Conference 2017, INFOCOM WKSHPS 2017)",
+      "normalized_value": "Four publications related to the BLEBeacon dataset (IEEE Internet of Things Journal 2018, IEEE GlobalSIP 2017, IBM Cloud Academy Conference 2017, INFOCOM WKSHPS 2017)",
+      "evidence": "Publications related to the BLEBeacon dataset:\n\n* D. Sikeridis, B.P. Rimal, I. Papapanagiotou, and M. Devetsikiotis, 2018. Unsupervised crowd-assisted learning enabling location-aware facilities. IEEE Internet of Things Journal, 5(6), pp.4699-4713. (Available in: https://ieeexplore.ieee.org/document/8305452)\n\n* D. Sikeridis, M. Devetsikiotis, I. Papapanagiotou, [\"Occupant Tracking in Smart Facilities: An Experimental Study\"](http://ipapapa.github.io/Files/GlobalSIP_2017.pdf), IEEE GlobalSIP Symposium on Signal Processing for Smart Cities & Internet of Things, Nov. 2017, Montreal, Canada\n\n* D. Sikeridis, M. Devetsikiotis, I. Papapanagiotou, [\"A Cloud-Assisted Infrastructure for Occupancy Tracking in Smart Facilities\"](http://ipapapa.github.io/Files/ICACON_2017.pdf), IBM Cloud Academy Conference (ICA CON) 2017, Wroclaw, Poland\n\n* M. Inaya, M. Meli, D. Sikeridis, and M. Devetsikiotis, [\"A Real-Subject Evaluation Trial for Location-Aware Smart Buildings\"](http://ipapapa.github.io/Files/ICACON_2017.pdf),  Conference on Computer Communications Workshops (INFOCOM WKSHPS), Atlanta, GA, USA, May 1-4, IEEE 2017",
+      "evidence_location": "lines 56-64, section '### Research Papers'",
+      "confidence": "high",
+      "reason": "Lists publications that use or relate to the dataset, useful for scientific context and reuse."
+    },
+    {
+      "field": "application_domains",
+      "value": "smart sensing platforms, crowd-based applications, building management, and user-localization frameworks",
+      "normalized_value": "smart sensing platforms, crowd-based applications, building management, and user-localization frameworks",
+      "evidence": "The focus is on presenting a real-life realization of a location-aware sensing infrastructure, that can provide insights for smart sensing platforms, crowd-based applications, building management, and user-localization frameworks.",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "States the intended application areas of the dataset, aiding search and indexing."
+    }
+  ]
+}

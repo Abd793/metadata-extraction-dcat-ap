@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Optimal Binary Classification Trees",
+      "normalized_value": "Optimal Binary Classification Trees",
+      "evidence": "# Optimal Binary Classification Trees",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Clear title identifying the artifact"
+    },
+    {
+      "field": "paper_title",
+      "value": "Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees",
+      "normalized_value": "Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees",
+      "evidence": "[\"Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees\"](http://arxiv.org/abs/2206.04857)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Primary research paper associated with the artifact"
+    },
+    {
+      "field": "paper_url",
+      "value": "http://arxiv.org/abs/2206.04857",
+      "normalized_value": "http://arxiv.org/abs/2206.04857",
+      "evidence": "[\"Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees\"](http://arxiv.org/abs/2206.04857)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper"
+    },
+    {
+      "field": "programming_language",
+      "value": "python3.x (version 3.6 and higher)",
+      "normalized_value": "python3.x (version 3.6 and higher)",
+      "evidence": "This code uses [python3.x](https://www.python.org/downloads/) (version 3.6 and higher)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Required programming language and version specification"
+    },
+    {
+      "field": "required_solver",
+      "value": "Gurobi",
+      "normalized_value": "Gurobi",
+      "evidence": "and requires the [Gurobi](https://www.gurobi.com/) solver.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Essential dependency for running the optimization code"
+    },
+    {
+      "field": "dependencies_file",
+      "value": "requirements.txt",
+      "normalized_value": "requirements.txt",
+      "evidence": "Required python3.x packages are outlined in `requirements.txt`.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "File containing Python package dependencies"
+    },
+    {
+      "field": "main_script",
+      "value": "model_runs.py",
+      "normalized_value": "model_runs.py",
+      "evidence": "`model_runs.py` contains the code necessary to create, solve, and report results in a `.csv` file of each instance called by the user",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Primary script for running models and generating results"
+    },
+    {
+      "field": "command_line_arguments",
+      "value": "d: str list, name(s) of dataset file(s); h: int list, maximum depth(s) of trained tree(s); t: float, gurobi model time limit in s; m: str list, list of model(s) to use; r: int list, list of random seed(s) to use; p: str, objective priority parameter used in bi-objective modeling; e: str list, model extra(s), if applicable; f: str, results output file .csv; l: boolean, log console to .txt file and write model to .lp file",
+      "normalized_value": "d: str list, name(s) of dataset file(s); h: int list, maximum depth(s) of trained tree(s); t: float, gurobi model time limit in s; m: str list, list of model(s) to use; r: int list, list of random seed(s) to use; p: str, objective priority parameter used in bi-objective modeling; e: str list, model extra(s), if applicable; f: str, results output file .csv; l: boolean, log console to .txt file and write model to .lp file",
+      "evidence": "- d : `str list`, name(s) of dataset file(s)\n- h : `int list`, maximum depth(s) of trained tree(s)\n- t : `float`, gurobi model time limit in s\n- m : `str list`, list of model(s) to use\n- r : `int list`, list of random seed(s) to use\n- p : `str`, objective priority parameter used in bi-objective modeling\n- e : `str list`, model extra(s), if applicable\n- f : `str`, results output file `.csv`\n- l : `boolean`, log console to `.txt` file and write model to `.lp` file, both saved to the `\\log_files` folder for each model called by user",
+      "evidence_location": "31-40",
+      "confidence": "high",
+      "reason": "Complete specification of command-line parameters for running the code"
+    },
+    {
+      "field": "target_column_requirement",
+      "value": "We assume the target column is labeled 'target'.",
+      "normalized_value": "We assume the target column is labeled 'target'.",
+      "evidence": "We assume the target column is labeled `'target'`.",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "Important data format requirement for input datasets"
+    },
+    {
+      "field": "example_command",
+      "value": "python3 import model_runs; model_runs.main -d ['soybean-small','monk3','car','iris','climate'] -h [3,4,5] -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -e ['max_features-25'] -r [13, 58, 94, None] -c None -f 'test_results.csv' -l False",
+      "normalized_value": "python3 import model_runs; model_runs.main -d ['soybean-small','monk3','car','iris','climate'] -h [3,4,5] -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -e ['max_features-25'] -r [13, 58, 94, None] -c None -f 'test_results.csv' -l False",
+      "evidence": "python3 import model_runs; model_runs.main -d ['soybean-small','monk3','car','iris','climate'] -h [3,4,5] -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -e ['max_features-25'] -r [13, 58, 94, None] -c None -f 'test_results.csv' -l False",
+      "evidence_location": "67",
+      "confidence": "high",
+      "reason": "Concrete example of terminal command for running the main functionality"
+    },
+    {
+      "field": "biobjective_function",
+      "value": "biobjective",
+      "normalized_value": "biobjective",
+      "evidence": "Call the `biobjective` function within a python file as follows to generate a model using the heirarchical modeling capabilities of Gurobi",
+      "evidence_location": "72",
+      "confidence": "high",
+      "reason": "Specific function for bi-objective modeling with Gurobi"
+    },
+    {
+      "field": "pareto_function",
+      "value": "pareto",
+      "normalized_value": "pareto",
+      "evidence": "To generate the Pareto frontier call the `main` function in `pareto_runs.py`",
+      "evidence_location": "96",
+      "confidence": "high",
+      "reason": "Function for generating Pareto frontiers"
+    },
+    {
+      "field": "usage_documentation",
+      "value": "USAGE.md",
+      "normalized_value": "USAGE.md",
+      "evidence": "please refer to the `USAGE.md` file.",
+      "evidence_location": "130",
+      "confidence": "high",
+      "reason": "Reference to detailed usage documentation file"
+    },
+    {
+      "field": "external_code_sources",
+      "value": "Strong Tree: https://github.com/pashew94/StrongTree/, Quant-BnB: https://github.com/mengxianglgal/Quant-BnB",
+      "normalized_value": "Strong Tree: https://github.com/pashew94/StrongTree/, Quant-BnB: https://github.com/mengxianglgal/Quant-BnB",
+      "evidence": "The code found in `BendersOCT.py`, `FlowOCT.py`, `FlowOCTTree.py,` and `FlowOCTutils.py` are taken directly from the [Strong Tree](https://github.com/pashew94/StrongTree/) GitHub public repository.\nThe code found in `Quant-BnB-2D.jl`, `Quant-BnB-3D.jl`, `Algorithms.jl`, `lowerbound_middle.jl` are taken directly from the [Quant-BnB](https://github.com/mengxianglgal/Quant-BnB) GitHub public repository.",
+      "evidence_location": "137-138",
+      "confidence": "high",
+      "reason": "Acknowledgments of external code sources with repository links"
+    },
+    {
+      "field": "copyright",
+      "value": "Copyright 2023 Brandon C. Alston, Hamidreza Validi",
+      "normalized_value": "Copyright 2023 Brandon C. Alston, Hamidreza Validi",
+      "evidence": "Copyright 2023 Brandon C. Alston, Hamidreza Validi",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Copyright information for legal attribution"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Probabilistic Cross-Modal Embedding (PCME)",
+      "normalized_value": "Probabilistic Cross-Modal Embedding (PCME)",
+      "evidence": "# Probabilistic Cross-Modal Embedding (PCME) CVPR 2021",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the project/artifact name directly from the primary header."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2101.05068",
+      "normalized_value": "https://arxiv.org/abs/2101.05068",
+      "evidence": "[Paper](https://arxiv.org/abs/2101.05068)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Direct URL link to the official research paper on arXiv."
+    },
+    {
+      "field": "framework",
+      "value": "Pytorch",
+      "normalized_value": "Pytorch",
+      "evidence": "Official Pytorch implementation of PCME | [Paper](https://arxiv.org/abs/2101.05068)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the underlying software framework used to implement PCME."
+    },
+    {
+      "field": "authors",
+      "value": "[Sanghyuk Chun](https://sanghyukchun.github.io/home/)<sup>1</sup> [Seong Joon Oh](https://seongjoonoh.com/)<sup>1</sup> Rafael Sampaio de Rezende<sup>2</sup> [Yannis Kalantidis](https://www.skamalas.com/)<sup>2</sup> Diane Larlus<sup>2</sup>",
+      "normalized_value": "[Sanghyuk Chun](https://sanghyukchun.github.io/home/)<sup>1</sup> [Seong Joon Oh](https://seongjoonoh.com/)<sup>1</sup> Rafael Sampaio de Rezende<sup>2</sup> [Yannis Kalantidis](https://www.skamalas.com/)<sup>2</sup> Diane Larlus<sup>2</sup>",
+      "evidence": "[Sanghyuk Chun](https://sanghyukchun.github.io/home/)<sup>1</sup> [Seong Joon Oh](https://seongjoonoh.com/)<sup>1</sup> Rafael Sampaio de Rezende<sup>2</sup> [Yannis Kalantidis](https://www.skamalas.com/)<sup>2</sup> Diane Larlus<sup>2</sup>",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Lists the authors of the paper and repository."
+    },
+    {
+      "field": "successor_artifact_repository",
+      "value": "https://github.com/naver-ai/pcmepp",
+      "normalized_value": "https://github.com/naver-ai/pcmepp",
+      "evidence": "Please use [naver-ai/pcmepp](https://github.com/naver-ai/pcmepp) for the improved version!",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Direct link to the repository of PCME++, the improved version of PCME."
+    },
+    {
+      "field": "installation_commands",
+      "value": "pip install cython && pip install -r requirements.txt\npython -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")'\ngit clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./",
+      "normalized_value": "pip install cython && pip install -r requirements.txt python -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")' git clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./",
+      "evidence": "```\npip install cython && pip install -r requirements.txt\npython -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")'\ngit clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./\n```",
+      "evidence_location": "25-29",
+      "confidence": "high",
+      "reason": "Shell commands for installing project dependencies and Apex."
+    },
+    {
+      "field": "docker_image",
+      "value": "sanghyukchun/pcme:torch1.2-apex-dali",
+      "normalized_value": "sanghyukchun/pcme:torch1.2-apex-dali",
+      "evidence": "```\ndocker pull sanghyukchun/pcme:torch1.2-apex-dali\n```",
+      "evidence_location": "34-36",
+      "confidence": "high",
+      "reason": "Docker pull command specifying the pre-built Docker container image."
+    },
+    {
+      "field": "evaluation_command_coco_recall",
+      "value": "python evaluate_recall_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth \\\n    # --model__cache_dir /vector_cache # if you use my docker image",
+      "normalized_value": "python evaluate_recall_coco.py ./config/coco/pcme_coco.yaml \\ --dataset_root <your_dataset_path> \\ --model_path model_last.pth \\ # --model__cache_dir /vector_cache # if you use my docker image",
+      "evidence": "```\n# Compute recall metrics\npython evaluate_recall_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth \\\n    # --model__cache_dir /vector_cache # if you use my docker image\n```",
+      "evidence_location": "73-79",
+      "confidence": "high",
+      "reason": "Command to evaluate recall metrics on the COCO Caption dataset."
+    },
+    {
+      "field": "evaluation_command_coco_pmrp",
+      "value": "python extract_rankings_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth \\\n    --dump_to <dumped_ranking_file> \\\n    # --model__cache_dir /vector_cache # if you use my docker image\n\npython evaluate_pmrp_coco.py --ranking_file <dumped_ranking_file>",
+      "normalized_value": "python extract_rankings_coco.py ./config/coco/pcme_coco.yaml \\ --dataset_root <your_dataset_path> \\ --model_path model_last.pth \\ --dump_to <dumped_ranking_file> \\ # --model__cache_dir /vector_cache # if you use my docker image python evaluate_pmrp_coco.py --ranking_file <dumped_ranking_file>",
+      "evidence": "```\n# Compute plausible match R-Precision (PMRP) metric\npython extract_rankings_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth \\\n    --dump_to <dumped_ranking_file> \\\n    # --model__cache_dir /vector_cache # if you use my docker image\n\npython evaluate_pmrp_coco.py --ranking_file <dumped_ranking_file>\n```",
+      "evidence_location": "81-90",
+      "confidence": "high",
+      "reason": "Commands to extract rankings and compute PMRP metric on COCO Caption."
+    },
+    {
+      "field": "pretrained_weights_pcme_coco",
+      "value": "https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_coco.pth",
+      "normalized_value": "https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_coco.pth",
+      "evidence": "[link](https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_coco.pth)",
+      "evidence_location": "94",
+      "confidence": "high",
+      "reason": "Download URL for the pretrained PCME model checkpoint on COCO."
+    },
+    {
+      "field": "pretrained_weights_pcme_cutmix_coco",
+      "value": "https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_cutmix_coco.pth",
+      "normalized_value": "https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_cutmix_coco.pth",
+      "evidence": "[link](https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_cutmix_coco.pth)",
+      "evidence_location": "95",
+      "confidence": "high",
+      "reason": "Download URL for the CutMix-pretrained PCME model checkpoint on COCO."
+    },
+    {
+      "field": "evaluation_command_cub",
+      "value": "python evaluate_cub.py ./config/cub/pcme_cub.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --caption_root <your_caption_path> \\\n    --model_path model_last.pth \\\n    # --model__cache_dir /vector_cache # if you use my docker image",
+      "normalized_value": "python evaluate_cub.py ./config/cub/pcme_cub.yaml \\ --dataset_root <your_dataset_path> \\ --caption_root <your_caption_path> \\ --model_path model_last.pth \\ # --model__cache_dir /vector_cache # if you use my docker image",
+      "evidence": "```\npython evaluate_cub.py ./config/cub/pcme_cub.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --caption_root <your_caption_path> \\\n    --model_path model_last.pth \\\n    # --model__cache_dir /vector_cache # if you use my docker image\n```",
+      "evidence_location": "107-113",
+      "confidence": "high",
+      "reason": "Command to evaluate model performance on the CUB Caption dataset."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "single V100",
+      "normalized_value": "single V100",
+      "evidence": "NOTE: we train each model with mixed-precision training (O2) on a single V100.",
+      "evidence_location": "133",
+      "confidence": "high",
+      "reason": "Hardware required to run training and reproduce reported results."
+    },
+    {
+      "field": "training_command_coco",
+      "value": "python train_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path> \\\n    # --model__cache_dir /vector_cache # if you use my docker image",
+      "normalized_value": "python train_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path> \\ # --model__cache_dir /vector_cache # if you use my docker image",
+      "evidence": "```\npython train_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path> \\\n    # --model__cache_dir /vector_cache # if you use my docker image\n```",
+      "evidence_location": "139-142",
+      "confidence": "high",
+      "reason": "Command to train the PCME model on COCO Caption."
+    },
+    {
+      "field": "training_time_coco",
+      "value": "about 46 hours in a single V100 with mixed precision training",
+      "normalized_value": "about 46 hours in a single V100 with mixed precision training",
+      "evidence": "It takes about 46 hours in a single V100 with mixed precision training.",
+      "evidence_location": "144",
+      "confidence": "high",
+      "reason": "Execution time required to train on COCO Caption on a V100 GPU."
+    },
+    {
+      "field": "training_command_cub",
+      "value": "python train_cub.py ./config/cub/pcme_cub.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --caption_root <your_caption_path> \\\n    # --model__cache_dir /vector_cache # if you use my docker image",
+      "normalized_value": "python train_cub.py ./config/cub/pcme_cub.yaml \\ --dataset_root <your_dataset_path> \\ --caption_root <your_caption_path> \\ # --model__cache_dir /vector_cache # if you use my docker image",
+      "evidence": "```\npython train_cub.py ./config/cub/pcme_cub.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --caption_root <your_caption_path> \\\n    # --model__cache_dir /vector_cache # if you use my docker image\n```",
+      "evidence_location": "169-174",
+      "confidence": "high",
+      "reason": "Command to train the model on CUB Caption with full training classes."
+    },
+    {
+      "field": "training_time_cub",
+      "value": "about 4 hours in a single V100 with mixed precision training",
+      "normalized_value": "about 4 hours in a single V100 with mixed precision training",
+      "evidence": "It takes about 4 hours in a single V100 with mixed precision training.",
+      "evidence_location": "176",
+      "confidence": "high",
+      "reason": "Execution time required to train on CUB Caption on a V100 GPU."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{chun2021pcme,\n    title={Probabilistic Embeddings for Cross-Modal Retrieval},\n    author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane},\n    year={2021},\n    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},\n}",
+      "normalized_value": "@inproceedings{chun2021pcme, title={Probabilistic Embeddings for Cross-Modal Retrieval}, author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane}, year={2021}, booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)}, }",
+      "evidence": "```\n@inproceedings{chun2021pcme,\n    title={Probabilistic Embeddings for Cross-Modal Retrieval},\n    author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane},\n    year={2021},\n    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},\n}\n```",
+      "evidence_location": "180-187",
+      "confidence": "high",
+      "reason": "BibTeX citation entry for the PCME CVPR 2021 paper."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "MIT License",
+      "evidence_location": "209",
+      "confidence": "high",
+      "reason": "License governing the reuse of this repository."
+    }
+  ]
+}

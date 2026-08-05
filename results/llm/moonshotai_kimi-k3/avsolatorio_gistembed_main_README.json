@@ -1,0 +1,229 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "GISTEmbed",
+      "normalized_value": "GISTEmbed",
+      "evidence": "# GISTEmbed",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Identifies the artifact/framework name."
+    },
+    {
+      "field": "full_name",
+      "value": "Guided In-sample Selection of Training Negatives for Text Embedding Fine-tuning",
+      "normalized_value": "Guided In-sample Selection of Training Negatives for Text Embedding Fine-tuning",
+      "evidence": "The GISTEmbed framework (Guided In-sample Selection of Training Negatives for Text Embedding Fine-tuning) introduces an innovative approach to dynamically mine training negatives within a batch, serving as contrastive samples for fine-tuning embedding models.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Expands the acronym and states the framework's purpose."
+    },
+    {
+      "field": "description",
+      "value": "The GISTEmbed framework introduces an innovative approach to dynamically mine training negatives within a batch, serving as contrastive samples for fine-tuning embedding models. At the core of GISTEmbed is the utilization of a guide model, which assesses the relevance of samples in the batch against a query-positive pair.",
+      "normalized_value": "The GISTEmbed framework introduces an innovative approach to dynamically mine training negatives within a batch, serving as contrastive samples for fine-tuning embedding models. At the core of GISTEmbed is the utilization of a guide model, which assesses the relevance of samples in the batch against a query-positive pair.",
+      "evidence": "The GISTEmbed framework (Guided In-sample Selection of Training Negatives for Text Embedding Fine-tuning) introduces an innovative approach to dynamically mine training negatives within a batch, serving as contrastive samples for fine-tuning embedding models. At the core of GISTEmbed is the utilization of a guide model, which assesses the relevance of samples in the batch against a query-positive pair. This model ensures that only examples deemed irrelevant are selected as training negatives.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Describes the method and how it works, useful for understanding and indexing."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2402.16829",
+      "normalized_value": "https://arxiv.org/abs/2402.16829",
+      "evidence": "<a href=\"https://arxiv.org/abs/2402.16829\" target=\"_blank\">Paper on ArXiv</a>",
+      "evidence_location": "line 17",
+      "confidence": "high",
+      "reason": "Link to the associated research paper."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/avsolatorio/GISTEmbed.git",
+      "normalized_value": "https://github.com/avsolatorio/GISTEmbed.git",
+      "evidence": "git clone https://github.com/avsolatorio/GISTEmbed.git",
+      "evidence_location": "line 101, Reproducibility section code block",
+      "confidence": "high",
+      "reason": "Source code repository URL needed to obtain and reproduce the artifact."
+    },
+    {
+      "field": "trained_models",
+      "value": "avsolatorio/GIST-large-Embedding-v0, avsolatorio/GIST-Embedding-v0, avsolatorio/GIST-small-Embedding-v0, avsolatorio/GIST-all-MiniLM-L6-v2",
+      "normalized_value": "avsolatorio/GIST-large-Embedding-v0, avsolatorio/GIST-Embedding-v0, avsolatorio/GIST-small-Embedding-v0, avsolatorio/GIST-all-MiniLM-L6-v2",
+      "evidence": "- [avsolatorio/GIST-large-Embedding-v0](https://huggingface.co/avsolatorio/GIST-large-Embedding-v0): The model fine-tuned using the GISTEmbed framework and the MEDI+MTEBcls dataset. The base model used is the [`BAAI/bge-large-en-v1.5`](https://huggingface.co/BAAI/bge-large-en-v1.5).\n- [avsolatorio/GIST-Embedding-v0](https://huggingface.co/avsolatorio/GIST-Embedding-v0): The model fine-tuned using the GISTEmbed framework and the MEDI+MTEBcls dataset. The base model used is the [`BAAI/bge-base-en-v1.5`](https://huggingface.co/BAAI/bge-base-en-v1.5).\n- [avsolatorio/GIST-small-Embedding-v0](https://huggingface.co/avsolatorio/GIST-small-Embedding-v0): The model fine-tuned using the GISTEmbed framework and the MEDI+MTEBcls dataset. The base model used is the [`BAAI/bge-small-en-v1.5`](https://huggingface.co/BAAI/bge-small-en-v1.5).\n- [avsolatorio/GIST-all-MiniLM-L6-v2](https://huggingface.co/avsolatorio/GIST-all-MiniLM-L6-v2): The model fine-tuned using the GISTEmbed framework and the MEDI+MTEBcls dataset. The base model used is the [`sentence-transformers/all-MiniLM-L6-v2`](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2).",
+      "evidence_location": "lines 28-31, Trained models section",
+      "confidence": "high",
+      "reason": "Lists the released fine-tuned models on Hugging Face with their base models."
+    },
+    {
+      "field": "base_models",
+      "value": "BAAI/bge-large-en-v1.5, BAAI/bge-base-en-v1.5, BAAI/bge-small-en-v1.5, sentence-transformers/all-MiniLM-L6-v2",
+      "normalized_value": "BAAI/bge-large-en-v1.5, BAAI/bge-base-en-v1.5, BAAI/bge-small-en-v1.5, sentence-transformers/all-MiniLM-L6-v2",
+      "evidence": "The base model used is the [`BAAI/bge-large-en-v1.5`](https://huggingface.co/BAAI/bge-large-en-v1.5).",
+      "evidence_location": "lines 28-31, Trained models section",
+      "confidence": "high",
+      "reason": "Identifies the pretrained base models each released model was fine-tuned from."
+    },
+    {
+      "field": "training_dataset",
+      "value": "avsolatorio/medi-data-mteb_avs_triplets",
+      "normalized_value": "avsolatorio/medi-data-mteb_avs_triplets",
+      "evidence": "- Dataset: [avsolatorio/medi-data-mteb_avs_triplets](https://huggingface.co/datasets/avsolatorio/medi-data-mteb_avs_triplets)",
+      "evidence_location": "line 38, Data section",
+      "confidence": "high",
+      "reason": "Hugging Face dataset used for fine-tuning, needed for reproduction."
+    },
+    {
+      "field": "dataset_revision",
+      "value": "238a0499b6e6b690cc64ea56fde8461daa8341bb",
+      "normalized_value": "238a0499b6e6b690cc64ea56fde8461daa8341bb",
+      "evidence": "- Revision: 238a0499b6e6b690cc64ea56fde8461daa8341bb",
+      "evidence_location": "line 39, Data section",
+      "confidence": "high",
+      "reason": "Exact dataset revision used to train the model, critical for reproducibility."
+    },
+    {
+      "field": "dataset_composition",
+      "value": "a compilation of the MEDI dataset and the MTEB Classification training dataset",
+      "normalized_value": "a compilation of the MEDI dataset and the MTEB Classification training dataset",
+      "evidence": "The dataset used is a compilation of the MEDI dataset and the MTEB Classification training dataset.",
+      "evidence_location": "line 36, Data section",
+      "confidence": "high",
+      "reason": "Explains the provenance and composition of the training data."
+    },
+    {
+      "field": "related_dataset_paper",
+      "value": "One Embedder, Any Task: Instruction-Finetuned Text Embeddings (https://arxiv.org/abs/2212.09741)",
+      "normalized_value": "One Embedder, Any Task: Instruction-Finetuned Text Embeddings (https://arxiv.org/abs/2212.09741)",
+      "evidence": "The **MEDI Dataset** is published in the following paper: [One Embedder, Any Task: Instruction-Finetuned Text Embeddings](https://arxiv.org/abs/2212.09741).",
+      "evidence_location": "line 43, Data section",
+      "confidence": "high",
+      "reason": "Citation for the MEDI dataset component, useful for attribution and reuse."
+    },
+    {
+      "field": "inference_library",
+      "value": "Sentence Transformers",
+      "normalized_value": "Sentence Transformers",
+      "evidence": "The model can be easily loaded using the Sentence Transformers library.",
+      "evidence_location": "line 51, Usage section",
+      "confidence": "high",
+      "reason": "Names the library required to load and run the models."
+    },
+    {
+      "field": "usage_example",
+      "value": "model = SentenceTransformer(\"avsolatorio/GIST-Embedding-v0\", revision=revision)\nembeddings = model.encode(texts, convert_to_tensor=True)",
+      "normalized_value": "model = SentenceTransformer(\"avsolatorio/GIST-Embedding-v0\", revision=revision)\nembeddings = model.encode(texts, convert_to_tensor=True)",
+      "evidence": "model = SentenceTransformer(\"avsolatorio/GIST-Embedding-v0\", revision=revision)",
+      "evidence_location": "lines 53-74, Usage section Python code block",
+      "confidence": "high",
+      "reason": "Shows how to load the model and compute embeddings for inference."
+    },
+    {
+      "field": "loss_function_implementation",
+      "value": "guided_in_batch_contrastive_loss",
+      "normalized_value": "guided_in_batch_contrastive_loss",
+      "evidence": "For anyone interested in the technical implementation of GISTEmbed as a training mechanism, please refer to the loss computation implemented in the loss function [`guided_in_batch_contrastive_loss`](https://github.com/avsolatorio/GISTEmbed/blob/538e3d749b1944e8362c5566385111763866fa4c/gist_embed/trainer/loss.py#L599).",
+      "evidence_location": "line 78, Guided in-batch constrastive loss section",
+      "confidence": "high",
+      "reason": "Points to the core training loss implementation for understanding/reusing the method."
+    },
+    {
+      "field": "trainer_implementation",
+      "value": "GISTTrainer",
+      "normalized_value": "GISTTrainer",
+      "evidence": "This loss function is subsequently used in the [`GISTTrainer`](https://github.com/avsolatorio/GISTEmbed/blob/538e3d749b1944e8362c5566385111763866fa4c/gist_embed/trainer/trainer.py#L127).",
+      "evidence_location": "line 80, Guided in-batch constrastive loss section",
+      "confidence": "high",
+      "reason": "Names the trainer class that uses the loss, useful for reuse of the training code."
+    },
+    {
+      "field": "environment_setup",
+      "value": "conda create -n GISTEmbed python=3.10; conda activate GISTEmbed; pip install poetry",
+      "normalized_value": "conda create -n GISTEmbed python=3.10; conda activate GISTEmbed; pip install poetry",
+      "evidence": "conda create -n GISTEmbed python=3.10\n\nconda activate GISTEmbed\n\npip install poetry",
+      "evidence_location": "lines 90-96, Reproducibility section code block",
+      "confidence": "high",
+      "reason": "Defines the Python version (3.10) and environment setup steps for reproduction."
+    },
+    {
+      "field": "installation_command",
+      "value": "git clone https://github.com/avsolatorio/GISTEmbed.git; cd GISTEmbed; poetry install",
+      "normalized_value": "git clone https://github.com/avsolatorio/GISTEmbed.git; cd GISTEmbed; poetry install",
+      "evidence": "git clone https://github.com/avsolatorio/GISTEmbed.git\n\ncd GISTEmbed\n\npoetry install",
+      "evidence_location": "lines 100-106, Reproducibility section code block",
+      "confidence": "high",
+      "reason": "Installation steps for the framework and its dependencies via Poetry."
+    },
+    {
+      "field": "training_command",
+      "value": "bash experiments/01-600-11-1-2-2-0-0-cls-normed-384-512_run_finetune_experiment.sh",
+      "normalized_value": "bash experiments/01-600-11-1-2-2-0-0-cls-normed-384-512_run_finetune_experiment.sh",
+      "evidence": "bash experiments/01-600-11-1-2-2-0-0-cls-normed-384-512_run_finetune_experiment.sh",
+      "evidence_location": "lines 118-120, Reproducibility section code block",
+      "confidence": "high",
+      "reason": "Command to run the fine-tuning experiment and reproduce results."
+    },
+    {
+      "field": "logging_requirement",
+      "value": "WANDB_API_KEY environment variable must be set to enable logging to WANDB",
+      "normalized_value": "WANDB_API_KEY environment variable must be set to enable logging to WANDB",
+      "evidence": "The script also uses WANDB for logging. Ensure to set the `WANDB_API_KEY` environment variable to enable logging to WANDB.",
+      "evidence_location": "line 124, Reproducibility section",
+      "confidence": "high",
+      "reason": "External service dependency and required environment variable for training runs."
+    },
+    {
+      "field": "training_parameters",
+      "value": "Epochs = 80, Warmup ratio = 0.1, Learning rate = 5e-6, Batch size = 32, Checkpoint step = 103500, Contrastive loss temperature = 0.01",
+      "normalized_value": "Epochs = 80, Warmup ratio = 0.1, Learning rate = 5e-6, Batch size = 32, Checkpoint step = 103500, Contrastive loss temperature = 0.01",
+      "evidence": "Epochs = 80\nWarmup ratio = 0.1\nLearning rate = 5e-6\nBatch size = 32\nCheckpoint step = 103500\nContrastive loss temperature = 0.01",
+      "evidence_location": "lines 136-143, Training Parameters section code block",
+      "confidence": "high",
+      "reason": "Hyperparameters used for fine-tuning, essential for reproduction."
+    },
+    {
+      "field": "evaluation_benchmark",
+      "value": "MTEB Evaluation suite",
+      "normalized_value": "MTEB Evaluation suite",
+      "evidence": "The model was evaluated using the [MTEB Evaluation](https://huggingface.co/mteb) suite.",
+      "evidence_location": "line 149, Evaluation section",
+      "confidence": "high",
+      "reason": "Names the benchmark used to evaluate the models."
+    },
+    {
+      "field": "citation",
+      "value": "@article{solatorio2024gistembed, title={GISTEmbed: Guided In-sample Selection of Training Negatives for Text Embedding Fine-tuning}, author={Aivin V. Solatorio}, journal={arXiv preprint arXiv:2402.16829}, year={2024}, URL={https://arxiv.org/abs/2402.16829} eprint={2402.16829}, archivePrefix={arXiv}, primaryClass={cs.LG} }",
+      "normalized_value": "@article{solatorio2024gistembed, title={GISTEmbed: Guided In-sample Selection of Training Negatives for Text Embedding Fine-tuning}, author={Aivin V. Solatorio}, journal={arXiv preprint arXiv:2402.16829}, year={2024}, URL={https://arxiv.org/abs/2402.16829} eprint={2402.16829}, archivePrefix={arXiv}, primaryClass={cs.LG} }",
+      "evidence": "@article{solatorio2024gistembed,\n    title={GISTEmbed: Guided In-sample Selection of Training Negatives for Text Embedding Fine-tuning},\n    author={Aivin V. Solatorio},\n    journal={arXiv preprint arXiv:2402.16829},\n    year={2024},\n    URL={https://arxiv.org/abs/2402.16829}\n    eprint={2402.16829},\n    archivePrefix={arXiv},\n    primaryClass={cs.LG}\n}",
+      "evidence_location": "lines 155-166, Citation section code block",
+      "confidence": "high",
+      "reason": "BibTeX entry for citing the work."
+    },
+    {
+      "field": "author",
+      "value": "Aivin V. Solatorio",
+      "normalized_value": "Aivin V. Solatorio",
+      "evidence": "    author={Aivin V. Solatorio},",
+      "evidence_location": "line 158, Citation section code block",
+      "confidence": "high",
+      "reason": "Identifies the author of the work."
+    },
+    {
+      "field": "funding",
+      "value": "\"KCP IV - Exploring Data Use in the Development Economics Literature using Large Language Models (AI and LLMs)\" project funded by the Knowledge for Change Program (KCP) of the World Bank - RA-P503405-RESE-TF0C3444",
+      "normalized_value": "\"KCP IV - Exploring Data Use in the Development Economics Literature using Large Language Models (AI and LLMs)\" project funded by the Knowledge for Change Program (KCP) of the World Bank - RA-P503405-RESE-TF0C3444",
+      "evidence": "This work is supported by the \"KCP IV - Exploring Data Use in the Development Economics Literature using Large Language Models (AI and LLMs)\" project funded by the [Knowledge for Change Program (KCP)](https://www.worldbank.org/en/programs/knowledge-for-change) of the World Bank - RA-P503405-RESE-TF0C3444.",
+      "evidence_location": "line 170, Acknowledgements section",
+      "confidence": "high",
+      "reason": "Funding source and grant identifier, relevant for attribution and reuse context."
+    },
+    {
+      "field": "usage_note",
+      "value": "The model does not require any instruction for generating embeddings; queries for retrieval tasks can be directly encoded without crafting instructions.",
+      "normalized_value": "The model does not require any instruction for generating embeddings; queries for retrieval tasks can be directly encoded without crafting instructions.",
+      "evidence": "The model does not require any instruction for generating embeddings. This means that queries for retrieval tasks can be directly encoded without crafting instructions.",
+      "evidence_location": "line 22",
+      "confidence": "high",
+      "reason": "Practical usage characteristic distinguishing the model from instruction-based embedders."
+    }
+  ]
+}

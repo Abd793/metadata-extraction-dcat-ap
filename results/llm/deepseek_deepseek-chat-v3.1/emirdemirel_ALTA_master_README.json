@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "normalized_value": "ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "evidence": "# ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the artifact name and purpose"
+    },
+    {
+      "field": "short_description",
+      "value": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "normalized_value": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "evidence": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Clear description of what the artifact is"
+    },
+    {
+      "field": "task",
+      "value": "Automatic Lyrics Transcription is the task of translating singing voice into text.",
+      "normalized_value": "Automatic Lyrics Transcription is the task of translating singing voice into text.",
+      "evidence": "Automatic Lyrics Transcription is the task of translating singing voice into text.",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Defines the scientific task addressed"
+    },
+    {
+      "field": "framework",
+      "value": "Kaldi",
+      "normalized_value": "Kaldi",
+      "evidence": "This framework is built as a [Kaldi](http://kaldi-asr.org/)[1] recipe",
+      "evidence_location": "63",
+      "confidence": "high",
+      "reason": "Specifies the underlying framework used"
+    },
+    {
+      "field": "dependencies_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "69",
+      "confidence": "high",
+      "reason": "Installation command for dependencies"
+    },
+    {
+      "field": "datasets",
+      "value": "DAMP, DALI, DALI-TALT, Jamendo",
+      "normalized_value": "DAMP, DALI, DALI-TALT, Jamendo",
+      "evidence": "* DAMP:\n\n* DALI:\n\n* DALI-TALT:\n\n* Jamendo:",
+      "evidence_location": "80-107",
+      "confidence": "high",
+      "reason": "Lists datasets used for training and evaluation"
+    },
+    {
+      "field": "training_scripts",
+      "value": "run_singlestream.sh, run_mstrenet.sh",
+      "normalized_value": "run_singlestream.sh, run_mstrenet.sh",
+      "evidence": "./run_singlestream.sh $audiopath\n\n./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} \\",
+      "evidence_location": "130-137",
+      "confidence": "high",
+      "reason": "Main scripts for running the training pipeline"
+    },
+    {
+      "field": "model_versions",
+      "value": "1) Dilated Convolutional Neural Networks with Self-Attention (single-stream), 2) MStreNet: Multistreaming Time-Delay Neural Networks & Cross-domain Training",
+      "normalized_value": "1) Dilated Convolutional Neural Networks with Self-Attention (single-stream), 2) MStreNet: Multistreaming Time-Delay Neural Networks & Cross-domain Training",
+      "evidence": "##### 1 - Dilated Convolutional Neural Networks with Self-Attention (single-stream):\n\n##### 2 - MStreNet : Multistreaming Time-Delay Neural Networks & Cross-domain Training",
+      "evidence_location": "119-132",
+      "confidence": "high",
+      "reason": "Describes different model architectures available"
+    },
+    {
+      "field": "evaluation_script",
+      "value": "extract_phn_posteriorgram.sh",
+      "normalized_value": "extract_phn_posteriorgram.sh",
+      "evidence": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "evidence_location": "175",
+      "confidence": "high",
+      "reason": "Script for extracting phoneme posteriorgrams"
+    },
+    {
+      "field": "citation",
+      "value": "@article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}",
+      "normalized_value": "@article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}",
+      "evidence": "@article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}",
+      "evidence_location": "190-195",
+      "confidence": "high",
+      "reason": "BibTeX citation for the main paper"
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/pdf/2108.02625.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2108.02625.pdf",
+      "evidence": "Link to paper : https://arxiv.org/pdf/2108.02625.pdf",
+      "evidence_location": "197",
+      "confidence": "high",
+      "reason": "Link to the main research paper"
+    },
+    {
+      "field": "license",
+      "value": "Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International",
+      "normalized_value": "Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International",
+      "evidence": "This work is licensed under Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International",
+      "evidence_location": "235",
+      "confidence": "high",
+      "reason": "License information for reuse"
+    },
+    {
+      "field": "acoustic_model_details",
+      "value": "Sequence discriminative training on LF-MMI criteria[2] (Kaldi-chain recipe). MStre-Net[3] proposes three improvements: multistream TDNN architecture with distinct TDNN streams, Cross-domain Training, Music Informed Silence Modeling",
+      "normalized_value": "Sequence discriminative training on LF-MMI criteria[2] (Kaldi-chain recipe). MStre-Net[3] proposes three improvements: multistream TDNN architecture with distinct TDNN streams, Cross-domain Training, Music Informed Silence Modeling",
+      "evidence": "**Acoustic Model**: Sequence discriminative training on LF-MMI criteria[2] (Kaldi-chain recipe). MStre-Net[3] proposes three improvements over the standard Kaldi-chain recipe:\n - The neural network is based on the multistream TDNN architecture with distinct TDNN streams.\n - Cross-domain Training:\n - Music Informed Silence Modeling:",
+      "evidence_location": "33-45",
+      "confidence": "high",
+      "reason": "Details about the acoustic model architecture"
+    },
+    {
+      "field": "language_model_details",
+      "value": "4-gram MaxEnt trained using SRILM toolkit, Kneser-Ney smoothing, corpus consists of lyrics from DAMP and DALI datasets and artists from Billboard (2015-2018)",
+      "normalized_value": "4-gram MaxEnt trained using SRILM toolkit, Kneser-Ney smoothing, corpus consists of lyrics from DAMP and DALI datasets and artists from Billboard (2015-2018)",
+      "evidence": "**Language Model**: The LM is a 4-gram MaxEnt trained using the SRILM toolkit, where Kneser-Ney smoothing applied. The corpus consists of lyrics of the data from DAMP and DALI datasets and artists from Billboard (2015-2018) [4]",
+      "evidence_location": "52",
+      "confidence": "high",
+      "reason": "Details about the language model"
+    },
+    {
+      "field": "pronunciation_model_details",
+      "value": "predefined lexicon mapping words to phonemic representations, singing adapted version",
+      "normalized_value": "predefined lexicon mapping words to phonemic representations, singing adapted version",
+      "evidence": "**Pronunciation Model**: A predefined lexicon that provides a mapping between words and their phonemic representations. We use the singing adapted version presented here[5].",
+      "evidence_location": "54",
+      "confidence": "high",
+      "reason": "Details about the pronunciation model"
+    }
+  ]
+}

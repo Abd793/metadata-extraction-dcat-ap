@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "paper_title",
+      "value": "Y-Autoencoders: disentangling latent representations via sequential-encoding",
+      "normalized_value": "Y-Autoencoders: disentangling latent representations via sequential-encoding",
+      "evidence": "*\"Y-Autoencoders: disentangling latent representations via sequential-encoding\"*",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Identifies the paper title associated with the official repository implementation."
+    },
+    {
+      "field": "authors",
+      "value": "Massimiliano Patacchiola, Patrick Fox-Roberts, Edward Rosten",
+      "normalized_value": "Massimiliano Patacchiola, Patrick Fox-Roberts, Edward Rosten",
+      "evidence": "Massimiliano Patacchiola, Patrick Fox-Roberts, Edward Rosten",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Identifies the authors of the paper and repository code."
+    },
+    {
+      "field": "publication_venue",
+      "value": "Pattern Recognition Letters",
+      "normalized_value": "Pattern Recognition Letters",
+      "evidence": "Pattern Recognition Letters",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Identifies the journal where the research was published."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/1907.10949.pdf",
+      "normalized_value": "https://arxiv.org/pdf/1907.10949.pdf",
+      "evidence": "https://arxiv.org/pdf/1907.10949.pdf",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Provides direct link to access the research paper PDF on arXiv."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{patacchiola2020yautoencoders,\n  title={Y-Autoencoders: disentangling latent representations via sequential-encoding},\n  author={Patacchiola, Massimiliano and Fox-Roberts, Patrick and Rosten, Edward},\n  journal={Pattern Recognition Letters},\n  volume={140},\n  pages={59--65},\n  year={2020}\n}",
+      "normalized_value": "@article{patacchiola2020yautoencoders, title={Y-Autoencoders: disentangling latent representations via sequential-encoding}, author={Patacchiola, Massimiliano and Fox-Roberts, Patrick and Rosten, Edward}, journal={Pattern Recognition Letters}, volume={140}, pages={59--65}, year={2020}}",
+      "evidence": "@article{patacchiola2020yautoencoders,\n  title={Y-Autoencoders: disentangling latent representations via sequential-encoding},\n  author={Patacchiola, Massimiliano and Fox-Roberts, Patrick and Rosten, Edward},\n  journal={Pattern Recognition Letters},\n  volume={140},\n  pages={59--65},\n  year={2020}\n}",
+      "evidence_location": "13-20",
+      "confidence": "high",
+      "reason": "Provides the complete BibTeX entry for citing the paper."
+    },
+    {
+      "field": "operating_system",
+      "value": "Ubuntu 18.04.2 LTS",
+      "normalized_value": "Ubuntu 18.04.2 LTS",
+      "evidence": "`Ubuntu 18.04.2 LTS`",
+      "evidence_location": "28",
+      "confidence": "high",
+      "reason": "Specifies the operating system version on which the artifact was tested."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python 2.7",
+      "normalized_value": "Python 2.7",
+      "evidence": "`Python 2.7`",
+      "evidence_location": "28",
+      "confidence": "high",
+      "reason": "Specifies the Python version used and tested for the repository."
+    },
+    {
+      "field": "hardware_gpu",
+      "value": "GeForce GTX 1060",
+      "normalized_value": "GeForce GTX 1060",
+      "evidence": "GeForce GTX 1060",
+      "evidence_location": "28",
+      "confidence": "high",
+      "reason": "Specifies the GPU hardware used during training and testing."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.10.0-cp27-none-linux_x86_64.whl",
+      "normalized_value": "pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.10.0-cp27-none-linux_x86_64.whl",
+      "evidence": "pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.10.0-cp27-none-linux_x86_64.whl",
+      "evidence_location": "39",
+      "confidence": "high",
+      "reason": "Provides command to install the Tensorflow GPU 1.10 dependency."
+    },
+    {
+      "field": "dataset",
+      "value": "MNIST",
+      "normalized_value": "MNIST",
+      "evidence": "The MNIST dataset is included in the package but it must be unziped",
+      "evidence_location": "56",
+      "confidence": "high",
+      "reason": "Identifies the dataset used for the experiments."
+    },
+    {
+      "field": "dataset_setup_command",
+      "value": "unzip ./datasets/mnist.zip -d ./datasets/",
+      "normalized_value": "unzip ./datasets/mnist.zip -d ./datasets/",
+      "evidence": "unzip ./datasets/mnist.zip -d ./datasets/",
+      "evidence_location": "59",
+      "confidence": "high",
+      "reason": "Command needed to unpack the dataset files into required directories."
+    },
+    {
+      "field": "default_hyperparameters",
+      "value": "number of epochs=100, learning rate=0.0001, implicit units=32, lambda explicit=1.0, lambda implicit=1.0",
+      "normalized_value": "number of epochs=100, learning rate=0.0001, implicit units=32, lambda explicit=1.0, lambda implicit=1.0",
+      "evidence": "number of epochs=100, learning rate=0.0001, implicit units=32, lambda explicit=1.0, lambda implicit=1.0",
+      "evidence_location": "67",
+      "confidence": "high",
+      "reason": "Lists default hyperparameter values for model training matching the paper's baseline."
+    },
+    {
+      "field": "training_command",
+      "value": "python train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=1.0",
+      "normalized_value": "python train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=1.0",
+      "evidence": "python train.py --arch=\"yae\" --lambda_e=1.0 --lambda_i=1.0",
+      "evidence_location": "94",
+      "confidence": "high",
+      "reason": "Command to run training for the primary Y-AE model."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "MSE and SSMI",
+      "normalized_value": "MSE and SSMI",
+      "evidence": "MSE and SSMI",
+      "evidence_location": "193",
+      "confidence": "high",
+      "reason": "Names the quantitative evaluation metrics computed on generated data."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python test.py --arch=\"cae\" --implicit_units=16 --type=\"metrics\" --tot_samples=20 --resume=\"/home/mpatacchiola/Y-autoencoder-paper/code/results/cae_ep10_wdecay0.0001_units16/model/131315_27032019_4679/model.ckpt\" --path=\"./results/cae_ep10_wdecay0.0001_units16\" --gendata_path=\"./results/cae_ep10_wdecay0.0001_units16/gendata/132252_27032019\"",
+      "normalized_value": "python test.py --arch=\"cae\" --implicit_units=16 --type=\"metrics\" --tot_samples=20 --resume=\"/home/mpatacchiola/Y-autoencoder-paper/code/results/cae_ep10_wdecay0.0001_units16/model/131315_27032019_4679/model.ckpt\" --path=\"./results/cae_ep10_wdecay0.0001_units16\" --gendata_path=\"./results/cae_ep10_wdecay0.0001_units16/gendata/132252_27032019\"",
+      "evidence": "python test.py --arch=\"cae\" --implicit_units=16 --type=\"metrics\" --tot_samples=20 --resume=\"/home/mpatacchiola/Y-autoencoder-paper/code/results/cae_ep10_wdecay0.0001_units16/model/131315_27032019_4679/model.ckpt\" --path=\"./results/cae_ep10_wdecay0.0001_units16\" --gendata_path=\"./results/cae_ep10_wdecay0.0001_units16/gendata/132252_27032019\"",
+      "evidence_location": "196",
+      "confidence": "high",
+      "reason": "Command to evaluate internal MSE and SSMI metrics on test sample outputs."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "MIT License",
+      "evidence_location": "217",
+      "confidence": "high",
+      "reason": "Specifies the software license governing reuse of this repository."
+    }
+  ]
+}

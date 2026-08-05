@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "CS-TGN",
+      "normalized_value": "CS-TGN",
+      "evidence": "# CS-TGN",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Names the artifact/repository, essential for identification and search."
+    },
+    {
+      "field": "description",
+      "value": "This repository contains the implementation of algorithms, and used datasets of paper ``CS-TGN: Community Search via Temporal Graph Neural Networks`` (ACM The Web Conference Companion 2023  (WWW)).",
+      "normalized_value": "This repository contains the implementation of algorithms, and used datasets of paper ``CS-TGN: Community Search via Temporal Graph Neural Networks`` (ACM The Web Conference Companion 2023 (WWW)).",
+      "evidence": "This repository contains the implementation of algorithms, and used datasets of paper ``CS-TGN: Community Search via Temporal Graph Neural Networks`` (ACM The Web Conference Companion 2023  (WWW)). ",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "States what the repository contains and links it to its associated paper and venue."
+    },
+    {
+      "field": "paper_venue",
+      "value": "ACM The Web Conference Companion 2023 (WWW)",
+      "normalized_value": "ACM The Web Conference Companion 2023 (WWW)",
+      "evidence": "(ACM The Web Conference Companion 2023  (WWW))",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Identifies the publication venue, useful for citation and scientific context."
+    },
+    {
+      "field": "authors",
+      "value": "Farnoosh Hashemi, Ali Behrouz, Milad Rezaei Hajidehi",
+      "normalized_value": "Farnoosh Hashemi, Ali Behrouz, Milad Rezaei Hajidehi",
+      "evidence": "#### Authors: [Farnoosh Hashemi](https://farnooshha.github.io//), [Ali Behrouz](https://abehrouz.github.io/), [Milad Rezaei Hajidehi](https://www.linkedin.com/in/milad-rezaei-hajidehi-63013773/)",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Author names with profile links support attribution and citation."
+    },
+    {
+      "field": "paper_doi",
+      "value": "https://doi.org/10.1145/3543873.3587654",
+      "normalized_value": "https://doi.org/10.1145/3543873.3587654",
+      "evidence": "#### [Link to the paper](https://doi.org/10.1145/3543873.3587654) ([Arxiv](https://arxiv.org/abs/2303.08964))",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "DOI link to the published paper enables access and citation."
+    },
+    {
+      "field": "paper_arxiv",
+      "value": "https://arxiv.org/abs/2303.08964",
+      "normalized_value": "https://arxiv.org/abs/2303.08964",
+      "evidence": "([Arxiv](https://arxiv.org/abs/2303.08964))",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "ArXiv preprint link provides open access to the paper."
+    },
+    {
+      "field": "task",
+      "value": "Community Search in temporal networks",
+      "normalized_value": "Community Search in temporal networks",
+      "evidence": "Given any query nodes, Community Search aims to find a densely connected subgraph containing query nodes.",
+      "evidence_location": "line 14, Abstract section",
+      "confidence": "high",
+      "reason": "Defines the research task the method addresses, key for indexing and search."
+    },
+    {
+      "field": "method",
+      "value": "query-driven Temporal Graph Convolutional Network (CS-TGN) that combines local query-dependent structure and global graph embedding per snapshot, then uses a GRU cell with contextual attention to learn dynamics of interactions and update node embeddings over time",
+      "normalized_value": "query-driven Temporal Graph Convolutional Network (CS-TGN) that combines local query-dependent structure and global graph embedding per snapshot, then uses a GRU cell with contextual attention to learn dynamics of interactions and update node embeddings over time",
+      "evidence": "In this paper, we propose a query-driven Temporal Graph Convolutional Network (CS-TGN) that can capture flexible community structures by learning from the ground-truth communities in a data-driven manner. CS-TGN first combines the local query-dependent structure and the global graph embedding in each snapshot of the network and then uses a GRU cell with contextual attention to learn the dynamics of interactions and update node embeddings over time.",
+      "evidence_location": "line 14, Abstract section",
+      "confidence": "high",
+      "reason": "Describes the core method/architecture, useful for understanding and reuse."
+    },
+    {
+      "field": "dependencies",
+      "value": "torch==1.13.0, torch-geometric==2.2.0, torch-scatter==2.1.0, torch-sparse==0.6.15, torch-spline-conv==1.2.1, torchmetrics==0.11.0",
+      "normalized_value": "torch==1.13.0, torch-geometric==2.2.0, torch-scatter==2.1.0, torch-sparse==0.6.15, torch-spline-conv==1.2.1, torchmetrics==0.11.0",
+      "evidence": "```\ntorch==1.13.0\ntorch-geometric==2.2.0\ntorch-scatter==2.1.0\ntorch-sparse==0.6.15\ntorch-spline-conv==1.2.1\ntorchmetrics==0.11.0\n```",
+      "evidence_location": "lines 24-31, Dependecies & Hardware section",
+      "confidence": "high",
+      "reason": "Pinned package versions are required to reproduce the environment."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "A single GPU should be enough to train models. For large datasets we capped at most 5GBs of GPU memory.",
+      "normalized_value": "A single GPU should be enough to train models. For large datasets we capped at most 5GBs of GPU memory.",
+      "evidence": "A single GPU should be enough to train models. For large datasets we capped at most 5GBs of GPU memory.  ",
+      "evidence_location": "line 33, Dependecies & Hardware section",
+      "confidence": "high",
+      "reason": "States GPU requirements for training, important for reproducibility planning."
+    },
+    {
+      "field": "model_variants",
+      "value": "vanilla CSTGN and CSTGN without GRU as well as attention module, implemented in models/ directory",
+      "normalized_value": "vanilla CSTGN and CSTGN without GRU as well as attention module, implemented in models/ directory",
+      "evidence": "The core component is the models impelemented in `models/` directory. You can find the vanilla CSTGN and CSTGN without GRU as well as attention module.",
+      "evidence_location": "line 39, Components section",
+      "confidence": "high",
+      "reason": "Identifies available model variants and their location, aiding reuse and ablation."
+    },
+    {
+      "field": "code_components",
+      "value": "train.py trains the RNN network of CSTGN; dataset.py has QueryFile and Snapshot classes; util/ contains code to parse specific datasets and generate queries",
+      "normalized_value": "train.py trains the RNN network of CSTGN; dataset.py has QueryFile and Snapshot classes; util/ contains code to parse specific datasets and generate queries",
+      "evidence": "The `train.py` can be used to trained the RNN network of CSTGN. Please read the Dataset Structure for instruction for using it. \n\nThe `dataset.py` has two classes `QueryFile` and `Snapshot` for representing the query/answer pairs and temporal view of graph at a specific time. \n\nThe `util/` directory contains some codes to parse specific datasets and generate queries. ",
+      "evidence_location": "lines 41-45, Components section",
+      "confidence": "high",
+      "reason": "Maps repository files to their roles, helping users navigate and reuse the code."
+    },
+    {
+      "field": "data_file_structure",
+      "value": "data/dataset_name/graph_{snapshot_id}.txt and queries_{snapshot_id}.txt, plus test_queries.txt and valid_queries.txt",
+      "normalized_value": "data/dataset_name/graph_{snapshot_id}.txt and queries_{snapshot_id}.txt, plus test_queries.txt and valid_queries.txt",
+      "evidence": "```\ndata/\n    foo/\n        graph_1.txt\n        graph_2.txt\n        graph_3.txt\n        queries_1.txt\n        queries_2.txt\n        queries_3.txt\n        test_queries.txt\n        valid_queries.txt\n```",
+      "evidence_location": "lines 67-78, File Structure section",
+      "confidence": "high",
+      "reason": "Defines the expected dataset directory layout needed to run the training script."
+    },
+    {
+      "field": "graph_file_format",
+      "value": "node_id1 node_id2 (one edge per line)",
+      "normalized_value": "node_id1 node_id2 (one edge per line)",
+      "evidence": "The graph files must have the following format. \n```\nnode_id1 node_id2\n..\n..\n```",
+      "evidence_location": "lines 84-89, Graph file and QueryFiles section",
+      "confidence": "high",
+      "reason": "Specifies input graph format required to prepare data for the pipeline."
+    },
+    {
+      "field": "query_file_format",
+      "value": "alternating lines of query nodes and answer nodes, comma-separated",
+      "normalized_value": "alternating lines of query nodes and answer nodes, comma-separated",
+      "evidence": "The query files must have the following format. \n\n```\nq1_node1,q1_node2,...\nanswer1_node1,answer1_node2,...\nq2_node1,q2_node2,...\nanswer2_node1,answer2_node2\n```",
+      "evidence_location": "lines 91-98, Graph file and QueryFiles section",
+      "confidence": "high",
+      "reason": "Specifies query/answer file format needed to use the training and dataset utilities."
+    },
+    {
+      "field": "training_command",
+      "value": "python3 train.py <DATASET_NAME> <MAX_VERTICES> <START_SNAPSHOT_ID> <END_SNAPSHOT_ID> <THRESHOLD> <HIDDEN_DIM_SIZE> <EPOCHS> <LEARNING_RATE> <REGULARIZATION>",
+      "normalized_value": "python3 train.py <DATASET_NAME> <MAX_VERTICES> <START_SNAPSHOT_ID> <END_SNAPSHOT_ID> <THRESHOLD> <HIDDEN_DIM_SIZE> <EPOCHS> <LEARNING_RATE> <REGULARIZATION>",
+      "evidence": "```\npython3 train.py <DATASET_NAME> <MAX_VERTICES> <START_SNAPSHOT_ID> <END_SNAPSHOT_ID> <THRESHOLD> <HIDDEN_DIM_SIZE> <EPOCHS> <LEARNING_RATE> <REGULARIZATION>\n```",
+      "evidence_location": "lines 105-107, Training the Models & Execution section",
+      "confidence": "high",
+      "reason": "Defines the command-line interface for training and evaluating the models."
+    },
+    {
+      "field": "training_example",
+      "value": "python3 train.py football 200 1 4 0.4 64 100 0.001 0.00001",
+      "normalized_value": "python3 train.py football 200 1 4 0.4 64 100 0.001 0.00001",
+      "evidence": "```\npython3 train.py football 200 1 4 0.4 64 100 0.001 0.00001\n```",
+      "evidence_location": "lines 110-112, Training the Models & Execution section",
+      "confidence": "high",
+      "reason": "Concrete example invocation with hyperparameters aids reproduction on the football dataset."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{CS-TGN, author = {Hashemi, Farnoosh and Behrouz, Ali and Rezaei Hajidehi, Milad}, title = {CS-TGN: Community Search via Temporal Graph Neural Networks}, year = {2023}, publisher = {Association for Computing Machinery}, address = {New York, NY, USA}, url = {https://doi.org/10.1145/3543873.3587654}, doi = {10.1145/3543873.3587654}, booktitle = {Companion Proceedings of the Web Conference 2023}, numpages = {8}, location = {AUSTIN, TEXAS, USA}, series = {WWW '23}}",
+      "normalized_value": "@inproceedings{CS-TGN, author = {Hashemi, Farnoosh and Behrouz, Ali and Rezaei Hajidehi, Milad}, title = {CS-TGN: Community Search via Temporal Graph Neural Networks}, year = {2023}, publisher = {Association for Computing Machinery}, address = {New York, NY, USA}, url = {https://doi.org/10.1145/3543873.3587654}, doi = {10.1145/3543873.3587654}, booktitle = {Companion Proceedings of the Web Conference 2023}, numpages = {8}, location = {AUSTIN, TEXAS, USA}, series = {WWW '23}}",
+      "evidence": "```\n@inproceedings{CS-TGN,\nauthor = {Hashemi, Farnoosh and Behrouz, Ali and Rezaei Hajidehi, Milad},\ntitle = {CS-TGN: Community Search via Temporal Graph Neural Networks},\nyear = {2023},\npublisher = {Association for Computing Machinery},\naddress = {New York, NY, USA},\nurl = {https://doi.org/10.1145/3543873.3587654},\ndoi = {10.1145/3543873.3587654},\nbooktitle = {Companion Proceedings of the Web Conference 2023},\nnumpages = {8},\nlocation = {AUSTIN, TEXAS, USA},\nseries = {WWW '23}\n}\n```",
+      "evidence_location": "lines 117-131, Reference section",
+      "confidence": "high",
+      "reason": "Official BibTeX entry enables proper citation of the work."
+    }
+  ]
+}

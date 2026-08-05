@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "GLIB",
+      "normalized_value": "GLIB",
+      "evidence": "# GLIB",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the title/name of the repository and software artifact."
+    },
+    {
+      "field": "description",
+      "value": "CNN-based visual understanding for detecting UI glitches in game Apps",
+      "normalized_value": "CNN-based visual understanding for detecting UI glitches in game Apps",
+      "evidence": "CNN-based visual understanding for detecting UI glitches in game Apps",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Describes the core functionality and purpose of the project."
+    },
+    {
+      "field": "paper_title",
+      "value": "GLIB: Towards Automated Test Oracle for Graphically-Rich Applications",
+      "normalized_value": "GLIB: Towards Automated Test Oracle for Graphically-Rich Applications",
+      "evidence": "> GLIB: Towards Automated Test Oracle for Graphically-Rich Applications <br>",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Specifies the title of the academic research paper associated with the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2106.10507",
+      "normalized_value": "https://arxiv.org/abs/2106.10507",
+      "evidence": "> Paper URL: https://arxiv.org/abs/2106.10507",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Provides the link to the paper hosted on arXiv."
+    },
+    {
+      "field": "operating_system",
+      "value": "Ubuntu",
+      "normalized_value": "Ubuntu",
+      "evidence": "On Ubuntu:",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Indicates the target operating system for running the software."
+    },
+    {
+      "field": "python_version",
+      "value": "3.5.2",
+      "normalized_value": "3.5.2",
+      "evidence": "- python(3.5.2)",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Specifies the required Python version."
+    },
+    {
+      "field": "pytorch_version",
+      "value": "0.4.0",
+      "normalized_value": "0.4.0",
+      "evidence": "- pytorch(0.4.0)",
+      "evidence_location": "26",
+      "confidence": "high",
+      "reason": "Specifies the required PyTorch library version."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://doi.org/10.5281/zenodo.5081242",
+      "normalized_value": "https://doi.org/10.5281/zenodo.5081242",
+      "evidence": "download the UI image [dataset](https://doi.org/10.5281/zenodo.5081242) and unzip:",
+      "evidence_location": "36",
+      "confidence": "high",
+      "reason": "Provides the persistent DOI link for downloading the UI image dataset."
+    },
+    {
+      "field": "pretrained_model_url",
+      "value": "https://doi.org/10.5281/zenodo.5081280",
+      "normalized_value": "https://doi.org/10.5281/zenodo.5081280",
+      "evidence": "download the pre-trained [model](https://doi.org/10.5281/zenodo.5081280) and unzip:",
+      "evidence_location": "61",
+      "confidence": "high",
+      "reason": "Provides the persistent DOI link for downloading pre-trained model weights."
+    },
+    {
+      "field": "docker_image",
+      "value": "qwertymj/glib:0.0.1",
+      "normalized_value": "qwertymj/glib:0.0.1",
+      "evidence": "docker pull qwertymj/glib:0.0.1",
+      "evidence_location": "84",
+      "confidence": "high",
+      "reason": "Identifies the pre-built Docker container image on Docker Hub."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/GLIB-game/GLIB.git",
+      "normalized_value": "https://github.com/GLIB-game/GLIB.git",
+      "evidence": "git clone --recursive https://github.com/GLIB-game/GLIB.git",
+      "evidence_location": "105",
+      "confidence": "high",
+      "reason": "Provides the Git repository URL needed to clone the project source code."
+    },
+    {
+      "field": "cuda_version",
+      "value": "9.0.176",
+      "normalized_value": "9.0.176",
+      "evidence": "First you should make sure your linux system has installed cuda(9.0.176) and cudnn(7.4.2)",
+      "evidence_location": "129",
+      "confidence": "high",
+      "reason": "Specifies the CUDA version required for manual environment setup."
+    },
+    {
+      "field": "cudnn_version",
+      "value": "7.4.2",
+      "normalized_value": "7.4.2",
+      "evidence": "First you should make sure your linux system has installed cuda(9.0.176) and cudnn(7.4.2)",
+      "evidence_location": "129",
+      "confidence": "high",
+      "reason": "Specifies the cuDNN version required for manual environment setup."
+    },
+    {
+      "field": "training_command",
+      "value": "python train.py --train_data data/data_csv/Code/Code_train.csv --eval_data data/data_csv/Code/Code_test.csv --augType Code",
+      "normalized_value": "python train.py --train_data data/data_csv/Code/Code_train.csv --eval_data data/data_csv/Code/Code_test.csv --augType Code",
+      "evidence": "python train.py --train_data data/data_csv/Code/Code_train.csv --eval_data data/data_csv/Code/Code_test.csv --augType Code",
+      "evidence_location": "184",
+      "confidence": "high",
+      "reason": "Provides an example execution command to train the model."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python test.py --test_data data/data_csv/testDataSet/testData_test.csv --model model/Code/Code.pkl",
+      "normalized_value": "python test.py --test_data data/data_csv/testDataSet/testData_test.csv --model model/Code/Code.pkl",
+      "evidence": "python test.py --test_data data/data_csv/testDataSet/testData_test.csv --model model/Code/Code.pkl",
+      "evidence_location": "208",
+      "confidence": "high",
+      "reason": "Provides an example execution command to evaluate the model on test data."
+    },
+    {
+      "field": "saliency_map_command",
+      "value": "python saliencymap.py --test_data data/data_csv/testDataSet/testData_test.csv --model model/Code/Code.pkl",
+      "normalized_value": "python saliencymap.py --test_data data/data_csv/testDataSet/testData_test.csv --model model/Code/Code.pkl",
+      "evidence": "python saliencymap.py --test_data data/data_csv/testDataSet/testData_test.csv --model model/Code/Code.pkl",
+      "evidence_location": "220",
+      "confidence": "high",
+      "reason": "Provides an example execution command to generate saliency maps."
+    },
+    {
+      "field": "configuration_file",
+      "value": "config.py",
+      "normalized_value": "config.py",
+      "evidence": "Changing hyper-parameters is possible by editing the file [config.py](https://github.com/GLIB-game/GLIB/blob/main/config.py)",
+      "evidence_location": "227",
+      "confidence": "high",
+      "reason": "Identifies the source file used for adjusting project hyperparameters."
+    }
+  ]
+}

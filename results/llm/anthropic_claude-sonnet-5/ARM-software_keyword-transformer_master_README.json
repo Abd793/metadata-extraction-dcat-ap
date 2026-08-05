@@ -1,0 +1,238 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Keyword Transformer",
+      "normalized_value": "Keyword Transformer",
+      "evidence": "# Keyword Transformer: A Self-Attention Model for Keyword Spotting",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Title of the README naming the artifact"
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2104.00769",
+      "normalized_value": "https://arxiv.org/abs/2104.00769",
+      "evidence": "This is the official repository for the paper [Keyword Transformer: A Self-Attention Model for Keyword Spotting](https://arxiv.org/abs/2104.00769), presented at Interspeech 2021. Consider citing our paper if you find this work useful.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper"
+    },
+    {
+      "field": "venue",
+      "value": "Interspeech 2021",
+      "normalized_value": "Interspeech 2021",
+      "evidence": "presented at Interspeech 2021",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Identifies the publication venue for scientific context"
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{berg21_interspeech,\n  author={Axel Berg and Mark O’Connor and Miguel Tairum Cruz},\n  title={{Keyword Transformer: A Self-Attention Model for Keyword Spotting}},\n  year=2021,\n  booktitle={Proc. Interspeech 2021},\n  pages={4249--4253},\n  doi={10.21437/Interspeech.2021-1286}\n}",
+      "normalized_value": "@inproceedings{berg21_interspeech, author={Axel Berg and Mark O’Connor and Miguel Tairum Cruz}, title={{Keyword Transformer: A Self-Attention Model for Keyword Spotting}}, year=2021, booktitle={Proc. Interspeech 2021}, pages={4249--4253}, doi={10.21437/Interspeech.2021-1286}}",
+      "evidence": "@inproceedings{berg21_interspeech,\n  author={Axel Berg and Mark O’Connor and Miguel Tairum Cruz},\n  title={{Keyword Transformer: A Self-Attention Model for Keyword Spotting}},\n  year=2021,\n  booktitle={Proc. Interspeech 2021},\n  pages={4249--4253},\n  doi={10.21437/Interspeech.2021-1286}\n}",
+      "evidence_location": "lines 8-15",
+      "confidence": "high",
+      "reason": "BibTeX citation for reproducing/citing the artifact"
+    },
+    {
+      "field": "dataset",
+      "value": "Google Speech Commands",
+      "normalized_value": "Google Speech Commands",
+      "evidence": "### Download Google Speech Commands",
+      "evidence_location": "line 20",
+      "confidence": "high",
+      "reason": "Names the dataset used for training/evaluation"
+    },
+    {
+      "field": "dataset_download_command_v2",
+      "value": "wget https://storage.googleapis.com/download.tensorflow.org/data/speech_commands_v0.02.tar.gz\nmkdir data2\nmv ./speech_commands_v0.02.tar.gz ./data2\ncd ./data2\ntar -xf ./speech_commands_v0.02.tar.gz\ncd ../",
+      "normalized_value": "wget https://storage.googleapis.com/download.tensorflow.org/data/speech_commands_v0.02.tar.gz mkdir data2 mv ./speech_commands_v0.02.tar.gz ./data2 cd ./data2 tar -xf ./speech_commands_v0.02.tar.gz cd ../",
+      "evidence": "wget https://storage.googleapis.com/download.tensorflow.org/data/speech_commands_v0.02.tar.gz\nmkdir data2\nmv ./speech_commands_v0.02.tar.gz ./data2\ncd ./data2\ntar -xf ./speech_commands_v0.02.tar.gz\ncd ../",
+      "evidence_location": "lines 25-30",
+      "confidence": "high",
+      "reason": "Command sequence to download and extract Speech Commands V2 dataset"
+    },
+    {
+      "field": "dataset_download_command_v1",
+      "value": "wget http://download.tensorflow.org/data/speech_commands_v0.01.tar.gz\nmkdir data1\nmv ./speech_commands_v0.01.tar.gz ./data1\ncd ./data1\ntar -xf ./speech_commands_v0.01.tar.gz\ncd ../",
+      "normalized_value": "wget http://download.tensorflow.org/data/speech_commands_v0.01.tar.gz mkdir data1 mv ./speech_commands_v0.01.tar.gz ./data1 cd ./data1 tar -xf ./speech_commands_v0.01.tar.gz cd ../",
+      "evidence": "wget http://download.tensorflow.org/data/speech_commands_v0.01.tar.gz\nmkdir data1\nmv ./speech_commands_v0.01.tar.gz ./data1\ncd ./data1\ntar -xf ./speech_commands_v0.01.tar.gz\ncd ../",
+      "evidence_location": "lines 36-41",
+      "confidence": "high",
+      "reason": "Command sequence to download and extract Speech Commands V1 dataset"
+    },
+    {
+      "field": "virtualenv_setup_command",
+      "value": "pip install virtualenv\nvirtualenv --system-site-packages -p python3 ./venv3\nsource ./venv3/bin/activate",
+      "normalized_value": "pip install virtualenv virtualenv --system-site-packages -p python3 ./venv3 source ./venv3/bin/activate",
+      "evidence": "pip install virtualenv\nvirtualenv --system-site-packages -p python3 ./venv3\nsource ./venv3/bin/activate",
+      "evidence_location": "lines 49-51",
+      "confidence": "high",
+      "reason": "Environment setup instructions for reproducibility"
+    },
+    {
+      "field": "install_dependencies_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "line 57",
+      "confidence": "high",
+      "reason": "Command to install project dependencies"
+    },
+    {
+      "field": "tested_environment",
+      "value": "Tensorflow 2.4.0rc1 with CUDA 11",
+      "normalized_value": "Tensorflow 2.4.0rc1 with CUDA 11",
+      "evidence": "Tested using Tensorflow 2.4.0rc1 with CUDA 11.",
+      "evidence_location": "line 60",
+      "confidence": "high",
+      "reason": "Specifies exact framework and hardware/software version used for testing, critical for reproducibility"
+    },
+    {
+      "field": "reproducibility_note",
+      "value": "Installing the correct Tensorflow version is important for reproducibility! Using more recent versions of Tensorflow results in small accuracy differences each time the model is evaluated. This might be due to a change in how the random seed generator is implemented, and therefore changes the sampling of the \"unknown\"  keyword class.",
+      "normalized_value": "Installing the correct Tensorflow version is important for reproducibility! Using more recent versions of Tensorflow results in small accuracy differences each time the model is evaluated. This might be due to a change in how the random seed generator is implemented, and therefore changes the sampling of the \"unknown\" keyword class.",
+      "evidence": "**Note**: Installing the correct Tensorflow version is important for reproducibility! Using more recent versions of Tensorflow results in small accuracy differences each time the model is evaluated. This might be due to a change in how the random seed generator is implemented, and therefore changes the sampling of the \"unknown\"  keyword class.",
+      "evidence_location": "line 62",
+      "confidence": "high",
+      "reason": "Explicit caveat about reproducing results depending on framework version"
+    },
+    {
+      "field": "model_definition_file",
+      "value": "kws_streaming/models/kws_transformer.py",
+      "normalized_value": "kws_streaming/models/kws_transformer.py",
+      "evidence": "The Keyword-Transformer model is defined [here](kws_streaming/models/kws_transformer.py).",
+      "evidence_location": "line 65",
+      "confidence": "high",
+      "reason": "Points to the source file implementing the model architecture"
+    },
+    {
+      "field": "input_shape",
+      "value": "98 x 40",
+      "normalized_value": "98 x 40",
+      "evidence": "It takes the mel scale spectrogram as input, which has shape 98 x 40 using the default settings, corresponding to the 98 time windows with 40 frequency coefficients.",
+      "evidence_location": "line 65",
+      "confidence": "high",
+      "reason": "Specifies the model's expected input tensor shape for reproducing inference/training"
+    },
+    {
+      "field": "model_variants",
+      "value": "Time-domain attention, Frequency-domain attention, Combination of both, Patch-wise attention",
+      "normalized_value": "Time-domain attention, Frequency-domain attention, Combination of both, Patch-wise attention",
+      "evidence": "* **Time-domain attention**: each time-window is treated as a patch, self-attention is computed between time-windows\n* **Frequency-domain attention**: each frequency is treated as a patch self-attention is computed between frequencies\n* **Combination of both**: The signal is fed into both a time- and a frequency-domain transformer and the outputs are combined\n* **Patch-wise attention**: Similar to the vision transformer, it extracts rectangular patches from the spectrogram, so attention happens both in the time and frequency domain simultaneously.",
+      "evidence_location": "lines 69-72",
+      "confidence": "high",
+      "reason": "Describes the distinct architecture variants available in this artifact"
+    },
+    {
+      "field": "training_command",
+      "value": "sh train.sh",
+      "normalized_value": "sh train.sh",
+      "evidence": "sh train.sh",
+      "evidence_location": "line 78",
+      "confidence": "high",
+      "reason": "Command to train KWT-3 from scratch on Speech Commands V2"
+    },
+    {
+      "field": "training_note",
+      "value": "the train directory (given by the argument  `--train_dir`) cannot exist prior to start script.",
+      "normalized_value": "the train directory (given by the argument --train_dir) cannot exist prior to start script.",
+      "evidence": "Please note that the train directory (given by the argument  `--train_dir`) cannot exist prior to start script.",
+      "evidence_location": "line 81",
+      "confidence": "high",
+      "reason": "Important setup caveat for successful training reproduction"
+    },
+    {
+      "field": "model_hyperparameters",
+      "value": "--num_layers 12 \\ #number of sequential transformer encoders\n--heads 3 \\ #number of attentions heads\n--d_model 192 \\ #embedding dimension\n--mlp_dim 768 \\ #mlp-dimension\n--dropout1 0. \\ #dropout in mlp/multi-head attention blocks\n--attention_type 'time' \\ #attention type: 'time', 'freq', 'both' or 'patch'\n--patch_size '1,40' \\ #spectrogram patch_size, if patch attention is used\n--prenorm False \\ # if False, use postnorm",
+      "normalized_value": "--num_layers 12 --heads 3 --d_model 192 --mlp_dim 768 --dropout1 0. --attention_type 'time' --patch_size '1,40' --prenorm False",
+      "evidence": "--num_layers 12 \\ #number of sequential transformer encoders\n--heads 3 \\ #number of attentions heads\n--d_model 192 \\ #embedding dimension\n--mlp_dim 768 \\ #mlp-dimension\n--dropout1 0. \\ #dropout in mlp/multi-head attention blocks\n--attention_type 'time' \\ #attention type: 'time', 'freq', 'both' or 'patch'\n--patch_size '1,40' \\ #spectrogram patch_size, if patch attention is used\n--prenorm False \\ # if False, use postnorm",
+      "evidence_location": "lines 86-93",
+      "confidence": "high",
+      "reason": "Documents the model-specific configuration arguments used to train KWT, needed for reproduction"
+    },
+    {
+      "field": "distillation_method",
+      "value": "hard distillation from a convolutional model (Att-MH-RNN), similar to the approach in DeIT",
+      "normalized_value": "hard distillation from a convolutional model (Att-MH-RNN), similar to the approach in DeIT",
+      "evidence": "We employ hard distillation from a convolutional model (Att-MH-RNN), similar to the approach in [DeIT](https://github.com/facebookresearch/deit).",
+      "evidence_location": "line 98",
+      "confidence": "high",
+      "reason": "Describes the distillation methodology used, relevant scientific context"
+    },
+    {
+      "field": "distillation_training_command",
+      "value": "sh distill.sh",
+      "normalized_value": "sh distill.sh",
+      "evidence": "sh distill.sh",
+      "evidence_location": "line 103",
+      "confidence": "high",
+      "reason": "Command to train KWT-3 with hard distillation"
+    },
+    {
+      "field": "pretrained_weights_location",
+      "value": "./models_data_v2_12_labels",
+      "normalized_value": "./models_data_v2_12_labels",
+      "evidence": "Pre-trained weights for KWT-3, KWT-2 and KWT-1 are provided in ./models_data_v2_12_labels.",
+      "evidence_location": "line 108",
+      "confidence": "high",
+      "reason": "Directory containing checkpoints for the pre-trained models"
+    },
+    {
+      "field": "pretrained_models_table",
+      "value": "|Model name|embedding dim|mlp-dim|heads|depth|#params|V2-12 accuracy|pre-trained|\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|KWT-1|64|128|1|12|607K|97.7|[here](models_data_v2_12_labels/kwt1)|\n|KWT-2|128|256|2|12|2.4M|98.2|[here](models_data_v2_12_labels/kwt2)|\n|KWT-3|192|768|3|12|5.5M|98.7|[here](models_data_v2_12_labels/kwt3)|",
+      "normalized_value": "KWT-1: embedding dim 64, mlp-dim 128, heads 1, depth 12, params 607K, V2-12 accuracy 97.7; KWT-2: embedding dim 128, mlp-dim 256, heads 2, depth 12, params 2.4M, V2-12 accuracy 98.2; KWT-3: embedding dim 192, mlp-dim 768, heads 3, depth 12, params 5.5M, V2-12 accuracy 98.7",
+      "evidence": "|Model name|embedding dim|mlp-dim|heads|depth|#params|V2-12 accuracy|pre-trained|\n|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|\n|KWT-1|64|128|1|12|607K|97.7|[here](models_data_v2_12_labels/kwt1)|\n|KWT-2|128|256|2|12|2.4M|98.2|[here](models_data_v2_12_labels/kwt2)|\n|KWT-3|192|768|3|12|5.5M|98.7|[here](models_data_v2_12_labels/kwt3)|",
+      "evidence_location": "lines 110-114",
+      "confidence": "high",
+      "reason": "Benchmark results and model configurations for the three provided checkpoints, essential for evaluation/reuse"
+    },
+    {
+      "field": "inference_command",
+      "value": "sh eval.sh",
+      "normalized_value": "sh eval.sh",
+      "evidence": "sh eval.sh",
+      "evidence_location": "line 119",
+      "confidence": "high",
+      "reason": "Command to run inference/evaluation on Google Speech Commands v2 with 12 labels"
+    },
+    {
+      "field": "code_dependency",
+      "value": "KWS streaming work by Google Research",
+      "normalized_value": "KWS streaming work by Google Research",
+      "evidence": "The code heavily borrows from the [KWS streaming work](https://github.com/google-research/google-research/tree/master/kws_streaming) by Google Research. For a more detailed description of the code structure, see the original authors' [README](kws_streaming/README.md).",
+      "evidence_location": "line 124",
+      "confidence": "high",
+      "reason": "Identifies underlying codebase the artifact is built upon, relevant for attribution and reuse"
+    },
+    {
+      "field": "code_dependency_training_technique",
+      "value": "DeiT",
+      "normalized_value": "DeiT",
+      "evidence": "We also exploit training techniques from [DeiT](https://github.com/facebookresearch/deit).",
+      "evidence_location": "line 126",
+      "confidence": "high",
+      "reason": "Names an external technique/repository leveraged in this artifact's training process"
+    },
+    {
+      "field": "license",
+      "value": "Apache 2.0",
+      "normalized_value": "Apache 2.0 License",
+      "evidence": "The source files in this repository are released under the [Apache 2.0](LICENSE.txt) license.",
+      "evidence_location": "line 132",
+      "confidence": "high",
+      "reason": "Specifies the legal license governing reuse of the artifact"
+    },
+    {
+      "field": "derived_license_note",
+      "value": "Some source files are derived from the [KWS streaming repository](https://github.com/google-research/google-research/tree/master/kws_streaming) by Google Research. These are also released under the Apache 2.0 license, the text of which can be seen in the LICENSE file on their repository.",
+      "normalized_value": "Some source files are derived from the KWS streaming repository by Google Research. These are also released under the Apache 2.0 license, the text of which can be seen in the LICENSE file on their repository.",
+      "evidence": "Some source files are derived from the [KWS streaming repository](https://github.com/google-research/google-research/tree/master/kws_streaming) by Google Research. These are also released under the Apache 2.0 license, the text of which can be seen in the LICENSE file on their repository.",
+      "evidence_location": "line 134",
+      "confidence": "high",
+      "reason": "Clarifies licensing attribution for derived source files"
+    }
+  ]
+}

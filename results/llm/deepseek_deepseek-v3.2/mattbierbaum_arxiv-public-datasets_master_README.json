@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "arXiv Public Datasets",
+      "normalized_value": "arXiv Public Datasets",
+      "evidence": "<code itemprop=\"name\">arXiv Public Datasets</code>",
+      "evidence_location": "lines 175-177",
+      "confidence": "high",
+      "reason": "Identifies the name of the dataset artifact for search and reference."
+    },
+    {
+      "field": "artifact_description",
+      "value": "The arXiv pre-print service is the de facto venue for publishing in many scientific disciplines. This repository provides tools for using all the publicly available information provided by the arXiv to download all of the publications and their metadata, extract fulltext from PDFs, and build a co-citation graph. For each publication the tools provide access to: * **Article metadata** -- title, authors string, category, doi, abstract, submitter * **PDFs** -- all PDFs available through arXiv bulk download * **Plain text** -- PDFs converted to UTF-8 encoded plain text * **Citation graph** -- intra-arXiv citation graph between arXiv IDs only (generated from plain text) * **Author string parsing** -- convert metadata author strings into standardized list of name, affiliations",
+      "normalized_value": "The arXiv pre-print service is the de facto venue for publishing in many scientific disciplines. This repository provides tools for using all the publicly available information provided by the arXiv to download all of the publications and their metadata, extract fulltext from PDFs, and build a co-citation graph. For each publication the tools provide access to: * **Article metadata** -- title, authors string, category, doi, abstract, submitter * **PDFs** -- all PDFs available through arXiv bulk download * **Plain text** -- PDFs converted to UTF-8 encoded plain text * **Citation graph** -- intra-arXiv citation graph between arXiv IDs only (generated from plain text) * **Author string parsing** -- convert metadata author strings into standardized list of name, affiliations",
+      "evidence": "<code itemprop=\"description\">\n\t  The arXiv pre-print service is the de facto venue for publishing in many scientific\n\t  disciplines. This repository provides tools for using all the publicly available information\n\t  provided by the arXiv to download all of the publications and their metadata, extract fulltext\n\t  from PDFs, and build a co-citation graph. For each publication the tools provide access to:\n\t   * **Article metadata** -- title, authors string, category, doi, abstract, submitter\n\t   * **PDFs** -- all PDFs available through arXiv bulk download\n\t   * **Plain text** -- PDFs converted to UTF-8 encoded plain text\n\t   * **Citation graph** -- intra-arXiv citation graph between arXiv IDs only (generated from plain text)\n\t   * **Author string parsing** -- convert metadata author strings into standardized list of name, affiliations\n\t</code>",
+      "evidence_location": "lines 188-198",
+      "confidence": "high",
+      "reason": "Describes the purpose and contents of the dataset artifact for understanding and reuse."
+    },
+    {
+      "field": "arxiv_paper_url",
+      "value": "https://arxiv.org/abs/1905.00075",
+      "normalized_value": "https://arxiv.org/abs/1905.00075",
+      "evidence": "[arXiv:1905.00075](https://arxiv.org/abs/1905.00075)",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Provides link to the associated research paper for citation and scientific context."
+    },
+    {
+      "field": "github_repository_url",
+      "value": "https://github.com/mattbierbaum/arxiv-public-datasets",
+      "normalized_value": "https://github.com/mattbierbaum/arxiv-public-datasets",
+      "evidence": "<code itemprop=\"url\">https://github.com/mattbierbaum/arxiv-public-datasets</code>",
+      "evidence_location": "line 180",
+      "confidence": "high",
+      "reason": "Primary access link to the artifact repository for cloning and contribution."
+    },
+    {
+      "field": "releases_url",
+      "value": "https://github.com/mattbierbaum/arxiv-public-datasets/releases",
+      "normalized_value": "https://github.com/mattbierbaum/arxiv-public-datasets/releases",
+      "evidence": "[Releases](https://github.com/mattbierbaum/arxiv-public-datasets/releases)",
+      "evidence_location": "line 26",
+      "confidence": "high",
+      "reason": "Link to released snapshots of the dataset for direct download and use."
+    },
+    {
+      "field": "kaggle_dataset_url",
+      "value": "https://www.kaggle.com/Cornell-University/arxiv",
+      "normalized_value": "https://www.kaggle.com/Cornell-University/arxiv",
+      "evidence": "[Kaggle has agreed](https://www.kaggle.com/Cornell-University/arxiv)",
+      "evidence_location": "line 31",
+      "confidence": "high",
+      "reason": "Alternative hosting location for the dataset PDFs, useful for access and challenges."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@misc{clement2019arxiv, title={On the Use of ArXiv as a Dataset}, author={Colin B. Clement and Matthew Bierbaum and Kevin P. O'Keeffe and Alexander A. Alemi}, year={2019}, eprint={1905.00075}, archivePrefix={arXiv}, primaryClass={cs.IR}}",
+      "normalized_value": "@misc{clement2019arxiv, title={On the Use of ArXiv as a Dataset}, author={Colin B. Clement and Matthew Bierbaum and Kevin P. O'Keeffe and Alexander A. Alemi}, year={2019}, eprint={1905.00075}, archivePrefix={arXiv}, primaryClass={cs.IR}}",
+      "evidence": "    @misc{clement2019arxiv,\n        title={On the Use of ArXiv as a Dataset},\n        author={Colin B. Clement and Matthew Bierbaum and Kevin P. O'Keeffe and Alexander A. Alemi},\n        year={2019},\n        eprint={1905.00075},\n        archivePrefix={arXiv},\n        primaryClass={cs.IR}\n    }",
+      "evidence_location": "lines 46-53",
+      "confidence": "high",
+      "reason": "Bibtex entry for citing the dataset in academic work, ensuring proper attribution."
+    },
+    {
+      "field": "system_dependencies_command",
+      "value": "sudo apt install python3 python3-pip python3-virtualenv poppler-utils",
+      "normalized_value": "sudo apt install python3 python3-pip python3-virtualenv poppler-utils",
+      "evidence": "sudo apt install python3 python3-pip python3-virtualenv poppler-utils",
+      "evidence_location": "line 60",
+      "confidence": "high",
+      "reason": "Command to install required system packages for setting up the environment on Linux."
+    },
+    {
+      "field": "python_environment_setup_commands",
+      "value": "git clone https://github.com/mattbierbaum/arxiv-public-datasets cd arxiv-public-datasets virtualenv venv . venv/bin/activate pip3 install -e . pip3 install -r requirements.txt",
+      "normalized_value": "git clone https://github.com/mattbierbaum/arxiv-public-datasets cd arxiv-public-datasets virtualenv venv . venv/bin/activate pip3 install -e . pip3 install -r requirements.txt",
+      "evidence": "git clone https://github.com/mattbierbaum/arxiv-public-datasets\ncd arxiv-public-datasets\n\nvirtualenv venv\n. venv/bin/activate\n\npip3 install -e .\npip3 install -r requirements.txt",
+      "evidence_location": "lines 64-71",
+      "confidence": "high",
+      "reason": "Sequence of commands to clone the repository and set up the Python virtual environment for running the tools."
+    },
+    {
+      "field": "config_setup_instructions",
+      "value": "cp config.json.example config.json [set ARXIV_DATA in config.json to your own directory]",
+      "normalized_value": "cp config.json.example config.json [set ARXIV_DATA in config.json to your own directory]",
+      "evidence": "cp config.json.example config.json\n[set ARXIV_DATA in config.json to your own directory]",
+      "evidence_location": "lines 77-78",
+      "confidence": "high",
+      "reason": "Instructions for configuring the data directory path, essential for data storage and script execution."
+    },
+    {
+      "field": "storage_requirements",
+      "value": "~ 1TB of pdfs and ~ 70GB of text",
+      "normalized_value": "~ 1TB of pdfs and ~ 70GB of text",
+      "evidence": "needs to have adequate space to hold ~ 1TB of pdfs and ~ 70GB of text",
+      "evidence_location": "lines 74-75",
+      "confidence": "high",
+      "reason": "Specifies disk space needed for storing the dataset, important for planning and resource allocation."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "over 400 core-hours using two Intel Xeon E5-2600 CPUs",
+      "normalized_value": "over 400 core-hours using two Intel Xeon E5-2600 CPUs",
+      "evidence": "converting 1.39 million articles requires over 400 core-hours using two Intel Xeon E5-2600 CPUs.",
+      "evidence_location": "lines 134-135",
+      "confidence": "high",
+      "reason": "Indicates computational resources required for processing the dataset, aiding in reproducibility and scaling."
+    },
+    {
+      "field": "versioning_scheme",
+      "value": "semver",
+      "normalized_value": "semver",
+      "evidence": "We have adopted [semver](https://semver.org/)",
+      "evidence_location": "lines 13-14",
+      "confidence": "high",
+      "reason": "Specifies the versioning system used for releases, helping users understand update patterns and compatibility."
+    },
+    {
+      "field": "contributing_instructions",
+      "value": "GitHub issues, email, pull requests",
+      "normalized_value": "GitHub issues, email, pull requests",
+      "evidence": "GitHub issues, email, pull requests to name a few.",
+      "evidence_location": "lines 38-40",
+      "confidence": "high",
+      "reason": "Describes how to contribute to the project, facilitating community involvement and improvement."
+    },
+    {
+      "field": "metadata_harvest_command",
+      "value": "python bin/metadata.py [OPTIONAL filepath.json.gz]",
+      "normalized_value": "python bin/metadata.py [OPTIONAL filepath.json.gz]",
+      "evidence": "python bin/metadata.py [OPTIONAL filepath.json.gz]",
+      "evidence_location": "line 90",
+      "confidence": "high",
+      "reason": "Command to download arXiv metadata, a key step in building the dataset."
+    },
+    {
+      "field": "pdf_download_command",
+      "value": "python bin/pdfdownload.py [OPTIONAL manifest_file.json.gz]",
+      "normalized_value": "python bin/pdfdownload.py [OPTIONAL manifest_file.json.gz]",
+      "evidence": "python bin/pdfdownload.py [OPTIONAL manifest_file.json.gz]",
+      "evidence_location": "line 118",
+      "confidence": "high",
+      "reason": "Command to bulk download PDFs from AWS, essential for dataset acquisition."
+    },
+    {
+      "field": "fulltext_conversion_command_aws",
+      "value": "python bin/fulltext.py -N [OPTIONAL number_of_processes, default cpu_count]",
+      "normalized_value": "python bin/fulltext.py -N [OPTIONAL number_of_processes, default cpu_count]",
+      "evidence": "python bin/fulltext.py -N [OPTIONAL number_of_processes, default cpu_count]",
+      "evidence_location": "line 132",
+      "confidence": "high",
+      "reason": "Command to convert PDFs to plain text for AWS-downloaded files, critical for text extraction."
+    },
+    {
+      "field": "fulltext_conversion_command_kaggle",
+      "value": "python bin/fulltext.py -N [OPTIONAL number_of_processes, default cpu_count] --PLAIN_PDFS",
+      "normalized_value": "python bin/fulltext.py -N [OPTIONAL number_of_processes, default cpu_count] --PLAIN_PDFS",
+      "evidence": "python bin/fulltext.py -N [OPTIONAL number_of_processes, default cpu_count] --PLAIN_PDFS",
+      "evidence_location": "lines 140-142",
+      "confidence": "high",
+      "reason": "Command to convert PDFs to plain text for Kaggle-downloaded files, with specific option for plain PDFs."
+    },
+    {
+      "field": "cocitation_network_command",
+      "value": "python bin/cocitations.py [OPTIONAL number_of_processes, default cpu_count]",
+      "normalized_value": "python bin/cocitations.py [OPTIONAL number_of_processes, default cpu_count]",
+      "evidence": "python bin/cocitations.py [OPTIONAL number_of_processes, default cpu_count]",
+      "evidence_location": "line 149",
+      "confidence": "high",
+      "reason": "Command to generate the co-citation network from full text, important for graph-based analysis."
+    },
+    {
+      "field": "author_split_command",
+      "value": "python bin/authorsplit.py [OPTIONAL number_of_processes, default cpu_count]",
+      "normalized_value": "python bin/authorsplit.py [OPTIONAL number_of_processes, default cpu_count]",
+      "evidence": "python bin/authorsplit.py [OPTIONAL number_of_processes, default cpu_count]",
+      "evidence_location": "line 160",
+      "confidence": "high",
+      "reason": "Command to parse author strings from metadata, useful for author disambiguation and analysis."
+    },
+    {
+      "field": "license_url",
+      "value": "https://raw.githubusercontent.com/mattbierbaum/arxiv-public-datasets/master/LICENSE",
+      "normalized_value": "https://raw.githubusercontent.com/mattbierbaum/arxiv-public-datasets/master/LICENSE",
+      "evidence": "<code itemprop=\"license\">https://raw.githubusercontent.com/mattbierbaum/arxiv-public-datasets/master/LICENSE</code>",
+      "evidence_location": "line 206",
+      "confidence": "high",
+      "reason": "Link to the license file, essential for understanding terms of use and redistribution."
+    }
+  ]
+}

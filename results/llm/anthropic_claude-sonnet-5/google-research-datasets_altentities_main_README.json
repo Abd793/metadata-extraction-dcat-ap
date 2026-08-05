@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "AltEntities (Alternative Entities) dataset",
+      "normalized_value": "AltEntities (Alternative Entities) dataset",
+      "evidence": "# AltEntities (Alternative Entities) dataset: Resolving Indirect Referring Expressions for Entity Selection",
+      "evidence_location": "line 1 (title)",
+      "confidence": "high",
+      "reason": "Title names the dataset artifact."
+    },
+    {
+      "field": "task",
+      "value": "Resolving Indirect Referring Expressions for Entity Selection",
+      "normalized_value": "Resolving Indirect Referring Expressions for Entity Selection",
+      "evidence": "AltEntities (Alternative Entities) dataset: Resolving Indirect Referring Expressions for Entity Selection",
+      "evidence_location": "line 1 (title)",
+      "confidence": "high",
+      "reason": "Describes the task the dataset is designed for."
+    },
+    {
+      "field": "authors",
+      "value": "Mohammad Javad Hosseini, Filip Radlinski, Silvia Pareti, and Annie Louis",
+      "normalized_value": "Mohammad Javad Hosseini, Filip Radlinski, Silvia Pareti, and Annie Louis",
+      "evidence": "This is the work of *Mohammad Javad Hosseini*, *Filip Radlinski*, *Silvia Pareti*, and *Annie Louis* from Google LLC, made available under the CC-BY SA 3.0 License.",
+      "evidence_location": "line 5 (## COPYRIGHT NOTICE)",
+      "confidence": "high",
+      "reason": "Identifies the creators of the artifact for attribution/citation purposes."
+    },
+    {
+      "field": "affiliation",
+      "value": "Google LLC",
+      "normalized_value": "Google LLC",
+      "evidence": "This is the work of *Mohammad Javad Hosseini*, *Filip Radlinski*, *Silvia Pareti*, and *Annie Louis* from Google LLC, made available under the CC-BY SA 3.0 License.",
+      "evidence_location": "line 5 (## COPYRIGHT NOTICE)",
+      "confidence": "high",
+      "reason": "Identifies the organization behind the dataset."
+    },
+    {
+      "field": "license",
+      "value": "CC-BY SA 3.0 License",
+      "normalized_value": "CC-BY SA 3.0 License",
+      "evidence": "This is the work of *Mohammad Javad Hosseini*, *Filip Radlinski*, *Silvia Pareti*, and *Annie Louis* from Google LLC, made available under the CC-BY SA 3.0 License. A full copy of the license can be found at https://creativecommons.org/licenses/by-sa/3.0/",
+      "evidence_location": "line 5 (## COPYRIGHT NOTICE)",
+      "confidence": "high",
+      "reason": "States the reuse license governing the dataset."
+    },
+    {
+      "field": "license_url",
+      "value": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "normalized_value": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "evidence": "A full copy of the license can be found at https://creativecommons.org/licenses/by-sa/3.0/",
+      "evidence_location": "line 5 (## COPYRIGHT NOTICE)",
+      "confidence": "high",
+      "reason": "Direct link to the full license text."
+    },
+    {
+      "field": "paper",
+      "value": "https://arxiv.org/abs/2212.10933",
+      "normalized_value": "https://arxiv.org/abs/2212.10933",
+      "evidence": "A full description of the data collection methodology, analyses, human rater instructions, and the performance of the SOTA LLMs can be found in the associated research [paper](https://arxiv.org/abs/2212.10933).",
+      "evidence_location": "line 17 (## The Dataset)",
+      "confidence": "high",
+      "reason": "Link to the associated research paper describing the dataset and methodology."
+    },
+    {
+      "field": "documentation_file",
+      "value": "Data-Description.pdf",
+      "normalized_value": "Data-Description.pdf",
+      "evidence": "Further details about the data are provided in [Data-Description.pdf](Data-Description.pdf)",
+      "evidence_location": "line 19 (## The Dataset)",
+      "confidence": "high",
+      "reason": "Points to a supplementary document providing further details about the data."
+    },
+    {
+      "field": "dataset_size",
+      "value": "6,247 alternative questions in three domains--books, songs (music), and recipes--and 42,529 referring expressions",
+      "normalized_value": "6,247 alternative questions in three domains (books, songs/music, and recipes) and 42,529 referring expressions",
+      "evidence": "The dataset contains **6,247 alternative questions in three domains--books, songs (music), and recipes--and 42,529 referring expressions**.",
+      "evidence_location": "line 15 (## The Dataset)",
+      "confidence": "high",
+      "reason": "Quantifies the size and composition of the dataset, useful for understanding scale."
+    },
+    {
+      "field": "domains",
+      "value": "books, songs (music), recipes",
+      "normalized_value": "books, songs (music), recipes",
+      "evidence": "The dataset contains **6,247 alternative questions in three domains--books, songs (music), and recipes--and 42,529 referring expressions**.",
+      "evidence_location": "line 15 (## The Dataset)",
+      "confidence": "high",
+      "reason": "Lists the domains covered by the dataset."
+    },
+    {
+      "field": "data_source",
+      "value": "The entity names are sampled from Wikipedia.",
+      "normalized_value": "Entity names are sampled from Wikipedia",
+      "evidence": "The entity names are sampled from Wikipedia. The alternative questions are generated using a simple template. The referring expressions are provided by human raters.",
+      "evidence_location": "line 15 (## The Dataset)",
+      "confidence": "high",
+      "reason": "Describes the provenance and construction method of the dataset content."
+    },
+    {
+      "field": "data_format",
+      "value": "json",
+      "normalized_value": "json",
+      "evidence": "The data is released in a json format with each example (json object) representing one alternative question along with its referring expressions.",
+      "evidence_location": "line 23 (## Explanation of the Data Files)",
+      "confidence": "high",
+      "reason": "Specifies the file format of the released dataset, relevant for reuse/parsing."
+    },
+    {
+      "field": "data_schema_fields",
+      "value": "domain, question, target, target_index, sampling_method, description_section, choices, choice/name, choice/wikipedia_url, choice/description, choice/infobox, choice/unshown_background, expressions",
+      "normalized_value": "domain, question, target, target_index, sampling_method, description_section, choices, choice/name, choice/wikipedia_url, choice/description, choice/infobox, choice/unshown_background, expressions",
+      "evidence": "* domain: The domain of the example: “BOOKS”, “RECIPES”, or “SONGS”.\n* question: An alternative question providing two choices.\n* target: The URL of the target entity.\n* target_index: The index (position) of the target entity in the question (0 or 1).\n* sampling_method: The sampling method used to sample the entities in the question (e.g., SAME_NAME, SIMILAR_NAME, or SIMILAR_DESCRIPTION).\n* description_section: The title of the Wikipedia section shown to crowd workers. If empty, indicates the first section. This does not apply to the \"SONGS\" domain.\n* choices: Information about the two choices. See below fields for more information.\n* choice/name: The name of the choice.\n* choice/wikipedia_url: The Wikipedia URL of the choice.\n* choice/description: The choice description shown to crowd workers.\n* choice/infobox: Textual representation of the choice’s Wikipedia infobox.\n* choice/unshown_background: The choice/infobox above concatenated with Wikipedia sections that were *not* shown to crowd workers.\n* expressions: Referring expressions written by crowd workers to select the target entity.",
+      "evidence_location": "lines 25-37 (## Explanation of the Data Files)",
+      "confidence": "high",
+      "reason": "Full schema of fields in each JSON example, essential for understanding and using the data."
+    },
+    {
+      "field": "directory_structure",
+      "value": "The *data* directory contains the full set of examples (*all.json*). For each domain (*books*, *recipes*, and *songs*), a subdirectory contains all its examples which are split into *train.json*, *dev.json*, and *test.json*. In addition, the mixed subdirectory contains the mix of examples in the three domains.",
+      "normalized_value": "The data directory contains the full set of examples (all.json). For each domain (books, recipes, and songs), a subdirectory contains all its examples split into train.json, dev.json, and test.json. The mixed subdirectory contains the mix of examples in the three domains.",
+      "evidence": "The *data* directory contains the full set of examples (*all.json*). For each domain (*books*, *recipes*, and *songs*), a subdirectory contains all its examples which are split into *train.json*, *dev.json*, and *test.json*. In addition, the mixed subdirectory contains the mix of examples in the three domains.",
+      "evidence_location": "line 39 (## Explanation of the Data Files)",
+      "confidence": "high",
+      "reason": "Describes how the dataset files are organized, important for reproducibility and data access."
+    },
+    {
+      "field": "citation",
+      "value": "@article{hosseini2022resolving,\n  title={Resolving Indirect Referring Expressions for Entity Selection},\n  author={Hosseini, Mohammad Javad and Radlinski, Filip and Pareti, Silvia and Louis, Annie},\n  journal={arXiv preprint arXiv:2212.10933},\n  year={2022}\n}",
+      "normalized_value": "@article{hosseini2022resolving, title={Resolving Indirect Referring Expressions for Entity Selection}, author={Hosseini, Mohammad Javad and Radlinski, Filip and Pareti, Silvia and Louis, Annie}, journal={arXiv preprint arXiv:2212.10933}, year={2022}}",
+      "evidence": "@article{hosseini2022resolving,\n  title={Resolving Indirect Referring Expressions for Entity Selection},\n  author={Hosseini, Mohammad Javad and Radlinski, Filip and Pareti, Silvia and Louis, Annie},\n  journal={arXiv preprint arXiv:2212.10933},\n  year={2022}\n}",
+      "evidence_location": "lines 45-50 (## Citation)",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for referencing the dataset/paper."
+    },
+    {
+      "field": "arxiv_id",
+      "value": "arXiv:2212.10933",
+      "normalized_value": "arXiv:2212.10933",
+      "evidence": "journal={arXiv preprint arXiv:2212.10933},",
+      "evidence_location": "line 48 (## Citation)",
+      "confidence": "high",
+      "reason": "Identifies the arXiv preprint identifier for the associated paper."
+    },
+    {
+      "field": "example",
+      "value": "Question: “Do you mean 'Nemesis (Davis novel)' or 'Nemesis (Christie novel)'?” Answer: “Not the more modern one, the one closer to BC than 2021.”",
+      "normalized_value": "Question: \"Do you mean 'Nemesis (Davis novel)' or 'Nemesis (Christie novel)'?\" Answer: \"Not the more modern one, the one closer to BC than 2021.\"",
+      "evidence": "Question: “Do you mean 'Nemesis (Davis novel)' or 'Nemesis (Christie novel)'?”\n\nAnswer: “Not the more modern one, the one closer to BC than 2021.”",
+      "evidence_location": "lines 11-13 (## The Dataset)",
+      "confidence": "high",
+      "reason": "Concrete example illustrating the dataset's task format, useful for understanding usage."
+    }
+  ]
+}

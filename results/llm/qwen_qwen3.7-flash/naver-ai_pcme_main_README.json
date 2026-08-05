@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Probabilistic Cross-Modal Embedding (PCME)",
+      "normalized_value": "Probabilistic Cross-Modal Embedding (PCME)",
+      "evidence": "# Probabilistic Cross-Modal Embedding (PCME) CVPR 2021",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the full project name in the main heading."
+    },
+    {
+      "field": "description",
+      "value": "Official Pytorch implementation of PCME",
+      "normalized_value": "Official Pytorch implementation of PCME",
+      "evidence": "Official Pytorch implementation of PCME | [Paper](https://arxiv.org/abs/2101.05068)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Clearly defines the repository's purpose and framework."
+    },
+    {
+      "field": "venue",
+      "value": "CVPR 2021",
+      "normalized_value": "CVPR 2021",
+      "evidence": "# Probabilistic Cross-Modal Embedding (PCME) CVPR 2021",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Indicates the conference where the associated research was published."
+    },
+    {
+      "field": "authors",
+      "value": "Sanghyuk Chun, Seong Joon Oh, Rafael Sampaio de Rezende, Yannis Kalantidis, Diane Larlus",
+      "normalized_value": "Sanghyuk Chun, Seong Joon Oh, Rafael Sampaio de Rezende, Yannis Kalantidis, Diane Larlus",
+      "evidence": "[Sanghyuk Chun](https://sanghyukchun.github.io/home/)<sup>1</sup> [Seong Joon Oh](https://seongjoonoh.com/)<sup>1</sup> Rafael Sampaio de Rezende<sup>2</sup> [Yannis Kalantidis](https://www.skamalas.com/)<sup>2</sup> Diane Larlus<sup>2</sup>",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Lists all contributing authors explicitly."
+    },
+    {
+      "field": "affiliations",
+      "value": "NAVER AI LAB, NAVER LABS Europe",
+      "normalized_value": "NAVER AI LAB, NAVER LABS Europe",
+      "evidence": "<sup>1</sup><sub>[NAVER AI LAB](https://naver-career.gitbook.io/en/teams/clova-cic)</sub><br>\n<sup>2</sup><sub>[NAVER LABS Europe](https://europe.naverlabs.com/)</sub>",
+      "evidence_location": "7-8",
+      "confidence": "high",
+      "reason": "Specifies the research institutions associated with the authors."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2101.05068",
+      "normalized_value": "https://arxiv.org/abs/2101.05068",
+      "evidence": "[Paper](https://arxiv.org/abs/2101.05068)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides direct access to the official research paper."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "```\nMIT License\n\nCopyright (c) 2021-present NAVER Corp.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n```",
+      "evidence_location": "208-229",
+      "confidence": "high",
+      "reason": "Explicitly states the open-source license governing code reuse and distribution."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install cython && pip install -r requirements.txt\npython -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")'\ngit clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./",
+      "normalized_value": "pip install cython && pip install -r requirements.txt python -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")' git clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./",
+      "evidence": "```\npip install cython && pip install -r requirements.txt\npython -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")'\ngit clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./\n```",
+      "evidence_location": "25-29",
+      "confidence": "high",
+      "reason": "Provides exact shell commands to install dependencies, download NLTK data, and compile NVIDIA Apex."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "single V100 GPU with mixed-precision training (O2)",
+      "normalized_value": "single V100 GPU with mixed-precision training (O2)",
+      "evidence": "NOTE: we train each model with mixed-precision training (O2) on a single V100.<br>",
+      "evidence_location": "133",
+      "confidence": "high",
+      "reason": "Specifies the exact GPU model and training configuration required for reproduction."
+    },
+    {
+      "field": "datasets",
+      "value": "COCO Caption, CUB Caption",
+      "normalized_value": "COCO Caption, CUB Caption",
+      "evidence": "### COCO Caption\n\nWe followed the same split provided by [VSE++]...\n\n### CUB Caption\n\nDownload images (CUB-200-2011) from [this link]...",
+      "evidence_location": "53-62",
+      "confidence": "high",
+      "reason": "Identifies the specific benchmark datasets used for training and evaluation."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "I2T 1K PMRP, I2T 1K R@1, I2T ECCV mAP@R, T2I 1K PMRP, T2I 1K R@1, T2I ECCV mAP@R",
+      "normalized_value": "I2T 1K PMRP, I2T 1K R@1, I2T ECCV mAP@R, T2I 1K PMRP, T2I 1K R@1, T2I ECCV mAP@R",
+      "evidence": "| Method   | I2T 1K PMRP | I2T 1K R@1 | I2T ECCV mAP@R | T2I 1K PMRP | T2I 1K R@1 | T2I ECCV mAP@R | Model file |",
+      "evidence_location": "92",
+      "confidence": "high",
+      "reason": "Lists the exact quantitative metrics reported in the results table."
+    },
+    {
+      "field": "training_command",
+      "value": "python train_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path>",
+      "normalized_value": "python train_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path>",
+      "evidence": "```\npython train_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path> \\\n    # --model__cache_dir /vector_cache # if you use my docker image\n```",
+      "evidence_location": "139-142",
+      "confidence": "high",
+      "reason": "Provides the exact command to reproduce model training on the COCO dataset."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python evaluate_recall_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path> --model_path model_last.pth",
+      "normalized_value": "python evaluate_recall_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path> --model_path model_last.pth",
+      "evidence": "```\n# Compute recall metrics\npython evaluate_recall_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth \\\n    # --model__cache_dir /vector_cache # if you use my docker image\n```",
+      "evidence_location": "73-79",
+      "confidence": "high",
+      "reason": "Provides the exact command to run inference and compute recall metrics for evaluation."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{chun2021pcme,\n    title={Probabilistic Embeddings for Cross-Modal Retrieval},\n    author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane},\n    year={2021},\n    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},\n}",
+      "normalized_value": "@inproceedings{chun2021pcme, title={Probabilistic Embeddings for Cross-Modal Retrieval}, author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane}, year={2021}, booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},}",
+      "evidence": "```\n@inproceedings{chun2021pcme,\n    title={Probabilistic Embeddings for Cross-Modal Retrieval},\n    author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane},\n    year={2021},\n    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},\n}\n```",
+      "evidence_location": "180-187",
+      "confidence": "high",
+      "reason": "Provides the standard BibTeX entry required for academic citation."
+    }
+  ]
+}

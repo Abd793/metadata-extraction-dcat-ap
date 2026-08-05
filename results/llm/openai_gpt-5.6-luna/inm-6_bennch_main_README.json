@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "beNNch",
+      "normalized_value": "beNNch",
+      "evidence": "# beNNch",
+      "evidence_location": "line 19, header # beNNch",
+      "confidence": "high",
+      "reason": "Names the artifact."
+    },
+    {
+      "field": "artifact_description",
+      "value": "Unified execution, collection, analysis and comparison of neural network simulation benchmarks.",
+      "normalized_value": "Unified execution, collection, analysis and comparison of neural network simulation benchmarks.",
+      "evidence": "beNNch - Unified execution, collection, analysis and\ncomparison of neural network simulation benchmarks.",
+      "evidence_location": "lines 2-3",
+      "confidence": "high",
+      "reason": "Provides the artifact's stated scope and purpose."
+    },
+    {
+      "field": "workflow_purpose",
+      "value": "beNNch tackles this challenge by implementing a unified, modular workflow for configuring, executing, and analyzing such benchmarks.",
+      "normalized_value": "beNNch tackles this challenge by implementing a unified, modular workflow for configuring, executing, and analyzing such benchmarks.",
+      "evidence": "**`beNNch` tackles this challenge by implementing a unified, modular workflow for configuring, executing, and analyzing such benchmarks.**",
+      "evidence_location": "line 24",
+      "confidence": "high",
+      "reason": "Describes the central function of the framework."
+    },
+    {
+      "field": "benchmarking_framework",
+      "value": "JUBE Benchmarking Environment",
+      "normalized_value": "JUBE Benchmarking Environment",
+      "evidence": "The software framework builds around the [JUBE Benchmarking Environment](https://www.fz-juelich.de/ias/jsc/EN/Expertise/Support/Software/JUBE/_node.html), installs simulation software, provides an interface to benchmark models, automates data and metadata annotation, and accounts for storage and presentation of results.",
+      "evidence_location": "line 25",
+      "confidence": "high",
+      "reason": "Identifies the execution and benchmarking environment used by beNNch."
+    },
+    {
+      "field": "paper_doi",
+      "value": "10.3389/fninf.2022.837549",
+      "normalized_value": "10.3389/fninf.2022.837549",
+      "evidence": "> Albers J, Pronold J, Kurth AC, Vennemo SB, Haghighi Mood K, Patronis A, Terhorst D, Jordan J, Kunkel S, Tetzlaff T, Diesmann M and Senk J (2022) A Modular Workflow for Performance Benchmarking of Neuronal Network Simulations. Front. Neuroinform. 16:837549. doi: [10.3389/fninf.2022.837549](https://doi.org/10.3389/fninf.2022.837549)",
+      "evidence_location": "lines 27-28",
+      "confidence": "high",
+      "reason": "Provides the DOI for the paper describing the conceptual workflow."
+    },
+    {
+      "field": "github_page",
+      "value": "https://inm-6.github.io/beNNch",
+      "normalized_value": "https://inm-6.github.io/beNNch",
+      "evidence": "See also the accompanying [GitHub Page](https://inm-6.github.io/beNNch) for further `beNNch` results in flip-book format.",
+      "evidence_location": "line 40",
+      "confidence": "high",
+      "reason": "Provides an access point for additional benchmark results."
+    },
+    {
+      "field": "license",
+      "value": "GPL-3.0-or-later",
+      "normalized_value": "GPL-3.0-or-later",
+      "evidence": "SPDX-License-Identifier: GPL-3.0-or-later",
+      "evidence_location": "line 16",
+      "confidence": "high",
+      "reason": "States the artifact's reuse license identifier."
+    },
+    {
+      "field": "software_dependencies",
+      "value": "- [git annex](https://git-annex.branchable.com)\n  + can e.g. be installed via \n```bash\nwget 'http://downloads.kitenet.net/git-annex/linux/current/git-annex-standalone-amd64.tar.gz'\ntar -xzf git-annex-standalone-amd64.tar.gz\nexport PATH=$PATH:<install_path>/git-annex.linux\n```\n- [JUBE](https://www.fz-juelich.de/ias/jsc/EN/Expertise/Support/Software/JUBE/_node.html)  \n_Note that  JUBE version 2.4.2 or later is necessary_\n\n\n- [Builder](https://github.com/INM-6/Builder)\n  + see Builder documentation for installation guide\n\n- Python 3.X",
+      "normalized_value": "- [git annex](https://git-annex.branchable.com) + can e.g. be installed via ```bash wget 'http://downloads.kitenet.net/git-annex/linux/current/git-annex-standalone-amd64.tar.gz' tar -xzf git-annex-standalone-amd64.tar.gz export PATH=$PATH:<install_path>/git-annex.linux ``` - [JUBE](https://www.fz-juelich.de/ias/jsc/EN/Expertise/Support/Software/JUBE/_node.html) _Note that JUBE version 2.4.2 or later is necessary_ - [Builder](https://github.com/INM-6/Builder) + see Builder documentation for installation guide - Python 3.X",
+      "evidence": "- [git annex](https://git-annex.branchable.com)\n  + can e.g. be installed via \n```bash\nwget 'http://downloads.kitenet.net/git-annex/linux/current/git-annex-standalone-amd64.tar.gz'\ntar -xzf git-annex-standalone-amd64.tar.gz\nexport PATH=$PATH:<install_path>/git-annex.linux\n```\n- [JUBE](https://www.fz-juelich.de/ias/jsc/EN/Expertise/Support/Software/JUBE/_node.html)  \n_Note that  JUBE version 2.4.2 or later is necessary_\n\n\n- [Builder](https://github.com/INM-6/Builder)\n  + see Builder documentation for installation guide\n\n- Python 3.X",
+      "evidence_location": "lines 84-100, section ### Software dependencies",
+      "confidence": "high",
+      "reason": "Lists required tools, runtime, and the minimum JUBE version."
+    },
+    {
+      "field": "submodule_initialization",
+      "value": "git submodule init\ngit submodule update --remote",
+      "normalized_value": "git submodule init git submodule update --remote",
+      "evidence": "```bash\ngit submodule init\n```\n  + _optional: if you want to change the url of any of the submodules (requires `git v2.25.0`):_  \n  `git submodule set-url -- <submodule> <new_url>` \n```bash\ngit submodule update --remote\n```",
+      "evidence_location": "lines 67-76, section ### Initialization",
+      "confidence": "high",
+      "reason": "Defines the required setup steps for repository submodules."
+    },
+    {
+      "field": "benchplot_installation",
+      "value": "pip install -e plot --user",
+      "normalized_value": "pip install -e plot --user",
+      "evidence": "```bash\npip install -e plot --user\n```",
+      "evidence_location": "lines 78-82, section ### Initialization",
+      "confidence": "high",
+      "reason": "Provides the installation command for the plotting module."
+    },
+    {
+      "field": "supported_models",
+      "value": "- **Multi-Area Model**\n\n  - `multi-area-model_2` for usage with NEST 2.\n  - `multi-area-model_3` for usage with NEST 3.\n\n- **Microcircuit**\n\n  - `microcircuit`\n\n- **HPC Benchmark**\n\n  - `hpc_benchmark_2` for usage with NEST 2.\n  - `hpc_benchmark_3` for usage with NEST 3.0.\n  - `hpc_benchmark_31` for usage with NEST 3.1.",
+      "normalized_value": "- **Multi-Area Model** - `multi-area-model_2` for usage with NEST 2. - `multi-area-model_3` for usage with NEST 3. - **Microcircuit** - `microcircuit` - **HPC Benchmark** - `hpc_benchmark_2` for usage with NEST 2. - `hpc_benchmark_3` for usage with NEST 3.0. - `hpc_benchmark_31` for usage with NEST 3.1.",
+      "evidence": "- **Multi-Area Model**\n\n  - `multi-area-model_2` for usage with NEST 2.\n  - `multi-area-model_3` for usage with NEST 3.\n\n- **Microcircuit**\n\n  - `microcircuit`\n\n- **HPC Benchmark**\n\n  - `hpc_benchmark_2` for usage with NEST 2.\n  - `hpc_benchmark_3` for usage with NEST 3.0.\n  - `hpc_benchmark_31` for usage with NEST 3.1.",
+      "evidence_location": "lines 102-119, section ### Models",
+      "confidence": "high",
+      "reason": "Identifies the benchmark models and their NEST version variants."
+    },
+    {
+      "field": "configuration_commands",
+      "value": "cp config/templates/user_config_template.yaml config/user_config.yaml\ncp config/templates/<model>_config_template.yaml config/<model>_config.yaml",
+      "normalized_value": "cp config/templates/user_config_template.yaml config/user_config.yaml cp config/templates/<model>_config_template.yaml config/<model>_config.yaml",
+      "evidence": "```bash\ncp config/templates/user_config_template.yaml config/user_config.yaml\n```\n\nCopy and fill also the parameter file with model-specific parameters:\n\n```bash\ncp config/templates/<model>_config_template.yaml config/<model>_config.yaml\n```",
+      "evidence_location": "lines 123-133, section ### First steps: configure your simulation",
+      "confidence": "high",
+      "reason": "Shows how to create the user and model-specific configuration files."
+    },
+    {
+      "field": "benchmark_command",
+      "value": "jube run benchmarks/<model>.yaml",
+      "normalized_value": "jube run benchmarks/<model>.yaml",
+      "evidence": "```bash\njube run benchmarks/<model>.yaml\n```",
+      "evidence_location": "lines 155-163, section ### Run benchmarks",
+      "confidence": "high",
+      "reason": "Provides the command used to execute a benchmark."
+    },
+    {
+      "field": "analysis_command",
+      "value": "python ../analysis/analysis.py <id>",
+      "normalized_value": "python ../analysis/analysis.py <id>",
+      "evidence": "python ../analysis/analysis.py <id>",
+      "evidence_location": "lines 177-189, section ### Analyze benchmarks",
+      "confidence": "high",
+      "reason": "Provides the command used to analyze benchmark output by job ID."
+    },
+    {
+      "field": "benchmark_metrics",
+      "value": "absolute wall-clock time; real-time factor; update, collocation, communication, and delivery",
+      "normalized_value": "absolute wall-clock time; real-time factor; update, collocation, communication, and delivery",
+      "evidence": "The left graph shows the absolute wall-clock time measured with Python-level timers for both network construction and state propagation.\nError bars indicate variability across three simulation repeats with different random seeds.\nThe top right graph displays the real-time factor defined as wall-clock time normalized by the model time.\nBuilt-in timers resolve four different phases of the state propagation: update, collocation, communication, and delivery.",
+      "evidence_location": "lines 33-36",
+      "confidence": "high",
+      "reason": "Identifies concrete performance measures and timer phases reported by the benchmark output."
+    },
+    {
+      "field": "nest_detailed_timer_flag",
+      "value": "-Dwith-detailed-timers=ON",
+      "normalized_value": "-Dwith-detailed-timers=ON",
+      "evidence": "_Specific to NEST benchmarking: don't forget to include `-Dwith-detailed-timers=ON` in the `CMAKEFLAGS` if you want to have access to C++ level timers._",
+      "evidence_location": "line 152",
+      "confidence": "high",
+      "reason": "Provides a reproducibility-relevant build option for accessing C++-level timers."
+    },
+    {
+      "field": "citation",
+      "value": "Albers J, Pronold J, Kurth AC, Vennemo SB, Haghighi Mood K, Patronis A, Terhorst D, Jordan J, Kunkel S, Tetzlaff T, Diesmann M and Senk J (2022) A Modular Workflow for Performance Benchmarking of Neuronal Network Simulations. Front. Neuroinform. 16:837549. doi: 10.3389/fninf.2022.837549",
+      "normalized_value": "Albers J, Pronold J, Kurth AC, Vennemo SB, Haghighi Mood K, Patronis A, Terhorst D, Jordan J, Kunkel S, Tetzlaff T, Diesmann M and Senk J (2022) A Modular Workflow for Performance Benchmarking of Neuronal Network Simulations. Front. Neuroinform. 16:837549. doi: 10.3389/fninf.2022.837549",
+      "evidence": "> Albers J, Pronold J, Kurth AC, Vennemo SB, Haghighi Mood K, Patronis A, Terhorst D, Jordan J, Kunkel S, Tetzlaff T, Diesmann M and Senk J (2022) A Modular Workflow for Performance Benchmarking of Neuronal Network Simulations. Front. Neuroinform. 16:837549. doi: [10.3389/fninf.2022.837549](https://doi.org/10.3389/fninf.2022.837549)",
+      "evidence_location": "lines 257-260, section ## How to cite beNNch",
+      "confidence": "high",
+      "reason": "Provides the recommended scholarly citation for the artifact."
+    }
+  ]
+}

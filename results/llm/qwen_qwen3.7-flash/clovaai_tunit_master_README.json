@@ -1,0 +1,175 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "TUNIT",
+      "normalized_value": "TUNIT",
+      "evidence": "truly unsupervised image-to-image translation model (TUNIT)",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Explicitly states the model name acronym used throughout the repository."
+    },
+    {
+      "field": "description",
+      "value": "__Official pytorch implementation of \"Rethinking the Truly Unsupervised Image-to-Image Translation\"__",
+      "normalized_value": "Official pytorch implementation of \"Rethinking the Truly Unsupervised Image-to-Image Translation\"",
+      "evidence": "__Official pytorch implementation of \"Rethinking the Truly Unsupervised Image-to-Image Translation\"__",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Clearly defines the repository's purpose and official status."
+    },
+    {
+      "field": "paper_url",
+      "value": "[Rethinking the Truly Unsupervised Image-to-Image Translation](https://arxiv.org/abs/2006.06500)",
+      "normalized_value": "https://arxiv.org/abs/2006.06500",
+      "evidence": "[Rethinking the Truly Unsupervised Image-to-Image Translation](https://arxiv.org/abs/2006.06500)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper for context and reference."
+    },
+    {
+      "field": "framework",
+      "value": "pytorch",
+      "normalized_value": "pytorch",
+      "evidence": "Official pytorch implementation",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Specifies the primary deep learning framework used for implementation."
+    },
+    {
+      "field": "dependencies",
+      "value": "* pytorch==1.1.0 or 1.2.0  \n* tqdm  \n* opencv-python  \n* scipy  \n* sklearn\n* matplotlib  \n* pillow  \n* tensorboardX ",
+      "normalized_value": "pytorch==1.1.0 or 1.2.0, tqdm, opencv-python, scipy, sklearn, matplotlib, pillow, tensorboardX",
+      "evidence": "* pytorch==1.1.0 or 1.2.0  \n* tqdm  \n* opencv-python  \n* scipy  \n* sklearn\n* matplotlib  \n* pillow  \n* tensorboardX ",
+      "evidence_location": "21-28",
+      "confidence": "high",
+      "reason": "Lists all required Python packages necessary to run the codebase."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Standard command to install project dependencies via pip."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "This source code is mainly tested on V100 and P40.",
+      "normalized_value": "V100 and P40",
+      "evidence": "This source code is mainly tested on V100 and P40.",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Specifies the GPU hardware variants the code has been validated on."
+    },
+    {
+      "field": "task",
+      "value": "image-to-image translation",
+      "normalized_value": "image-to-image translation",
+      "evidence": "Every recent image-to-image translation model inherently requires either image-level (i.e. input-output pairs) or set-level (i.e. domain labels) supervision.",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Identifies the core computer vision task addressed by the artifact."
+    },
+    {
+      "field": "learning_setting",
+      "value": "In this paper, we tackle image-to-image translation in a fully unsupervised setting, i.e., neither paired images nor domain labels.",
+      "normalized_value": "fully unsupervised",
+      "evidence": "In this paper, we tackle image-to-image translation in a fully unsupervised setting, i.e., neither paired images nor domain labels.",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Describes the specific training paradigm (unsupervised vs supervised/semi-supervised)."
+    },
+    {
+      "field": "venue",
+      "value": "(ICCV 2021)",
+      "normalized_value": "ICCV 2021",
+      "evidence": "(ICCV 2021)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Indicates the top-tier conference where the research was published."
+    },
+    {
+      "field": "training_command_example",
+      "value": "python main.py --gpu $GPU_TO_USE --p_semi 0.0 --dataset animal_faces --data_path='../data'",
+      "normalized_value": "python main.py --gpu $GPU_TO_USE --p_semi 0.0 --dataset animal_faces --data_path='../data'",
+      "evidence": "python main.py --gpu $GPU_TO_USE --p_semi 0.0 --dataset animal_faces --data_path='../data'",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Provides a concrete command to execute the model in fully unsupervised training mode."
+    },
+    {
+      "field": "testing_command_example",
+      "value": "python main.py --gpu $GPU_TO_USE --validation --load_model $DIR_TO_LOAD --dataset animal_faces",
+      "normalized_value": "python main.py --gpu $GPU_TO_USE --validation --load_model $DIR_TO_LOAD --dataset animal_faces",
+      "evidence": "python main.py --gpu $GPU_TO_USE --validation --load_model $DIR_TO_LOAD --dataset animal_faces",
+      "evidence_location": "83",
+      "confidence": "high",
+      "reason": "Provides a concrete command to run inference/validation on a trained model."
+    },
+    {
+      "field": "monitoring_command",
+      "value": "tensorboard --logdir=$DIR/events --port=$PORT",
+      "normalized_value": "tensorboard --logdir=$DIR/events --port=$PORT",
+      "evidence": "tensorboard --logdir=$DIR/events --port=$PORT",
+      "evidence_location": "88",
+      "confidence": "high",
+      "reason": "Command to visualize training logs and metrics using TensorBoard."
+    },
+    {
+      "field": "dataset_links",
+      "value": "* Download : [AFHQ (StarGANv2)](https://www.dropbox.com/s/t9l9o3vsx2jai3z/afhq.zip?dl=0) / [AnimalFaces (FUNIT)](https://github.com/NVlabs/FUNIT)",
+      "normalized_value": "Download : [AFHQ (StarGANv2)](https://www.dropbox.com/s/t9l9o3vsx2jai3z/afhq.zip?dl=0) / [AnimalFaces (FUNIT)](https://github.com/NVlabs/FUNIT)",
+      "evidence": "* Download : [AFHQ (StarGANv2)](https://www.dropbox.com/s/t9l9o3vsx2jai3z/afhq.zip?dl=0) / [AnimalFaces (FUNIT)](https://github.com/NVlabs/FUNIT)",
+      "evidence_location": "33",
+      "confidence": "high",
+      "reason": "Provides direct download links for the benchmark datasets used in experiments."
+    },
+    {
+      "field": "pretrained_model_link",
+      "value": "[One Drive](https://1drv.ms/u/s!AprVWp5MreFV8BLY22ias4Gt1ZtO?e=IYsUwX)",
+      "normalized_value": "One Drive: https://1drv.ms/u/s!AprVWp5MreFV8BLY22ias4Gt1ZtO?e=IYsUwX",
+      "evidence": "[One Drive](https://1drv.ms/u/s!AprVWp5MreFV8BLY22ias4Gt1ZtO?e=IYsUwX)",
+      "evidence_location": "111",
+      "confidence": "high",
+      "reason": "Link to download pretrained model checkpoints for reproduction and testing."
+    },
+    {
+      "field": "license",
+      "value": "TUNIT is distributed under MIT unless the header specifies another license.",
+      "normalized_value": "MIT",
+      "evidence": "TUNIT is distributed under MIT unless the header specifies another license.",
+      "evidence_location": "224",
+      "confidence": "high",
+      "reason": "Specifies the open-source software license governing code reuse and distribution."
+    },
+    {
+      "field": "model_license",
+      "value": "The pretrained models is covered by Creative Commons BY-NC 4.0 license by NAVER Corporation.",
+      "normalized_value": "Creative Commons BY-NC 4.0",
+      "evidence": "The pretrained models is covered by Creative Commons BY-NC 4.0 license by NAVER Corporation.",
+      "evidence_location": "248",
+      "confidence": "high",
+      "reason": "Specifies the distinct non-commercial license applied to the pretrained model weights."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@InProceedings{Baek_2021_ICCV,\n    author    = {Baek, Kyungjune and Choi, Yunjey and Uh, Youngjung and Yoo, Jaejun and Shim, Hyunjung},\n    title     = {Rethinking the Truly Unsupervised Image-to-Image Translation},\n    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n    month     = {October},\n    year      = {2021},\n    pages     = {14154-14163}\n}",
+      "normalized_value": "@InProceedings{Baek_2021_ICCV, author = {Baek, Kyungjune and Choi, Yunjey and Uh, Youngjung and Yoo, Jaejun and Shim, Hyunjung}, title = {Rethinking the Truly Unsupervised Image-to-Image Translation}, booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}, month = {October}, year = {2021}, pages = {14154-14163}}",
+      "evidence": "@InProceedings{Baek_2021_ICCV,\n    author    = {Baek, Kyungjune and Choi, Yunjey and Uh, Youngjung and Yoo, Jaejun and Shim, Hyunjung},\n    title     = {Rethinking the Truly Unsupervised Image-to-Image Translation},\n    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},\n    month     = {October},\n    year      = {2021},\n    pages     = {14154-14163}\n}",
+      "evidence_location": "253-261",
+      "confidence": "high",
+      "reason": "Provides the exact BibTeX citation required for academic attribution."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "Generate fake samples and calculate FID.",
+      "normalized_value": "FID",
+      "evidence": "Generate fake samples and calculate FID.",
+      "evidence_location": "203",
+      "confidence": "high",
+      "reason": "Mentions the Fréchet Inception Distance (FID) metric used to quantitatively evaluate generated image quality."
+    }
+  ]
+}

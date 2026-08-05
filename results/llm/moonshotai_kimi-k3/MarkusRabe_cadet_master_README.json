@@ -1,0 +1,211 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "CADET",
+      "normalized_value": "CADET",
+      "evidence": "# CADET",
+      "evidence_location": "line 4, top-level header",
+      "confidence": "high",
+      "reason": "Identifies the artifact by name."
+    },
+    {
+      "field": "description",
+      "value": "CADET is a solver for quantified Boolean formulas with a forall-exists quantifier alternation (2QBF).",
+      "normalized_value": "CADET is a solver for quantified Boolean formulas with a forall-exists quantifier alternation (2QBF).",
+      "evidence": "CADET is a solver for _quantified Boolean formulas_ with a forall-exists quantifier alternation (2QBF).",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "States the artifact's purpose and the problem class it solves."
+    },
+    {
+      "field": "algorithm",
+      "value": "Incremental Determinization",
+      "normalized_value": "Incremental Determinization",
+      "evidence": "The solver is based on the _Incremental Determinization_ algorithm published in SAT 2016",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Names the underlying algorithm and its publication venue, useful for scientific context and citation."
+    },
+    {
+      "field": "author",
+      "value": "Markus N. Rabe",
+      "normalized_value": "Markus N. Rabe",
+      "evidence": "was written by [Markus N. Rabe](https://people.eecs.berkeley.edu/~rabe/)",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Identifies the author of the solver, useful for attribution."
+    },
+    {
+      "field": "repository",
+      "value": "MarkusRabe/cadet",
+      "normalized_value": "MarkusRabe/cadet",
+      "evidence": "[![Build Status](https://travis-ci.org/MarkusRabe/cadet.svg?branch=master)](https://travis-ci.org/MarkusRabe/cadet)",
+      "evidence_location": "line 2, badge",
+      "confidence": "high",
+      "reason": "Badges reference the GitHub repository path, identifying where the artifact is hosted."
+    },
+    {
+      "field": "version",
+      "value": "v2.3",
+      "normalized_value": "v2.3",
+      "evidence": "CADET v2.3",
+      "evidence_location": "line 39, output code block",
+      "confidence": "medium",
+      "reason": "The example solver output prints a version string; it indicates a released version but may not be the latest."
+    },
+    {
+      "field": "benchmark_result",
+      "value": "won second price in the 2QBF track of QBFEval",
+      "normalized_value": "won second price in the 2QBF track of QBFEval",
+      "evidence": "It won second price in the 2QBF track of [QBFEval](http://www.qbflib.org/qbfeval17.php)",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Concrete competition result situating the solver's performance."
+    },
+    {
+      "field": "input_formats",
+      "value": "QDIMACS and QAIGER",
+      "normalized_value": "QDIMACS and QAIGER",
+      "evidence": "CADET reads files in both [QDIMACS](http://www.qbflib.org/qdimacs.html) and [QAIGER](https://github.com/ltentrup/QAIGER) format. Files can be zipped with gzip, but must then end with the file extension gz or gzip.",
+      "evidence_location": "line 109, 'Input Formats' section",
+      "confidence": "high",
+      "reason": "Specifies accepted input formats and compression support, needed to use the solver."
+    },
+    {
+      "field": "build_command",
+      "value": "./configure && make",
+      "normalized_value": "./configure && make",
+      "evidence": "To compile the solver type:\n\n```bash\n$ ./configure && make\n```",
+      "evidence_location": "lines 78-82, 'Installing CADET' section",
+      "confidence": "high",
+      "reason": "Defines the compilation step required to build the solver from source."
+    },
+    {
+      "field": "test_command",
+      "value": "make test",
+      "normalized_value": "make test",
+      "evidence": "To make sure the solver works correctly execute the test suite:\n\n```bash\n$ make test\n```",
+      "evidence_location": "lines 84-88, 'Installing CADET' section",
+      "confidence": "high",
+      "reason": "Defines how to run the test suite to verify the build."
+    },
+    {
+      "field": "build_dependencies",
+      "value": "clang and gcc; testing scripts require Python 3",
+      "normalized_value": "clang and gcc; testing scripts require Python 3",
+      "evidence": "CADET can be built from source with both clang and gcc. You can find pre-built binaries of CADET for Linux and OSX. The testing scripts require Python 3.",
+      "evidence_location": "line 75, 'Installing CADET' section",
+      "confidence": "high",
+      "reason": "Lists compilers and runtime dependencies needed to build and test the artifact."
+    },
+    {
+      "field": "supported_platforms",
+      "value": "Linux and OSX",
+      "normalized_value": "Linux and OSX",
+      "evidence": "You can find pre-built binaries of CADET for Linux and OSX.",
+      "evidence_location": "line 75, 'Installing CADET' section",
+      "confidence": "high",
+      "reason": "Indicates platforms for which pre-built binaries are available."
+    },
+    {
+      "field": "usage_command",
+      "value": "./cadet file.qdimacs",
+      "normalized_value": "./cadet file.qdimacs",
+      "evidence": "```bash\n$ ./cadet file.qdimacs\n```",
+      "evidence_location": "lines 97-99, 'Usage' section",
+      "confidence": "high",
+      "reason": "Primary command for running the solver on a QDIMACS file."
+    },
+    {
+      "field": "stdin_usage_command",
+      "value": "cat file.qdimacs | ./cadet",
+      "normalized_value": "cat file.qdimacs | ./cadet",
+      "evidence": "You can also pipe QDIMACS into the solver:\n\n```bash\n$ cat file.qdimacs | ./cadet\n```",
+      "evidence_location": "lines 101-105, 'Usage' section",
+      "confidence": "high",
+      "reason": "Documents an alternative invocation piping input via stdin."
+    },
+    {
+      "field": "certificate_output_option",
+      "value": "-c [file]",
+      "normalized_value": "-c [file]",
+      "evidence": "With the command line option `-c [file]` CADET writes the SAT certificate for true 2QBF. You can either specify a file name to which the certificate should be written (ending in `.aag` or `.aig`) or you can specify `sdtout` to let CADET print the certificate on the terminal.",
+      "evidence_location": "line 118, 'Proofs' section",
+      "confidence": "high",
+      "reason": "Documents the command-line option for writing SAT certificates as AIGER circuits, key for result certification workflows."
+    },
+    {
+      "field": "qdimacs_output_flag",
+      "value": "--qdimacs_out",
+      "normalized_value": "--qdimacs_out",
+      "evidence": "To print output according to the QDIMACS standard, use the `--qdimacs_out` flag.",
+      "evidence_location": "line 116, 'Proofs' section",
+      "confidence": "high",
+      "reason": "Documents a flag controlling output format for UNSAT certificates."
+    },
+    {
+      "field": "qbfcert_option",
+      "value": "--qbfcert",
+      "normalized_value": "--qbfcert",
+      "evidence": "To produce certificates that are compatible with [QBFcert](http://fmv.jku.at/qbfcert/) add `--qbfcert` option to the command line.",
+      "evidence_location": "line 130, 'Checking Certificates' section",
+      "confidence": "high",
+      "reason": "Documents the option for generating QBFcert-compatible certificates."
+    },
+    {
+      "field": "certificate_checking_tools",
+      "value": "Certcheck (distributed with CAQE) and QBFcert",
+      "normalized_value": "Certcheck (distributed with CAQE) and QBFcert",
+      "evidence": "By default CADET produces certificates that can be checked by Certcheck, which was written by [Leander Tentrup](https://www.react.uni-saarland.de/people/tentrup.html). Certcheck comes with the distribution of [CAQE](https://www.react.uni-saarland.de/tools/caqe/). To produce certificates that are compatible with [QBFcert](http://fmv.jku.at/qbfcert/) add `--qbfcert` option to the command line.",
+      "evidence_location": "line 130, 'Checking Certificates' section",
+      "confidence": "high",
+      "reason": "Names external tools used to verify certificates, relevant for reproduction and validation."
+    },
+    {
+      "field": "related_tools",
+      "value": "AIGER tool set and ABC",
+      "normalized_value": "AIGER tool set and ABC",
+      "evidence": "As soon as you work with certificates you may want to install the [AIGER tool set](http://fmv.jku.at/aiger/aiger-1.9.4.tar.gz) and the [ABC](https://people.eecs.berkeley.edu/~alanmi/abc/).",
+      "evidence_location": "line 124, 'Proofs' section",
+      "confidence": "high",
+      "reason": "External tools recommended for generating, simplifying, and checking certificates."
+    },
+    {
+      "field": "circuit_minimization_command",
+      "value": "abc -c \"read result.aig; dc2; write result.aig\"",
+      "normalized_value": "abc -c \"read result.aig; dc2; write result.aig\"",
+      "evidence": "```bash\n$ abc -c \"read result.aig; dc2; write result.aig\"\n```",
+      "evidence_location": "lines 53-55, 'Example' section",
+      "confidence": "high",
+      "reason": "Concrete command for minimizing generated AIGER circuits with ABC, part of the recommended workflow."
+    },
+    {
+      "field": "application_domains",
+      "value": "circuit repair, safety games, and strategy extraction for LTL synthesis",
+      "normalized_value": "circuit repair, safety games, and strategy extraction for LTL synthesis",
+      "evidence": "For many applications, such as circuit repair, safety games, and [strategy extraction for LTL synthesis](https://www.react.uni-saarland.de/publications/FFRT17.html)",
+      "evidence_location": "line 44, 'Example' section",
+      "confidence": "high",
+      "reason": "Names concrete application domains of the solver's Skolem function output."
+    },
+    {
+      "field": "primary_publication",
+      "value": "Incremental Determinization. Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "normalized_value": "Incremental Determinization. Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "evidence": "[Incremental Determinization](https://www.eecs.berkeley.edu/~rabe/IncrementalDeterminizationSAT2016.pdf). Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "evidence_location": "line 142, 'Publications' section",
+      "confidence": "high",
+      "reason": "The foundational publication of the algorithm the solver is based on; needed for citation."
+    },
+    {
+      "field": "related_publications",
+      "value": "Learning Heuristics for 2QBF through Deep Reinforcement Learning (arXiv 2018); Understanding and Extending Incremental Determinization for 2QBF (CAV 2018); Encodings of Bounded Synthesis (TACAS 2017)",
+      "normalized_value": "Learning Heuristics for 2QBF through Deep Reinforcement Learning (arXiv 2018); Understanding and Extending Incremental Determinization for 2QBF (CAV 2018); Encodings of Bounded Synthesis (TACAS 2017)",
+      "evidence": "[Learning Heuristics for 2QBF through Deep Reinforcement Learning](https://arxiv.org/abs/1807.08058). Gil Lederman, Markus N. Rabe, Edward A. Lee, Sanjit A. Seshia. arXiv preprint, 2018.\n\n[Understanding and Extending Incremental Determinization for 2QBF](https://people.eecs.berkeley.edu/~sseshia/pubdir/id-cav18.pdf). Markus N. Rabe, Leander Tentrup, Cameron Rasmussen, and Sanjit Seshia. CAV, 2018.\n\n[Encodings of Bounded Synthesis](https://www.react.uni-saarland.de/publications/FFRT17.html) Faymonville, Finkbeiner, Rabe, Tentrup. TACAS, 2017.",
+      "evidence_location": "lines 136-140, 'Publications' section",
+      "confidence": "high",
+      "reason": "Additional publications related to the artifact, useful for citation and scientific context."
+    }
+  ]
+}

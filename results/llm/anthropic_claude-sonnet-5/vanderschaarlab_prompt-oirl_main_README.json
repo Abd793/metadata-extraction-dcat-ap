@@ -1,0 +1,255 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Prompt-OIRL",
+      "normalized_value": "Prompt-OIRL",
+      "evidence": "# 🪄 Prompt-OIRL: Learning to Prompt LLMs with Expert Knowledge (Known Magic Words 🧙)",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Title of the artifact/repository as stated in the README header"
+    },
+    {
+      "field": "venue",
+      "value": "ICLR 2024",
+      "normalized_value": "ICLR 2024",
+      "evidence": "### 💻 Implementation and 📒 tutorial for ICLR 2024 paper",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Identifies the publication venue and year for the associated paper"
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/pdf/2309.06553.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2309.06553.pdf",
+      "evidence": "- [Paper Link](https://arxiv.org/pdf/2309.06553.pdf)",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Direct link to the primary paper describing this artifact"
+    },
+    {
+      "field": "openreview_link",
+      "value": "https://openreview.net/forum?id=N6o0ZtPzTg",
+      "normalized_value": "https://openreview.net/forum?id=N6o0ZtPzTg",
+      "evidence": "- [Open Review Link](https://openreview.net/forum?id=N6o0ZtPzTg)",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Link to the OpenReview page for peer review record of the paper"
+    },
+    {
+      "field": "abstract",
+      "value": "In this study, we aim to enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization. We identify a previously overlooked objective of query dependency in such optimization and elucidate two ensuing challenges that impede the successful and economical design of prompt optimization techniques. One primary issue is the absence of an effective method to evaluate prompts during inference when the golden answer is unavailable. Concurrently, learning via interactions with the LLMs to navigate the expansive natural language prompting space proves to be resource-intensive. To address this, we introduce Prompt-OIRL, which harnesses offline inverse reinforcement learning to draw insights from offline prompting demonstration data. Such data exists as by-products when diverse prompts are benchmarked on open-accessible datasets. With Prompt-OIRL, the query-dependent prompt optimization objective is achieved by first learning an offline reward model. This model can evaluate any query-prompt pairs without accessing LLMs. Subsequently, a best-of-N strategy is deployed to recommend the optimal prompt. Our experimental evaluations across various LLM scales and arithmetic reasoning datasets underscore both the efficacy and economic viability of the proposed approach.",
+      "normalized_value": "In this study, we aim to enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization. We identify a previously overlooked objective of query dependency in such optimization and elucidate two ensuing challenges that impede the successful and economical design of prompt optimization techniques. One primary issue is the absence of an effective method to evaluate prompts during inference when the golden answer is unavailable. Concurrently, learning via interactions with the LLMs to navigate the expansive natural language prompting space proves to be resource-intensive. To address this, we introduce Prompt-OIRL, which harnesses offline inverse reinforcement learning to draw insights from offline prompting demonstration data. Such data exists as by-products when diverse prompts are benchmarked on open-accessible datasets. With Prompt-OIRL, the query-dependent prompt optimization objective is achieved by first learning an offline reward model. This model can evaluate any query-prompt pairs without accessing LLMs. Subsequently, a best-of-N strategy is deployed to recommend the optimal prompt. Our experimental evaluations across various LLM scales and arithmetic reasoning datasets underscore both the efficacy and economic viability of the proposed approach.",
+      "evidence_location": "lines 21-22, ## 📖 Abstract",
+      "confidence": "high",
+      "reason": "Full abstract describing the method, task, and evaluation of the artifact"
+    },
+    {
+      "field": "method",
+      "value": "offline inverse reinforcement learning",
+      "normalized_value": "offline inverse reinforcement learning",
+      "evidence": "we introduce Prompt-OIRL, which harnesses offline inverse reinforcement learning to draw insights from offline prompting demonstration data.",
+      "evidence_location": "line 22",
+      "confidence": "high",
+      "reason": "Names the core method used by the artifact"
+    },
+    {
+      "field": "task",
+      "value": "arithmetic reasoning",
+      "normalized_value": "arithmetic reasoning",
+      "evidence": "we aim to enhance the arithmetic reasoning ability of Large Language Models (LLMs) through zero-shot prompt optimization.",
+      "evidence_location": "line 21",
+      "confidence": "high",
+      "reason": "Identifies the task domain the artifact targets"
+    },
+    {
+      "field": "prerequisite_license",
+      "value": "license to use LLaMA-2",
+      "normalized_value": "license to use LLaMA-2",
+      "evidence": "1. get the [license to use LLaMA-2](https://ai.meta.com/llama/).",
+      "evidence_location": "line 37, ### Preliminaries",
+      "confidence": "high",
+      "reason": "Specifies a required license/access prerequisite for reproduction"
+    },
+    {
+      "field": "dataset",
+      "value": "SVAMP",
+      "normalized_value": "SVAMP",
+      "evidence": "2. get access to the datasets: [SVAMP](https://github.com/arkilpatel/SVAMP), [GSM8K](https://huggingface.co/datasets/gsm8k), [MAWPS](https://github.com/sroy9/mawps)",
+      "evidence_location": "line 39, ### Preliminaries",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset used for reproduction, with link"
+    },
+    {
+      "field": "dataset",
+      "value": "GSM8K",
+      "normalized_value": "GSM8K",
+      "evidence": "2. get access to the datasets: [SVAMP](https://github.com/arkilpatel/SVAMP), [GSM8K](https://huggingface.co/datasets/gsm8k), [MAWPS](https://github.com/sroy9/mawps)",
+      "evidence_location": "line 39, ### Preliminaries",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset used for reproduction, with link"
+    },
+    {
+      "field": "dataset",
+      "value": "MAWPS",
+      "normalized_value": "MAWPS",
+      "evidence": "2. get access to the datasets: [SVAMP](https://github.com/arkilpatel/SVAMP), [GSM8K](https://huggingface.co/datasets/gsm8k), [MAWPS](https://github.com/sroy9/mawps)",
+      "evidence_location": "line 39, ### Preliminaries",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset used for reproduction, with link"
+    },
+    {
+      "field": "repository_clone_command",
+      "value": "git clone git@github.com:holarissun/Prompt-OIRL.git",
+      "normalized_value": "git clone git@github.com:holarissun/Prompt-OIRL.git",
+      "evidence": "git clone git@github.com:holarissun/Prompt-OIRL.git",
+      "evidence_location": "line 44, ### Create a Virtual Env",
+      "confidence": "high",
+      "reason": "Command to clone the main repository for the artifact"
+    },
+    {
+      "field": "environment_setup",
+      "value": "conda create --name prompt-oirl python==3.10\nconda activate prompt-oirl\ncd Prompt-OIRL",
+      "normalized_value": "conda create --name prompt-oirl python==3.10 conda activate prompt-oirl cd Prompt-OIRL",
+      "evidence": "conda create --name prompt-oirl python==3.10\nconda activate prompt-oirl\ncd Prompt-OIRL",
+      "evidence_location": "lines 48-50, ### Create a Virtual Env",
+      "confidence": "high",
+      "reason": "Defines the required Python version and virtual environment setup commands"
+    },
+    {
+      "field": "dependency_installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "line 54, ### Create a Virtual Env",
+      "confidence": "high",
+      "reason": "Command to install dependencies needed to reproduce the artifact"
+    },
+    {
+      "field": "dependency_repository",
+      "value": "git clone git@github.com:facebookresearch/llama.git",
+      "normalized_value": "git clone git@github.com:facebookresearch/llama.git",
+      "evidence": "```\n git clone git@github.com:facebookresearch/llama.git\n ```",
+      "evidence_location": "line 64, ### Reproduce the Main Results",
+      "confidence": "high",
+      "reason": "Additional required repository dependency (Meta's LLaMA) for reproducing offline dataset generation"
+    },
+    {
+      "field": "offline_dataset_generation_command",
+      "value": "torchrun --nproc_per_node 1 llama_step1_gen_offline.py \\\n    --ckpt_dir llama-2-7b-chat/ \\\n    --tokenizer_path tokenizer.model \\\n    --max_seq_len 512 --max_batch_size 8 --prompt_idx 0 --dataset_eval gsm8k",
+      "normalized_value": "torchrun --nproc_per_node 1 llama_step1_gen_offline.py --ckpt_dir llama-2-7b-chat/ --tokenizer_path tokenizer.model --max_seq_len 512 --max_batch_size 8 --prompt_idx 0 --dataset_eval gsm8k",
+      "evidence": "torchrun --nproc_per_node 1 llama_step1_gen_offline.py \\\n    --ckpt_dir llama-2-7b-chat/ \\\n    --tokenizer_path tokenizer.model \\\n    --max_seq_len 512 --max_batch_size 8 --prompt_idx 0 --dataset_eval gsm8k",
+      "evidence_location": "lines 73-76, #### Step 1",
+      "confidence": "high",
+      "reason": "Command to generate the offline dataset using LLaMA2, key reproduction step"
+    },
+    {
+      "field": "data_reorg_command",
+      "value": "python3 llama_step2_reorg_data.py",
+      "normalized_value": "python3 llama_step2_reorg_data.py",
+      "evidence": "python3 llama_step2_reorg_data.py",
+      "evidence_location": "line 82, #### Step 2",
+      "confidence": "high",
+      "reason": "Command for reorganizing collected offline data, part of reproduction pipeline"
+    },
+    {
+      "field": "data_preprocessing_command",
+      "value": "python3 llama_step3_data_processing.py",
+      "normalized_value": "python3 llama_step3_data_processing.py",
+      "evidence": "python3 llama_step3_data_processing.py",
+      "evidence_location": "line 90, #### Step 3",
+      "confidence": "high",
+      "reason": "Command for preprocessing offline data into embeddings and labels, part of reproduction pipeline"
+    },
+    {
+      "field": "reward_model_training_command",
+      "value": "python3 llama_step4_offline_evaluation.py",
+      "normalized_value": "python3 llama_step4_offline_evaluation.py",
+      "evidence": "python3 llama_step4_offline_evaluation.py",
+      "evidence_location": "line 95, #### Step 4",
+      "confidence": "high",
+      "reason": "Command for training the proxy reward model (offline prompt evaluation), key reproduction step"
+    },
+    {
+      "field": "reward_model_algorithms",
+      "value": "XGBoost reward model / LightGBM reward model",
+      "normalized_value": "XGBoost / LightGBM",
+      "evidence": "In general, training an XGBoost reward model will take a bit longer time, and using a LightGBM reward model can be faster.",
+      "evidence_location": "line 93, #### Step 4",
+      "confidence": "high",
+      "reason": "Specifies the reward model algorithms used/supported in the reproduction pipeline"
+    },
+    {
+      "field": "embedding_file_download",
+      "value": "https://drive.google.com/file/d/1ER50FoLInO1pTr50dDjjZMBGPX-pXVA1/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1ER50FoLInO1pTr50dDjjZMBGPX-pXVA1/view?usp=sharing",
+      "evidence": "- Note: you will need to download a missing embedding file from [this link](https://drive.google.com/file/d/1ER50FoLInO1pTr50dDjjZMBGPX-pXVA1/view?usp=sharing) and place it in the `embeddings` directory to run this step. (oversized for Github, ~ 230Mb)",
+      "evidence_location": "line 97, #### Step 4",
+      "confidence": "high",
+      "reason": "Provides link and instructions for a required auxiliary file (~230Mb embedding) needed for reproduction"
+    },
+    {
+      "field": "prompt_optimization_command",
+      "value": "python3 llama_step5_offline_optimization.py",
+      "normalized_value": "python3 llama_step5_offline_optimization.py",
+      "evidence": "python3 llama_step5_offline_optimization.py",
+      "evidence_location": "line 102, #### Step 5",
+      "confidence": "high",
+      "reason": "Command for running the final offline prompt optimization step, part of reproduction pipeline"
+    },
+    {
+      "field": "related_paper",
+      "value": "RL in the Era of LLMs: What is Essential? What is Needed? RLHF, Prompting, and Beyond.",
+      "normalized_value": "RL in the Era of LLMs: What is Essential? What is Needed? RLHF, Prompting, and Beyond.",
+      "evidence": "[RL in the Era of LLMs: What is Essential? What is Needed? RLHF, Prompting, and Beyond.](https://arxiv.org/pdf/2310.06147.pdf)",
+      "evidence_location": "line 109, ## 🚀 A Related Discussion on RLHF:",
+      "confidence": "high",
+      "reason": "Names a related positioning paper referenced by the artifact authors"
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{sun2023query,\n  title={Query-Dependent Prompt Evaluation and Optimization with Offline Inverse RL},\n  author={Sun, Hao and H{\\\"u}y{\\\"u}k, Alihan and van der Schaar, Mihaela},\n  booktitle={The Twelfth International Conference on Learning Representations},\n  year={2024}\n}",
+      "normalized_value": "@inproceedings{sun2023query, title={Query-Dependent Prompt Evaluation and Optimization with Offline Inverse RL}, author={Sun, Hao and H{\\\"u}y{\\\"u}k, Alihan and van der Schaar, Mihaela}, booktitle={The Twelfth International Conference on Learning Representations}, year={2024}}",
+      "evidence": "@inproceedings{sun2023query,\n  title={Query-Dependent Prompt Evaluation and Optimization with Offline Inverse RL},\n  author={Sun, Hao and H{\\\"u}y{\\\"u}k, Alihan and van der Schaar, Mihaela},\n  booktitle={The Twelfth International Conference on Learning Representations},\n  year={2024}\n}",
+      "evidence_location": "lines 118-123, ## 📚 BibTex Citation",
+      "confidence": "high",
+      "reason": "Primary citation entry for the ICLR 2024 paper describing the artifact"
+    },
+    {
+      "field": "citation",
+      "value": "@article{sun2023reinforcement,\n  title={Reinforcement Learning in the Era of LLMs: What is Essential? What is needed? An RL Perspective on RLHF, Prompting, and Beyond},\n  author={Sun, Hao},\n  journal={arXiv preprint arXiv:2310.06147},\n  year={2023}\n}",
+      "normalized_value": "@article{sun2023reinforcement, title={Reinforcement Learning in the Era of LLMs: What is Essential? What is needed? An RL Perspective on RLHF, Prompting, and Beyond}, author={Sun, Hao}, journal={arXiv preprint arXiv:2310.06147}, year={2023}}",
+      "evidence": "@article{sun2023reinforcement,\n  title={Reinforcement Learning in the Era of LLMs: What is Essential? What is needed? An RL Perspective on RLHF, Prompting, and Beyond},\n  author={Sun, Hao},\n  journal={arXiv preprint arXiv:2310.06147},\n  year={2023}\n}",
+      "evidence_location": "lines 126-131, ## 📚 BibTex Citation",
+      "confidence": "high",
+      "reason": "Secondary citation entry for the related positioning paper on RL and LLMs"
+    },
+    {
+      "field": "presentation_venue",
+      "value": "oral presentation at the ENLSP workshop at NeurIPS'2023",
+      "normalized_value": "oral presentation at the ENLSP workshop at NeurIPS 2023",
+      "evidence": "- (2023.9) Prompt-OIRL has been selected as an **oral presentation** at the ENLSP workshop at NeurIPS'2023.",
+      "evidence_location": "line 17, ## 🔥 News",
+      "confidence": "high",
+      "reason": "Documents a specific presentation venue/format for the work"
+    },
+    {
+      "field": "code_availability",
+      "value": "Code with LLaMA2 has been released.",
+      "normalized_value": "Code with LLaMA2 has been released.",
+      "evidence": "- (2023.10) Code with LLaMA2 has been released.",
+      "evidence_location": "line 15, ## 🔥 News",
+      "confidence": "high",
+      "reason": "Indicates which model-specific code is currently available in the repository"
+    },
+    {
+      "field": "pending_code_release",
+      "value": "Code with GPT3.5 and TigerBot to be released.",
+      "normalized_value": "Code with GPT3.5 and TigerBot to be released.",
+      "evidence": "- (2024.2) (Internal Code-Reviewing) Code with GPT3.5 and TigerBot to be released.",
+      "evidence_location": "line 12, ## 🔥 News",
+      "confidence": "high",
+      "reason": "Indicates additional code (for GPT3.5 and TigerBot) planned for future release, relevant for reuse expectations"
+    }
+  ]
+}

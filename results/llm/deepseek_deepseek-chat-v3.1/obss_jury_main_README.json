@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "Jury",
+      "normalized_value": "Jury",
+      "evidence": "<h1 align=\"center\">Jury</h1>",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the name of the artifact"
+    },
+    {
+      "field": "short_description",
+      "value": "A comprehensive toolkit for evaluating NLP experiments offering various automated metrics.",
+      "normalized_value": "A comprehensive toolkit for evaluating NLP experiments offering various automated metrics.",
+      "evidence": "A comprehensive toolkit for evaluating NLP experiments offering various automated metrics.",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Describes the purpose and functionality of the project"
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/obss/jury",
+      "normalized_value": "https://github.com/obss/jury",
+      "evidence": "git clone https://github.com/obss/jury.git",
+      "evidence_location": "93",
+      "confidence": "high",
+      "reason": "Provides the GitHub repository URL for accessing the source code"
+    },
+    {
+      "field": "pypi_package",
+      "value": "jury",
+      "normalized_value": "jury",
+      "evidence": "pip install jury",
+      "evidence_location": "89",
+      "confidence": "high",
+      "reason": "Specifies the PyPI package name for installation"
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "normalized_value": "MIT",
+      "evidence": "License: MIT",
+      "evidence_location": "292",
+      "confidence": "high",
+      "reason": "Specifies the software license for reuse"
+    },
+    {
+      "field": "doi",
+      "value": "10.48550/arXiv.2310.02040",
+      "normalized_value": "10.48550/arXiv.2310.02040",
+      "evidence": "10.48550/arXiv.2310.02040",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Provides the DOI for citing the associated paper"
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install jury",
+      "normalized_value": "pip install jury",
+      "evidence": "pip install jury",
+      "evidence_location": "89",
+      "confidence": "high",
+      "reason": "Primary installation command for the package"
+    },
+    {
+      "field": "source_installation_commands",
+      "value": "git clone https://github.com/obss/jury.git\ncd jury\npython setup.py install",
+      "normalized_value": "git clone https://github.com/obss/jury.git cd jury python setup.py install",
+      "evidence": "git clone https://github.com/obss/jury.git\n    cd jury\n    python setup.py install",
+      "evidence_location": "93-95",
+      "confidence": "high",
+      "reason": "Instructions for building and installing from source"
+    },
+    {
+      "field": "supported_metrics",
+      "value": "Accuracy-Numeric, Accuracy-Text, Bartscore, Bertscore, Bleu, Bleurt, CER, CHRF, COMET, F1-Numeric, F1-Text, METEOR, Precision-Numeric, Precision-Text, Prism, Recall-Numeric, Recall-Text, ROUGE, SacreBleu, Seqeval, Squad, TER, WER",
+      "normalized_value": "Accuracy-Numeric, Accuracy-Text, Bartscore, Bertscore, Bleu, Bleurt, CER, CHRF, COMET, F1-Numeric, F1-Text, METEOR, Precision-Numeric, Precision-Text, Prism, Recall-Numeric, Recall-Text, ROUGE, SacreBleu, Seqeval, Squad, TER, WER",
+      "evidence": "| Metric                                                                        | Jury Support       | HF/evaluate Support |\n|-------------------------------------------------------------------------------|--------------------|---------------------|\n| Accuracy-Numeric                                                              | :heavy_check_mark: | :white_check_mark:  |\n| Accuracy-Text                                                                 | :heavy_check_mark: | :x:                 |\n| Bartscore                                                                     | :heavy_check_mark: | :x:                 |\n| Bertscore                                                                     | :heavy_check_mark: | :white_check_mark:  |\n| Bleu                                                                          | :heavy_check_mark: | :white_check_mark:  |\n| Bleurt                                                                        | :heavy_check_mark: | :white_check_mark:  |\n| CER                                                                           | :heavy_check_mark: | :white_check_mark:  |\n| CHRF                                                                          | :heavy_check_mark: | :white_check_mark:  |\n| COMET                                                                         | :heavy_check_mark: | :white_check_mark:  |\n| F1-Numeric                                                                    | :heavy_check_mark: | :white_check_mark:  |\n| F1-Text                                                                       | :heavy_check_mark: | :x:                 |\n| METEOR                                                                        | :heavy_check_mark: | :white_check_mark:  |\n| Precision-Numeric                                                             | :heavy_check_mark: | :white_check_mark:  |\n| Precision-Text                                                                | :heavy_check_mark: | :x:                 |\n| Prism                                                                         | :heavy_check_mark: | :x:                 |\n| Recall-Numeric                                                                | :heavy_check_mark: | :white_check_mark:  |\n| Recall-Text                                                                   | :heavy_check_mark: | :x:                 |\n| ROUGE                                                                         | :heavy_check_mark: | :white_check_mark:  |\n| SacreBleu                                                                     | :heavy_check_mark: | :white_check_mark:  |\n| Seqeval                                                                       | :heavy_check_mark: | :white_check_mark:  |\n| Squad                                                                         | :heavy_check_mark: | :white_check_mark:  |\n| TER                                                                           | :heavy_check_mark: | :white_check_mark:  |\n| WER                                                                           | :heavy_check_mark: | :white_check_mark:  |",
+      "evidence_location": "40-64",
+      "confidence": "high",
+      "reason": "Lists all metrics supported by the toolkit for NLP evaluation"
+    },
+    {
+      "field": "basic_usage_example",
+      "value": "from jury import Jury\n\nscorer = Jury()\npredictions = [\n    [\"the cat is on the mat\", \"There is cat playing on the mat\"], \n    [\"Look!    a wonderful day.\"]\n]\nreferences = [\n    [\"the cat is playing on the mat.\", \"The cat plays on the mat.\"], \n    [\"Today is a wonderful day\", \"The weather outside is wonderful.\"]\n]\nscores = scorer(predictions=predictions, references=references)",
+      "normalized_value": "from jury import Jury scorer = Jury() predictions = [ [\"the cat is on the mat\", \"There is cat playing on the mat\"], [\"Look!    a wonderful day.\"] ] references = [ [\"the cat is playing on the mat.\", \"The cat plays on the mat.\"], [\"Today is a wonderful day\", \"The weather outside is wonderful.\"] ] scores = scorer(predictions=predictions, references=references)",
+      "evidence": "from jury import Jury\n\nscorer = Jury()\npredictions = [\n    [\"the cat is on the mat\", \"There is cat playing on the mat\"], \n    [\"Look!    a wonderful day.\"]\n]\nreferences = [\n    [\"the cat is playing on the mat.\", \"The cat plays on the mat.\"], \n    [\"Today is a wonderful day\", \"The weather outside is wonderful.\"]\n]\nscores = scorer(predictions=predictions, references=references)",
+      "evidence_location": "108-121",
+      "confidence": "high",
+      "reason": "Shows basic API usage for evaluating NLP experiments"
+    },
+    {
+      "field": "cli_usage_command",
+      "value": "jury eval --predictions /path/to/predictions.txt --references /path/to/references.txt --reduce_fn max --export /path/to/export.txt",
+      "normalized_value": "jury eval --predictions /path/to/predictions.txt --references /path/to/references.txt --reduce_fn max --export /path/to/export.txt",
+      "evidence": "jury eval --predictions /path/to/predictions.txt --references /path/to/references.txt --reduce_fn max --export /path/to/export.txt",
+      "evidence_location": "173",
+      "confidence": "high",
+      "reason": "Command-line interface usage for evaluation"
+    },
+    {
+      "field": "citation",
+      "value": "@misc{cavusoglu2023jury,\n      title={Jury: A Comprehensive Evaluation Toolkit}, \n      author={Devrim Cavusoglu and Ulas Sert and Secil Sen and Sinan Altinuc},\n      year={2023},\n      eprint={2310.02040},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL},\n      doi={10.48550/arXiv.2310.02040}\n    }",
+      "normalized_value": "@misc{cavusoglu2023jury, title={Jury: A Comprehensive Evaluation Toolkit}, author={Devrim Cavusoglu and Ulas Sert and Secil Sen and Sinan Altinuc}, year={2023}, eprint={2310.02040}, archivePrefix={arXiv}, primaryClass={cs.CL}, doi={10.48550/arXiv.2310.02040} }",
+      "evidence": "@misc{cavusoglu2023jury,\n      title={Jury: A Comprehensive Evaluation Toolkit}, \n      author={Devrim Cavusoglu and Ulas Sert and Secil Sen and Sinan Altinuc},\n      year={2023},\n      eprint={2310.02040},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL},\n      doi={10.48550/arXiv.2310.02040}\n    }",
+      "evidence_location": "270-278",
+      "confidence": "high",
+      "reason": "Provides the citation information for academic use"
+    },
+    {
+      "field": "development_installation",
+      "value": "git clone https://github.com/obss/jury.git\ncd jury\npip install -e \".[dev]\"\npip install -r requirements-dev.txt",
+      "normalized_value": "git clone https://github.com/obss/jury.git cd jury pip install -e \".[dev]\" pip install -r requirements-dev.txt",
+      "evidence": "git clone https://github.com/obss/jury.git\n    cd jury\n    pip install -e \".[dev]\"\n\npip install -r requirements-dev.txt",
+      "evidence_location": "237-239, 247",
+      "confidence": "high",
+      "reason": "Instructions for setting up development environment"
+    },
+    {
+      "field": "test_command",
+      "value": "python tests/run_tests.py",
+      "normalized_value": "python tests/run_tests.py",
+      "evidence": "python tests/run_tests.py",
+      "evidence_location": "253",
+      "confidence": "high",
+      "reason": "Command to run tests for verification"
+    },
+    {
+      "field": "code_style_check_command",
+      "value": "python tests/run_code_style.py check",
+      "normalized_value": "python tests/run_code_style.py check",
+      "evidence": "python tests/run_code_style.py check",
+      "evidence_location": "259",
+      "confidence": "high",
+      "reason": "Command to check code style consistency"
+    },
+    {
+      "field": "code_style_format_command",
+      "value": "python tests/run_code_style.py format",
+      "normalized_value": "python tests/run_code_style.py format",
+      "evidence": "python tests/run_code_style.py format",
+      "evidence_location": "263",
+      "confidence": "high",
+      "reason": "Command to automatically format code"
+    },
+    {
+      "field": "issue_tracker_url",
+      "value": "https://github.com/obss/jury/issues",
+      "normalized_value": "https://github.com/obss/jury/issues",
+      "evidence": "https://github.com/obss/jury/issues",
+      "evidence_location": "286-288",
+      "confidence": "high",
+      "reason": "Provides URL for reporting issues and requesting features"
+    }
+  ]
+}

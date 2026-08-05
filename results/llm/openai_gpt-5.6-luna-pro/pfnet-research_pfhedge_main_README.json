@@ -1,0 +1,256 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PFHedge: Deep Hedging in PyTorch",
+      "normalized_value": "PFHedge: Deep Hedging in PyTorch",
+      "evidence": "<h1 align=\"center\">PFHedge: Deep Hedging in PyTorch</h1>",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly identifies the artifact and its subject."
+    },
+    {
+      "field": "description",
+      "value": "PyTorch-based framework for Deep Hedging",
+      "normalized_value": "PyTorch-based framework for Deep Hedging",
+      "evidence": "**PFHedge** is a [PyTorch](https://pytorch.org/)-based framework for [Deep Hedging][deep-hedging-arxiv].",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "States the artifact's implementation framework and primary purpose."
+    },
+    {
+      "field": "task",
+      "value": "deep learning-based framework to hedge financial derivatives",
+      "normalized_value": "deep learning-based framework to hedge financial derivatives",
+      "evidence": "[**Deep Hedging**][deep-hedging-arxiv] is a deep learning-based framework to hedge financial derivatives.",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Defines the concrete financial task addressed by the artifact."
+    },
+    {
+      "field": "market_context",
+      "value": "market frictions (e.g., transaction cost)",
+      "normalized_value": "market frictions (e.g., transaction cost)",
+      "evidence": "Hedging [financial derivatives](https://en.wikipedia.org/wiki/Derivative_(finance)) in the presence of market frictions (e.g., transaction cost) is a challenging task.",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Identifies the operating context and source of difficulty for the hedging task."
+    },
+    {
+      "field": "method",
+      "value": "a neural network is trained to hedge derivatives so that it minimizes a proper risk measure",
+      "normalized_value": "a neural network is trained to hedge derivatives so that it minimizes a proper risk measure",
+      "evidence": "In this framework, a neural network is trained to hedge derivatives so that it minimizes a proper [risk measure](https://en.wikipedia.org/wiki/Risk_measure).",
+      "evidence_location": "26",
+      "confidence": "high",
+      "reason": "Summarizes the optimization method used by Deep Hedging."
+    },
+    {
+      "field": "pypi_url",
+      "value": "https://pypi.org/project/pfhedge",
+      "normalized_value": "https://pypi.org/project/pfhedge",
+      "evidence": "[![python](https://img.shields.io/pypi/pyversions/pfhedge.svg)](https://pypi.org/project/pfhedge)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides the package's PyPI access location."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://pfnet-research.github.io/pfhedge/",
+      "normalized_value": "https://pfnet-research.github.io/pfhedge/",
+      "evidence": "* [PFHedge Documentation](https://pfnet-research.github.io/pfhedge/)",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Provides the official documentation location."
+    },
+    {
+      "field": "technical_blog_url",
+      "value": "https://tech.preferred.jp/en/blog/neural-network-architecture-for-efficient-deep-hedging/",
+      "normalized_value": "https://tech.preferred.jp/en/blog/neural-network-architecture-for-efficient-deep-hedging/",
+      "evidence": "* [Neural Network Architecture for Efficient Deep Hedging](https://tech.preferred.jp/en/blog/neural-network-architecture-for-efficient-deep-hedging/) ([Japanese version](https://tech.preferred.jp/ja/blog/deep-hedging/))",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Links to an explanatory technical resource about the artifact's subject."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install pfhedge",
+      "normalized_value": "pip install pfhedge",
+      "evidence": "```sh\npip install pfhedge\n```",
+      "evidence_location": "63-67 (Install)",
+      "confidence": "high",
+      "reason": "Provides the explicit installation step."
+    },
+    {
+      "field": "pytorch_integration",
+      "value": "Your Deep-Hedger can be built as a Module and trained by any Optimizer",
+      "normalized_value": "Your Deep-Hedger can be built as a Module and trained by any Optimizer",
+      "evidence": "* Your Deep-Hedger can be built as a [`Module`](https://pytorch.org/docs/stable/generated/torch.nn.Module.html) and trained by any [`Optimizer`](https://pytorch.org/docs/stable/optim.html).",
+      "evidence_location": "45-49 (Seamless Integration with PyTorch)",
+      "confidence": "high",
+      "reason": "Describes how custom hedgers integrate with PyTorch training abstractions."
+    },
+    {
+      "field": "derivative_examples",
+      "value": "EuropeanOption, LookbackOption, VarianceSwap",
+      "normalized_value": "EuropeanOption, LookbackOption, VarianceSwap",
+      "evidence": "* **`Derivative` instruments**: A derivative is a financial instrument whose payoff is contingent on a primary instrument. An (over-the-counter) derivative is not traded on the market, and therefore the price is not directly accessible. Examples include [`EuropeanOption`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.instruments.EuropeanOption.html), [`LookbackOption`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.instruments.LookbackOption.html), [`VarianceSwap`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.instruments.VarianceSwap.html), and so forth.",
+      "evidence_location": "75-78 (Prepare a Derivative to Hedge)",
+      "confidence": "high",
+      "reason": "Lists concrete derivative instrument types supported by the documented API."
+    },
+    {
+      "field": "underlying_process",
+      "value": "geometric Brownian motion",
+      "normalized_value": "geometric Brownian motion",
+      "evidence": "We consider a [`BrownianStock`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.instruments.BrownianStock.html), which is a stock following the [geometric Brownian motion](https://en.wikipedia.org/wiki/Geometric_Brownian_motion), and a [`EuropeanOption`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.instruments.EuropeanOption.html) which is contingent on it.",
+      "evidence_location": "80",
+      "confidence": "high",
+      "reason": "Specifies the stochastic process used in the primary example."
+    },
+    {
+      "field": "transaction_cost",
+      "value": "1 basis point",
+      "normalized_value": "1 basis point",
+      "evidence": "We assume that the stock has a transaction cost of 1 basis point.",
+      "evidence_location": "81",
+      "confidence": "high",
+      "reason": "Provides a concrete market-friction parameter for reproducing the example."
+    },
+    {
+      "field": "hedger_input_features",
+      "value": "inputs=[\"log_moneyness\", \"expiry_time\", \"volatility\", \"prev_hedge\"]",
+      "normalized_value": "inputs=[\"log_moneyness\", \"expiry_time\", \"volatility\", \"prev_hedge\"]",
+      "evidence": "hedger = Hedger(model, inputs=[\"log_moneyness\", \"expiry_time\", \"volatility\", \"prev_hedge\"])",
+      "evidence_location": "117-123 (Create Your Hedger)",
+      "confidence": "high",
+      "reason": "Provides the exact input-feature configuration used in the example hedger."
+    },
+    {
+      "field": "built_in_hedging_models",
+      "value": "MultiLayerPerceptron, BlackScholes, WhalleyWilmott",
+      "normalized_value": "MultiLayerPerceptron, BlackScholes, WhalleyWilmott",
+      "evidence": "    - [`MultiLayerPerceptron`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.MultiLayerPerceptron.html): [Multi-layer perceptron](https://en.wikipedia.org/wiki/Multilayer_perceptron).\n    - [`BlackScholes`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.BlackScholes.html): [Black-Scholes](https://en.wikipedia.org/wiki/Delta_neutral)' delta-hedging strategy.\n    - [`WhalleyWilmott`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.WhalleyWilmott.html): [Whalley-Wilmott][whalley-wilmott]'s asymptotically optimal strategy for small costs.",
+      "evidence_location": "106-109 (Create Your Hedger)",
+      "confidence": "high",
+      "reason": "Names the documented built-in hedging model choices."
+    },
+    {
+      "field": "available_risk_measures",
+      "value": "EntropicRiskMeasure, ExpectedShortFall (CVaR)",
+      "normalized_value": "EntropicRiskMeasure, ExpectedShortFall (CVaR)",
+      "evidence": "    - [`EntropicRiskMeasure`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.EntropicRiskMeasure.html): [Entropic Risk Measure](https://en.wikipedia.org/wiki/Entropic_risk_measure), a risk measure derived from [exponential utility](https://en.wikipedia.org/wiki/Exponential_utility).\n    - [`ExpectedShortFall`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.ExpectedShortfall.html): [Expected Shortfall](https://en.wikipedia.org/wiki/Expected_shortfall) or CVaR, a common measure to assess portfolio risk.",
+      "evidence_location": "111-113 (Create Your Hedger)",
+      "confidence": "high",
+      "reason": "Identifies concrete objective functions available for hedger training."
+    },
+    {
+      "field": "example_risk_measure",
+      "value": "EntropicRiskMeasure()",
+      "normalized_value": "EntropicRiskMeasure()",
+      "evidence": "#   (criterion): EntropicRiskMeasure()",
+      "evidence_location": "127-144 (Create Your Hedger)",
+      "confidence": "high",
+      "reason": "Shows the risk measure instantiated in the documented example."
+    },
+    {
+      "field": "training_procedure",
+      "value": "In each epoch, we generate Monte Carlo paths of the asset prices and let the `hedger` hedge the derivative by trading the stock. The hedger's risk measure (`EntropicRiskMeasure()` in our case) is computed from the resulting profit and loss distribution, and the parameters in the `model` are updated.",
+      "normalized_value": "In each epoch, we generate Monte Carlo paths of the asset prices and let the `hedger` hedge the derivative by trading the stock. The hedger's risk measure (`EntropicRiskMeasure()` in our case) is computed from the resulting profit and loss distribution, and the parameters in the `model` are updated.",
+      "evidence": "In each epoch, we generate Monte Carlo paths of the asset prices and let the `hedger` hedge the derivative by trading the stock.\nThe hedger's risk measure (`EntropicRiskMeasure()` in our case) is computed from the resulting profit and loss distribution, and the parameters in the `model` are updated.",
+      "evidence_location": "149-153 (Fit and Price)",
+      "confidence": "high",
+      "reason": "Explains the Monte Carlo training loop and parameter-update mechanism."
+    },
+    {
+      "field": "training_command",
+      "value": "hedger.fit(derivative, n_epochs=200)",
+      "normalized_value": "hedger.fit(derivative, n_epochs=200)",
+      "evidence": "```py\nhedger.fit(derivative, n_epochs=200)\n```",
+      "evidence_location": "151-157 (Fit and Price)",
+      "confidence": "high",
+      "reason": "Provides the documented command for fitting the hedger."
+    },
+    {
+      "field": "pricing_method",
+      "value": "utility indifference price",
+      "normalized_value": "utility indifference price",
+      "evidence": "Once we have trained the `hedger`, we can evaluate the derivative price as utility indifference price (For details, see [Deep Hedging][deep-hedging-arxiv] and references therein).",
+      "evidence_location": "159",
+      "confidence": "high",
+      "reason": "Specifies how the trained hedger's derivative price is interpreted."
+    },
+    {
+      "field": "pricing_command",
+      "value": "price = hedger.price(derivative)",
+      "normalized_value": "price = hedger.price(derivative)",
+      "evidence": "```py\nprice = hedger.price(derivative)\n```",
+      "evidence_location": "161-163 (Fit and Price)",
+      "confidence": "high",
+      "reason": "Provides the documented inference/pricing command."
+    },
+    {
+      "field": "gpu_device_example",
+      "value": "device = torch.device(\"cuda:0\")",
+      "normalized_value": "device = torch.device(\"cuda:0\")",
+      "evidence": "device = torch.device(\"cuda:0\")",
+      "evidence_location": "171-177 (Use GPU)",
+      "confidence": "high",
+      "reason": "Shows the explicit CUDA device configuration supported for fitting and pricing."
+    },
+    {
+      "field": "custom_model_io_shape",
+      "value": "(N, H_in) -> (N, 1)",
+      "normalized_value": "(N, H_in) -> (N, 1)",
+      "evidence": "The input/output shapes is `(N, H_in) -> (N, 1)`, where `N` is the number of Monte Carlo paths of assets and `H_in` is the number of input features.",
+      "evidence_location": "216-217 (Your Own Module)",
+      "confidence": "high",
+      "reason": "Defines the interface required for custom hedging modules."
+    },
+    {
+      "field": "autogreek_capability",
+      "value": "automatic evaluation of greeks using automatic differentiation",
+      "normalized_value": "automatic evaluation of greeks using automatic differentiation",
+      "evidence": "A module [`pfhedge.autogreek`](https://pfnet-research.github.io/pfhedge/autogreek.html) provides functions implementing automatic evaluation of greeks using automatic differentiation.",
+      "evidence_location": "260-262 (Autogreek)",
+      "confidence": "high",
+      "reason": "Identifies a reusable capability for computing financial sensitivities."
+    },
+    {
+      "field": "colab_example_url",
+      "value": "https://colab.research.google.com/github/pfnet-research/pfhedge/blob/main/examples/example_readme.ipynb",
+      "normalized_value": "https://colab.research.google.com/github/pfnet-research/pfhedge/blob/main/examples/example_readme.ipynb",
+      "evidence": "[example-readme-colab]: https://colab.research.google.com/github/pfnet-research/pfhedge/blob/main/examples/example_readme.ipynb",
+      "evidence_location": "308",
+      "confidence": "high",
+      "reason": "Provides a directly runnable notebook example."
+    },
+    {
+      "field": "deep_hedging_paper_url",
+      "value": "https://arxiv.org/abs/1802.03042",
+      "normalized_value": "https://arxiv.org/abs/1802.03042",
+      "evidence": "[deep-hedging-arxiv]: https://arxiv.org/abs/1802.03042",
+      "evidence_location": "302",
+      "confidence": "high",
+      "reason": "Provides the primary Deep Hedging research reference."
+    },
+    {
+      "field": "no_transaction_band_paper_url",
+      "value": "https://arxiv.org/abs/2103.01775",
+      "normalized_value": "https://arxiv.org/abs/2103.01775",
+      "evidence": "[ntb-network-arxiv]: https://arxiv.org/abs/2103.01775",
+      "evidence_location": "305",
+      "confidence": "high",
+      "reason": "Provides the research reference for the documented No-Transaction Band Network example."
+    },
+    {
+      "field": "ownership_and_maintenance",
+      "value": "This project is owned by Preferred Networks and maintained by Shota Imaki and Masanori Hirano.",
+      "normalized_value": "This project is owned by Preferred Networks and maintained by Shota Imaki and Masanori Hirano.",
+      "evidence": "This project is owned by [Preferred Networks](https://www.preferred.jp/en/) and maintained by [Shota Imaki](https://github.com/simaki) and [Masanori Hirano](https://github.com/masanorihirano).",
+      "evidence_location": "294 (Contribution)",
+      "confidence": "high",
+      "reason": "Provides ownership and maintainer attribution for reuse and contact purposes."
+    }
+  ]
+}

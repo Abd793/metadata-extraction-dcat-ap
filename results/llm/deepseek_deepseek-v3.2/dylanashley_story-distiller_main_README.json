@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "story-distiller",
+      "normalized_value": "story-distiller",
+      "evidence": "# story-distiller",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Explicit project name in the header."
+    },
+    {
+      "field": "description",
+      "value": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc. The music tracks are fitted to a fixed narrative template based on the output of a machine learning model, which itself distills each track down to its narrative essence.",
+      "normalized_value": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc. The music tracks are fitted to a fixed narrative template based on the output of a machine learning model, which itself distills each track down to its narrative essence.",
+      "evidence": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc. The music tracks are fitted to a fixed narrative template based on the output of a machine learning model, which itself distills each track down to its narrative essence.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Direct statement of the project's purpose and method."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "This project is implemented in [Python](https://www.python.org/)",
+      "evidence_location": "line 10",
+      "confidence": "high",
+      "reason": "Explicitly states the implementation language."
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "and uses models learned with [PyTorch](https://pytorch.org).",
+      "evidence_location": "line 10",
+      "confidence": "high",
+      "reason": "Explicitly mentions the machine learning framework used."
+    },
+    {
+      "field": "clone_command",
+      "value": "git clone --sparse git@github.com:dylanashley/story-distiller.git",
+      "normalized_value": "git clone --sparse git@github.com:dylanashley/story-distiller.git",
+      "evidence": "git clone --sparse git@github.com:dylanashley/story-distiller.git",
+      "evidence_location": "lines 13-15",
+      "confidence": "high",
+      "reason": "Command to clone the repository for installation."
+    },
+    {
+      "field": "install_dependencies_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "lines 18-20",
+      "confidence": "high",
+      "reason": "Command to install Python dependencies."
+    },
+    {
+      "field": "required_tool",
+      "value": "ffmpeg",
+      "normalized_value": "ffmpeg",
+      "evidence": "it is also necessary to separately install the [ffmpeg](https://ffmpeg.org/) tool",
+      "evidence_location": "line 22",
+      "confidence": "high",
+      "reason": "Explicitly required for full functionality with supported file types."
+    },
+    {
+      "field": "build_commands",
+      "value": "make all\nsudo make install",
+      "normalized_value": "make all sudo make install",
+      "evidence": "make all\nsudo make install",
+      "evidence_location": "lines 25-28",
+      "confidence": "high",
+      "reason": "Commands for compiling and installing the tool on Linux/macOS."
+    },
+    {
+      "field": "command_line_usage",
+      "value": "sdistil files [files ...] >> playlist.txt",
+      "normalized_value": "sdistil files [files ...] >> playlist.txt",
+      "evidence": "sdistil files [files ...] >> playlist.txt",
+      "evidence_location": "lines 34-36",
+      "confidence": "high",
+      "reason": "Primary command to run the tool for its main function."
+    },
+    {
+      "field": "web_app_start_command",
+      "value": "./app.py",
+      "normalized_value": "./app.py",
+      "evidence": "./app.py",
+      "evidence_location": "lines 48-50",
+      "confidence": "high",
+      "reason": "Command to start the web application."
+    },
+    {
+      "field": "paper_title",
+      "value": "*On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media*",
+      "normalized_value": "On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media",
+      "evidence": "*On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media*",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Citation of the associated research paper for context."
+    },
+    {
+      "field": "authors",
+      "value": "Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber",
+      "normalized_value": "Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber",
+      "evidence": "Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Lists authors of the paper, important for attribution."
+    },
+    {
+      "field": "data_path",
+      "value": "data/",
+      "normalized_value": "data/",
+      "evidence": "the preprocessed album data used to train the original PyTorch models for the music albums (`data/`)",
+      "evidence_location": "line 59",
+      "confidence": "high",
+      "reason": "Location of preprocessed data for reproduction."
+    },
+    {
+      "field": "models_path",
+      "value": "results/",
+      "normalized_value": "results/",
+      "evidence": "the learned PyTorch models and template curves (`results/`)",
+      "evidence_location": "line 60",
+      "confidence": "high",
+      "reason": "Location of learned models and templates for reuse."
+    },
+    {
+      "field": "extraction_scripts",
+      "value": "album_extractor.py, movie_extractor.py",
+      "normalized_value": "album_extractor.py, movie_extractor.py",
+      "evidence": "the scripts needed to learn the PyTorch models for extracting the narrative essence from either music albums (`album_extractor.py`) or movie frames (`movie_extractor.py`)",
+      "evidence_location": "line 56",
+      "confidence": "high",
+      "reason": "Scripts provided for learning models and extracting features."
+    },
+    {
+      "field": "template_learning_script",
+      "value": "template_learner.py",
+      "normalized_value": "template_learner.py",
+      "evidence": "the scripts for learning a set of template curves from scalar descriptions of items in a set of collections (`template_learner.py`)",
+      "evidence_location": "line 57",
+      "confidence": "high",
+      "reason": "Script for learning template curves, key to the method."
+    },
+    {
+      "field": "computed_metric",
+      "value": "mutual information of the different features",
+      "normalized_value": "mutual information of the different features",
+      "evidence": "compute the lower bounds for the mutual information of the different features",
+      "evidence_location": "line 56",
+      "confidence": "high",
+      "reason": "Metric used in the method for evaluation."
+    },
+    {
+      "field": "supported_file_formats",
+      "value": "most common audio file types",
+      "normalized_value": "most common audio file types",
+      "evidence": "librosa is used to process the audio files, so most common audio file types are supported.",
+      "evidence_location": "line 38",
+      "confidence": "medium",
+      "reason": "Indicates supported file types via librosa, though not a specific list."
+    },
+    {
+      "field": "template_option",
+      "value": "-t",
+      "normalized_value": "-t",
+      "evidence": "pass the `-t` argument to the program with the template file as an argument.",
+      "evidence_location": "line 40",
+      "confidence": "high",
+      "reason": "Command-line option for using different templates."
+    },
+    {
+      "field": "data_availability_note",
+      "value": "the raw data used to train the movie frame extractor is not possible to release due to copyright issues.",
+      "normalized_value": "the raw data used to train the movie frame extractor is not possible to release due to copyright issues.",
+      "evidence": "the raw data used to train the movie frame extractor is not possible to release due to copyright issues.",
+      "evidence_location": "line 67",
+      "confidence": "high",
+      "reason": "Important limitation for reproduction and data reuse."
+    },
+    {
+      "field": "preprocessing_tool_reference",
+      "value": "CLIP features from images can be done straightforwardly using the [official implementation](https://github.com/openai/CLIP).",
+      "normalized_value": "CLIP features from images can be done straightforwardly using the [official implementation](https://github.com/openai/CLIP).",
+      "evidence": "Preprocessing to extract CLIP features from images can be done straightforwardly using the [official implementation](https://github.com/openai/CLIP).",
+      "evidence_location": "line 67",
+      "confidence": "high",
+      "reason": "Reference to tool needed for preprocessing image data."
+    }
+  ]
+}

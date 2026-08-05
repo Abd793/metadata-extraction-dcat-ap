@@ -1,0 +1,292 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "conditional-probing",
+      "normalized_value": "conditional-probing",
+      "evidence": "# conditional-probing",
+      "evidence_location": "5; # conditional-probing",
+      "confidence": "high",
+      "reason": "Identifies the artifact and repository project."
+    },
+    {
+      "field": "artifact_description",
+      "value": "Codebase for easy specification of (conditional) (V-information) probing experiments.",
+      "normalized_value": "Codebase for easy specification of (conditional) (V-information) probing experiments.",
+      "evidence": "Codebase for easy specification of (conditional) (V-information) probing experiments.",
+      "evidence_location": "7; # conditional-probing",
+      "confidence": "high",
+      "reason": "States the primary purpose of the codebase."
+    },
+    {
+      "field": "core_method",
+      "value": "measure only the aspects of property that aren't explainable by the baseline of your choice.",
+      "normalized_value": "measure only the aspects of property that aren't explainable by the baseline of your choice.",
+      "evidence": "- **Conditional probing**: measure only the aspects of property that aren't explainable by the baseline of your choice.",
+      "evidence_location": "9-10; Highlights",
+      "confidence": "high",
+      "reason": "Defines the central conditional-probing method."
+    },
+    {
+      "field": "representation_inputs",
+      "value": "Train a probe using one or many layers from one or many models as input representations; loading and concatenation of representations performed automatically.",
+      "normalized_value": "Train a probe using one or many layers from one or many models as input representations; loading and concatenation of representations performed automatically.",
+      "evidence": "- Train a probe using one or many layers from one or many models as input representations; loading and concatenation of representations performed automatically.",
+      "evidence_location": "11; Highlights",
+      "confidence": "high",
+      "reason": "Describes the supported representation sources and automatic combination behavior."
+    },
+    {
+      "field": "huggingface_integration",
+      "value": "Integration with huggingface for specifying representation.",
+      "normalized_value": "Integration with huggingface for specifying representation.",
+      "evidence": "Integration with huggingface for specifying representation.",
+      "evidence_location": "13; Highlights",
+      "confidence": "high",
+      "reason": "Identifies the framework integration used to specify representations."
+    },
+    {
+      "field": "token_alignment_method",
+      "value": "Heuristic subword-token-to-token alignment of [Tenney et al., 2019](https://openreview.net/forum?id=SJzSgnRcKX) performed per-model.",
+      "normalized_value": "Heuristic subword-token-to-token alignment of [Tenney et al., 2019](https://openreview.net/forum?id=SJzSgnRcKX) performed per-model.",
+      "evidence": "- Heuristic subword-token-to-token alignment of [Tenney et al., 2019](https://openreview.net/forum?id=SJzSgnRcKX) performed per-model.",
+      "evidence_location": "13; Highlights",
+      "confidence": "high",
+      "reason": "Specifies how subword representations are aligned to corpus tokens."
+    },
+    {
+      "field": "cache_format",
+      "value": "Sort of smart caching of tokenized datasets and subword token alignment matrices to `hdf5` files.",
+      "normalized_value": "Sort of smart caching of tokenized datasets and subword token alignment matrices to `hdf5` files.",
+      "evidence": "- Sort of smart caching of tokenized datasets and subword token alignment matrices to `hdf5` files.",
+      "evidence_location": "14; Highlights",
+      "confidence": "high",
+      "reason": "Provides a concrete storage format for cached preprocessing artifacts."
+    },
+    {
+      "field": "paper",
+      "value": "Conditional probing: measuring usable information beyond a baseline (EMNLP 2021); https://arxiv.org/pdf/2109.09234.pdf",
+      "normalized_value": "Conditional probing: measuring usable information beyond a baseline (EMNLP 2021); https://arxiv.org/pdf/2109.09234.pdf",
+      "evidence": "Written for the paper [Conditional probing: measuring usable information beyond a baseline (EMNLP 2021)](https://arxiv.org/pdf/2109.09234.pdf).",
+      "evidence_location": "19; # conditional-probing",
+      "confidence": "high",
+      "reason": "Links the artifact to its associated research paper."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/john-hewitt/vinfo-probing-internal/",
+      "normalized_value": "https://github.com/john-hewitt/vinfo-probing-internal/",
+      "evidence": "git clone https://github.com/john-hewitt/vinfo-probing-internal/",
+      "evidence_location": "24; Installing and getting started",
+      "confidence": "high",
+      "reason": "Provides the repository location needed to obtain the artifact."
+    },
+    {
+      "field": "python_support",
+      "value": "python3",
+      "normalized_value": "python3",
+      "evidence": "Only `python3` is supported.",
+      "evidence_location": "27; Installing and getting started",
+      "confidence": "high",
+      "reason": "Specifies the supported Python executable/version family."
+    },
+    {
+      "field": "virtual_environment_setup",
+      "value": "conda create --name sp-env\nconda activate sp-env",
+      "normalized_value": "conda create --name sp-env conda activate sp-env",
+      "evidence": "        conda create --name sp-env\n        conda activate sp-env",
+      "evidence_location": "27-30; Installing and getting started",
+      "confidence": "high",
+      "reason": "Provides the optional environment creation and activation commands."
+    },
+    {
+      "field": "dependency_installation",
+      "value": "conda install --file requirements.txt",
+      "normalized_value": "conda install --file requirements.txt",
+      "evidence": "conda install --file requirements.txt",
+      "evidence_location": "32-34; Installing and getting started",
+      "confidence": "high",
+      "reason": "Defines how to install the required packages."
+    },
+    {
+      "field": "example_experiment",
+      "value": "trains and reports a part-of-speech probe on layer 5 of the `roberta-base` model.",
+      "normalized_value": "trains and reports a part-of-speech probe on layer 5 of the `roberta-base` model.",
+      "evidence": "1. Run your first experiment using a provided config file. This experiment trains and reports a part-of-speech probe on layer 5 of the `roberta-base` model.",
+      "evidence_location": "36; Installing and getting started",
+      "confidence": "high",
+      "reason": "Summarizes the provided starter experiment, including task, layer, and model."
+    },
+    {
+      "field": "example_run_command",
+      "value": "python vinfo/experiment.py example/roberta768-upos-layer5-example-cpu.yaml",
+      "normalized_value": "python vinfo/experiment.py example/roberta768-upos-layer5-example-cpu.yaml",
+      "evidence": "python vinfo/experiment.py example/roberta768-upos-layer5-example-cpu.yaml",
+      "evidence_location": "38; Installing and getting started",
+      "confidence": "high",
+      "reason": "Provides a directly executable command for running the first experiment."
+    },
+    {
+      "field": "reported_output_semantics",
+      "value": "The `v_entropy` files store a single float: the variational entropy as estimated on the `{dev,train}` set. The `label_acc` files store a single float: the part-of-speech tagging accuracies on the `{dev,train}` set. The `params` file stores the probe parameters.",
+      "normalized_value": "The `v_entropy` files store a single float: the variational entropy as estimated on the `{dev,train}` set. The `label_acc` files store a single float: the part-of-speech tagging accuracies on the `{dev,train}` set. The `params` file stores the probe parameters.",
+      "evidence": "The `v_entropy` files store a single float: the variational entropy as estimated on the `{dev,train}` set. The `label_acc` files store a single float: the part-of-speech tagging accuracies on the `{dev,train}` set. The `params` file stores the probe parameters.",
+      "evidence_location": "48; Installing and getting started",
+      "confidence": "high",
+      "reason": "Explains the meanings and contents of the main experiment output files."
+    },
+    {
+      "field": "configuration_format",
+      "value": "yaml configuration files that specify experiment settings.",
+      "normalized_value": "yaml configuration files that specify experiment settings.",
+      "evidence": "This codebase revolves around the `yaml` configuration files that specify experiment settings.",
+      "evidence_location": "52-54; YAML-centric Design",
+      "confidence": "high",
+      "reason": "Identifies the configuration mechanism required to define experiments."
+    },
+    {
+      "field": "yaml_constructed_components",
+      "value": "all python classes defined in the codebase are actually constructed with the `yaml` loading process.",
+      "normalized_value": "all python classes defined in the codebase are actually constructed with the `yaml` loading process.",
+      "evidence": "Intended to minimize the amount of experiment logic code needed to swap out new `Probe`, `Loss`, or `Model` classes when extending the repository, all python classes defined in the codebase are actually constructed with the `yaml` loading process.",
+      "evidence_location": "55; YAML-centric Design",
+      "confidence": "high",
+      "reason": "Documents the mechanism used to instantiate and swap experiment components."
+    },
+    {
+      "field": "walkthrough_model",
+      "value": "google/bert_uncased_L-4_H-128_A-2",
+      "normalized_value": "google/bert_uncased_L-4_H-128_A-2",
+      "evidence": "model_string: &model1string google/bert_uncased_L-4_H-128_A-2",
+      "evidence_location": "169-174; dataset",
+      "confidence": "high",
+      "reason": "Names the Hugging Face model used in the configuration walkthrough."
+    },
+    {
+      "field": "walkthrough_model_layer_index",
+      "value": "1",
+      "normalized_value": "1",
+      "evidence": "index: 1",
+      "evidence_location": "197-203; model",
+      "confidence": "high",
+      "reason": "Specifies the representation layer index in the walkthrough model configuration."
+    },
+    {
+      "field": "walkthrough_model_trainable",
+      "value": "False",
+      "normalized_value": "False",
+      "evidence": "trainable: False",
+      "evidence_location": "197-203; model",
+      "confidence": "high",
+      "reason": "Specifies whether the walkthrough model is updated during training."
+    },
+    {
+      "field": "probe_configuration",
+      "value": "probe: !OneWordLinearLabelProbe\n  args:\n    device: cpu\n  model_dim: 128\n  label_space_size: 50",
+      "normalized_value": "probe: !OneWordLinearLabelProbe args: device: cpu model_dim: 128 label_space_size: 50",
+      "evidence": "```\nprobe: !OneWordLinearLabelProbe\n  args:\n    device: cpu\n  model_dim: 128\n  label_space_size: 50\n```",
+      "evidence_location": "211-217; probe",
+      "confidence": "high",
+      "reason": "Provides the probe class and its required input/output dimensions."
+    },
+    {
+      "field": "training_configuration",
+      "value": "regimen: !ProbeRegimen\n  args:\n    device: cpu\n  max_epochs: 50\n  params_path: params\n  reporting_root: &id_reporting_root example/pos-bert-base.yaml.results\n  eval_dev_every: 10",
+      "normalized_value": "regimen: !ProbeRegimen args: device: cpu max_epochs: 50 params_path: params reporting_root: &id_reporting_root example/pos-bert-base.yaml.results eval_dev_every: 10",
+      "evidence": "```\nregimen: !ProbeRegimen\n  args: \n    device: cpu\n  max_epochs: 50\n  params_path: params\n  reporting_root: &id_reporting_root example/pos-bert-base.yaml.results\n  eval_dev_every: 10\n```",
+      "evidence_location": "223-230; regimen",
+      "confidence": "high",
+      "reason": "Defines the example training duration, parameter output path, reporting directory, and evaluation interval."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "label_accuracy, v_entropy",
+      "normalized_value": "label_accuracy, v_entropy",
+      "evidence": "```\nreporter: !IndependentLabelReporter\n  args:\n    device: cpu\n  reporting_root: *id_reporting_root\n  reporting_methods:\n    - label_accuracy\n    - v_entropy\n```",
+      "evidence_location": "239-246; reproter",
+      "confidence": "high",
+      "reason": "Lists the evaluation metrics configured for reporting."
+    },
+    {
+      "field": "reporting_output_pattern",
+      "value": "<reporting_root>/<split>.<reporting_string>",
+      "normalized_value": "<reporting_root>/<split>.<reporting_string>",
+      "evidence": "The result of the metric is written to `<reporting_root>/<split>.<reporting_string>`.",
+      "evidence_location": "247; reproter",
+      "confidence": "high",
+      "reason": "Specifies the filesystem naming pattern for metric results."
+    },
+    {
+      "field": "paper_reproduction_link",
+      "value": "https://worksheets.codalab.org/worksheets/0x46190ef741004a43a2676a3b46ea0c76",
+      "normalized_value": "https://worksheets.codalab.org/worksheets/0x46190ef741004a43a2676a3b46ea0c76",
+      "evidence": "Take a look at our [CodaLab executable paper](https://worksheets.codalab.org/worksheets/0x46190ef741004a43a2676a3b46ea0c76) for the exact bash scripts we ran to reproduce all the numbers in the paper.",
+      "evidence_location": "256-257; Replicating the EMNLP 2021 paper",
+      "confidence": "high",
+      "reason": "Provides the executable-paper resource and exact reproduction scripts."
+    },
+    {
+      "field": "reproduction_config_path",
+      "value": "configs/codalab/round1/{task_name}/{roberta768,elmo}/layer-*.yaml",
+      "normalized_value": "configs/codalab/round1/{task_name}/{roberta768,elmo}/layer-*.yaml",
+      "evidence": "        configs/codalab/round1/{task_name}/{roberta768,elmo}/layer-*.yaml",
+      "evidence_location": "258-260; Replicating the EMNLP 2021 paper",
+      "confidence": "high",
+      "reason": "Identifies the configuration path pattern used for paper experiments."
+    },
+    {
+      "field": "supported_tasks",
+      "value": "ptb_pos, upos, dep_rel, named_entities, sst2",
+      "normalized_value": "ptb_pos, upos, dep_rel, named_entities, sst2",
+      "evidence": "where `task_name` is one of `ptb_pos, upos, dep_rel, named_entities, sst2`.",
+      "evidence_location": "262; Replicating the EMNLP 2021 paper",
+      "confidence": "high",
+      "reason": "Lists the concrete tasks covered by the paper-reproduction configurations."
+    },
+    {
+      "field": "data_source",
+      "value": "Ontonotes 5.0 (LDC2013T19)",
+      "normalized_value": "Ontonotes 5.0 (LDC2013T19)",
+      "evidence": "Let `ldc_ontonotes_path` be the path to your LDC download of `Ontonotes 5.0`, that is, `LDC2013T19`.",
+      "evidence_location": "281-283; Ontonotes",
+      "confidence": "high",
+      "reason": "Identifies the external corpus and its LDC identifier needed for data preparation."
+    },
+    {
+      "field": "required_data_archives",
+      "value": "conll-2012-train.v4.tar.gz, conll-2012-development.v4.tar.gz, conll-2012-test-key.tar.gz",
+      "normalized_value": "conll-2012-train.v4.tar.gz, conll-2012-development.v4.tar.gz, conll-2012-test-key.tar.gz",
+      "evidence": "and manually download `conll-2012-train.v4.tar.gz`, `conll-2012-development.v4.tar.gz`, and then navigate to the `test` folder and download `conll-2012-test-key.tar.gz`. Place these files in the `scripts/ontonotes_scripts/` directory of this repository.",
+      "evidence_location": "285-289; Ontonotes",
+      "confidence": "high",
+      "reason": "Names the archive files required before running Ontonotes preparation."
+    },
+    {
+      "field": "data_preparation_command",
+      "value": "cd scripts/ontonotes_scripts\nldc_ontonotes_path=/scr/corpora/ldc/2013/LDC2013T19/ontonotes-release-5.0/data/files/data/\nbash prep_ontonotes_v4.sh $ldc_onotonotes_path",
+      "normalized_value": "cd scripts/ontonotes_scripts ldc_ontonotes_path=/scr/corpora/ldc/2013/LDC2013T19/ontonotes-release-5.0/data/files/data/ bash prep_ontonotes_v4.sh $ldc_onotonotes_path",
+      "evidence": "```\ncd scripts/ontonotes_scripts\nldc_ontonotes_path=/scr/corpora/ldc/2013/LDC2013T19/ontonotes-release-5.0/data/files/data/\nbash prep_ontonotes_v4.sh $ldc_onotonotes_path\n```",
+      "evidence_location": "291-297; Ontonotes",
+      "confidence": "high",
+      "reason": "Provides the documented command sequence for preparing the Ontonotes data."
+    },
+    {
+      "field": "ontonotes_split_statistics",
+      "value": "|                     | Train     | Dev     | Test    |\n|---------------------|-----------|---------|---------|\n| Sentences           |  59,924   | 8,528   | 8,262   |\n| Tokens              | 1,088,503 | 147,724 | 152,728 |",
+      "normalized_value": "| | Train | Dev | Test | |---------------------|-----------|---------|---------| | Sentences | 59,924 | 8,528 | 8,262 | | Tokens | 1,088,503 | 147,724 | 152,728 |",
+      "evidence": "|                     | Train     | Dev     | Test    |\n|---------------------|-----------|---------|---------|\n| Sentences           |  59,924   | 8,528   | 8,262   |\n| Tokens              | 1,088,503 | 147,724 | 152,728 |",
+      "evidence_location": "301-306; Ontonotes",
+      "confidence": "high",
+      "reason": "Records the documented train, development, and test corpus sizes."
+    },
+    {
+      "field": "citation",
+      "value": "@InProceedings{hewitt2021conditional,\n  author =      \"Hewitt, John and Ethayarajh, Kawin and Liang, Percy and Manning, Christopher D.\",\n  title =       \"Conditional probing: measuring usable information beyond a baseline\",\n  booktitle =   \"Conference on Empirical Methods in Natural Language Processing\",\n  year =        \"2021\",\n  publisher =   \"Association for Computational Linguistics\",\n  location =    \"Punta Cana, Dominican Republic\",\n}",
+      "normalized_value": "@InProceedings{hewitt2021conditional, author = \"Hewitt, John and Ethayarajh, Kawin and Liang, Percy and Manning, Christopher D.\", title = \"Conditional probing: measuring usable information beyond a baseline\", booktitle = \"Conference on Empirical Methods in Natural Language Processing\", year = \"2021\", publisher = \"Association for Computational Linguistics\", location = \"Punta Cana, Dominican Republic\", }",
+      "evidence": "@InProceedings{hewitt2021conditional,\n        author =      \"Hewitt, John and Ethayarajh, Kawin and Liang, Percy and Manning, Christopher D.\",\n        title =       \"Conditional probing: measuring usable information beyond a baseline\",\n        booktitle =   \"Conference on Empirical Methods in Natural Language Processing\",\n        year =        \"2021\",\n        publisher =   \"Association for Computational Linguistics\",\n        location =    \"Punta Cana, Dominican Republic\",\n      }",
+      "evidence_location": "308-319; Citation",
+      "confidence": "high",
+      "reason": "Provides the requested attribution details for reuse and scholarly citation."
+    }
+  ]
+}

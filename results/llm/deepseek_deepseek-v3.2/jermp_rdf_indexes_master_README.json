@@ -1,0 +1,238 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Indexes for RDF data",
+      "normalized_value": "Indexes for RDF data",
+      "evidence": "Indexes for RDF data",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "This is the title/name of the artifact as presented at the start of the document."
+    },
+    {
+      "field": "artifact_description",
+      "value": "This is the C++ library used for the experiments in the paper [*Compressed Indexes for Fast Search of Semantic Data*]",
+      "normalized_value": "This is the C++ library used for the experiments in the paper [*Compressed Indexes for Fast Search of Semantic Data*]",
+      "evidence": "This is the C++ library used for the experiments in the paper [*Compressed Indexes for Fast Search of Semantic Data*](http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf) [1], by Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini.",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Clearly states the purpose and context of the library."
+    },
+    {
+      "field": "paper_title",
+      "value": "*Compressed Indexes for Fast Search of Semantic Data*",
+      "normalized_value": "*Compressed Indexes for Fast Search of Semantic Data*",
+      "evidence": "[*Compressed Indexes for Fast Search of Semantic Data*](http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf)",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "The paper associated with the artifact is explicitly named."
+    },
+    {
+      "field": "paper_url",
+      "value": "http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf",
+      "normalized_value": "http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf",
+      "evidence": "[*Compressed Indexes for Fast Search of Semantic Data*](http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf)",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/jermp/rdf_indexes.git",
+      "normalized_value": "https://github.com/jermp/rdf_indexes.git",
+      "evidence": "git clone --recursive https://github.com/jermp/rdf_indexes.git",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "The GitHub repository URL is provided in the clone command."
+    },
+    {
+      "field": "programming_language",
+      "value": "C++",
+      "normalized_value": "C++",
+      "evidence": "This is the C++ library used for the experiments",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Explicitly states the library is implemented in C++."
+    },
+    {
+      "field": "compiler_requirements",
+      "value": "Linux with `gcc` 7.3.0, 8.3.0, 9.2.0 and on Mac 10.14 with `clang` 10.0.0.",
+      "normalized_value": "Linux with `gcc` 7.3.0, 8.3.0, 9.2.0 and on Mac 10.14 with `clang` 10.0.0.",
+      "evidence": "The code is tested on Linux with `gcc` 7.3.0, 8.3.0, 9.2.0 and on Mac 10.14 with `clang` 10.0.0.",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Provides specific compiler and platform requirements for reproducibility."
+    },
+    {
+      "field": "build_tool",
+      "value": "CMake",
+      "normalized_value": "CMake",
+      "evidence": "[`CMake`](https://cmake.org/) is required to build the code.",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Explicitly names the build tool required."
+    },
+    {
+      "field": "clone_command",
+      "value": "git clone --recursive https://github.com/jermp/rdf_indexes.git",
+      "normalized_value": "git clone --recursive https://github.com/jermp/rdf_indexes.git",
+      "evidence": "git clone --recursive https://github.com/jermp/rdf_indexes.git",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Exact command to clone the repository, essential for access."
+    },
+    {
+      "field": "build_release_steps",
+      "value": "mkdir build\n    cd build\n    cmake ..\n    make -j",
+      "normalized_value": "mkdir build\n    cd build\n    cmake ..\n    make -j",
+      "evidence": "mkdir build\n    cd build\n    cmake ..\n    make -j",
+      "evidence_location": "37-40",
+      "confidence": "high",
+      "reason": "Step-by-step commands to build the library in release mode."
+    },
+    {
+      "field": "build_debug_steps",
+      "value": "mkdir debug_build\n    cd debug_build\n    cmake .. -DCMAKE_BUILD_TYPE=Debug -DUSE_SANITIZERS=On\n    make -j",
+      "normalized_value": "mkdir debug_build\n    cd debug_build\n    cmake .. -DCMAKE_BUILD_TYPE=Debug -DUSE_SANITIZERS=On\n    make -j",
+      "evidence": "mkdir debug_build\n    cd debug_build\n    cmake .. -DCMAKE_BUILD_TYPE=Debug -DUSE_SANITIZERS=On\n    make -j",
+      "evidence_location": "44-47",
+      "confidence": "high",
+      "reason": "Step-by-step commands to build the library in debug/testing mode."
+    },
+    {
+      "field": "python_dependencies",
+      "value": "`mmh3` and `numpy`",
+      "normalized_value": "`mmh3` and `numpy`",
+      "evidence": "The scripts require the modules `mmh3` and `numpy` that can be easily installed with `pip3 install mmh3 numpy`.",
+      "evidence_location": "110-111",
+      "confidence": "high",
+      "reason": "Lists specific Python packages needed for data preparation scripts."
+    },
+    {
+      "field": "example_dataset",
+      "value": "wordnet31.gz",
+      "normalized_value": "wordnet31.gz",
+      "evidence": "For the following example, assume to work with the dataset provided in the folder `test_data`: `wordnet31.gz`.",
+      "evidence_location": "101",
+      "confidence": "high",
+      "reason": "Names a concrete dataset used in examples and tests, aiding reproduction."
+    },
+    {
+      "field": "dataset_source",
+      "value": "http://www.rdfhdt.org/datasets",
+      "normalized_value": "http://www.rdfhdt.org/datasets",
+      "evidence": "This dataset has been downloaded from [http://www.rdfhdt.org/datasets](http://www.rdfhdt.org/datasets)",
+      "evidence_location": "102",
+      "confidence": "high",
+      "reason": "Provides the URL where the example dataset can be obtained."
+    },
+    {
+      "field": "data_preparation_script",
+      "value": "bash process.sh ../test_data/wordnet31.gz",
+      "normalized_value": "bash process.sh ../test_data/wordnet31.gz",
+      "evidence": "bash process.sh ../test_data/wordnet31.gz",
+      "evidence_location": "142",
+      "confidence": "high",
+      "reason": "Command to run the complete data preparation pipeline."
+    },
+    {
+      "field": "index_building_command",
+      "value": "./build <type> <collection_basename> [-o output_filename]",
+      "normalized_value": "./build <type> <collection_basename> [-o output_filename]",
+      "evidence": "./build <type> <collection_basename> [-o output_filename]",
+      "evidence_location": "153",
+      "confidence": "high",
+      "reason": "Core command for constructing an index, essential for usage."
+    },
+    {
+      "field": "supported_index_types",
+      "value": "compact_3t, ef_3t, vb_3t, pef_3t, pef_r_3t, pef_2to, pef_2tp",
+      "normalized_value": "compact_3t, ef_3t, vb_3t, pef_3t, pef_r_3t, pef_2to, pef_2tp",
+      "evidence": "compact_3t\n                ef_3t\n                vb_3t\n                pef_3t\n                pef_r_3t\n                pef_2to\n                pef_2tp",
+      "evidence_location": "165-172",
+      "confidence": "high",
+      "reason": "Lists all the index types implemented in the library, crucial for understanding capabilities."
+    },
+    {
+      "field": "querying_command",
+      "value": "./queries <type> <perm> <index_filename> [-q <query_filename> -n <num_queries> -w <num_wildcards>]",
+      "normalized_value": "./queries <type> <perm> <index_filename> [-q <query_filename> -n <num_queries> -w <num_wildcards>]",
+      "evidence": "./queries <type> <perm> <index_filename> [-q <query_filename> -n <num_queries> -w <num_wildcards>]",
+      "evidence_location": "198",
+      "confidence": "high",
+      "reason": "Command to query a built index, essential for usage."
+    },
+    {
+      "field": "query_pattern_description",
+      "value": "A triple selection pattern is just an ordinary integer triple with *k* wildcard symbols, for 0 ≤ *k* ≤ 3. In the library, a wildcard is represented by the integer -1.",
+      "normalized_value": "A triple selection pattern is just an ordinary integer triple with *k* wildcard symbols, for 0 ≤ *k* ≤ 3. In the library, a wildcard is represented by the integer -1.",
+      "evidence": "A triple selection pattern is just an ordinary integer triple\nwith *k* wildcard symbols, for 0 ≤ *k* ≤ 3.\nIn the library, a wildcard is represented by the integer -1.",
+      "evidence_location": "175-177",
+      "confidence": "high",
+      "reason": "Defines the format of queries, necessary for using the querying functionality."
+    },
+    {
+      "field": "statistics_command",
+      "value": "./statistics <type> <index_filename>",
+      "normalized_value": "./statistics <type> <index_filename>",
+      "evidence": "./statistics <type> <index_filename>",
+      "evidence_location": "228",
+      "confidence": "high",
+      "reason": "Command to obtain statistics about a built index, useful for analysis."
+    },
+    {
+      "field": "testing_command",
+      "value": "python ../test/check_everything.py ../test_data/wordnet31.mapped.sorted . wordnet",
+      "normalized_value": "python ../test/check_everything.py ../test_data/wordnet31.mapped.sorted . wordnet",
+      "evidence": "python ../test/check_everything.py ../test_data/wordnet31.mapped.sorted . wordnet",
+      "evidence_location": "240",
+      "confidence": "high",
+      "reason": "Command to run comprehensive tests, important for verification."
+    },
+    {
+      "field": "author_name",
+      "value": "Giulio Ermanno Pibiri",
+      "normalized_value": "Giulio Ermanno Pibiri",
+      "evidence": "* [Giulio Ermanno Pibiri](http://pages.di.unipi.it/pibiri/), <giulio.ermanno.pibiri@isti.cnr.it>",
+      "evidence_location": "273",
+      "confidence": "high",
+      "reason": "Primary author contact for attribution and questions."
+    },
+    {
+      "field": "author_email",
+      "value": "giulio.ermanno.pibiri@isti.cnr.it",
+      "normalized_value": "giulio.ermanno.pibiri@isti.cnr.it",
+      "evidence": "<giulio.ermanno.pibiri@isti.cnr.it>",
+      "evidence_location": "273",
+      "confidence": "high",
+      "reason": "Author email address for contact."
+    },
+    {
+      "field": "author_webpage",
+      "value": "http://pages.di.unipi.it/pibiri/",
+      "normalized_value": "http://pages.di.unipi.it/pibiri/",
+      "evidence": "[Giulio Ermanno Pibiri](http://pages.di.unipi.it/pibiri/)",
+      "evidence_location": "273",
+      "confidence": "high",
+      "reason": "Author webpage for further information."
+    },
+    {
+      "field": "reference_1",
+      "value": "[1] Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini. *Compressed Indexes for Fast Search of Semantic Data*. 2020. IEEE Transactions on Knowledge and Data Engineering (TKDE). 12 pages.",
+      "normalized_value": "[1] Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini. *Compressed Indexes for Fast Search of Semantic Data*. 2020. IEEE Transactions on Knowledge and Data Engineering (TKDE). 12 pages.",
+      "evidence": "* [1] Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini. *Compressed Indexes for Fast Search of Semantic Data*. 2020. IEEE Transactions on Knowledge and Data Engineering (TKDE). 12 pages.",
+      "evidence_location": "278",
+      "confidence": "high",
+      "reason": "Full citation for the primary paper associated with the artifact."
+    },
+    {
+      "field": "reference_2",
+      "value": "[2] M. A. Martínez-Prieto, M. A. Gallego, and J. D. Fernández. *Exchange and consumption of huge rdf data* in Extended Semantic Web Conference. Springer, 2012, pp. 437–452.",
+      "normalized_value": "[2] M. A. Martínez-Prieto, M. A. Gallego, and J. D. Fernández. *Exchange and consumption of huge rdf data* in Extended Semantic Web Conference. Springer, 2012, pp. 437–452.",
+      "evidence": "* [2] M. A. Martínez-Prieto, M. A. Gallego, and J. D. Fernández. *Exchange and consumption of huge rdf data* in Extended Semantic Web Conference. Springer, 2012, pp. 437–452.",
+      "evidence_location": "279-280",
+      "confidence": "high",
+      "reason": "Citation for a referenced paper (HDT software), providing context."
+    }
+  ]
+}

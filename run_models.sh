@@ -17,6 +17,19 @@
 #     qwen/qwen3.5-flash-02-23 \
 #     deepseek/deepseek-v4-pro
 
-python3 src/metadata_extract.py --parallel 1 --model deepseek/deepseek-v4-flash
-python3 src/metadata_extract.py --parallel 1 --model qwen/qwen3.5-flash-02-23
-python3 src/metadata_extract.py --parallel 1 --model openai/gpt-oss-120b
+# python3 src/metadata_extract.py --parallel 1 --model deepseek/deepseek-v4-flash
+# python3 src/metadata_extract.py --parallel 1 --model qwen/qwen3.5-flash-02-23
+# python3 src/metadata_extract.py --parallel 1 --model openai/gpt-oss-120b
+# python3 src/metadata_extract.py --parallel 1 --model qwen/qwen3.5-flash-02-23 &
+# python3 src/metadata_extract.py --parallel 1 --model qwen/qwen3.6-flash &
+# python3 src/metadata_extract.py --parallel 1 --model qwen/qwen3.7-flash &
+
+# python3 src/metadata_extract.py --parallel 1 --model deepseek/deepseek-v4-flash &
+# python3 src/metadata_extract.py --parallel 1 --model deepseek/deepseek-v3.2 &
+# python3 src/metadata_extract.py --parallel 1 --model deepseek/deepseek-chat-v3.1 &
+
+# python3 src/metadata_extract.py --parallel 1 --model moonshotai/kimi-k3 &
+
+# python3 src/metadata_extract.py --parallel 1 --model anthropic/claude-sonnet-5 &
+# python3 src/metadata_extract.py --parallel 1 --model openai/gpt-5.6-luna-pro &
+# python3 src/metadata_extract.py --parallel 1 --model google/gemini-3.6-flash &

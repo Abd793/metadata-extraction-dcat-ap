@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "EarthPT",
+      "normalized_value": "EarthPT",
+      "evidence": "# EarthPT",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Primary title of the repository identifying the artifact name."
+    },
+    {
+      "field": "description",
+      "value": "A simple repository for training time series large observation models. This repository began its life as Andrej Karpathy's [nanoGPT](https://github.com/karpathy/nanoGPT), and has been altered so that it is usable for time series data.",
+      "normalized_value": "A simple repository for training time series large observation models, based on Andrej Karpathy's nanoGPT, altered for time series data.",
+      "evidence": "A simple repository for training time series large observation models. This\nrepository began its life as Andrej Karpathy's\n[nanoGPT](https://github.com/karpathy/nanoGPT), and has been altered so that\nit is usable for time series data.",
+      "evidence_location": "lines 11-14",
+      "confidence": "high",
+      "reason": "Describes the purpose and origin of the artifact, useful for understanding what it is."
+    },
+    {
+      "field": "base_repository",
+      "value": "nanoGPT",
+      "normalized_value": "nanoGPT",
+      "evidence": "[nanoGPT](https://github.com/karpathy/nanoGPT)",
+      "evidence_location": "lines 12-13",
+      "confidence": "high",
+      "reason": "Identifies the upstream repository this artifact was forked/derived from, useful for provenance and reuse."
+    },
+    {
+      "field": "paper",
+      "value": "https://arxiv.org/abs/2309.07207",
+      "normalized_value": "https://arxiv.org/abs/2309.07207",
+      "evidence": "[EarthPT-700M](https://arxiv.org/abs/2309.07207)",
+      "evidence_location": "lines 14-15",
+      "confidence": "high",
+      "reason": "Link to the paper describing the model reproduced by this repository, essential for citation and understanding."
+    },
+    {
+      "field": "model_name",
+      "value": "EarthPT-700M",
+      "normalized_value": "EarthPT-700M",
+      "evidence": "`train.py` reproduces\n[EarthPT-700M](https://arxiv.org/abs/2309.07207) when trained on 14B time\nseries 'tokens' of ClearSky EO data within the TL UK National Grid tile.",
+      "evidence_location": "lines 14-16",
+      "confidence": "high",
+      "reason": "Names the specific model that this training script reproduces."
+    },
+    {
+      "field": "training_data",
+      "value": "14B time series 'tokens' of ClearSky EO data within the TL UK National Grid tile",
+      "normalized_value": "14B time series tokens of ClearSky EO data within the TL UK National Grid tile",
+      "evidence": "when trained on 14B time\nseries 'tokens' of ClearSky EO data within the TL UK National Grid tile.",
+      "evidence_location": "lines 15-16",
+      "confidence": "high",
+      "reason": "Specifies the dataset scale and source used for training, important for reproducibility."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "single 8xA100 40GB node",
+      "normalized_value": "8xA100 40GB node",
+      "evidence": "When run,\n`train.py` takes ~5 days to achieve Chinchilla 🐭 completion on a single 8xA100\n40GB node.",
+      "evidence_location": "lines 16-18",
+      "confidence": "high",
+      "reason": "Specifies the hardware environment and time needed to reproduce training, key reproducibility info."
+    },
+    {
+      "field": "training_time",
+      "value": "~5 days",
+      "normalized_value": "5 days",
+      "evidence": "`train.py` takes ~5 days to achieve Chinchilla 🐭 completion on a single 8xA100\n40GB node.",
+      "evidence_location": "lines 17-18",
+      "confidence": "high",
+      "reason": "Gives the expected training duration for reproducibility purposes."
+    },
+    {
+      "field": "key_files",
+      "value": "train.py (~300-line boilerplate training loop), model.py (~300-line GPT model definition with an MLP tokeniser and a regressive loss)",
+      "normalized_value": "train.py, model.py",
+      "evidence": "Within `train.py` you will find a ~300-line boilerplate training loop\nand within `model.py` you will find a ~300-line GPT model definition with an\nMLP tokeniser and a regressive loss.",
+      "evidence_location": "lines 18-20",
+      "confidence": "high",
+      "reason": "Identifies the core code files and their contents, useful for understanding the codebase structure."
+    },
+    {
+      "field": "license",
+      "value": "MIT licence",
+      "normalized_value": "MIT License",
+      "evidence": "We release this code under\nthe MIT licence in the hope that it will prove useful to others working on\nEO and timeseries large observation models.",
+      "evidence_location": "lines 23-25",
+      "confidence": "high",
+      "reason": "States the license under which the code is released, essential for reuse/legal purposes."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "- `pip install -r requirements.txt`",
+      "evidence_location": "line 31, ## install",
+      "confidence": "high",
+      "reason": "Explicit installation/dependency command needed to reproduce the environment."
+    },
+    {
+      "field": "results_description",
+      "value": "Our EarthPT-700M model is able to predict future satellite passes well into the future, and also learns semantically meaningful information about the timeseries that it is fed",
+      "normalized_value": "EarthPT-700M is able to predict future satellite passes well into the future and learns semantically meaningful information about the timeseries.",
+      "evidence": "Our EarthPT-700M model is able to predict future satellite passes well into the\nfuture, and also learns semantically meaningful information about the timeseries\nthat it is fed:",
+      "evidence_location": "lines 35-37, ## results",
+      "confidence": "high",
+      "reason": "Describes qualitative results/capabilities of the trained model, relevant for evaluation understanding."
+    },
+    {
+      "field": "pretrained_weights",
+      "value": "HuggingFace: https://doi.org/10.57967/hf/1598",
+      "normalized_value": "https://doi.org/10.57967/hf/1598",
+      "evidence": "You can find our weights for all the EarthPT models on\n[HuggingFace](https://doi.org/10.57967/hf/1598) 🤗.",
+      "evidence_location": "lines 48-49, ## pretrained weights",
+      "confidence": "high",
+      "reason": "Provides link to pretrained model checkpoints, crucial for reuse without retraining."
+    },
+    {
+      "field": "citation",
+      "value": "@article{ref_smith2023,\n    author = {Smith, M. J. and Fleming, L. and Geach, J. E.},\n    title = {{EarthPT: a time series foundation model for Earth Observation}},\n    journal = {arXiv},\n    year = {2023},\n    eprint = {2309.07207},\n    doi = {10.48550/arXiv.2309.07207}\n}",
+      "normalized_value": "Smith, M. J., Fleming, L., Geach, J. E. (2023). EarthPT: a time series foundation model for Earth Observation. arXiv:2309.07207. doi:10.48550/arXiv.2309.07207",
+      "evidence": "@article{ref_smith2023,\n    author = {Smith, M. J. and Fleming, L. and Geach, J. E.},\n    title = {{EarthPT: a time series foundation model for Earth Observation}},\n    journal = {arXiv},\n    year = {2023},\n    eprint = {2309.07207},\n    doi = {10.48550/arXiv.2309.07207}\n}",
+      "evidence_location": "lines 56-63, ## citation",
+      "confidence": "high",
+      "reason": "Provides the exact citation format for referencing this work, essential for scientific attribution."
+    },
+    {
+      "field": "workshop_proceedings",
+      "value": "https://www.climatechange.ai/papers/neurips2023/2",
+      "normalized_value": "https://www.climatechange.ai/papers/neurips2023/2",
+      "evidence": "This work is also in the\n[proceedings](https://www.climatechange.ai/papers/neurips2023/2) of the 2023\nCCAI NeurIPS workshop.",
+      "evidence_location": "lines 66-68",
+      "confidence": "high",
+      "reason": "Additional publication venue link relevant for citation and context of the work."
+    },
+    {
+      "field": "workshop_name",
+      "value": "2023 CCAI NeurIPS workshop",
+      "normalized_value": "2023 CCAI NeurIPS workshop",
+      "evidence": "This work is also in the\n[proceedings](https://www.climatechange.ai/papers/neurips2023/2) of the 2023\nCCAI NeurIPS workshop.",
+      "evidence_location": "lines 66-68",
+      "confidence": "high",
+      "reason": "Names the specific workshop where this work was also published, useful for scientific context."
+    }
+  ]
+}

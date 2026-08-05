@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Meta Transfer Learning for Early Success Prediction in MOOCs",
+      "normalized_value": "Meta Transfer Learning for Early Success Prediction in MOOCs",
+      "evidence": "# Meta Transfer Learning for Early Success Prediction in MOOCs",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project title and primary focus."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/pdf/2205.01064.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2205.01064.pdf",
+      "evidence": "[\"Meta Transfer Learning for Early Success Prediction in MOOCs\"](https://arxiv.org/pdf/2205.01064.pdf)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Direct link to the official academic paper that the repository implements."
+    },
+    {
+      "field": "authors",
+      "value": "Vinitra Swamy, Mirko Marras, Tanja Käser",
+      "normalized_value": "Vinitra Swamy, Mirko Marras, Tanja Käser",
+      "evidence": "[Vinitra Swamy](http://github.com/vinitra), [Mirko Marras](https://www.mirkomarras.com/), and [Tanja Käser](https://people.epfl.ch/tanja.kaeser/?lang=en)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Identifies the creators and primary contributors for attribution and contact."
+    },
+    {
+      "field": "conference",
+      "value": "L@S 2022",
+      "normalized_value": "L@S 2022",
+      "evidence": "L@S 2022 Paper entitled",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Specifies the publication venue and year for academic context."
+    },
+    {
+      "field": "install_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "Install relevant dependencies with `pip install -r requirements.txt`.",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Standard command for installing project dependencies."
+    },
+    {
+      "field": "python_version",
+      "value": "Python 3.7 or higher",
+      "normalized_value": "Python 3.7 or higher",
+      "evidence": "executing the script with Python 3.7 or higher.",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Defines the minimum runtime environment version required."
+    },
+    {
+      "field": "feature_extraction_source",
+      "value": "https://github.com/epfl-ml4ed/flipped-classroom",
+      "normalized_value": "https://github.com/epfl-ml4ed/flipped-classroom",
+      "evidence": "benchmarks for feature predictive power](https://github.com/epfl-ml4ed/flipped-classroom)",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Links to an external repository required to generate input feature sets before running experiments."
+    },
+    {
+      "field": "config_file",
+      "value": "data/metadata.csv",
+      "normalized_value": "data/metadata.csv",
+      "evidence": "Fill out the `data/metadata.csv` file with relevant meta information about your course(s).",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Identifies a required CSV file that must be populated with course metadata for model training."
+    },
+    {
+      "field": "prediction_settings",
+      "value": "40% and 60%",
+      "normalized_value": "40% and 60%",
+      "evidence": "each early prediction setting (40% and 60%)",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Specifies the temporal truncation thresholds used to simulate early intervention points."
+    },
+    {
+      "field": "model_architectures",
+      "value": "- **Behavior Only** (`BO`): Models trained only using features about student behavior.\n- **Behavior + Time-wise Meta** (`BTM`): Models trained using behavior features and meta features, combined at each timestep and used together as model input.\n- **Behavior + Static Meta** (`BSM`): Models trained using behavior and meta features, combined statically at different layers of the model with attention and projection.",
+      "normalized_value": "- **Behavior Only** (`BO`): Models trained only using features about student behavior. - **Behavior + Time-wise Meta** (`BTM`): Models trained using behavior features and meta features, combined at each timestep and used together as model input. - **Behavior + Static Meta** (`BSM`): Models trained using behavior and meta features, combined statically at different layers of the model with attention and projection.",
+      "evidence": "- **Behavior Only** (`BO`): Models trained only using features about student behavior.\n- **Behavior + Time-wise Meta** (`BTM`): Models trained using behavior features and meta features, combined at each timestep and used together as model input.\n- **Behavior + Static Meta** (`BSM`): Models trained using behavior and meta features, combined statically at different layers of the model with attention and projection.",
+      "evidence_location": "21-23",
+      "confidence": "high",
+      "reason": "Clearly defines the three core model variants implemented in the repository."
+    },
+    {
+      "field": "inference_code",
+      "value": "```\npretrained_model = 'BO_Nto1_Diff_0.4_lstm-bi-64-baseline_best_bidirectional_lstm_64_ep0.4_1641513647.8297'\nmodel = tf.keras.models.load_model('../models/' + pretrained_model)\npredictions = model.predict(features)\n```",
+      "normalized_value": "pretrained_model = 'BO_Nto1_Diff_0.4_lstm-bi-64-baseline_best_bidirectional_lstm_64_ep0.4_1641513647.8297' model = tf.keras.models.load_model('../models/' + pretrained_model) predictions = model.predict(features)",
+      "evidence": "```\npretrained_model = 'BO_Nto1_Diff_0.4_lstm-bi-64-baseline_best_bidirectional_lstm_64_ep0.4_1641513647.8297'\nmodel = tf.keras.models.load_model('../models/' + pretrained_model)\npredictions = model.predict(features)\n```",
+      "evidence_location": "30-34",
+      "confidence": "high",
+      "reason": "Provides a concrete, runnable code snippet for loading a saved model and generating predictions."
+    },
+    {
+      "field": "dataset_description",
+      "value": "large data set including 26 MOOCs and 145,714 students in total, with millions of student interactions",
+      "normalized_value": "large data set including 26 MOOCs and 145,714 students in total, with millions of student interactions",
+      "evidence": "We extensively evaluate our models on a large data set including 26 MOOCs and 145,714 students in total, with millions of student interactions.",
+      "evidence_location": "37",
+      "confidence": "high",
+      "reason": "Describes the scale and composition of the evaluation dataset used for benchmarking."
+    },
+    {
+      "field": "citation",
+      "value": "```\nSwamy, V., Marras, M., Käser, T. (2022). \nMeta Transfer Learning for Early Success Prediction in MOOCs. \nIn: Proceedings of the 2022 ACM Conference on Learning at Scale (L@S 2022). \n```",
+      "normalized_value": "Swamy, V., Marras, M., Käser, T. (2022). Meta Transfer Learning for Early Success Prediction in MOOCs. In: Proceedings of the 2022 ACM Conference on Learning at Scale (L@S 2022).",
+      "evidence": "```\nSwamy, V., Marras, M., Käser, T. (2022). \nMeta Transfer Learning for Early Success Prediction in MOOCs. \nIn: Proceedings of the 2022 ACM Conference on Learning at Scale (L@S 2022). \n```",
+      "evidence_location": "72-76",
+      "confidence": "high",
+      "reason": "Provides the formal academic citation required for proper attribution in downstream work."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "under the terms of the [MIT License](LICENSE).",
+      "evidence_location": "79",
+      "confidence": "high",
+      "reason": "Specifies the open-source license governing redistribution and reuse of the code."
+    }
+  ]
+}

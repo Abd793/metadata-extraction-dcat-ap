@@ -1,0 +1,211 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "DejaVu",
+      "normalized_value": "DejaVu",
+      "evidence": "# DejaVu",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit title of the artifact."
+    },
+    {
+      "field": "paper_preprint_url",
+      "value": "https://arxiv.org/abs/2207.09021",
+      "normalized_value": "https://arxiv.org/abs/2207.09021",
+      "evidence": "https://arxiv.org/abs/2207.09021",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Direct link to the preprint paper."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/NetManAIOps/DejaVu.git",
+      "normalized_value": "https://github.com/NetManAIOps/DejaVu.git",
+      "evidence": "git pull https://github.com/NetManAIOps/DejaVu.git DejaVu",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "URL for cloning the code repository."
+    },
+    {
+      "field": "docker_image",
+      "value": "lizytalk/dejavu",
+      "normalized_value": "lizytalk/dejavu",
+      "evidence": "docker pull lizytalk/dejavu",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Docker image containing pre-installed software for reproduction."
+    },
+    {
+      "field": "dependency_description",
+      "value": "All the software requirements are already pre-installed in the Docker image below. The requirements are also listed in `requirements.txt` and `requirements-dev.txt`. Note that `DGL 0.8` is not released yet when I did this work, so I installed `DGL 0.8` manually from the source code. PyTorch version should be equal to or greater than 1.11.0.",
+      "normalized_value": "All the software requirements are already pre-installed in the Docker image below. The requirements are also listed in `requirements.txt` and `requirements-dev.txt`. Note that `DGL 0.8` is not released yet when I did this work, so I installed `DGL 0.8` manually from the source code. PyTorch version should be equal to or greater than 1.11.0.",
+      "evidence": "All the software requirements are already pre-installed in the Docker image below. The requirements are also listed in `requirements.txt` and `requirements-dev.txt`. Note that `DGL 0.8` is not released yet when I did this work, so I installed `DGL 0.8` manually from the source code. PyTorch version should be equal to or greater than 1.11.0.",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Describes dependencies, including specific versions and installation notes, crucial for environment setup."
+    },
+    {
+      "field": "docker_run_command",
+      "value": "docker run -it --rm -v $(realpath DejaVu):/workspace lizytalk/dejavu bash",
+      "normalized_value": "docker run -it --rm -v $(realpath DejaVu):/workspace lizytalk/dejavu bash",
+      "evidence": "docker run -it --rm -v $(realpath DejaVu):/workspace lizytalk/dejavu bash",
+      "evidence_location": "30",
+      "confidence": "high",
+      "reason": "Command to start a Docker container for running experiments."
+    },
+    {
+      "field": "environment_setup_command",
+      "value": "direnv allow",
+      "normalized_value": "direnv allow",
+      "evidence": "Run `direnv allow` in the shell of the Docker container to set the environment variables.",
+      "evidence_location": "32",
+      "confidence": "high",
+      "reason": "Command to set up environment variables inside the Docker container."
+    },
+    {
+      "field": "experiment_command_dejavu",
+      "value": "python exp/run_GAT_node_classification.py -H=4 -L=8 -fe=GRU -bal=True --data_dir=data/A1",
+      "normalized_value": "python exp/run_GAT_node_classification.py -H=4 -L=8 -fe=GRU -bal=True --data_dir=data/A1",
+      "evidence": "python exp/run_GAT_node_classification.py -H=4 -L=8 -fe=GRU -bal=True --data_dir=data/A1",
+      "evidence_location": "39",
+      "confidence": "high",
+      "reason": "Command to run the main DejaVu algorithm on dataset A1."
+    },
+    {
+      "field": "experiment_command_jss20",
+      "value": "python exp/DejaVu/run_JSS20.py --data_dir=data/A1",
+      "normalized_value": "python exp/DejaVu/run_JSS20.py --data_dir=data/A1",
+      "evidence": "python exp/DejaVu/run_JSS20.py --data_dir=data/A1",
+      "evidence_location": "40",
+      "confidence": "high",
+      "reason": "Command to run the JSS'20 baseline algorithm."
+    },
+    {
+      "field": "experiment_command_isquad",
+      "value": "python exp/DejaVu/run_iSQ.py --data_dir=data/A1",
+      "normalized_value": "python exp/DejaVu/run_iSQ.py --data_dir=data/A1",
+      "evidence": "python exp/DejaVu/run_iSQ.py --data_dir=data/A1",
+      "evidence_location": "41",
+      "confidence": "high",
+      "reason": "Command to run the iSQUAD baseline algorithm."
+    },
+    {
+      "field": "experiment_command_decision_tree",
+      "value": "python exp/run_DT_node_classification.py --data_dir=data/A1",
+      "normalized_value": "python exp/run_DT_node_classification.py --data_dir=data/A1",
+      "evidence": "python exp/run_DT_node_classification.py --data_dir=data/A1",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "Command to run the Decision Tree baseline algorithm."
+    },
+    {
+      "field": "experiment_command_randomwalk_metric",
+      "value": "python exp/DejaVu/run_random_walk_single_metric.py --data_dir=data/A1 --window_size 60 10 --score_aggregation_method=min",
+      "normalized_value": "python exp/DejaVu/run_random_walk_single_metric.py --data_dir=data/A1 --window_size 60 10 --score_aggregation_method=min",
+      "evidence": "python exp/DejaVu/run_random_walk_single_metric.py --data_dir=data/A1 --window_size 60 10 --score_aggregation_method=min",
+      "evidence_location": "43",
+      "confidence": "high",
+      "reason": "Command to run the RandomWalk@Metric baseline algorithm."
+    },
+    {
+      "field": "experiment_command_randomwalk_fi",
+      "value": "python exp/DejaVu/run_random_walk_failure_instance.py --data_dir=data/A1 --window_size 60 10 --anomaly_score_aggregation_method=min --corr_aggregation_method=max",
+      "normalized_value": "python exp/DejaVu/run_random_walk_failure_instance.py --data_dir=data/A1 --window_size 60 10 --anomaly_score_aggregation_method=min --corr_aggregation_method=max",
+      "evidence": "python exp/DejaVu/run_random_walk_failure_instance.py --data_dir=data/A1 --window_size 60 10 --anomaly_score_aggregation_method=min --corr_aggregation_method=max",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Command to run the RandomWalk@FI baseline algorithm."
+    },
+    {
+      "field": "experiment_command_global_interpretation",
+      "value": "Run `notebooks/explain.py` as a jupyter notebook with `jupytext`",
+      "normalized_value": "Run `notebooks/explain.py` as a jupyter notebook with `jupytext`",
+      "evidence": "Run `notebooks/explain.py` as a jupyter notebook with `jupytext`",
+      "evidence_location": "45",
+      "confidence": "high",
+      "reason": "Instruction for running global interpretation."
+    },
+    {
+      "field": "experiment_command_local_interpretation",
+      "value": "`DejaVu/explanability/similar_faults.py`",
+      "normalized_value": "`DejaVu/explanability/similar_faults.py`",
+      "evidence": "`DejaVu/explanability/similar_faults.py`",
+      "evidence_location": "46",
+      "confidence": "medium",
+      "reason": "Path to script for local interpretation; usage implied but not explicitly stated as a command."
+    },
+    {
+      "field": "output_summary_fields",
+      "value": "`A@1`, `A@2`, `A@3`, `A@5`, `MAR`, `Time`, `Epoch`, `Valid Epoch`, `output_dir`, `val_loss`, `val_MAR`, `val_A@1`, `command`, `git_commit_url`",
+      "normalized_value": "`A@1`, `A@2`, `A@3`, `A@5`, `MAR`, `Time`, `Epoch`, `Valid Epoch`, `output_dir`, `val_loss`, `val_MAR`, `val_A@1`, `command`, `git_commit_url`",
+      "evidence": "`A@1`, `A@2`, `A@3`, `A@5`, `MAR`, `Time`, `Epoch`, `Valid Epoch`, `output_dir`, `val_loss`, `val_MAR`, `val_A@1`, `command`, `git_commit_url`",
+      "evidence_location": "48",
+      "confidence": "high",
+      "reason": "List of metrics and information output by the experiment commands, essential for evaluation."
+    },
+    {
+      "field": "dataset_urls",
+      "value": "https://www.dropbox.com/sh/ist4ojr03e2oeuw/AAD5NkpAFg1nOI2Ttug3h2qja?dl=0, https://doi.org/10.5281/zenodo.6955909",
+      "normalized_value": "https://www.dropbox.com/sh/ist4ojr03e2oeuw/AAD5NkpAFg1nOI2Ttug3h2qja?dl=0, https://doi.org/10.5281/zenodo.6955909",
+      "evidence": "https://www.dropbox.com/sh/ist4ojr03e2oeuw/AAD5NkpAFg1nOI2Ttug3h2qja?dl=0\n- https://doi.org/10.5281/zenodo.6955909 (including the raw data of the Train-Ticket dataset)",
+      "evidence_location": "64-65",
+      "confidence": "high",
+      "reason": "URLs to download the datasets used in the experiments."
+    },
+    {
+      "field": "dataset_description",
+      "value": "In each dataset, `graph.yml` or `graphs/*.yml` are FDGs, `metrics.csv` is metrics, and `faults.csv` is failures (including ground truths). `FDG.pkl` is a pickle of the FDG object, which contains all the above data.",
+      "normalized_value": "In each dataset, `graph.yml` or `graphs/*.yml` are FDGs, `metrics.csv` is metrics, and `faults.csv` is failures (including ground truths). `FDG.pkl` is a pickle of the FDG object, which contains all the above data.",
+      "evidence": "In each dataset, `graph.yml` or `graphs/*.yml` are FDGs, `metrics.csv` is metrics, and `faults.csv` is failures (including ground truths).\n`FDG.pkl` is a pickle of the FDG object, which contains all the above data.",
+      "evidence_location": "66-68",
+      "confidence": "high",
+      "reason": "Describes the structure and contents of the dataset files."
+    },
+    {
+      "field": "deployment_scripts_url",
+      "value": "https://github.com/lizeyan/train-ticket",
+      "normalized_value": "https://github.com/lizeyan/train-ticket",
+      "evidence": "https://github.com/lizeyan/train-ticket",
+      "evidence_location": "71",
+      "confidence": "high",
+      "reason": "Link to scripts for deployment and failure injection of Train-Ticket system."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{li2022actionable,\n  title = {Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems},\n  booktitle = {Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}},\n  author = {Li, Zeyan and Zhao, Nengwen and Li, Mingjie and Lu, Xianglin and Wang, Lixin and Chang, Dongdong and Nie, Xiaohui and Cao, Li and Zhang, Wenchi and Sui, Kaixin and Wang, Yanhua and Du, Xu and Duan, Guoqing and Pei, Dan},\n  year = {2022},\n  month = nov,\n  series = {{{ESEC}}/{{FSE}} 2022}\n}",
+      "normalized_value": "@inproceedings{li2022actionable,\n  title = {Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems},\n  booktitle = {Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}},\n  author = {Li, Zeyan and Zhao, Nengwen and Li, Mingjie and Lu, Xianglin and Wang, Lixin and Chang, Dongdong and Nie, Xiaohui and Cao, Li and Zhang, Wenchi and Sui, Kaixin and Wang, Yanhua and Du, Xu and Duan, Guoqing and Pei, Dan},\n  year = {2022},\n  month = nov,\n  series = {{{ESEC}}/{{FSE}} 2022}\n}",
+      "evidence": "@inproceedings{li2022actionable,\n  title = {Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems},\n  booktitle = {Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}},\n  author = {Li, Zeyan and Zhao, Nengwen and Li, Mingjie and Lu, Xianglin and Wang, Lixin and Chang, Dongdong and Nie, Xiaohui and Cao, Li and Zhang, Wenchi and Sui, Kaixin and Wang, Yanhua and Du, Xu and Duan, Guoqing and Pei, Dan},\n  year = {2022},\n  month = nov,\n  series = {{{ESEC}}/{{FSE}} 2022}\n}",
+      "evidence_location": "74-83",
+      "confidence": "high",
+      "reason": "BibTeX citation for the associated paper."
+    },
+    {
+      "field": "example_issue_url",
+      "value": "https://github.com/NetManAIOps/DejaVu/issues/4",
+      "normalized_value": "https://github.com/NetManAIOps/DejaVu/issues/4",
+      "evidence": "See https://github.com/NetManAIOps/DejaVu/issues/4",
+      "evidence_location": "59",
+      "confidence": "high",
+      "reason": "Link to an example issue for additional guidance."
+    },
+    {
+      "field": "system_requirement_note",
+      "value": "I use the command `realpath` in the example commands below, which is not bundled in macOS and Windows. On macOS, you can install it by `brew install coreutils`.",
+      "normalized_value": "I use the command `realpath` in the example commands below, which is not bundled in macOS and Windows. On macOS, you can install it by `brew install coreutils`.",
+      "evidence": "I use the command `realpath` in the example commands below, which is not bundled in macOS and Windows. On macOS, you can install it by `brew install coreutils`.",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Important system requirement note for macOS/Windows users to run the provided commands."
+    },
+    {
+      "field": "local_interpretation_method_description",
+      "value": "Since the DejaVu model is trained with historical failures, it is straightforward to interpret how it diagnoses a given failure by figuring out from which historical failures it learns to localize the root causes.\nTherefore, we propose a pairwise failure similarity function based on the aggregated features extracted by the DejaVu model.\nCompared with raw metrics, the extracted features are of much lower dimension and contain little useless information, which the DejaVu model ignores.\nHowever, computing failure similarity is not trivial due to the generalizability of DejaVu.\nFor example, suppose that the features are $1$ for root-cause failure units and $0$ for other failure units and there are four failure units ($v_1$, $v_2$, $v_3$, $v_4$).\nThen for two similar failures which occur at $v_1$ and $v_2$ respectively, their feature vectors are $(1, 0, 0, 0)$ and $(0, 1,124, 0, 0)$ respectively, which are dissimilar with respect to common similarity metrics (e.g., Manhattan or Euclidean).\n\n\nTo solve this problem, we calculate similarities based on failure classes rather than single failure units.\nAs shown in \\cref{fig:local-interpretation}, for each failure units at an in-coming failure $T_1$, we compare it with each unit of the corresponding failure classes at a historical failure $T_2$ and take the minimal similarity as its similarity to $T_2$.\nThen, we average the similarities to T2 if all units with their suspicious scores (of $T_1$) as the weights.\nIt is because we only care about those failure units that matter in the current failure when finding similar historical failures.\nIn summary, the similarity function to compare $T_1$ and $T_2$ can be formalized as follows:\n$$\nd(T_1, T_2)=\\frac{1}{|V|}\\sum_{v\\in V}s_{T_1}(v)(\\min_{v' \\in N_c(v;G)}||\\boldsymbol{\\hat{f}}^{(T_1, v)}-\\boldsymbol{\\hat{f}}^{(T_2, v')}||_1)\n$$\nwhere $N_c(v;G)$ denotes the failure units of the same class as $v$ in $G$, and $||\\cdot||_1$ denotes $L1$ norm.\n\n\nFor an in-coming failure, we calculate its similarity to each historical failure and recommend the top-k most similar ones to engineers.\nOur model is believed to learn localizing the root causes from these similar historical failures.\nFurthermore, engineers can also directly refer to the failure tickets of these historical failures for their diagnosis and mitigation process.\nNote that sometimes the most similar historical failures may have different failure classes to the localization results due to imperfect similarity calculation.\nIn such cases, we discard and ignore such historical failures.",
+      "normalized_value": "Since the DejaVu model is trained with historical failures, it is straightforward to interpret how it diagnoses a given failure by figuring out from which historical failures it learns to localize the root causes. Therefore, we propose a pairwise failure similarity function based on the aggregated features extracted by the DejaVu model. Compared with raw metrics, the extracted features are of much lower dimension and contain little useless information, which the DejaVu model ignores. However, computing failure similarity is not trivial due to the generalizability of DejaVu. For example, suppose that the features are $1$ for root-cause failure units and $0$ for other failure units and there are four failure units ($v_1$, $v_2$, $v_3$, $v_4$). Then for two similar failures which occur at $v_1$ and $v_2$ respectively, their feature vectors are $(1, 0, 0, 0)$ and $(0, 1, 0, 0)$ respectively, which are dissimilar with respect to common similarity metrics (e.g., Manhattan or Euclidean). To solve this problem, we calculate similarities based on failure classes rather than single failure units. As shown in \\cref{fig:local-interpretation}, for each failure units at an in-coming failure $T_1$, we compare it with each unit of the corresponding failure classes at a historical failure $T_2$ and take the minimal similarity as its similarity to $T_2$. Then, we average the similarities to T2 if all units with their suspicious scores (of $T_1$) as the weights. It is because we only care about those failure units that matter in the current failure when finding similar historical failures. In summary, the similarity function to compare $T_1$ and $T_2$ can be formalized as follows: $$ d(T_1, T_2)=\\frac{1}{|V|}\\sum_{v\\in V}s_{T_1}(v)(\\min_{v' \\in N_c(v;G)}||\\boldsymbol{\\hat{f}}^{(T_1, v)}-\\boldsymbol{\\hat{f}}^{(T_2, v')}||_1) $$ where $N_c(v;G)$ denotes the failure units of the same class as $v$ in $G$, and $||\\cdot||_1$ denotes $L1$ norm. For an in-coming failure, we calculate its similarity to each historical failure and recommend the top-k most similar ones to engineers. Our model is believed to learn localizing the root causes from these similar historical failures. Furthermore, engineers can also directly refer to the failure tickets of these historical failures for their diagnosis and mitigation process. Note that sometimes the most similar historical failures may have different failure classes to the localization results due to imperfect similarity calculation. In such cases, we discard and ignore such historical failures.",
+      "evidence": "Since the DejaVu model is trained with historical failures, it is straightforward to interpret how it diagnoses a given failure by figuring out from which historical failures it learns to localize the root causes.\nTherefore, we propose a pairwise failure similarity function based on the aggregated features extracted by the DejaVu model.\nCompared with raw metrics, the extracted features are of much lower dimension and contain little useless information, which the DejaVu model ignores.\nHowever, computing failure similarity is not trivial due to the generalizability of DejaVu.\nFor example, suppose that the features are $1$ for root-cause failure units and $0$ for other failure units and there are four failure units ($v_1$, $v_2$, $v_3$, $v_4$).\nThen for two similar failures which occur at $v_1$ and $v_2$ respectively, their feature vectors are $(1, 0, 0, 0)$ and $(0, 1, 0, 0)$ respectively, which are dissimilar with respect to common similarity metrics (e.g., Manhattan or Euclidean).\n\n\nTo solve this problem, we calculate similarities based on failure classes rather than single failure units.\nAs shown in \\cref{fig:local-interpretation}, for each failure units at an in-coming failure $T_1$, we compare it with each unit of the corresponding failure classes at a historical failure $T_2$ and take the minimal similarity as its similarity to $T_2$.\nThen, we average the similarities to T2 if all units with their suspicious scores (of $T_1$) as the weights.\nIt is because we only care about those failure units that matter in the current failure when finding similar historical failures.\nIn summary, the similarity function to compare $T_1$ and $T_2$ can be formalized as follows:\n$$\nd(T_1, T_2)=\\frac{1}{|V|}\\sum_{v\\in V}s_{T_1}(v)(\\min_{v' \\in N_c(v;G)}||\\boldsymbol{\\hat{f}}^{(T_1, v)}-\\boldsymbol{\\hat{f}}^{(T_2, v')}||_1)\n$$\nwhere $N_c(v;G)$ denotes the failure units of the same class as $v$ in $G$, and $||\\cdot||_1$ denotes $L1$ norm.\n\n\nFor an in-coming failure, we calculate its similarity to each historical failure and recommend the top-k most similar ones to engineers.\nOur model is believed to learn localizing the root causes from these similar historical failures.\nFurthermore, engineers can also directly refer to the failure tickets of these historical failures for their diagnosis and mitigation process.\nNote that sometimes the most similar historical failures may have different failure classes to the localization results due to imperfect similarity calculation.\nIn such cases, we discard and ignore such historical failures.",
+      "evidence_location": "90-113",
+      "confidence": "high",
+      "reason": "Detailed description of the local interpretation method, including mathematical formulation, crucial for understanding model interpretability."
+    }
+  ]
+}

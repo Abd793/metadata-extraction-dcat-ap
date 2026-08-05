@@ -1,0 +1,175 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "SciNLI: A Corpus for Natural Language Inference on Scientific Text",
+      "normalized_value": "SciNLI: A Corpus for Natural Language Inference on Scientific Text",
+      "evidence": "# [SciNLI: A Corpus for Natural Language Inference on Scientific Text](https://aclanthology.org/2022.acl-long.511.pdf)",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Names the artifact and its purpose, essential for identification and indexing."
+    },
+    {
+      "field": "description",
+      "value": "This repository contains the dataset and code for the ACL 2022 paper \"SciNLI: A Corpus for Natural Language Inference on Scientific Text.\"",
+      "normalized_value": "This repository contains the dataset and code for the ACL 2022 paper \"SciNLI: A Corpus for Natural Language Inference on Scientific Text.\"",
+      "evidence": "This repository contains the dataset and code for the ACL 2022 paper \"SciNLI: A Corpus for Natural Language Inference on Scientific Text.\"",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "States what the repository contains (dataset and code) and its associated publication venue."
+    },
+    {
+      "field": "dataset_download_url",
+      "value": "https://drive.google.com/drive/folders/1kjBTVBV1HlMWW5xK8V096LahsU3pULHU?usp=sharing",
+      "normalized_value": "https://drive.google.com/drive/folders/1kjBTVBV1HlMWW5xK8V096LahsU3pULHU?usp=sharing",
+      "evidence": "**The dataset can be downloaded from [here](https://drive.google.com/drive/folders/1kjBTVBV1HlMWW5xK8V096LahsU3pULHU?usp=sharing).**",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Direct access link to download the dataset, needed for reuse and reproduction."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://aclanthology.org/2022.acl-long.511",
+      "normalized_value": "https://aclanthology.org/2022.acl-long.511",
+      "evidence": "We refer the reader to our [paper](https://aclanthology.org/2022.acl-long.511) for an in-depth description of our dataset construction process.",
+      "evidence_location": "line 12, section 'Dataset Description'",
+      "confidence": "high",
+      "reason": "Link to the associated ACL 2022 paper for citation and methodological details."
+    },
+    {
+      "field": "task",
+      "value": "Natural Language Inference (NLI) on scientific text",
+      "normalized_value": "Natural Language Inference (NLI) on scientific text",
+      "evidence": "we introduce SciNLI, a large dataset for NLI that captures the formality in scientific text and contains 107,412 sentence pairs extracted from scholarly papers on NLP and computational linguistics",
+      "evidence_location": "line 7, section 'Abstract'",
+      "confidence": "high",
+      "reason": "Identifies the task the dataset targets, useful for search and benchmarking."
+    },
+    {
+      "field": "dataset_size",
+      "value": "107,412 sentence pairs",
+      "normalized_value": "107,412 sentence pairs",
+      "evidence": "* Total: 107,412.",
+      "evidence_location": "line 40, section 'Dataset Size'",
+      "confidence": "high",
+      "reason": "Total dataset size, a key fact for understanding and comparing the dataset."
+    },
+    {
+      "field": "train_split_size",
+      "value": "101,412 - automatically annotated",
+      "normalized_value": "101,412 - automatically annotated",
+      "evidence": "* Train: 101,412 - automatically annotated.",
+      "evidence_location": "line 34, section 'Dataset Size'",
+      "confidence": "high",
+      "reason": "Training split size and annotation method, relevant for reproduction and evaluation."
+    },
+    {
+      "field": "test_split_size",
+      "value": "4,000 - human annotated",
+      "normalized_value": "4,000 - human annotated",
+      "evidence": "* Test: 4,000 - human annotated.",
+      "evidence_location": "line 36, section 'Dataset Size'",
+      "confidence": "high",
+      "reason": "Test split size and annotation method, relevant for evaluation."
+    },
+    {
+      "field": "dev_split_size",
+      "value": "2,000 - human annotated",
+      "normalized_value": "2,000 - human annotated",
+      "evidence": "* Dev: 2,000 - human annotated.",
+      "evidence_location": "line 38, section 'Dataset Size'",
+      "confidence": "high",
+      "reason": "Development split size and annotation method, relevant for evaluation."
+    },
+    {
+      "field": "data_source",
+      "value": "papers published in the ACL anthology on NLP and computational linguistics; training set from papers published between 2000 and 2019, test and development sets from papers published in 2020",
+      "normalized_value": "papers published in the ACL anthology on NLP and computational linguistics; training set from papers published between 2000 and 2019, test and development sets from papers published in 2020",
+      "evidence": "We derive [SciNLI](https://drive.google.com/drive/folders/1kjBTVBV1HlMWW5xK8V096LahsU3pULHU?usp=sharing) from the papers published in the ACL anthology on NLP and computational linguistics. Specifically, we extract sentence pairs from papers published between 2000 and 2019 to create our training set and papers published in 2020 for our test and develpment sets.",
+      "evidence_location": "line 10, section 'Dataset Description'",
+      "confidence": "high",
+      "reason": "Describes the provenance and temporal split of the data, important for understanding and reproducing the dataset."
+    },
+    {
+      "field": "annotation_method",
+      "value": "distant supervision using linking phrases for the training set; manual annotation for test and development sets",
+      "normalized_value": "distant supervision using linking phrases for the training set; manual annotation for test and development sets",
+      "evidence": "For annotating the sentence pairs for our training set, we employ our distant supervision method which makes use of linking phrases indicative of the semantic relation between the sentences they occur in and their respective previous sentences. We train our models on these potentially noisy sentence pairs. However, for a realistic evaluation benchmark, we manually annotate the sentence pairs for the test and development sets.",
+      "evidence_location": "line 12, section 'Dataset Description'",
+      "confidence": "high",
+      "reason": "Explains how labels were produced, which affects data quality interpretation and reuse."
+    },
+    {
+      "field": "data_format",
+      "value": "train.csv, test.csv and dev.csv with columns 'sentence1', 'sentence2', 'label'; also train.jsonl, test.jsonl and dev.jsonl in a json format similar to SNLI and MNLI",
+      "normalized_value": "train.csv, test.csv and dev.csv with columns 'sentence1', 'sentence2', 'label'; also train.jsonl, test.jsonl and dev.jsonl in a json format similar to SNLI and MNLI",
+      "evidence": "=> train.csv, test.csv and dev.csv contain the training, testing and development data, respectively. Each file has three columns: \n  \n    * 'sentence1': the premise of each sample.\n    \n    * 'sentence2': the hypothesis of each sample.\n    \n    * 'label': corresponding label representing the semantic relation between the premise and hypothesis. \n\n\n  => train.jsonl, test.jsonl and dev.jsonl contain the same data as the CSV files but they are formatted in a json formal similar to SNLI and MNLI.",
+      "evidence_location": "lines 19-28, section 'Files'",
+      "confidence": "high",
+      "reason": "Specifies file names, formats, and schema, needed to load and use the dataset."
+    },
+    {
+      "field": "benchmark_result",
+      "value": "best performing model with XLNet achieves a Macro F1 score of 78.18% and an accuracy of 78.23%",
+      "normalized_value": "best performing model with XLNet achieves a Macro F1 score of 78.18% and an accuracy of 78.23%",
+      "evidence": "Our best performing model with XLNet achieves a Macro F1 score of only 78.18% and an accuracy of 78.23% showing that there is substantial room for improvement.",
+      "evidence_location": "line 7, section 'Abstract'",
+      "confidence": "high",
+      "reason": "Reports baseline performance metrics, useful for evaluation and comparison."
+    },
+    {
+      "field": "dependencies",
+      "value": "numpy==1.21.6, pandas==1.4.1, scikit_learn==1.1.1, torch==1.9.0+cu111, transformers==4.20.1, transformers.egg==info",
+      "normalized_value": "numpy==1.21.6, pandas==1.4.1, scikit_learn==1.1.1, torch==1.9.0+cu111, transformers==4.20.1, transformers.egg==info",
+      "evidence": "```\nnumpy==1.21.6\npandas==1.4.1\nscikit_learn==1.1.1\ntorch==1.9.0+cu111\ntransformers==4.20.1\ntransformers.egg==info\n```",
+      "evidence_location": "lines 44-51, section 'Requirements'",
+      "confidence": "high",
+      "reason": "Pinned dependency versions required to run the training/testing code."
+    },
+    {
+      "field": "training_command",
+      "value": "python Train_and_test_models.py --base <location of a directory containing the train, test and dev files in CSV format> --model_type <'BERT', 'Sci_BERT', 'RoBERTa' or 'XLNet'> --batch_size <batch size> --max_length <combined max length of sentence1 and sentence2> --num_epochs <number of epochs to train the model for> --epoch_patience <patience for early stopping> --device <device to run your experiment on> --random_seed <some random seed>",
+      "normalized_value": "python Train_and_test_models.py --base <location of a directory containing the train, test and dev files in CSV format> --model_type <'BERT', 'Sci_BERT', 'RoBERTa' or 'XLNet'> --batch_size <batch size> --max_length <combined max length of sentence1 and sentence2> --num_epochs <number of epochs to train the model for> --epoch_patience <patience for early stopping> --device <device to run your experiment on> --random_seed <some random seed>",
+      "evidence": "```\npython Train_and_test_models.py --base <location of a directory containing the train, test and dev files in CSV format> --model_type <'BERT', 'Sci_BERT', 'RoBERTa' or 'XLNet'> --batch_size <batch size> --max_length <combined max length of sentence1 and sentence2> --num_epochs <number of epochs to train the model for> --epoch_patience <patience for early stopping> --device <device to run your experiment on> --random_seed <some random seed>\n```",
+      "evidence_location": "lines 55-57, section 'Fine-tuning Pre-trained Language Models'",
+      "confidence": "high",
+      "reason": "Command for fine-tuning and testing models, essential for reproduction."
+    },
+    {
+      "field": "supported_models",
+      "value": "BERT, Sci_BERT, RoBERTa, XLNet",
+      "normalized_value": "BERT, Sci_BERT, RoBERTa, XLNet",
+      "evidence": "--model_type <'BERT', 'Sci_BERT', 'RoBERTa' or 'XLNet'>",
+      "evidence_location": "line 56, section 'Fine-tuning Pre-trained Language Models'",
+      "confidence": "high",
+      "reason": "Lists the pre-trained language models supported by the training script."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{sadat-caragea-2022-scinli, title = \"{S}ci{NLI}: A Corpus for Natural Language Inference on Scientific Text\", author = \"Sadat, Mobashir and Caragea, Cornelia\", booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\", month = may, year = \"2022\", address = \"Dublin, Ireland\", publisher = \"Association for Computational Linguistics\", url = \"https://aclanthology.org/2022.acl-long.511\", pages = \"7399--7409\"}",
+      "normalized_value": "@inproceedings{sadat-caragea-2022-scinli, title = \"{S}ci{NLI}: A Corpus for Natural Language Inference on Scientific Text\", author = \"Sadat, Mobashir and Caragea, Cornelia\", booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\", month = may, year = \"2022\", address = \"Dublin, Ireland\", publisher = \"Association for Computational Linguistics\", url = \"https://aclanthology.org/2022.acl-long.511\", pages = \"7399--7409\"}",
+      "evidence": "```\n@inproceedings{sadat-caragea-2022-scinli,\n    title = \"{S}ci{NLI}: A Corpus for Natural Language Inference on Scientific Text\",\n    author = \"Sadat, Mobashir  and\n      Caragea, Cornelia\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = may,\n    year = \"2022\",\n    address = \"Dublin, Ireland\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.acl-long.511\",\n    pages = \"7399--7409\",\n}\n```",
+      "evidence_location": "lines 62-75, section 'Citation'",
+      "confidence": "high",
+      "reason": "BibTeX entry for citing the paper, required for attribution and academic reuse."
+    },
+    {
+      "field": "license",
+      "value": "Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+      "normalized_value": "Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+      "evidence": "SciNLI is licensed with Attribution-ShareAlike 4.0 International [(CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).",
+      "evidence_location": "line 77, section 'License'",
+      "confidence": "high",
+      "reason": "Legal terms governing reuse of the dataset."
+    },
+    {
+      "field": "contact_email",
+      "value": "msadat3@uic.edu",
+      "normalized_value": "msadat3@uic.edu",
+      "evidence": "Please contact us at msadat3@uic.edu with any questions.",
+      "evidence_location": "line 80, section 'Contact'",
+      "confidence": "high",
+      "reason": "Contact point for questions or issues with the dataset."
+    }
+  ]
+}

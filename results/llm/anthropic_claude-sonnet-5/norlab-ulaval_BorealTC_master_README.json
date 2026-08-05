@@ -1,0 +1,229 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "normalized_value": "Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "evidence": "# Proprioception Is All You Need: Terrain Classification for Boreal Forests",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Title of the repository/paper, identifying the artifact."
+    },
+    {
+      "field": "authors",
+      "value": "Damien LaRocque, William Guimont-Martin, David-Alexandre Duclos, Philippe Giguère, Francois Pomerleau",
+      "normalized_value": "Damien LaRocque, William Guimont-Martin, David-Alexandre Duclos, Philippe Giguère, Francois Pomerleau",
+      "evidence": "> Damien LaRocque, William Guimont-Martin, David-Alexandre Duclos, Philippe Giguère, Francois Pomerleau\\",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Lists the authors of the paper associated with this artifact."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2403.16877",
+      "normalized_value": "https://arxiv.org/abs/2403.16877",
+      "evidence": "> Paper: https://arxiv.org/abs/2403.16877",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Direct link to the associated paper for citation and reference."
+    },
+    {
+      "field": "conference_submission",
+      "value": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024)",
+      "normalized_value": "2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024)",
+      "evidence": "This repo contains the source code and the datasets used in our paper _Proprioception Is All You Need: Terrain Classification for Boreal Forests_ that was submitted to the 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024).",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Identifies the venue the paper was submitted to, useful scientific context."
+    },
+    {
+      "field": "source_file",
+      "value": "utils/preprocessing.py",
+      "normalized_value": "utils/preprocessing.py",
+      "evidence": "* [`utils/preprocessing.py`](utils/preprocessing.py) contains the functions for the preprocessing pipeline",
+      "evidence_location": "line 15",
+      "confidence": "high",
+      "reason": "Identifies a key source file and its purpose for understanding the codebase structure."
+    },
+    {
+      "field": "source_file",
+      "value": "utils/models.py",
+      "normalized_value": "utils/models.py",
+      "evidence": "* [`utils/models.py`](utils/models.py) contains the code for the trained models",
+      "evidence_location": "line 16",
+      "confidence": "high",
+      "reason": "Identifies a key source file containing model code."
+    },
+    {
+      "field": "source_file",
+      "value": "utils/frequency.py",
+      "normalized_value": "utils/frequency.py",
+      "evidence": "* [`utils/frequency.py`](utils/frequency.py) contains the functions for the multi-channel spectrogram",
+      "evidence_location": "line 17",
+      "confidence": "high",
+      "reason": "Identifies a key source file for the multi-channel spectrogram feature."
+    },
+    {
+      "field": "dependency_requirement",
+      "value": "mamba-ssm and causal-conv1d require a NVIDIA GPU",
+      "normalized_value": "mamba-ssm and causal-conv1d require a NVIDIA GPU",
+      "evidence": "Two dependencies, [`mamba-ssm`](https://github.com/state-spaces/mamba) and [`causal-conv1d`](https://github.com/Dao-AILab/causal-conv1d) require a NVIDIA GPU.",
+      "evidence_location": "line 22",
+      "confidence": "high",
+      "reason": "Specifies hardware/dependency requirements needed for reproducibility."
+    },
+    {
+      "field": "installation_command",
+      "value": "python3.10 -m venv .venv\n. .venv/bin/activate\npip install -r requirements.txt",
+      "normalized_value": "python3.10 -m venv .venv . .venv/bin/activate pip install -r requirements.txt",
+      "evidence": "python3.10 -m venv .venv\n. .venv/bin/activate\npip install -r requirements.txt",
+      "evidence_location": "lines 25-27, Installation",
+      "confidence": "high",
+      "reason": "Concrete installation steps for setting up the environment and dependencies."
+    },
+    {
+      "field": "docker_build_command",
+      "value": "docker build -t borealtc-gpu -f DockerfileGPU .",
+      "normalized_value": "docker build -t borealtc-gpu -f DockerfileGPU .",
+      "evidence": "# Build the Docker image\ndocker build -t borealtc-gpu -f DockerfileGPU .",
+      "evidence_location": "lines 33-34, Installation",
+      "confidence": "high",
+      "reason": "Provides a reproducible Docker build command for the artifact."
+    },
+    {
+      "field": "docker_run_command",
+      "value": "docker run --gpus all -e CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES --rm --ipc host \\\n\t  --mount type=bind,source=.,target=/code/ \\\n\t  --mount type=bind,source=/dev/shm,target=/dev/shm \\\n\t  borealtc-gpu python3 main.py",
+      "normalized_value": "docker run --gpus all -e CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES --rm --ipc host --mount type=bind,source=.,target=/code/ --mount type=bind,source=/dev/shm,target=/dev/shm borealtc-gpu python3 main.py",
+      "evidence": "docker run --gpus all -e CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES --rm --ipc host \\\n\t  --mount type=bind,source=.,target=/code/ \\\n\t  --mount type=bind,source=/dev/shm,target=/dev/shm \\\n\t  borealtc-gpu python3 main.py",
+      "evidence_location": "lines 37-40, Installation",
+      "confidence": "high",
+      "reason": "Provides the command to run the built Docker image and execute the main script, useful for reproduction."
+    },
+    {
+      "field": "dataset_name",
+      "value": "BorealTC",
+      "normalized_value": "BorealTC",
+      "evidence": "* the `BorealTC` dataset, our publicly available dataset",
+      "evidence_location": "line 47, Dataset",
+      "confidence": "high",
+      "reason": "Names one of the two datasets provided in the artifact."
+    },
+    {
+      "field": "dataset_name",
+      "value": "Vulpi",
+      "normalized_value": "Vulpi",
+      "evidence": "* the `Vulpi` dataset, from the 2021 [paper](https://doi.org/10.1016/j.jterra.2020.12.002) of Vulpi et al. This dataset is originally sourced from their repository [Ph0bi0/T_DEEP](https://github.com/Ph0bi0/T_DEEP). The original data is available in the form of `.mat` files. We converted their data in `*.csv` files to work in Python.",
+      "evidence_location": "line 48, Dataset",
+      "confidence": "high",
+      "reason": "Names the second dataset, its source paper, original repository, and format conversion details."
+    },
+    {
+      "field": "dataset_source_repository",
+      "value": "https://github.com/Ph0bi0/T_DEEP",
+      "normalized_value": "https://github.com/Ph0bi0/T_DEEP",
+      "evidence": "This dataset is originally sourced from their repository [Ph0bi0/T_DEEP](https://github.com/Ph0bi0/T_DEEP).",
+      "evidence_location": "line 48, Dataset",
+      "confidence": "high",
+      "reason": "Provides provenance link to the original dataset repository."
+    },
+    {
+      "field": "dataset_source_paper",
+      "value": "https://doi.org/10.1016/j.jterra.2020.12.002",
+      "normalized_value": "https://doi.org/10.1016/j.jterra.2020.12.002",
+      "evidence": "the `Vulpi` dataset, from the 2021 [paper](https://doi.org/10.1016/j.jterra.2020.12.002) of Vulpi et al.",
+      "evidence_location": "line 48, Dataset",
+      "confidence": "high",
+      "reason": "Reference to the original paper the Vulpi dataset was sourced from, useful for attribution."
+    },
+    {
+      "field": "checkpoint",
+      "value": "mamba_vulpi.ckpt",
+      "normalized_value": "checkpoints/mamba_vulpi.ckpt",
+      "evidence": "[mamba_vulpi.ckpt](checkpoints/mamba_vulpi.ckpt)",
+      "evidence_location": "line 93, Model hyperparameters and checkpoints > Mamba",
+      "confidence": "high",
+      "reason": "Provides a link to the model checkpoint trained on the Vulpi dataset, key for reproducibility."
+    },
+    {
+      "field": "checkpoint",
+      "value": "mamba_borealtc.ckpt",
+      "normalized_value": "checkpoints/mamba_borealtc.ckpt",
+      "evidence": "[mamba_borealtc.ckpt](checkpoints/mamba_borealtc.ckpt)",
+      "evidence_location": "line 94, Model hyperparameters and checkpoints > Mamba",
+      "confidence": "high",
+      "reason": "Provides a link to the model checkpoint trained on the BorealTC dataset."
+    },
+    {
+      "field": "checkpoint",
+      "value": "mamba_combined.ckpt",
+      "normalized_value": "checkpoints/mamba_combined.ckpt",
+      "evidence": "[mamba_combined.ckpt](checkpoints/mamba_combined.ckpt)",
+      "evidence_location": "line 95, Model hyperparameters and checkpoints > Mamba",
+      "confidence": "high",
+      "reason": "Provides a link to the model checkpoint trained on the combined dataset."
+    },
+    {
+      "field": "model_architecture",
+      "value": "Mamba",
+      "normalized_value": "Mamba",
+      "evidence": "### Mamba",
+      "evidence_location": "line 89",
+      "confidence": "high",
+      "reason": "Names one of the model architectures used in the artifact with associated hyperparameters."
+    },
+    {
+      "field": "model_architecture",
+      "value": "CNN",
+      "normalized_value": "CNN",
+      "evidence": "### CNN",
+      "evidence_location": "line 99",
+      "confidence": "high",
+      "reason": "Names the second model architecture used, with hyperparameters listed."
+    },
+    {
+      "field": "cnn_hyperparameters",
+      "value": "Using Hamming Window: True; Initial Learning Rate: 5e-3; Learning Rate Scheduler: ReduceLROnPlateau; Scheduler LR Factor: 0.1; Scheduler Patience: 4; Max Epochs: 150; Early Stopping Patience: 8; Gradient Clipping Value: 6",
+      "normalized_value": "Using Hamming Window: True; Initial Learning Rate: 5e-3; Learning Rate Scheduler: ReduceLROnPlateau; Scheduler LR Factor: 0.1; Scheduler Patience: 4; Max Epochs: 150; Early Stopping Patience: 8; Gradient Clipping Value: 6",
+      "evidence": "|        Parameter        | Value             |\n| :---------------------: | ----------------- |\n|  Using Hamming Window   | True              |\n|  Initial Learning Rate  | 5e-3              |\n| Learning Rate Scheduler | ReduceLROnPlateau |\n|   Scheduler LR Factor   | 0.1               |\n|   Scheduler Patience    | 4                 |\n|       Max Epochs        | 150               |\n| Early Stopping Patience | 8                 |\n| Gradient Clipping Value | 6                 |",
+      "evidence_location": "lines 104-113, Model hyperparameters and checkpoints > CNN",
+      "confidence": "high",
+      "reason": "Concrete hyperparameter values needed to reproduce the CNN model training."
+    },
+    {
+      "field": "citation",
+      "value": "@article{LaRocque2024BorealTC,\n    title={Proprioception Is All You Need: Terrain Classification for Boreal Forests},\n    author={Damien LaRocque and William Guimont-Martin and David-Alexandre Duclos and Philippe Giguère and François Pomerleau},\n    journal={arXiv preprint arXiv:2403.16877},\n    year={2024},\n    eprint={2403.16877},\n    archivePrefix={arXiv},\n    primaryClass={cs.RO}\n}",
+      "normalized_value": "@article{LaRocque2024BorealTC, title={Proprioception Is All You Need: Terrain Classification for Boreal Forests}, author={Damien LaRocque and William Guimont-Martin and David-Alexandre Duclos and Philippe Giguère and François Pomerleau}, journal={arXiv preprint arXiv:2403.16877}, year={2024}, eprint={2403.16877}, archivePrefix={arXiv}, primaryClass={cs.RO}}",
+      "evidence": "@article{LaRocque2024BorealTC,\n    title={Proprioception Is All You Need: Terrain Classification for Boreal Forests},\n    author={Damien LaRocque and William Guimont-Martin and David-Alexandre Duclos and Philippe Giguère and François Pomerleau},\n    journal={arXiv preprint arXiv:2403.16877},\n    year={2024},\n    eprint={2403.16877},\n    archivePrefix={arXiv},\n    primaryClass={cs.RO}\n}",
+      "evidence_location": "lines 127-135, Citation",
+      "confidence": "high",
+      "reason": "Provides the formal citation entry for referencing this artifact/paper."
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "normalized_value": "MIT License",
+      "evidence": "This project is licensed under a [MIT](LICENSE) license.",
+      "evidence_location": "line 140, License",
+      "confidence": "high",
+      "reason": "States the license governing reuse of the artifact."
+    },
+    {
+      "field": "acknowledgment",
+      "value": "Fabio Vulpi, Annalisa Milella, Roberto Marani and Giulio Reina for their paper _Recurrent and convolutional neural networks for deep terrain classification by autonomous robots_",
+      "normalized_value": "Fabio Vulpi, Annalisa Milella, Roberto Marani and Giulio Reina for their paper Recurrent and convolutional neural networks for deep terrain classification by autonomous robots",
+      "evidence": "We would like to acknowledge Fabio Vulpi, Annalisa Milella, Roberto Marani and Giulio Reina for their paper [_Recurrent and convolutional neural networks for deep terrain classification by autonomous robots_](https://doi.org/10.1016/j.jterra.2020.12.002).",
+      "evidence_location": "line 119, Acknowledgments",
+      "confidence": "high",
+      "reason": "Attribution information for prior work this artifact builds upon."
+    },
+    {
+      "field": "fork_origin",
+      "value": "Ph0bi0/T_DEEP",
+      "normalized_value": "https://github.com/Ph0bi0/T_DEEP",
+      "evidence": "This repo started as a fork of [Ph0bi0/T_DEEP](https://github.com/Ph0bi0/T_DEEP), their repo, which contains the source code and the dataset of their paper.",
+      "evidence_location": "line 120, Acknowledgments",
+      "confidence": "high",
+      "reason": "Identifies the original repository this project forked from, relevant for provenance and reuse."
+    }
+  ]
+}

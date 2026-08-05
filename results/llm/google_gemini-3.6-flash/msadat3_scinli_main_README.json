@@ -1,0 +1,103 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "SciNLI: A Corpus for Natural Language Inference on Scientific Text",
+      "normalized_value": "SciNLI: A Corpus for Natural Language Inference on Scientific Text",
+      "evidence": "# [SciNLI: A Corpus for Natural Language Inference on Scientific Text](https://aclanthology.org/2022.acl-long.511.pdf)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the title and name of the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://aclanthology.org/2022.acl-long.511.pdf",
+      "normalized_value": "https://aclanthology.org/2022.acl-long.511.pdf",
+      "evidence": "# [SciNLI: A Corpus for Natural Language Inference on Scientific Text](https://aclanthology.org/2022.acl-long.511.pdf)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Provides the direct PDF link to the published research paper."
+    },
+    {
+      "field": "dataset_download_url",
+      "value": "https://drive.google.com/drive/folders/1kjBTVBV1HlMWW5xK8V096LahsU3pULHU?usp=sharing",
+      "normalized_value": "https://drive.google.com/drive/folders/1kjBTVBV1HlMWW5xK8V096LahsU3pULHU?usp=sharing",
+      "evidence": "**The dataset can be downloaded from [here](https://drive.google.com/drive/folders/1kjBTVBV1HlMWW5xK8V096LahsU3pULHU?usp=sharing).**",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Provides the link to download the dataset files."
+    },
+    {
+      "field": "task",
+      "value": "Natural Language Inference",
+      "normalized_value": "Natural Language Inference",
+      "evidence": "Existing Natural Language Inference (NLI) datasets, while being instrumental in the advancement of Natural Language Understanding (NLU) research, are not related to scientific text.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Defines the core NLP task that the dataset benchmarks."
+    },
+    {
+      "field": "dataset_splits",
+      "value": "* Train: 101,412 - automatically annotated.\n\n  * Test: 4,000 - human annotated.\n\n  * Dev: 2,000 - human annotated.\n\n  * Total: 107,412.",
+      "normalized_value": "* Train: 101,412 - automatically annotated. * Test: 4,000 - human annotated. * Dev: 2,000 - human annotated. * Total: 107,412.",
+      "evidence": "  * Train: 101,412 - automatically annotated.\n\n  * Test: 4,000 - human annotated.\n\n  * Dev: 2,000 - human annotated.\n\n  * Total: 107,412.",
+      "evidence_location": "34-40",
+      "confidence": "high",
+      "reason": "Details the sample counts and annotation method for each dataset split."
+    },
+    {
+      "field": "dependencies",
+      "value": "numpy==1.21.6\npandas==1.4.1\nscikit_learn==1.1.1\ntorch==1.9.0+cu111\ntransformers==4.20.1\ntransformers.egg==info",
+      "normalized_value": "numpy==1.21.6 pandas==1.4.1 scikit_learn==1.1.1 torch==1.9.0+cu111 transformers==4.20.1 transformers.egg==info",
+      "evidence": "```\nnumpy==1.21.6\npandas==1.4.1\nscikit_learn==1.1.1\ntorch==1.9.0+cu111\ntransformers==4.20.1\ntransformers.egg==info\n```",
+      "evidence_location": "44-51",
+      "confidence": "high",
+      "reason": "Lists Python package versions required to run the code."
+    },
+    {
+      "field": "training_command",
+      "value": "python Train_and_test_models.py --base <location of a directory containing the train, test and dev files in CSV format> --model_type <'BERT', 'Sci_BERT', 'RoBERTa' or 'XLNet'> --batch_size <batch size> --max_length <combined max length of sentence1 and sentence2> --num_epochs <number of epochs to train the model for> --epoch_patience <patience for early stopping> --device <device to run your experiment on> --random_seed <some random seed>",
+      "normalized_value": "python Train_and_test_models.py --base <location of a directory containing the train, test and dev files in CSV format> --model_type <'BERT', 'Sci_BERT', 'RoBERTa' or 'XLNet'> --batch_size <batch size> --max_length <combined max length of sentence1 and sentence2> --num_epochs <number of epochs to train the model for> --epoch_patience <patience for early stopping> --device <device to run your experiment on> --random_seed <some random seed>",
+      "evidence": "```\npython Train_and_test_models.py --base <location of a directory containing the train, test and dev files in CSV format> --model_type <'BERT', 'Sci_BERT', 'RoBERTa' or 'XLNet'> --batch_size <batch size> --max_length <combined max length of sentence1 and sentence2> --num_epochs <number of epochs to train the model for> --epoch_patience <patience for early stopping> --device <device to run your experiment on> --random_seed <some random seed>\n```",
+      "evidence_location": "55-57",
+      "confidence": "high",
+      "reason": "Provides the command-line usage for fine-tuning pre-trained language models on the dataset."
+    },
+    {
+      "field": "evaluation_results",
+      "value": "Macro F1 score of only 78.18% and an accuracy of 78.23%",
+      "normalized_value": "Macro F1 score of only 78.18% and an accuracy of 78.23%",
+      "evidence": "Our best performing model with XLNet achieves a Macro F1 score of only 78.18% and an accuracy of 78.23% showing that there is substantial room for improvement.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Reports baseline performance evaluation results of the best-performing model (XLNet) on SciNLI."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{sadat-caragea-2022-scinli,\n    title = \"{S}ci{NLI}: A Corpus for Natural Language Inference on Scientific Text\",\n    author = \"Sadat, Mobashir  and\n      Caragea, Cornelia\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = may,\n    year = \"2022\",\n    address = \"Dublin, Ireland\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.acl-long.511\",\n    pages = \"7399--7409\",\n}",
+      "normalized_value": "@inproceedings{sadat-caragea-2022-scinli, title = \"{S}ci{NLI}: A Corpus for Natural Language Inference on Scientific Text\", author = \"Sadat, Mobashir and Caragea, Cornelia\", booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\", month = may, year = \"2022\", address = \"Dublin, Ireland\", publisher = \"Association for Computational Linguistics\", url = \"https://aclanthology.org/2022.acl-long.511\", pages = \"7399--7409\", }",
+      "evidence": "```\n@inproceedings{sadat-caragea-2022-scinli,\n    title = \"{S}ci{NLI}: A Corpus for Natural Language Inference on Scientific Text\",\n    author = \"Sadat, Mobashir  and\n      Caragea, Cornelia\",\n    booktitle = \"Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)\",\n    month = may,\n    year = \"2022\",\n    address = \"Dublin, Ireland\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2022.acl-long.511\",\n    pages = \"7399--7409\",\n}\n```",
+      "evidence_location": "62-75",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for referencing the work."
+    },
+    {
+      "field": "license",
+      "value": "Attribution-ShareAlike 4.0 International [(CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)",
+      "normalized_value": "Attribution-ShareAlike 4.0 International [(CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)",
+      "evidence": "SciNLI is licensed with Attribution-ShareAlike 4.0 International [(CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).",
+      "evidence_location": "77",
+      "confidence": "high",
+      "reason": "States the license terms under which the SciNLI dataset is released."
+    },
+    {
+      "field": "contact_email",
+      "value": "msadat3@uic.edu",
+      "normalized_value": "msadat3@uic.edu",
+      "evidence": "Please contact us at msadat3@uic.edu with any questions.",
+      "evidence_location": "80",
+      "confidence": "high",
+      "reason": "Provides email contact information for support or inquiries."
+    }
+  ]
+}

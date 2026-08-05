@@ -1,0 +1,265 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PatchPerPix for Instance Segmentation",
+      "normalized_value": "PatchPerPix for Instance Segmentation",
+      "evidence": "# PatchPerPix for Instance Segmentation",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Title of the repository/artifact"
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2001.07626",
+      "normalized_value": "https://arxiv.org/abs/2001.07626",
+      "evidence": "This repository is the official implementation of [PatchPerPix for Instance Segmentation](https://arxiv.org/abs/2001.07626).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Link to the paper this repository implements"
+    },
+    {
+      "field": "authors",
+      "value": "Lisa Mais, Peter Hirsch, Dagmar Kainmueller",
+      "normalized_value": "Lisa Mais, Peter Hirsch, Dagmar Kainmueller",
+      "evidence": "**Lisa Mais<sup>1</sup>, Peter Hirsch<sup>1</sup>, Dagmar Kainmueller**, ECCV2020",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Names the authors of the associated paper"
+    },
+    {
+      "field": "publication_venue",
+      "value": "ECCV2020",
+      "normalized_value": "ECCV 2020",
+      "evidence": "**Lisa Mais<sup>1</sup>, Peter Hirsch<sup>1</sup>, Dagmar Kainmueller**, ECCV2020",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "States the venue where the paper was published"
+    },
+    {
+      "field": "abstract",
+      "value": "We present a novel method for proposal free instance segmentation that can handle sophisticated object shapes that span large parts of an image and form dense object clusters with crossovers. Our method is based on predicting dense local shape descriptors, which we assemble to form instances. All instances are assembled simultaneously in one go. To the best of our knowledge, our method is the first non-iterative method that yields instances that are composed of learnt shape patches. We evaluate our method on a diverse range of data domains, where it defines the new state of the art on four benchmarks, namely the ISBI 2012 EM segmentation benchmark, the BBBC010 C. elegans dataset, and 2d as well as 3d fluorescence microscopy datasets of cell nuclei. We show furthermore that our method also applies to 3d light microscopy data of drosophila neurons, which exhibit extreme cases of complex shape clusters.",
+      "normalized_value": "We present a novel method for proposal free instance segmentation that can handle sophisticated object shapes that span large parts of an image and form dense object clusters with crossovers. Our method is based on predicting dense local shape descriptors, which we assemble to form instances. All instances are assembled simultaneously in one go. To the best of our knowledge, our method is the first non-iterative method that yields instances that are composed of learnt shape patches. We evaluate our method on a diverse range of data domains, where it defines the new state of the art on four benchmarks, namely the ISBI 2012 EM segmentation benchmark, the BBBC010 C. elegans dataset, and 2d as well as 3d fluorescence microscopy datasets of cell nuclei. We show furthermore that our method also applies to 3d light microscopy data of drosophila neurons, which exhibit extreme cases of complex shape clusters.",
+      "evidence": "We present a novel method for proposal free instance segmentation that can handle sophisticated object shapes that span large parts of an image and form dense object clusters with crossovers. Our method is based on predicting dense local shape descriptors, which we assemble to form instances. All instances are assembled simultaneously in one go. To the best of our knowledge, our method is the first non-iterative method that yields instances that are composed of learnt shape patches. We evaluate our method on a diverse range of data domains, where it defines the new state of the art on four benchmarks, namely the ISBI 2012 EM segmentation benchmark, the BBBC010 C. elegans dataset, and 2d as well as 3d fluorescence microscopy datasets of cell nuclei. We show furthermore that our method also applies to 3d light microscopy data of drosophila neurons, which exhibit extreme cases of complex shape clusters.",
+      "evidence_location": "line 11 (## Abstract)",
+      "confidence": "high",
+      "reason": "Describes the purpose, method, and evaluation domains of the artifact"
+    },
+    {
+      "field": "programming_language",
+      "value": "Python 3",
+      "normalized_value": "Python 3",
+      "evidence": "This package requires Python 3 and PyTorch.",
+      "evidence_location": "line 15 (## Installation)",
+      "confidence": "high",
+      "reason": "States required programming language for using the package"
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "This package requires Python 3 and PyTorch.",
+      "evidence_location": "line 15 (## Installation)",
+      "confidence": "high",
+      "reason": "States required deep learning framework"
+    },
+    {
+      "field": "legacy_framework_note",
+      "value": "Previous versions (e.g., for the experiments published in our ECCV 2020 paper) require TensorFlow 1.x.",
+      "normalized_value": "Previous versions (e.g., for the experiments published in our ECCV 2020 paper) require TensorFlow 1.x.",
+      "evidence": "Previous versions (e.g., for the experiments published in our ECCV 2020 paper) require TensorFlow 1.x.\nIf you want to run older experiments please checkout the respective tag: [eccv2020](https://github.com/Kainmueller-Lab/PatchPerPix/tree/ea4e2d4)",
+      "evidence_location": "lines 18-19",
+      "confidence": "high",
+      "reason": "Notes an alternative/older environment requirement and a corresponding git tag for reproducing ECCV2020 experiments"
+    },
+    {
+      "field": "environment_details",
+      "value": "torch 1.13, tested on linux/ubuntu 20.04",
+      "normalized_value": "torch 1.13, tested on linux/ubuntu 20.04",
+      "evidence": "The recommended way is to install the package into your conda/python virtual environment. We recommend to use conda to install torch (tested with torch 1.13, but newer versions should work, too). The following instructions were tested on linux/ubuntu 20.04.",
+      "evidence_location": "line 22",
+      "confidence": "high",
+      "reason": "Describes tested software/hardware environment for reproducibility"
+    },
+    {
+      "field": "installation_commands",
+      "value": "conda create --name ppp --yes\nconda activate ppp\nconda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes\ngit clone https://github.com/Kainmueller-Lab/PatchPerPix.git\ncd PatchPerPix\nPATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .",
+      "normalized_value": "conda create --name ppp --yes conda activate ppp conda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes git clone https://github.com/Kainmueller-Lab/PatchPerPix.git cd PatchPerPix PATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .",
+      "evidence": "conda create --name ppp --yes\nconda activate ppp\nconda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes\ngit clone https://github.com/Kainmueller-Lab/PatchPerPix.git\ncd PatchPerPix\nPATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .",
+      "evidence_location": "lines 25-32 (## Installation code block)",
+      "confidence": "high",
+      "reason": "Concrete installation/setup commands for reproducing the environment"
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/Kainmueller-Lab/PatchPerPix.git",
+      "normalized_value": "https://github.com/Kainmueller-Lab/PatchPerPix.git",
+      "evidence": "git clone https://github.com/Kainmueller-Lab/PatchPerPix.git",
+      "evidence_location": "line 29",
+      "confidence": "high",
+      "reason": "Direct link to the source code repository for cloning"
+    },
+    {
+      "field": "example_config_file",
+      "value": "https://github.com/Kainmueller-Lab/PatchPerPix/blob/master/experiments/flylight/setups/setup01/default.toml",
+      "normalized_value": "https://github.com/Kainmueller-Lab/PatchPerPix/blob/master/experiments/flylight/setups/setup01/default.toml",
+      "evidence": "the parameters for the network training and the postprocessing have to be defined in a config file ([example config file](https://github.com/Kainmueller-Lab/PatchPerPix/blob/master/experiments/flylight/setups/setup01/default.toml))",
+      "evidence_location": "line 40",
+      "confidence": "high",
+      "reason": "Provides a concrete example configuration file needed to run experiments"
+    },
+    {
+      "field": "data_format",
+      "value": "zarr",
+      "normalized_value": "zarr",
+      "evidence": "The code expects the data to be in the *zarr* format ([https://zarr.readthedocs.io/en/stable/](https://zarr.readthedocs.io/en/stable/)).",
+      "evidence_location": "line 54 (## Data preparation)",
+      "confidence": "high",
+      "reason": "Specifies the required input data format for reproducing experiments"
+    },
+    {
+      "field": "example_zarr_file",
+      "value": "experiments/flylight/JRC_SS05008-20160318_24_B2_crop.zip",
+      "normalized_value": "experiments/flylight/JRC_SS05008-20160318_24_B2_crop.zip",
+      "evidence": "([example zarr file](experiments/flylight/JRC_SS05008-20160318_24_B2_crop.zip))",
+      "evidence_location": "line 55",
+      "confidence": "high",
+      "reason": "Provides an example data file for reproducing the pipeline"
+    },
+    {
+      "field": "main_script",
+      "value": "run_ppp.py",
+      "normalized_value": "run_ppp.py",
+      "evidence": "The main script `run_ppp.py` (in the experiments folder) can be used to control all aspects of the experiments.",
+      "evidence_location": "line 60 (## Usage)",
+      "confidence": "high",
+      "reason": "Names the primary entry point script for running the artifact"
+    },
+    {
+      "field": "usage_command",
+      "value": "python run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments",
+      "normalized_value": "python run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments",
+      "evidence": "python run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments",
+      "evidence_location": "line 64 (## Usage example call)",
+      "confidence": "high",
+      "reason": "Concrete example command demonstrating training, prediction, decoding, labeling, and evaluation pipeline"
+    },
+    {
+      "field": "continue_training_command",
+      "value": "python run_ppp.py --setup setup01 --config ppp_experiments/flylight_setup01_230614__123456/config.toml --do  validate_checkpoints predict decode label evaluate --app wormbodies -id experiments/flylight_setup01_230614__123456",
+      "normalized_value": "python run_ppp.py --setup setup01 --config ppp_experiments/flylight_setup01_230614__123456/config.toml --do validate_checkpoints predict decode label evaluate --app wormbodies -id experiments/flylight_setup01_230614__123456",
+      "evidence": "python run_ppp.py --setup setup01 --config ppp_experiments/flylight_setup01_230614__123456/config.toml --do  validate_checkpoints predict decode label evaluate --app wormbodies -id experiments/flylight_setup01_230614__123456",
+      "evidence_location": "line 72",
+      "confidence": "high",
+      "reason": "Example command showing how to continue training or run further validation/evaluation on an existing experiment folder"
+    },
+    {
+      "field": "task",
+      "value": "Instance Segmentation",
+      "normalized_value": "Instance Segmentation",
+      "evidence": "# PatchPerPix for Instance Segmentation",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Names the core task addressed by the artifact"
+    },
+    {
+      "field": "benchmark_dataset",
+      "value": "BBBC010: C. elegans live/dead assay",
+      "normalized_value": "BBBC010",
+      "evidence": "([BBBC010: C. elegans live/dead assay](https://bbbc.broadinstitute.org/BBBC010))",
+      "evidence_location": "line 98 (### BBBC010)",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset used for evaluation, with link"
+    },
+    {
+      "field": "benchmark_result",
+      "value": "PatchPerPix (ppp+dec) avS[0.5:0.9:0.1] = 0.816 on BBBC010",
+      "normalized_value": "BBBC010 avS = 0.816",
+      "evidence": "| PatchPerPix (ppp+dec)    | **0.816**                   | **0.960**       | **0.955**       | **0.931**       | **0.805**       | **0.428**       |",
+      "evidence_location": "line 105 (### BBBC010 results table)",
+      "confidence": "high",
+      "reason": "Reports the primary quantitative result achieved on the BBBC010 benchmark"
+    },
+    {
+      "field": "benchmark_dataset",
+      "value": "ISBI 2012 Segmentation Challenge",
+      "normalized_value": "ISBI2012",
+      "evidence": "(server with leaderboard is down, but data is still available: [ISBI 2012 Segmentation Challenge](https://imagej.net/events/isbi-2012-segmentation-challenge)",
+      "evidence_location": "line 112 (### ISBI2012)",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset used for evaluation"
+    },
+    {
+      "field": "benchmark_result",
+      "value": "PatchPerPix rRAND = 0.988290, rINF = 0.991544 on ISBI2012",
+      "normalized_value": "ISBI2012 rRAND=0.988290, rINF=0.991544",
+      "evidence": "| PatchPerPix | **0.988290** | 0.991544     |",
+      "evidence_location": "line 116 (### ISBI2012 results table)",
+      "confidence": "high",
+      "reason": "Reports the primary quantitative result achieved on the ISBI2012 benchmark"
+    },
+    {
+      "field": "benchmark_dataset",
+      "value": "Kaggle 2018 Data Science Bowl (dsb2018)",
+      "normalized_value": "dsb2018",
+      "evidence": "([Kaggle 2018 Data Science Bowl](https://www.kaggle.com/c/data-science-bowl-2018/), train/val/test split defined by [Cell Detection with Star-convex Polygons](https://arxiv.org/abs/1806.03535))",
+      "evidence_location": "line 125 (### dsb2018)",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset used for evaluation, with source link"
+    },
+    {
+      "field": "benchmark_result",
+      "value": "PatchPerPix avS[0.5:0.9:0.1] = 0.693 on dsb2018",
+      "normalized_value": "dsb2018 avS = 0.693",
+      "evidence": "| PatchPerPix   | **0.693**                   | **0.919**       | **0.919**       | **0.915**       | **0.898**       | **0.868**       | **0.827**       | **0.755**       | **0.635**       | **0.379**       |",
+      "evidence_location": "line 133 (### dsb2018 results table)",
+      "confidence": "high",
+      "reason": "Reports the primary quantitative result achieved on the dsb2018 benchmark"
+    },
+    {
+      "field": "benchmark_dataset",
+      "value": "nuclei3d (https://doi.org/10.5281/zenodo.5942574)",
+      "normalized_value": "nuclei3d",
+      "evidence": "([https://doi.org/10.5281/zenodo.5942574](https://doi.org/10.5281/zenodo.5942574), train/val/test split defined by [Star-convex Polyhedra for 3D Object Detection and Segmentation in Microscopy](https://arxiv.org/abs/1908.03636))",
+      "evidence_location": "line 140 (### nuclei3d)",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset with a DOI link used for evaluation"
+    },
+    {
+      "field": "benchmark_result",
+      "value": "PatchPerPix avS[0.5:0.9:0.1] = 0.436 on nuclei3d",
+      "normalized_value": "nuclei3d avS = 0.436",
+      "evidence": "| PatchPerPix    | **0.436**                   | 0.926           | 0.918           | 0.900           | 0.853           | **0.766**       | **0.668**       | **0.493**       | **0.228**       | 0.027           |",
+      "evidence_location": "line 149 (### nuclei3d results table)",
+      "confidence": "high",
+      "reason": "Reports the primary quantitative result achieved on the nuclei3d benchmark"
+    },
+    {
+      "field": "benchmark_dataset",
+      "value": "The FlyLight Instance Segmentation Datset",
+      "normalized_value": "FlyLight Instance Segmentation Dataset",
+      "evidence": "([The FlyLight Instance Segmentation Datset](https://kainmueller-lab.github.io/flylight_inst_seg_dataset/), train/val/test split defined by tba)",
+      "evidence_location": "line 158 (### FlyLight)",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset used for evaluation with dataset page link"
+    },
+    {
+      "field": "license",
+      "value": "MIT license",
+      "normalized_value": "MIT License",
+      "evidence": "All contributions  are welcome! The content in this repository is licensed under the MIT license.",
+      "evidence_location": "line 188 (## Contributing)",
+      "confidence": "high",
+      "reason": "States the license under which the repository content is released"
+    },
+    {
+      "field": "citation_reference",
+      "value": "PatchPerPix for Instance Segmentation, https://arxiv.org/abs/2001.07626",
+      "normalized_value": "https://arxiv.org/abs/2001.07626",
+      "evidence": "(for more details on the results see [PatchPerPix for Instance Segmentation](https://arxiv.org/abs/2001.07626))",
+      "evidence_location": "line 94 (## Results)",
+      "confidence": "medium",
+      "reason": "Reiterates the primary paper reference for results reproducibility/citation"
+    }
+  ]
+}

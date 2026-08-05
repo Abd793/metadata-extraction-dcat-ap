@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "knowledge-aware-med-classification",
+      "normalized_value": "knowledge-aware-med-classification",
+      "evidence": "# knowledge-aware-med-classification",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Repository/artifact title as given in the top-level Markdown header"
+    },
+    {
+      "field": "paper_title",
+      "value": "Knowledge-Aware Neural Networks for Medical Forum Question Classification",
+      "normalized_value": "Knowledge-Aware Neural Networks for Medical Forum Question Classification",
+      "evidence": "Contains the codebase for our paper **Knowledge-Aware Neural Networks for Medical Forum Question Classification** that is accepted for publication at the 30th ACM International Conference on Information and Knowledge Management (CIKM 2021)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Names the paper the codebase implements, useful for identifying the artifact's scientific context"
+    },
+    {
+      "field": "venue",
+      "value": "30th ACM International Conference on Information and Knowledge Management (CIKM 2021)",
+      "normalized_value": "30th ACM International Conference on Information and Knowledge Management (CIKM 2021)",
+      "evidence": "accepted for publication at the 30th ACM International Conference on Information and Knowledge Management (CIKM 2021)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Publication venue for the associated paper"
+    },
+    {
+      "field": "arxiv_link",
+      "value": "https://arxiv.org/abs/2109.13141",
+      "normalized_value": "https://arxiv.org/abs/2109.13141",
+      "evidence": "[arXiv](https://arxiv.org/abs/2109.13141)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Link to the arXiv preprint of the paper"
+    },
+    {
+      "field": "doi_link",
+      "value": "https://dl.acm.org/doi/10.1145/3459637.3482128",
+      "normalized_value": "https://dl.acm.org/doi/10.1145/3459637.3482128",
+      "evidence": "[DOI](https://dl.acm.org/doi/10.1145/3459637.3482128)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "DOI link to the published paper, useful for citation and access"
+    },
+    {
+      "field": "base_codebase",
+      "value": "huggingface transformers [Github codebase](https://github.com/huggingface/transformers)",
+      "normalized_value": "https://github.com/huggingface/transformers",
+      "evidence": "The codebase is based on huggingface transformers [Github codebase](https://github.com/huggingface/transformers).",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Identifies the primary dependency/base library the codebase is built on, important for reproducibility"
+    },
+    {
+      "field": "lcf_bert_base_codebase",
+      "value": "ABSA-Pytorch [Github codebase](https://github.com/songyouwei/ABSA-PyTorch/blob/master/models/lcf_bert.py)",
+      "normalized_value": "https://github.com/songyouwei/ABSA-PyTorch/blob/master/models/lcf_bert.py",
+      "evidence": "The LCF-BERT and LCF-associated codes is based on ABSA-Pytorch [Github codebase](https://github.com/songyouwei/ABSA-PyTorch/blob/master/models/lcf_bert.py)",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Identifies the source code base for the LCF-BERT components, relevant for reuse and attribution"
+    },
+    {
+      "field": "model_diagram",
+      "value": "medbert-ichi.png",
+      "normalized_value": "medbert-ichi.png",
+      "evidence": "![Proposed Knowledge-aware BERT model](medbert-ichi.png)",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Reference to an image depicting the proposed model architecture"
+    },
+    {
+      "field": "notebook_location",
+      "value": "src/ProposedKnowledgeAwareModel/",
+      "normalized_value": "src/ProposedKnowledgeAwareModel/",
+      "evidence": "The code files in the form of self-contained Jupyter notebooks is available at: **src/ProposedKnowledgeAwareModel/**",
+      "evidence_location": "line 10",
+      "confidence": "high",
+      "reason": "Location of the runnable Jupyter notebooks for the proposed model, key for reproducibility"
+    },
+    {
+      "field": "training_command",
+      "value": "python ./examples/ichi/run_ichi.py --model_type bert --model_name_or_path bert-base-uncased --do_lower_case --do_train --do_eval --data_dir ./data/ichi_dataset --max_seq_length 256 --per_gpu_eval_batch_size=16 --per_gpu_train_batch_size=16 --learning_rate 1e-4 --num_train_epochs 2 --output_dir ./tmp/ichi_bert_base_new --overwrite_output_dir",
+      "normalized_value": "python ./examples/ichi/run_ichi.py --model_type bert --model_name_or_path bert-base-uncased --do_lower_case --do_train --do_eval --data_dir ./data/ichi_dataset --max_seq_length 256 --per_gpu_eval_batch_size=16 --per_gpu_train_batch_size=16 --learning_rate 1e-4 --num_train_epochs 2 --output_dir ./tmp/ichi_bert_base_new --overwrite_output_dir",
+      "evidence": "python ./examples/ichi/run_ichi.py --model_type bert --model_name_or_path bert-base-uncased --do_lower_case --do_train --do_eval --data_dir ./data/ichi_dataset --max_seq_length 256 --per_gpu_eval_batch_size=16 --per_gpu_train_batch_size=16 --learning_rate 1e-4 --num_train_epochs 2 --output_dir ./tmp/ichi_bert_base_new --overwrite_output_dir",
+      "evidence_location": "lines 13-15",
+      "confidence": "high",
+      "reason": "Concrete command to run/train the BERT-plus model on the ICHI dataset, key for reproducibility"
+    },
+    {
+      "field": "base_model",
+      "value": "bert-base-uncased",
+      "normalized_value": "bert-base-uncased",
+      "evidence": "--model_name_or_path bert-base-uncased",
+      "evidence_location": "line 14",
+      "confidence": "high",
+      "reason": "Specifies the pretrained base model used for training"
+    },
+    {
+      "field": "dataset",
+      "value": "CADEC (multi-label)",
+      "normalized_value": "CADEC",
+      "evidence": "The BERT and MedBERT models were trained and evaluated on two datasets: CADEC (multi-label) and ICHI (multi-class) (Datasets provided in the data directory).",
+      "evidence_location": "line 18",
+      "confidence": "high",
+      "reason": "Names one of the two benchmark datasets used for training/evaluation"
+    },
+    {
+      "field": "dataset",
+      "value": "ICHI (multi-class)",
+      "normalized_value": "ICHI",
+      "evidence": "The BERT and MedBERT models were trained and evaluated on two datasets: CADEC (multi-label) and ICHI (multi-class) (Datasets provided in the data directory).",
+      "evidence_location": "line 18",
+      "confidence": "high",
+      "reason": "Names the second benchmark dataset used for training/evaluation"
+    },
+    {
+      "field": "dataset_annotation_location",
+      "value": "CADEC-Annotations/",
+      "normalized_value": "CADEC-Annotations/",
+      "evidence": "The annotated files can be found at **CADEC-Annotations/**",
+      "evidence_location": "line 21",
+      "confidence": "high",
+      "reason": "Location within the repo where the annotated CADEC dataset files are stored"
+    },
+    {
+      "field": "dataset_annotation_tool",
+      "value": "QuickUMLS",
+      "normalized_value": "QuickUMLS",
+      "evidence": "We also have an additional column, containing the extracted medical concepts using QuickUMLS tool.",
+      "evidence_location": "line 21",
+      "confidence": "high",
+      "reason": "Names the tool used to extract medical concepts for the annotated dataset, relevant for reproducing preprocessing"
+    },
+    {
+      "field": "ichi_dataset_source",
+      "value": "rakshajalan/ECIR-2018 [Github codebase](https://github.com/rakshajalan/ECIR-2018/tree/master/ECIR-18_medical_question_classification/Dataset)",
+      "normalized_value": "https://github.com/rakshajalan/ECIR-2018/tree/master/ECIR-18_medical_question_classification/Dataset",
+      "evidence": "We obtain the ICHI data from rakshajalan/ECIR-2018 [Github codebase](https://github.com/rakshajalan/ECIR-2018/tree/master/ECIR-18_medical_question_classification/Dataset), and maintain the same train-test data split.",
+      "evidence_location": "line 24",
+      "confidence": "high",
+      "reason": "Identifies the origin repository of the ICHI dataset and confirms the train-test split is preserved, important for reproducibility"
+    },
+    {
+      "field": "model_name",
+      "value": "MedBERT",
+      "normalized_value": "MedBERT",
+      "evidence": "## Citing MedBERT",
+      "evidence_location": "line 26",
+      "confidence": "high",
+      "reason": "Names the proposed model introduced in the paper"
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{10.1145/3459637.3482128,\nauthor = {Roy, Soumyadeep and Chakraborty, Sudip and Mandal, Aishik and Balde, Gunjan and Sharma, Prakhar and Natarajan, Anandhavelu and Khosla, Megha and Sural, Shamik and Ganguly, Niloy},\ntitle = {Knowledge-Aware Neural Networks for Medical Forum Question Classification},\nyear = {2021},\nisbn = {9781450384469},\npublisher = {Association for Computing Machinery},\naddress = {New York, NY, USA},\nurl = {https://doi.org/10.1145/3459637.3482128},\ndoi = {10.1145/3459637.3482128},\nabstract = {Online medical forums have become a predominant platform for answering health-related\ninformation needs of consumers. However, with a significant rise in the number of\nqueries and the limited availability of experts, it is necessary to automatically\nclassify medical queries based on a consumer's intention, so that these questions\nmay be directed to the right set of medical experts. Here, we develop a novel medical\nknowledge-aware BERT-based model (MedBERT) that explicitly gives more weightage to\nmedical concept-bearing words, and utilize domain-specific side information obtained\nfrom a popular medical knowledge base. We also contribute a multi-label dataset for\nthe Medical Forum Question Classification (MFQC) task. MedBERT achieves state-of-the-art\nperformance on two benchmark datasets and performs very well in low resource settings.},\nbooktitle = {Proceedings of the 30th ACM International Conference on Information &amp; Knowledge Management},\npages = {3398–3402},\nnumpages = {5},\nkeywords = {online health communities, clinical text classification},\nlocation = {Virtual Event, Queensland, Australia},\nseries = {CIKM '21}\n}",
+      "normalized_value": "10.1145/3459637.3482128",
+      "evidence": "@inproceedings{10.1145/3459637.3482128,\nauthor = {Roy, Soumyadeep and Chakraborty, Sudip and Mandal, Aishik and Balde, Gunjan and Sharma, Prakhar and Natarajan, Anandhavelu and Khosla, Megha and Sural, Shamik and Ganguly, Niloy},\ntitle = {Knowledge-Aware Neural Networks for Medical Forum Question Classification},\nyear = {2021},\nisbn = {9781450384469},\npublisher = {Association for Computing Machinery},\naddress = {New York, NY, USA},\nurl = {https://doi.org/10.1145/3459637.3482128},\ndoi = {10.1145/3459637.3482128},\nabstract = {Online medical forums have become a predominant platform for answering health-related\ninformation needs of consumers. However, with a significant rise in the number of\nqueries and the limited availability of experts, it is necessary to automatically\nclassify medical queries based on a consumer's intention, so that these questions\nmay be directed to the right set of medical experts. Here, we develop a novel medical\nknowledge-aware BERT-based model (MedBERT) that explicitly gives more weightage to\nmedical concept-bearing words, and utilize domain-specific side information obtained\nfrom a popular medical knowledge base. We also contribute a multi-label dataset for\nthe Medical Forum Question Classification (MFQC) task. MedBERT achieves state-of-the-art\nperformance on two benchmark datasets and performs very well in low resource settings.},\nbooktitle = {Proceedings of the 30th ACM International Conference on Information &amp; Knowledge Management},\npages = {3398–3402},\nnumpages = {5},\nkeywords = {online health communities, clinical text classification},\nlocation = {Virtual Event, Queensland, Australia},\nseries = {CIKM '21}\n}",
+      "evidence_location": "lines 29-55",
+      "confidence": "high",
+      "reason": "Full BibTeX citation for citing the paper, essential for proper attribution/reuse"
+    },
+    {
+      "field": "authors",
+      "value": "Roy, Soumyadeep and Chakraborty, Sudip and Mandal, Aishik and Balde, Gunjan and Sharma, Prakhar and Natarajan, Anandhavelu and Khosla, Megha and Sural, Shamik and Ganguly, Niloy",
+      "normalized_value": "Roy, Soumyadeep and Chakraborty, Sudip and Mandal, Aishik and Balde, Gunjan and Sharma, Prakhar and Natarajan, Anandhavelu and Khosla, Megha and Sural, Shamik and Ganguly, Niloy",
+      "evidence": "author = {Roy, Soumyadeep and Chakraborty, Sudip and Mandal, Aishik and Balde, Gunjan and Sharma, Prakhar and Natarajan, Anandhavelu and Khosla, Megha and Sural, Shamik and Ganguly, Niloy},",
+      "evidence_location": "line 31",
+      "confidence": "high",
+      "reason": "List of paper authors for attribution and citation purposes"
+    },
+    {
+      "field": "doi",
+      "value": "10.1145/3459637.3482128",
+      "normalized_value": "10.1145/3459637.3482128",
+      "evidence": "doi = {10.1145/3459637.3482128},",
+      "evidence_location": "line 38",
+      "confidence": "high",
+      "reason": "Digital Object Identifier of the published paper"
+    },
+    {
+      "field": "task",
+      "value": "Medical Forum Question Classification (MFQC)",
+      "normalized_value": "Medical Forum Question Classification (MFQC)",
+      "evidence": "We also contribute a multi-label dataset for\nthe Medical Forum Question Classification (MFQC) task.",
+      "evidence_location": "lines 46-47",
+      "confidence": "high",
+      "reason": "Names the specific task addressed by the artifact"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PSTR",
+      "normalized_value": "PSTR",
+      "evidence": "# PSTR (CVPR2022)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the main heading."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2204.03340",
+      "normalized_value": "https://arxiv.org/abs/2204.03340",
+      "evidence": "[*PSTR: End-to-End One-Step Person Search With Transformers (CVPR2022)*](https://arxiv.org/abs/2204.03340)",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Provides direct link to the associated academic paper."
+    },
+    {
+      "field": "task_description",
+      "value": "End-to-end one-step person search with Transformers, which does not requre NMS post-processing.",
+      "normalized_value": "End-to-end one-step person search with Transformers, which does not requre NMS post-processing.",
+      "evidence": "- **End-to-end one-step person search** with Transformers, which does not requre NMS post-processing.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Describes the core task and key architectural feature of the method."
+    },
+    {
+      "field": "environment_cuda",
+      "value": "cuda11.1",
+      "normalized_value": "cuda11.1",
+      "evidence": "- We install this project using cuda11.1 and PyTorch1.8.0 (or PyTorch1.9.0) as follows.",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Specifies the required CUDA version for setup."
+    },
+    {
+      "field": "environment_pytorch",
+      "value": "PyTorch1.8.0 (or PyTorch1.9.0)",
+      "normalized_value": "PyTorch1.8.0 (or PyTorch1.9.0)",
+      "evidence": "- We install this project using cuda11.1 and PyTorch1.8.0 (or PyTorch1.9.0) as follows.",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Specifies the required PyTorch version for setup."
+    },
+    {
+      "field": "dataset_names",
+      "value": "PRW, CUHK-SYSU",
+      "normalized_value": "PRW, CUHK-SYSU",
+      "evidence": "- Download [PRW](https://github.com/liangzheng06/PRW-baseline) and [CUHK-SYSU](https://github.com/ShuangLI59/person_search) datasets.",
+      "evidence_location": "47",
+      "confidence": "high",
+      "reason": "Lists the datasets used for training and evaluation."
+    },
+    {
+      "field": "annotation_url",
+      "value": "https://drive.google.com/file/d/1J2YAU7n954TiSwqopJCWdK25IaF6Mb9_/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1J2YAU7n954TiSwqopJCWdK25IaF6Mb9_/view?usp=sharing",
+      "evidence": "- Download the [json annotations](https://drive.google.com/file/d/1J2YAU7n954TiSwqopJCWdK25IaF6Mb9_/view?usp=sharing) provided by [AlignPS](https://github.com/daodaofr/AlignPS).",
+      "evidence_location": "48",
+      "confidence": "high",
+      "reason": "Provides direct link to necessary annotation files for dataset preparation."
+    },
+    {
+      "field": "training_command",
+      "value": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "normalized_value": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "evidence": "```shell\npython tools/train.py ${CONFIG_FILE} --no-validate\n```",
+      "evidence_location": "52-54",
+      "confidence": "high",
+      "reason": "Defines the exact command to initiate model training."
+    },
+    {
+      "field": "testing_commands",
+      "value": "PRW: sh run_test_prw.sh \nCUHK: sh run_test_cuhk.sh  ",
+      "normalized_value": "PRW: sh run_test_prw.sh CUHK: sh run_test_cuhk.sh",
+      "evidence": "```shell\nPRW: sh run_test_prw.sh \nCUHK: sh run_test_cuhk.sh  \n```",
+      "evidence_location": "59-62",
+      "confidence": "high",
+      "reason": "Provides shell scripts for running inference/evaluation on specified datasets."
+    },
+    {
+      "field": "backbones_used",
+      "value": "ResNet50, ResNet50-DCN, and PVTv2b2",
+      "normalized_value": "ResNet50, ResNet50-DCN, and PVTv2b2",
+      "evidence": "- **Pre-trained models** with ResNet50, ResNet50-DCN, and PVTv2b2.",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Lists the neural network backbones supported by the pre-trained models."
+    },
+    {
+      "field": "metrics_reported",
+      "value": "mAP, top-1, mAP+, top-1+",
+      "normalized_value": "mAP, top-1, mAP+, top-1+",
+      "evidence": "|    name  | dataset  | backbone |  mAP  | top-1 |  mAP+ | top-1+  | download|",
+      "evidence_location": "71",
+      "confidence": "high",
+      "reason": "Identifies the evaluation metrics used to report model performance."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}",
+      "normalized_value": "@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}",
+      "evidence": "```\n@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}\n```",
+      "evidence_location": "87-94",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX entry for citing the associated research paper."
+    }
+  ]
+}

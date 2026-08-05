@@ -1,0 +1,220 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "TANL",
+      "normalized_value": "TANL",
+      "evidence": "# TANL: Structured Prediction as Translation between Augmented Natural Languages",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Name of the project, explicitly stated in the title."
+    },
+    {
+      "field": "paper_title",
+      "value": "Structured Prediction as Translation between Augmented Natural Languages",
+      "normalized_value": "Structured Prediction as Translation between Augmented Natural Languages",
+      "evidence": "[Structured Prediction as Translation between Augmented Natural Languages](http://arxiv.org/abs/2101.05779)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Title of the associated research paper, provided with a link."
+    },
+    {
+      "field": "paper_url",
+      "value": "http://arxiv.org/abs/2101.05779",
+      "normalized_value": "http://arxiv.org/abs/2101.05779",
+      "evidence": "http://arxiv.org/abs/2101.05779",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "URL to access the paper directly."
+    },
+    {
+      "field": "conference",
+      "value": "ICLR 2021",
+      "normalized_value": "ICLR 2021",
+      "evidence": "(ICLR 2021)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Conference where the paper was presented, explicitly mentioned."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{tanl,\n    title={Structured Prediction as Translation between Augmented Natural Languages},\n    author={Giovanni Paolini and Ben Athiwaratkun and Jason Krone and Jie Ma and Alessandro Achille and Rishita Anubhai and Cicero Nogueira dos Santos and Bing Xiang and Stefano Soatto},\n    booktitle={9th International Conference on Learning Representations, {ICLR} 2021},\n    year={2021},\n}",
+      "normalized_value": "@inproceedings{tanl, title={Structured Prediction as Translation between Augmented Natural Languages}, author={Giovanni Paolini and Ben Athiwaratkun and Jason Krone and Jie Ma and Alessandro Achille and Rishita Anubhai and Cicero Nogueira dos Santos and Bing Xiang and Stefano Soatto}, booktitle={9th International Conference on Learning Representations, {ICLR} 2021}, year={2021}, }",
+      "evidence": "```\n@inproceedings{tanl,\n    title={Structured Prediction as Translation between Augmented Natural Languages},\n    author={Giovanni Paolini and Ben Athiwaratkun and Jason Krone and Jie Ma and Alessandro Achille and Rishita Anubhai and Cicero Nogueira dos Santos and Bing Xiang and Stefano Soatto},\n    booktitle={9th International Conference on Learning Representations, {ICLR} 2021},\n    year={2021},\n}\n```",
+      "evidence_location": "lines 6-13",
+      "confidence": "high",
+      "reason": "Bibtex reference for citing the work, provided in a code block."
+    },
+    {
+      "field": "python_version",
+      "value": "Python 3.6+",
+      "normalized_value": "Python 3.6+",
+      "evidence": "- Python 3.6+",
+      "evidence_location": "line 18",
+      "confidence": "high",
+      "reason": "Required Python version for running the code."
+    },
+    {
+      "field": "dependency",
+      "value": "PyTorch 1.7.1",
+      "normalized_value": "PyTorch 1.7.1",
+      "evidence": "PyTorch (tested with version 1.7.1)",
+      "evidence_location": "line 19",
+      "confidence": "high",
+      "reason": "Key dependency with tested version specified."
+    },
+    {
+      "field": "dependency",
+      "value": "Transformers 4.0.0",
+      "normalized_value": "Transformers 4.0.0",
+      "evidence": "Transformers (tested with version 4.0.0)",
+      "evidence_location": "line 20",
+      "confidence": "high",
+      "reason": "Key dependency with tested version specified."
+    },
+    {
+      "field": "dependency",
+      "value": "NetworkX 2.5",
+      "normalized_value": "NetworkX 2.5",
+      "evidence": "NetworkX (tested with version 2.5, only used in coreference resolution)",
+      "evidence_location": "line 21",
+      "confidence": "high",
+      "reason": "Dependency with version and usage context."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "`pip install -r requirements.txt`",
+      "evidence_location": "line 23",
+      "confidence": "high",
+      "reason": "Command to install all required Python packages."
+    },
+    {
+      "field": "dataset_path",
+      "value": "data/DATASET_NAME",
+      "normalized_value": "data/DATASET_NAME",
+      "evidence": "`data/DATASET_NAME`",
+      "evidence_location": "line 28",
+      "confidence": "high",
+      "reason": "Default directory where datasets are expected to be placed."
+    },
+    {
+      "field": "dataset_download_url",
+      "value": "https://github.com/markus-eberts/spert/blob/master/scripts/fetch_datasets.sh",
+      "normalized_value": "https://github.com/markus-eberts/spert/blob/master/scripts/fetch_datasets.sh",
+      "evidence": "https://github.com/markus-eberts/spert/blob/master/scripts/fetch_datasets.sh",
+      "evidence_location": "line 31",
+      "confidence": "high",
+      "reason": "URL to download CoNLL04 and ADE datasets in the correct format."
+    },
+    {
+      "field": "run_command",
+      "value": "python run.py JOB",
+      "normalized_value": "python run.py JOB",
+      "evidence": "`python run.py JOB`",
+      "evidence_location": "line 39",
+      "confidence": "high",
+      "reason": "Basic command to run the code with a job argument."
+    },
+    {
+      "field": "config_file",
+      "value": "config.ini",
+      "normalized_value": "config.ini",
+      "evidence": "`config.ini`",
+      "evidence_location": "line 41",
+      "confidence": "high",
+      "reason": "Default configuration file for the code."
+    },
+    {
+      "field": "config_example",
+      "value": "[conll04_final]\ndatasets = conll04\nmodel_name_or_path = t5-base\nnum_train_epochs = 200\nmax_seq_length = 256\nmax_seq_length_eval = 512\ntrain_split = train,dev\nper_device_train_batch_size = 8\nper_device_eval_batch_size = 16\ndo_train = True\ndo_eval = False\ndo_predict = True\nepisodes = 1-10\nnum_beams = 8",
+      "normalized_value": "[conll04_final] datasets = conll04 model_name_or_path = t5-base num_train_epochs = 200 max_seq_length = 256 max_seq_length_eval = 512 train_split = train,dev per_device_train_batch_size = 8 per_device_eval_batch_size = 16 do_train = True do_eval = False do_predict = True episodes = 1-10 num_beams = 8",
+      "evidence": "```\n[conll04_final]\ndatasets = conll04\nmodel_name_or_path = t5-base\nnum_train_epochs = 200\nmax_seq_length = 256\nmax_seq_length_eval = 512\ntrain_split = train,dev\nper_device_train_batch_size = 8\nper_device_eval_batch_size = 16\ndo_train = True\ndo_eval = False\ndo_predict = True\nepisodes = 1-10\nnum_beams = 8\n```",
+      "evidence_location": "lines 45-60",
+      "confidence": "high",
+      "reason": "Example configuration section for replicating results on CoNLL04 dataset."
+    },
+    {
+      "field": "example_run_command",
+      "value": "python run.py conll04_final",
+      "normalized_value": "python run.py conll04_final",
+      "evidence": "`python run.py conll04_final`",
+      "evidence_location": "line 61",
+      "confidence": "high",
+      "reason": "Example command to run a specific job defined in the config."
+    },
+    {
+      "field": "command_line_override_example",
+      "value": "python run.py conll04_final --num_train_epochs 50",
+      "normalized_value": "python run.py conll04_final --num_train_epochs 50",
+      "evidence": "`python run.py conll04_final --num_train_epochs 50`",
+      "evidence_location": "line 65",
+      "confidence": "high",
+      "reason": "Example of overriding config arguments via command line."
+    },
+    {
+      "field": "training_output_directory",
+      "value": "experiments/conll04_final-t5-base-ep200-len256-b8-train",
+      "normalized_value": "experiments/conll04_final-t5-base-ep200-len256-b8-train",
+      "evidence": "`experiments/conll04_final-t5-base-ep200-len256-b8-train`",
+      "evidence_location": "line 71",
+      "confidence": "medium",
+      "reason": "Example directory where training outputs are saved, but noted as 'such as', so it's illustrative."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python run.py conll04_final -e",
+      "normalized_value": "python run.py conll04_final -e",
+      "evidence": "`python run.py conll04_final -e`",
+      "evidence_location": "line 78",
+      "confidence": "high",
+      "reason": "Command to run evaluation only, skipping training."
+    },
+    {
+      "field": "fine_tuned_model_description",
+      "value": "fine-tuned multi-task model",
+      "normalized_value": "fine-tuned multi-task model",
+      "evidence": "## Fine-tuned multi-task model",
+      "evidence_location": "line 121",
+      "confidence": "high",
+      "reason": "Description of the available model, from section header."
+    },
+    {
+      "field": "model_download_url",
+      "value": "https://tanl.s3.amazonaws.com/tanl-multitask.zip",
+      "normalized_value": "https://tanl.s3.amazonaws.com/tanl-multitask.zip",
+      "evidence": "https://tanl.s3.amazonaws.com/tanl-multitask.zip",
+      "evidence_location": "line 123",
+      "confidence": "high",
+      "reason": "URL to download the fine-tuned model weights."
+    },
+    {
+      "field": "model_license",
+      "value": "CC BY 4.0 license",
+      "normalized_value": "CC BY 4.0 license",
+      "evidence": "[CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/)",
+      "evidence_location": "line 123",
+      "confidence": "high",
+      "reason": "License under which the model weights are released."
+    },
+    {
+      "field": "model_evaluation_command",
+      "value": "python run.py multitask -e --eval_datasets conll04",
+      "normalized_value": "python run.py multitask -e --eval_datasets conll04",
+      "evidence": "`python run.py multitask -e --eval_datasets conll04`",
+      "evidence_location": "line 125",
+      "confidence": "high",
+      "reason": "Command to evaluate the fine-tuned multi-task model on a specific dataset."
+    },
+    {
+      "field": "code_license",
+      "value": "Apache 2.0 license",
+      "normalized_value": "Apache 2.0 license",
+      "evidence": "[Apache 2.0 license](LICENSE)",
+      "evidence_location": "line 134",
+      "confidence": "high",
+      "reason": "License under which the code is released."
+    }
+  ]
+}

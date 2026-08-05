@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "# PatchPerPix for Instance Segmentation",
+      "normalized_value": "# PatchPerPix for Instance Segmentation",
+      "evidence": "# PatchPerPix for Instance Segmentation",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the name of the project/repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "[PatchPerPix for Instance Segmentation](https://arxiv.org/abs/2001.07626)",
+      "normalized_value": "[PatchPerPix for Instance Segmentation](https://arxiv.org/abs/2001.07626)",
+      "evidence": "[PatchPerPix for Instance Segmentation](https://arxiv.org/abs/2001.07626)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides the direct link to the official research paper."
+    },
+    {
+      "field": "authors",
+      "value": "**Lisa Mais<sup>1</sup>, Peter Hirsch<sup>1</sup>, Dagmar Kainmueller**, ECCV2020",
+      "normalized_value": "**Lisa Mais<sup>1</sup>, Peter Hirsch<sup>1</sup>, Dagmar Kainmueller**, ECCV2020",
+      "evidence": "**Lisa Mais<sup>1</sup>, Peter Hirsch<sup>1</sup>, Dagmar Kainmueller**, ECCV2020",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Lists the contributing authors and their affiliation context."
+    },
+    {
+      "field": "conference",
+      "value": "ECCV2020",
+      "normalized_value": "ECCV2020",
+      "evidence": "**Lisa Mais<sup>1</sup>, Peter Hirsch<sup>1</sup>, Dagmar Kainmueller**, ECCV2020",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Indicates the academic conference where the work was published."
+    },
+    {
+      "field": "repository_url",
+      "value": "git clone https://github.com/Kainmueller-Lab/PatchPerPix.git",
+      "normalized_value": "git clone https://github.com/Kainmueller-Lab/PatchPerPix.git",
+      "evidence": "git clone https://github.com/Kainmueller-Lab/PatchPerPix.git",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Directs users to the source code repository for cloning."
+    },
+    {
+      "field": "task",
+      "value": "Instance Segmentation",
+      "normalized_value": "Instance Segmentation",
+      "evidence": "# PatchPerPix for Instance Segmentation",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Clearly defines the computer vision task addressed by the method."
+    },
+    {
+      "field": "description",
+      "value": "We present a novel method for proposal free instance segmentation that can handle sophisticated object shapes that span large parts of an image and form dense object clusters with crossovers.",
+      "normalized_value": "We present a novel method for proposal free instance segmentation that can handle sophisticated object shapes that span large parts of an image and form dense object clusters with crossovers.",
+      "evidence": "We present a novel method for proposal free instance segmentation that can handle sophisticated object shapes that span large parts of an image and form dense object clusters with crossovers.",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Summarizes the core methodology and its key capability for handling complex object shapes."
+    },
+    {
+      "field": "requirements",
+      "value": "This package requires Python 3 and PyTorch.",
+      "normalized_value": "This package requires Python 3 and PyTorch.",
+      "evidence": "This package requires Python 3 and PyTorch.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Specifies the core software dependencies required to run the code."
+    },
+    {
+      "field": "tested_os",
+      "value": "The following instructions were tested on linux/ubuntu 20.04.",
+      "normalized_value": "The following instructions were tested on linux/ubuntu 20.04.",
+      "evidence": "The following instructions were tested on linux/ubuntu 20.04.",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Indicates the operating system environment where installation steps were verified."
+    },
+    {
+      "field": "installation_commands",
+      "value": "```\nconda create --name ppp --yes\nconda activate ppp\nconda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes\ngit clone https://github.com/Kainmueller-Lab/PatchPerPix.git\ncd PatchPerPix\nPATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .\n```",
+      "normalized_value": "conda create --name ppp --yes conda activate ppp conda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes git clone https://github.com/Kainmueller-Lab/PatchPerPix.git cd PatchPerPix PATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .",
+      "evidence": "```\nconda create --name ppp --yes\nconda activate ppp\nconda install python=3.9 pytorch-cuda torchvision torchaudio cudatoolkit -c pytorch -c nvidia --yes\ngit clone https://github.com/Kainmueller-Lab/PatchPerPix.git\ncd PatchPerPix\nPATH=/usr/local/cuda/bin:$PATH CUDA_ROOT=/usr/local/cuda pip install -e .\n```",
+      "evidence_location": "25-32",
+      "confidence": "high",
+      "reason": "Provides complete, step-by-step shell commands for setting up the environment and installing the package."
+    },
+    {
+      "field": "main_script",
+      "value": "- `run_ppp.py`:\n\t- main script to run the experiments",
+      "normalized_value": "- `run_ppp.py`: - main script to run the experiments",
+      "evidence": "- `run_ppp.py`:\n\t- main script to run the experiments",
+      "evidence_location": "37-38",
+      "confidence": "high",
+      "reason": "Identifies the primary executable script for launching experiments."
+    },
+    {
+      "field": "example_command",
+      "value": "python run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments",
+      "normalized_value": "python run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments",
+      "evidence": "python run_ppp.py --setup setup01 --config flylight/setups/setup01/default_train_code.toml --do train validate_checkpoints predict decode label evaluate --app flylight --root ppp_experiments",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Demonstrates a concrete usage example covering training, inference, decoding, and evaluation steps."
+    },
+    {
+      "field": "data_format",
+      "value": "The code expects the data to be in the *zarr* format ([https://zarr.readthedocs.io/en/stable/](https://zarr.readthedocs.io/en/stable/)).",
+      "normalized_value": "The code expects the data to be in the *zarr* format ([https://zarr.readthedocs.io/en/stable/](https://zarr.readthedocs.io/en/stable/)).",
+      "evidence": "The code expects the data to be in the *zarr* format ([https://zarr.readthedocs.io/en/stable/](https://zarr.readthedocs.io/en/stable/)).",
+      "evidence_location": "54",
+      "confidence": "high",
+      "reason": "Specifies the required file format for input datasets."
+    },
+    {
+      "field": "license",
+      "value": "All contributions  are welcome! The content in this repository is licensed under the MIT license.",
+      "normalized_value": "All contributions  are welcome! The content in this repository is licensed under the MIT license.",
+      "evidence": "All contributions  are welcome! The content in this repository is licensed under the MIT license.",
+      "evidence_location": "188",
+      "confidence": "high",
+      "reason": "States the open-source license governing the repository's content."
+    },
+    {
+      "field": "benchmarks",
+      "value": "namely the ISBI 2012 EM segmentation benchmark, the BBBC010 C. elegans dataset, and 2d as well as 3d fluorescence microscopy datasets of cell nuclei.",
+      "normalized_value": "namely the ISBI 2012 EM segmentation benchmark, the BBBC010 C. elegans dataset, and 2d as well as 3d fluorescence microscopy datasets of cell nuclei.",
+      "evidence": "namely the ISBI 2012 EM segmentation benchmark, the BBBC010 C. elegans dataset, and 2d as well as 3d fluorescence microscopy datasets of cell nuclei.",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Lists the specific scientific benchmarks and datasets used for evaluation."
+    }
+  ]
+}

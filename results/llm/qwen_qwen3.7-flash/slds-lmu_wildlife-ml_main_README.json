@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Wildlife ML",
+      "normalized_value": "Wildlife ML",
+      "evidence": "# Welcome to **Wildlife ML**!",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the main heading."
+    },
+    {
+      "field": "artifact_description",
+      "value": "software package designed specifically to help ecologists to leverage the potential of active learning and deep learning for image classification",
+      "normalized_value": "software package designed specifically to help ecologists to leverage the potential of active learning and deep learning for image classification",
+      "evidence": "which provides a software package\ndesigned specifically to help ecologists to leverage the potential of active learning\nand deep learning for image classification.",
+      "evidence_location": "5-7",
+      "confidence": "high",
+      "reason": "Clearly defines the purpose, target audience, and core functionality of the artifact."
+    },
+    {
+      "field": "programming_language",
+      "value": "python",
+      "normalized_value": "python",
+      "evidence": "It is accessible as a python object:",
+      "evidence_location": "96",
+      "confidence": "high",
+      "reason": "Explicitly identifies the implementation language used for the package interfaces."
+    },
+    {
+      "field": "primary_detection_model",
+      "value": "Megadetector",
+      "normalized_value": "Megadetector",
+      "evidence": "[Megadetector](https://github.com/microsoft/CameraTraps)",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Identifies the foundational external model used for the first stage of the two-stage pipeline."
+    },
+    {
+      "field": "paper_title",
+      "value": "Automated wildlife image classification: An active learning tool for ecological applications",
+      "normalized_value": "Automated wildlife image classification: An active learning tool for ecological applications",
+      "evidence": "title = {Automated wildlife image classification: {An} active learning tool for ecological applications},",
+      "evidence_location": "48",
+      "confidence": "high",
+      "reason": "Provides the exact academic title for citation, context, and scientific reproducibility."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2303.15823",
+      "normalized_value": "https://arxiv.org/abs/2303.15823",
+      "evidence": "[Automated wildlife image classification: An active learning tool for ecological applications](https://arxiv.org/abs/2303.15823)",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper for methodological background and validation."
+    },
+    {
+      "field": "cli_command",
+      "value": "wildlifeml-get-bbox -d <directory>",
+      "normalized_value": "wildlifeml-get-bbox -d <directory>",
+      "evidence": "wildlifeml-get-bbox -d <directory>",
+      "evidence_location": "112",
+      "confidence": "high",
+      "reason": "Provides a concrete command-line instruction for executing the bounding box prediction step."
+    },
+    {
+      "field": "expected_folder_structure",
+      "value": "├── labels.csv\n├── images_megadetector.json\n└── images\n    ├── img_id1.xx\n    ├── ...\n    └── img_idn.xx",
+      "normalized_value": "├── labels.csv ├── images_megadetector.json └── images ├── img_id1.xx ├── ... └── img_idn.xx",
+      "evidence": "```\n├── labels.csv\n├── images_megadetector.json\n└── images\n    ├── img_id1.xx\n    ├── ...\n    └── img_idn.xx\n```",
+      "evidence_location": "66-73",
+      "confidence": "high",
+      "reason": "Defines the exact input directory layout required for the software package to function correctly."
+    },
+    {
+      "field": "training_parameters",
+      "value": "batch_size, loss_func, num_classes, transfer_epochs, finetune_epochs, transfer_optimizer, finetune_optimizer, finetune_layers",
+      "normalized_value": "batch_size, loss_func, num_classes, transfer_epochs, finetune_epochs, transfer_optimizer, finetune_optimizer, finetune_layers",
+      "evidence": "- `batch_size`: Batch size\n- `loss_func`: TF or Keras loss function\n- `num_classes`: The number of classes in the dataset\n- `transfer_epochs`: How many epochs to train in the `transfer`-phase.\n- `finetune_epochs`: How many epochs to train in the `finetune`-phase.\n- `transfer_optimizer`: Keras optimizer to use in the `transfer`-phase.\n- `finetune_optimizer`: Keras optimizer to use in the `finetune`-phase.\n- `finetune_layers`: Number of layers to unfreeze for the `finetune`-phase.",
+      "evidence_location": "230-238",
+      "confidence": "high",
+      "reason": "Lists all mandatory configuration parameters required to initialize and reproduce the training workflow."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "accuracy, precision, recall, f1 score",
+      "normalized_value": "accuracy, precision, recall, f1 score",
+      "evidence": "accuracy, precision,\nrecall and f1 score is computed as:",
+      "evidence_location": "304-305",
+      "confidence": "high",
+      "reason": "Specifies the exact performance metrics calculated during model evaluation for benchmarking."
+    },
+    {
+      "field": "active_learning_workflow",
+      "value": "The program proposes a selection of images, which would contribute the most to improvement of the model. These images should be labelled by a human. After the user has finished labelling the images, the csv file should be saved and the above run function should be invoked again.",
+      "normalized_value": "The program proposes a selection of images, which would contribute the most to improvement of the model. These images should be labelled by a human. After the user has finished labelling the images, the csv file should be saved and the above run function should be invoked again.",
+      "evidence": "The program proposes a selection of\nimages, which would contribute the most to improvement of the model.\nThese images should be labelled by a human.\n...\nThe task of the user is now to derive a label for the images in the `images` directory\nand enter the corresponding label into the `csv` file.\nAfter the user has finished labelling the images, the `csv` file should be saved\nand the above `run` function should be invoked again.",
+      "evidence_location": "319-321, 360-363",
+      "confidence": "high",
+      "reason": "Describes the iterative human-in-the-loop procedure necessary to execute and complete the active learning pipeline."
+    },
+    {
+      "field": "supplementary_code_repo",
+      "value": "https://github.com/slds-lmu/wildlife-experiments/",
+      "normalized_value": "https://github.com/slds-lmu/wildlife-experiments/",
+      "evidence": "[experiments repository](https://github.com/slds-lmu/wildlife-experiments/)",
+      "evidence_location": "39",
+      "confidence": "high",
+      "reason": "Provides a direct link to additional experimental code and scripts referenced in the documentation."
+    }
+  ]
+}

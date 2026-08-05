@@ -1,0 +1,202 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "Hybrid-Self-Attention-NEAT",
+      "normalized_value": "Hybrid-Self-Attention-NEAT",
+      "evidence": "# Hybrid-Self-Attention-NEAT",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Identifies the artifact name."
+    },
+    {
+      "field": "description",
+      "value": "This repository contains the code to reproduce the results presented in the original paper.",
+      "normalized_value": "This repository contains the code to reproduce the results presented in the original paper.",
+      "evidence": "This repository contains the code to reproduce the results presented in the original [paper](https://link.springer.com/article/10.1007/s12530-023-09510-3).",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Describes the purpose of the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://link.springer.com/article/10.1007/s12530-023-09510-3",
+      "normalized_value": "https://link.springer.com/article/10.1007/s12530-023-09510-3",
+      "evidence": "[paper](https://link.springer.com/article/10.1007/s12530-023-09510-3)",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Provides access to the associated research paper."
+    },
+    {
+      "field": "related_repository_url",
+      "value": "https://github.com/google/brain-tokyo-workshop/tree/master/AttentionAgent",
+      "normalized_value": "https://github.com/google/brain-tokyo-workshop/tree/master/AttentionAgent",
+      "evidence": "Neuroevolution of Self-Interpretable Agents: https://github.com/google/brain-tokyo-workshop/tree/master/AttentionAgent",
+      "evidence_location": "line 10",
+      "confidence": "high",
+      "reason": "Links to a related implementation for context."
+    },
+    {
+      "field": "related_repository_url",
+      "value": "https://github.com/CodeReclaimers/neat-python",
+      "normalized_value": "https://github.com/CodeReclaimers/neat-python",
+      "evidence": "Neat Package: https://github.com/CodeReclaimers/neat-python",
+      "evidence_location": "line 11",
+      "confidence": "high",
+      "reason": "Links to a related implementation for context."
+    },
+    {
+      "field": "related_repository_url",
+      "value": "https://github.com/ukuleleplayer/pureples",
+      "normalized_value": "https://github.com/ukuleleplayer/pureples",
+      "evidence": "Pure python library for the NEAT and other variations: https://github.com/ukuleleplayer/pureples",
+      "evidence_location": "line 12",
+      "confidence": "high",
+      "reason": "Links to a related implementation for context."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python 3.7",
+      "normalized_value": "Python 3.7",
+      "evidence": "* Python 3.7",
+      "evidence_location": "line 17",
+      "confidence": "high",
+      "reason": "Specifies the required programming language for reproducibility."
+    },
+    {
+      "field": "dependencies_file",
+      "value": "requirements.txt",
+      "normalized_value": "requirements.txt",
+      "evidence": "Python packages listed in `requirements.txt`",
+      "evidence_location": "line 18",
+      "confidence": "high",
+      "reason": "Indicates the file containing dependency specifications."
+    },
+    {
+      "field": "install_command",
+      "value": "sudo add-apt-repository ppa:deadsnakes/ppa\nsudo apt-get update\nsudo apt-get install python3.7\nsudo apt install python3.7-distutils",
+      "normalized_value": "sudo add-apt-repository ppa:deadsnakes/ppa sudo apt-get update sudo apt-get install python3.7 sudo apt install python3.7-distutils",
+      "evidence": "sudo add-apt-repository ppa:deadsnakes/ppa\nsudo apt-get update\nsudo apt-get install python3.7\nsudo apt install python3.7-distutils",
+      "evidence_location": "lines 30-34",
+      "confidence": "high",
+      "reason": "Provides steps to install Python 3.7 on Ubuntu."
+    },
+    {
+      "field": "install_command",
+      "value": "python3.7 -m pip install -r requirements.txt",
+      "normalized_value": "python3.7 -m pip install -r requirements.txt",
+      "evidence": "python3.7 -m pip install -r requirements.txt",
+      "evidence_location": "line 42",
+      "confidence": "high",
+      "reason": "Command to install Python dependencies."
+    },
+    {
+      "field": "system_dependency_install_command",
+      "value": "apt-get install -y xvfb x11-utils",
+      "normalized_value": "apt-get install -y xvfb x11-utils",
+      "evidence": "apt-get install -y xvfb x11-utils",
+      "evidence_location": "line 55",
+      "confidence": "high",
+      "reason": "Installs system dependencies for running on Ubuntu server."
+    },
+    {
+      "field": "virtual_environment_setup_link",
+      "value": "https://docs.python.org/3.7/library/venv.html",
+      "normalized_value": "https://docs.python.org/3.7/library/venv.html",
+      "evidence": "Creation of virtual environment: https://docs.python.org/3.7/library/venv.html",
+      "evidence_location": "lines 37-38",
+      "confidence": "high",
+      "reason": "Reference for setting up a virtual environment."
+    },
+    {
+      "field": "training_command",
+      "value": "python3.7 -m experiment.runner",
+      "normalized_value": "python3.7 -m experiment.runner",
+      "evidence": "python3.7 -m experiment.runner",
+      "evidence_location": "line 65",
+      "confidence": "high",
+      "reason": "Command to train the model."
+    },
+    {
+      "field": "training_command_loop",
+      "value": "for i in {1..n}; do python3.7 -m experiment.runner; done",
+      "normalized_value": "for i in {1..n}; do python3.7 -m experiment.runner; done",
+      "evidence": "for i in {1..n}; do python3.7 -m experiment.runner; done",
+      "evidence_location": "line 69",
+      "confidence": "high",
+      "reason": "Alternative command for training with limited RAM."
+    },
+    {
+      "field": "tuning_command",
+      "value": "python3.7 -m experiment.tunner",
+      "normalized_value": "python3.7 -m experiment.tunner",
+      "evidence": "python3.7 -m experiment.tunner",
+      "evidence_location": "line 77",
+      "confidence": "high",
+      "reason": "Command to tune the model."
+    },
+    {
+      "field": "tuning_command_loop",
+      "value": "for i in {1..n}; do python3.7 -m experiment.tunner; done",
+      "normalized_value": "for i in {1..n}; do python3.7 -m experiment.tunner; done",
+      "evidence": "for i in {1..n}; do python3.7 -m experiment.tunner; done",
+      "evidence_location": "line 81",
+      "confidence": "high",
+      "reason": "Alternative command for tuning with limited RAM."
+    },
+    {
+      "field": "configuration_file_path",
+      "value": "experiments/configs/configs.py",
+      "normalized_value": "experiments/configs/configs.py",
+      "evidence": "experiments/configs/configs.py",
+      "evidence_location": "line 47",
+      "confidence": "high",
+      "reason": "Path to configuration files for the project."
+    },
+    {
+      "field": "working_directory",
+      "value": "~/Hybrid_Self_Attention_NEAT/",
+      "normalized_value": "~/Hybrid_Self_Attention_NEAT/",
+      "evidence": "~/Hybrid_Self_Attention_NEAT/",
+      "evidence_location": "line 62",
+      "confidence": "high",
+      "reason": "Specifies the directory from which to run the project."
+    },
+    {
+      "field": "model_save_path",
+      "value": "experiments/ as main_model.pkl",
+      "normalized_value": "experiments/ as main_model.pkl",
+      "evidence": "experiments/ as main_model.pkl",
+      "evidence_location": "line 74",
+      "confidence": "medium",
+      "reason": "Indicates where the trained model is saved, though phrasing is slightly ambiguous."
+    },
+    {
+      "field": "citation",
+      "value": "Khamesian, S., Malek, H. Hybrid self-attention NEAT: a novel evolutionary self-attention approach to improve the NEAT algorithm in high dimensional inputs. Evolving Systems (2023). https://doi.org/10.1007/s12530-023-09510-3",
+      "normalized_value": "Khamesian, S., Malek, H. Hybrid self-attention NEAT: a novel evolutionary self-attention approach to improve the NEAT algorithm in high dimensional inputs. Evolving Systems (2023). https://doi.org/10.1007/s12530-023-09510-3",
+      "evidence": "Khamesian, S., Malek, H. Hybrid self-attention NEAT: a novel evolutionary self-attention approach to improve the NEAT algorithm in high dimensional inputs. Evolving Systems (2023). https://doi.org/10.1007/s12530-023-09510-3",
+      "evidence_location": "lines 88-89",
+      "confidence": "high",
+      "reason": "Provides citation information for academic attribution."
+    },
+    {
+      "field": "task",
+      "value": "Atari games with raw pixels input",
+      "normalized_value": "Atari games with raw pixels input",
+      "evidence": "Atari games with raw pixels input",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Specifies the application domain or task the method is applied to."
+    },
+    {
+      "field": "method_name",
+      "value": "Hybrid Self-Attention NEAT",
+      "normalized_value": "Hybrid Self-Attention NEAT",
+      "evidence": "Hybrid Self-Attention NEAT",
+      "evidence_location": "lines 5-6",
+      "confidence": "high",
+      "reason": "Names the method proposed in the work."
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Trainable Highly-expressive Activation Functions",
+      "normalized_value": "Trainable Highly-expressive Activation Functions",
+      "evidence": "# Trainable Highly-expressive Activation Functions [ECCV 2024]",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Clearly states the project title."
+    },
+    {
+      "field": "conference_publication",
+      "value": "ECCV 2024",
+      "normalized_value": "ECCV 2024",
+      "evidence": "[ECCV 2024]",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Indicates the publication venue and year."
+    },
+    {
+      "field": "authors",
+      "value": "Irit Chelly, Shahaf E. Finder, Shira Ifergane, and Oren Freifeld",
+      "normalized_value": "Irit Chelly, Shahaf E. Finder, Shira Ifergane, and Oren Freifeld",
+      "evidence": "[Irit Chelly](https://irita42.wixsite.com/mysite), [Shahaf E. Finder*](https://shahaffind.github.io/), [Shira Ifergane](https://www.linkedin.com/in/shira-ifergane/), and [Oren Freifeld](https://www.cs.bgu.ac.il/~orenfr/).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Lists all contributors/authors."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2407.07564",
+      "normalized_value": "https://arxiv.org/abs/2407.07564",
+      "evidence": "[![arXiv](https://img.shields.io/badge/arXiv-2407.07564-b31b1b.svg?style=flat)](https://arxiv.org/abs/2407.07564)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Direct link to the arXiv preprint."
+    },
+    {
+      "field": "software_dependencies",
+      "value": "python 3.12\ntorch 2.2.2 \ndifw 0.0.29\nscikit-learn 1.5.1",
+      "normalized_value": "python 3.12 torch 2.2.2 difw 0.0.29 scikit-learn 1.5.1",
+      "evidence": "- python 3.12\n- torch 2.2.2 \n- difw 0.0.29\n- scikit-learn 1.5.1",
+      "evidence_location": "8-11",
+      "confidence": "high",
+      "reason": "Specifies exact package versions required."
+    },
+    {
+      "field": "cuda_version",
+      "value": "12.2",
+      "normalized_value": "12.2",
+      "evidence": "We've successfully compiled it with cuda version 12.2.",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Specifies the tested CUDA toolkit version for compilation."
+    },
+    {
+      "field": "installation_commands",
+      "value": "conda install cxx-compiler -c conda-forge\nexport CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH\nexport LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH\nexport PATH=/usr/local/cuda-12/bin:$PATH",
+      "normalized_value": "conda install cxx-compiler -c conda-forge export CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH export LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH export PATH=/usr/local/cuda-12/bin:$PATH",
+      "evidence": "```sh\nconda install cxx-compiler -c conda-forge\nexport CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH\nexport LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH\nexport PATH=/usr/local/cuda-12/bin:$PATH\n```",
+      "evidence_location": "16-21",
+      "confidence": "high",
+      "reason": "Provides necessary shell commands to configure compiler and environment paths."
+    },
+    {
+      "field": "usage_example",
+      "value": "import torch\nfrom ditac import DiTAC\n\nact = DiTAC()\nx = torch.randn(8,32,20,20).to('cuda')\n\nact(x)",
+      "normalized_value": "import torch from ditac import DiTAC act = DiTAC() x = torch.randn(8,32,20,20).to('cuda') act(x)",
+      "evidence": "```python\nimport torch\nfrom ditac import DiTAC\n\nact = DiTAC()\nx = torch.randn(8,32,20,20).to('cuda')\n\nact(x)\n```",
+      "evidence_location": "25-33",
+      "confidence": "high",
+      "reason": "Shows how to instantiate and call the activation function."
+    },
+    {
+      "field": "reproduction_command",
+      "value": "python run_regression.py",
+      "normalized_value": "python run_regression.py",
+      "evidence": "```sh\npython run_regression.py\n```",
+      "evidence_location": "36-38",
+      "confidence": "high",
+      "reason": "Command to reproduce Figure 1 from the paper."
+    },
+    {
+      "field": "license",
+      "value": "MIT license",
+      "normalized_value": "MIT license",
+      "evidence": "This project is released under the MIT license.",
+      "evidence_location": "43",
+      "confidence": "high",
+      "reason": "Defines the legal terms for reuse."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{Chelly:ECCV:2024DiTAC,\n  title     = {Trainable Highly-expressive Activation Functions},\n  author    = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren},\n  booktitle = {European Conference on Computer Vision},\n  year      = {2024},\n}",
+      "normalized_value": "@inproceedings{Chelly:ECCV:2024DiTAC, title = {Trainable Highly-expressive Activation Functions}, author = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren}, booktitle = {European Conference on Computer Vision}, year = {2024}, }",
+      "evidence": "```\n@inproceedings{Chelly:ECCV:2024DiTAC,\n  title     = {Trainable Highly-expressive Activation Functions},\n  author    = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren},\n  booktitle = {European Conference on Computer Vision},\n  year      = {2024},\n}\n```",
+      "evidence_location": "48-55",
+      "confidence": "high",
+      "reason": "Provides the standard BibTeX format for academic citation."
+    }
+  ]
+}

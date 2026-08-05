@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "s3prl",
+      "normalized_value": "s3prl",
+      "evidence": "**s3prl**",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Primary name of the artifact"
+    },
+    {
+      "field": "full_name",
+      "value": "Self-Supervised Speech Pre-training and Representation Learning",
+      "normalized_value": "Self-Supervised Speech Pre-training and Representation Learning",
+      "evidence": "**S**elf-**S**upervised **S**peech **P**re-training and **R**epresentation **L**earning",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Full expansion of the acronym explaining the artifact's purpose"
+    },
+    {
+      "field": "description",
+      "value": "This is an open source toolkit called s3prl, which stands for Self-Supervised Speech Pre-training and Representation Learning. Self-supervised speech pre-trained models are called upstream in this toolkit, and are utilized in various downstream tasks.",
+      "normalized_value": "This is an open source toolkit called s3prl, which stands for Self-Supervised Speech Pre-training and Representation Learning. Self-supervised speech pre-trained models are called upstream in this toolkit, and are utilized in various downstream tasks.",
+      "evidence": "This is an open source toolkit called **s3prl**, which stands for **S**elf-**S**upervised **S**peech **P**re-training and **R**epresentation **L**earning.\nSelf-supervised speech pre-trained models are called **upstream** in this toolkit, and are utilized in various **downstream** tasks.",
+      "evidence_location": "78-79",
+      "confidence": "high",
+      "reason": "Core description of the toolkit's purpose and architecture"
+    },
+    {
+      "field": "pypi_package",
+      "value": "https://pypi.org/project/s3prl/",
+      "normalized_value": "https://pypi.org/project/s3prl/",
+      "evidence": "[S3PRL PyPI package](https://pypi.org/project/s3prl/)",
+      "evidence_location": "58",
+      "confidence": "high",
+      "reason": "Package distribution location for easy installation"
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://s3prl.github.io/s3prl/",
+      "normalized_value": "https://s3prl.github.io/s3prl/",
+      "evidence": "[online doc](https://s3prl.github.io/s3prl/)",
+      "evidence_location": "58",
+      "confidence": "high",
+      "reason": "Primary documentation location"
+    },
+    {
+      "field": "license",
+      "value": "Apache License 2.0",
+      "normalized_value": "Apache License 2.0",
+      "evidence": "Apache License 2.0",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Main license for the majority of the toolkit"
+    },
+    {
+      "field": "secondary_license",
+      "value": "CC-BY-NC",
+      "normalized_value": "CC-BY-NC",
+      "evidence": "CC-BY-NC",
+      "evidence_location": "6, 183",
+      "confidence": "high",
+      "reason": "Additional license for files authored by Facebook, Inc."
+    },
+    {
+      "field": "supported_os",
+      "value": "ubuntu-18.04, ubuntu-20.04",
+      "normalized_value": "ubuntu-18.04, ubuntu-20.04",
+      "evidence": "`ubuntu-18.04`, `ubuntu-20.04`",
+      "evidence_location": "43",
+      "confidence": "high",
+      "reason": "Supported operating systems for compatibility"
+    },
+    {
+      "field": "python_versions",
+      "value": "3.7, 3.8, 3.9, 3.10",
+      "normalized_value": "3.7, 3.8, 3.9, 3.10",
+      "evidence": "`3.7`, `3.8`, `3.9`, `3.10`",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Supported Python versions for installation"
+    },
+    {
+      "field": "pytorch_versions",
+      "value": "1.8.1, 1.9.1, 1.10.2, 1.11.0, 1.12.1, 1.13.1, 2.0.1, 2.1.0",
+      "normalized_value": "1.8.1, 1.9.1, 1.10.2, 1.11.0, 1.12.1, 1.13.1, 2.0.1, 2.1.0",
+      "evidence": "`1.8.1`, `1.9.1`, `1.10.2`, `1.11.0`, `1.12.1` , `1.13.1` , `2.0.1` , `2.1.0`",
+      "evidence_location": "45",
+      "confidence": "high",
+      "reason": "Supported PyTorch versions for compatibility"
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install s3prl",
+      "normalized_value": "pip install s3prl",
+      "evidence": "pip install s3prl",
+      "evidence_location": "113",
+      "confidence": "high",
+      "reason": "Basic installation command for the package"
+    },
+    {
+      "field": "development_installation_command",
+      "value": "pip install -e \".[all]\"",
+      "normalized_value": "pip install -e \".[all]\"",
+      "evidence": "pip install -e \".[all]\"",
+      "evidence_location": "159",
+      "confidence": "high",
+      "reason": "Development installation command with all dependencies"
+    },
+    {
+      "field": "usage_example",
+      "value": "import torch\nfrom s3prl.nn import S3PRLUpstream\n\nmodel = S3PRLUpstream(\"hubert\")\nmodel.eval()\n\nwith torch.no_grad():\n    wavs = torch.randn(2, 16000 * 2)\n    wavs_len = torch.LongTensor([16000 * 1, 16000 * 2])\n    all_hs, all_hs_len = model(wavs, wavs_len)\n\nfor hs, hs_len in zip(all_hs, all_hs_len):\n    assert isinstance(hs, torch.FloatTensor)\n    assert isinstance(hs_len, torch.LongTensor)\n\n    batch_size, max_seq_len, hidden_size = hs.shape\n    assert hs_len.dim() == 1",
+      "normalized_value": "import torch from s3prl.nn import S3PRLUpstream model = S3PRLUpstream(\"hubert\") model.eval() with torch.no_grad(): wavs = torch.randn(2, 16000 * 2) wavs_len = torch.LongTensor([16000 * 1, 16000 * 2]) all_hs, all_hs_len = model(wavs, wavs_len) for hs, hs_len in zip(all_hs, all_hs_len): assert isinstance(hs, torch.FloatTensor) assert isinstance(hs_len, torch.LongTensor) batch_size, max_seq_len, hidden_size = hs.shape assert hs_len.dim() == 1",
+      "evidence": "import torch\nfrom s3prl.nn import S3PRLUpstream\n\nmodel = S3PRLUpstream(\"hubert\")\nmodel.eval()\n\nwith torch.no_grad():\n    wavs = torch.randn(2, 16000 * 2)\n    wavs_len = torch.LongTensor([16000 * 1, 16000 * 2])\n    all_hs, all_hs_len = model(wavs, wavs_len)\n\nfor hs, hs_len in zip(all_hs, all_hs_len):\n    assert isinstance(hs, torch.FloatTensor)\n    assert isinstance(hs_len, torch.LongTensor)\n\n    batch_size, max_seq_len, hidden_size = hs.shape\n    assert hs_len.dim() == 1",
+      "evidence_location": "119-136",
+      "confidence": "high",
+      "reason": "Complete code example showing how to use the toolkit for inference"
+    },
+    {
+      "field": "prerequisites",
+      "value": "Python >= 3.6, Install sox on your OS",
+      "normalized_value": "Python >= 3.6, Install sox on your OS",
+      "evidence": "**Python** >= 3.6\n2. Install **sox** on your OS",
+      "evidence_location": "157-158",
+      "confidence": "high",
+      "reason": "System prerequisites for installation"
+    },
+    {
+      "field": "primary_contact",
+      "value": "Shu-wen (Leo) Yang (leo19941227@gmail.com), Andy T. Liu (liuandyt@gmail.com)",
+      "normalized_value": "Shu-wen (Leo) Yang (leo19941227@gmail.com), Andy T. Liu (liuandyt@gmail.com)",
+      "evidence": "- [Shu-wen (Leo) Yang](https://leo19941227.github.io/) (leo19941227@gmail.com)\n- [Andy T. Liu](https://andi611.github.io/) (liuandyt@gmail.com)",
+      "evidence_location": "17-18",
+      "confidence": "high",
+      "reason": "Primary contact information for project maintainers"
+    },
+    {
+      "field": "project_status",
+      "value": "S3PRL has transitioned into pure maintenance mode, ensuring the long-term maintenance of all existing functions.",
+      "normalized_value": "S3PRL has transitioned into pure maintenance mode, ensuring the long-term maintenance of all existing functions.",
+      "evidence": "S3PRL has transitioned into pure maintenance mode, ensuring the long-term maintenance of all existing functions.",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Current project status and maintenance policy"
+    },
+    {
+      "field": "ci_cd_url",
+      "value": "https://github.com/s3prl/s3prl/actions/workflows/ci.yml",
+      "normalized_value": "https://github.com/s3prl/s3prl/actions/workflows/ci.yml",
+      "evidence": "[github action](.github/workflows/ci.yml)",
+      "evidence_location": "39",
+      "confidence": "high",
+      "reason": "Continuous integration workflow location"
+    },
+    {
+      "field": "testing_framework",
+      "value": "tox",
+      "normalized_value": "tox",
+      "evidence": "[tox](./tox.ini)",
+      "evidence_location": "39",
+      "confidence": "high",
+      "reason": "Testing framework used for compatibility testing"
+    }
+  ]
+}

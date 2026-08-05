@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "BTM",
+      "normalized_value": "BTM",
+      "evidence": "# BTM",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Identifies the artifact/repository name."
+    },
+    {
+      "field": "paper_title",
+      "value": "Reviving Undersampling for Long-Tailed Learning",
+      "normalized_value": "Reviving Undersampling for Long-Tailed Learning",
+      "evidence": "**Reviving Undersampling for Long-Tailed Learning**",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Title of the paper this repository implements; key for identification and citation."
+    },
+    {
+      "field": "authors",
+      "value": "Hao Yu, Yingxiao Du, Jianxin Wu",
+      "normalized_value": "Hao Yu, Yingxiao Du, Jianxin Wu",
+      "evidence": "**Authors**: Hao Yu, Yingxiao Du, Jianxin Wu",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Author attribution for citation and credit."
+    },
+    {
+      "field": "arxiv_link",
+      "value": "https://arxiv.org/pdf/2401.16811.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2401.16811.pdf",
+      "evidence": "[[`arXiv`](https://arxiv.org/pdf/2401.16811.pdf)]",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Direct link to the associated paper."
+    },
+    {
+      "field": "description",
+      "value": "BTM is a simple, and efficient framework for long-tailed recognition.",
+      "normalized_value": "BTM is a simple, and efficient framework for long-tailed recognition.",
+      "evidence": "BTM is a simple, and efficient framework for long-tailed recognition.",
+      "evidence_location": "line 9, Introduction",
+      "confidence": "high",
+      "reason": "States the artifact's purpose and task domain."
+    },
+    {
+      "field": "based_on",
+      "value": "MiSLAS",
+      "normalized_value": "MiSLAS",
+      "evidence": "based on [MiSLAS](https://github.com/dvlab-research/MiSLAS)",
+      "evidence_location": "line 9, Introduction",
+      "confidence": "high",
+      "reason": "Identifies the upstream codebase this implementation builds on, useful for reproducibility and provenance."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "harmonic mean and geometric mean",
+      "normalized_value": "harmonic mean and geometric mean",
+      "evidence": "utilize the harmonic mean and geometric mean to assess the model's performance",
+      "evidence_location": "line 9, Introduction",
+      "confidence": "high",
+      "reason": "Names the metrics used to evaluate model performance."
+    },
+    {
+      "field": "python_version",
+      "value": "Python 3.8",
+      "normalized_value": "Python 3.8",
+      "evidence": "* Python 3.8",
+      "evidence_location": "line 15, Installation > Requirements",
+      "confidence": "high",
+      "reason": "Required Python version for environment setup."
+    },
+    {
+      "field": "torchvision_version",
+      "value": "torchvision 0.13.0",
+      "normalized_value": "torchvision 0.13.0",
+      "evidence": "* torchvision 0.13.0",
+      "evidence_location": "line 16, Installation > Requirements",
+      "confidence": "high",
+      "reason": "Required dependency version for reproducibility."
+    },
+    {
+      "field": "pytorch_version",
+      "value": "Pytorch 1.12.0",
+      "normalized_value": "Pytorch 1.12.0",
+      "evidence": "* Pytorch 1.12.0",
+      "evidence_location": "line 17, Installation > Requirements",
+      "confidence": "high",
+      "reason": "Required deep learning framework version."
+    },
+    {
+      "field": "datasets",
+      "value": "ImageNet-LT, iNaturalist 2018, Places-LT",
+      "normalized_value": "ImageNet-LT, iNaturalist 2018, Places-LT",
+      "evidence": "**Dataset Preparation**\n* [ImageNet-LT](http://image-net.org/index)\n* [iNaturalist 2018](https://github.com/visipedia/inat_comp/tree/master/2018)\n* [Places-LT](http://places2.csail.mit.edu/download.html)",
+      "evidence_location": "lines 19-22, Installation > Dataset Preparation",
+      "confidence": "high",
+      "reason": "Lists the benchmark datasets with source links needed to reproduce experiments."
+    },
+    {
+      "field": "dataset_config_instruction",
+      "value": "Change the `data_path` in `config/*/*.yaml` accordingly.",
+      "normalized_value": "Change the `data_path` in `config/*/*.yaml` accordingly.",
+      "evidence": "Change the `data_path` in `config/*/*.yaml` accordingly.",
+      "evidence_location": "line 24, Installation > Dataset Preparation",
+      "confidence": "high",
+      "reason": "Setup step required to point configs at local dataset paths."
+    },
+    {
+      "field": "stage1_training_command",
+      "value": "python train_stage1.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml",
+      "normalized_value": "python train_stage1.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml",
+      "evidence": "```\npython train_stage1.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml\n```",
+      "evidence_location": "lines 32-34, Training > Stage-1",
+      "confidence": "high",
+      "reason": "Command to train the Stage-1 model."
+    },
+    {
+      "field": "supported_dataset_names",
+      "value": "imagenet, ina2018, places",
+      "normalized_value": "imagenet, ina2018, places",
+      "evidence": "`DATASETNAME` can be selected from `imagenet`, `ina2018`, and `places`.",
+      "evidence_location": "line 36, Training",
+      "confidence": "high",
+      "reason": "Valid config identifiers for the DATASETNAME placeholder in commands."
+    },
+    {
+      "field": "supported_architectures",
+      "value": "resnet50/101/152 for imagenet, resnet50 for ina2018, resnet152 for places",
+      "normalized_value": "resnet50/101/152 for imagenet, resnet50 for ina2018, resnet152 for places",
+      "evidence": "`ARCH` can be `resnet50/101/152` for `imagenet`, `resnet50` for `ina2018`, and `resnet152` for `places`, respectively.",
+      "evidence_location": "line 38, Training",
+      "confidence": "high",
+      "reason": "Specifies which backbone architectures are valid per dataset."
+    },
+    {
+      "field": "btm_training_command",
+      "value": "python train_stage1_bl_10_classifier.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup_bl_10_calssifier.yaml",
+      "normalized_value": "python train_stage1_bl_10_classifier.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup_bl_10_calssifier.yaml",
+      "evidence": "```\npython train_stage1_bl_10_classifier.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup_bl_10_calssifier.yaml\n```",
+      "evidence_location": "lines 43-45, Training > BTM",
+      "confidence": "high",
+      "reason": "Command to train a model with balanced undersampling (the core BTM step)."
+    },
+    {
+      "field": "ensemble_merge_command",
+      "value": "python merge.py",
+      "normalized_value": "python merge.py",
+      "evidence": "```\npython merge.py\n```",
+      "evidence_location": "lines 50-52, Training > BTM",
+      "confidence": "high",
+      "reason": "Command to fuse multiple balance-trained models into the ensemble."
+    },
+    {
+      "field": "stage2_training_command",
+      "value": "python train_stage2.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/BTM",
+      "normalized_value": "python train_stage2.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/BTM",
+      "evidence": "```\npython train_stage2.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/BTM\n```",
+      "evidence_location": "lines 61-63, Training > Stage-2",
+      "confidence": "high",
+      "reason": "Command to train the Stage-2 model from the BTM checkpoint."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml  resume /path/to/checkpoint/stage1\npython eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/stage2",
+      "normalized_value": "python eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml  resume /path/to/checkpoint/stage1\npython eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/stage2",
+      "evidence": "```\npython eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage1_mixup.yaml  resume /path/to/checkpoint/stage1\npython eval.py --cfg ./config/DATASETNAME/DATASETNAME_ARCH_stage2_mislas.yaml resume /path/to/checkpoint/stage2\n```",
+      "evidence_location": "lines 81-84, Evaluation",
+      "confidence": "high",
+      "reason": "Commands to evaluate trained Stage-1 and Stage-2 models."
+    },
+    {
+      "field": "citation",
+      "value": "@article{yu2024reviving,\n  title={Reviving Undersampling for Long-Tailed Learning},\n  author={Yu, Hao and Du, Yingxiao and Wu, Jianxin},\n  journal={arXiv preprint arXiv:2401.16811},\n  year={2024}\n}",
+      "normalized_value": "@article{yu2024reviving,\n  title={Reviving Undersampling for Long-Tailed Learning},\n  author={Yu, Hao and Du, Yingxiao and Wu, Jianxin},\n  journal={arXiv preprint arXiv:2401.16811},\n  year={2024}\n}",
+      "evidence": "```bib\n@article{yu2024reviving,\n  title={Reviving Undersampling for Long-Tailed Learning},\n  author={Yu, Hao and Du, Yingxiao and Wu, Jianxin},\n  journal={arXiv preprint arXiv:2401.16811},\n  year={2024}\n}\n```",
+      "evidence_location": "lines 88-95, Citation",
+      "confidence": "high",
+      "reason": "BibTeX entry for citing the work."
+    },
+    {
+      "field": "contact_email",
+      "value": "yuh@lamda.nju.edu.cn",
+      "normalized_value": "yuh@lamda.nju.edu.cn",
+      "evidence": "If you have any questions about our work, feel free to contact us through email (Hao Yu: yuh@lamda.nju.edu.cn) or Github issues.",
+      "evidence_location": "line 99, Contact",
+      "confidence": "high",
+      "reason": "Point of contact for questions about the artifact."
+    }
+  ]
+}

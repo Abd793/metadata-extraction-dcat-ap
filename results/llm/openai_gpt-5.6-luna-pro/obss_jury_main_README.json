@@ -1,0 +1,229 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Jury",
+      "normalized_value": "Jury",
+      "evidence": "<h1 align=\"center\">Jury</h1>",
+      "evidence_location": "1; title",
+      "confidence": "high",
+      "reason": "Identifies the artifact."
+    },
+    {
+      "field": "description",
+      "value": "A comprehensive toolkit for evaluating NLP experiments offering various automated metrics. Jury offers a smooth and easy-to-use interface. It uses a more advanced version of [evaluate](https://github.com/huggingface/evaluate/) design for underlying metric computation, so that adding custom metric is easy as extending proper class.",
+      "normalized_value": "A comprehensive toolkit for evaluating NLP experiments offering various automated metrics. Jury offers a smooth and easy-to-use interface. It uses a more advanced version of [evaluate](https://github.com/huggingface/evaluate/) design for underlying metric computation, so that adding custom metric is easy as extending proper class.",
+      "evidence": "A comprehensive toolkit for evaluating NLP experiments offering various automated metrics. Jury offers a smooth and easy-to-use interface. It uses a more advanced version of [evaluate](https://github.com/huggingface/evaluate/) design for underlying metric computation, so that adding custom metric is easy as extending proper class.",
+      "evidence_location": "18; introduction",
+      "confidence": "high",
+      "reason": "States the artifact's purpose, interface, and metric-computation design."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/obss/jury.git",
+      "normalized_value": "https://github.com/obss/jury.git",
+      "evidence": "    git clone https://github.com/obss/jury.git",
+      "evidence_location": "93; Installation",
+      "confidence": "high",
+      "reason": "Provides the source repository needed to obtain the artifact."
+    },
+    {
+      "field": "pypi_url",
+      "value": "https://pypi.org/project/jury",
+      "normalized_value": "https://pypi.org/project/jury",
+      "evidence": "https://pypi.org/project/jury",
+      "evidence_location": "4; badges",
+      "confidence": "high",
+      "reason": "Provides the package's PyPI access link."
+    },
+    {
+      "field": "colab_notebook_url",
+      "value": "https://colab.research.google.com/github/obss/jury/blob/main/examples/jury_evaluate.ipynb",
+      "normalized_value": "https://colab.research.google.com/github/obss/jury/blob/main/examples/jury_evaluate.ipynb",
+      "evidence": "https://colab.research.google.com/github/obss/jury/blob/main/examples/jury_evaluate.ipynb",
+      "evidence_location": "8; badges",
+      "confidence": "high",
+      "reason": "Links to an executable Google Colab example for evaluation."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2310.02040",
+      "normalized_value": "https://arxiv.org/abs/2310.02040",
+      "evidence": "* (2023.10.03) Jury paper is out currently is on [arxiv](https://arxiv.org/abs/2310.02040). Please cite this paper if your work use Jury, and if your publication material will be submitted to the venues after this date.  ",
+      "evidence_location": "33; News",
+      "confidence": "high",
+      "reason": "Provides the associated paper and citation guidance."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "Licensed under the [MIT](LICENSE) License.",
+      "evidence_location": "292; License",
+      "confidence": "high",
+      "reason": "States the legal license governing reuse."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install jury",
+      "normalized_value": "pip install jury",
+      "evidence": "    pip install jury",
+      "evidence_location": "87-89; Installation",
+      "confidence": "high",
+      "reason": "Provides the direct package installation command."
+    },
+    {
+      "field": "source_installation",
+      "value": "git clone https://github.com/obss/jury.git\ncd jury\npython setup.py install",
+      "normalized_value": "git clone https://github.com/obss/jury.git cd jury python setup.py install",
+      "evidence": "    git clone https://github.com/obss/jury.git\n    cd jury\n    python setup.py install",
+      "evidence_location": "91-95; Installation",
+      "confidence": "high",
+      "reason": "Provides commands for building and installing from source."
+    },
+    {
+      "field": "windows_pywin32_workaround",
+      "value": "conda install pywin32",
+      "normalized_value": "conda install pywin32",
+      "evidence": "**NOTE:** There may be malfunctions of some metrics depending on `sacrebleu` package on Windows machines which is \nmainly due to the package `pywin32`. For this, we fixed pywin32 version on our setup config for Windows platforms. \nHowever, if pywin32 causes trouble in your environment we strongly recommend using `conda` manager install the package \nas `conda install pywin32`.",
+      "evidence_location": "97-100; Installation",
+      "confidence": "high",
+      "reason": "Documents a Windows-specific dependency issue and its recommended workaround."
+    },
+    {
+      "field": "concurrent_metric_computation",
+      "value": "Metrics calculations can be handled concurrently to save processing time.",
+      "normalized_value": "Metrics calculations can be handled concurrently to save processing time.",
+      "evidence": "- Metrics calculations can be handled concurrently to save processing time.",
+      "evidence_location": "25; Main advantages",
+      "confidence": "high",
+      "reason": "States a concrete execution capability relevant to performance and evaluation workflows."
+    },
+    {
+      "field": "python_api_usage",
+      "value": "scores = scorer(predictions=predictions, references=references)",
+      "normalized_value": "scores = scorer(predictions=predictions, references=references)",
+      "evidence": "scores = scorer(predictions=predictions, references=references)",
+      "evidence_location": "120; API Usage",
+      "confidence": "high",
+      "reason": "Shows the primary Python call used to evaluate predictions against references."
+    },
+    {
+      "field": "metric_selection",
+      "value": "scorer = Jury(metrics=[\"bleu\", \"meteor\"])\nscores = scorer(predictions, references)",
+      "normalized_value": "scorer = Jury(metrics=[\"bleu\", \"meteor\"]) scores = scorer(predictions, references)",
+      "evidence": "```python\nscorer = Jury(metrics=[\"bleu\", \"meteor\"])\nscores = scorer(predictions, references)\n```",
+      "evidence_location": "123-128; API Usage",
+      "confidence": "high",
+      "reason": "Shows how to select specific metrics during scorer initialization."
+    },
+    {
+      "field": "standalone_metric_usage",
+      "value": "from jury.metrics import Bleu\n\nbleu = Bleu.construct()\nscore = bleu.compute(predictions=predictions, references=references)",
+      "normalized_value": "from jury.metrics import Bleu bleu = Bleu.construct() score = bleu.compute(predictions=predictions, references=references)",
+      "evidence": "```python\nfrom jury.metrics import Bleu\n\nbleu = Bleu.construct()\nscore = bleu.compute(predictions=predictions, references=references)\n```",
+      "evidence_location": "134-139; Use of Metrics standalone",
+      "confidence": "high",
+      "reason": "Demonstrates direct construction and use of an individual metric."
+    },
+    {
+      "field": "cli_file_evaluation",
+      "value": "jury eval --predictions /path/to/predictions.txt --references /path/to/references.txt --reduce_fn max --export /path/to/export.txt",
+      "normalized_value": "jury eval --predictions /path/to/predictions.txt --references /path/to/references.txt --reduce_fn max --export /path/to/export.txt",
+      "evidence": "    jury eval --predictions /path/to/predictions.txt --references /path/to/references.txt --reduce_fn max --export /path/to/export.txt",
+      "evidence_location": "169-173; CLI Usage",
+      "confidence": "high",
+      "reason": "Provides the command for evaluating paired prediction and reference files."
+    },
+    {
+      "field": "cli_folder_evaluation",
+      "value": "jury eval --predictions /path/to/predictions_folder --references /path/to/references_folder --reduce_fn max --export /path/to/export.txt",
+      "normalized_value": "jury eval --predictions /path/to/predictions_folder --references /path/to/references_folder --reduce_fn max --export /path/to/export.txt",
+      "evidence": "    jury eval --predictions /path/to/predictions_folder --references /path/to/references_folder --reduce_fn max --export /path/to/export.txt",
+      "evidence_location": "175-177; CLI Usage",
+      "confidence": "high",
+      "reason": "Provides the command for evaluating multiple experiments organized in prediction and reference folders."
+    },
+    {
+      "field": "cli_config_command",
+      "value": "jury eval --config path/to/config.json",
+      "normalized_value": "jury eval --config path/to/config.json",
+      "evidence": "    jury eval --config path/to/config.json",
+      "evidence_location": "193-195; CLI Usage",
+      "confidence": "high",
+      "reason": "Shows how to run evaluation from a JSON configuration file."
+    },
+    {
+      "field": "metric_fallback",
+      "value": "Jury falls back to `evaluate` implementation of metrics for the ones that are currently not supported by Jury",
+      "normalized_value": "Jury falls back to `evaluate` implementation of metrics for the ones that are currently not supported by Jury",
+      "evidence": "Jury falls back to `evaluate` implementation of metrics for the ones that are currently not supported by Jury",
+      "evidence_location": "199; Custom Metrics",
+      "confidence": "high",
+      "reason": "Explains how unsupported metrics are resolved through the evaluate implementation."
+    },
+    {
+      "field": "supported_input_combinations",
+      "value": "single prediction & single reference; single prediction & multiple reference; multiple prediction & multiple reference",
+      "normalized_value": "single prediction & single reference; single prediction & multiple reference; multiple prediction & multiple reference",
+      "evidence": "- single prediction & single reference\n- single prediction & multiple reference\n- multiple prediction & multiple reference",
+      "evidence_location": "201-205; Custom Metrics",
+      "confidence": "high",
+      "reason": "Defines the prediction/reference input shapes supported by the metric interface."
+    },
+    {
+      "field": "custom_metric_base_class",
+      "value": "jury.metrics.Metric",
+      "normalized_value": "jury.metrics.Metric",
+      "evidence": "we strongly recommend using `jury.metrics.Metric` as it has several advantages",
+      "evidence_location": "207; Custom Metrics",
+      "confidence": "high",
+      "reason": "Identifies the recommended base class for implementing reusable custom metrics."
+    },
+    {
+      "field": "available_metrics",
+      "value": "Accuracy-Numeric, Accuracy-Text, Bartscore, Bertscore, Bleu, Bleurt, CER, CHRF, COMET, F1-Numeric, F1-Text, METEOR, Precision-Numeric, Precision-Text, Prism, Recall-Numeric, Recall-Text, ROUGE, SacreBleu, Seqeval, Squad, TER, WER, Other metrics",
+      "normalized_value": "Accuracy-Numeric, Accuracy-Text, Bartscore, Bertscore, Bleu, Bleurt, CER, CHRF, COMET, F1-Numeric, F1-Text, METEOR, Precision-Numeric, Precision-Text, Prism, Recall-Numeric, Recall-Text, ROUGE, SacreBleu, Seqeval, Squad, TER, WER, Other metrics",
+      "evidence": "| Accuracy-Numeric                                                              | :heavy_check_mark: | :white_check_mark:  |\n| Accuracy-Text                                                                 | :heavy_check_mark: | :x:                 |\n| Bartscore                                                                     | :heavy_check_mark: | :x:                 |\n| Bertscore                                                                     | :heavy_check_mark: | :white_check_mark:  |\n| Bleu                                                                          | :heavy_check_mark: | :white_check_mark:  |\n| Bleurt                                                                        | :heavy_check_mark: | :white_check_mark:  |\n| CER                                                                           | :heavy_check_mark: | :white_check_mark:  |\n| CHRF                                                                          | :heavy_check_mark: | :white_check_mark:  |\n| COMET                                                                         | :heavy_check_mark: | :white_check_mark:  |\n| F1-Numeric                                                                    | :heavy_check_mark: | :white_check_mark:  |\n| F1-Text                                                                       | :heavy_check_mark: | :x:                 |\n| METEOR                                                                        | :heavy_check_mark: | :white_check_mark:  |\n| Precision-Numeric                                                             | :heavy_check_mark: | :white_check_mark:  |\n| Precision-Text                                                                | :heavy_check_mark: | :x:                 |\n| Prism                                                                         | :heavy_check_mark: | :x:                 |\n| Recall-Numeric                                                                | :heavy_check_mark: | :white_check_mark:  |\n| Recall-Text                                                                   | :heavy_check_mark: | :x:                 |\n| ROUGE                                                                         | :heavy_check_mark: | :white_check_mark:  |\n| SacreBleu                                                                     | :heavy_check_mark: | :white_check_mark:  |\n| Seqeval                                                                       | :heavy_check_mark: | :white_check_mark:  |\n| Squad                                                                         | :heavy_check_mark: | :white_check_mark:  |\n| TER                                                                           | :heavy_check_mark: | :white_check_mark:  |\n| WER                                                                           | :heavy_check_mark: | :white_check_mark:  |\n| [Other metrics](https://github.com/huggingface/evaluate/tree/master/metrics)* | :white_check_mark: | :white_check_mark:  |",
+      "evidence_location": "42-65; Available Metrics",
+      "confidence": "high",
+      "reason": "Lists the concrete metrics and metric category documented as supported."
+    },
+    {
+      "field": "development_installation",
+      "value": "git clone https://github.com/obss/jury.git\ncd jury\npip install -e \".[dev]\"",
+      "normalized_value": "git clone https://github.com/obss/jury.git cd jury pip install -e \".[dev]\"",
+      "evidence": "    git clone https://github.com/obss/jury.git\n    cd jury\n    pip install -e \".[dev]\"",
+      "evidence_location": "235-239; Contributing",
+      "confidence": "high",
+      "reason": "Provides the editable installation procedure for development."
+    },
+    {
+      "field": "development_requirements_installation",
+      "value": "pip install -r requirements-dev.txt",
+      "normalized_value": "pip install -r requirements-dev.txt",
+      "evidence": "    pip install -r requirements-dev.txt",
+      "evidence_location": "241-247; Contributing",
+      "confidence": "high",
+      "reason": "Installs development and git-sourced requirements needed by contributors."
+    },
+    {
+      "field": "test_command",
+      "value": "python tests/run_tests.py",
+      "normalized_value": "python tests/run_tests.py",
+      "evidence": "    python tests/run_tests.py",
+      "evidence_location": "249-253; Tests",
+      "confidence": "high",
+      "reason": "Provides the documented test execution command."
+    },
+    {
+      "field": "citation",
+      "value": "@misc{cavusoglu2023jury,\n  title={Jury: A Comprehensive Evaluation Toolkit}, \n  author={Devrim Cavusoglu and Ulas Sert and Secil Sen and Sinan Altinuc},\n  year={2023},\n  eprint={2310.02040},\n  archivePrefix={arXiv},\n  primaryClass={cs.CL},\n  doi={10.48550/arXiv.2310.02040}\n}",
+      "normalized_value": "@misc{cavusoglu2023jury, title={Jury: A Comprehensive Evaluation Toolkit}, author={Devrim Cavusoglu and Ulas Sert and Secil Sen and Sinan Altinuc}, year={2023}, eprint={2310.02040}, archivePrefix={arXiv}, primaryClass={cs.CL}, doi={10.48550/arXiv.2310.02040} }",
+      "evidence": "    @misc{cavusoglu2023jury,\n      title={Jury: A Comprehensive Evaluation Toolkit}, \n      author={Devrim Cavusoglu and Ulas Sert and Secil Sen and Sinan Altinuc},\n      year={2023},\n      eprint={2310.02040},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL},\n      doi={10.48550/arXiv.2310.02040}\n    }",
+      "evidence_location": "266-278; Citation",
+      "confidence": "high",
+      "reason": "Provides the complete BibTeX citation for attribution and scholarly reuse."
+    }
+  ]
+}

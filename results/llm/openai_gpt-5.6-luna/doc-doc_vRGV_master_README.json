@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Visual Relation Grounding in Videos",
+      "normalized_value": "Visual Relation Grounding in Videos",
+      "evidence": "# [Visual Relation Grounding in Videos](https://arxiv.org/pdf/2007.08814.pdf)",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Provides the artifact's explicit title and identifies the associated paper."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2007.08814.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2007.08814.pdf",
+      "evidence": "# [Visual Relation Grounding in Videos](https://arxiv.org/pdf/2007.08814.pdf)",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Direct link to the paper supports research identification and reproduction."
+    },
+    {
+      "field": "implementation_type",
+      "value": "pytorch implementation",
+      "normalized_value": "pytorch implementation",
+      "evidence": "This is the pytorch implementation of our work at ECCV2020 (Spotlight).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "States the implementation framework and associated venue status."
+    },
+    {
+      "field": "repository_components",
+      "value": "(1) Extract RoI feature; (2) Train and inference; and (3) Generate relation-aware trajectories.",
+      "normalized_value": "(1) Extract RoI feature; (2) Train and inference; and (3) Generate relation-aware trajectories.",
+      "evidence": "The repository mainly includes 3 parts: (1) Extract RoI feature; (2) Train and inference; and (3) Generate relation-aware trajectories.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Summarizes the main reusable capabilities provided by the repository."
+    },
+    {
+      "field": "environment",
+      "value": "Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0.",
+      "normalized_value": "Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0.",
+      "evidence": "Anaconda 3, python 3.6.5, pytorch 0.4.1 (Higher version is OK once feature is ready) and cuda >= 9.0. For others libs, please refer to the file requirements.txt.",
+      "evidence_location": "lines 10-12; Environment",
+      "confidence": "high",
+      "reason": "Specifies the stated software and CUDA environment needed to run the artifact."
+    },
+    {
+      "field": "installation_commands",
+      "value": ">conda create -n envname python=3.6.5 # Create\n>conda activate envname # Enter\n>pip install -r requirements.txt # Install the provided libs\n>sh vRGV/lib/make.sh # Set the environment for detection, make sure you have nvcc",
+      "normalized_value": ">conda create -n envname python=3.6.5 # Create\n>conda activate envname # Enter\n>pip install -r requirements.txt # Install the provided libs\n>sh vRGV/lib/make.sh # Set the environment for detection, make sure you have nvcc",
+      "evidence": "```\n>conda create -n envname python=3.6.5 # Create\n>conda activate envname # Enter\n>pip install -r requirements.txt # Install the provided libs\n>sh vRGV/lib/make.sh # Set the environment for detection, make sure you have nvcc\n```",
+      "evidence_location": "lines 14-21; Install",
+      "confidence": "high",
+      "reason": "Provides explicit environment creation, dependency installation, and detection setup commands."
+    },
+    {
+      "field": "data_download_url",
+      "value": "https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing",
+      "evidence": "Please download the data [here](https://drive.google.com/file/d/1qNJ3jBPPoi0BPkvLqooS66czvCxsib1M/view?usp=sharing).",
+      "evidence_location": "line 23; Data Preparation",
+      "confidence": "high",
+      "reason": "Directly identifies the downloadable data source."
+    },
+    {
+      "field": "data_directory_requirement",
+      "value": "The folder ```ground_data``` should be at the same directory as ```vRGV```. Please merge the downloaded vRGV folder with this repo.",
+      "normalized_value": "The folder ```ground_data``` should be at the same directory as ```vRGV```. Please merge the downloaded vRGV folder with this repo.",
+      "evidence": "The folder ```ground_data``` should be at the same directory as ```vRGV```. Please merge the downloaded vRGV folder with this repo.",
+      "evidence_location": "line 23; Data Preparation",
+      "confidence": "high",
+      "reason": "Defines the required placement and merge operation for the downloaded data."
+    },
+    {
+      "field": "video_download_url",
+      "value": "https://xdshang.github.io/docs/imagenet-vidvrd.html",
+      "normalized_value": "https://xdshang.github.io/docs/imagenet-vidvrd.html",
+      "evidence": "Please download the videos [here](https://xdshang.github.io/docs/imagenet-vidvrd.html) and extract the frames into ground_data.",
+      "evidence_location": "line 25; Data Preparation",
+      "confidence": "high",
+      "reason": "Directly identifies the video source required for data preparation."
+    },
+    {
+      "field": "data_directory_layout",
+      "value": "ground_data/vidvrd/JPEGImages/ILSVRC2015_train_xxx/000000.JPEG",
+      "normalized_value": "ground_data/vidvrd/JPEGImages/ILSVRC2015_train_xxx/000000.JPEG",
+      "evidence": "The directory should be like: ground_data/vidvrd/JPEGImages/ILSVRC2015_train_xxx/000000.JPEG.",
+      "evidence_location": "line 26; Data Preparation",
+      "confidence": "high",
+      "reason": "Provides a concrete expected directory and frame-file layout."
+    },
+    {
+      "field": "feature_extraction_command",
+      "value": "./detection.sh 0 val #(or train)",
+      "normalized_value": "./detection.sh 0 val #(or train)",
+      "evidence": "```\n./detection.sh 0 val #(or train)\n```",
+      "evidence_location": "lines 28-32; Usage",
+      "confidence": "high",
+      "reason": "Explicitly defines the feature extraction command and validation/training mode."
+    },
+    {
+      "field": "feature_extraction_storage_requirement",
+      "value": "need about 100G storage",
+      "normalized_value": "need about 100G storage",
+      "evidence": "Feature Extraction. (need about 100G storage! Because I dumped all the detected bboxes along with their features. It can be greatly reduced by changing detect_frame.py to return the top-40 bboxes and save them with .npz file.)",
+      "evidence_location": "line 29; Usage",
+      "confidence": "high",
+      "reason": "Important hardware/storage planning information for reproducing feature extraction."
+    },
+    {
+      "field": "test_commands",
+      "value": "./ground.sh 0 val # Output the relation-aware spatio-temporal attention\npython generate_track_link.py # Generate relation-aware trajectories with Viterbi algorithm.\npython eval_ground.py # Evaluate the performance",
+      "normalized_value": "./ground.sh 0 val # Output the relation-aware spatio-temporal attention\npython generate_track_link.py # Generate relation-aware trajectories with Viterbi algorithm.\npython eval_ground.py # Evaluate the performance",
+      "evidence": "```\n./ground.sh 0 val # Output the relation-aware spatio-temporal attention\npython generate_track_link.py # Generate relation-aware trajectories with Viterbi algorithm.\npython eval_ground.py # Evaluate the performance\n```",
+      "evidence_location": "lines 38-43; Usage",
+      "confidence": "high",
+      "reason": "Provides the documented evaluation pipeline from model execution through trajectory generation and scoring."
+    },
+    {
+      "field": "reported_accuracy",
+      "value": "accuracy Acc_R: 24.58%",
+      "normalized_value": "accuracy Acc_R: 24.58%",
+      "evidence": "You will get accuracy Acc_R: 24.58%.",
+      "evidence_location": "line 44; Usage",
+      "confidence": "high",
+      "reason": "States the reported evaluation result for the provided test procedure."
+    },
+    {
+      "field": "training_procedure",
+      "value": "Please apply a two-stage training scheme: 1) train a basic model without relation attendance, and 2) load the reconstruction part of the pre-trained model to learn the whole model (with the same lr_rate).",
+      "normalized_value": "Please apply a two-stage training scheme: 1) train a basic model without relation attendance, and 2) load the reconstruction part of the pre-trained model to learn the whole model (with the same lr_rate).",
+      "evidence": "Train. If you want to train the model from scratch. Please apply a two-stage training scheme: 1) train a basic model without relation attendance, and 2) load the reconstruction part of the pre-trained model to learn the whole model (with the same lr_rate).",
+      "evidence_location": "line 46; Usage",
+      "confidence": "high",
+      "reason": "Documents the required staged procedure for training the model from scratch."
+    },
+    {
+      "field": "training_command",
+      "value": "./ground.sh 0 train # Train the model with GPU id 0",
+      "normalized_value": "./ground.sh 0 train # Train the model with GPU id 0",
+      "evidence": "```\n./ground.sh 0 train # Train the model with GPU id 0\n```",
+      "evidence_location": "lines 47-49; Usage",
+      "confidence": "high",
+      "reason": "Provides the explicit training command and GPU selection."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{xiao2020visual,\n  title={Visual Relation Grounding in Videos},\n  author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng},\n  booktitle={European Conference on Computer Vision},\n  pages={447--464},\n  year={2020},\n  organization={Springer}\n}",
+      "normalized_value": "@inproceedings{xiao2020visual,\n  title={Visual Relation Grounding in Videos},\n  author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng},\n  booktitle={European Conference on Computer Vision},\n  pages={447--464},\n  year={2020},\n  organization={Springer}\n}",
+      "evidence": "```\n@inproceedings{xiao2020visual,\n  title={Visual Relation Grounding in Videos},\n  author={Xiao, Junbin and Shang, Xindi and Yang, Xun and Tang, Sheng and Chua, Tat-Seng},\n  booktitle={European Conference on Computer Vision},\n  pages={447--464},\n  year={2020},\n  organization={Springer}\n}\n```",
+      "evidence_location": "lines 58-69; Citation",
+      "confidence": "high",
+      "reason": "Supplies the complete bibliographic record for attribution and reuse."
+    },
+    {
+      "field": "attribution",
+      "value": "NUS © NExT++",
+      "normalized_value": "NUS © NExT++",
+      "evidence": "NUS © [NExT++](https://nextcenter.org/)",
+      "evidence_location": "lines 71-73; License",
+      "confidence": "high",
+      "reason": "Identifies the stated copyright and attribution holder."
+    }
+  ]
+}

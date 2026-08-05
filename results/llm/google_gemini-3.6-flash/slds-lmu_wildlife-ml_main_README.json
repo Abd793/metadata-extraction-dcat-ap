@@ -1,0 +1,103 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "wildlife-ml",
+      "normalized_value": "wildlife-ml",
+      "evidence": "`wildlife-ml`",
+      "evidence_location": "18, ## What can `wildlife-ml` do?",
+      "confidence": "high",
+      "reason": "Identifies the name of the software package provided in this repository."
+    },
+    {
+      "field": "artifact_description",
+      "value": "a software package designed specifically to help ecologists to leverage the potential of active learning and deep learning for image classification",
+      "normalized_value": "a software package designed specifically to help ecologists to leverage the potential of active learning and deep learning for image classification",
+      "evidence": "a software package\ndesigned specifically to help ecologists to leverage the potential of active learning\nand deep learning for image classification.",
+      "evidence_location": "5-7",
+      "confidence": "high",
+      "reason": "Describes the purpose and primary capability of the software package."
+    },
+    {
+      "field": "task",
+      "value": "image classification",
+      "normalized_value": "image classification",
+      "evidence": "image classification",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Identifies the machine learning task addressed by the package."
+    },
+    {
+      "field": "method",
+      "value": "combining improved strategies for object detection and image classification with an active learning system that allows for more efficient training of deep learning models",
+      "normalized_value": "combining improved strategies for object detection and image classification with an active learning system that allows for more efficient training of deep learning models",
+      "evidence": "combining improved strategies for object detection and\nimage classification with an active learning system that allows for\nmore efficient training of deep learning models.",
+      "evidence_location": "9-11",
+      "confidence": "high",
+      "reason": "Describes the methodology and core technical approach of the framework."
+    },
+    {
+      "field": "bounding_box_detector",
+      "value": "Megadetector",
+      "normalized_value": "Megadetector",
+      "evidence": "[Megadetector](https://github.com/microsoft/CameraTraps)",
+      "evidence_location": "22, ## What can `wildlife-ml` do?",
+      "confidence": "high",
+      "reason": "Names and links the external object detector integrated in stage 1 of the pipeline."
+    },
+    {
+      "field": "experiments_repository",
+      "value": "https://github.com/slds-lmu/wildlife-experiments/",
+      "normalized_value": "https://github.com/slds-lmu/wildlife-experiments/",
+      "evidence": "[experiments repository](https://github.com/slds-lmu/wildlife-experiments/)",
+      "evidence_location": "39, ## Examples",
+      "confidence": "high",
+      "reason": "Provides access URL to the repository containing experimental scripts and code."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2303.15823",
+      "normalized_value": "https://arxiv.org/abs/2303.15823",
+      "evidence": "[Automated wildlife image classification: An active learning tool for ecological applications](https://arxiv.org/abs/2303.15823)",
+      "evidence_location": "44, ## Citation",
+      "confidence": "high",
+      "reason": "Provides direct link to the scientific paper on arXiv corresponding to this tool."
+    },
+    {
+      "field": "citation",
+      "value": "@article{bothmann_et_al_2023,\n\ttitle = {Automated wildlife image classification: {An} active learning tool for ecological applications},\n\tvolume = {77},\n\tissn = {1574-9541},\n\turl = {https://www.sciencedirect.com/science/article/pii/S1574954123002601},\n\tdoi = {10.1016/j.ecoinf.2023.102231},\n\tjournal = {Ecological Informatics},\n\tauthor = {Bothmann, Ludwig and Wimmer, Lisa and Charrakh, Omid and Weber, Tobias and Edelhoff, Hendrik and Peters, Wibke and Nguyen, Hien and Benjamin, Caryl and Menzel, Annette},\n\tyear = {2023},\n\tpages = {102231}\n}",
+      "normalized_value": "@article{bothmann_et_al_2023, title = {Automated wildlife image classification: {An} active learning tool for ecological applications}, volume = {77}, issn = {1574-9541}, url = {https://www.sciencedirect.com/science/article/pii/S1574954123002601}, doi = {10.1016/j.ecoinf.2023.102231}, journal = {Ecological Informatics}, author = {Bothmann, Ludwig and Wimmer, Lisa and Charrakh, Omid and Weber, Tobias and Edelhoff, Hendrik and Peters, Wibke and Nguyen, Hien and Benjamin, Caryl and Menzel, Annette}, year = {2023}, pages = {102231} }",
+      "evidence": "@article{bothmann_et_al_2023,\n\ttitle = {Automated wildlife image classification: {An} active learning tool for ecological applications},\n\tvolume = {77},\n\tissn = {1574-9541},\n\turl = {https://www.sciencedirect.com/science/article/pii/S1574954123002601},\n\tdoi = {10.1016/j.ecoinf.2023.102231},\n\tjournal = {Ecological Informatics},\n\tauthor = {Bothmann, Ludwig and Wimmer, Lisa and Charrakh, Omid and Weber, Tobias and Edelhoff, Hendrik and Peters, Wibke and Nguyen, Hien and Benjamin, Caryl and Menzel, Annette},\n\tyear = {2023},\n\tpages = {102231}\n}",
+      "evidence_location": "47-57, ## Citation",
+      "confidence": "high",
+      "reason": "Provides the formal BibTeX citation entry for referencing the package and method."
+    },
+    {
+      "field": "cli_command",
+      "value": "wildlifeml-get-bbox -d <directory>",
+      "normalized_value": "wildlifeml-get-bbox -d <directory>",
+      "evidence": "```shell\nwildlifeml-get-bbox -d <directory>\n```",
+      "evidence_location": "111-113, #### Running the Megadetector",
+      "confidence": "high",
+      "reason": "CLI command provided by the package to predict bounding boxes on an image directory."
+    },
+    {
+      "field": "training_procedure",
+      "value": "First, the backbone itself is frozen and only a linear head on top of the backbone is trainable (transfer-phase). Second, parts or the full model_backbone is unfrozen and more parts of the network can be adapted (finetune-phase).",
+      "normalized_value": "First, the backbone itself is frozen and only a linear head on top of the backbone is trainable (`transfer`-phase). Second, parts or the full `model_backbone` is unfrozen and more parts of the network can be adapted (`finetune`-phase)",
+      "evidence": "First, the backbone itself is frozen and only a linear head on top of the backbone is trainable (`transfer`-phase).\nSecond, parts or the full `model_backbone` is unfrozen and more parts of the network\ncan be adapted (`finetune`-phase).",
+      "evidence_location": "223-226, ### 04: Training a classifier",
+      "confidence": "high",
+      "reason": "Describes the two-stage training scheme implemented in WildlifeTrainer."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "accuracy, precision, recall and f1 score",
+      "normalized_value": "accuracy, precision, recall and f1 score",
+      "evidence": "accuracy, precision,\nrecall and f1 score",
+      "evidence_location": "304-305, ### 05: Evaluating a model",
+      "confidence": "high",
+      "reason": "Specifies evaluation metrics computed by the Evaluator component."
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "HaMSE Ontology",
+      "normalized_value": "HaMSE Ontology",
+      "evidence": "# HaMSE Ontology",
+      "evidence_location": "1; header: HaMSE Ontology",
+      "confidence": "high",
+      "reason": "Identifies the artifact and repository subject."
+    },
+    {
+      "field": "artifact_description",
+      "value": "This repository contains the code developed for the Master Thesis in Digital Humanities and Digital Knwoledge at the University of Bologna, under the supervision of Prof. Aldo Gangemi and the supervision of Prof. Albert Meroño Peñuela.",
+      "normalized_value": "This repository contains the code developed for the Master Thesis in Digital Humanities and Digital Knwoledge at the University of Bologna, under the supervision of Prof. Aldo Gangemi and the supervision of Prof. Albert Meroño Peñuela.",
+      "evidence": "This repository contains the code developed for the Master Thesis in Digital Humanities and Digital Knwoledge at the University of Bologna, under the supervision of Prof. Aldo Gangemi and the supervision of Prof. Albert Meroño Peñuela.",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "States the repository's origin and academic context."
+    },
+    {
+      "field": "resource_types",
+      "value": "the code used to extract different features from music content; the HaMSE ontology, which proposes to represent these features; a small Knowledge Base, containing an example of data extracted with the algorithms aforementioned and modelled using the HaMSE Ontology.",
+      "normalized_value": "the code used to extract different features from music content; the HaMSE ontology, which proposes to represent these features; a small Knowledge Base, containing an example of data extracted with the algorithms aforementioned and modelled using the HaMSE Ontology.",
+      "evidence": "* the code used to extract different features from music content [src folder](#src).\n* the [HaMSE ontology](https://raw.githubusercontent.com/andreamust/HaMSE_Ontology/master/schema), which proposes to represent these features\n* a small [Knowledge Base](https://raw.githubusercontent.com/andreamust/HaMSE_Ontology/master/data), containing an example of data extracted with the algorithms aforementioned and modelled using the HaMSE Ontology.",
+      "evidence_location": "8-10; section: introductory resource list",
+      "confidence": "high",
+      "reason": "Summarizes the repository contents relevant to reuse and indexing."
+    },
+    {
+      "field": "ontology_uri",
+      "value": "https://github.com/andreamust/HaMSE_Ontology/schema",
+      "normalized_value": "https://github.com/andreamust/HaMSE_Ontology/schema",
+      "evidence": "The URI of this ontology is the following: `https://github.com/andreamust/HaMSE_Ontology/schema`",
+      "evidence_location": "73; section: HaMSE Ontology",
+      "confidence": "high",
+      "reason": "Provides the explicit URI for accessing the ontology."
+    },
+    {
+      "field": "project_website",
+      "value": "https://andreapoltronieri.org/HaMSE_project/",
+      "normalized_value": "https://andreapoltronieri.org/HaMSE_project/",
+      "evidence": "The documentation of the ontology, together with other more specific information is hosted on [The HaMSE Project Website](https://andreapoltronieri.org/HaMSE_project/).",
+      "evidence_location": "72; section: HaMSE Ontology",
+      "confidence": "high",
+      "reason": "Links to the ontology documentation and additional project information."
+    },
+    {
+      "field": "feature_categories",
+      "value": "five main categories",
+      "normalized_value": "five main categories",
+      "evidence": "The data extraction algorithms are divided into five main categories, aiming at extracting five different types of musical features.",
+      "evidence_location": "13; section: Data Extraction Algorithms",
+      "confidence": "high",
+      "reason": "Specifies the overall organization of the extraction algorithms."
+    },
+    {
+      "field": "audio_to_score_alignment_method",
+      "value": "Dynamic Time Warping (DTW)",
+      "normalized_value": "Dynamic Time Warping (DTW)",
+      "evidence": "For this task, we used a classic approach based on Dynamic Time Warping (DTW). \nIn particular, we have used the DTW algorithm provided by the [Librosa](https://github.com/librosa/librosa).",
+      "evidence_location": "20-23; subsection: Audio-to-score Alignment",
+      "confidence": "high",
+      "reason": "Names the algorithm and implementation used for audio-to-score alignment."
+    },
+    {
+      "field": "audio_to_score_preprocessing",
+      "value": "the symbolic notation has been converted to audio signal using the Midi2audio library",
+      "normalized_value": "the symbolic notation has been converted to audio signal using the Midi2audio library",
+      "evidence": "More specifically, the symbolic notation has been converted to audio signal using the [Midi2audio library](https://github.com/bzamecnik/midi2audio).",
+      "evidence_location": "25; subsection: Audio-to-score Alignment",
+      "confidence": "high",
+      "reason": "Documents the conversion step and reusable library dependency."
+    },
+    {
+      "field": "emotional_feature_model",
+      "value": "deep neural networks",
+      "normalized_value": "deep neural networks",
+      "evidence": "The chosen approach is based on features extraction from raw audio, utilising machine learning techniques. In particular, the approach I followed is based on deep neural networks.",
+      "evidence_location": "34; subsection: Emotional Features",
+      "confidence": "high",
+      "reason": "Identifies the machine-learning approach for emotional and psychoacoustic feature extraction."
+    },
+    {
+      "field": "emotional_feature_dataset",
+      "value": "4Q audio emotion dataset",
+      "normalized_value": "4Q audio emotion dataset",
+      "evidence": "The dataset chosen for this task is the 4Q audio emotion dataset30 provided by the Centre for Informatics and Systems on the University of Coimbra (Panda, Malheiro and Paiva 2018).",
+      "evidence_location": "35; subsection: Emotional Features",
+      "confidence": "high",
+      "reason": "Names the dataset used for training the emotional-feature model."
+    },
+    {
+      "field": "emotional_feature_dataset_size",
+      "value": "900 audio-clips of 30 seconds length, divided into four different groups",
+      "normalized_value": "900 audio-clips of 30 seconds length, divided into four different groups",
+      "evidence": "The dataset is made up of 900 audio-clips of 30 seconds length, divided into four different groups.",
+      "evidence_location": "35; subsection: Emotional Features",
+      "confidence": "high",
+      "reason": "Provides concrete dataset size, clip duration, and grouping information."
+    },
+    {
+      "field": "emotional_model_performance",
+      "value": "77.2% in accuracy",
+      "normalized_value": "77.2% in accuracy",
+      "evidence": "The best performance in training the model (77.2% in accuracy) were obtained using a Convolutional Recurrent Network, which layers were organised as follows:",
+      "evidence_location": "38; subsection: Emotional Features",
+      "confidence": "high",
+      "reason": "Provides the reported best training accuracy."
+    },
+    {
+      "field": "melodic_feature_method",
+      "value": "n-grams",
+      "normalized_value": "n-grams",
+      "evidence": "For these experiments we decided to extract different types of melodic patterns, using a relatively trivial approach based on n-grams.",
+      "evidence_location": "45; subsection: Melodic Features",
+      "confidence": "high",
+      "reason": "Identifies the method used to extract melodic patterns."
+    },
+    {
+      "field": "melodic_feature_types",
+      "value": "Interval Patterns; Rhythmic Patterns; Identical Patterns; Longest identical Patterns",
+      "normalized_value": "Interval Patterns; Rhythmic Patterns; Identical Patterns; Longest identical Patterns",
+      "evidence": "The implemented algorithm allows the extraction of different types of melodic patterns, including:\n* Interval Patterns\n* Rhythmic Patterns\n* Identical Patterns\n* Longest identical Patterns.",
+      "evidence_location": "48-52; subsection: Melodic Features",
+      "confidence": "high",
+      "reason": "Lists the concrete melodic pattern types produced by the algorithm."
+    },
+    {
+      "field": "melodic_feature_dependencies",
+      "value": "music21; The VIS framework",
+      "normalized_value": "music21; The VIS framework",
+      "evidence": "To support the scanning of symbolic representations we reused [music21](https://github.com/cuthbertLab/music21) and [The VIS framework](https://github.com/ELVIS-Project/vis-framework).",
+      "evidence_location": "46; subsection: Melodic Features",
+      "confidence": "high",
+      "reason": "Names the software frameworks reused for symbolic music analysis."
+    },
+    {
+      "field": "harmonic_features",
+      "value": "the pitch of the song; the dissonances present in the song; the chords that are formed in polyphonic compositions; the recurrent harmonic sequences",
+      "normalized_value": "the pitch of the song; the dissonances present in the song; the chords that are formed in polyphonic compositions; the recurrent harmonic sequences",
+      "evidence": "For harmonic features, we implemented an algorithm to extract several harmonic features, including:\n* the pitch of the song\n* the dissonances present in the song\n* the chords that are formed in polyphonic compositions\n* the recurrent harmonic sequences, using a mirror approach to that proposed in the previous section.",
+      "evidence_location": "58-62; subsection: Harmonic Features",
+      "confidence": "high",
+      "reason": "Defines the concrete harmonic outputs of the implemented algorithm."
+    },
+    {
+      "field": "structural_feature_dependency",
+      "value": "MSAF library",
+      "normalized_value": "MSAF library",
+      "evidence": "For the structural features of the song, i.e. the structure and sections that make up the song, we reused the [MSAF library](https://pythonhosted.org/msaf/tutorial.html), using it directly on the audio signal.",
+      "evidence_location": "66; subsection: Structural Features",
+      "confidence": "high",
+      "reason": "Identifies the library and input modality used for structural feature extraction."
+    },
+    {
+      "field": "ontology_purpose",
+      "value": "merges and harmonizes two or more different and non-interoperable music representations (e.g. audio data and scores), either symbolic or non-symbolic",
+      "normalized_value": "merges and harmonizes two or more different and non-interoperable music representations (e.g. audio data and scores), either symbolic or non-symbolic",
+      "evidence": "This new model merges and harmonizes two or more different and non-interoperable music representations (e.g. audio data and scores), either symbolic or non-symbolic.",
+      "evidence_location": "70; section: HaMSE Ontology",
+      "confidence": "high",
+      "reason": "States the ontology's central interoperability purpose."
+    },
+    {
+      "field": "knowledge_base_example",
+      "value": "the sixth movement of the church cantata Wie schön leuchtet der Morgenstern",
+      "normalized_value": "the sixth movement of the church cantata Wie schön leuchtet der Morgenstern",
+      "evidence": "The knowledge base was populated with data from a Bach’s chorale, namely the sixth movement of the church cantata Wie schön leuchtet der Morgenstern.",
+      "evidence_location": "76; section: The Knowledge Base",
+      "confidence": "high",
+      "reason": "Identifies the musical source represented in the example knowledge base."
+    },
+    {
+      "field": "knowledge_base_catalogue_index",
+      "value": "BWV1",
+      "normalized_value": "BWV1",
+      "evidence": "The piece is catalogued under the index BWV1.",
+      "evidence_location": "76; section: The Knowledge Base",
+      "confidence": "high",
+      "reason": "Provides a concrete identifier for the example piece."
+    },
+    {
+      "field": "knowledge_base_movement_title",
+      "value": "Wie bin ich doch so herzlich froh",
+      "normalized_value": "Wie bin ich doch so herzlich froh",
+      "evidence": "The sixth and last movement is the chorale entitled *\"Wie bin ich doch so herzlich froh\"*.",
+      "evidence_location": "76; section: The Knowledge Base",
+      "confidence": "high",
+      "reason": "Provides the title of the movement represented in the knowledge base."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2202.05817",
+      "normalized_value": "https://arxiv.org/abs/2202.05817",
+      "evidence": "           url       =       {https://arxiv.org/abs/2202.05817},",
+      "evidence_location": "90-92; section: Citations",
+      "confidence": "high",
+      "reason": "Provides an access link to the associated publication."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "## License\nMIT License",
+      "evidence_location": "114-115; header: License",
+      "confidence": "high",
+      "reason": "States the artifact's reuse license."
+    },
+    {
+      "field": "copyright_holder",
+      "value": "Andrea Poltronieri",
+      "normalized_value": "Andrea Poltronieri",
+      "evidence": "Copyright (c) 2021 Andrea Poltronieri",
+      "evidence_location": "117; section: License",
+      "confidence": "high",
+      "reason": "Provides attribution information for reuse and citation."
+    }
+  ]
+}

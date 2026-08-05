@@ -1,0 +1,202 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Fully Convolutional Instance-aware Semantic Segmentation",
+      "normalized_value": "Fully Convolutional Instance-aware Semantic Segmentation",
+      "evidence": "## Fully Convolutional Instance-aware Semantic Segmentation",
+      "evidence_location": "line 1; header",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its subject."
+    },
+    {
+      "field": "short_name",
+      "value": "FCIS",
+      "normalized_value": "FCIS",
+      "evidence": "**FCIS** is a fully convolutional end-to-end solution for instance segmentation, which won the first place in COCO segmentation challenge 2016.",
+      "evidence_location": "line 7; Introduction",
+      "confidence": "high",
+      "reason": "Provides the commonly used short name for the artifact."
+    },
+    {
+      "field": "purpose",
+      "value": "a fully convolutional end-to-end solution for instance segmentation",
+      "normalized_value": "a fully convolutional end-to-end solution for instance segmentation",
+      "evidence": "**FCIS** is a fully convolutional end-to-end solution for instance segmentation, which won the first place in COCO segmentation challenge 2016.",
+      "evidence_location": "line 7; Introduction",
+      "confidence": "high",
+      "reason": "States the primary task and approach."
+    },
+    {
+      "field": "paper",
+      "value": "CVPR 2017 spotlight paper",
+      "normalized_value": "CVPR 2017 spotlight paper",
+      "evidence": "FCIS is initially described in a [CVPR 2017 spotlight paper](https://arxiv.org/abs/1611.07709).",
+      "evidence_location": "line 9; Introduction",
+      "confidence": "high",
+      "reason": "Links the implementation to its associated publication."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/1611.07709",
+      "normalized_value": "https://arxiv.org/abs/1611.07709",
+      "evidence": "[CVPR 2017 spotlight paper](https://arxiv.org/abs/1611.07709)",
+      "evidence_location": "line 9; Introduction",
+      "confidence": "high",
+      "reason": "Provides a direct access link to the paper."
+    },
+    {
+      "field": "implementation",
+      "value": "official implementation ... based on MXNet",
+      "normalized_value": "official implementation ... based on MXNet",
+      "evidence": "This is an official implementation for [Fully Convolutional Instance-aware Semantic Segmentation](https://arxiv.org/abs/1611.07709) (FCIS) based on MXNet.",
+      "evidence_location": "line 25; Disclaimer",
+      "confidence": "high",
+      "reason": "Identifies the implementation status and primary framework."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/msracver/FCIS.git",
+      "normalized_value": "https://github.com/msracver/FCIS.git",
+      "evidence": "git clone https://github.com/msracver/FCIS.git",
+      "evidence_location": "lines 82-85; Installation",
+      "confidence": "high",
+      "reason": "Provides the repository URL needed to obtain the artifact."
+    },
+    {
+      "field": "license",
+      "value": "MIT license",
+      "normalized_value": "MIT license",
+      "evidence": "© Microsoft, 2017. Licensed under an MIT license.",
+      "evidence_location": "lines 33-35; License",
+      "confidence": "high",
+      "reason": "States the licensing terms for reuse."
+    },
+    {
+      "field": "mxnet_tested_commit",
+      "value": "MXNet@(commit 62ecb60)",
+      "normalized_value": "MXNet@(commit 62ecb60)",
+      "evidence": "The code is tested on official [MXNet@(commit 62ecb60)](https://github.com/dmlc/mxnet/tree/62ecb60) with the extra operators for FCIS.",
+      "evidence_location": "line 28; Disclaimer",
+      "confidence": "high",
+      "reason": "Specifies the tested framework revision and custom-operator requirement."
+    },
+    {
+      "field": "training_mxnet_commit",
+      "value": "MXNet@(commit 998378a)",
+      "normalized_value": "MXNet@(commit 998378a)",
+      "evidence": "**Note: The MXNet's Custom Op cannot execute parallelly using multi-gpus after this [PR](https://github.com/apache/incubator-mxnet/pull/6928). We strongly suggest the user rollback to version [MXNet@(commit 998378a)](https://github.com/dmlc/mxnet/tree/998378a) for training (following Section 3.2 - 3.6).**",
+      "evidence_location": "line 90; Installation",
+      "confidence": "high",
+      "reason": "Specifies the recommended MXNet revision for multi-GPU training."
+    },
+    {
+      "field": "software_dependencies",
+      "value": "cython, opencv-python >= 3.2.0, easydict",
+      "normalized_value": "cython, opencv-python >= 3.2.0, easydict",
+      "evidence": "2. Python packages might missing: cython, opencv-python >= 3.2.0, easydict. If `pip` is set up on your system, those packages should be able to be fetched and installed by running\n\t```\n\tpip install Cython\n\tpip install opencv-python==3.2.0.6\n\tpip install easydict==1.6\n\tpip install hickle\n\t```",
+      "evidence_location": "lines 66-72; Requirements: Software",
+      "confidence": "high",
+      "reason": "Lists concrete Python package dependencies and installation commands."
+    },
+    {
+      "field": "hardware_requirement",
+      "value": "Any NVIDIA GPUs with at least 5GB memory should be OK",
+      "normalized_value": "Any NVIDIA GPUs with at least 5GB memory should be OK",
+      "evidence": "Any NVIDIA GPUs with at least 5GB memory should be OK",
+      "evidence_location": "lines 76-78; Requirements: Hardware",
+      "confidence": "high",
+      "reason": "Provides the stated minimum GPU memory requirement."
+    },
+    {
+      "field": "mxnet_build_command",
+      "value": "cd ${MXNET_ROOT}\nmake -j $(nproc) USE_OPENCV=1 USE_BLAS=openblas USE_CUDA=1 USE_CUDA_PATH=/usr/local/cuda USE_CUDNN=1",
+      "normalized_value": "cd ${MXNET_ROOT} make -j $(nproc) USE_OPENCV=1 USE_BLAS=openblas USE_CUDA=1 USE_CUDA_PATH=/usr/local/cuda USE_CUDNN=1",
+      "evidence": "```\n\tcd ${MXNET_ROOT}\n\tmake -j $(nproc) USE_OPENCV=1 USE_BLAS=openblas USE_CUDA=1 USE_CUDA_PATH=/usr/local/cuda USE_CUDNN=1\n\t```",
+      "evidence_location": "lines 113-117; Installation",
+      "confidence": "high",
+      "reason": "Defines the source-build command and CUDA/cuDNN configuration."
+    },
+    {
+      "field": "demo_model",
+      "value": "./model/fcis_coco-0000.params",
+      "normalized_value": "./model/fcis_coco-0000.params",
+      "evidence": "```\n\t./model/fcis_coco-0000.params\n\t```",
+      "evidence_location": "lines 129-134; Demo",
+      "confidence": "high",
+      "reason": "Identifies the expected path for the downloaded trained COCO model."
+    },
+    {
+      "field": "demo_command",
+      "value": "python ./fcis/demo.py",
+      "normalized_value": "python ./fcis/demo.py",
+      "evidence": "```\n\tpython ./fcis/demo.py\n\t```",
+      "evidence_location": "lines 135-138; Demo",
+      "confidence": "high",
+      "reason": "Provides the command for running inference with the trained model."
+    },
+    {
+      "field": "pretrained_backbone",
+      "value": "ImageNet pre-trained ResNet-v1-101",
+      "normalized_value": "ImageNet pre-trained ResNet-v1-101",
+      "evidence": "We trained our model based on the ImageNet pre-trained [ResNet-v1-101](https://github.com/KaimingHe/deep-residual-networks) using a [model converter](https://github.com/dmlc/mxnet/tree/430ea7bfbbda67d993996d81c7fd44d3a20ef846/tools/caffe_converter).",
+      "evidence_location": "line 29; Disclaimer",
+      "confidence": "high",
+      "reason": "Identifies the backbone and initialization used for training."
+    },
+    {
+      "field": "training_datasets",
+      "value": "COCO trainval35k and VOC 2012 train",
+      "normalized_value": "COCO trainval35k and VOC 2012 train",
+      "evidence": "2. Two config files have been provided so far: FCIS@COCO with OHEM and FCIS@VOC without OHEM. We use 8 and 4 GPUs to train models on COCO and on VOC, respectively.",
+      "evidence_location": "lines 166-167; Usage",
+      "confidence": "high",
+      "reason": "States the available training configurations, datasets, and GPU counts."
+    },
+    {
+      "field": "training_command",
+      "value": "python experiments/fcis/fcis_end2end_train_test.py --cfg experiments/fcis/cfgs/resnet_v1_101_coco_fcis_end2end_ohem.yaml",
+      "normalized_value": "python experiments/fcis/fcis_end2end_train_test.py --cfg experiments/fcis/cfgs/resnet_v1_101_coco_fcis_end2end_ohem.yaml",
+      "evidence": "```\n     python experiments/fcis/fcis_end2end_train_test.py --cfg experiments/fcis/cfgs/resnet_v1_101_coco_fcis_end2end_ohem.yaml\n     ```",
+      "evidence_location": "lines 168-171; Usage",
+      "confidence": "high",
+      "reason": "Provides a concrete command for training and testing FCIS on COCO."
+    },
+    {
+      "field": "voc_result",
+      "value": "FCIS, ResNet-v1-101 | VOC 2012 train | VOC 2012 val | 66.0 | 51.9 | 0.23s",
+      "normalized_value": "FCIS, ResNet-v1-101 | VOC 2012 train | VOC 2012 val | 66.0 | 51.9 | 0.23s",
+      "evidence": "| FCIS, ResNet-v1-101             | VOC 2012 train | VOC 2012 val | 66.0      | 51.9      |   0.23s    |",
+      "evidence_location": "lines 49-53; Main Results",
+      "confidence": "high",
+      "reason": "Records the reported VOC training/testing setup, metrics, and runtime."
+    },
+    {
+      "field": "coco_results",
+      "value": "FCIS, ResNet-v1-101, OHEM | coco trainval35k | coco minival | 29.2 | 50.8 | 29.7 | 7.9 | 31.4 | 51.1\nFCIS, ResNet-v1-101, OHEM | coco trainval35k | coco test-dev | 29.6 | 51.4 | 30.2 | 8.0 | 31.0 | 49.7",
+      "normalized_value": "FCIS, ResNet-v1-101, OHEM | coco trainval35k | coco minival | 29.2 | 50.8 | 29.7 | 7.9 | 31.4 | 51.1 FCIS, ResNet-v1-101, OHEM | coco trainval35k | coco test-dev | 29.6 | 51.4 | 30.2 | 8.0 | 31.0 | 49.7",
+      "evidence": "| <sub>FCIS, ResNet-v1-101, OHEM </sub> | <sub>coco trainval35k</sub> | <sub>coco minival</sub> | 29.2 | 50.8 | 29.7 | 7.9 | 31.4 | 51.1 |\n| <sub>FCIS, ResNet-v1-101, OHEM </sub> | <sub>coco trainval35k</sub> | <sub>coco test-dev</sub>| 29.6 | 51.4 | 30.2 | 8.0 | 31.0 | 49.7 |",
+      "evidence_location": "lines 55-58; Main Results",
+      "confidence": "high",
+      "reason": "Records the reported COCO benchmark results for minival and test-dev."
+    },
+    {
+      "field": "runtime_hardware",
+      "value": "a single Maxwell Titan X GPU (mini-batch size is 1 in inference)",
+      "normalized_value": "a single Maxwell Titan X GPU (mini-batch size is 1 in inference)",
+      "evidence": "*Running time is counted on a single Maxwell Titan X GPU (mini-batch size is 1 in inference).*",
+      "evidence_location": "line 60; Main Results",
+      "confidence": "high",
+      "reason": "Provides the hardware and inference batch size associated with reported runtimes."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{li2016fully,\n  Author = {Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji and Yichen Wei}\n  Title = {Fully Convolutional Instance-aware Semantic Segmentation},\n  Conference = {CVPR},\n  year = {2017}\n}",
+      "normalized_value": "@inproceedings{li2016fully, Author = {Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji and Yichen Wei} Title = {Fully Convolutional Instance-aware Semantic Segmentation}, Conference = {CVPR}, year = {2017} }",
+      "evidence": "```\n@inproceedings{li2016fully,\n  Author = {Yi Li, Haozhi Qi, Jifeng Dai, Xiangyang Ji and Yichen Wei}\n  Title = {Fully Convolutional Instance-aware Semantic Segmentation},\n  Conference = {CVPR},\n  year = {2017}\n}\n```",
+      "evidence_location": "lines 37-47; Citing FCIS",
+      "confidence": "high",
+      "reason": "Provides the citation data needed for scholarly reuse and attribution."
+    }
+  ]
+}

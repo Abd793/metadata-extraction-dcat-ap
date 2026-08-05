@@ -1,0 +1,103 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "GRANDE",
+      "normalized_value": "GRANDE",
+      "evidence": "# 🌳 GRANDE: Gradient-Based Decision Tree Ensembles 🌳",
+      "evidence_location": "1, # 🌳 GRANDE: Gradient-Based Decision Tree Ensembles 🌳",
+      "confidence": "high",
+      "reason": "Identifies the name of the artifact documented in the repository."
+    },
+    {
+      "field": "description",
+      "value": "GRANDE is a novel gradient-based decision tree ensemble method for tabular data!",
+      "normalized_value": "GRANDE is a novel gradient-based decision tree ensemble method for tabular data!",
+      "evidence": "🌳 GRANDE is a novel gradient-based decision tree ensemble method for tabular data!",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Summarizes the main purpose and methodology of the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://openreview.net/forum?id=XEFWBxi075",
+      "normalized_value": "https://openreview.net/forum?id=XEFWBxi075",
+      "evidence": "https://openreview.net/forum?id=XEFWBxi075",
+      "evidence_location": "30",
+      "confidence": "high",
+      "reason": "Provides the link to the paper published on OpenReview."
+    },
+    {
+      "field": "arxiv_url",
+      "value": "https://arxiv.org/abs/2309.17130",
+      "normalized_value": "https://arxiv.org/abs/2309.17130",
+      "evidence": "https://arxiv.org/abs/2309.17130",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides the arXiv link for the paper."
+    },
+    {
+      "field": "package_repository_url",
+      "value": "https://pypi.org/project/GRANDE/",
+      "normalized_value": "https://pypi.org/project/GRANDE/",
+      "evidence": "https://pypi.org/project/GRANDE/",
+      "evidence_location": "37",
+      "confidence": "high",
+      "reason": "Provides the official PyPI package page link."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install GRANDE",
+      "normalized_value": "pip install GRANDE",
+      "evidence": "```bash\npip install GRANDE\n```",
+      "evidence_location": "34-36, ## Installation",
+      "confidence": "high",
+      "reason": "Specifies the command to install the package."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{\nmarton2024grande,\ntitle={{GRANDE}: Gradient-Based Decision Tree Ensembles},\nauthor={Sascha Marton and Stefan L{\"u}dtke and Christian Bartelt and Heiner Stuckenschmidt},\nbooktitle={The Twelfth International Conference on Learning Representations},\nyear={2024},\nurl={https://openreview.net/forum?id=XEFWBxi075}\n}",
+      "normalized_value": "@inproceedings{ marton2024grande, title={{GRANDE}: Gradient-Based Decision Tree Ensembles}, author={Sascha Marton and Stefan L{\"u}dtke and Christian Bartelt and Heiner Stuckenschmidt}, booktitle={The Twelfth International Conference on Learning Representations}, year={2024}, url={https://openreview.net/forum?id=XEFWBxi075} }",
+      "evidence": "```\n@inproceedings{\nmarton2024grande,\ntitle={{GRANDE}: Gradient-Based Decision Tree Ensembles},\nauthor={Sascha Marton and Stefan L{\"u}dtke and Christian Bartelt and Heiner Stuckenschmidt},\nbooktitle={The Twelfth International Conference on Learning Representations},\nyear={2024},\nurl={https://openreview.net/forum?id=XEFWBxi075}\n}\n```",
+      "evidence_location": "41-50, ## Cite us",
+      "confidence": "high",
+      "reason": "Provides the BibTeX entry for citing the published paper."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "GPU is required to achieve competitive runtimes",
+      "normalized_value": "GPU is required to achieve competitive runtimes",
+      "evidence": "Please note that a GPU is required to achieve competitive runtimes.",
+      "evidence_location": "54, ## Usage",
+      "confidence": "high",
+      "reason": "Identifies hardware required for acceptable runtimes."
+    },
+    {
+      "field": "supported_tasks",
+      "value": "binary, classification or regression",
+      "normalized_value": "binary, classification or regression",
+      "evidence": "Also, please set 'objective' to 'binary', 'classification' or 'regression' based on your task.",
+      "evidence_location": "54, ## Usage",
+      "confidence": "high",
+      "reason": "Specifies the machine learning objectives/tasks supported by the implementation."
+    },
+    {
+      "field": "gpu_configuration_code",
+      "value": "import os\nos.environ['CUDA_VISIBLE_DEVICES'] = '0'\nos.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'",
+      "normalized_value": "import os os.environ['CUDA_VISIBLE_DEVICES'] = '0' os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'",
+      "evidence": "```python\nimport os\nos.environ['CUDA_VISIBLE_DEVICES'] = '0'\nos.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'\n```",
+      "evidence_location": "57-61, ### Enable and specify GPU",
+      "confidence": "high",
+      "reason": "Provides python environment variable settings required to configure GPU usage."
+    },
+    {
+      "field": "training_example",
+      "value": "from GRANDE import GRANDE\n\nparams = {\n        'depth': 5, # tree depth\n        'n_estimators': 2048, # number of estimators / trees\n\n        'learning_rate_weights': 0.005, # learning rate for leaf weights\n        'learning_rate_index': 0.01, # learning rate for split indices\n        'learning_rate_values': 0.01, # learning rate for split values\n        'learning_rate_leaf': 0.01, # learning rate for leafs (logits)\n\n        'optimizer': 'adam', # optimizer\n        'cosine_decay_steps': 0, # decay steps for lr schedule (CosineDecayRestarts)\n\n        'loss': 'crossentropy', # loss function (default 'crossentropy' for binary & multi-class classification and 'mse' for regression)\n        'focal_loss': False, # use focal loss {True, False}\n        'temperature': 0.0, # temperature for stochastic re-weighted GD (0.0, 1.0)\n\n        'from_logits': True, # use logits for weighting {True, False}\n        'use_class_weights': True, # use class weights for training {True, False}\n\n        'dropout': 0.0, # dropout rate (here, dropout randomly disables individual estimators of the ensemble during training)\n\n        'selected_variables': 0.8, # feature subset percentage (0.0, 1.0)\n        'data_subset_fraction': 1.0, # data subset percentage (0.0, 1.0)\n}\n\nargs = {\n    'epochs': 1_000, # number of epochs for training\n    'early_stopping_epochs': 25, # patience for early stopping (best weights are restored)\n    'batch_size': 64,  # batch size for training\n\n    'cat_idx': categorical_feature_indices, # put list of categorical indices\n    'objective': 'binary', # objective / task {'binary', 'classification', 'regression'}\n    \n    'random_seed': 42,\n    'verbose': 1,       \n}\n\nmodel_grande = GRANDE(params=params, args=args)\n\nmodel_grande.fit(X_train=X_train,\n          y_train=y_train,\n          X_val=X_valid,\n          y_val=y_valid)\n\npreds_grande = model_grande.predict(X_test)",
+      "normalized_value": "from GRANDE import GRANDE params = { 'depth': 5, # tree depth 'n_estimators': 2048, # number of estimators / trees 'learning_rate_weights': 0.005, # learning rate for leaf weights 'learning_rate_index': 0.01, # learning rate for split indices 'learning_rate_values': 0.01, # learning rate for split values 'learning_rate_leaf': 0.01, # learning rate for leafs (logits) 'optimizer': 'adam', # optimizer 'cosine_decay_steps': 0, # decay steps for lr schedule (CosineDecayRestarts) 'loss': 'crossentropy', # loss function (default 'crossentropy' for binary & multi-class classification and 'mse' for regression) 'focal_loss': False, # use focal loss {True, False} 'temperature': 0.0, # temperature for stochastic re-weighted GD (0.0, 1.0) 'from_logits': True, # use logits for weighting {True, False} 'use_class_weights': True, # use class weights for training {True, False} 'dropout': 0.0, # dropout rate (here, dropout randomly disables individual estimators of the ensemble during training) 'selected_variables': 0.8, # feature subset percentage (0.0, 1.0) 'data_subset_fraction': 1.0, # data subset percentage (0.0, 1.0) } args = { 'epochs': 1_000, # number of epochs for training 'early_stopping_epochs': 25, # patience for early stopping (best weights are restored) 'batch_size': 64, # batch size for training 'cat_idx': categorical_feature_indices, # put list of categorical indices 'objective': 'binary', # objective / task {'binary', 'classification', 'regression'} 'random_seed': 42, 'verbose': 1, } model_grande = GRANDE(params=params, args=args) model_grande.fit(X_train=X_train, y_train=y_train, X_val=X_valid, y_val=y_valid) preds_grande = model_grande.predict(X_test)",
+      "evidence": "```python\nfrom GRANDE import GRANDE\n\nparams = {\n        'depth': 5, # tree depth\n        'n_estimators': 2048, # number of estimators / trees\n\n        'learning_rate_weights': 0.005, # learning rate for leaf weights\n        'learning_rate_index': 0.01, # learning rate for split indices\n        'learning_rate_values': 0.01, # learning rate for split values\n        'learning_rate_leaf': 0.01, # learning rate for leafs (logits)\n\n        'optimizer': 'adam', # optimizer\n        'cosine_decay_steps': 0, # decay steps for lr schedule (CosineDecayRestarts)\n\n        'loss': 'crossentropy', # loss function (default 'crossentropy' for binary & multi-class classification and 'mse' for regression)\n        'focal_loss': False, # use focal loss {True, False}\n        'temperature': 0.0, # temperature for stochastic re-weighted GD (0.0, 1.0)\n\n        'from_logits': True, # use logits for weighting {True, False}\n        'use_class_weights': True, # use class weights for training {True, False}\n\n        'dropout': 0.0, # dropout rate (here, dropout randomly disables individual estimators of the ensemble during training)\n\n        'selected_variables': 0.8, # feature subset percentage (0.0, 1.0)\n        'data_subset_fraction': 1.0, # data subset percentage (0.0, 1.0)\n}\n\nargs = {\n    'epochs': 1_000, # number of epochs for training\n    'early_stopping_epochs': 25, # patience for early stopping (best weights are restored)\n    'batch_size': 64,  # batch size for training\n\n    'cat_idx': categorical_feature_indices, # put list of categorical indices\n    'objective': 'binary', # objective / task {'binary', 'classification', 'regression'}\n    \n    'random_seed': 42,\n    'verbose': 1,       \n}\n\nmodel_grande = GRANDE(params=params, args=args)\n\nmodel_grande.fit(X_train=X_train,\n          y_train=y_train,\n          X_val=X_valid,\n          y_val=y_valid)\n\npreds_grande = model_grande.predict(X_test)\n\n```",
+      "evidence_location": "82-131, ### Preprocessing, Hyperparameters and Training",
+      "confidence": "high",
+      "reason": "Provides complete Python code for setting hyperparameters, instantiating, and training GRANDE."
+    }
+  ]
+}

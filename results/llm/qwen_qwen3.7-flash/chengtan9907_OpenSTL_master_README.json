@@ -1,0 +1,103 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "OpenSTL",
+      "normalized_value": "OpenSTL",
+      "evidence": "# OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Explicitly stated as the project name in the main heading."
+    },
+    {
+      "field": "artifact_description",
+      "value": "A Comprehensive Benchmark of Spatio-Temporal Predictive Learning",
+      "normalized_value": "A Comprehensive Benchmark of Spatio-Temporal Predictive Learning",
+      "evidence": "# OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Describes the core purpose of the artifact directly from the title."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/chengtan9907/OpenSTL",
+      "normalized_value": "https://github.com/chengtan9907/OpenSTL",
+      "evidence": "git clone https://github.com/chengtan9907/OpenSTL",
+      "evidence_location": "85",
+      "confidence": "high",
+      "reason": "Direct URL provided for cloning the repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2306.11249",
+      "normalized_value": "https://arxiv.org/abs/2306.11249",
+      "evidence": "<a href=\"https://arxiv.org/abs/2306.11249\" alt=\"arXiv\">",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Direct link to the associated arXiv paper."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://openstl.readthedocs.io/en/latest/",
+      "normalized_value": "https://openstl.readthedocs.io/en/latest/",
+      "evidence": "<a href=\"https://openstl.readthedocs.io/en/latest/\" alt=\"docs\">",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Official documentation link provided in badges."
+    },
+    {
+      "field": "license",
+      "value": "Apache 2.0",
+      "normalized_value": "Apache 2.0",
+      "evidence": "[Apache 2.0 license](LICENSE)",
+      "evidence_location": "243",
+      "confidence": "high",
+      "reason": "Explicitly states the open-source license under which the project is released."
+    },
+    {
+      "field": "installation_commands",
+      "value": "```shell\ngit clone https://github.com/chengtan9907/OpenSTL\ncd OpenSTL\nconda env create -f environment.yml\nconda activate OpenSTL\npython setup.py develop\n```",
+      "normalized_value": "```shell\ngit clone https://github.com/chengtan9907/OpenSTL\ncd OpenSTL\nconda env create -f environment.yml\nconda activate OpenSTL\npython setup.py develop\n```",
+      "evidence": "```shell\ngit clone https://github.com/chengtan9907/OpenSTL\ncd OpenSTL\nconda env create -f environment.yml\nconda activate OpenSTL\npython setup.py develop\n```",
+      "evidence_location": "84-90",
+      "confidence": "high",
+      "reason": "Provides exact shell commands to clone, set up conda environment, and install the package."
+    },
+    {
+      "field": "training_example_command",
+      "value": "```shell\nbash tools/prepare_data/download_mmnist.sh\npython tools/train.py -d mmnist --lr 1e-3 -c configs/mmnist/simvp/SimVP_gSTA.py --ex_name mmnist_simvp_gsta\n```",
+      "normalized_value": "```shell\nbash tools/prepare_data/download_mmnist.sh\npython tools/train.py -d mmnist --lr 1e-3 -c configs/mmnist/simvp/SimVP_gSTA.py --ex_name mmnist_simvp_gsta\n```",
+      "evidence": "```shell\nbash tools/prepare_data/download_mmnist.sh\npython tools/train.py -d mmnist --lr 1e-3 -c configs/mmnist/simvp/SimVP_gSTA.py --ex_name mmnist_simvp_gsta\n```",
+      "evidence_location": "121-124",
+      "confidence": "high",
+      "reason": "Demonstrates concrete usage for downloading data and running single-GPU non-distributed training."
+    },
+    {
+      "field": "supported_tasks",
+      "value": "Spatio-temporal predictive learning",
+      "normalized_value": "Spatio-temporal predictive learning",
+      "evidence": "OpenSTL is a comprehensive benchmark for spatio-temporal predictive learning",
+      "evidence_location": "33",
+      "confidence": "high",
+      "reason": "Clearly defines the primary scientific task addressed by the benchmark."
+    },
+    {
+      "field": "supported_datasets",
+      "value": "BAIR Robot Pushing, Human3.6M, KTH Action, KittiCaltech Pedestrian, Kinetics-400, Moving MNIST, Moving FMNIST, TaxiBJ, WeatherBench",
+      "normalized_value": "BAIR Robot Pushing, Human3.6M, KTH Action, KittiCaltech Pedestrian, Kinetics-400, Moving MNIST, Moving FMNIST, TaxiBJ, WeatherBench",
+      "evidence": "- [x] [BAIR Robot Pushing](https://arxiv.org/abs/1710.05268) (CoRL'2017) [[download](https://sites.google.com/berkeley.edu/robotic-interaction-datasets)] [[config](configs/bair)]\n    - [x] [Human3.6M](http://vision.imar.ro/human3.6m/pami-h36m.pdf) (TPAMI'2014) [[download](http://vision.imar.ro/human3.6m/description.php)] [[config](configs/human)]\n    - [x] [KTH Action](https://ieeexplore.ieee.org/document/1334462) (ICPR'2004) [[download](https://www.csc.kth.se/cvap/actions/)] [[config](configs/kth)]\n    - [x] [KittiCaltech Pedestrian](https://dl.acm.org/doi/10.1177/0278364913491297) (IJRR'2013) [[download](https://www.dropbox.com/s/rpwlnn6j39jjme4/kitti_data.zip)] [[config](configs/kitticaltech)]\n    - [x] [Kinetics-400](https://arxiv.org/abs/1705.06950) (ArXiv'2017) [[download](https://deepmind.com/research/open-source/kinetics)] [[config](configs/kinetics)]\n    - [x] [Moving MNIST](http://arxiv.org/abs/1502.04681) (ICML'2015) [[download](http://www.cs.toronto.edu/~nitish/unsupervised_video/)] [[config](configs/mmnist)]\n    - [x] [Moving FMNIST](http://arxiv.org/abs/1502.04681) (ICML'2015) [[download](https://pan.baidu.com/s/1fudsBHyrf3nbt-7d42YWWg?pwd=kjfk)] [[config](configs/mfmnist)]\n    - [x] [TaxiBJ](https://arxiv.org/abs/1610.00081) (AAAI'2017) [[download](https://github.com/TolicWang/DeepST/tree/master/data/TaxiBJ)] [[config](configs/taxibj)]\n    - [x] [WeatherBench](https://arxiv.org/abs/2002.00469) (ArXiv'2020) [[download](https://github.com/pangeo-data/WeatherBench)] [[config](configs/weather)]",
+      "evidence_location": "185-194",
+      "confidence": "high",
+      "reason": "Lists all datasets explicitly supported for benchmarking within the model zoo section."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "```\n@inproceedings{tan2023openstl,\n  title={OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning},\n  author={Tan, Cheng and Li, Siyuan and Gao, Zhangyang and Guan, Wenfei and Wang, Zedong and Liu, Zicheng and Wu, Lirong and Li, Stan Z},\n  booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year={2023}\n}\n```",
+      "normalized_value": "```\n@inproceedings{tan2023openstl,\n  title={OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning},\n  author={Tan, Cheng and Li, Siyuan and Gao, Zhangyang and Guan, Wenfei and Wang, Zedong and Liu, Zicheng and Wu, Lirong and Li, Stan Z},\n  booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year={2023}\n}\n```",
+      "evidence": "```\n@inproceedings{tan2023openstl,\n  title={OpenSTL: A Comprehensive Benchmark of Spatio-Temporal Predictive Learning},\n  author={Tan, Cheng and Li, Siyuan and Gao, Zhangyang and Guan, Wenfei and Wang, Zedong and Liu, Zicheng and Wu, Lirong and Li, Stan Z},\n  booktitle={Conference on Neural Information Processing Systems Datasets and Benchmarks Track},\n  year={2023}\n}\n```",
+      "evidence_location": "253-259",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX entry for citing the primary paper associated with the benchmark."
+    }
+  ]
+}

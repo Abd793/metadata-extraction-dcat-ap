@@ -1,0 +1,94 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "DejaVu",
+      "normalized_value": "DejaVu",
+      "evidence": "# DejaVu",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the primary name of the artifact/project."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2207.09021",
+      "normalized_value": "https://arxiv.org/abs/2207.09021",
+      "evidence": "A preprint version: https://arxiv.org/abs/2207.09021",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Provides direct access to the academic preprint associated with the artifact."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/NetManAIOps/DejaVu.git",
+      "normalized_value": "https://github.com/NetManAIOps/DejaVu.git",
+      "evidence": "git pull https://github.com/NetManAIOps/DejaVu.git DejaVu",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Specifies the exact Git repository URL for cloning the source code."
+    },
+    {
+      "field": "docker_image",
+      "value": "lizytalk/dejavu",
+      "normalized_value": "lizytalk/dejavu",
+      "evidence": "docker pull lizytalk/dejavu",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Provides the official Docker image tag for reproducible environment setup."
+    },
+    {
+      "field": "dataset_urls",
+      "value": "https://www.dropbox.com/sh/ist4ojr03e2oeuw/AAD5NkpAFg1nOI2Ttug3h2qja?dl=0\nhttps://doi.org/10.5281/zenodo.6955909",
+      "normalized_value": "https://www.dropbox.com/sh/ist4ojr03e2oeuw/AAD5NkpAFg1nOI2Ttug3h2qja?dl=0 https://doi.org/10.5281/zenodo.6955909",
+      "evidence": "- https://www.dropbox.com/sh/ist4ojr03e2oeuw/AAD5NkpAFg1nOI2Ttug3h2qja?dl=0\n- https://doi.org/10.5281/zenodo.6955909 (including the raw data of the Train-Ticket dataset)",
+      "evidence_location": "64-65",
+      "confidence": "high",
+      "reason": "Lists the public hosting locations for the datasets used in the experiments."
+    },
+    {
+      "field": "related_repository",
+      "value": "https://github.com/lizeyan/train-ticket",
+      "normalized_value": "https://github.com/lizeyan/train-ticket",
+      "evidence": "https://github.com/lizeyan/train-ticket",
+      "evidence_location": "71",
+      "confidence": "high",
+      "reason": "Links to the deployment and failure injection scripts for the Train-Ticket dataset mentioned in the paper."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{li2022actionable,\n  title = {Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems},\n  booktitle = {Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}},\n  author = {Li, Zeyan and Zhao, Nengwen and Li, Mingjie and Lu, Xianglin and Wang, Lixin and Chang, Dongdong and Nie, Xiaohui and Cao, Li and Zhang, Wenchi and Sui, Kaixin and Wang, Yanhua and Du, Xu and Duan, Guoqing and Pei, Dan},\n  year = {2022},\n  month = nov,\n  series = {{{ESEC}}/{{FSE}} 2022}\n}",
+      "normalized_value": "@inproceedings{li2022actionable, title = {Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems}, booktitle = {Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}}, author = {Li, Zeyan and Zhao, Nengwen and Li, Mingjie and Lu, Xianglin and Wang, Lixin and Chang, Dongdong and Nie, Xiaohui and Cao, Li and Zhang, Wenchi and Sui, Kaixin and Wang, Yanhua and Du, Xu and Duan, Guoqing and Pei, Dan}, year = {2022}, month = nov, series = {{{ESEC}}/{{FSE}} 2022}}",
+      "evidence": "```\nbibtex\n@inproceedings{li2022actionable,\n  title = {Actionable and Interpretable Fault Localization for Recurring Failures in Online Service Systems},\n  booktitle = {Proceedings of the 2022 30th {{ACM Joint Meeting}} on {{European Software Engineering Conference}} and {{Symposium}} on the {{Foundations}} of {{Software Engineering}}},\n  author = {Li, Zeyan and Zhao, Nengwen and Li, Mingjie and Lu, Xianglin and Wang, Lixin and Chang, Dongdong and Nie, Xiaohui and Cao, Li and Zhang, Wenchi and Sui, Kaixin and Wang, Yanhua and Du, Xu and Duan, Guoqing and Pei, Dan},\n  year = {2022},\n  month = nov,\n  series = {{{ESEC}}/{{FSE}} 2022}\n}\n```",
+      "evidence_location": "74-83",
+      "confidence": "high",
+      "reason": "Provides the complete BibTeX entry for formally citing the associated research paper."
+    },
+    {
+      "field": "software_dependencies",
+      "value": "DGL 0.8, PyTorch >= 1.11.0",
+      "normalized_value": "DGL 0.8, PyTorch >= 1.11.0",
+      "evidence": "Note that DGL 0.8 is not released yet when I did this work, so I installed DGL 0.8 manually from the source code. PyTorch version should be equal to or greater than 1.11.0.",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Specifies critical deep learning framework versions required for reproduction, including manual installation notes."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "A@1, A@2, A@3, A@5, MAR, Time, Epoch, Valid Epoch, output_dir, val_loss, val_MAR, val_A@1, command, git_commit_url",
+      "normalized_value": "A@1, A@2, A@3, A@5, MAR, Time, Epoch, Valid Epoch, output_dir, val_loss, val_MAR, val_A@1, command, git_commit_url",
+      "evidence": "including the following fields: A@1, A@2, A@3, A@5, MAR, Time, Epoch, Valid Epoch, output_dir, val_loss, val_MAR, val_A@1, command, git_commit_url, which are the desrired results.",
+      "evidence_location": "48",
+      "confidence": "high",
+      "reason": "Lists the exact output fields printed by the evaluation commands, defining how results are reported."
+    },
+    {
+      "field": "data_file_structure",
+      "value": "graph.yml or graphs/*.yml are FDGs, metrics.csv is metrics, and faults.csv is failures (including ground truths). FDG.pkl is a pickle of the FDG object",
+      "normalized_value": "graph.yml or graphs/*.yml are FDGs, metrics.csv is metrics, and faults.csv is failures (including ground truths). FDG.pkl is a pickle of the FDG object",
+      "evidence": "In each dataset, graph.yml or graphs/*.yml are FDGs, metrics.csv is metrics, and faults.csv is failures (including ground truths).\nFDG.pkl is a pickle of the FDG object, which contains all the above data.",
+      "evidence_location": "66-67",
+      "confidence": "high",
+      "reason": "Describes the expected file formats and contents within the downloaded datasets for correct parsing."
+    }
+  ]
+}

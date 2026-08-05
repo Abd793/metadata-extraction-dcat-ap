@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "DiHT",
+      "normalized_value": "DiHT",
+      "evidence": "# DiHT",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Primary name of the artifact/project"
+    },
+    {
+      "field": "paper_title",
+      "value": "Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training",
+      "normalized_value": "Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training",
+      "evidence": "\"Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training\"",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Official title of the associated research paper"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2301.02280",
+      "normalized_value": "https://arxiv.org/abs/2301.02280",
+      "evidence": "[[Paper](https://arxiv.org/abs/2301.02280)]",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Link to the research paper for citation and reference"
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/facebookresearch/diht",
+      "normalized_value": "https://github.com/facebookresearch/diht",
+      "evidence": "git clone https://github.com/facebookresearch/diht",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Primary repository location for cloning the code"
+    },
+    {
+      "field": "installation_commands",
+      "value": "git clone https://github.com/facebookresearch/diht\ncd diht\npip install -r requirements.txt\npip install -e .",
+      "normalized_value": "git clone https://github.com/facebookresearch/diht cd diht pip install -r requirements.txt pip install -e .",
+      "evidence": "```bash\ngit clone https://github.com/facebookresearch/diht\ncd diht\npip install -r requirements.txt\npip install -e .  # To install as an editable package\n```",
+      "evidence_location": "6-11",
+      "confidence": "high",
+      "reason": "Step-by-step installation instructions for reproducing the environment"
+    },
+    {
+      "field": "alternative_installation",
+      "value": "pip install .",
+      "normalized_value": "pip install .",
+      "evidence": "You can use `pip install .` to install the codebase as a non-editable package.",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Alternative installation method for non-editable package"
+    },
+    {
+      "field": "example_model_loading",
+      "value": "text_tokenizer, image_transform, model = model_zoo.load_model(\n    \"diht_vitl14_336px\", is_train=False\n)",
+      "normalized_value": "text_tokenizer, image_transform, model = model_zoo.load_model( \"diht_vitl14_336px\", is_train=False )",
+      "evidence": "text_tokenizer, image_transform, model = model_zoo.load_model(\n    \"diht_vitl14_336px\", is_train=False\n)",
+      "evidence_location": "24-26",
+      "confidence": "high",
+      "reason": "Example code for loading a pre-trained model for inference"
+    },
+    {
+      "field": "available_models_function",
+      "value": "diht.available_models()",
+      "normalized_value": "diht.available_models()",
+      "evidence": "print(diht.available_models())",
+      "evidence_location": "58",
+      "confidence": "high",
+      "reason": "Function to list all available pre-trained models"
+    },
+    {
+      "field": "evaluation_command_imagenet",
+      "value": "python example_imagenet_eval.py",
+      "normalized_value": "python example_imagenet_eval.py",
+      "evidence": "```\npython example_imagenet_eval.py\n```",
+      "evidence_location": "66",
+      "confidence": "high",
+      "reason": "Command to run ImageNet-1K zero-shot evaluation"
+    },
+    {
+      "field": "evaluation_command_retrieval",
+      "value": "python example_retrieval_eval.py",
+      "normalized_value": "python example_retrieval_eval.py",
+      "evidence": "```\npython example_retrieval_eval.py\n```",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Command to run retrieval zero-shot evaluation"
+    },
+    {
+      "field": "model_performance_table",
+      "value": "| Model | ImageNet-1K | COCO T2I | COCO I2T | Flickr30K T2I | Flickr30K I2T |\n| :---  |    :----:   |  :----:  |  :----:  |     :----:    |     :----:    |\n|       |  Accuracy@1 | Recall@1 | Recall@1 |    Recall@1   |    Recall@1   |\n| diht_vitb32_224px      | 68.0 | 40.6 | 59.3 | 68.6 | 84.4 |\n| diht_vitb16_224px      | 72.2 | 43.3 | 60.3 | 72.9 | 89.8 |\n| diht_vitl14_224px      | 77.0 | 48.0 | 65.1 | 76.7 | 92.0 |\n| diht_vitl14_336px      | 77.9 | 49.3 | 65.3 | 78.2 | 91.1 |",
+      "normalized_value": "| Model | ImageNet-1K | COCO T2I | COCO I2T | Flickr30K T2I | Flickr30K I2T | | :--- | :----: | :----: | :----: | :----: | :----: | | | Accuracy@1 | Recall@1 | Recall@1 | Recall@1 | Recall@1 | | diht_vitb32_224px | 68.0 | 40.6 | 59.3 | 68.6 | 84.4 | | diht_vitb16_224px | 72.2 | 43.3 | 60.3 | 72.9 | 89.8 | | diht_vitl14_224px | 77.0 | 48.0 | 65.1 | 76.7 | 92.0 | | diht_vitl14_336px | 77.9 | 49.3 | 65.3 | 78.2 | 91.1 |",
+      "evidence": "| Model | ImageNet-1K | COCO T2I | COCO I2T | Flickr30K T2I | Flickr30K I2T |\n| :---  |    :----:   |  :----:  |  :----:  |     :----:    |     :----:    |\n|       |  Accuracy@1 | Recall@1 | Recall@1 |    Recall@1   |    Recall@1   |\n| diht_vitb32_224px      | 68.0 | 40.6 | 59.3 | 68.6 | 84.4 |\n| diht_vitb16_224px      | 72.2 | 43.3 | 60.3 | 72.9 | 89.8 |\n| diht_vitl14_224px      | 77.0 | 48.0 | 65.1 | 76.7 | 92.0 |\n| diht_vitl14_336px      | 77.9 | 49.3 | 65.3 | 78.2 | 91.1 |",
+      "evidence_location": "91-97",
+      "confidence": "high",
+      "reason": "Comprehensive performance metrics for all available models on standard benchmarks"
+    },
+    {
+      "field": "citation",
+      "value": "@article{rdk+23,\n  title = {Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training},\n  author = {Radenovic, Filip and Dubey, Abhimanyu and Kadian, Abhishek and Mihaylov, Todor and Vandenhende, Simon and Patel, Yash and Wen, Yi and Ramanathan, Vignesh and Mahajan, Dhruv},\n  journal = {arXiv:2301.02280},\n  year = {2023}\n}",
+      "normalized_value": "@article{rdk+23, title = {Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training}, author = {Radenovic, Filip and Dubey, Abhimanyu and Kadian, Abhishek and Mihaylov, Todor and Vandenhende, Simon and Patel, Yash and Wen, Yi and Ramanathan, Vignesh and Mahajan, Dhruv}, journal = {arXiv:2301.02280}, year = {2023} }",
+      "evidence": "```\n@article{rdk+23,\n  title = {Filtering, Distillation, and Hard Negatives for Vision-Language Pre-Training},\n  author = {Radenovic, Filip and Dubey, Abhimanyu and Kadian, Abhishek and Mihaylov, Todor and Vandenhende, Simon and Patel, Yash and Wen, Yi and Ramanathan, Vignesh and Mahajan, Dhruv},\n  journal = {arXiv:2301.02280},\n  year = {2023}\n}\n```",
+      "evidence_location": "103-109",
+      "confidence": "high",
+      "reason": "BibTeX citation for proper academic attribution"
+    },
+    {
+      "field": "license_notice",
+      "value": "Copyright (c) Meta Platforms, Inc. and affiliates.\nAll rights reserved.\nThis source code is licensed under the license found in the\nLICENSE file in the root directory of this source tree.",
+      "normalized_value": "Copyright (c) Meta Platforms, Inc. and affiliates. All rights reserved. This source code is licensed under the license found in the LICENSE file in the root directory of this source tree.",
+      "evidence": "```\nCopyright (c) Meta Platforms, Inc. and affiliates.\nAll rights reserved.\nThis source code is licensed under the license found in the\nLICENSE file in the root directory of this source tree.\n```",
+      "evidence_location": "113-117",
+      "confidence": "high",
+      "reason": "License information for legal compliance and reuse"
+    },
+    {
+      "field": "gpu_usage_instruction",
+      "value": "model = model.to(torch.device(\"cuda\"))",
+      "normalized_value": "model = model.to(torch.device(\"cuda\"))",
+      "evidence": "By default the model runs on CPU, to run on GPU you can do `model = model.to(torch.device(\"cuda\"))`. The image and text tensors will also have to be transferred accordingly.",
+      "evidence_location": "50",
+      "confidence": "high",
+      "reason": "Instruction for running models on GPU instead of CPU"
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO",
+      "normalized_value": "To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO",
+      "evidence": "<h1 align=\"center\">To Cool or not to Cool? <br>\nTemperature Network Meets Large Foundation Models via DRO </h1>",
+      "evidence_location": "line 1-2",
+      "confidence": "high",
+      "reason": "Title of the project, directly identifies the artifact"
+    },
+    {
+      "field": "artifact_description",
+      "value": "In this paper, we present a principled framework for learning a small yet generalizable temperature prediction network (TempNet) to improve LFMs.",
+      "normalized_value": "In this paper, we present a principled framework for learning a small yet generalizable temperature prediction network (TempNet) to improve LFMs.",
+      "evidence": "In this paper, we present **a principled framework** for learning a small yet generalizable temperature prediction network (TempNet) to improve LFMs.",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Core description of the artifact's purpose"
+    },
+    {
+      "field": "method_name",
+      "value": "TempNet",
+      "normalized_value": "TempNet",
+      "evidence": "temperature prediction network (TempNet)",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "Explicit name of the proposed method"
+    },
+    {
+      "field": "paper_link",
+      "value": "http://arxiv.org/abs/2404.04575",
+      "normalized_value": "http://arxiv.org/abs/2404.04575",
+      "evidence": "[paper](http://arxiv.org/abs/2404.04575)",
+      "evidence_location": "line 71",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper"
+    },
+    {
+      "field": "repository_link",
+      "value": "https://github.com/zhqiu/TempNet",
+      "normalized_value": "https://github.com/zhqiu/TempNet",
+      "evidence": "[repository](https://github.com/zhqiu/TempNet)",
+      "evidence_location": "line 80",
+      "confidence": "high",
+      "reason": "Direct link to the source code repository"
+    },
+    {
+      "field": "huggingface_link",
+      "value": "https://huggingface.co/LLM-Opt",
+      "normalized_value": "https://huggingface.co/LLM-Opt",
+      "evidence": "[Hugging Face](https://huggingface.co/LLM-Opt)",
+      "evidence_location": "line 80",
+      "confidence": "high",
+      "reason": "Direct link to hosted models"
+    },
+    {
+      "field": "training_code_structure",
+      "value": "GPT_2, LLaMA-1, LLaMA-2, and Bimodal-CL",
+      "normalized_value": "GPT_2, LLaMA-1, LLaMA-2, and Bimodal-CL",
+      "evidence": "four directories: `GPT_2`, `LLaMA-1`, `LLaMA-2`, and `Bimodal-CL`",
+      "evidence_location": "line 76",
+      "confidence": "high",
+      "reason": "Directories containing training code for reproduction"
+    },
+    {
+      "field": "inference_example",
+      "value": "import torch\nfrom tempnet import LLaMA_TempNet\nfrom transformers import AutoTokenizer, GenerationConfig\n\nmodel_name = 'LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1'\n\ntokenizer = AutoTokenizer.from_pretrained(model_name, legacy=False)\ngeneration_config = GenerationConfig.from_pretrained(model_name)\nmodel = LLaMA_TempNet.from_pretrained(model_name, device_map=\"auto\", torch_dtype=torch.float16)\n\ninputs = 'How do you get water in the desert?'\ninput_ids = tokenizer(inputs, return_tensors=\"pt\").input_ids.cuda()\n\noutputs = model.generate(input_ids, generation_config=generation_config)\nresponse = tokenizer.decode(outputs[0], skip_special_tokens=True)[len(inputs)-1:].strip()",
+      "normalized_value": "import torch\nfrom tempnet import LLaMA_TempNet\nfrom transformers import AutoTokenizer, GenerationConfig\n\nmodel_name = 'LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1'\n\ntokenizer = AutoTokenizer.from_pretrained(model_name, legacy=False)\ngeneration_config = GenerationConfig.from_pretrained(model_name)\nmodel = LLaMA_TempNet.from_pretrained(model_name, device_map=\"auto\", torch_dtype=torch.float16)\n\ninputs = 'How do you get water in the desert?'\ninput_ids = tokenizer(inputs, return_tensors=\"pt\").input_ids.cuda()\n\noutputs = model.generate(input_ids, generation_config=generation_config)\nresponse = tokenizer.decode(outputs[0], skip_special_tokens=True)[len(inputs)-1:].strip()",
+      "evidence": "```python\nimport torch\nfrom tempnet import LLaMA_TempNet\nfrom transformers import AutoTokenizer, GenerationConfig\n\nmodel_name = 'LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1'\n\ntokenizer = AutoTokenizer.from_pretrained(model_name, legacy=False)\ngeneration_config = GenerationConfig.from_pretrained(model_name)\nmodel = LLaMA_TempNet.from_pretrained(model_name, device_map=\"auto\", torch_dtype=torch.float16)\n\ninputs = 'How do you get water in the desert?'\ninput_ids = tokenizer(inputs, return_tensors=\"pt\").input_ids.cuda()\n\noutputs = model.generate(input_ids, generation_config=generation_config)\nresponse = tokenizer.decode(outputs[0], skip_special_tokens=True)[len(inputs)-1:].strip()\n```",
+      "evidence_location": "lines 82-98",
+      "confidence": "high",
+      "reason": "Code example for running inference with the artifact"
+    },
+    {
+      "field": "model_huggingface_id",
+      "value": "LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1",
+      "normalized_value": "LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1",
+      "evidence": "model_name = 'LLM-Opt/TempNet-LLaMA2-Chat-7B-v0.1'",
+      "evidence_location": "line 87",
+      "confidence": "high",
+      "reason": "Specific model identifier for downloading and using the artifact"
+    },
+    {
+      "field": "benchmark",
+      "value": "AlpacaEval",
+      "normalized_value": "AlpacaEval",
+      "evidence": "on the [AlpacaEval](https://tatsu-lab.github.io/alpaca_eval/) benchmark.",
+      "evidence_location": "line 47",
+      "confidence": "high",
+      "reason": "Benchmark used for evaluation"
+    },
+    {
+      "field": "benchmark",
+      "value": "Flickr30K",
+      "normalized_value": "Flickr30K",
+      "evidence": "image-text retrieval on Flickr30K and MSCOCO",
+      "evidence_location": "line 35",
+      "confidence": "high",
+      "reason": "Dataset used for evaluation"
+    },
+    {
+      "field": "benchmark",
+      "value": "MSCOCO",
+      "normalized_value": "MSCOCO",
+      "evidence": "image-text retrieval on Flickr30K and MSCOCO",
+      "evidence_location": "line 35",
+      "confidence": "high",
+      "reason": "Dataset used for evaluation"
+    },
+    {
+      "field": "metric",
+      "value": "IR@1",
+      "normalized_value": "IR@1",
+      "evidence": "IR@1 and TR@1 for the Recall@1 on image-retrieval (IR) and text-retrieval (TR).",
+      "evidence_location": "line 35",
+      "confidence": "high",
+      "reason": "Evaluation metric reported for the artifact"
+    },
+    {
+      "field": "metric",
+      "value": "TR@1",
+      "normalized_value": "TR@1",
+      "evidence": "IR@1 and TR@1 for the Recall@1 on image-retrieval (IR) and text-retrieval (TR).",
+      "evidence_location": "line 35",
+      "confidence": "high",
+      "reason": "Evaluation metric reported for the artifact"
+    },
+    {
+      "field": "metric",
+      "value": "top-1 accuracy",
+      "normalized_value": "top-1 accuracy",
+      "evidence": "top-1 accuracy (%).",
+      "evidence_location": "line 35",
+      "confidence": "high",
+      "reason": "Evaluation metric reported for the artifact"
+    },
+    {
+      "field": "metric",
+      "value": "win rate",
+      "normalized_value": "win rate",
+      "evidence": "win rates on AlpacaEval data.",
+      "evidence_location": "line178 (context line 47 in full sentence: 'their win rates on AlpacaEval data.')",
+      "confidence": "high",
+      "reason": "Evaluation metric reported for the artifact"
+    },
+    {
+      "field": "citation",
+      "value": "@article{qiu2024to,\n  title={To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO},\n  author={Zi-Hao Qiu, Siqi Guo, Mao Xu, Tuo Zhao, Lijun Zhang, and Tianbao Yang},\n  journal={arXiv preprint arXiv:2404.04575},\n  year={2024}\n}",
+      "normalized_value": "@article{qiu2024to,\n  title={To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO},\n  author={Zi-Hao Qiu, Siqi Guo, Mao Xu, Tuo Zhao, Lijun Zhang, and Tianbao Yang},\n  journal={arXiv preprint arXiv:2404.04575},\n  year={2024}\n}",
+      "evidence": "@article{qiu2024to,\n  title={To Cool or not to Cool? Temperature Network Meets Large Foundation Models via DRO},\n  author={Zi-Hao Qiu, Siqi Guo, Mao Xu, Tuo Zhao, Lijun Zhang, and Tianbao Yang},\n  journal={arXiv preprint arXiv:2404.04575},\n  year={2024}\n}",
+      "evidence_location": "lines 109-114",
+      "confidence": "high",
+      "reason": "BibTeX citation for referencing the work"
+    },
+    {
+      "field": "experimental_tasks",
+      "value": "training from scratch, finetuning a pretrained LLM model, and learning TempNet only with a frozen LLM model",
+      "normalized_value": "training from scratch, finetuning a pretrained LLM model, and learning TempNet only with a frozen LLM model",
+      "evidence": "Results of training LLMs in various settings, including training from scratch, finetuning a pretrained LLM model, and learning TempNet only with a frozen LLM model.",
+      "evidence_location": "lines 29-30",
+      "confidence": "high",
+      "reason": "Describes the experimental setups used to validate the artifact"
+    },
+    {
+      "field": "experimental_tasks",
+      "value": "image-text retrieval",
+      "normalized_value": "image-text retrieval",
+      "evidence": "For image-text retrieval on Flickr30K and MSCOCO",
+      "evidence_location": "line 35",
+      "confidence": "high",
+      "reason": "Describes the experimental setups used to validate the artifact"
+    },
+    {
+      "field": "experimental_tasks",
+      "value": "classification",
+      "normalized_value": "classification",
+      "evidence": "For classification tasks",
+      "evidence_location": "line 35",
+      "confidence": "high",
+      "reason": "Describes the experimental setups used to validate the artifact"
+    },
+    {
+      "field": "experimental_tasks",
+      "value": "instruction-following",
+      "normalized_value": "instruction-following",
+      "evidence": "instruction-following tasks",
+      "evidence_location": "line 47",
+      "confidence": "high",
+      "reason": "Describes the experimental setups used to validate the artifact"
+    },
+    {
+      "field": "framework_components",
+      "value": "DRO-based robust loss and the role of TempNet",
+      "normalized_value": "DRO-based robust loss and the role of TempNet",
+      "evidence": "two components of our framework: the DRO-based robust loss and the role of TempNet.",
+      "evidence_location": "line 41",
+      "confidence": "high",
+      "reason": "Key technical components of the artifact"
+    },
+    {
+      "field": "hardware_used",
+      "value": "Nvidia A100-80G GPUs",
+      "normalized_value": "Nvidia A100-80G GPUs",
+      "evidence": "training times of TempNet on Nvidia A100-80G GPUs",
+      "evidence_location": "line 47",
+      "confidence": "high",
+      "reason": "Hardware specification for reproduction"
+    },
+    {
+      "field": "acknowledgments",
+      "value": "ALBEF, GPT-NeoX, LLaMA, Megatron-LM, lm-evaluation-harness, Stanford Alpaca, DeepSpeed",
+      "normalized_value": "ALBEF, GPT-NeoX, LLaMA, Megatron-LM, lm-evaluation-harness, Stanford Alpaca, DeepSpeed",
+      "evidence": "This repository benefits from [ALBEF](https://github.com/salesforce/ALBEF), [GPT-NeoX](https://github.com/EleutherAI/gpt-neox), [LLaMA](https://ai.facebook.com/blog/large-language-model-llama-meta-ai), [Megatron-LM](https://github.com/NVIDIA/Megatron-LM), [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness), [Stanford Alpaca](https://github.com/tatsu-lab/stanford_alpaca), and [DeepSpeed](https://github.com/microsoft/DeepSpeed).",
+      "evidence_location": "lines 102-103",
+      "confidence": "high",
+      "reason": "Lists projects used by the repository, helpful for understanding dependencies"
+    }
+  ]
+}

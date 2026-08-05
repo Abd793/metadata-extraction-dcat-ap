@@ -1,0 +1,274 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "3D CMR-Domain-Adaptation",
+      "normalized_value": "3D CMR-Domain-Adaptation",
+      "evidence": "# 3D CMR-Domain-Adaptation",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Unambiguous project name from the main header."
+    },
+    {
+      "field": "purpose",
+      "value": "train a deep learning model for **Unsupervised Domain Adaptation (UDA)** of 3D cardiac magnetic resonance (CMR) cine images to **transform from axial to short-axis orientation**.",
+      "normalized_value": "train a deep learning model for Unsupervised Domain Adaptation (UDA) of 3D cardiac magnetic resonance (CMR) cine images to transform from axial to short-axis orientation.",
+      "evidence": "This repo contains code to train a deep learning model for **Unsupervised Domain Adaptation (UDA)** of 3D cardiac magnetic resonance (CMR) cine images to **transform from axial to short-axis orientation**.",
+      "evidence_location": "lines 3-4",
+      "confidence": "high",
+      "reason": "Explicitly states the main purpose and technical goal of the artifact."
+    },
+    {
+      "field": "task",
+      "value": "segmentation task via a pre-trained fixed network",
+      "normalized_value": "segmentation task via a pre-trained fixed network",
+      "evidence": "The task associated to the domain adaptation is to perform a **segmentation task via a pre-trained fixed network**, and the results are leveraged to guide the transformation process (rigid transform via spatial transformer networks).",
+      "evidence_location": "line suggested from text near line 3",
+      "confidence": "high",
+      "reason": "Defines the downstream task that the domain adaptation supports."
+    },
+    {
+      "field": "method_summary",
+      "value": "The trained model is able to transform an axial (AX) CMR into the patient specific short-axis (SAX) direction. The model learns from paired AX/SAX CMR image pairs and a pre-trained SAX segmentation model.",
+      "normalized_value": "The trained model is able to transform an axial (AX) CMR into the patient specific short-axis (SAX) direction. The model learns from paired AX/SAX CMR image pairs and a pre-trained SAX segmentation model.",
+      "evidence": "The trained model is able to transform an axial (AX) CMR into the patient specific short-axis (SAX) direction. The model learns from paired AX/SAX CMR image pairs and a pre-trained SAX segmentation model.",
+      "evidence_location": "lines 5-6",
+      "confidence": "high",
+      "reason": "Summarizes the model's capability, inputs, and learning approach."
+    },
+    {
+      "field": "key_component",
+      "value": "Euler2Affine Layer",
+      "normalized_value": "Euler2Affine Layer",
+      "evidence": "A special **Euler2Affine Layer** was implemented to restrict the transform of the spatial transformer network to be rigid and invertible.",
+      "evidence_location": "line 13",
+      "confidence": "high",
+      "reason": "Identifies a specific, novel technical component implemented in the code."
+    },
+    {
+      "field": "dependencies_management",
+      "value": "The repository dependencies are saved as conda environment (environment.yaml) file.",
+      "normalized_value": "The repository dependencies are saved as conda environment (environment.yaml) file.",
+      "evidence": "- The repository dependencies are saved as conda environment (environment.yaml) file.",
+      "evidence_location": "line 17",
+      "confidence": "high",
+      "reason": "Specifies the tool and file for managing dependencies, crucial for reproduction."
+    },
+    {
+      "field": "framework",
+      "value": "TF 2.X",
+      "normalized_value": "TF 2.X",
+      "evidence": "- The Deep Learning models/layers are build with TF 2.X.",
+      "evidence_location": "line 18",
+      "confidence": "high",
+      "reason": "States the deep learning framework and version used."
+    },
+    {
+      "field": "paper_citation",
+      "value": "S. Koehler, T. Hussain, Z. Blair, T. Huffaker, F. Ritzmann, A. Tandon, T. Pickardt, S. Sarikouch, H. Latus, G. Greil, I. Wolf, S. Engelhardt, \"Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks,\" in IEEE Transactions on Medical Imaging (TMI), early access, doi: 10.1109/TMI.2021.3052972.",
+      "normalized_value": "S. Koehler, T. Hussain, Z. Blair, T. Huffaker, F. Ritzmann, A. Tandon, T. Pickardt, S. Sarikouch, H. Latus, G. Greil, I. Wolf, S. Engelhardt, \"Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks,\" in IEEE Transactions on Medical Imaging (TMI), early access, doi: 10.1109/TMI.2021.3052972.",
+      "evidence": "S. Koehler, T. Hussain, Z. Blair, T. Huffaker, F. Ritzmann, A. Tandon, T. Pickardt, S. Sarikouch, H. Latus, G. Greil, I. Wolf, S. Engelhardt, \"Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks,\" in IEEE Transactions on Medical Imaging (TMI), early access, doi: 10.1109/TMI.2021.3052972.",
+      "evidence_location": "lines 26-28",
+      "confidence": "high",
+      "reason": "Primary citation for the associated research, essential for scholarly use."
+    },
+    {
+      "field": "paper_link",
+      "value": "[IEEE TMI paper link](https://ieeexplore.ieee.org/document/9328840)",
+      "normalized_value": "[IEEE TMI paper link](https://ieeexplore.ieee.org/document/9328840)",
+      "evidence": "- Link to original paper: [IEEE TMI paper link](https://ieeexplore.ieee.org/document/9328840) (accepted 13.1.2021)",
+      "evidence_location": "line 29",
+      "confidence": "high",
+      "reason": "Direct link to the peer-reviewed publication."
+    },
+    {
+      "field": "preprint_link",
+      "value": "[arxiv-Preprint](http://arxiv.org/abs/2101.07653)",
+      "normalized_value": "[arxiv-Preprint](http://arxiv.org/abs/2101.07653)",
+      "evidence": "- A pre-print version is available here: [arxiv-Preprint](http://arxiv.org/abs/2101.07653)",
+      "evidence_location": "line 30",
+      "confidence": "high",
+      "reason": "Link to the preprint for early access to the manuscript."
+    },
+    {
+      "field": "paper_bibtex",
+      "value": "@article{Koehler_2021, <br>\n>   title={Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks},<br>\n>   ISSN={1558-254X},<br>\n>   url={http://dx.doi.org/10.1109/TMI.2021.3052972},<br>\n>   DOI={10.1109/tmi.2021.3052972},<br>\n>   journal={IEEE Transactions on Medical Imaging},<br>\n>   publisher={Institute of Electrical and Electronics Engineers (IEEE)},<br>\n>   author={Koehler, Sven and Hussain, Tarique and Blair, Zach and Huffaker, Tyler and Ritzmann, Florian and Tandon, Animesh and Pickardt, Thomas and Sarikouch, Samir and Sarikouch, Samir and Latus, Heiner and Greil, Gerald and Wolf, Ivo and Engelhardt, Sandy},<br>\n>   year={2021},<br>\n>   pages={1–1}<br>\n>}",
+      "normalized_value": "@article{Koehler_2021, <br> > title={Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks},<br> > ISSN={1558-254X},<br> > url={http://dx.doi.org/10.1109/TMI.2021.3052972},<br> > DOI={10.1109/tmi.2021.3052972},<br> > journal={IEEE Transactions on Medical Imaging},<br> > publisher={Institute of Electrical and Electronics Engineers (IEEE)},<br> > author={Koehler, Sven and Hussain, Tarique and Blair, Zach and Huffaker, Tyler and Ritzmann, Florian and Tandon, Animesh and Pickardt, Thomas and Sarikouch, Samir and Sarikouch, Samir and Latus, Heiner and Greil, Gerald and Wolf, Ivo and Engelhardt, Sandy},<br> > year={2021},<br> > pages={1–1}<br> >}",
+      "evidence": ">@article{Koehler_2021, <br>\n>   title={Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks},<br>\n>   ISSN={1558-254X},<br>\n>   url={http://dx.doi.org/10.1109/TMI.2021.3052972},<br>\n>   DOI={10.1109/tmi.2021.3052972},<br>\n>   journal={IEEE Transactions on Medical Imaging},<br>\n>   publisher={Institute of Electrical and Electronics Engineers (IEEE)},<br>\n>   author={Koehler, Sven and Hussain, Tarique and Blair, Zach and Huffaker, Tyler and Ritzmann, Florian and Tandon, Animesh and Pickardt, Thomas and Sarikouch, Samir and Sarikouch, Samir and Latus, Heiner and Greil, Gerald and Wolf, Ivo and Engelhardt, Sandy},<br>\n>   year={2021},<br>\n>   pages={1–1}<br>\n>}",
+      "evidence_location": "lines 34-44",
+      "confidence": "high",
+      "reason": "Provides the BibTeX entry for citing the paper, directly reusable."
+    },
+    {
+      "field": "institutions",
+      "value": ">- [Heidelberg University Hospital, Artificial Intelligence in Cardiovascular Medicine (AICM) Group](https://www.klinikum.uni-heidelberg.de/chirurgische-klinik-zentrum/herzchirurgie/forschung/ag-artificial-intelligence-in-cardiovascular-medicine)\n>- [German Competence network for Congenital heart defects](https://www.kompetenznetz-ahf.de/en/about-us/competence-network/)\n>- [UT Southwestern Medical Center, Pediatric Cardiology](https://www.utsouthwestern.edu/education/medical-school/departments/pediatrics/divisions/cardiology/)\n>- [Department of Computer Science, University Of Applied Science Mannheim](https://www.informatik.hs-mannheim.de/wir/menschen/professoren/prof-dr-ivo-wolf.html)",
+      "normalized_value": ">- [Heidelberg University Hospital, Artificial Intelligence in Cardiovascular Medicine (AICM) Group](https://www.klinikum.uni-heidelberg.de/chirurgische-klinik-zentrum/herzchirurgie/forschung/ag-artificial-intelligence-in-cardiovascular-medicine) >- [German Competence network for Congenital heart defects](https://www.kompetenznetz-ahf.de/en/about-us/competence-network/) >- [UT Southwestern Medical Center, Pediatric Cardiology](https://www.utsouthwestern.edu/education/medical-school/departments/pediatrics/divisions/cardiology/) >- [Department of Computer Science, University Of Applied Science Mannheim](https://www.informatik.hs-mannheim.de/wir/menschen/professoren/prof-dr-ivo-wolf.html)",
+      "evidence": ">- [Heidelberg University Hospital, Artificial Intelligence in Cardiovascular Medicine (AICM) Group](https://www.klinikum.uni-heidelberg.de/chirurgische-klinik-zentrum/herzchirurgie/forschung/ag-artificial-intelligence-in-cardiovascular-medicine)\n>- [German Competence network for Congenital heart defects](https://www.kompetenznetz-ahf.de/en/about-us/competence-network/)\n>- [UT Southwestern Medical Center, Pediatric Cardiology](https://www.utsouthwestern.edu/education/medical-school/departments/pediatrics/divisions/cardiology/)\n>- [Department of Computer Science, University Of Applied Science Mannheim](https://www.informatik.hs-mannheim.de/wir/menschen/professoren/prof-dr-ivo-wolf.html)",
+      "evidence_location": "lines 49-53",
+      "confidence": "high",
+      "reason": "Lists the contributing institutions, important for attribution and context."
+    },
+    {
+      "field": "repository_structure",
+      "value": "    ├── LICENSE\n    ├── Makefile           <- Makefile with commands like 'make environment'\n    ├── README.md          <- The top-level README for developers using this project.\n    ├── data\n    │   ├── metadata       <- Excel and csv files with additional metadata are stored here\n    │   ├── interim        <- Intermediate data that has been transformed.\n    │   ├── predicted      <- Model predictions, will be used for the evaluation scripts\n    │   └── raw            <- The original, immutable data dump.\n    │\n    ├── models             <- Trained and serialized model definitions and weights\n    │\n    ├── notebooks          <- Jupyter notebooks. \n    │   ├── Dataset        <- Create, map, split or pre-process the dataset\n    │   ├── Evaluate       <- Evaluate the model predictions, create dataframes and plots\n    │   ├── Predict        <- Load an experiment config and a pre-trained model, \n    │   │                     transform AX CMR into the SAX domain, apply the task network, \n    │   │                     transform the predicted mask back into the AX domain, \n    │   │                     undo the generator steps and save the prediction to disk   \n    │   └── Train          <- Inspect the generators, define an experiment config,\n    │                              load and inject a task network, build the graph and train a new AX2SAX model\n    │\n    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.\n    │   ├── configs        <- Experiment config files as json with all hyperparameters and paths\n    │   ├── figures        <- Generated graphics and figures to be used in reporting\n    │   ├── history        <- Tensorboard trainings history files\n    │   └── tensorboard_logs  <- Trainings-scalars and images of the intermediate predictions\n    │\n    ├── environment.yaml   <- Conda requirements file. Generated with `conda env export > environment.yml`\n    │\n    ├── setup.py           <- Makes project pip installable (pip install -e .) so src can be imported\n    ├── src                <- Python modules with classes and functions that will be orchestrated in the notebooks.\n         ├── data           <- Python modules - Generators, preprocess and postprocess functions\n         ├── models         <- Python modules - TF.keras 2.X Model and Layer definition\n         ├── utils          <- Python modules - Metrics, losses, prediction, evaluation code, TF-callbacks and io-utils\n         └── visualization  <- Python modules - Plot functions for the evaluation and data description",
+      "normalized_value": "├── LICENSE ├── Makefile <- Makefile with commands like 'make environment' ├── README.md <- The top-level README for developers using this project. ├── data │   ├── metadata <- Excel and csv files with additional metadata are stored here │   ├── interim <- Intermediate data that has been transformed. │   ├── predicted <- Model predictions, will be used for the evaluation scripts │   └── raw <- The original, immutable data dump. │ ├── models <- Trained and serialized model definitions and weights │ ├── notebooks <- Jupyter notebooks. │   ├── Dataset <- Create, map, split or pre-process the dataset │   ├── Evaluate <- Evaluate the model predictions, create dataframes and plots │   ├── Predict <- Load an experiment config and a pre-trained model, │   │ transform AX CMR into the SAX domain, apply the task network, │   │ transform the predicted mask back into the AX domain, │   │ undo the generator steps and save the prediction to disk │   └── Train <- Inspect the generators, define an experiment config, load and inject a task network, build the graph and train a new AX2SAX model │ ├── reports <- Generated analysis as HTML, PDF, LaTeX, etc. │   ├── configs <- Experiment config files as json with all hyperparameters and paths │   ├── figures <- Generated graphics and figures to be used in reporting │   ├── history <- Tensorboard trainings history files │   └── tensorboard_logs <- Trainings-scalars and images of the intermediate predictions │ ├── environment.yaml <- Conda requirements file. Generated with `conda env export > environment.yml` │ ├── setup.py <- Makes project pip installable (pip install -e .) so src can be imported ├── src <- Python modules with classes and functions that will be orchestrated in the notebooks.    ├── data <- Python modules - Generators, preprocess and postprocess functions    ├── models <- Python modules - TF.keras 2.X Model and Layer definition    ├── utils <- Python modules - Metrics, losses, prediction, evaluation code, TF-callbacks and io-utils    └── visualization <- Python modules - Plot functions for the evaluation and data description",
+      "evidence": "    ├── LICENSE\n    ├── Makefile           <- Makefile with commands like 'make environment'\n    ├── README.md          <- The top-level README for developers using this project.\n    ├── data\n    │   ├── metadata       <- Excel and csv files with additional metadata are stored here\n    │   ├── interim        <- Intermediate data that has been transformed.\n    │   ├── predicted      <- Model predictions, will be used for the evaluation scripts\n    │   └── raw            <- The original, immutable data dump.\n    │\n    ├── models             <- Trained and serialized model definitions and weights\n    │\n    ├── notebooks          <- Jupyter notebooks. \n    │   ├── Dataset        <- Create, map, split or pre-process the dataset\n    │   ├── Evaluate       <- Evaluate the model predictions, create dataframes and plots\n    │   ├── Predict        <- Load an experiment config and a pre-trained model, \n    │   │                     transform AX CMR into the SAX domain, apply the task network, \n    │   │                     transform the predicted mask back into the AX domain, \n    │   │                     undo the generator steps and save the prediction to disk   \n    │   └── Train          <- Inspect the generators, define an experiment config,\n    │                              load and inject a task network, build the graph and train a new AX2SAX model\n    │\n    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.\n    │   ├── configs        <- Experiment config files as json with all hyperparameters and paths\n    │   ├── figures        <- Generated graphics and figures to be used in reporting\n    │   ├── history        <- Tensorboard trainings history files\n    │   └── tensorboard_logs  <- Trainings-scalars and images of the intermediate predictions\n    │\n    ├── environment.yaml   <- Conda requirements file. Generated with `conda env export > environment.yml`\n    │\n    ├── setup.py           <- Makes project pip installable (pip install -e .) so src can be imported\n    ├── src                <- Python modules with classes and functions that will be orchestrated in the notebooks.\n         ├── data           <- Python modules - Generators, preprocess and postprocess functions\n        ├── models         <- Python modules - TF.keras 2.X Model and Layer definition\n        ├── utils          <- Python modules - Metrics, losses, prediction, evaluation code, TF-callbacks and io-utils\n        └── visualization  <- Python modules - Plot functions for the evaluation and data description",
+      "evidence_location": "lines 76-111",
+      "confidence": "high",
+      "reason": "Detailed directory tree explaining the codebase organization, crucial for navigation and understanding."
+    },
+    {
+      "field": "dataset_description",
+      "value": "multi-centric heterogeneous cine-SSFPs CMR TOF data set from the [German Competence Network for Congenital Heart Defects](https://www.kompetenznetz-ahf.de/en/about-us/competence-network/) was used (study identifier: NCT00266188, title: Non-invasive Imaging and Exercise Tolerance Tests in Post-repair Tetralogy of Fallot -Intervention and Course in Patients Over 8 Years Old).",
+      "normalized_value": "multi-centric heterogeneous cine-SSFPs CMR TOF data set from the [German Competence Network for Congenital Heart Defects](https://www.kompetenznetz-ahf.de/en/about-us/competence-network/) was used (study identifier: NCT00266188, title: Non-invasive Imaging and Exercise Tolerance Tests in Post-repair Tetralogy of Fallot -Intervention and Course in Patients Over 8 Years Old).",
+      "evidence": "For this work a multi-centric heterogeneous cine-SSFPs CMR TOF data set from the [German Competence Network for Congenital Heart Defects](https://www.kompetenznetz-ahf.de/en/about-us/competence-network/)) was used (study identifier: NCT00266188, title: Non-invasive Imaging and Exercise Tolerance Tests in Post-repair Tetralogy of Fallot -Intervention and Course in Patients Over 8 Years Old).",
+      "evidence_location": "lines 113-114",
+      "confidence": "high",
+      "reason": "Describes the dataset used, including source, study identifier, and title, important for data provenance."
+    },
+    {
+      "field": "dataset_acquisition",
+      "value": "The data was acquired at 14 different German sites between 2005-2008 on 1.5T and 3T machines;",
+      "normalized_value": "The data was acquired at 14 different German sites between 2005-2008 on 1.5T and 3T machines;",
+      "evidence": "The data was acquired at 14 different German sites between 2005-2008 on 1.5T and 3T machines;",
+      "evidence_location": "line 115",
+      "confidence": "high",
+      "reason": "Provides details on data acquisition (sites, time period, hardware), relevant for understanding dataset characteristics."
+    },
+    {
+      "field": "dataset_references",
+      "value": "further descriptions can be found in [original study](https://www.ahajournals.org/doi/epub/10.1161/CIRCIMAGING.111.963637), [eprint previous work](https://arxiv.org/abs/2002.04392) [1],[2].",
+      "normalized_value": "further descriptions can be found in [original study](https://www.ahajournals.org/doi/epub/10.1161/CIRCIMAGING.111.963637), [eprint previous work](https://arxiv.org/abs/2002.04392) [1],[2].",
+      "evidence": "further descriptions can be found in [original study](https://www.ahajournals.org/doi/epub/10.1161/CIRCIMAGING.111.963637), [eprint previous work](https://arxiv.org/abs/2002.04392) [1],[2].",
+      "evidence_location": "line 116",
+      "confidence": "high",
+      "reason": "Links to further descriptions of the dataset and related prior work."
+    },
+    {
+      "field": "precondition_python",
+      "value": "Python 3.6 locally installed",
+      "normalized_value": "Python 3.6 locally installed",
+      "evidence": "- Python 3.6 locally installed",
+      "evidence_location": "line 125",
+      "confidence": "high",
+      "reason": "Specific Python version required for setup."
+    },
+    {
+      "field": "precondition_gpu",
+      "value": "Installed nvidia drivers, cuda and cudnn",
+      "normalized_value": "Installed nvidia drivers, cuda and cudnn",
+      "evidence": "- Installed nvidia drivers, cuda and cudnn",
+      "evidence_location": "line 127",
+      "confidence": "high",
+      "reason": "Hardware/software prerequisites for GPU acceleration."
+    },
+    {
+      "field": "setup_command_clone",
+      "value": "git clone %repo-name%\ncd %repo-name%",
+      "normalized_value": "git clone %repo-name% cd %repo-name%",
+      "evidence": "```\ngit clone %repo-name%\ncd %repo-name%\n```",
+      "evidence_location": "lines 133-135",
+      "confidence": "high",
+      "reason": "Command to clone the repository, essential first step."
+    },
+    {
+      "field": "setup_command_conda_env",
+      "value": "conda env create --file environment.yaml",
+      "normalized_value": "conda env create --file environment.yaml",
+      "evidence": "```\nconda env create --file environment.yaml\n```",
+      "evidence_location": "lines65 lines137-139",
+      "confidence": "high",
+      "reason": "Command to create the conda environment from the provided file, critical for dependency installation."
+    },
+    {
+      "field": "setup_command_activate_env",
+      "value": "conda activate ax2sax",
+      "normalized_value": "conda activate ax2sax",
+      "evidence": "```\nconda activate ax2sax\n```",
+      "evidence_location": "lines66 lines142-144",
+      "confidence": "high",
+      "reason": "Command to activate the newly created environment."
+    },
+    {
+      "field": "setup_command_install_helper",
+      "value": "pip install --extra-index-url https://test.pypi.org/simple/ ProjectRoot",
+      "normalized_value": "pip install --extra-index-url https://test.pypi.org/simple/ ProjectRoot",
+      "evidence": "```\npip install --extra-index-url https://test.pypi.org/simple/ ProjectRoot\n```",
+      "evidence_location": "lines67 lines146-148",
+      "confidence": "high",
+      "reason": "Command to install a helper package for project root directory management."
+    },
+    {
+      "field": "setup_command_jupyter_kernel",
+      "value": "python -m ipykernel install --user --name ax2sax --display-name \"ax2sax kernel\"",
+      "normalized_value": "python -m ipykernel install --user --name ax2sax --display-name \"ax2sax kernel\"",
+      "evidence": "```\npython -m ipykernel install --user --name ax2sax --display-name \"ax2sax kernel\"\n```",
+      "evidence_location": "lines68 lines150-152",
+      "confidence": "high",
+      "reason": "Command to create a Jupyter kernel linked to the project environment."
+    },
+    {
+      "field": "setup_precondition_nodejs",
+      "value": "conda install -c conda-forge nodejs",
+      "normalized_value": "conda install -c conda-forge nodejs",
+      "evidence": "```\nconda install -c conda-forge nodejs\n```",
+      "evidence_location": "lines68 lines158-160",
+      "confidence": "high",
+      "reason": "Command to install Node.js, a prerequisite for JupyterLab extensions."
+    },
+    {
+      "field": "setup_command_jupyterlab_extension",
+      "value": "jupyter labextension install @jupyter-widgets/jupyterlab-manager",
+      "normalized_value": "jupyter labextension install @jupyter-widgets/jupyterlab-manager",
+      "evidence": "```\njupyter labextension install @jupyter-widgets/jupyterlab-manager\n```",
+      "evidence_location": "lines69 lines162-164",
+      "confidence": "high",
+      "reason": "Command to install a JupyterLab extension for interactive widgets."
+    },
+    {
+      "field": "code_structure",
+      "value": "interactive notebooks (/notebooks), python source modules (/src) and the experiment related files such as the experiment configs (/reports) or trained models (/models).",
+      "normalized_value": "interactive notebooks (/notebooks), python source modules (/src) and the experiment related files such as the experiment configs (/reports) or trained models (/models).",
+      "evidence": "This repository splits the source code into: \n- interactive notebooks (/notebooks), \n- python source modules (/src) and \n- the experiment related files such as the experiment configs (/reports) or trained models (/models).",
+      "evidence_location": "lines 57-60",
+      "confidence": "high",
+      "reason": "High-level organization of the codebase into components."
+    },
+    {
+      "field": "experiment_artifacts",
+      "value": "Each experiment includes the following artefacts:\n- One config file, which represents all experimental hyper-parameters which are neccessary to reproduce the experiment or to load it for later predictions\n- Three tensorboard logfiles per training to keep track of the trainings, evaluation and visual output progress.\n- One dataframe which orchestrates the nrrd files with the metadata and the experiment splitting.\n- Model graph description either as json or tensorflow protobuf file and the corresponding model weights as h5 file.",
+      "normalized_value": "Each experiment includes the following artefacts: - One config file, which represents all experimental hyper-parameters which are neccessary to reproduce the experiment or to load it for later predictions - Three tensorboard logfiles per training to keep track of the trainings, evaluation and visual output progress. - One dataframe which orchestrates the nrrd files with the metadata and the experiment splitting. - Model graph description either as json or tensorflow protobuf file and the corresponding model weights as h5 file.",
+      "evidence": "Each experiment includes the following artefacts:\n- One config file, which represents all experimental hyper-parameters which are neccessary to reproduce the experiment or to load it for later predictions\n- Three tensorboard logfiles per training to keep track of the trainings, evaluation and visual output progress.\n- One dataframe which orchestrates the nrrd files with the metadata and the experiment splitting.\n- Model graph description either as json or tensorflow protobuf file and the corresponding model weights as h5 file.",
+      "evidence_location": "lines 62-66",
+      "confidence": "high",
+      "reason": "Lists the key files generated per experiment, essential for reproducibility and understanding the output."
+    },
+    {
+      "field": "model_location",
+      "value": "The tensorflow model and layer definitions are within /src/models.",
+      "normalized_value": "The tensorflow model and layer definitions are within /src/models.",
+      "evidence": "The tensorflow model and layer definitions are within /src/models.",
+      "evidence_location": "line 68",
+      "confidence": "high",
+      "reason": "Specifies where the core model code is located."
+    },
+    {
+      "field": "external_dependency",
+      "value": "The transformation layer is built on the neuron project, which is also part of the current Voxelmorph approach (https://github.com/voxelmorph/voxelmorph).",
+      "normalized_value": "The transformation layer is built on the neuron project, which is also part of the current Voxelmorph approach (https://github.com/voxelmorph/voxelmorph).",
+      "evidence": "The transformation layer is built on the neuron project, which is also part of the current Voxelmorph approach (https://github.com/voxelmorph/voxelmorph).",
+      "evidence_location": "line 69",
+      "confidence": "high",
+      "reason": "Mentions an external library/dependency used for a core component."
+    },
+    {
+      "field": "usage_instruction",
+      "value": "Use the Notebooks to interact (train, predict or evaluate) with the python functions.",
+      "normalized_value": "Use the Notebooks to interact (train, predict or evaluate) with the python functions.",
+      "evidence": "Use the Notebooks to interact (train, predict or evaluate) with the python functions.",
+      "evidence_location": "line 71",
+      "confidence": "high",
+      "reason": "High-level instruction on how to use the provided code (via notebooks)."
+    }
+  ]
+}

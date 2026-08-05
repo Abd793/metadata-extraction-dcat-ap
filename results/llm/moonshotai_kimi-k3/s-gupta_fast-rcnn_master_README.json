@@ -1,0 +1,256 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Fast R-CNN",
+      "normalized_value": "Fast R-CNN",
+      "evidence": "# *Fast* R-CNN: Fast Region-based Convolutional Networks for object detection",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Names the artifact and its full expansion, essential for identification and indexing."
+    },
+    {
+      "field": "description",
+      "value": "Fast R-CNN is a fast framework for object detection with deep ConvNets.",
+      "normalized_value": "Fast R-CNN is a fast framework for object detection with deep ConvNets.",
+      "evidence": "**Fast R-CNN** is a fast framework for object detection with deep ConvNets.",
+      "evidence_location": "line 7, '### Introduction' section",
+      "confidence": "high",
+      "reason": "One-sentence statement of the artifact's purpose and task domain."
+    },
+    {
+      "field": "author",
+      "value": "Ross Girshick at Microsoft Research, Redmond",
+      "normalized_value": "Ross Girshick at Microsoft Research, Redmond",
+      "evidence": "Created by Ross Girshick at Microsoft Research, Redmond.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Identifies the creator and affiliation, useful for attribution and citation."
+    },
+    {
+      "field": "task",
+      "value": "object detection",
+      "normalized_value": "object detection",
+      "evidence": "Fast Region-based Convolutional Networks for object detection",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Names the computer vision task the artifact addresses."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python and C++/Caffe",
+      "normalized_value": "Python and C++/Caffe",
+      "evidence": "- and is written in Python and C++/Caffe.",
+      "evidence_location": "line 11, '### Introduction' section",
+      "confidence": "high",
+      "reason": "States implementation languages and framework, relevant for reuse and dependency assessment."
+    },
+    {
+      "field": "performance_claim",
+      "value": "trains state-of-the-art models, like VGG16, 9x faster than traditional R-CNN and 3x faster than SPPnet; runs 200x faster than R-CNN and 10x faster than SPPnet at test-time; has a significantly higher mAP on PASCAL VOC than both R-CNN and SPPnet",
+      "normalized_value": "trains state-of-the-art models, like VGG16, 9x faster than traditional R-CNN and 3x faster than SPPnet; runs 200x faster than R-CNN and 10x faster than SPPnet at test-time; has a significantly higher mAP on PASCAL VOC than both R-CNN and SPPnet",
+      "evidence": " - trains state-of-the-art models, like VGG16, 9x faster than traditional R-CNN and 3x faster than SPPnet,\n - runs 200x faster than R-CNN and 10x faster than SPPnet at test-time,\n - has a significantly higher mAP on PASCAL VOC than both R-CNN and SPPnet,",
+      "evidence_location": "lines 8-10, '### Introduction' section",
+      "confidence": "high",
+      "reason": "Quantitative speed and accuracy claims relative to baselines, useful for evaluation and comparison."
+    },
+    {
+      "field": "paper_link",
+      "value": "http://arxiv.org/abs/1504.08083",
+      "normalized_value": "http://arxiv.org/abs/1504.08083",
+      "evidence": "Fast R-CNN was initially described in an [arXiv tech report](http://arxiv.org/abs/1504.08083).",
+      "evidence_location": "line 13, '### Introduction' section",
+      "confidence": "high",
+      "reason": "Link to the associated research paper for scientific context and citation."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "Fast R-CNN is released under the MIT License (refer to the LICENSE file for details).",
+      "evidence_location": "line 17, '### License' section",
+      "confidence": "high",
+      "reason": "Legal terms governing reuse of the artifact."
+    },
+    {
+      "field": "citation",
+      "value": "@article{girshick15fastrcnn, Author = {Ross Girshick}, Title = {Fast R-CNN}, Journal = {arXiv preprint arXiv:1504.08083}, Year = {2015}}",
+      "normalized_value": "@article{girshick15fastrcnn, Author = {Ross Girshick}, Title = {Fast R-CNN}, Journal = {arXiv preprint arXiv:1504.08083}, Year = {2015}}",
+      "evidence": "    @article{girshick15fastrcnn,\n        Author = {Ross Girshick},\n        Title = {Fast R-CNN},\n        Journal = {arXiv preprint arXiv:1504.08083},\n        Year = {2015}\n    }",
+      "evidence_location": "lines 23-28, '### Citing Fast R-CNN' section, indented code block",
+      "confidence": "high",
+      "reason": "BibTeX entry for citing the artifact in research."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/rbgirshick/fast-rcnn.git",
+      "normalized_value": "https://github.com/rbgirshick/fast-rcnn.git",
+      "evidence": "git clone --recursive https://github.com/rbgirshick/fast-rcnn.git",
+      "evidence_location": "line 64, '### Installation (sufficient for the demo)' section, fenced code block",
+      "confidence": "high",
+      "reason": "Canonical source repository URL for obtaining the code."
+    },
+    {
+      "field": "software_dependencies",
+      "value": "Caffe and pycaffe (Caffe must be built with support for Python layers); Python packages: cython, python-opencv, easydict; optional MATLAB (required for PASCAL VOC evaluation only)",
+      "normalized_value": "Caffe and pycaffe (Caffe must be built with support for Python layers); Python packages: cython, python-opencv, easydict; optional MATLAB (required for PASCAL VOC evaluation only)",
+      "evidence": "1. Requirements for `Caffe` and `pycaffe` (see: [Caffe installation instructions](http://caffe.berkeleyvision.org/installation.html))\n\n  **Note:** Caffe *must* be built with support for Python layers!\n\n  ```make\n  # In your Makefile.config, make sure to have this line uncommented\n  WITH_PYTHON_LAYER := 1\n  ```\n\n  You can download my [Makefile.config](http://www.cs.berkeley.edu/~rbg/fast-rcnn-data/Makefile.config) for reference.\n2. Python packages you might not have: `cython`, `python-opencv`, `easydict`\n3. [optional] MATLAB (required for PASCAL VOC evaluation only)",
+      "evidence_location": "lines 41-52, '### Requirements: software' section",
+      "confidence": "high",
+      "reason": "Lists required software and a required Caffe build flag needed to install and run the artifact."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "For training smaller networks (CaffeNet, VGG_CNN_M_1024) a good GPU (e.g., Titan, K20, K40) with at least 3G of memory suffices; for training with VGG16, you'll need a K40 (~11G of memory)",
+      "normalized_value": "For training smaller networks (CaffeNet, VGG_CNN_M_1024) a good GPU (e.g., Titan, K20, K40) with at least 3G of memory suffices; for training with VGG16, you'll need a K40 (~11G of memory)",
+      "evidence": "1. For training smaller networks (CaffeNet, VGG_CNN_M_1024) a good GPU (e.g., Titan, K20, K40, ...) with at least 3G of memory suffices\n2. For training with VGG16, you'll need a K40 (~11G of memory)",
+      "evidence_location": "lines 56-57, '### Requirements: hardware' section",
+      "confidence": "high",
+      "reason": "GPU memory requirements needed to reproduce training."
+    },
+    {
+      "field": "installation_command",
+      "value": "git clone --recursive https://github.com/rbgirshick/fast-rcnn.git",
+      "normalized_value": "git clone --recursive https://github.com/rbgirshick/fast-rcnn.git",
+      "evidence": "  ```Shell\n  # Make sure to clone with --recursive\n  git clone --recursive https://github.com/rbgirshick/fast-rcnn.git\n  ```",
+      "evidence_location": "lines 62-65, '### Installation (sufficient for the demo)' section, fenced code block",
+      "confidence": "high",
+      "reason": "First installation step; the --recursive flag is required to fetch the caffe-fast-rcnn submodule."
+    },
+    {
+      "field": "build_command",
+      "value": "cd $FRCN_ROOT/lib && make; cd $FRCN_ROOT/caffe-fast-rcnn && make -j8 && make pycaffe",
+      "normalized_value": "cd $FRCN_ROOT/lib && make; cd $FRCN_ROOT/caffe-fast-rcnn && make -j8 && make pycaffe",
+      "evidence": "    ```Shell\n    cd $FRCN_ROOT/lib\n    make\n    ```\n    \n4. Build Caffe and pycaffe\n    ```Shell\n    cd $FRCN_ROOT/caffe-fast-rcnn\n    # Now follow the Caffe installation instructions here:\n    #   http://caffe.berkeleyvision.org/installation.html\n\n    # If you're experienced with Caffe and have all of the requirements installed\n    # and your Makefile.config in place, then simply do:\n    make -j8 && make pycaffe\n    ```",
+      "evidence_location": "lines 78-92, '### Installation (sufficient for the demo)' section, fenced code blocks",
+      "confidence": "high",
+      "reason": "Commands to build the Cython modules and Caffe/pycaffe, required for installation."
+    },
+    {
+      "field": "model_download_command",
+      "value": "cd $FRCN_ROOT && ./data/scripts/fetch_fast_rcnn_models.sh",
+      "normalized_value": "cd $FRCN_ROOT && ./data/scripts/fetch_fast_rcnn_models.sh",
+      "evidence": "    ```Shell\n    cd $FRCN_ROOT\n    ./data/scripts/fetch_fast_rcnn_models.sh\n    ```",
+      "evidence_location": "lines 95-98, '### Installation (sufficient for the demo)' section, fenced code block",
+      "confidence": "high",
+      "reason": "Downloads pre-computed Fast R-CNN detector checkpoints needed for the demo."
+    },
+    {
+      "field": "demo_command",
+      "value": "cd $FRCN_ROOT && ./tools/demo.py",
+      "normalized_value": "cd $FRCN_ROOT && ./tools/demo.py",
+      "evidence": "```Shell\ncd $FRCN_ROOT\n./tools/demo.py\n```",
+      "evidence_location": "lines 109-112, '### Demo' section, fenced code block",
+      "confidence": "high",
+      "reason": "Command to run the Python demo for quick inference verification."
+    },
+    {
+      "field": "demo_configuration",
+      "value": "The demo performs detection using a VGG16 network trained for detection on PASCAL VOC 2007. The object proposals are pre-computed in order to reduce installation requirements.",
+      "normalized_value": "The demo performs detection using a VGG16 network trained for detection on PASCAL VOC 2007. The object proposals are pre-computed in order to reduce installation requirements.",
+      "evidence": "The demo performs detection using a VGG16 network trained for detection on PASCAL VOC 2007. The object proposals are pre-computed in order to reduce installation requirements.",
+      "evidence_location": "line 113, '### Demo' section",
+      "confidence": "high",
+      "reason": "Describes the network and dataset used by the demo, relevant for reproducing demo results."
+    },
+    {
+      "field": "demo_fallback_options",
+      "value": "./tools/demo.py --net caffenet or --net vgg_cnn_m_1024 for smaller networks; ./tools/demo.py --cpu for CPU mode",
+      "normalized_value": "./tools/demo.py --net caffenet or --net vgg_cnn_m_1024 for smaller networks; ./tools/demo.py --cpu for CPU mode",
+      "evidence": "**Note:** If the demo crashes Caffe because your GPU doesn't have enough memory, try running the demo with a small network, e.g., `./tools/demo.py --net caffenet` or with `--net vgg_cnn_m_1024`. Or run in CPU mode `./tools/demo.py --cpu`. Type `./tools/demo.py -h` for usage.",
+      "evidence_location": "line 115, '### Demo' section",
+      "confidence": "high",
+      "reason": "Alternative demo invocations for limited GPU memory or CPU-only environments."
+    },
+    {
+      "field": "dataset",
+      "value": "PASCAL VOC 2007 (trainval and test), with optional PASCAL VOC 2010 and 2012",
+      "normalized_value": "PASCAL VOC 2007 (trainval and test), with optional PASCAL VOC 2010 and 2012",
+      "evidence": "1. Download the training, validation, test data and VOCdevkit\n\n\t```Shell\n\twget http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/VOCtrainval_06-Nov-2007.tar\n\twget http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/VOCtest_06-Nov-2007.tar\n\twget http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/VOCdevkit_08-Jun-2007.tar\n\t```",
+      "evidence_location": "lines 146-152, '### Beyond the demo: installation for training and testing models' section, fenced code block",
+      "confidence": "high",
+      "reason": "Identifies the benchmark dataset and provides download URLs needed to reproduce training and testing."
+    },
+    {
+      "field": "pretrained_models",
+      "value": "CaffeNet (model S), VGG_CNN_M_1024 (model M), and VGG16 (model L), pre-trained on ImageNet",
+      "normalized_value": "CaffeNet (model S), VGG_CNN_M_1024 (model M), and VGG16 (model L), pre-trained on ImageNet",
+      "evidence": "Pre-trained ImageNet models can be downloaded for the three networks described in the paper: CaffeNet (model **S**), VGG_CNN_M_1024 (model **M**), and VGG16 (model **L**).",
+      "evidence_location": "line 194, '### Download pre-trained ImageNet models' section",
+      "confidence": "high",
+      "reason": "Lists the supported network architectures and their pre-trained initialization sources."
+    },
+    {
+      "field": "training_command",
+      "value": "./tools/train_net.py --gpu 0 --solver models/VGG16/solver.prototxt --weights data/imagenet_models/VGG16.v2.caffemodel",
+      "normalized_value": "./tools/train_net.py --gpu 0 --solver models/VGG16/solver.prototxt --weights data/imagenet_models/VGG16.v2.caffemodel",
+      "evidence": "```Shell\n./tools/train_net.py --gpu 0 --solver models/VGG16/solver.prototxt \\\n\t--weights data/imagenet_models/VGG16.v2.caffemodel\n```",
+      "evidence_location": "lines 206-209, '### Usage' section, fenced code block",
+      "confidence": "high",
+      "reason": "Example command for training a Fast R-CNN detector (VGG16 on VOC 2007 trainval)."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "./tools/test_net.py --gpu 1 --def models/VGG16/test.prototxt --net output/default/voc_2007_trainval/vgg16_fast_rcnn_iter_40000.caffemodel",
+      "normalized_value": "./tools/test_net.py --gpu 1 --def models/VGG16/test.prototxt --net output/default/voc_2007_trainval/vgg16_fast_rcnn_iter_40000.caffemodel",
+      "evidence": "```Shell\n./tools/test_net.py --gpu 1 --def models/VGG16/test.prototxt \\\n\t--net output/default/voc_2007_trainval/vgg16_fast_rcnn_iter_40000.caffemodel\n```",
+      "evidence_location": "lines 221-224, '### Usage' section, fenced code block",
+      "confidence": "high",
+      "reason": "Example command for testing/evaluating a trained detector on VOC 2007 test."
+    },
+    {
+      "field": "model_compression_command",
+      "value": "./tools/compress_net.py --def models/VGG16/test.prototxt --def-svd models/VGG16/compressed/test.prototxt --net output/default/voc_2007_trainval/vgg16_fast_rcnn_iter_40000.caffemodel",
+      "normalized_value": "./tools/compress_net.py --def models/VGG16/test.prototxt --def-svd models/VGG16/compressed/test.prototxt --net output/default/voc_2007_trainval/vgg16_fast_rcnn_iter_40000.caffemodel",
+      "evidence": "**Compress** a Fast R-CNN model using truncated SVD on the fully-connected layers:\n\n```Shell\n./tools/compress_net.py --def models/VGG16/test.prototxt \\\n\t--def-svd models/VGG16/compressed/test.prototxt \\\n    --net output/default/voc_2007_trainval/vgg16_fast_rcnn_iter_40000.caffemodel",
+      "evidence_location": "lines 228-233, '### Usage' section, fenced code block",
+      "confidence": "high",
+      "reason": "Documents the model compression feature (truncated SVD) and how to invoke it."
+    },
+    {
+      "field": "reproduction_scripts",
+      "value": "Scripts to reproduce the experiments in the paper (up to stochastic variation) are provided in $FRCN_ROOT/experiments/scripts; log files in experiments/logs",
+      "normalized_value": "Scripts to reproduce the experiments in the paper (up to stochastic variation) are provided in $FRCN_ROOT/experiments/scripts; log files in experiments/logs",
+      "evidence": "Scripts to reproduce the experiments in the paper (*up to stochastic variation*) are provided in `$FRCN_ROOT/experiments/scripts`. Log files for experiments are located in `experiments/logs`.",
+      "evidence_location": "line 240, '### Experiment scripts' section",
+      "confidence": "high",
+      "reason": "Points to scripts and logs for reproducing the paper's experiments."
+    },
+    {
+      "field": "reproducibility_note",
+      "value": "Until commit a566e39, the RNG seed for Caffe was not fixed during training; now it's fixed unless train_net.py is called with the --rand flag",
+      "normalized_value": "Until commit a566e39, the RNG seed for Caffe was not fixed during training; now it's fixed unless train_net.py is called with the --rand flag",
+      "evidence": "**Note:** Until recently (commit a566e39), the RNG seed for Caffe was not fixed during training. Now it's fixed, unless `train_net.py` is called with the `--rand` flag.\nResults generated before this commit will have some stochastic variation.",
+      "evidence_location": "lines 242-243, '### Experiment scripts' section",
+      "confidence": "high",
+      "reason": "Explains stochastic variation in results and how seeding is controlled, important for reproducibility."
+    },
+    {
+      "field": "matlab_support",
+      "value": "Fast R-CNN training is implemented in Python only, but test-time detection functionality also exists in MATLAB.",
+      "normalized_value": "Fast R-CNN training is implemented in Python only, but test-time detection functionality also exists in MATLAB.",
+      "evidence": "Fast R-CNN training is implemented in Python only, but test-time detection functionality also exists in MATLAB.\nSee `matlab/fast_rcnn_demo.m` and `matlab/fast_rcnn_im_detect.m` for details.",
+      "evidence_location": "lines 128-129, '### Demo' section",
+      "confidence": "high",
+      "reason": "Clarifies which functionality is available in which language, relevant for reuse."
+    },
+    {
+      "field": "object_proposal_method",
+      "value": "Selective Search (pre-computed proposals used by the demo); alternatives listed: EdgeBoxes, GOP and LPO, MCG, RIGOR",
+      "normalized_value": "Selective Search (pre-computed proposals used by the demo); alternatives listed: EdgeBoxes, GOP and LPO, MCG, RIGOR",
+      "evidence": "The demo uses pre-computed selective search proposals computed with [this code](https://github.com/rbgirshick/rcnn/blob/master/selective_search/selective_search_boxes.m).",
+      "evidence_location": "line 133, '**Computing object proposals**' subsection",
+      "confidence": "high",
+      "reason": "Identifies the region proposal method the framework depends on, with links to implementations."
+    },
+    {
+      "field": "extra_downloads",
+      "value": "Experiment logs, PASCAL VOC test set detections, and a Fast R-CNN VGG16 model trained on VOC07 train,val,test union with VOC12 train,val",
+      "normalized_value": "Experiment logs, PASCAL VOC test set detections, and a Fast R-CNN VGG16 model trained on VOC07 train,val,test union with VOC12 train,val",
+      "evidence": "### Extra downloads\n\n- [Experiment logs](http://www.cs.berkeley.edu/~rbg/fast-rcnn-data/fast_rcnn_experiments.tgz)\n- PASCAL VOC test set detections",
+      "evidence_location": "lines 245-248, '### Extra downloads' section",
+      "confidence": "high",
+      "reason": "Additional downloadable artifacts (logs, detections, trained model) useful for evaluation and reuse."
+    }
+  ]
+}

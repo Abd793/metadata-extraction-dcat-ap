@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "TAG-CF: Test-time Aggregation for CF",
+      "normalized_value": "TAG-CF: Test-time Aggregation for CF",
+      "evidence": "# TAG-CF: Test-time Aggregation for CF",
+      "evidence_location": "1; title",
+      "confidence": "high",
+      "reason": "Provides the artifact's explicit name and acronym."
+    },
+    {
+      "field": "artifact_type",
+      "value": "Source code",
+      "normalized_value": "Source code",
+      "evidence": "Source code for the paper **[How Does Message Passing Improve Collaborative Filtering?](https://arxiv.org/abs/2404.08660)** accepted at NeurIPS 2024.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the repository contents as source code for a paper."
+    },
+    {
+      "field": "paper_title",
+      "value": "How Does Message Passing Improve Collaborative Filtering?",
+      "normalized_value": "How Does Message Passing Improve Collaborative Filtering?",
+      "evidence": "Source code for the paper **[How Does Message Passing Improve Collaborative Filtering?](https://arxiv.org/abs/2404.08660)** accepted at NeurIPS 2024.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Names the research paper associated with the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2404.08660",
+      "normalized_value": "https://arxiv.org/abs/2404.08660",
+      "evidence": "Source code for the paper **[How Does Message Passing Improve Collaborative Filtering?](https://arxiv.org/abs/2404.08660)** accepted at NeurIPS 2024.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides a direct access link to the associated paper."
+    },
+    {
+      "field": "publication_venue",
+      "value": "NeurIPS 2024",
+      "normalized_value": "NeurIPS 2024",
+      "evidence": "Source code for the paper **[How Does Message Passing Improve Collaborative Filtering?](https://arxiv.org/abs/2404.08660)** accepted at NeurIPS 2024.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "States the paper's named venue and publication year."
+    },
+    {
+      "field": "authors",
+      "value": "Mingxuan Ju, William Shiao, Zhichun Guo, Fanny Ye, Yozen Liu, Neil Shah and Tong Zhao",
+      "normalized_value": "Mingxuan Ju, William Shiao, Zhichun Guo, Fanny Ye, Yozen Liu, Neil Shah and Tong Zhao",
+      "evidence": ">by [Mingxuan Ju](https://scholar.google.com/citations?user=qNoO67AAAAAJ&hl=en&oi=ao), [William Shiao](https://scholar.google.com/citations?user=TIq-P5AAAAAJ&hl=en&oi=ao), [Zhichun Guo](https://scholar.google.com/citations?user=BOFfWR0AAAAJ&hl=en&oi=ao), [Fanny Ye](https://scholar.google.com/citations?user=egjr888AAAAJ&hl=en&oi=ao), [Yozen Liu](https://scholar.google.com/citations?user=i3U2JjEAAAAJ&hl=en&oi=ao), [Neil Shah](https://scholar.google.com/citations?user=Qut69OgAAAAJ&hl=en&oi=ao) and [Tong Zhao](https://scholar.google.com/citations?user=05cRc-MAAAAJ&hl=en&oi=ao).",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Lists the people credited for the work."
+    },
+    {
+      "field": "method_description",
+      "value": "a test-time aggregation framework that can be utilized as a plug-and-play module to enhance the performance of matrix factorization models.",
+      "normalized_value": "a test-time aggregation framework that can be utilized as a plug-and-play module to enhance the performance of matrix factorization models.",
+      "evidence": "The paper proposes TAG-CF which is a test-time aggregation framework that can be utilized as a plug-and-play module to enhance the performance of matrix factorization models.",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Explicitly describes the method and its intended reuse with matrix factorization models."
+    },
+    {
+      "field": "installation_command",
+      "value": "conda create --name <env> --file requirements.txt",
+      "normalized_value": "conda create --name <env> --file requirements.txt",
+      "evidence": "Please install all dependencies using the command:\n```\nconda create --name <env> --file requirements.txt\n```",
+      "evidence_location": "10-13; 1. Installation",
+      "confidence": "high",
+      "reason": "Provides the explicit command for creating the dependency environment."
+    },
+    {
+      "field": "data_download_instruction",
+      "value": "./dataset/README.md",
+      "normalized_value": "./dataset/README.md",
+      "evidence": "Please download the data following the [instruction](./dataset/README.md).",
+      "evidence_location": "15-17; 2. Download data",
+      "confidence": "high",
+      "reason": "Links to the documented procedure for obtaining the required data."
+    },
+    {
+      "field": "reproduction_example",
+      "value": "This is one example of reproducing results for Movielens-1M with BPR. Please use other provided config files to reproduce results for other datasets.",
+      "normalized_value": "This is one example of reproducing results for Movielens-1M with BPR. Please use other provided config files to reproduce results for other datasets.",
+      "evidence": "This is one example of reproducing results for Movielens-1M with BPR. Please use other provided config files to reproduce results for other datasets.",
+      "evidence_location": "20; 3. Run experiments",
+      "confidence": "high",
+      "reason": "Defines the documented reproduction scope and how to adapt it to other datasets."
+    },
+    {
+      "field": "experiment_commands",
+      "value": "# Train a basic matrix factorization model\nmake run_pipeline MODEL_YAML_PATH=config/MF.yaml DATA_YAML_PATH=config/bpr_ml.yaml\n\n# Train a LightGCN model.\nmake run_pipeline MODEL_YAML_PATH=config/LGCN.yaml DATA_YAML_PATH=config/bpr_ml.yaml\n\n# Conduct test-time aggregation on matrix factorization model.\nmake run_pipeline MODEL_YAML_PATH=config/TAGCF_bpr_ml.yaml  DATA_YAML_PATH=config/bpr_ml.yaml",
+      "normalized_value": "# Train a basic matrix factorization model make run_pipeline MODEL_YAML_PATH=config/MF.yaml DATA_YAML_PATH=config/bpr_ml.yaml # Train a LightGCN model. make run_pipeline MODEL_YAML_PATH=config/LGCN.yaml DATA_YAML_PATH=config/bpr_ml.yaml # Conduct test-time aggregation on matrix factorization model. make run_pipeline MODEL_YAML_PATH=config/TAGCF_bpr_ml.yaml DATA_YAML_PATH=config/bpr_ml.yaml",
+      "evidence": "```\n# Train a basic matrix factorization model\nmake run_pipeline MODEL_YAML_PATH=config/MF.yaml DATA_YAML_PATH=config/bpr_ml.yaml\n\n# Train a LightGCN model.\nmake run_pipeline MODEL_YAML_PATH=config/LGCN.yaml DATA_YAML_PATH=config/bpr_ml.yaml\n\n# Conduct test-time aggregation on matrix factorization model.\nmake run_pipeline MODEL_YAML_PATH=config/TAGCF_bpr_ml.yaml  DATA_YAML_PATH=config/bpr_ml.yaml\n```",
+      "evidence_location": "21-30; 3. Run experiments",
+      "confidence": "high",
+      "reason": "Provides executable commands for training baseline models and applying TAG-CF."
+    },
+    {
+      "field": "configuration_directory",
+      "value": "./config",
+      "normalized_value": "./config",
+      "evidence": "[the config folder](./config)",
+      "evidence_location": "33; 4. Results",
+      "confidence": "high",
+      "reason": "Identifies where hyperparameter configuration files are stored."
+    },
+    {
+      "field": "tag_cf_tuning",
+      "value": "To play around with ```m``` and ```n``` in TAG-CF, feel free to accordingly change individual config files. To conduct grid-search over them, simply remove them from the config file.",
+      "normalized_value": "To play around with ```m``` and ```n``` in TAG-CF, feel free to accordingly change individual config files. To conduct grid-search over them, simply remove them from the config file.",
+      "evidence": "To play around with ```m``` and ```n``` in TAG-CF, feel free to accordingly change individual config files. To conduct grid-search over them, simply remove them from the config file.",
+      "evidence_location": "33; 4. Results",
+      "confidence": "high",
+      "reason": "Documents the named TAG-CF hyperparameters and the grid-search procedure."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "Recall@10, Recall@20, NDCG@10, NDCG@20",
+      "normalized_value": "Recall@10, Recall@20, NDCG@10, NDCG@20",
+      "evidence": "Recall@10 | 0.0619 | 0.0630 | 1.83% | 0.0396 | 0.0454 | 14.55%\nRecall@20 | 0.0959 | 0.0972 | 1.32% | 0.0652 | 0.0737 | 13.04%\nNDCG@10   | 0.0527 | 0.0536 | 1.60% | 0.0330 | 0.0384 | 16.47%\nNDCG@20   | 0.0641 | 0.0650 | 1.54% | 0.0416 | 0.0479 | 15.06%",
+      "evidence_location": "38-41; 4. Results",
+      "confidence": "high",
+      "reason": "Names the concrete ranking metrics used in the reported evaluations."
+    },
+    {
+      "field": "benchmark_results",
+      "value": "||DirectAU|+TAGCF|Impr. (%)|BPR|+TAGCF|Impr. (%)\n|:-|:-:|:-:|:-:|:-:|:-:|:-:|\n||||Amazon-Book\nRecall@10 | 0.0619 | 0.0630 | 1.83% | 0.0396 | 0.0454 | 14.55%\nRecall@20 | 0.0959 | 0.0972 | 1.32% | 0.0652 | 0.0737 | 13.04%\nNDCG@10   | 0.0527 | 0.0536 | 1.60% | 0.0330 | 0.0384 | 16.47%\nNDCG@20   | 0.0641 | 0.0650 | 1.54% | 0.0416 | 0.0479 | 15.06%\n||||Yelp-2018\nRecall@10 | 0.0618 | 0.0633 | 2.44% | 0.0456 | 0.0475 | 4.25%\nRecall@20 | 0.0997 | 0.1018 | 2.09% | 0.0761 | 0.0793 | 4.15%\nNDCG@10   | 0.0517 | 0.0532 | 2.80% | 0.0385 | 0.0403 | 4.68%\nNDCG@20   | 0.0647 | 0.0663 | 2.56% | 0.0489 | 0.0513 | 4.71%\n||||Gowalla\nRecall@10 | 0.1045 | 0.1072 | 1.72% | 0.0869 | 0.0914 | 5.15%\nRecall@20 | 0.1528 | 0.1566 | 1.71% | 0.1272 | 0.1333 | 4.73%\nNDCG@10   | 0.0825 | 0.0839 | 2.66% | 0.0690 | 0.0719 | 4.16%\nNDCG@20   | 0.0976 | 0.0993 | 2.50% | 0.0816 | 0.0850 | 4.17%\n||||MovieLens-1M\nRecall@10 | 0.1223 | 0.1602 | 31.00% | 0.1276 | 0.1319 | 3.35%\nRecall@20 | 0.1899 | 0.2452 | 29.14% | 0.2179 | 0.2187 | 0.35%\nNDCG@10   | 0.1521 | 0.2085 | 37.03% | 0.1528 | 0.1571 | 2.82%\nNDCG@20   | 0.1667 | 0.2233 | 33.93% | 0.1800 | 0.1821 | 1.15%",
+      "normalized_value": "||DirectAU|+TAGCF|Impr. (%)|BPR|+TAGCF|Impr. (%) |:-|:-:|:-:|:-:|:-:|:-:|:-:| ||Amazon-Book Recall@10 | 0.0619 | 0.0630 | 1.83% | 0.0396 | 0.0454 | 14.55% Recall@20 | 0.0959 | 0.0972 | 1.32% | 0.0652 | 0.0737 | 13.04% NDCG@10 | 0.0527 | 0.0536 | 1.60% | 0.0330 | 0.0384 | 16.47% NDCG@20 | 0.0641 | 0.0650 | 1.54% | 0.0416 | 0.0479 | 15.06% ||||Yelp-2018 Recall@10 | 0.0618 | 0.0633 | 2.44% | 0.0456 | 0.0475 | 4.25% Recall@20 | 0.0997 | 0.1018 | 2.09% | 0.0761 | 0.0793 | 4.15% NDCG@10 | 0.0517 | 0.0532 | 2.80% | 0.0385 | 0.0403 | 4.68% NDCG@20 | 0.0647 | 0.0663 | 2.56% | 0.0489 | 0.0513 | 4.71% ||||Gowalla Recall@10 | 0.1045 | 0.1072 | 1.72% | 0.0869 | 0.0914 | 5.15% Recall@20 | 0.1528 | 0.1566 | 1.71% | 0.1272 | 0.1333 | 4.73% NDCG@10 | 0.0825 | 0.0839 | 2.66% | 0.0690 | 0.0719 | 4.16% NDCG@20 | 0.0976 | 0.0993 | 2.50% | 0.0816 | 0.0850 | 4.17% ||||MovieLens-1M Recall@10 | 0.1223 | 0.1602 | 31.00% | 0.1276 | 0.1319 | 3.35% Recall@20 | 0.1899 | 0.2452 | 29.14% | 0.2179 | 0.2187 | 0.35% NDCG@10 | 0.1521 | 0.2085 | 37.03% | 0.1528 | 0.1571 | 2.82% NDCG@20 | 0.1667 | 0.2233 | 33.93% | 0.1800 | 0.1821 | 1.15%",
+      "evidence": "||DirectAU|+TAGCF|Impr. (%)|BPR|+TAGCF|Impr. (%)\n|:-|:-:|:-:|:-:|:-:|:-:|:-:|\n||||Amazon-Book\nRecall@10 | 0.0619 | 0.0630 | 1.83% | 0.0396 | 0.0454 | 14.55%\nRecall@20 | 0.0959 | 0.0972 | 1.32% | 0.0652 | 0.0737 | 13.04%\nNDCG@10   | 0.0527 | 0.0536 | 1.60% | 0.0330 | 0.0384 | 16.47%\nNDCG@20   | 0.0641 | 0.0650 | 1.54% | 0.0416 | 0.0479 | 15.06%\n||||Yelp-2018\nRecall@10 | 0.0618 | 0.0633 | 2.44% | 0.0456 | 0.0475 | 4.25%\nRecall@20 | 0.0997 | 0.1018 | 2.09% | 0.0761 | 0.0793 | 4.15%\nNDCG@10   | 0.0517 | 0.0532 | 2.80% | 0.0385 | 0.0403 | 4.68%\nNDCG@20   | 0.0647 | 0.0663 | 2.56% | 0.0489 | 0.0513 | 4.71%\n||||Gowalla\nRecall@10 | 0.1045 | 0.1072 | 1.72% | 0.0869 | 0.0914 | 5.15%\nRecall@20 | 0.1528 | 0.1566 | 1.71% | 0.1272 | 0.1333 | 4.73%\nNDCG@10   | 0.0825 | 0.0839 | 2.66% | 0.0690 | 0.0719 | 4.16%\nNDCG@20   | 0.0976 | 0.0993 | 2.50% | 0.0816 | 0.0850 | 4.17%\n||||MovieLens-1M\nRecall@10 | 0.1223 | 0.1602 | 31.00% | 0.1276 | 0.1319 | 3.35%\nRecall@20 | 0.1899 | 0.2452 | 29.14% | 0.2179 | 0.2187 | 0.35%\nNDCG@10   | 0.1521 | 0.2085 | 37.03% | 0.1528 | 0.1571 | 2.82%\nNDCG@20   | 0.1667 | 0.2233 | 33.93% | 0.1800 | 0.1821 | 1.15%",
+      "evidence_location": "35-56; 4. Results",
+      "confidence": "high",
+      "reason": "Captures the reported Recall, NDCG, and relative-improvement results for all four named datasets."
+    },
+    {
+      "field": "citation",
+      "value": "@article{ju2024does,\n  title={How Does Message Passing Improve Collaborative Filtering?},\n  author={Ju, Mingxuan and Shiao, William and Guo, Zhichun and Ye, Yanfang and Liu, Yozen and Shah, Neil and Zhao, Tong},\n  journal={Advances in neural information processing systems},\n  year={2024}\n}",
+      "normalized_value": "@article{ju2024does, title={How Does Message Passing Improve Collaborative Filtering?}, author={Ju, Mingxuan and Shiao, William and Guo, Zhichun and Ye, Yanfang and Liu, Yozen and Shah, Neil and Zhao, Tong}, journal={Advances in neural information processing systems}, year={2024} }",
+      "evidence": "```\n@article{ju2024does,\n  title={How Does Message Passing Improve Collaborative Filtering?},\n  author={Ju, Mingxuan and Shiao, William and Guo, Zhichun and Ye, Yanfang and Liu, Yozen and Shah, Neil and Zhao, Tong},\n  journal={Advances in neural information processing systems},\n  year={2024}\n}\n```",
+      "evidence_location": "61-68; 5. Reference",
+      "confidence": "high",
+      "reason": "Provides a ready-to-use BibTeX citation for attribution and scholarly reuse."
+    },
+    {
+      "field": "contact_email",
+      "value": "mju@snap.com",
+      "normalized_value": "mju@snap.com",
+      "evidence": "Please contact mju@snap.com for any questions.",
+      "evidence_location": "71; 6. Contact",
+      "confidence": "high",
+      "reason": "Provides the explicit contact address for questions about the artifact."
+    }
+  ]
+}

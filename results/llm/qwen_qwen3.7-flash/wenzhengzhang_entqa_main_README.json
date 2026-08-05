@@ -1,0 +1,238 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "EntQA",
+      "normalized_value": "EntQA",
+      "evidence": "# EntQA",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the project name."
+    },
+    {
+      "field": "paper_title",
+      "value": "EntQA: Entitly Linking as Question Answering",
+      "normalized_value": "EntQA: Entitly Linking as Question Answering",
+      "evidence": "[EntQA: Entitly Linking as Question Answering](https://arxiv.org/pdf/2110.02369.pdf)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides the full title of the associated research paper."
+    },
+    {
+      "field": "conference",
+      "value": "ICLR 2022",
+      "normalized_value": "ICLR 2022",
+      "evidence": "ICLR 2022 paper",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Indicates the publication venue and year for scientific context."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2110.02369.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2110.02369.pdf",
+      "evidence": "https://arxiv.org/pdf/2110.02369.pdf",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Direct link to access the paper."
+    },
+    {
+      "field": "task",
+      "value": "Entity Linking",
+      "normalized_value": "Entity Linking",
+      "evidence": "Entitly Linking as Question Answering",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Defines the core NLP task addressed by the artifact."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "python=3.8",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Specifies the primary implementation language."
+    },
+    {
+      "field": "python_version",
+      "value": "3.8",
+      "normalized_value": "3.8",
+      "evidence": "python=3.8",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Critical for environment setup and dependency resolution."
+    },
+    {
+      "field": "dependencies",
+      "value": "requirements.txt, faiss-gpu, cudatoolkit=11.0",
+      "normalized_value": "requirements.txt, faiss-gpu, cudatoolkit=11.0",
+      "evidence": "pip install -r requirements.txt\nconda install -c pytorch faiss-gpu cudatoolkit=11.0",
+      "evidence_location": "10-11",
+      "confidence": "high",
+      "reason": "Lists required software packages for installation."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "4 A100 GPUs (retriever training), 2 A100 GPUs (reader training)",
+      "normalized_value": "4 A100 GPUs (retriever training), 2 A100 GPUs (reader training)",
+      "evidence": "It takes 10 hours on 4 A100 GPUs to finish the retriever training experiments.\nIt takes about 6 hours on 2 A100 GPUs to finish the reader training experiment.",
+      "evidence_location": "44, 76",
+      "confidence": "high",
+      "reason": "Specifies GPU hardware needed to reproduce training experiments."
+    },
+    {
+      "field": "preprocessing_command",
+      "value": "python preprocess_data.py \\ --raw_dir /raw_aida/  --out_aida_dir /retriever_input/  \\ --raw_kb_path /raw_kb/[kilt wikipedia file name] --out_kb_path /kb/entities_kilt.json \\ --max_ent_len 128  --instance_length 32 --stride 16 --pos_prop 1 --title_map_dir /raw_aida/",
+      "normalized_value": "python preprocess_data.py --raw_dir /raw_aida/ --out_aida_dir /retriever_input/ --raw_kb_path /raw_kb/[kilt wikipedia file name] --out_kb_path /kb/entities_kilt.json --max_ent_len 128 --instance_length 32 --stride 16 --pos_prop 1 --title_map_dir /raw_aida/",
+      "evidence": "python preprocess_data.py \\\n--raw_dir /raw_aida/  --out_aida_dir /retriever_input/  \\\n--raw_kb_path /raw_kb/[kilt wikipedia file name] --out_kb_path /kb/entities_kilt.json \\\n--max_ent_len 128  --instance_length 32 --stride 16 --pos_prop 1 --title_map_dir /raw_aida/\n",
+      "evidence_location": "24-29",
+      "confidence": "high",
+      "reason": "Command to prepare raw datasets and knowledge bases for training."
+    },
+    {
+      "field": "retriever_training_command",
+      "value": "python run_retriever.py \\ --model /model_retriever/retriever.pt  --data_dir /retriever_input/   --kb_dir /kb/ \\ --k 100 --num_cands 64  --pretrained_path /blink/BLINK/models/ --gpus 0,1,2,3  --max_len 42   \\ --mention_bsz 4096 --entity_bsz 2048  --epochs 4  --B 4  --lr 2e-6  --rands_ratio 0.9   \\ --logging_step 100 --warmup_proportion 0.2  --out_dir /reader_input/   --gradient_accumulation_steps 2  --type_loss sum_log_nce   \\ --cands_embeds_path /candidates_embeds/candidate_embeds.npy --blink  --add_topic",
+      "normalized_value": "python run_retriever.py --model /model_retriever/retriever.pt --data_dir /retriever_input/ --kb_dir /kb/ --k 100 --num_cands 64 --pretrained_path /blink/BLINK/models/ --gpus 0,1,2,3 --max_len 42 --mention_bsz 4096 --entity_bsz 2048 --epochs 4 --B 4 --lr 2e-6 --rands_ratio 0.9 --logging_step 100 --warmup_proportion 0.2 --out_dir /reader_input/ --gradient_accumulation_steps 2 --type_loss sum_log_nce --cands_embeds_path /candidates_embeds/candidate_embeds.npy --blink --add_topic",
+      "evidence": "python run_retriever.py \\\n--model /model_retriever/retriever.pt  --data_dir /retriever_input/   --kb_dir /kb/ \\\n--k 100 --num_cands 64  --pretrained_path /blink/BLINK/models/ --gpus 0,1,2,3  --max_len 42   \\\n--mention_bsz 4096 --entity_bsz 2048  --epochs 4  --B 4  --lr 2e-6  --rands_ratio 0.9   \\\n--logging_step 100 --warmup_proportion 0.2  --out_dir /reader_input/   \n--gradient_accumulation_steps 2  --type_loss sum_log_nce   \\\n--cands_embeds_path /candidates_embeds/candidate_embeds.npy \\\n--blink  --add_topic\n",
+      "evidence_location": "35-43",
+      "confidence": "high",
+      "reason": "Full command to train the retriever component with all hyperparameters."
+    },
+    {
+      "field": "reader_training_command",
+      "value": "python run_reader.py  \\ --model /model_reader/reader.pt   --data_dir /reader_input/  \\ --C 64  --B 2  --L 180  --C_val 100  --gpus 0,1   --val_bsz 32 \\ --gradient_accumulation_steps 2  --warmup_proportion 0.06  \\ --epochs 4  --lr 1e-5 --thresd  0.05  --logging_steps 100  \\ --k 3  --stride 16 --max_passage_len 32  --filter_span  \\ --type_encoder squad2_electra_large  \\ --type_span_loss sum_log  --type_rank_loss sum_log  \\ --do_rerank  --add_topic  --results_dir /reader_results/  --kb_dir /kb/",
+      "normalized_value": "python run_reader.py --model /model_reader/reader.pt --data_dir /reader_input/ --C 64 --B 2 --L 180 --C_val 100 --gpus 0,1 --val_bsz 32 --gradient_accumulation_steps 2 --warmup_proportion 0.06 --epochs 4 --lr 1e-5 --thresd 0.05 --logging_steps 100 --k 3 --stride 16 --max_passage_len 32 --filter_span --type_encoder squad2_electra_large --type_span_loss sum_log --type_rank_loss sum_log --do_rerank --add_topic --results_dir /reader_results/ --kb_dir /kb/",
+      "evidence": "python run_reader.py  \\\n--model /model_reader/reader.pt   --data_dir /reader_input/  \\\n--C 64  --B 2  --L 180  --C_val 100  --gpus 0,1   --val_bsz 32 \\\n--gradient_accumulation_steps 2  --warmup_proportion 0.06  \\\n--epochs 4  --lr 1e-5 --thresd  0.05  --logging_steps 100  \\\n--k 3  --stride 16 --max_passage_len 32  --filter_span  \\\n--type_encoder squad2_electra_large  \\\n--type_span_loss sum_log  --type_rank_loss sum_log  \\\n--do_rerank  --add_topic  --results_dir /reader_results/  --kb_dir /kb/\n",
+      "evidence_location": "65-75",
+      "confidence": "high",
+      "reason": "Full command to train the reader component with all hyperparameters."
+    },
+    {
+      "field": "gerbil_server_command",
+      "value": "python gerbil_experiments/server.py  \\ --gpus 0,1,2,3  --log_path  /logs/log.txt --blink_dir //blink_model/  \\ --retriever_path /model_retriever/retriever.pt   \\ --cands_embeds_path /candidates_embeds/candidate_embeds.npy   \\ --ents_path /kb/entities_kilt.json  \\ --reader_path /model_reader/reader.pt   \\ --add_topic  --do_rerank  --bsz_retriever 8192  ",
+      "normalized_value": "python gerbil_experiments/server.py --gpus 0,1,2,3 --log_path /logs/log.txt --blink_dir //blink_model/ --retriever_path /model_retriever/retriever.pt --cands_embeds_path /candidates_embeds/candidate_embeds.npy --ents_path /kb/entities_kilt.json --reader_path /model_reader/reader.pt --add_topic --do_rerank --bsz_retriever 8192",
+      "evidence": "python gerbil_experiments/server.py  \\\n--gpus 0,1,2,3  --log_path  /logs/log.txt --blink_dir //blink_model/  \\\n--retriever_path /model_retriever/retriever.pt   \\\n--cands_embeds_path /candidates_embeds/candidate_embeds.npy   \\\n--ents_path /kb/entities_kilt.json  \\\n--reader_path /model_reader/reader.pt   \\\n--add_topic  --do_rerank  --bsz_retriever 8192  \n",
+      "evidence_location": "105-113",
+      "confidence": "high",
+      "reason": "Command to run the model within the GERBIL evaluation framework."
+    },
+    {
+      "field": "evaluation_method",
+      "value": "Set --epochs to 0 for evaluation",
+      "normalized_value": "Set --epochs to 0 for evaluation",
+      "evidence": "Use the above training scripts and set `--epochs` to be 0 for evaluation.",
+      "evidence_location": "47, 80",
+      "confidence": "high",
+      "reason": "Explains how to switch from training to evaluation mode."
+    },
+    {
+      "field": "metrics_defined",
+      "value": "Recall@k, passage-level Recall@k, LRAP, F1, Recall, Precision",
+      "normalized_value": "Recall@k, passage-level Recall@k, LRAP, F1, Recall, Precision",
+      "evidence": "**Recall@k** is the percentage of total number of positive entities retrieved by the topk candidates with respect to the total number of gold entities for all the query passages. \\\n**passage-level Recall@k** is the percentage of the number of passages with all the gold entities retrieved in the topk candidates with respect to the number of passages. \\\n**LRAP** is [Label ranking average precision ](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.label_ranking_average_precision_score.html) which measures the multi-label ranking performance.",
+      "evidence_location": "54-56",
+      "confidence": "high",
+      "reason": "Defines the evaluation metrics used to report results."
+    },
+    {
+      "field": "retriever_results",
+      "value": "val Recall@100: 98.17%, test Recall@100: 96.62%, val LRAP: 83.98%, test LRAP: 82.65%, val passage-level Recall@100: 97.03%, test passage-level Recall@100: 94.59%",
+      "normalized_value": "val Recall@100: 98.17%, test Recall@100: 96.62%, val LRAP: 83.98%, test LRAP: 82.65%, val passage-level Recall@100: 97.03%, test passage-level Recall@100: 94.59%",
+      "evidence": "| val Recall@100 | test Recall@100 | val LRAP | test LRAP | val passage-level Recall@100 | test passage-level Recall@100|\n|:----------------:|:-----------------:|:----------:|:-----------:|:---------------------:|:---------------------:|\n|     98.17%     |     96.62%      |  83.98%  |  82.65%   |      97.03%         |        94.59%       |",
+      "evidence_location": "49-51",
+      "confidence": "high",
+      "reason": "Reports quantitative performance of the retriever module."
+    },
+    {
+      "field": "reader_results",
+      "value": "val F1: 87.32%, test F1: 84.4%, val Recall: 90.23%, test Recall: 87.0%, val Precision: 84.6%, test Precision: 81.96%",
+      "normalized_value": "val F1: 87.32%, test F1: 84.4%, val Recall: 90.23%, test Recall: 87.0%, val Precision: 84.6%, test Precision: 81.96%",
+      "evidence": "|   val F1  |  test F1  |  val Recall |  test Recall |  val Precision  |  test Precision  |\n|:-----------:|:-----------:|:-------------:|:--------------:|:-----------------:|:------------------:|\n|   87.32%  |   84.4%  |   90.23%    |    87.0%    |     84.6%      |      81.96%      |",
+      "evidence_location": "84-86",
+      "confidence": "high",
+      "reason": "Reports quantitative performance of the reader module."
+    },
+    {
+      "field": "gerbil_results",
+      "value": "AIDA testb: 85.82%, MSNBC: 72.09%, Der: 52.85%, K50: 64.46%, R128: 54.05%, R500: 41.93%, OKE15: 61.10%, OKE16: 51.34%, AVG: 60.46%",
+      "normalized_value": "AIDA testb: 85.82%, MSNBC: 72.09%, Der: 52.85%, K50: 64.46%, R128: 54.05%, R500: 41.93%, OKE15: 61.10%, OKE16: 51.34%, AVG: 60.46%",
+      "evidence": "| AIDA testb| MSNBC| Der|K50|R128|R500|OKE15|OKE16|AVG|\n|:---------:|:--------:|:----:|:---:|:----:|:----:|:-----:|:-----:|:----:|\n|85.82%|72.09%|52.85%|64.46%|54.05%|41.93%|61.10%|51.34%|60.46%|",
+      "evidence_location": "125-127",
+      "confidence": "high",
+      "reason": "Reports end-to-end system performance across multiple standard benchmarks."
+    },
+    {
+      "field": "datasets_evaluated",
+      "value": "AIDA CoNLL, KILT wikipedia knowledge base, MSNBC, Der, K50, R128, R500, OKE15, OKE16",
+      "normalized_value": "AIDA CoNLL, KILT wikipedia knowledge base, MSNBC, Der, K50, R128, R500, OKE15, OKE16",
+      "evidence": "Download AIDA CoNLL datasets [here]...\nDownload KILT wikipedia knowledge base [here]...\n| AIDA testb| MSNBC| Der|K50|R128|R500|OKE15|OKE16|AVG|",
+      "evidence_location": "18, 20, 125",
+      "confidence": "high",
+      "reason": "Lists the specific datasets and benchmarks used for training and evaluation."
+    },
+    {
+      "field": "preprocessed_data_url",
+      "value": "https://drive.google.com/drive/folders/1DQvfjKOuOoUE3YcYrg2GIvODaOEZXMdH?usp=sharing",
+      "normalized_value": "https://drive.google.com/drive/folders/1DQvfjKOuOoUE3YcYrg2GIvODaOEZXMdH?usp=sharing",
+      "evidence": "All the preprocessed data can be downloaded [here](https://drive.google.com/drive/folders/1DQvfjKOuOoUE3YcYrg2GIvODaOEZXMdH?usp=sharing)",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Provides direct access to preprocessed datasets to skip manual preprocessing."
+    },
+    {
+      "field": "trained_retriever_url",
+      "value": "https://drive.google.com/file/d/1bHS5rxGbHJ5omQ-t8rjQogw7QJq-qYFO/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1bHS5rxGbHJ5omQ-t8rjQogw7QJq-qYFO/view?usp=sharing",
+      "evidence": "Download our trained retriever [here](https://drive.google.com/file/d/1bHS5rxGbHJ5omQ-t8rjQogw7QJq-qYFO/view?usp=sharing)",
+      "evidence_location": "46",
+      "confidence": "high",
+      "reason": "Provides a checkpoint for the trained retriever model."
+    },
+    {
+      "field": "cached_entity_embeddings_url",
+      "value": "https://drive.google.com/file/d/1znMYd5HS80XpLpvpp_dFkQMbJiaFsQIn/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1znMYd5HS80XpLpvpp_dFkQMbJiaFsQIn/view?usp=sharing",
+      "evidence": "our cached entity embeddings [here](https://drive.google.com/file/d/1znMYd5HS80XpLpvpp_dFkQMbJiaFsQIn/view?usp=sharing)",
+      "evidence_location": "46",
+      "confidence": "high",
+      "reason": "Provides precomputed entity embeddings to speed up retrieval."
+    },
+    {
+      "field": "trained_reader_url",
+      "value": "https://drive.google.com/file/d/1A4I1fJZKxmROIE1fd0mdXN6b1emP_xt4/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1A4I1fJZKxmROIE1fd0mdXN6b1emP_xt4/view?usp=sharing",
+      "evidence": "download our trained reader [here](https://drive.google.com/file/d/1A4I1fJZKxmROIE1fd0mdXN6b1emP_xt4/view?usp=sharing)",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Provides a checkpoint for the trained reader model."
+    },
+    {
+      "field": "reader_input_data_url",
+      "value": "https://drive.google.com/drive/folders/1xfEgXCREe6pbSmAsnidsMuVYMK_mlOao?usp=sharing",
+      "normalized_value": "https://drive.google.com/drive/folders/1xfEgXCREe6pbSmAsnidsMuVYMK_mlOao?usp=sharing",
+      "evidence": "download our reader input data [here](https://drive.google.com/drive/folders/1xfEgXCREe6pbSmAsnidsMuVYMK_mlOao?usp=sharing)",
+      "evidence_location": "79",
+      "confidence": "high",
+      "reason": "Provides pre-generated reader input data to skip retriever evaluation."
+    },
+    {
+      "field": "gerbil_snapshot_url",
+      "value": "https://drive.google.com/file/d/1Sp-G9631ormzIYfenCDsaWgiBPVBkF6F/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1Sp-G9631ormzIYfenCDsaWgiBPVBkF6F/view?usp=sharing",
+      "evidence": "Download our snapshot of GERBIL repo [here](https://drive.google.com/file/d/1Sp-G9631ormzIYfenCDsaWgiBPVBkF6F/view?usp=sharing)",
+      "evidence_location": "90",
+      "confidence": "high",
+      "reason": "Provides a compatible version of the GERBIL evaluation framework."
+    },
+    {
+      "field": "gerbil_evaluation_reference",
+      "value": "https://github.com/dalab/end2end_neural_el",
+      "normalized_value": "https://github.com/dalab/end2end_neural_el",
+      "evidence": "Our GERBIL evaluation steps follow [here](https://github.com/dalab/end2end_neural_el)",
+      "evidence_location": "89",
+      "confidence": "high",
+      "reason": "References the official evaluation pipeline used for benchmarking."
+    }
+  ]
+}

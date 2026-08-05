@@ -1,0 +1,175 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "OpenWeedLocator",
+      "normalized_value": "OpenWeedLocator",
+      "evidence": "# OpenWeedLocator",
+      "evidence_location": "line 5, title",
+      "confidence": "high",
+      "reason": "Identifies the artifact."
+    },
+    {
+      "field": "artifact_description",
+      "value": "an opensource hardware and software weed detector that uses entirely off-the-shelf componentry, very simple green-detection algorithms (with capacity to upgrade to in-crop detection) and 3D printable parts.",
+      "normalized_value": "an opensource hardware and software weed detector that uses entirely off-the-shelf componentry, very simple green-detection algorithms (with capacity to upgrade to in-crop detection) and 3D printable parts.",
+      "evidence": "Welcome to the OpenWeedLocator (OWL) project, an opensource hardware and software weed detector that uses\nentirely off-the-shelf componentry, very simple green-detection algorithms (with capacity to upgrade to\nin-crop detection) and 3D printable parts.",
+      "evidence_location": "lines 7-9, introduction",
+      "confidence": "high",
+      "reason": "States the artifact's form, purpose, component sourcing, algorithms, and fabrication approach."
+    },
+    {
+      "field": "primary_function",
+      "value": "OWL integrates weed detection on a Raspberry Pi with a relay control board or custom driver board, in a custom designed case so you can attach any 12V solenoid, relay, lightbulb or device for low-cost, simple and open-source site-specific weed control.",
+      "normalized_value": "OWL integrates weed detection on a Raspberry Pi with a relay control board or custom driver board, in a custom designed case so you can attach any 12V solenoid, relay, lightbulb or device for low-cost, simple and open-source site-specific weed control.",
+      "evidence": "OWL integrates weed detection on a Raspberry Pi with a relay\ncontrol board or custom driver board, in a custom designed case so you can attach any 12V solenoid, relay, lightbulb or \ndevice for low-cost, simple and open-source site-specific weed control.",
+      "evidence_location": "lines 9-11, introduction",
+      "confidence": "high",
+      "reason": "Describes how detection connects to actuators and the intended weed-control application."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/geezacoleman/OpenWeedLocator",
+      "normalized_value": "https://github.com/geezacoleman/OpenWeedLocator",
+      "evidence": "(owl) owl@raspberrypi:~ $ git clone https://github.com/geezacoleman/OpenWeedLocator        # download the new software",
+      "evidence_location": "line 933, Quick Method",
+      "confidence": "high",
+      "reason": "Provides the source repository needed to obtain the software."
+    },
+    {
+      "field": "supported_single_board_computers",
+      "value": "Currently, only Raspberry Pi 5, 4 and 3B+ work with the OWL and have been tested in full.",
+      "normalized_value": "Currently, only Raspberry Pi 5, 4 and 3B+ work with the OWL and have been tested in full.",
+      "evidence": "Currently, only Raspberry Pi 5, 4 and 3B+ work with the OWL and have been tested in full. Early tests (alpha) have been\nmade with the LibreComputer LePotato.",
+      "evidence_location": "lines 811-813, SBC Options",
+      "confidence": "high",
+      "reason": "Defines the currently tested hardware platforms and an explicitly identified alpha platform."
+    },
+    {
+      "field": "camera_support",
+      "value": "support for both picamera and picamera2",
+      "normalized_value": "support for both picamera and picamera2",
+      "evidence": "* support for both picamera and picamera2",
+      "evidence_location": "line 26, News",
+      "confidence": "high",
+      "reason": "Identifies supported camera software interfaces."
+    },
+    {
+      "field": "installation_environment",
+      "value": "Suitable for the Raspberry Pi 5 and Bookworm Raspberry Pi OS.",
+      "normalized_value": "Suitable for the Raspberry Pi 5 and Bookworm Raspberry Pi OS.",
+      "evidence": "**IMPORTANT**: *Suitable for the Raspberry Pi 5 and Bookworm Raspberry Pi OS.*",
+      "evidence_location": "line 1055, Detailed Method",
+      "confidence": "high",
+      "reason": "Specifies the environment for the detailed installation procedure."
+    },
+    {
+      "field": "quick_installation",
+      "value": "git clone https://github.com/geezacoleman/OpenWeedLocator owl\nbash owl/owl_setup.sh",
+      "normalized_value": "git clone https://github.com/geezacoleman/OpenWeedLocator owl bash owl/owl_setup.sh",
+      "evidence": "To start, clone the Github repository:\n```commandline\ngit clone https://github.com/geezacoleman/OpenWeedLocator owl\n```\nWith the repository cloned into the 'owl' folder, we can now run the bash script `owl_setup.sh`. This will take some time\nto complete\n\n```commandline\nbash owl/owl_setup.sh\n```",
+      "evidence_location": "lines 1121-1130, Two-line Install",
+      "confidence": "high",
+      "reason": "Provides the shortest documented installation procedure."
+    },
+    {
+      "field": "python_dependencies",
+      "value": "OpenCV (should already be in 'owl' virtual environment from Step 1)\nnumpy\nimutils\ngpiozero\npandas\nRPi.GPIO\ntqdm\nblessed (for command line visualisation)\nthreading, multiprocessing, collections, queue, time, os (though these are included as standard Python modules).",
+      "normalized_value": "OpenCV (should already be in 'owl' virtual environment from Step 1) numpy imutils gpiozero pandas RPi.GPIO tqdm blessed (for command line visualisation) threading, multiprocessing, collections, queue, time, os (though these are included as standard Python modules).",
+      "evidence": "These include:\n\n* OpenCV (should already be in 'owl' virtual environment from Step 1)\n* numpy\n* imutils\n* gpiozero\n* pandas\n* RPi.GPIO\n* tqdm\n* blessed (for command line visualisation)\n* threading, multiprocessing, collections, queue, time, os (though these are included as standard Python modules).",
+      "evidence_location": "lines 1275-1288, Installing the OWL Python dependencies",
+      "confidence": "high",
+      "reason": "Lists the packages and standard modules required by the software."
+    },
+    {
+      "field": "virtual_environment_setup",
+      "value": "mkvirtualenv --system-site-packages -p python owl",
+      "normalized_value": "mkvirtualenv --system-site-packages -p python owl",
+      "evidence": "To make the `owl` environment, run the following:\n```commandline\nmkvirtualenv --system-site-packages -p python owl\n```",
+      "evidence_location": "lines 1205-1211, Set up the virtual environment",
+      "confidence": "high",
+      "reason": "Provides the documented command for creating the required Python environment."
+    },
+    {
+      "field": "runtime_command",
+      "value": "python owl.py --show-display",
+      "normalized_value": "python owl.py --show-display",
+      "evidence": "```\n> python owl.py --show-display\n```",
+      "evidence_location": "lines 1938-1940, Non-Raspberry Pi Installation",
+      "confidence": "high",
+      "reason": "Shows how to run the detector with display output."
+    },
+    {
+      "field": "detection_algorithms",
+      "value": "Any of: `gog`,`exg`,`exgr`,`exgs`,`exhu`,`hsv`,`exhsv`",
+      "normalized_value": "Any of: `gog`,`exg`,`exgr`,`exgs`,`exhu`,`hsv`,`exhsv`",
+      "evidence": "|        `algorithm`        | Any of: `gog`,`exg`,`exgr`,`exgs`,`exhu`,`hsv`,`exhsv` |                                        Changes the selected algorithm. Most sensitive: 'exg', least sensitive/most precise (least false positives): 'exgr', 'exhu', 'hsv', 'exhsv'.                                         |",
+      "evidence_location": "line 1618, Parameter definitions",
+      "confidence": "high",
+      "reason": "Enumerates the configurable detection algorithms."
+    },
+    {
+      "field": "image_processing_method",
+      "value": "computer vision algorithms such as Excess Green `ExG = 2 * G - R - B` or thresholding type approaches on the HSV colourspace can be used to differentiate green locations from the background.",
+      "normalized_value": "computer vision algorithms such as Excess Green `ExG = 2 * G - R - B` or thresholding type approaches on the HSV colourspace can be used to differentiate green locations from the background.",
+      "evidence": "So how does OWL actually detect the weeds and trigger the relay control board? It all starts by taking in the colour image from the camera using OpenCV and splitting it into its component channels: Red (R), Green (G) and Blue (B) (RGB) or loading and converting into the hue, saturation and value (HSV) colourspace. Following that, computer vision algorithms such as Excess Green `ExG = 2 * G - R - B` or thresholding type approaches on the HSV colourspace can be used to differentiate green locations from the background.",
+      "evidence_location": "lines 1951-1952, Image Processing",
+      "confidence": "high",
+      "reason": "Explains the concrete image-processing approach and formula used for green detection."
+    },
+    {
+      "field": "evaluation_result",
+      "value": "The current Raspberry Pi HQ Camera + latest software combination provided a recall of 74.8% at 5 km/h and 50.5 % at 30 km/h. Recall of up to 95.7% at 5 km/h was achieved by the global shutter Arducam AR0234.",
+      "normalized_value": "The current Raspberry Pi HQ Camera + latest software combination provided a recall of 74.8% at 5 km/h and 50.5 % at 30 km/h. Recall of up to 95.7% at 5 km/h was achieved by the global shutter Arducam AR0234.",
+      "evidence": "The current Raspberry Pi HQ Camera + latest software combination provided a recall of 74.8% at 5 km/h and 50.5 % at 30 km/h.\nRecall of up to 95.7% at 5 km/h was achieved by the global shutter Arducam AR0234.",
+      "evidence_location": "lines 55-56, Official Publications",
+      "confidence": "high",
+      "reason": "Provides concrete reported detection performance under specified speed and camera conditions."
+    },
+    {
+      "field": "citation",
+      "value": "@article{Coleman2022,\nauthor = {Coleman, Guy and Salter, William and Walsh, Michael},\ndoi = {10.1038/s41598-021-03858-9},\nissn = {2045-2322},\njournal = {Scientific Reports},\nnumber = {1},\npages = {170},\ntitle = {{OpenWeedLocator (OWL): an open-source, low-cost device for fallow weed detection}},\nurl = {https://doi.org/10.1038/s41598-021-03858-9},\nvolume = {12},\nyear = {2022}\n}",
+      "normalized_value": "@article{Coleman2022, author = {Coleman, Guy and Salter, William and Walsh, Michael}, doi = {10.1038/s41598-021-03858-9}, issn = {2045-2322}, journal = {Scientific Reports}, number = {1}, pages = {170}, title = {{OpenWeedLocator (OWL): an open-source, low-cost device for fallow weed detection}}, url = {https://doi.org/10.1038/s41598-021-03858-9}, volume = {12}, year = {2022} }",
+      "evidence": "```\n@article{Coleman2022,\nauthor = {Coleman, Guy and Salter, William and Walsh, Michael},\ndoi = {10.1038/s41598-021-03858-9},\nissn = {2045-2322},\njournal = {Scientific Reports},\nnumber = {1},\npages = {170},\ntitle = {{OpenWeedLocator (OWL): an open-source, low-cost device for fallow weed detection}},\nurl = {https://doi.org/10.1038/s41598-021-03858-9},\nvolume = {12},\nyear = {2022}\n}\n```",
+      "evidence_location": "lines 2154-2168, Citing OWL",
+      "confidence": "high",
+      "reason": "Provides the complete bibliographic record for citing the artifact."
+    },
+    {
+      "field": "authors_and_affiliation",
+      "value": "Guy Coleman and William Salter at the University of Sydney, Precision Weed Control Lab",
+      "normalized_value": "Guy Coleman and William Salter at the University of Sydney, Precision Weed Control Lab",
+      "evidence": "This project has been developed by Guy Coleman and William Salter at the University of Sydney, Precision Weed Control\nLab.",
+      "evidence_location": "lines 2178-2179, Acknowledgements",
+      "confidence": "high",
+      "reason": "Identifies the documented developers and organizational affiliation."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "```\nMIT License\n\nCopyright (c) 2020 Guy Coleman",
+      "evidence_location": "lines 2196-2199, Disclaimer and License",
+      "confidence": "high",
+      "reason": "States the legal license governing reuse of the software and associated documentation."
+    },
+    {
+      "field": "reproduction_hardware",
+      "value": "Raspberry Pi 5 4GB (or Pi 4 or 3B+)",
+      "normalized_value": "Raspberry Pi 5 4GB (or Pi 4 or 3B+)",
+      "evidence": "| Raspberry Pi 5 4GB (or Pi 4 or 3B+)                                           | 1                 | [Link](https://core-electronics.com.au/raspberry-pi-5-model-b-4gb.html)",
+      "evidence_location": "line 205, Original OWL Hardware List",
+      "confidence": "high",
+      "reason": "Names the primary computing hardware required for an OWL detection unit."
+    },
+    {
+      "field": "configuration_file",
+      "value": "config/config.ini",
+      "normalized_value": "config/config.ini",
+      "evidence": "* implementation of a `config/config.ini` approach to setting detection parameters",
+      "evidence_location": "line 27, News",
+      "confidence": "high",
+      "reason": "Identifies the configuration path used to set detection parameters."
+    }
+  ]
+}

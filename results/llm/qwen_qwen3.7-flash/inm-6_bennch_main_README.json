@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "beNNch",
+      "normalized_value": "beNNch",
+      "evidence": "# beNNch",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Explicitly stated as the project title in the main heading."
+    },
+    {
+      "field": "artifact_description",
+      "value": "Unified execution, collection, analysis and comparison of neural network simulation benchmarks.",
+      "normalized_value": "Unified execution, collection, analysis and comparison of neural network simulation benchmarks.",
+      "evidence": "beNNch - Unified execution, collection, analysis and\ncomparison of neural network simulation benchmarks.",
+      "evidence_location": "2-3",
+      "confidence": "high",
+      "reason": "Directly defines the tool's purpose and scope in the repository header comment."
+    },
+    {
+      "field": "license",
+      "value": "GPL-3.0-or-later",
+      "normalized_value": "GPL-3.0-or-later",
+      "evidence": "SPDX-License-Identifier: GPL-3.0-or-later",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Standard SPDX identifier explicitly declares the open-source license."
+    },
+    {
+      "field": "maintainer_organization",
+      "value": "Forschungszentrum Juelich GmbH, INM-6",
+      "normalized_value": "Forschungszentrum Juelich GmbH, INM-6",
+      "evidence": "Copyright (C) 2021 Forschungszentrum Juelich GmbH, INM-6",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Identifies the institutional owners and maintainers of the software."
+    },
+    {
+      "field": "citation_doi",
+      "value": "10.3389/fninf.2022.837549",
+      "normalized_value": "10.3389/fninf.2022.837549",
+      "evidence": "doi: [10.3389/fninf.2022.837549](https://doi.org/10.3389/fninf.2022.837549)",
+      "evidence_location": "28",
+      "confidence": "high",
+      "reason": "Provides the direct Digital Object Identifier for the peer-reviewed publication describing the framework."
+    },
+    {
+      "field": "project_website",
+      "value": "https://inm-6.github.io/beNNch",
+      "normalized_value": "https://inm-6.github.io/beNNch",
+      "evidence": "See also the accompanying [GitHub Page](https://inm-6.github.io/beNNch) for further `beNNch` results in flip-book format.",
+      "evidence_location": "40",
+      "confidence": "high",
+      "reason": "Links to the official project documentation and results gallery."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python 3.X",
+      "normalized_value": "Python 3.X",
+      "evidence": "- Python 3.X",
+      "evidence_location": "100",
+      "confidence": "high",
+      "reason": "Explicitly listed as a required software dependency for running the framework."
+    },
+    {
+      "field": "software_dependencies",
+      "value": "git annex, JUBE (version 2.4.2 or later), Builder",
+      "normalized_value": "git annex, JUBE (version 2.4.2 or later), Builder",
+      "evidence": "- [git annex](https://git-annex.branchable.com)\n  + can e.g. be installed via \n```bash\nwget 'http://downloads.kitenet.net/git-annex/linux/current/git-annex-standalone-amd64.tar.gz'\ntar -xzf git-annex-standalone-amd64.tar.gz\nexport PATH=$PATH:<install_path>/git-annex.linux\n```\n- [JUBE](https://www.fz-juelich.de/ias/jsc/EN/Expertise/Support/Software/JUBE/_node.html)  \n_Note that  JUBE version 2.4.2 or later is necessary_\n\n\n- [Builder](https://github.com/INM-6/Builder)",
+      "evidence_location": "86-98",
+      "confidence": "high",
+      "reason": "Enumerates the external tools and libraries required to install and operate the benchmarking workflow."
+    },
+    {
+      "field": "task_domain",
+      "value": "Performance benchmarking of neuronal network simulations",
+      "normalized_value": "Performance benchmarking of neuronal network simulations",
+      "evidence": "Computational efficiency is essential to simulate complex neuronal networks and study long-term effects such as learning.\nThe scaling performance of neuronal network simulators on high-performance computing systems can be assessed with benchmark simulations.",
+      "evidence_location": "21-22",
+      "confidence": "high",
+      "reason": "Clearly establishes the scientific context and primary application area of the artifact."
+    },
+    {
+      "field": "supported_models",
+      "value": "Multi-Area Model, Microcircuit, HPC Benchmark",
+      "normalized_value": "Multi-Area Model, Microcircuit, HPC Benchmark",
+      "evidence": "- **Multi-Area Model**\n\n  - `multi-area-model_2` for usage with NEST 2.\n  - `multi-area-model_3` for usage with NEST 3.\n\n- **Microcircuit**\n\n  - `microcircuit`\n\n- **HPC Benchmark**\n\n  - `hpc_benchmark_2` for usage with NEST 2.\n  - `hpc_benchmark_3` for usage with NEST 3.0.\n  - `hpc_benchmark_31` for usage with NEST 3.1.",
+      "evidence_location": "106-119",
+      "confidence": "high",
+      "reason": "Lists the specific neuronal network models that have pre-configured implementations and benchmark scripts in the repository."
+    },
+    {
+      "field": "installation_commands",
+      "value": "git submodule init\ngit submodule update --remote\npip install -e plot --user",
+      "normalized_value": "git submodule init git submodule update --remote pip install -e plot --user",
+      "evidence": "```bash\ngit submodule init\n```\n```bash\ngit submodule update --remote\n```\n\n- Install benchplot as Python module:\n\n```bash\npip install -e plot --user\n```",
+      "evidence_location": "69-82",
+      "confidence": "high",
+      "reason": "Provides the exact shell commands needed to fetch submodules and install the required Python plotting module."
+    },
+    {
+      "field": "usage_command_run_benchmark",
+      "value": "jube run benchmarks/<model>.yaml",
+      "normalized_value": "jube run benchmarks/<model>.yaml",
+      "evidence": "```bash\njube run benchmarks/<model>.yaml\n```",
+      "evidence_location": "161-163",
+      "confidence": "high",
+      "reason": "Specifies the precise command to execute a configured benchmark simulation using the JUBE environment."
+    },
+    {
+      "field": "usage_command_analyze_benchmark",
+      "value": "python ../analysis/analysis.py <id>",
+      "normalized_value": "python ../analysis/analysis.py <id>",
+      "evidence": "```bash\npython ../analysis/analysis.py <id>\n```",
+      "evidence_location": "186-188",
+      "confidence": "high",
+      "reason": "Command used to process raw benchmark outputs and generate structured analysis results."
+    },
+    {
+      "field": "metrics_measured",
+      "value": "wall-clock time, real-time factor, strong-scaling performance",
+      "normalized_value": "wall-clock time, real-time factor, strong-scaling performance",
+      "evidence": "The left graph shows the absolute wall-clock time measured with Python-level timers for both network construction and state propagation.\nError bars indicate variability across three simulation repeats with different random seeds.\nThe top right graph displays the real-time factor defined as wall-clock time normalized by the model time.",
+      "evidence_location": "33-35",
+      "confidence": "high",
+      "reason": "Explicitly identifies the quantitative performance metrics captured and visualized by the framework."
+    },
+    {
+      "field": "hardware_environment",
+      "value": "JURECA-DC, high-performance computing systems",
+      "normalized_value": "JURECA-DC, high-performance computing systems",
+      "evidence": "Strong-scaling performance of the [multi-area model](https://github.com/INM-6/multi-area-model) simulated with the neuronal network simulator [NEST](https://www.nest-simulator.org) on JURECA-DC.**",
+      "evidence_location": "32",
+      "confidence": "medium",
+      "reason": "Mentions a specific HPC cluster (JURECA-DC) as a documented target environment for running the benchmarks."
+    }
+  ]
+}

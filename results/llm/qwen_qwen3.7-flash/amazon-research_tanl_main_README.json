@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "TANL",
+      "normalized_value": "TANL",
+      "evidence": "# TANL: Structured Prediction as Translation between Augmented Natural Languages",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly identifies the project name in the repository title."
+    },
+    {
+      "field": "artifact_description",
+      "value": "Structured Prediction as Translation between Augmented Natural Languages",
+      "normalized_value": "Structured Prediction as Translation between Augmented Natural Languages",
+      "evidence": "# TANL: Structured Prediction as Translation between Augmented Natural Languages",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Describes the core methodology and purpose of the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "http://arxiv.org/abs/2101.05779",
+      "normalized_value": "http://arxiv.org/abs/2101.05779",
+      "evidence": "Code for the paper \"[Structured Prediction as Translation between Augmented Natural Languages](http://arxiv.org/abs/2101.05779)\" (ICLR 2021)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated peer-reviewed publication."
+    },
+    {
+      "field": "conference",
+      "value": "ICLR 2021",
+      "normalized_value": "ICLR 2021",
+      "evidence": "Code for the paper \"[Structured Prediction as Translation between Augmented Natural Languages](http://arxiv.org/abs/2101.05779)\" (ICLR 2021)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Indicates the publication venue and year for scientific context."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{tanl,\n    title={Structured Prediction as Translation between Augmented Natural Languages},\n    author={Giovanni Paolini and Ben Athiwaratkun and Jason Krone and Jie Ma and Alessandro Achille and Rishita Anubhai and Cicero Nogueira dos Santos and Bing Xiang and Stefano Soatto},\n    booktitle={9th International Conference on Learning Representations, {ICLR} 2021},\n    year={2021},\n}",
+      "normalized_value": "@inproceedings{tanl, title={Structured Prediction as Translation between Augmented Natural Languages}, author={Giovanni Paolini and Ben Athiwaratkun and Jason Krone and Jie Ma and Alessandro Achille and Rishita Anubhai and Cicero Nogueira dos Santos and Bing Xiang and Stefano Soatto}, booktitle={9th International Conference on Learning Representations, {ICLR} 2021}, year={2021}, }",
+      "evidence": "```\n@inproceedings{tanl,\n    title={Structured Prediction as Translation between Augmented Natural Languages},\n    author={Giovanni Paolini and Ben Athiwaratkun and Jason Krone and Jie Ma and Alessandro Achille and Rishita Anubhai and Cicero Nogueira dos Santos and Bing Xiang and Stefano Soatto},\n    booktitle={9th International Conference on Learning Representations, {ICLR} 2021},\n    year={2021},\n}\n```",
+      "evidence_location": "6-13",
+      "confidence": "high",
+      "reason": "Provides the exact citation format required for academic attribution and reuse."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python 3.6+",
+      "normalized_value": "Python 3.6+",
+      "evidence": "- Python 3.6+",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Specifies the required programming language and minimum version for execution."
+    },
+    {
+      "field": "dependencies",
+      "value": "- PyTorch (tested with version 1.7.1)\n- Transformers (tested with version 4.0.0)\n- NetworkX (tested with version 2.5, only used in coreference resolution)",
+      "normalized_value": "- PyTorch (tested with version 1.7.1) - Transformers (tested with version 4.0.0) - NetworkX (tested with version 2.5, only used in coreference resolution)",
+      "evidence": "- PyTorch (tested with version 1.7.1)\n- Transformers (tested with version 4.0.0)\n- NetworkX (tested with version 2.5, only used in coreference resolution)",
+      "evidence_location": "19-21",
+      "confidence": "high",
+      "reason": "Lists essential third-party libraries and their tested versions, critical for environment setup and reproducibility."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "You can install all required Python packages with `pip install -r requirements.txt`",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Standard command to automatically install all listed dependencies."
+    },
+    {
+      "field": "dataset_download_link",
+      "value": "https://github.com/markus-eberts/spert/blob/master/scripts/fetch_datasets.sh",
+      "normalized_value": "https://github.com/markus-eberts/spert/blob/master/scripts/fetch_datasets.sh",
+      "evidence": "The CoNLL04 and ADE datasets (joint entity and relation extraction) in the correct format can be downloaded using https://github.com/markus-eberts/spert/blob/master/scripts/fetch_datasets.sh.",
+      "evidence_location": "31",
+      "confidence": "high",
+      "reason": "Direct link to fetch benchmark datasets required for training and evaluation."
+    },
+    {
+      "field": "main_script",
+      "value": "run.py",
+      "normalized_value": "run.py",
+      "evidence": "Use the following command:\n`python run.py JOB`",
+      "evidence_location": "38-39",
+      "confidence": "high",
+      "reason": "Identifies the primary entry point script for executing experiments."
+    },
+    {
+      "field": "config_file",
+      "value": "config.ini",
+      "normalized_value": "config.ini",
+      "evidence": "The `JOB` argument refers to a section of the config file, which by default is `config.ini`.",
+      "evidence_location": "41",
+      "confidence": "high",
+      "reason": "Specifies the default configuration file used to control experiment parameters."
+    },
+    {
+      "field": "example_training_command",
+      "value": "python run.py conll04_final",
+      "normalized_value": "python run.py conll04_final",
+      "evidence": "Then run `python run.py conll04_final`.",
+      "evidence_location": "61",
+      "confidence": "high",
+      "reason": "Concrete example command to reproduce results on a specific dataset."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python run.py conll04_final -e",
+      "normalized_value": "python run.py conll04_final -e",
+      "evidence": "For this, set `do_train = False` or (more easily) provide the `-e` command-line argument: `python run.py conll04_final -e`.",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Shows how to run evaluation on trained models without retraining, useful for checkpoint testing."
+    },
+    {
+      "field": "model_weights_url",
+      "value": "https://tanl.s3.amazonaws.com/tanl-multitask.zip",
+      "normalized_value": "https://tanl.s3.amazonaws.com/tanl-multitask.zip",
+      "evidence": "The weights of our multi-task model (released under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/)) can be downloaded here: https://tanl.s3.amazonaws.com/tanl-multitask.zip",
+      "evidence_location": "123",
+      "confidence": "high",
+      "reason": "Direct download link for pre-trained model weights, enabling immediate inference and reuse."
+    },
+    {
+      "field": "code_license",
+      "value": "Apache 2.0 license",
+      "normalized_value": "Apache 2.0 license",
+      "evidence": "The code of this repository is released under the [Apache 2.0 license](LICENSE).",
+      "evidence_location": "134",
+      "confidence": "high",
+      "reason": "Defines the legal terms and permissions for reusing the source code."
+    },
+    {
+      "field": "model_license",
+      "value": "CC BY 4.0 license",
+      "normalized_value": "CC BY 4.0 license",
+      "evidence": "The weights of the [fine-tuned multi-task model](#fine-tuned-multi-task-model) are released under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).",
+      "evidence_location": "136",
+      "confidence": "high",
+      "reason": "Defines the legal terms for reusing the model weights, which carry a different license than the code."
+    }
+  ]
+}

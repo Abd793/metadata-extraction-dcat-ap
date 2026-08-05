@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "HAGRID: A Human-LLM Collaborative Dataset for Generative Information-seeking with Attribution",
+      "normalized_value": "HAGRID: A Human-LLM Collaborative Dataset for Generative Information-seeking with Attribution",
+      "evidence": "# HAGRID: A Human-LLM Collaborative Dataset for Generative Information-seeking with Attribution",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Provides the artifact's explicit name and title."
+    },
+    {
+      "field": "artifact_description",
+      "value": "HAGRID (**H**uman-in-the-loop **A**ttributable **G**enerative **R**etrieval for **I**nformation-seeking **D**ataset) is a dataset for generative information-seeking scenarios.",
+      "normalized_value": "HAGRID (**H**uman-in-the-loop **A**ttributable **G**enerative **R**etrieval for **I**nformation-seeking **D**ataset) is a dataset for generative information-seeking scenarios.",
+      "evidence": "HAGRID (**H**uman-in-the-loop **A**ttributable **G**enerative **R**etrieval for **I**nformation-seeking **D**ataset) is a dataset for generative information-seeking scenarios.",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "States the artifact's purpose and expands its acronym."
+    },
+    {
+      "field": "source_dataset",
+      "value": "MIRACL",
+      "normalized_value": "MIRACL",
+      "evidence": "It is constructed on top of [MIRACL 🌍🙌🌏](HTTP://miracl.ai), an information retrieval dataset that consists of queries along with a set of manually labelled relevant passages (quotes).",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Identifies the information retrieval dataset on which HAGRID is constructed."
+    },
+    {
+      "field": "generation_model",
+      "value": "GPT-3.5",
+      "normalized_value": "GPT-3.5",
+      "evidence": "We collect attributed explanations for each question by eliciting prompts from [GPT-3.5](https://openai.com/blog/chatgpt), based on the given relevant passages.",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Names the model used in the explanation elicitation process."
+    },
+    {
+      "field": "citation_style",
+      "value": "in-context citation style, similar to scientific articles, that reference the supporting quotes.",
+      "normalized_value": "in-context citation style, similar to scientific articles, that reference the supporting quotes.",
+      "evidence": "The explanations adhere to an in-context citation style, similar to scientific articles, that reference the supporting quotes.",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Describes how explanations attribute claims to source passages."
+    },
+    {
+      "field": "annotation_criteria",
+      "value": "1. __Informativeness:__ whether they provide a direct answer to the question.\n2. __Attributability:__ whether they are attributable to the source passages.",
+      "normalized_value": "1. __Informativeness:__ whether they provide a direct answer to the question. 2. __Attributability:__ whether they are attributable to the source passages.",
+      "evidence": "We then ask human annotators to judge the explanations based on two criteria:\n1. __Informativeness:__ whether they provide a direct answer to the question.\n2. __Attributability:__ whether they are attributable to the source passages.",
+      "evidence_location": "22-24",
+      "confidence": "high",
+      "reason": "Defines the two human-annotation criteria used to judge explanations."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://huggingface.co/datasets/miracl/hagrid",
+      "normalized_value": "https://huggingface.co/datasets/miracl/hagrid",
+      "evidence": "HAGRID is hosted on Hugging Face 🤗: [link](https://huggingface.co/datasets/miracl/hagrid).",
+      "evidence_location": "37 (Data)",
+      "confidence": "high",
+      "reason": "Provides the dataset's hosted access location."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "        <img alt=\"Build\" src=\"https://img.shields.io/badge/Made%20with-Python-1f425f.svg?color=purple\">",
+      "evidence_location": "7-9",
+      "confidence": "high",
+      "reason": "The README explicitly identifies Python in its project badge."
+    },
+    {
+      "field": "python_dependency",
+      "value": "datasets",
+      "normalized_value": "datasets",
+      "evidence": "import datasets",
+      "evidence_location": "40 (Data)",
+      "confidence": "high",
+      "reason": "Identifies the Python package required by the documented loading example."
+    },
+    {
+      "field": "data_loading_command",
+      "value": "import datasets\nhagrid = datasets.load_dataset(\"miracl/hagrid\", split=\"train\")\nprint(hagrid[0])",
+      "normalized_value": "import datasets hagrid = datasets.load_dataset(\"miracl/hagrid\", split=\"train\") print(hagrid[0])",
+      "evidence": "```python\nimport datasets\nhagrid = datasets.load_dataset(\"miracl/hagrid\", split=\"train\")\nprint(hagrid[0])\n```",
+      "evidence_location": "39-43 (Data)",
+      "confidence": "high",
+      "reason": "Provides a reproducible example for loading and inspecting the training split."
+    },
+    {
+      "field": "dataset_split_statistics",
+      "value": "|  Split | #Q | #A       | #Informativeness  | #Attribuatability       |\n|:-----|:------:|:-------:|:------:|:-------:|\n| Train     | 1,922 | 3,214 | 3,214 | 754 |\n| Dev     | 716 | 1,318 | 1,157 | 826 |",
+      "normalized_value": "| Split | #Q | #A | #Informativeness | #Attribuatability | |:-----|:------:|:-------:|:------:|:-------:| | Train | 1,922 | 3,214 | 3,214 | 754 | | Dev | 716 | 1,318 | 1,157 | 826 |",
+      "evidence": "|  Split | #Q | #A       | #Informativeness  | #Attribuatability       |\n|:-----|:------:|:-------:|:------:|:-------:|\n| Train     | 1,922 | 3,214 | 3,214 | 754 |\n| Dev     | 716 | 1,318 | 1,157 | 826 |",
+      "evidence_location": "45-48 (Data)",
+      "confidence": "high",
+      "reason": "Summarizes the documented question, answer, informativeness, and attributability counts for each split."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2307.16883",
+      "normalized_value": "https://arxiv.org/abs/2307.16883",
+      "evidence": "    <a href=\"https://arxiv.org/abs/2307.16883\">",
+      "evidence_location": "13-15",
+      "confidence": "high",
+      "reason": "Provides the linked arXiv paper associated with the artifact."
+    },
+    {
+      "field": "license",
+      "value": "Apache 2 license",
+      "normalized_value": "Apache 2 license",
+      "evidence": "This work is licensed under the Apache 2 license. See [LICENSE](LICENSE) for details.",
+      "evidence_location": "59-61 (License)",
+      "confidence": "high",
+      "reason": "States the artifact's reuse license."
+    },
+    {
+      "field": "contact_email",
+      "value": "project.miracl [at] gmail.com",
+      "normalized_value": "project.miracl [at] gmail.com",
+      "evidence": "If you have any questions, feel free to email us (project.miracl [at] gmail.com) or start a Github issue under this repository.",
+      "evidence_location": "54-56 (Contact)",
+      "confidence": "high",
+      "reason": "Provides the documented contact address for questions or reuse support."
+    },
+    {
+      "field": "citation",
+      "value": "@article{hagrid,\n      title={{HAGRID}: A Human-LLM Collaborative Dataset for Generative Information-Seeking with Attribution}, \n      author={Ehsan Kamalloo and Aref Jafari and Xinyu Zhang and Nandan Thakur and Jimmy Lin},\n      year={2023},\n      journal={arXiv:2307.16883},\n}",
+      "normalized_value": "@article{hagrid, title={{HAGRID}: A Human-LLM Collaborative Dataset for Generative Information-Seeking with Attribution}, author={Ehsan Kamalloo and Aref Jafari and Xinyu Zhang and Nandan Thakur and Jimmy Lin}, year={2023}, journal={arXiv:2307.16883}, }",
+      "evidence": "```\n@article{hagrid,\n      title={{HAGRID}: A Human-LLM Collaborative Dataset for Generative Information-Seeking with Attribution}, \n      author={Ehsan Kamalloo and Aref Jafari and Xinyu Zhang and Nandan Thakur and Jimmy Lin},\n      year={2023},\n      journal={arXiv:2307.16883},\n}\n```",
+      "evidence_location": "63-71 (Citation)",
+      "confidence": "high",
+      "reason": "Provides the README's recommended BibTeX citation, including authors, year, title, and arXiv venue."
+    }
+  ]
+}

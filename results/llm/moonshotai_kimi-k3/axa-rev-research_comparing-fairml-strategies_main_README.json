@@ -1,0 +1,85 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "When Mitigating Bias is Unfair: A Comprehensive Study on the Impact of Bias Mitigation Algorithms",
+      "normalized_value": "When Mitigating Bias is Unfair: A Comprehensive Study on the Impact of Bias Mitigation Algorithms",
+      "evidence": "# When Mitigating Bias is Unfair: A Comprehensive Study on the Impact of Bias Mitigation Algorithms",
+      "evidence_location": "line 1 (top-level header)",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its associated paper by title."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2302.07185",
+      "normalized_value": "https://arxiv.org/abs/2302.07185",
+      "evidence": "This repository contains the codebase for \"When Mitigating Bias is Unfair: A Comprehensive Study on the Impact of Bias Mitigation Algorithms\" (on [Arxiv](https://arxiv.org/abs/2302.07185)).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated research paper on arXiv."
+    },
+    {
+      "field": "artifact_type",
+      "value": "codebase for a research paper",
+      "normalized_value": "codebase for a research paper",
+      "evidence": "This repository contains the codebase for \"When Mitigating Bias is Unfair: A Comprehensive Study on the Impact of Bias Mitigation Algorithms\"",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Establishes that the repository is research code accompanying a paper."
+    },
+    {
+      "field": "purpose",
+      "value": "comparative study of several bias mitigation approaches to investigate their behaviors at a fine grain, the prediction level, characterizing the differences between fair models obtained with different approaches",
+      "normalized_value": "comparative study of several bias mitigation approaches to investigate their behaviors at a fine grain, the prediction level, characterizing the differences between fair models obtained with different approaches",
+      "evidence": "In this paper, we conduct a comparative study of several bias mitigation approaches to investigate their behaviors at a fine grain, the prediction level. Our objective is to characterize the differences between fair models obtained with different approaches.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Describes the research goal and what the codebase supports."
+    },
+    {
+      "field": "research_topic",
+      "value": "fairness of machine learning systems; bias mitigation; group fairness metrics",
+      "normalized_value": "fairness of machine learning systems; bias mitigation; group fairness metrics",
+      "evidence": "Most works on the fairness of machine learning systems focus on the blind optimization of common fairness metrics, such as Demographic Parity and Equalized Odds.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Names the scientific domain and concrete fairness metrics studied, useful for indexing and search."
+    },
+    {
+      "field": "key_finding",
+      "value": "bias mitigation approaches differ a lot in their strategies, both in the number of impacted individuals and the populations targeted; these results even apply for several runs of the same mitigation approach",
+      "normalized_value": "bias mitigation approaches differ a lot in their strategies, both in the number of impacted individuals and the populations targeted; these results even apply for several runs of the same mitigation approach",
+      "evidence": "Our findings show that bias mitigation approaches differ a lot in their strategies, both in the number of impacted individuals and the populations targeted. More surprisingly, we show these results even apply for several runs of the same mitigation approach.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Summarizes the concrete empirical findings of the study, useful for evaluation and citation context."
+    },
+    {
+      "field": "framework_dependency",
+      "value": "Fairlearn (with slight modifications to allow working with multiple different data structures)",
+      "normalized_value": "Fairlearn (with slight modifications to allow working with multiple different data structures)",
+      "evidence": "├── fairlearn_int <-- [Fairlearn](https://fairlearn.org/) with slight modifications to allow working with multiple different data structures",
+      "evidence_location": "line 12 (Structure code block)",
+      "confidence": "high",
+      "reason": "Identifies a core dependency and that a modified version is vendored in the repo, important for reproduction."
+    },
+    {
+      "field": "repository_structure",
+      "value": "fairlearn_int (modified Fairlearn), fairness (helpers, avd_helpers), notebooks (experiments per dataset), results (experiment results per dataset)",
+      "normalized_value": "fairlearn_int (modified Fairlearn), fairness (helpers, avd_helpers), notebooks (experiments per dataset), results (experiment results per dataset)",
+      "evidence": "```\n.\n├── README.md\n├── fairlearn_int <-- [Fairlearn](https://fairlearn.org/) with slight modifications to allow working with multiple different data structures\n├── fairness \n|   ├── helpers <-- file containing helper functions\n|   ├── avd_helpers  <-- file containing helper functions\n├── notebooks <-- folder containing experiments for each analysed dataset, structured in the following way:\n|   ├── name_dataset\n|   |   ├── name\n|   |   ├── runs\n├── results <-- folder containing experiment results necessary for further analyses for each analysed dataset, structured in the following way:\n|   ├── name_dataset\n|   |   ├── results\n```",
+      "evidence_location": "lines 9-23 (Structure section, fenced code block)",
+      "confidence": "high",
+      "reason": "Documents where experiments and results live, helping users navigate, run, and reproduce analyses."
+    },
+    {
+      "field": "datasets",
+      "value": "Adult Census, Bank Marketing, Credit Card Default, Dutch Census, COMPAS",
+      "normalized_value": "Adult Census, Bank Marketing, Credit Card Default, Dutch Census, COMPAS",
+      "evidence": "The following datasets are used for the analysis:\n* [Adult Census](https://archive.ics.uci.edu/ml/datasets/adult)\n* [Bank Marketing](https://archive.ics.uci.edu/ml/datasets/Bank%2BMarketing)\n* [Credit Card Default](https://archive.ics.uci.edu/ml/datasets/default%2Bof%2Bcredit%2Bcard%2Bclients)\n* [Dutch Census](https://microdata.worldbank.org/index.php/catalog/2102/data-dictionary)\n* [COMPAS](https://www.propublica.org/datastore/dataset/compas-recidivism-risk-score-data-and-analysis)",
+      "evidence_location": "lines 26-31 (Data section)",
+      "confidence": "high",
+      "reason": "Lists the exact benchmark datasets with source links, essential for reproducing the experiments."
+    }
+  ]
+}

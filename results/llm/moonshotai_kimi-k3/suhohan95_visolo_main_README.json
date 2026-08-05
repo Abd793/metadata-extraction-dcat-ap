@@ -1,0 +1,202 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "VISOLO: Grid-Based Space-Time Aggregation for Efficient Online Video Instance Segmentation",
+      "normalized_value": "VISOLO: Grid-Based Space-Time Aggregation for Efficient Online Video Instance Segmentation",
+      "evidence": "# VISOLO: Grid-Based Space-Time Aggregation for Efficient Online Video Instance Segmentation",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its full title."
+    },
+    {
+      "field": "task",
+      "value": "Online Video Instance Segmentation",
+      "normalized_value": "Online Video Instance Segmentation",
+      "evidence": "# VISOLO: Grid-Based Space-Time Aggregation for Efficient Online Video Instance Segmentation",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "States the computer vision task the method addresses."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2112.04177",
+      "normalized_value": "https://arxiv.org/abs/2112.04177",
+      "evidence": "[VISOLO: Grid-Based Space-Time Aggregation for Efficient Online Video Instance Segmentation](https://arxiv.org/abs/2112.04177)",
+      "evidence_location": "line 8, '## Paper' section",
+      "confidence": "high",
+      "reason": "Link to the associated arXiv paper."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/SuHoHan95/VISOLO.git",
+      "normalized_value": "https://github.com/SuHoHan95/VISOLO.git",
+      "evidence": "git clone https://github.com/SuHoHan95/VISOLO.git",
+      "evidence_location": "line 25, installation code block under '### Steps'",
+      "confidence": "high",
+      "reason": "Source repository URL needed to obtain the code."
+    },
+    {
+      "field": "base_framework",
+      "value": "detectron2",
+      "normalized_value": "detectron2",
+      "evidence": "* Based on [detectron2](https://github.com/facebookresearch/detectron2).\n* The codes are under [projects/](projects/) folder, which follows the convention of detectron2.",
+      "evidence_location": "lines 11-12, '### Note' section",
+      "confidence": "high",
+      "reason": "Identifies the framework the project is built on, important for environment setup and reuse."
+    },
+    {
+      "field": "installation_command",
+      "value": "git clone https://github.com/SuHoHan95/VISOLO.git\ncd VISOLO\npip install -e .\npip install -r requirements.txt\npip install git+https://github.com/youtubevos/cocoapi.git#\"egg=pycocotools&subdirectory=PythonAPI\"",
+      "normalized_value": "git clone https://github.com/SuHoHan95/VISOLO.git cd VISOLO pip install -e . pip install -r requirements.txt pip install git+https://github.com/youtubevos/cocoapi.git#\"egg=pycocotools&subdirectory=PythonAPI\"",
+      "evidence": "```bash\ngit clone https://github.com/SuHoHan95/VISOLO.git\ncd VISOLO\npip install -e .\npip install -r requirements.txt\npip install git+https://github.com/youtubevos/cocoapi.git#\"egg=pycocotools&subdirectory=PythonAPI\"\n```",
+      "evidence_location": "lines 24-30, fenced code block under '1. Installation.'",
+      "confidence": "high",
+      "reason": "Defines the installation steps required to set up the artifact."
+    },
+    {
+      "field": "environment",
+      "value": "docker container (image compiled following docker/README.md)",
+      "normalized_value": "docker container (image compiled following docker/README.md)",
+      "evidence": "* Run a docker container and install the repository.\n* Compile a docker image following [docker/README.md](docker/README.md).",
+      "evidence_location": "lines 21-22, under '1. Installation.'",
+      "confidence": "high",
+      "reason": "Specifies the recommended runtime environment for reproducibility."
+    },
+    {
+      "field": "dataset",
+      "value": "COCO",
+      "normalized_value": "COCO",
+      "evidence": "COCO\n\nDownload the json file([coco_to_ytvis2019.json](https://drive.google.com/file/d/17L33_woQh7eUMemCmnFDOgPUKi-2fTW0/view?usp=sharing))",
+      "evidence_location": "lines 34-36, under '2. Link datasets'",
+      "confidence": "high",
+      "reason": "Names a dataset used for pre-training, with a conversion annotation file provided."
+    },
+    {
+      "field": "dataset",
+      "value": "YTVIS 2019",
+      "normalized_value": "YTVIS 2019",
+      "evidence": "YTVIS 2019\n```bash\nmkdir -p datasets/ytvis_2019\nln -s /path_to_ytvis_2019_dataset/* datasets/ytvis_2019\n```",
+      "evidence_location": "lines 46-50, under '2. Link datasets'",
+      "confidence": "high",
+      "reason": "Names the main training/evaluation dataset (YouTube-VIS 2019)."
+    },
+    {
+      "field": "training_hardware",
+      "value": "4 GPUS(TESLA V100-PCIE-32GB)",
+      "normalized_value": "4 GPUS(TESLA V100-PCIE-32GB)",
+      "evidence": "* Training using 4 GPUS(TESLA V100-PCIE-32GB)",
+      "evidence_location": "line 73, under '3. Training.'",
+      "confidence": "high",
+      "reason": "Specifies the GPU hardware used for training, relevant for reproduction."
+    },
+    {
+      "field": "pretraining_command",
+      "value": "python train_net.py --num-gpus 4 --config-file ./configs/base_coco.yaml OUTPUT_DIR ./checkpoint/coco/",
+      "normalized_value": "python train_net.py --num-gpus 4 --config-file ./configs/base_coco.yaml OUTPUT_DIR ./checkpoint/coco/",
+      "evidence": "* Pre-training on COCO dataset\n```bash\npython train_net.py --num-gpus 4 --config-file ./configs/base_coco.yaml OUTPUT_DIR ./checkpoint/coco/\n```",
+      "evidence_location": "lines 74-77, under '3. Training.'",
+      "confidence": "high",
+      "reason": "Command for pre-training on COCO, a key reproduction step."
+    },
+    {
+      "field": "finetuning_command",
+      "value": "python train_net.py --num-gpus 4 --config-file ./configs/base_ytvis_coco.yaml OUTPUT_DIR ./checkpoint/ytvis_2019/ MODEL.WEIGHTS path/to/pre-trained-model.pth",
+      "normalized_value": "python train_net.py --num-gpus 4 --config-file ./configs/base_ytvis_coco.yaml OUTPUT_DIR ./checkpoint/ytvis_2019/ MODEL.WEIGHTS path/to/pre-trained-model.pth",
+      "evidence": "```bash\npython train_net.py --num-gpus 4 --config-file ./configs/base_ytvis_coco.yaml OUTPUT_DIR ./checkpoint/ytvis_2019/ MODEL.WEIGHTS path/to/pre-trained-model.pth\n```",
+      "evidence_location": "lines 79-81, under '3. Training.'",
+      "confidence": "high",
+      "reason": "Command for fine-tuning on YTVIS2019 from COCO pre-trained weights."
+    },
+    {
+      "field": "pretrained_weights_url",
+      "value": "https://drive.google.com/file/d/1rb3i9MBtAjh3SJ2AWdgb3PvuPpF8Swpi/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1rb3i9MBtAjh3SJ2AWdgb3PvuPpF8Swpi/view?usp=sharing",
+      "evidence": "* Fine-tuning on YTVIS2019 with pre-trained weights on COCO dataset ([r50_coco.pth](https://drive.google.com/file/d/1rb3i9MBtAjh3SJ2AWdgb3PvuPpF8Swpi/view?usp=sharing))",
+      "evidence_location": "line 78, under '3. Training.'",
+      "confidence": "high",
+      "reason": "Download link for COCO pre-trained weights (r50_coco.pth) needed for fine-tuning."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python train_net.py --eval-only --num-gpus 1 --config-file ./configs/base_ytvis_coco.yaml OUTPUT_DIR ./checkpoint/ytvis_2019/ MODEL.WEIGHTS path/to/model.pth",
+      "normalized_value": "python train_net.py --eval-only --num-gpus 1 --config-file ./configs/base_ytvis_coco.yaml OUTPUT_DIR ./checkpoint/ytvis_2019/ MODEL.WEIGHTS path/to/model.pth",
+      "evidence": "```bash\npython train_net.py --eval-only --num-gpus 1 --config-file ./configs/base_ytvis_coco.yaml OUTPUT_DIR ./checkpoint/ytvis_2019/ MODEL.WEIGHTS path/to/model.pth\n```",
+      "evidence_location": "lines 86-88, under '4. Evaluating.'",
+      "confidence": "high",
+      "reason": "Command to evaluate the model on YTVIS 2019."
+    },
+    {
+      "field": "evaluation_output",
+      "value": "\"results.json\" saved in OUTPUT_DIR/inference/",
+      "normalized_value": "\"results.json\" saved in OUTPUT_DIR/inference/",
+      "evidence": "\"results.json\" saved in OUTPUT_DIR/inference/",
+      "evidence_location": "line 89, under '4. Evaluating.'",
+      "confidence": "high",
+      "reason": "Describes where evaluation results are written."
+    },
+    {
+      "field": "model_checkpoint",
+      "value": "ResNet-50 backbone checkpoint: https://drive.google.com/file/d/1kgr2WPXB1rv8U4aaE1FKjPNezCDzqMY3/view?usp=sharing",
+      "normalized_value": "ResNet-50 backbone checkpoint: https://drive.google.com/file/d/1kgr2WPXB1rv8U4aaE1FKjPNezCDzqMY3/view?usp=sharing",
+      "evidence": "| [ResNet-50](projects/VISOLO/configs/base_ytvis_coco.yaml) | 40.0 | 38.6 | 56.3 | 43.7 | 35.7 | 42.5 | [model](https://drive.google.com/file/d/1kgr2WPXB1rv8U4aaE1FKjPNezCDzqMY3/view?usp=sharing) |",
+      "evidence_location": "line 98, '## Model Checkpoints (YTVIS 2019)' table",
+      "confidence": "high",
+      "reason": "Download link for the released trained model checkpoint."
+    },
+    {
+      "field": "benchmark_results",
+      "value": "ResNet-50 on YTVIS 2019: FPS 40.0, AP 38.6, AP50 56.3, AP75 43.7, AR1 35.7, AR10 42.5",
+      "normalized_value": "ResNet-50 on YTVIS 2019: FPS 40.0, AP 38.6, AP50 56.3, AP75 43.7, AR1 35.7, AR10 42.5",
+      "evidence": "| backbone  |  FPS |  AP  | AP50 | AP75 |  AR1 |  AR10 | download |\n|:----------|:----:|:----:|:----:|:----:|:----:|:-----:|:--------:|\n| [ResNet-50](projects/VISOLO/configs/base_ytvis_coco.yaml) | 40.0 | 38.6 | 56.3 | 43.7 | 35.7 | 42.5 | [model](https://drive.google.com/file/d/1kgr2WPXB1rv8U4aaE1FKjPNezCDzqMY3/view?usp=sharing) |",
+      "evidence_location": "lines 96-98, '## Model Checkpoints (YTVIS 2019)' table",
+      "confidence": "high",
+      "reason": "Quantitative performance metrics (accuracy and speed) reported for the released model."
+    },
+    {
+      "field": "demo_video_url",
+      "value": "https://youtu.be/j33H7vcJ2uU",
+      "normalized_value": "https://youtu.be/j33H7vcJ2uU",
+      "evidence": "The overall flow of our VISOLO and the comparison of different VIS methods on the YouTube-VIS 2019 dataset are provided at https://youtu.be/j33H7vcJ2uU",
+      "evidence_location": "line 101, '## Video Comparisons' section",
+      "confidence": "high",
+      "reason": "Link to a video demonstrating the method and comparisons."
+    },
+    {
+      "field": "license",
+      "value": "Apache 2.0 license",
+      "normalized_value": "Apache 2.0 license",
+      "evidence": "VISOLO is released under the [Apache 2.0 license](LICENSE).",
+      "evidence_location": "line 105, '## License' section",
+      "confidence": "high",
+      "reason": "States the software license governing reuse."
+    },
+    {
+      "field": "usage_restriction",
+      "value": "This code is for non-commercial use only.",
+      "normalized_value": "This code is for non-commercial use only.",
+      "evidence": "This code is for non-commercial use only.",
+      "evidence_location": "line 107, '## License' section",
+      "confidence": "high",
+      "reason": "Explicit restriction on commercial use, critical for reuse decisions."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{han2022visolo,\n  title={VISOLO: Grid-Based Space-Time Aggregation for Efficient Online Video Instance Segmentation},\n  author={Han, Su Ho and Hwang, Sukjun and Oh, Seoung Wug and Park, Yeonchool and Kim, Hyunwoo and Kim, Min-Jung and Kim, Seon Joo},\n  booktitle =  {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year={2022}\n}",
+      "normalized_value": "@inproceedings{han2022visolo, title={VISOLO: Grid-Based Space-Time Aggregation for Efficient Online Video Instance Segmentation}, author={Han, Su Ho and Hwang, Sukjun and Oh, Seoung Wug and Park, Yeonchool and Kim, Hyunwoo and Kim, Min-Jung and Kim, Seon Joo}, booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, year={2022} }",
+      "evidence": "```BibTex\n@inproceedings{han2022visolo,\n  title={VISOLO: Grid-Based Space-Time Aggregation for Efficient Online Video Instance Segmentation},\n  author={Han, Su Ho and Hwang, Sukjun and Oh, Seoung Wug and Park, Yeonchool and Kim, Hyunwoo and Kim, Min-Jung and Kim, Seon Joo},\n  booktitle =  {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year={2022}\n}\n```",
+      "evidence_location": "lines 113-120, '## Citing' section",
+      "confidence": "high",
+      "reason": "BibTeX citation for attributing the work; published at CVPR 2022."
+    },
+    {
+      "field": "acknowledged_codebases",
+      "value": "detectron2, IFC",
+      "normalized_value": "detectron2, IFC",
+      "evidence": "Special thanks to facebookresearch and IFC authors for their wonderful codes that have been publicly released ([detectron2](https://github.com/facebookresearch/detectron2), [IFC](https://github.com/sukjunhwang/IFC)).",
+      "evidence_location": "line 124, '## Acknowledgement' section",
+      "confidence": "high",
+      "reason": "Identifies related prior codebases the project builds upon or was influenced by."
+    }
+  ]
+}

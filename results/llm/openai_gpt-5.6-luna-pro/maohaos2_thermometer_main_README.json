@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Thermometer: Towards Universal Calibration for Large Language Models",
+      "normalized_value": "Thermometer: Towards Universal Calibration for Large Language Models",
+      "evidence": "# Thermometer: Towards Universal Calibration for Large Language Models",
+      "evidence_location": "1 (title)",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its associated research topic."
+    },
+    {
+      "field": "artifact_purpose",
+      "value": "This repository contains official implementation of the paper [Thermometer: Towards Universal Calibration for Large Language Models](https://arxiv.org/abs/2403.08819)",
+      "normalized_value": "This repository contains official implementation of the paper [Thermometer: Towards Universal Calibration for Large Language Models](https://arxiv.org/abs/2403.08819)",
+      "evidence": "#### This repository contains official implementation of the paper [Thermometer: Towards Universal Calibration for Large Language Models](https://arxiv.org/abs/2403.08819).",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Explicitly states that the repository provides the official implementation of the paper."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2403.08819",
+      "normalized_value": "https://arxiv.org/abs/2403.08819",
+      "evidence": "https://arxiv.org/abs/2403.08819",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated paper."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install torch==2.2.1 transformers==4.28.1 evaluate==0.4.1 tqdm pandas",
+      "normalized_value": "pip install torch==2.2.1 transformers==4.28.1 evaluate==0.4.1 tqdm pandas",
+      "evidence": "```bash\npip install torch==2.2.1 transformers==4.28.1 evaluate==0.4.1 tqdm pandas\n```",
+      "evidence_location": "5-7 (Requirements)",
+      "confidence": "high",
+      "reason": "Defines the package installation command and pinned dependency versions."
+    },
+    {
+      "field": "source_code_directory",
+      "value": "src",
+      "normalized_value": "src",
+      "evidence": "*src* folder includes all the source code for the experiments.",
+      "evidence_location": "9 (File Structure)",
+      "confidence": "high",
+      "reason": "Identifies where the experiment source code is located."
+    },
+    {
+      "field": "configuration_directory",
+      "value": "configs",
+      "normalized_value": "configs",
+      "evidence": "*configs* folder:",
+      "evidence_location": "10-11 (File Structure)",
+      "confidence": "high",
+      "reason": "Identifies the directory containing training configurations and model hyper-parameters."
+    },
+    {
+      "field": "data_directory",
+      "value": "data",
+      "normalized_value": "data",
+      "evidence": "*data* folder:",
+      "evidence_location": "12-13 (File Structure)",
+      "confidence": "high",
+      "reason": "Identifies the directory containing dataset loading and processing code."
+    },
+    {
+      "field": "qa_dataset",
+      "value": "MRQA",
+      "normalized_value": "MRQA",
+      "evidence": "*process_mrqa.py* pre-process the raw data in free-form QA datasets MRQA;",
+      "evidence_location": "15 (File Structure)",
+      "confidence": "high",
+      "reason": "Names the free-form question-answering dataset family handled by the artifact."
+    },
+    {
+      "field": "feature_extraction_script",
+      "value": "extract_features.py",
+      "normalized_value": "extract_features.py",
+      "evidence": "*extract_features.py* aims to extract labels, features, and logits from pretrained LLMs;",
+      "evidence_location": "16 (File Structure)",
+      "confidence": "high",
+      "reason": "Identifies the script used to extract reusable model outputs."
+    },
+    {
+      "field": "training_evaluation_scripts",
+      "value": "train_thermometer.py and eval_thermometer.py",
+      "normalized_value": "train_thermometer.py and eval_thermometer.py",
+      "evidence": "*train_thermometer.py* and *eval_thermometer.py*",
+      "evidence_location": "17 (File Structure)",
+      "confidence": "high",
+      "reason": "Identifies the main training and calibration-evaluation entry points."
+    },
+    {
+      "field": "feature_extraction_command",
+      "value": "exract.sh",
+      "normalized_value": "exract.sh",
+      "evidence": "exract.sh",
+      "evidence_location": "23-26 (Usage, Step-1)",
+      "confidence": "high",
+      "reason": "Provides the script used for the first reproduction step, extracting features and logits."
+    },
+    {
+      "field": "training_command",
+      "value": "train.sh",
+      "normalized_value": "train.sh",
+      "evidence": "train.sh",
+      "evidence_location": "27-30 (Usage, Step-2)",
+      "confidence": "high",
+      "reason": "Provides the script for training the Thermometer model."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "eval.sh",
+      "normalized_value": "eval.sh",
+      "evidence": "eval.sh",
+      "evidence_location": "31-34 (Usage, Step-3)",
+      "confidence": "high",
+      "reason": "Provides the script for evaluating calibration of a trained Thermometer model."
+    },
+    {
+      "field": "free_form_qa_preprocessing",
+      "value": "append the LLM's response to the prompts",
+      "normalized_value": "append the LLM's response to the prompts",
+      "evidence": "Free-form QA task requires an additional step to pre-process the raw data, i.e., append the LLM's response to the prompts,",
+      "evidence_location": "35 (Usage)",
+      "confidence": "high",
+      "reason": "States the additional preprocessing required for free-form QA data."
+    },
+    {
+      "field": "free_form_qa_preprocessing_command",
+      "value": "mrqa.sh",
+      "normalized_value": "mrqa.sh",
+      "evidence": "mrqa.sh",
+      "evidence_location": "35-38 (Usage)",
+      "confidence": "high",
+      "reason": "Identifies the shell script for the additional MRQA preprocessing step."
+    },
+    {
+      "field": "decoder_only_model_configuration",
+      "value": "--model_type decoder_only --model_name Llama-2-7b-chat-hf",
+      "normalized_value": "--model_type decoder_only --model_name Llama-2-7b-chat-hf",
+      "evidence": "--model_type decoder_only --model_name Llama-2-7b-chat-hf",
+      "evidence_location": "39-43 (Usage)",
+      "confidence": "high",
+      "reason": "Provides an explicit decoder-only LLM configuration example."
+    },
+    {
+      "field": "encoder_decoder_model_configuration",
+      "value": "--model_type encoder_decoder --model_name flan-t5-xl",
+      "normalized_value": "--model_type encoder_decoder --model_name flan-t5-xl",
+      "evidence": "--model_type encoder_decoder --model_name flan-t5-xl",
+      "evidence_location": "39-43 (Usage)",
+      "confidence": "high",
+      "reason": "Provides an explicit encoder-decoder LLM configuration example."
+    },
+    {
+      "field": "publication_venue",
+      "value": "Proceedings of the 41st International Conference on Machine Learning",
+      "normalized_value": "Proceedings of the 41st International Conference on Machine Learning",
+      "evidence": "  booktitle = {Proceedings of the 41st International Conference on Machine Learning},",
+      "evidence_location": "51 (Citation)",
+      "confidence": "high",
+      "reason": "Identifies the publication venue for the associated paper."
+    },
+    {
+      "field": "publication_year",
+      "value": "2024",
+      "normalized_value": "2024",
+      "evidence": "  year =  {2024},",
+      "evidence_location": "53 (Citation)",
+      "confidence": "high",
+      "reason": "Provides the publication year of the associated paper."
+    },
+    {
+      "field": "paper_citation",
+      "value": "@InProceedings{pmlr-v235-shen24c,\n  title = {Thermometer: Towards Universal Calibration for Large Language Models},\n  author =  {Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya},\n  booktitle = {Proceedings of the 41st International Conference on Machine Learning},\n  pages = {44687--44711},\n  year =  {2024},\n  editor =  {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix},\n  volume =  {235},\n  series = {Proceedings of Machine Learning Research},\n  month = {21--27 Jul},\n  publisher = {PMLR}\n}",
+      "normalized_value": "@InProceedings{pmlr-v235-shen24c, title = {Thermometer: Towards Universal Calibration for Large Language Models}, author = {Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya}, booktitle = {Proceedings of the 41st International Conference on Machine Learning}, pages = {44687--44711}, year = {2024}, editor = {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix}, volume = {235}, series = {Proceedings of Machine Learning Research}, month = {21--27 Jul}, publisher = {PMLR} }",
+      "evidence": "```\n@InProceedings{pmlr-v235-shen24c,\n  title = {Thermometer: Towards Universal Calibration for Large Language Models},\n  author =  {Shen, Maohao and Das, Subhro and Greenewald, Kristjan and Sattigeri, Prasanna and Wornell, Gregory W. and Ghosh, Soumya},\n  booktitle = {Proceedings of the 41st International Conference on Machine Learning},\n  pages = {44687--44711},\n  year =  {2024},\n  editor =  {Salakhutdinov, Ruslan and Kolter, Zico and Heller, Katherine and Weller, Adrian and Oliver, Nuria and Scarlett, Jonathan and Berkenkamp, Felix},\n  volume =  {235},\n  series = {Proceedings of Machine Learning Research},\n  month = {21--27 Jul},\n  publisher = {PMLR}\n}\n```",
+      "evidence_location": "47-60 (Citation)",
+      "confidence": "high",
+      "reason": "Provides a complete reusable BibTeX citation for the paper."
+    }
+  ]
+}

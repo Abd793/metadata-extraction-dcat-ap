@@ -1,0 +1,346 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PointSQL",
+      "normalized_value": "PointSQL",
+      "evidence": "This is PointSQL",
+      "evidence_location": "2, Introduction",
+      "confidence": "high",
+      "reason": "Identifies the artifact by name."
+    },
+    {
+      "field": "artifact_purpose",
+      "value": "We present the setup for the WikiSQL experiments.",
+      "normalized_value": "We present the setup for the WikiSQL experiments.",
+      "evidence": "We present the setup for the WikiSQL experiments.",
+      "evidence_location": "4, Introduction",
+      "confidence": "high",
+      "reason": "States the concrete purpose of the repository."
+    },
+    {
+      "field": "primary_paper_reference",
+      "value": "[Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400)",
+      "normalized_value": "[Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400)",
+      "evidence": "[Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400)",
+      "evidence_location": "2, Introduction",
+      "confidence": "high",
+      "reason": "Provides the primary research paper title and access link associated with the artifact."
+    },
+    {
+      "field": "related_paper_reference",
+      "value": "[Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text)",
+      "normalized_value": "[Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text)",
+      "evidence": "[Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text)",
+      "evidence_location": "3, Introduction",
+      "confidence": "high",
+      "reason": "Provides a related research paper title and access link."
+    },
+    {
+      "field": "dataset_name",
+      "value": "WikiSQL",
+      "normalized_value": "WikiSQL",
+      "evidence": "1. Download data from [WikiSQL](https://github.com/salesforce/WikiSQL). ",
+      "evidence_location": "17, Reproduce Preprocess Steps",
+      "confidence": "high",
+      "reason": "Names the dataset used for preprocessing and experiments."
+    },
+    {
+      "field": "preprocessed_dataset_download_url",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny",
+      "evidence": "- Download a preprocessed dataset [link](https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny) to `input/`",
+      "evidence_location": "11, Data Pre-processing",
+      "confidence": "high",
+      "reason": "Provides a direct download location for the preprocessed dataset."
+    },
+    {
+      "field": "raw_data_download_commands",
+      "value": "$ cd wikisql_data\n$ wget https://github.com/salesforce/WikiSQL/raw/master/data.tar.bz2\n$ tar -xvjf data.tar.bz2",
+      "normalized_value": "$ cd wikisql_data $ wget https://github.com/salesforce/WikiSQL/raw/master/data.tar.bz2 $ tar -xvjf data.tar.bz2",
+      "evidence": "```\n$ cd wikisql_data\n$ wget https://github.com/salesforce/WikiSQL/raw/master/data.tar.bz2\n$ tar -xvjf data.tar.bz2\n```",
+      "evidence_location": "19-23, Reproduce Preprocess Steps",
+      "confidence": "high",
+      "reason": "Defines reproducible commands for downloading and extracting raw WikiSQL data."
+    },
+    {
+      "field": "wikisql_lib_directory",
+      "value": "wikisql_data/scripts/",
+      "normalized_value": "wikisql_data/scripts/",
+      "evidence": "2. Put the [lib directory](https://github.com/salesforce/WikiSQL/tree/master/lib) under `wikisql_data/scripts/`",
+      "evidence_location": "24, Reproduce Preprocess Steps",
+      "confidence": "high",
+      "reason": "Specifies where the WikiSQL library directory must be placed."
+    },
+    {
+      "field": "annotation_preprocessing_commands",
+      "value": "$ cd wikisql_data/scripts/\n$ python annotate.py\n$ python prepare.py",
+      "normalized_value": "$ cd wikisql_data/scripts/ $ python annotate.py $ python prepare.py",
+      "evidence": "```\n$ cd wikisql_data/scripts/\n$ python annotate.py\n$ python prepare.py\n```",
+      "evidence_location": "26-30, Reproduce Preprocess Steps",
+      "confidence": "high",
+      "reason": "Defines the annotation and dataset preparation steps."
+    },
+    {
+      "field": "training_data_directory",
+      "value": "input/data",
+      "normalized_value": "input/data",
+      "evidence": "4. Put the train/dev/test data into ``input/data`` for model training/testing. ",
+      "evidence_location": "32, Reproduce Preprocess Steps",
+      "confidence": "high",
+      "reason": "Specifies the directory required for training and testing data."
+    },
+    {
+      "field": "relevance_files_directory",
+      "value": "input/nl2prog_input_support_rank",
+      "normalized_value": "input/nl2prog_input_support_rank",
+      "evidence": "5. Use relevance function to prepare relevance files and put them under ``input/nl2prog_input_support_rank`` ",
+      "evidence_location": "33, Reproduce Preprocess Steps",
+      "confidence": "high",
+      "reason": "Specifies where relevance files must be stored."
+    },
+    {
+      "field": "relevance_preparation_command",
+      "value": "python wikisql_data/scripts/relevance.py",
+      "normalized_value": "python wikisql_data/scripts/relevance.py",
+      "evidence": "```\npython wikisql_data/scripts/relevance.py\n```",
+      "evidence_location": "34-36, Reproduce Preprocess Steps",
+      "confidence": "high",
+      "reason": "Provides the command used to generate relevance files."
+    },
+    {
+      "field": "embedding_sources",
+      "value": "glove and character n-gram embeddings",
+      "normalized_value": "glove and character n-gram embeddings",
+      "evidence": "6. Download pretrained embeddings from [glove](https://nlp.stanford.edu/projects/glove/) and [character n-gram embeddings](http://www.logos.t.u-tokyo.ac.jp/~hassy/publications/arxiv2016jmt/) and put them under ``input/``",
+      "evidence_location": "37, Reproduce Preprocess Steps",
+      "confidence": "high",
+      "reason": "Identifies the pretrained embedding resources needed by the artifact."
+    },
+    {
+      "field": "v2_dataset_download_url",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t",
+      "evidence": "- A preprocessed dataset can be found [here](https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t), where the ``wikisql_train.dat``, ``wikisql_test.dat``, ``wikisql_dev.dat`` are the files that can be directly used in training. ",
+      "evidence_location": "41, Note we use a new preprocessed dataset (v2)",
+      "confidence": "high",
+      "reason": "Provides the download link for the newer preprocessed dataset."
+    },
+    {
+      "field": "v2_dataset_files",
+      "value": "wikisql_train.dat, wikisql_test.dat, wikisql_dev.dat",
+      "normalized_value": "wikisql_train.dat, wikisql_test.dat, wikisql_dev.dat",
+      "evidence": "where the ``wikisql_train.dat``, ``wikisql_test.dat``, ``wikisql_dev.dat`` are the files that can be directly used in training.",
+      "evidence_location": "41, Note we use a new preprocessed dataset (v2)",
+      "confidence": "high",
+      "reason": "Names the prepared files directly usable for training."
+    },
+    {
+      "field": "v2_dataset_version_note",
+      "value": "The version 2 dataset matches the v1.1 release of WikiSQL.",
+      "normalized_value": "The version 2 dataset matches the v1.1 release of WikiSQL.",
+      "evidence": "Note: the version 2 dataset matches the v1.1 release of [WikiSQL](https://github.com/salesforce/WikiSQL).",
+      "evidence_location": "43, Note we use a new preprocessed dataset (v2)",
+      "confidence": "high",
+      "reason": "Clarifies the relationship between the repository's v2 data and the WikiSQL release."
+    },
+    {
+      "field": "v2_preprocessing_script",
+      "value": "wikisql_data/scripts/prepare_v2.py (python3 required)",
+      "normalized_value": "wikisql_data/scripts/prepare_v2.py (python3 required)",
+      "evidence": "The preprocessing script ``wikisql_data/scripts/prepare_v2.py`` (python3 required) processes WikiSQL v1.1 raw data and table files to generate ``wikisql_train.dat``, ``wikisql_test.dat``, ``wikisql_dev.dat``.",
+      "evidence_location": "43, Note we use a new preprocessed dataset (v2)",
+      "confidence": "high",
+      "reason": "Identifies the script and interpreter requirement for reproducing v2 preprocessing."
+    },
+    {
+      "field": "software_requirements",
+      "value": "Tensorflow 1.4; python 3.6; Stanza",
+      "normalized_value": "Tensorflow 1.4; python 3.6; Stanza",
+      "evidence": "# Requirements \n- Tensorflow 1.4\n- python 3.6\n- [Stanza](https://github.com/stanfordnlp/stanza)",
+      "evidence_location": "129-132, Requirements",
+      "confidence": "high",
+      "reason": "Lists the explicitly stated software and NLP dependencies."
+    },
+    {
+      "field": "training_variant",
+      "value": "Meta + Sum loss training",
+      "normalized_value": "Meta + Sum loss training",
+      "evidence": "Meta + Sum loss training",
+      "evidence_location": "47, Training",
+      "confidence": "high",
+      "reason": "Names the documented training configuration."
+    },
+    {
+      "field": "training_command",
+      "value": "$ OUTDIR=output/meta_sum\n$ mkdir $OUTDIR\n$ python run.py --input-dir ./input \\\n    --output-dir $OUTDIR \\\n    --config config/nl2prog.meta_2_0.001.rank.config  \\\n    --meta_learning_rate 0.001 --gradient_clip_norm 5 \\\n    --num_layers 3  --num_meta_example 2 \\\n    --meta_learning --production",
+      "normalized_value": "$ OUTDIR=output/meta_sum $ mkdir $OUTDIR $ python run.py --input-dir ./input \\ --output-dir $OUTDIR \\ --config config/nl2prog.meta_2_0.001.rank.config \\ --meta_learning_rate 0.001 --gradient_clip_norm 5 \\ --num_layers 3 --num_meta_example 2 \\ --meta_learning --production",
+      "evidence": "```\n$ OUTDIR=output/meta_sum\n$ mkdir $OUTDIR\n$ python run.py --input-dir ./input \\\n    --output-dir $OUTDIR \\\n    --config config/nl2prog.meta_2_0.001.rank.config  \\\n    --meta_learning_rate 0.001 --gradient_clip_norm 5 \\\n    --num_layers 3  --num_meta_example 2 \\\n    --meta_learning --production\n```",
+      "evidence_location": "48-57, Training",
+      "confidence": "high",
+      "reason": "Provides the reproducible command for Meta + Sum loss training."
+    },
+    {
+      "field": "evaluation_data_handling",
+      "value": "Due to the preprocessing error, we ignore some development and test set examples and treat them as incorrect directly.",
+      "normalized_value": "Due to the preprocessing error, we ignore some development and test set examples and treat them as incorrect directly.",
+      "evidence": "- Due to the preprocessing error, we ignore some development (see ``input/data/wikisql_err_dev.dat``) and test (see ``input/data/wikisql_err_test.dat``) set examples, we treat them as incorrect directly.",
+      "evidence_location": "60, Evaluation",
+      "confidence": "high",
+      "reason": "Documents an important caveat affecting evaluation and reproducibility."
+    },
+    {
+      "field": "development_evaluation_command",
+      "value": "$ mkdir -p ${OUTDIR}_dev\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_dev \\ \n    --config config/nl2prog.meta_2_0.001.rank.devconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production",
+      "normalized_value": "$ mkdir -p ${OUTDIR}_dev $ python run.py --input-dir ./input --output-dir ${OUTDIR}_dev \\ --config config/nl2prog.meta_2_0.001.rank.devconfig \\ --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40 --production",
+      "evidence": "```\n$ mkdir -p ${OUTDIR}_dev\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_dev \\ \n    --config config/nl2prog.meta_2_0.001.rank.devconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production\n```",
+      "evidence_location": "64-69, Evaluation",
+      "confidence": "high",
+      "reason": "Defines how to run development-set inference/evaluation with a checkpoint."
+    },
+    {
+      "field": "development_logical_form_accuracy",
+      "value": "0.631383269546",
+      "normalized_value": "0.631383269546",
+      "evidence": "    Logical Form Accuracy: 0.631383269546",
+      "evidence_location": "78, Development set execution",
+      "confidence": "high",
+      "reason": "Reports the documented development-set logical form accuracy."
+    },
+    {
+      "field": "development_execute_accuracy",
+      "value": "0.68277747403",
+      "normalized_value": "0.68277747403",
+      "evidence": "    Execute Accuracy: 0.68277747403",
+      "evidence_location": "79, Development set execution",
+      "confidence": "high",
+      "reason": "Reports the documented development-set execution accuracy."
+    },
+    {
+      "field": "test_evaluation_command",
+      "value": "$ mkdir -p ${OUTDIR}_test\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \\ \n    --config config/nl2prog.meta_2_0.001.rank.testconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production",
+      "normalized_value": "$ mkdir -p ${OUTDIR}_test $ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \\ --config config/nl2prog.meta_2_0.001.rank.testconfig \\ --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40 --production",
+      "evidence": "```\n$ mkdir -p ${OUTDIR}_test\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \\ \n    --config config/nl2prog.meta_2_0.001.rank.testconfig \\\n    --meta_learning --test-model model_zoo/meta_sum/table_nl_prog-40  --production\n```",
+      "evidence_location": "82-87, Evaluation",
+      "confidence": "high",
+      "reason": "Defines how to run test-set inference/evaluation with the Meta + Sum checkpoint."
+    },
+    {
+      "field": "test_logical_form_accuracy",
+      "value": "0.628073829775",
+      "normalized_value": "0.628073829775",
+      "evidence": "    Logical Form Accuracy: 0.628073829775",
+      "evidence_location": "96, Test set execution",
+      "confidence": "high",
+      "reason": "Reports the documented test-set logical form accuracy."
+    },
+    {
+      "field": "test_execute_accuracy",
+      "value": "0.680379563733",
+      "normalized_value": "0.680379563733",
+      "evidence": "    Execute Accuracy: 0.680379563733",
+      "evidence_location": "97, Test set execution",
+      "confidence": "high",
+      "reason": "Reports the documented test-set execution accuracy."
+    },
+    {
+      "field": "baseline_test_evaluation_command",
+      "value": "$ OUTDIR=output/base_sum\n$ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \\\n     --config config/nl2prog.testconfig --production  \\\n     --test-model model_zoo/base_sum/table_nl_prog-79 --production",
+      "normalized_value": "$ OUTDIR=output/base_sum $ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \\ --config config/nl2prog.testconfig --production \\ --test-model model_zoo/base_sum/table_nl_prog-79 --production",
+      "evidence": "  ```\n  $ OUTDIR=output/base_sum\n  $ python run.py --input-dir ./input --output-dir ${OUTDIR}_test \\\n     --config config/nl2prog.testconfig --production  \\\n     --test-model model_zoo/base_sum/table_nl_prog-79 --production\n  ```",
+      "evidence_location": "101-106, Baseline model on test set",
+      "confidence": "high",
+      "reason": "Provides the reproducible command for the baseline test evaluation."
+    },
+    {
+      "field": "baseline_test_logical_form_accuracy",
+      "value": "0.614592374009",
+      "normalized_value": "0.614592374009",
+      "evidence": "    Logical Form Accuracy: 0.614592374009",
+      "evidence_location": "116, Baseline model test execution",
+      "confidence": "high",
+      "reason": "Reports the documented baseline test logical form accuracy."
+    },
+    {
+      "field": "baseline_test_execute_accuracy",
+      "value": "0.668055314471",
+      "normalized_value": "0.668055314471",
+      "evidence": "    Execute Accuracy: 0.668055314471",
+      "evidence_location": "117, Baseline model test execution",
+      "confidence": "high",
+      "reason": "Reports the documented baseline test execution accuracy."
+    },
+    {
+      "field": "pretrained_checkpoint_download_url",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz",
+      "evidence": "- Download [pretrained model checkpoints](https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz) to ``model_zoo/`` ",
+      "evidence_location": "122, Pre-trained Models",
+      "confidence": "high",
+      "reason": "Provides access to pretrained model checkpoints."
+    },
+    {
+      "field": "pretrained_checkpoint_extraction_command",
+      "value": "tar -xvjf model_zoo.tar.bz2",
+      "normalized_value": "tar -xvjf model_zoo.tar.bz2",
+      "evidence": "- Run ``tar -xvjf model_zoo.tar.bz2`` to extract pretrain models.",
+      "evidence_location": "123, Pre-trained Models",
+      "confidence": "high",
+      "reason": "Defines how to unpack the downloaded pretrained models."
+    },
+    {
+      "field": "meta_sum_model_directory",
+      "value": "model_zoo/meta_sum",
+      "normalized_value": "model_zoo/meta_sum",
+      "evidence": "  + Meta + Sum loss: `model_zoo/meta_sum`",
+      "evidence_location": "125, Pre-trained Models",
+      "confidence": "high",
+      "reason": "Identifies the directory containing the Meta + Sum pretrained model."
+    },
+    {
+      "field": "base_sum_model_directory",
+      "value": "model_zoo/base_sum",
+      "normalized_value": "model_zoo/base_sum",
+      "evidence": "  + Base Sum loss: `model_zoo/base_sum`",
+      "evidence_location": "126, Pre-trained Models",
+      "confidence": "high",
+      "reason": "Identifies the directory containing the Base Sum pretrained model."
+    },
+    {
+      "field": "primary_citation",
+      "value": "@inproceedings{pshuang2018PT-MAML,\n  author    = {Po{-}Sen Huang and\n               Chenglong Wang and\n               Rishabh Singh and\n               Wen-tau Yih and\n               Xiaodong He},\n  title     = {Natural Language to Structured Query Generation via Meta-Learning},\n  booktitle = {NAACL},\n  year      = {2018},\n}",
+      "normalized_value": "@inproceedings{pshuang2018PT-MAML, author = {Po{-}Sen Huang and Chenglong Wang and Rishabh Singh and Wen-tau Yih and Xiaodong He}, title = {Natural Language to Structured Query Generation via Meta-Learning}, booktitle = {NAACL}, year = {2018}, }",
+      "evidence": "```\n@inproceedings{pshuang2018PT-MAML,\n  author    = {Po{-}Sen Huang and\n               Chenglong Wang and\n               Rishabh Singh and\n               Wen-tau Yih and\n               Xiaodong He},\n  title     = {Natural Language to Structured Query Generation via Meta-Learning},\n  booktitle = {NAACL},\n  year      = {2018},\n}\n```",
+      "evidence_location": "141-152, Citation",
+      "confidence": "high",
+      "reason": "Provides a ready-to-use citation for the primary paper."
+    },
+    {
+      "field": "execution_guided_citation",
+      "value": "@inproceedings{2018executionguided,\n  author    = {Chenglong Wang and\n               Po{-}Sen Huang and\n               Alex Polozov and\n               Marc Brockschmidt and \n               Rishabh Singh},\n  title = \"{Execution-Guided Neural Program Decoding}\",\n  booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)},\n  year      = {2018}\n}",
+      "normalized_value": "@inproceedings{2018executionguided, author = {Chenglong Wang and Po{-}Sen Huang and Alex Polozov and Marc Brockschmidt and Rishabh Singh}, title = \"{Execution-Guided Neural Program Decoding}\", booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)}, year = {2018} }",
+      "evidence": "```\n@inproceedings{2018executionguided,\n  author    = {Chenglong Wang and\n               Po{-}Sen Huang and\n               Alex Polozov and\n               Marc Brockschmidt and \n               Rishabh Singh},\n  title = \"{Execution-Guided Neural Program Decoding}\",\n  booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)},\n  year      = {2018}\n}\n```",
+      "evidence_location": "155-166, Citation",
+      "confidence": "high",
+      "reason": "Provides a ready-to-use citation for the execution-guided decoding work referenced by the README."
+    },
+    {
+      "field": "sql_text_citation",
+      "value": "@techreport{chenglong,\n  author = {Wang, Chenglong and Brockschmidt, Marc and Singh, Rishabh},\n  title = {Pointing Out {SQL} Queries From Text},\n  number = {MSR-TR-2017-45},\n  year = {2017},\n  month = {November},\n  url = {https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/},\n}",
+      "normalized_value": "@techreport{chenglong, author = {Wang, Chenglong and Brockschmidt, Marc and Singh, Rishabh}, title = {Pointing Out {SQL} Queries From Text}, number = {MSR-TR-2017-45}, year = {2017}, month = {November}, url = {https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/}, }",
+      "evidence": "```\n@techreport{chenglong,\n  author = {Wang, Chenglong and Brockschmidt, Marc and Singh, Rishabh},\n  title = {Pointing Out {SQL} Queries From Text},\n  number = {MSR-TR-2017-45},\n  year = {2017},\n  month = {November},\n  url = {https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/},\n}\n```",
+      "evidence_location": "172-181, Citation",
+      "confidence": "high",
+      "reason": "Provides a ready-to-use citation for the SQL query extraction work."
+    },
+    {
+      "field": "contributor_license_agreement",
+      "value": "Most contributions require you to agree to a Contributor License Agreement (CLA)",
+      "normalized_value": "Most contributions require you to agree to a Contributor License Agreement (CLA)",
+      "evidence": "This project welcomes contributions and suggestions.  Most contributions require you to agree to a\nContributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us\nthe rights to use your contribution. For details, visit https://cla.microsoft.com.",
+      "evidence_location": "187-189, Contributing",
+      "confidence": "high",
+      "reason": "Documents a legal contribution requirement relevant to reuse and contribution."
+    }
+  ]
+}

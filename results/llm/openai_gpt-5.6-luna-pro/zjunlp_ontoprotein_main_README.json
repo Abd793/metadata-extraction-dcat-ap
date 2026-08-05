@@ -1,0 +1,364 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "OntoProtein",
+      "normalized_value": "OntoProtein",
+      "evidence": "# OntoProtein",
+      "evidence_location": "1 (# OntoProtein)",
+      "confidence": "high",
+      "reason": "Identifies the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2201.11147.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2201.11147.pdf",
+      "evidence": "[OntoProtein: Protein Pretraining With Ontology Embedding](https://arxiv.org/pdf/2201.11147.pdf)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides direct access to the paper implemented by the artifact."
+    },
+    {
+      "field": "description",
+      "value": "OntoProtein is an effective method that make use of structure in GO (Gene Ontology) into text-enhanced protein pre-training model.",
+      "normalized_value": "OntoProtein is an effective method that make use of structure in GO (Gene Ontology) into text-enhanced protein pre-training model",
+      "evidence": "This is the implement of the ICLR2022 paper \"[OntoProtein: Protein Pretraining With Ontology Embedding](https://arxiv.org/pdf/2201.11147.pdf)\". OntoProtein is an effective method that make use of structure in GO (Gene Ontology) into text-enhanced protein pre-training model.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "States the artifact's purpose and high-level approach."
+    },
+    {
+      "field": "model_type",
+      "value": "knowledge-enhanced protein language model",
+      "normalized_value": "knowledge-enhanced protein language model",
+      "evidence": "In this work we present OntoProtein, a knowledge-enhanced protein language model that jointly optimize the KE and MLM objectives, which bring excellent improvements to a wide range of protein tasks. And we introduce **ProteinKG25**, a new large-scale KG dataset, promting the research on protein language pre-training.",
+      "evidence_location": "25 (## Overview)",
+      "confidence": "high",
+      "reason": "Classifies the artifact's central model."
+    },
+    {
+      "field": "training_objectives",
+      "value": "KE and MLM objectives",
+      "normalized_value": "KE and MLM objectives",
+      "evidence": "In this work we present OntoProtein, a knowledge-enhanced protein language model that jointly optimize the KE and MLM objectives, which bring excellent improvements to a wide range of protein tasks. And we introduce **ProteinKG25**, a new large-scale KG dataset, promting the research on protein language pre-training.",
+      "evidence_location": "25 (## Overview)",
+      "confidence": "high",
+      "reason": "Names the two objectives jointly optimized during pre-training."
+    },
+    {
+      "field": "data_usage",
+      "value": "pretraining OntoProtein, fine-tuning on protein-related tasks and inference",
+      "normalized_value": "pretraining OntoProtein, fine-tuning on protein-related tasks and inference",
+      "evidence": "For pretraining OntoProtein, fine-tuning on protein-related tasks and inference, we provide acquirement approach of related data.",
+      "evidence_location": "64 (## Data preparation)",
+      "confidence": "high",
+      "reason": "Defines the intended uses of the provided data."
+    },
+    {
+      "field": "dataset_name",
+      "value": "ProteinKG25",
+      "normalized_value": "ProteinKG25",
+      "evidence": "To incorporate Gene Ontology knowledge into language models and train OntoProtein, we construct [ProteinKG25](https://zjunlp.github.io/project/ProteinKG25/), a large-scale KG dataset with aligned descriptions and protein sequences respectively to GO terms and protein entities.",
+      "evidence_location": "68 (### Pre-training data)",
+      "confidence": "high",
+      "reason": "Names the large-scale knowledge graph dataset used for pre-training."
+    },
+    {
+      "field": "dataset_description",
+      "value": "a large-scale KG dataset with aligned descriptions and protein sequences respectively to GO terms and protein entities",
+      "normalized_value": "a large-scale KG dataset with aligned descriptions and protein sequences respectively to GO terms and protein entities",
+      "evidence": "To incorporate Gene Ontology knowledge into language models and train OntoProtein, we construct [ProteinKG25](https://zjunlp.github.io/project/ProteinKG25/), a large-scale KG dataset with aligned descriptions and protein sequences respectively to GO terms and protein entities.",
+      "evidence_location": "68 (### Pre-training data)",
+      "confidence": "high",
+      "reason": "Explains the dataset's contents and alignment."
+    },
+    {
+      "field": "dataset_project_url",
+      "value": "https://zjunlp.github.io/project/ProteinKG25/",
+      "normalized_value": "https://zjunlp.github.io/project/ProteinKG25/",
+      "evidence": "[ProteinKG25](https://zjunlp.github.io/project/ProteinKG25/)",
+      "evidence_location": "68",
+      "confidence": "high",
+      "reason": "Provides the dataset project page."
+    },
+    {
+      "field": "dataset_download_url",
+      "value": "https://drive.google.com/file/d/1iTC2-zbvYZCDhWM_wxRufCvV6vvPk8HR/view",
+      "normalized_value": "https://drive.google.com/file/d/1iTC2-zbvYZCDhWM_wxRufCvV6vvPk8HR/view",
+      "evidence": "We have released our prepared data **ProteinKG25** in [Google Drive](https://drive.google.com/file/d/1iTC2-zbvYZCDhWM_wxRufCvV6vvPk8HR/view).",
+      "evidence_location": "74 (#### Download released data)",
+      "confidence": "high",
+      "reason": "Provides the released pre-training data download location."
+    },
+    {
+      "field": "dataset_file",
+      "value": "go_def.txt",
+      "normalized_value": "go_def.txt",
+      "evidence": "- `go_def.txt`: GO term definition, which is text data. We concatenate GO term name and corresponding definition by colon.",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "Identifies the file containing GO term text definitions."
+    },
+    {
+      "field": "dataset_file",
+      "value": "go_type.txt",
+      "normalized_value": "go_type.txt",
+      "evidence": "- `go_type.txt`: The ontology type which the specific GO term belong to. The index is correponding to GO ID in `go2id.txt` file.",
+      "evidence_location": "79",
+      "confidence": "high",
+      "reason": "Identifies the file containing ontology types for GO terms."
+    },
+    {
+      "field": "dataset_file",
+      "value": "go2id.txt",
+      "normalized_value": "go2id.txt",
+      "evidence": "- `go2id.txt`: The ID mapping of GO terms.",
+      "evidence_location": "80",
+      "confidence": "high",
+      "reason": "Identifies the GO-term ID mapping file."
+    },
+    {
+      "field": "dataset_file",
+      "value": "go_go_triplet.txt",
+      "normalized_value": "go_go_triplet.txt",
+      "evidence": "- `go_go_triplet.txt`: GO-GO triplet data. The triplet data constitutes the interior structure of Gene Ontology. The data format is < `h r t`>, where `h` and `t` are respectively head entity and tail entity, both GO term nodes. `r` is relation between two GO terms, e.g. `is_a` and `part_of`.",
+      "evidence_location": "81",
+      "confidence": "high",
+      "reason": "Identifies the file encoding the internal GO graph structure."
+    },
+    {
+      "field": "dataset_file",
+      "value": "protein_seq.txt",
+      "normalized_value": "protein_seq.txt",
+      "evidence": "- `protein_seq.txt`: Protein sequence data. The whole protein sequence data are used as inputs in MLM module and protein representations in KE module.",
+      "evidence_location": "82",
+      "confidence": "high",
+      "reason": "Identifies the protein sequence input file and its model uses."
+    },
+    {
+      "field": "dataset_file",
+      "value": "protein2id.txt",
+      "normalized_value": "protein2id.txt",
+      "evidence": "- `protein2id.txt`: The ID mapping of proteins.",
+      "evidence_location": "83",
+      "confidence": "high",
+      "reason": "Identifies the protein ID mapping file."
+    },
+    {
+      "field": "dataset_file",
+      "value": "protein_go_train_triplet.txt",
+      "normalized_value": "protein_go_train_triplet.txt",
+      "evidence": "- `protein_go_train_triplet.txt`: Protein-GO triplet data. The triplet data constitutes the exterior structure of Gene Ontology, i.e. Gene annotation. The data format is <`h r t`>, where `h` and `t` are respectively head entity and tail entity. It is different from GO-GO triplet that a triplet in Protein-GO triplet means a specific gene annotation, where the head entity is a specific protein and tail entity is the corresponding GO term, e.g. protein binding function. `r` is relation between the protein and GO term.",
+      "evidence_location": "84",
+      "confidence": "high",
+      "reason": "Identifies the protein-to-GO annotation triplet file."
+    },
+    {
+      "field": "dataset_file",
+      "value": "relation2id.txt",
+      "normalized_value": "relation2id.txt",
+      "evidence": "- `relation2id.txt`:  The ID mapping of relations. We mix relations in two triplet relation.",
+      "evidence_location": "85",
+      "confidence": "high",
+      "reason": "Identifies the relation ID mapping file."
+    },
+    {
+      "field": "pretraining_data_generation_environment",
+      "value": "python3.8 / biopython 1.37 / goatools",
+      "normalized_value": "python3.8 / biopython 1.37 / goatools",
+      "evidence": "python3.8 / biopython 1.37 / goatools",
+      "evidence_location": "35 (### Environment for pre-training data generation)",
+      "confidence": "high",
+      "reason": "Specifies the environment for generating pre-training data."
+    },
+    {
+      "field": "goatools_parser_change",
+      "value": "# line 132\nelif line[:5] == \"def: \":\n    rec_curr.definition = line[5:]\n\n# line 169\nself.definition = \"\"",
+      "normalized_value": "# line 132 elif line[:5] == \"def: \": rec_curr.definition = line[5:] # line 169 self.definition = \"\"",
+      "evidence": "```python\n# line 132\nelif line[:5] == \"def: \":\n    rec_curr.definition = line[5:]\n\n# line 169\nself.definition = \"\"\n```",
+      "evidence_location": "37-46 (### Environment for pre-training data generation)",
+      "confidence": "high",
+      "reason": "Provides the explicit goatools modifications needed to extract GO definitions."
+    },
+    {
+      "field": "ontoprotein_pretraining_environment",
+      "value": "python3.8 / pytorch 1.9 / transformer 4.5.1+ / deepspeed 0.5.1/ lmdb",
+      "normalized_value": "python3.8 / pytorch 1.9 / transformer 4.5.1+ / deepspeed 0.5.1/ lmdb",
+      "evidence": "python3.8 / pytorch 1.9 / transformer 4.5.1+ / deepspeed 0.5.1/ lmdb /",
+      "evidence_location": "50 (### Environment for OntoProtein pre-training)",
+      "confidence": "high",
+      "reason": "Specifies dependencies for OntoProtein pre-training."
+    },
+    {
+      "field": "protein_tasks_environment",
+      "value": "python3.8 / pytorch 1.9 / transformer 4.5.1+ / lmdb / tape_proteins",
+      "normalized_value": "python3.8 / pytorch 1.9 / transformer 4.5.1+ / lmdb / tape_proteins",
+      "evidence": "python3.8 / pytorch 1.9 / transformer 4.5.1+ / lmdb / tape_proteins",
+      "evidence_location": "54 (### Environment for protein-related tasks)",
+      "confidence": "high",
+      "reason": "Specifies dependencies for downstream protein-related tasks."
+    },
+    {
+      "field": "pretraining_raw_data_file",
+      "value": "go.obo",
+      "normalized_value": "go.obo",
+      "evidence": "- `go.obo`: the structure data of Gene Ontology. The download link and detailed format see in [Gene Ontology](http://geneontology.org/docs/download-ontology/)`",
+      "evidence_location": "91 (#### Generate your own pre-training data)",
+      "confidence": "high",
+      "reason": "Identifies the raw Gene Ontology structure input."
+    },
+    {
+      "field": "pretraining_raw_data_file",
+      "value": "uniprot_sprot.dat",
+      "normalized_value": "uniprot_sprot.dat",
+      "evidence": "- `uniprot_sprot.dat`: protein Swiss-Prot database. [[link]](https://www.uniprot.org/downloads)",
+      "evidence_location": "92 (#### Generate your own pre-training data)",
+      "confidence": "high",
+      "reason": "Identifies the raw Swiss-Prot protein database input."
+    },
+    {
+      "field": "pretraining_raw_data_file",
+      "value": "goa_uniprot_all.gaf",
+      "normalized_value": "goa_uniprot_all.gaf",
+      "evidence": "- `goa_uniprot_all.gaf`: Gene Annotation data. [[link]](https://ftp.ebi.ac.uk/pub/databases/GO/goa/old/UNIPROT/)",
+      "evidence_location": "93 (#### Generate your own pre-training data)",
+      "confidence": "high",
+      "reason": "Identifies the raw gene annotation input."
+    },
+    {
+      "field": "pretraining_data_generation_command",
+      "value": "python tools/gen_onto_protein_data.py",
+      "normalized_value": "python tools/gen_onto_protein_data.py",
+      "evidence": "```bash\npython tools/gen_onto_protein_data.py\n```",
+      "evidence_location": "95-99 (#### Generate your own pre-training data)",
+      "confidence": "high",
+      "reason": "Provides the command for generating pre-training data from raw inputs."
+    },
+    {
+      "field": "downstream_dataset_download_url",
+      "value": "https://drive.google.com/file/d/12d5wzNcuPxPyW8KIzwmvGg2dOKo0K0ag/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/12d5wzNcuPxPyW8KIzwmvGg2dOKo0K0ag/view?usp=sharing",
+      "evidence": "Our experiments involved with several protein-related downstream tasks. [[Download datasets]](https://drive.google.com/file/d/12d5wzNcuPxPyW8KIzwmvGg2dOKo0K0ag/view?usp=sharing)",
+      "evidence_location": "101-103 (### Downstream task data)",
+      "confidence": "high",
+      "reason": "Provides access to the downstream task datasets."
+    },
+    {
+      "field": "pretraining_base_model_links",
+      "value": "[ProtBERT](https://huggingface.co/Rostlab/prot_bert) and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext)",
+      "normalized_value": "[ProtBERT](https://huggingface.co/Rostlab/prot_bert) and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext)",
+      "evidence": "You can pre-training your own OntoProtein based above pretraining dataset. Before pretraining OntoProtein, you need to download two pretrained model, respectively [ProtBERT](https://huggingface.co/Rostlab/prot_bert) and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext) and save them in `data/model_data/ProtBERT` and `data/model_data/PubMedBERT`. We provide the script `bash script/run_pretrain.sh` to run pre-training. And the detailed arguments are all listed in `src/training_args.py`, you can set pre-training hyperparameters to your  need.",
+      "evidence_location": "105-107 (## Protein pre-training model)",
+      "confidence": "high",
+      "reason": "Identifies the two pretrained models required before OntoProtein pre-training."
+    },
+    {
+      "field": "pretraining_model_paths",
+      "value": "data/model_data/ProtBERT and data/model_data/PubMedBERT",
+      "normalized_value": "data/model_data/ProtBERT and data/model_data/PubMedBERT",
+      "evidence": "You can pre-training your own OntoProtein based above pretraining dataset. Before pretraining OntoProtein, you need to download two pretrained model, respectively [ProtBERT](https://huggingface.co/Rostlab/prot_bert) and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext) and save them in `data/model_data/ProtBERT` and `data/model_data/PubMedBERT`. We provide the script `bash script/run_pretrain.sh` to run pre-training. And the detailed arguments are all listed in `src/training_args.py`, you can set pre-training hyperparameters to your  need.",
+      "evidence_location": "105-107 (## Protein pre-training model)",
+      "confidence": "high",
+      "reason": "Specifies where the required base models must be saved."
+    },
+    {
+      "field": "pretraining_command",
+      "value": "bash script/run_pretrain.sh",
+      "normalized_value": "bash script/run_pretrain.sh",
+      "evidence": "You can pre-training your own OntoProtein based above pretraining dataset. Before pretraining OntoProtein, you need to download two pretrained model, respectively [ProtBERT](https://huggingface.co/Rostlab/prot_bert) and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext) and save them in `data/model_data/ProtBERT` and `data/model_data/PubMedBERT`. We provide the script `bash script/run_pretrain.sh` to run pre-training. And the detailed arguments are all listed in `src/training_args.py`, you can set pre-training hyperparameters to your  need.",
+      "evidence_location": "107 (## Protein pre-training model)",
+      "confidence": "high",
+      "reason": "Provides the command for running OntoProtein pre-training."
+    },
+    {
+      "field": "pretraining_config_file",
+      "value": "src/training_args.py",
+      "normalized_value": "src/training_args.py",
+      "evidence": "You can pre-training your own OntoProtein based above pretraining dataset. Before pretraining OntoProtein, you need to download two pretrained model, respectively [ProtBERT](https://huggingface.co/Rostlab/prot_bert) and [PubMedBERT](https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext) and save them in `data/model_data/ProtBERT` and `data/model_data/PubMedBERT`. We provide the script `bash script/run_pretrain.sh` to run pre-training. And the detailed arguments are all listed in `src/training_args.py`, you can set pre-training hyperparameters to your  need.",
+      "evidence_location": "107 (## Protein pre-training model)",
+      "confidence": "high",
+      "reason": "Identifies the file containing detailed pre-training arguments."
+    },
+    {
+      "field": "released_checkpoint_url",
+      "value": "https://huggingface.co/zjunlp/OntoProtein",
+      "normalized_value": "https://huggingface.co/zjunlp/OntoProtein",
+      "evidence": "We have released the checkpoint of pretrained model on the model library of `Hugging Face`. [[Download model]](https://huggingface.co/zjunlp/OntoProtein).",
+      "evidence_location": "109-112 (## Usage for protein-related tasks)",
+      "confidence": "high",
+      "reason": "Provides access to the released pretrained checkpoint."
+    },
+    {
+      "field": "downstream_task_runner",
+      "value": "run_downstream.py",
+      "normalized_value": "run_downstream.py",
+      "evidence": "- `run_downstream.py`: support `{ss3, ss8, contact, remote_homology, fluorescence, stability}` tasks;",
+      "evidence_location": "116-118 (### Running examples)",
+      "confidence": "high",
+      "reason": "Identifies the script used to run downstream tasks."
+    },
+    {
+      "field": "downstream_tasks",
+      "value": "{ss3, ss8, contact, remote_homology, fluorescence, stability}",
+      "normalized_value": "{ss3, ss8, contact, remote_homology, fluorescence, stability}",
+      "evidence": "- `run_downstream.py`: support `{ss3, ss8, contact, remote_homology, fluorescence, stability}` tasks;",
+      "evidence_location": "118 (### Running examples)",
+      "confidence": "high",
+      "reason": "Enumerates the supported protein-related tasks."
+    },
+    {
+      "field": "task_training_shell_command",
+      "value": "bash script/run_{task}.sh",
+      "normalized_value": "bash script/run_{task}.sh",
+      "evidence": "Running shell files: `bash script/run_{task}.sh`, and the contents of shell files are as follow:",
+      "evidence_location": "120-122 (#### Training models)",
+      "confidence": "high",
+      "reason": "Provides the shell command pattern for training each task."
+    },
+    {
+      "field": "downstream_training_command",
+      "value": "bash run_main.sh \\\n    --model model_data/ProtBertModel \\\n    --output_file ss3-ProtBert \\\n    --task_name ss3 \\\n    --do_train True \\\n    --epoch 5 \\\n    --optimizer AdamW \\\n    --per_device_batch_size 2 \\\n    --gradient_accumulation_steps 8 \\\n    --eval_step 100 \\\n    --eval_batchsize 4 \\\n    --warmup_ratio 0.08 \\\n    --frozen_bert False",
+      "normalized_value": "bash run_main.sh \\ --model model_data/ProtBertModel \\ --output_file ss3-ProtBert \\ --task_name ss3 \\ --do_train True \\ --epoch 5 \\ --optimizer AdamW \\ --per_device_batch_size 2 \\ --gradient_accumulation_steps 8 \\ --eval_step 100 \\ --eval_batchsize 4 \\ --warmup_ratio 0.08 \\ --frozen_bert False",
+      "evidence": "```shell\nbash run_main.sh \\\n    --model model_data/ProtBertModel \\\n    --output_file ss3-ProtBert \\\n    --task_name ss3 \\\n    --do_train True \\\n    --epoch 5 \\\n    --optimizer AdamW \\\n    --per_device_batch_size 2 \\\n    --gradient_accumulation_steps 8 \\\n    --eval_step 100 \\\n    --eval_batchsize 4 \\\n    --warmup_ratio 0.08 \\\n    --frozen_bert False\n```",
+      "evidence_location": "124-138 (#### Training models)",
+      "confidence": "high",
+      "reason": "Provides a concrete downstream training configuration and command."
+    },
+    {
+      "field": "best_checkpoint_location",
+      "value": "OUTPUT_DIR/",
+      "normalized_value": "OUTPUT_DIR/",
+      "evidence": "**Notice: the best checkpoint is saved in** `OUTPUT_DIR/`.",
+      "evidence_location": "155",
+      "confidence": "high",
+      "reason": "Specifies where the best downstream checkpoint is saved."
+    },
+    {
+      "field": "contact_prediction_metric",
+      "value": "P@L",
+      "normalized_value": "P@L",
+      "evidence": "Specially, in library `tape_proteins`, it only implements the calculation of metric `P@L` for the contact prediction task. So, for reporting the metrics P@K taking different K values, in which the metrics P@K are precisions for the top K contacts, we made some changes in the library. Detailed changes could be seen in [[isssue #8]](https://github.com/zjunlp/OntoProtein/issues/8#issuecomment-1109975025)",
+      "evidence_location": "56 (### Environment for protein-related tasks)",
+      "confidence": "high",
+      "reason": "Names the contact prediction metric implemented by the referenced library."
+    },
+    {
+      "field": "contact_prediction_metric_definition",
+      "value": "P@K are precisions for the top K contacts",
+      "normalized_value": "P@K are precisions for the top K contacts",
+      "evidence": "Specially, in library `tape_proteins`, it only implements the calculation of metric `P@L` for the contact prediction task. So, for reporting the metrics P@K taking different K values, in which the metrics P@K are precisions for the top K contacts, we made some changes in the library. Detailed changes could be seen in [[isssue #8]](https://github.com/zjunlp/OntoProtein/issues/8#issuecomment-1109975025)",
+      "evidence_location": "56 (### Environment for protein-related tasks)",
+      "confidence": "high",
+      "reason": "Defines how the P@K contact prediction metric is interpreted."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{\nzhang2022ontoprotein,\ntitle={OntoProtein: Protein Pretraining With Gene Ontology Embedding},\nauthor={Ningyu Zhang and Zhen Bi and Xiaozhuan Liang and Siyuan Cheng and Haosen Hong and Shumin Deng and Qiang Zhang and Jiazhang Lian and Huajun Chen},\nbooktitle={International Conference on Learning Representations},\nyear={2022},\nurl={https://openreview.net/forum?id=yfe1VMYAXa4}\n}",
+      "normalized_value": "@inproceedings{ zhang2022ontoprotein, title={OntoProtein: Protein Pretraining With Gene Ontology Embedding}, author={Ningyu Zhang and Zhen Bi and Xiaozhuan Liang and Siyuan Cheng and Haosen Hong and Shumin Deng and Qiang Zhang and Jiazhang Lian and Huajun Chen}, booktitle={International Conference on Learning Representations}, year={2022}, url={https://openreview.net/forum?id=yfe1VMYAXa4} }",
+      "evidence": "```\n@inproceedings{\nzhang2022ontoprotein,\ntitle={OntoProtein: Protein Pretraining With Gene Ontology Embedding},\nauthor={Ningyu Zhang and Zhen Bi and Xiaozhuan Liang and Siyuan Cheng and Haosen Hong and Shumin Deng and Qiang Zhang and Jiazhang Lian and Huajun Chen},\nbooktitle={International Conference on Learning Representations},\nyear={2022},\nurl={https://openreview.net/forum?id=yfe1VMYAXa4}\n}\n```",
+      "evidence_location": "157-167 (## How to Cite)",
+      "confidence": "high",
+      "reason": "Provides the artifact's recommended bibliographic citation."
+    }
+  ]
+}

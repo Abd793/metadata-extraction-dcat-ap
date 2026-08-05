@@ -1,0 +1,202 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PSTR (CVPR2022)",
+      "normalized_value": "PSTR (CVPR2022)",
+      "evidence": "# PSTR (CVPR2022)",
+      "evidence_location": "1; header",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its associated conference year."
+    },
+    {
+      "field": "artifact_description",
+      "value": "This code is an official implementation of \"[*PSTR: End-to-End One-Step Person Search With Transformers (CVPR2022)*](https://arxiv.org/abs/2204.03340)\".",
+      "normalized_value": "This code is an official implementation of \"[*PSTR: End-to-End One-Step Person Search With Transformers (CVPR2022)*](https://arxiv.org/abs/2204.03340)\".",
+      "evidence": "- This code is an official implementation of \"[*PSTR: End-to-End One-Step Person Search With Transformers (CVPR2022)*](https://arxiv.org/abs/2204.03340)\".",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Explicitly states what the repository implements and links to the paper."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2204.03340",
+      "normalized_value": "https://arxiv.org/abs/2204.03340",
+      "evidence": "- This code is an official implementation of \"[*PSTR: End-to-End One-Step Person Search With Transformers (CVPR2022)*](https://arxiv.org/abs/2204.03340)\".",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Provides the associated paper access link."
+    },
+    {
+      "field": "method",
+      "value": "End-to-end one-step person search with Transformers, which does not requre NMS post-processing.",
+      "normalized_value": "End-to-end one-step person search with Transformers, which does not requre NMS post-processing.",
+      "evidence": "- **End-to-end one-step person search** with Transformers, which does not requre NMS post-processing.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Describes the core task, model approach, and post-processing characteristic."
+    },
+    {
+      "field": "pretrained_backbones",
+      "value": "ResNet50, ResNet50-DCN, and PVTv2b2",
+      "normalized_value": "ResNet50, ResNet50-DCN, and PVTv2b2",
+      "evidence": "- **Pre-trained models** with ResNet50, ResNet50-DCN, and PVTv2b2.",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Lists the available pretrained model backbones."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/JialeCao001/PSTR.git",
+      "normalized_value": "https://github.com/JialeCao001/PSTR.git",
+      "evidence": "git clone https://github.com/JialeCao001/PSTR.git",
+      "evidence_location": "20-21; Installation code block",
+      "confidence": "high",
+      "reason": "Provides the repository URL needed to obtain the artifact."
+    },
+    {
+      "field": "software_environment",
+      "value": "cuda11.1 and PyTorch1.8.0 (or PyTorch1.9.0)",
+      "normalized_value": "cuda11.1 and PyTorch1.8.0 (or PyTorch1.9.0)",
+      "evidence": "- We install this project using cuda11.1 and PyTorch1.8.0 (or PyTorch1.9.0) as follows.",
+      "evidence_location": "15-16; Installation",
+      "confidence": "high",
+      "reason": "Specifies the stated CUDA and PyTorch environment for installation."
+    },
+    {
+      "field": "installation_commands",
+      "value": "```bash\n# Download this project\ngit clone https://github.com/JialeCao001/PSTR.git\n\n# Create a new conda enviroment for PSTR\nconda create -n pstr python=3.7 -y\nconda activate pstr\npip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html\n#conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge\n\n# Comiple mmcv, which has been included in this project\ncd PSTR/mmcv\nMMCV_WITH_OPS=1 pip install -e .\n\n# Comiple this project \ncd PSTR\npip install -r requirements/build.txt\npip install -v -e .  # or \"python setup.py develop\"\npip install sklearn\n```",
+      "normalized_value": "```bash # Download this project git clone https://github.com/JialeCao001/PSTR.git # Create a new conda enviroment for PSTR conda create -n pstr python=3.7 -y conda activate pstr pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html #conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge # Comiple mmcv, which has been included in this project cd PSTR/mmcv MMCV_WITH_OPS=1 pip install -e . # Comiple this project cd PSTR pip install -r requirements/build.txt pip install -v -e . # or \"python setup.py develop\" pip install sklearn ```",
+      "evidence": "  ```bash\n# Download this project\ngit clone https://github.com/JialeCao001/PSTR.git\n\n# Create a new conda enviroment for PSTR\nconda create -n pstr python=3.7 -y\nconda activate pstr\npip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html\n#conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge\n\n# Comiple mmcv, which has been included in this project\ncd PSTR/mmcv\nMMCV_WITH_OPS=1 pip install -e .\n\n# Comiple this project \ncd PSTR\npip install -r requirements/build.txt\npip install -v -e .  # or \"python setup.py develop\"\npip install sklearn\n```",
+      "evidence_location": "19-38; Installation code block",
+      "confidence": "high",
+      "reason": "Contains the documented repository cloning, environment creation, dependency installation, and editable installation steps."
+    },
+    {
+      "field": "datasets",
+      "value": "PRW and CUHK-SYSU",
+      "normalized_value": "PRW and CUHK-SYSU",
+      "evidence": "- Download [PRW](https://github.com/liangzheng06/PRW-baseline) and [CUHK-SYSU](https://github.com/ShuangLI59/person_search) datasets.",
+      "evidence_location": "45-47; Datasets and Annotations",
+      "confidence": "high",
+      "reason": "Names the datasets required for training and evaluation and provides their links."
+    },
+    {
+      "field": "annotations",
+      "value": "json annotations provided by AlignPS",
+      "normalized_value": "json annotations provided by AlignPS",
+      "evidence": "- Download the [json annotations](https://drive.google.com/file/d/1J2YAU7n954TiSwqopJCWdK25IaF6Mb9_/view?usp=sharing) provided by [AlignPS](https://github.com/daodaofr/AlignPS).",
+      "evidence_location": "48; Datasets and Annotations",
+      "confidence": "high",
+      "reason": "Identifies the annotation format, download link, and provider."
+    },
+    {
+      "field": "training_command",
+      "value": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "normalized_value": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "evidence": "python tools/train.py ${CONFIG_FILE} --no-validate",
+      "evidence_location": "51-54; Train with a single GPU",
+      "confidence": "high",
+      "reason": "Provides the documented single-GPU training command."
+    },
+    {
+      "field": "configuration_path",
+      "value": "configs/PSTR",
+      "normalized_value": "configs/PSTR",
+      "evidence": "- CONFIG_FILE about PSTR is in [configs/PSTR](configs/pstr)",
+      "evidence_location": "55",
+      "confidence": "high",
+      "reason": "Specifies where the training configuration files are located."
+    },
+    {
+      "field": "evaluation_commands",
+      "value": "PRW: sh run_test_prw.sh \nCUHK: sh run_test_cuhk.sh",
+      "normalized_value": "PRW: sh run_test_prw.sh CUHK: sh run_test_cuhk.sh",
+      "evidence": "PRW: sh run_test_prw.sh \nCUHK: sh run_test_cuhk.sh  ",
+      "evidence_location": "57-62; Test with a single GPU",
+      "confidence": "high",
+      "reason": "Provides dataset-specific single-GPU testing commands."
+    },
+    {
+      "field": "evaluation_protocol",
+      "value": "All the models are based on multi-scale training and all the results are based on single-scale inference.",
+      "normalized_value": "All the models are based on multi-scale training and all the results are based on single-scale inference.",
+      "evidence": "- All the models are based on multi-scale training and all the results are based on single-scale inference.",
+      "evidence_location": "80; Results",
+      "confidence": "high",
+      "reason": "Documents the training and inference protocol used for the reported results."
+    },
+    {
+      "field": "rescoring_definition",
+      "value": "+ indicates adding a re-scoring module during evaluation, where we modify the final matching score as the weighted score of [CBGM](https://github.com/serend1p1ty/SeqNet) score and originial matching scores.",
+      "normalized_value": "+ indicates adding a re-scoring module during evaluation, where we modify the final matching score as the weighted score of [CBGM](https://github.com/serend1p1ty/SeqNet) score and originial matching scores.",
+      "evidence": "- \\+ indicates adding a re-scoring module during evaluation, where we modify the final matching score as the weighted score of [CBGM](https://github.com/serend1p1ty/SeqNet) score and originial matching scores. ",
+      "evidence_location": "82; Results",
+      "confidence": "high",
+      "reason": "Explains the meaning of the plus-suffixed evaluation metrics in the results table."
+    },
+    {
+      "field": "benchmark_result",
+      "value": "PSTR | PRW    | PVTv2-B2  |   57.46  |   90.57   |58.07   |    92.03     |          [model](https://drive.google.com/file/d/1hrmyvS9f8fzflpoIlEhWQ-XDyNp_qCGq/view?usp=sharing)",
+      "normalized_value": "PSTR | PRW | PVTv2-B2 | 57.46 | 90.57 |58.07 | 92.03 | [model](https://drive.google.com/file/d/1hrmyvS9f8fzflpoIlEhWQ-XDyNp_qCGq/view?usp=sharing)",
+      "evidence": "|     PSTR | PRW    | PVTv2-B2  |   57.46  |   90.57   |58.07   |    92.03     |          [model](https://drive.google.com/file/d/1hrmyvS9f8fzflpoIlEhWQ-XDyNp_qCGq/view?usp=sharing)         |",
+      "evidence_location": "71-73; Results table",
+      "confidence": "high",
+      "reason": "Reports PRW performance for the PVTv2-B2 model and links its downloadable model."
+    },
+    {
+      "field": "benchmark_result",
+      "value": "PSTR |  PRW   | ResNet50  |   50.03   | 88.04   | 50.64   |    89.94   |        [model](https://drive.google.com/file/d/12j71smXyc3QAyCvIPRlQCbyhSXZENBIX/view?usp=sharing)",
+      "normalized_value": "PSTR | PRW | ResNet50 | 50.03 | 88.04 | 50.64 | 89.94 | [model](https://drive.google.com/file/d/12j71smXyc3QAyCvIPRlQCbyhSXZENBIX/view?usp=sharing)",
+      "evidence": "|     PSTR |  PRW   | ResNet50  |   50.03   | 88.04   | 50.64   |    89.94   |        [model](https://drive.google.com/file/d/12j71smXyc3QAyCvIPRlQCbyhSXZENBIX/view?usp=sharing)         |",
+      "evidence_location": "74; Results table",
+      "confidence": "high",
+      "reason": "Reports PRW performance for the ResNet50 model and links its downloadable model."
+    },
+    {
+      "field": "benchmark_result",
+      "value": "PSTR |  PRW   | ResNet50-DCN  |   51.09   | 88.33   | 51.62   |    90.13   |        [model](https://drive.google.com/file/d/111f_efZOYMFkz9i76TgqcO7a88npoJV5/view?usp=sharing)",
+      "normalized_value": "PSTR | PRW | ResNet50-DCN | 51.09 | 88.33 | 51.62 | 90.13 | [model](https://drive.google.com/file/d/111f_efZOYMFkz9i76TgqcO7a88npoJV5/view?usp=sharing)",
+      "evidence": "|     PSTR |  PRW   | ResNet50-DCN  |   51.09   | 88.33   | 51.62   |    90.13   |        [model](https://drive.google.com/file/d/111f_efZOYMFkz9i76TgqcO7a88npoJV5/view?usp=sharing)         |",
+      "evidence_location": "75; Results table",
+      "confidence": "high",
+      "reason": "Reports PRW performance for the ResNet50-DCN model and links its downloadable model."
+    },
+    {
+      "field": "benchmark_result",
+      "value": "PSTR | CUHK-SYSU     | PVTv2-B2    |   95.31  |   96.28   |95.78   |    96.83      |       [model](https://drive.google.com/file/d/1vrQdZTVgJ2D6ty_XJAYmsJgziW9TZHHW/view?usp=sharing)",
+      "normalized_value": "PSTR | CUHK-SYSU | PVTv2-B2 | 95.31 | 96.28 |95.78 | 96.83 | [model](https://drive.google.com/file/d/1vrQdZTVgJ2D6ty_XJAYmsJgziW9TZHHW/view?usp=sharing)",
+      "evidence": "|     PSTR | CUHK-SYSU     | PVTv2-B2    |   95.31  |   96.28   |95.78   |    96.83      |       [model](https://drive.google.com/file/d/1vrQdZTVgJ2D6ty_XJAYmsJgziW9TZHHW/view?usp=sharing)         |",
+      "evidence_location": "76; Results table",
+      "confidence": "high",
+      "reason": "Reports CUHK-SYSU performance for the PVTv2-B2 model and links its downloadable model."
+    },
+    {
+      "field": "benchmark_result",
+      "value": "PSTR | CUHK-SYSU    | ResNet50|   93.55   | 94.93   | 94.16   | 95.48   |          [model](https://drive.google.com/file/d/1U4r_WaTfODmuhslL_15u5bXdFwLLBC5m/view?usp=sharing)",
+      "normalized_value": "PSTR | CUHK-SYSU | ResNet50 | 93.55 | 94.93 | 94.16 | 95.48 | [model](https://drive.google.com/file/d/1U4r_WaTfODmuhslL_15u5bXdFwLLBC5m/view?usp=sharing)",
+      "evidence": "|     PSTR | CUHK-SYSU    | ResNet50|   93.55   | 94.93   | 94.16   | 95.48   |          [model](https://drive.google.com/file/d/1U4r_WaTfODmuhslL_15u5bXdFwLLBC5m/view?usp=sharing)         |",
+      "evidence_location": "77; Results table",
+      "confidence": "high",
+      "reason": "Reports CUHK-SYSU performance for the ResNet50 model and links its downloadable model."
+    },
+    {
+      "field": "benchmark_result",
+      "value": "PSTR | CUHK-SYSU    | ResNet50-DCN|   94.22   | 95.28   | 94.90   | 95.97   |          [model](https://drive.google.com/file/d/1cCbpAGrldxQaRrF7FCZXqx4VaNP-C278/view?usp=sharing)",
+      "normalized_value": "PSTR | CUHK-SYSU | ResNet50-DCN | 94.22 | 95.28 | 94.90 | 95.97 | [model](https://drive.google.com/file/d/1cCbpAGrldxQaRrF7FCZXqx4VaNP-C278/view?usp=sharing)",
+      "evidence": "|     PSTR | CUHK-SYSU    | ResNet50-DCN|   94.22   | 95.28   | 94.90   | 95.97   |          [model](https://drive.google.com/file/d/1cCbpAGrldxQaRrF7FCZXqx4VaNP-C278/view?usp=sharing)         |",
+      "evidence_location": "78; Results table",
+      "confidence": "high",
+      "reason": "Reports CUHK-SYSU performance for the ResNet50-DCN model and links its downloadable model."
+    },
+    {
+      "field": "citation",
+      "value": "@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}",
+      "normalized_value": "@article{Cao_PSTR_CVPR_2022, author = {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan}, title = {PSTR: End-to-End One-Step Person Search With Transformers}, journal = {Proc. IEEE Conference on Computer Vision and Pattern Recognition}, year = {2022} }",
+      "evidence": "```\n@article{Cao_PSTR_CVPR_2022,\n  author =       {Jiale Cao and Yanwei Pang and Rao Muhammad Anwer and Hisham Cholakkal and Jin Xie and Mubarak Shah and Fahad Shahbaz Khan},\n  title =        {PSTR: End-to-End One-Step Person Search With Transformers},\n  journal =      {Proc. IEEE Conference on Computer Vision and Pattern Recognition},\n  year =         {2022}\n}\n```",
+      "evidence_location": "84-94; Citation",
+      "confidence": "high",
+      "reason": "Provides the recommended bibliographic citation for reuse and attribution."
+    }
+  ]
+}

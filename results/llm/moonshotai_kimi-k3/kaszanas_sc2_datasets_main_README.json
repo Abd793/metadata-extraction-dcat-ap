@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "StarCraft II Datasets",
+      "normalized_value": "StarCraft II Datasets",
+      "evidence": "# StarCraft II Datasets",
+      "evidence_location": "line 5, top-level header",
+      "confidence": "high",
+      "reason": "Identifies the artifact by its title."
+    },
+    {
+      "field": "description",
+      "value": "Library can be used to interface with datasets that were pre-processed with our pipeline as described in: SC2DatasetPreparator",
+      "normalized_value": "Library can be used to interface with datasets that were pre-processed with our pipeline as described in: SC2DatasetPreparator",
+      "evidence": "Library can be used to interface with datasets that were pre-processed with our pipeline\nas described in:\n- [SC2DatasetPreparator](https://github.com/Kaszanas/SC2DatasetPreparator)",
+      "evidence_location": "lines 7-9",
+      "confidence": "high",
+      "reason": "States the purpose of the library and its relationship to the preprocessing pipeline."
+    },
+    {
+      "field": "doi",
+      "value": "10.5281/zenodo.6629005",
+      "normalized_value": "10.5281/zenodo.6629005",
+      "evidence": "[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6629005.svg)](https://doi.org/10.5281/zenodo.6629005)",
+      "evidence_location": "line 1, DOI badge",
+      "confidence": "high",
+      "reason": "Zenodo DOI badge provides a persistent identifier for the artifact."
+    },
+    {
+      "field": "pypi_package",
+      "value": "sc2-datasets",
+      "normalized_value": "sc2-datasets",
+      "evidence": "[![PyPI](https://img.shields.io/pypi/v/sc2-datasets?style=flat-square)](https://pypi.org/project/sc2-datasets/)",
+      "evidence_location": "line 2, PyPI badge",
+      "confidence": "high",
+      "reason": "Names the PyPI package for installation and indexing."
+    },
+    {
+      "field": "python_version",
+      "value": "python-3.10^",
+      "normalized_value": "python-3.10^",
+      "evidence": "[![Python](https://img.shields.io/badge/python-3.10%5E-blue)](https://www.python.org/)",
+      "evidence_location": "line 3, Python badge",
+      "confidence": "high",
+      "reason": "Badge indicates the supported Python version requirement."
+    },
+    {
+      "field": "related_tool",
+      "value": "SC2DatasetPreparator",
+      "normalized_value": "SC2DatasetPreparator",
+      "evidence": "- [SC2DatasetPreparator](https://github.com/Kaszanas/SC2DatasetPreparator)",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Links to the preprocessing pipeline repository that produced the datasets this library interfaces with."
+    },
+    {
+      "field": "supported_frameworks",
+      "value": "PyTorch and PyTorch Lightning",
+      "normalized_value": "PyTorch and PyTorch Lightning",
+      "evidence": "Currently we have exposed PyTorch and PyTorch Lightning API. Our goal is to provide\ninfrastructure used for StarCraft&nbsp;II analytics.",
+      "evidence_location": "lines 11-12",
+      "confidence": "high",
+      "reason": "Names the ML frameworks for which APIs are provided."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://sc2-datasets.readthedocs.io/",
+      "normalized_value": "https://sc2-datasets.readthedocs.io/",
+      "evidence": "Please refer to the [**official documentation**](https://sc2-datasets.readthedocs.io/), or contact contributors directly for all of the details.",
+      "evidence_location": "line 14",
+      "confidence": "high",
+      "reason": "Provides the official documentation link for users."
+    },
+    {
+      "field": "supported_dataset",
+      "value": "SC2EGSet: StarCraft II Esport Game State Dataset",
+      "normalized_value": "SC2EGSet: StarCraft II Esport Game State Dataset",
+      "evidence": "### SC2EGSet: StarCraft II Esport Game State Dataset",
+      "evidence_location": "line 18, 'Supported Datasets' subsection header",
+      "confidence": "high",
+      "reason": "Names the dataset supported by the library's API."
+    },
+    {
+      "field": "dataset_doi",
+      "value": "10.5281/zenodo.5503997",
+      "normalized_value": "10.5281/zenodo.5503997",
+      "evidence": "This project contains official API implementation for the [SC2EGSet: StarCraft II Esport Game State Dataset](https://doi.org/10.5281/zenodo.5503997), which is built based on [SC2ReSet: StarCraft II Esport Replaypack Set](https://doi.org/10.5281/zenodo.5575796).",
+      "evidence_location": "line 20",
+      "confidence": "high",
+      "reason": "DOI of the SC2EGSet dataset for which this library provides the official API."
+    },
+    {
+      "field": "base_dataset",
+      "value": "SC2ReSet: StarCraft II Esport Replaypack Set (https://doi.org/10.5281/zenodo.5575796)",
+      "normalized_value": "SC2ReSet: StarCraft II Esport Replaypack Set (https://doi.org/10.5281/zenodo.5575796)",
+      "evidence": "which is built based on [SC2ReSet: StarCraft II Esport Replaypack Set](https://doi.org/10.5281/zenodo.5575796)",
+      "evidence_location": "line 20",
+      "confidence": "high",
+      "reason": "Identifies the upstream dataset on which SC2EGSet is built, with its DOI."
+    },
+    {
+      "field": "pytorch_dependency",
+      "value": "PyTorch with minimal version of ^1.11.0+cu116",
+      "normalized_value": "PyTorch with minimal version of ^1.11.0+cu116",
+      "evidence": "1. Manually install PyTorch with minimal version of ```^1.11.0+cu116```.",
+      "evidence_location": "line 25, 'Installation' section",
+      "confidence": "high",
+      "reason": "Specifies a required manual dependency and its minimum version for installation."
+    },
+    {
+      "field": "install_command",
+      "value": "pip install sc2_datasets",
+      "normalized_value": "pip install sc2_datasets",
+      "evidence": "```bash\n$ pip install sc2_datasets\n```",
+      "evidence_location": "lines 28-30, 'Installation' section code block",
+      "confidence": "high",
+      "reason": "Provides the installation command for the package."
+    },
+    {
+      "field": "usage_example_pytorch",
+      "value": "from sc2_datasets.torch.sc2_egset_dataset import SC2EGSetDataset; SC2EGSetDataset(unpack_dir, download_dir, download=True, names_urls=EXAMPLE_SYNTHETIC_REPLAYPACKS)",
+      "normalized_value": "from sc2_datasets.torch.sc2_egset_dataset import SC2EGSetDataset; SC2EGSetDataset(unpack_dir, download_dir, download=True, names_urls=EXAMPLE_SYNTHETIC_REPLAYPACKS)",
+      "evidence": "Use [SC2EGSet](https://doi.org/10.5281/zenodo.5503997) with PyTorch:\n```python\nfrom sc2_datasets.torch.sc2_egset_dataset import SC2EGSetDataset\nfrom sc2_datasets.available_replaypacks import EXAMPLE_SYNTHETIC_REPLAYPACKS\n\nif __name__ == \"__main__\":\n    # Initialize the dataset:\n    sc2_egset_dataset = SC2EGSetDataset(\n        unpack_dir=\"./unpack_dir_path\",           # Specify existing directory path, where the data will be unpacked.\n        download_dir=\"./download_dir_path\",       # Specify existing directory path, where the data will be downloaded.\n        download=True,\n        names_urls=EXAMPLE_SYNTHETIC_REPLAYPACKS, # Use a synthetic replaypack containing 1 replay.\n    )\n\n    # Iterate over instances:\n    for i in range(len(sc2_egset_dataset)):\n        sc2_egset_dataset[i]\n```",
+      "evidence_location": "lines 37-54, 'Usage' section code block",
+      "confidence": "high",
+      "reason": "Shows how to instantiate and iterate the dataset with the PyTorch API, including key parameters."
+    },
+    {
+      "field": "usage_example_pytorch_lightning",
+      "value": "from sc2_datasets.lightning.sc2_egset_datamodule import SC2EGSetDataModule; SC2EGSetDataModule(...); prepare_data(); setup()",
+      "normalized_value": "from sc2_datasets.lightning.sc2_egset_datamodule import SC2EGSetDataModule; SC2EGSetDataModule(...); prepare_data(); setup()",
+      "evidence": "Use [SC2EGSet](https://doi.org/10.5281/zenodo.5503997) with PyTorch Lightning:\n```python\nfrom sc2_datasets.lightning.sc2_egset_datamodule import SC2EGSetDataModule\nfrom sc2_datasets.available_replaypacks import EXAMPLE_SYNTHETIC_REPLAYPACKS\n\nif __name__ == \"__main__\":\n    sc2_egset_datamodule = SC2EGSetDataModule(\n                unpack_dir=\"./unpack_dir_path\",            # Specify existing directory path, where the data will be unpacked.\n                download_dir=\"./download_dir_path\",        # Specify existing directory path, where the data will be downloaded.\n                download=True,\n                replaypacks=EXAMPLE_SYNTHETIC_REPLAYPACKS, # Use a synthetic replaypack containing 1 replay.\n            )\n    sc2_egset_datamodule.prepare_data()\n    sc2_egset_datamodule.setup()\n```",
+      "evidence_location": "lines 56-70, 'Usage' section code block",
+      "confidence": "high",
+      "reason": "Shows how to use the PyTorch Lightning DataModule API, including prepare_data and setup calls."
+    },
+    {
+      "field": "contributor_agreement",
+      "value": "Contributor License Agreement (CLA) and a Code of Conduct",
+      "normalized_value": "Contributor License Agreement (CLA) and a Code of Conduct",
+      "evidence": "Please note that this project is released with a Contributor License Agreement (CLA) and a Code of Conduct. By contributing to this project, you agree to abide by its terms.",
+      "evidence_location": "line 74, 'Contributing' section",
+      "confidence": "high",
+      "reason": "States legal terms applicable to contributors."
+    },
+    {
+      "field": "license",
+      "value": "GNU General Public License v3.0",
+      "normalized_value": "GNU General Public License v3.0",
+      "evidence": "It is licensed under the terms of the GNU General Public License v3.0 license.",
+      "evidence_location": "line 78, 'License' section",
+      "confidence": "high",
+      "reason": "Specifies the license governing reuse of the artifact."
+    },
+    {
+      "field": "author",
+      "value": "Andrzej Białecki",
+      "normalized_value": "Andrzej Białecki",
+      "evidence": "`sc2egset_dataset` was created by Andrzej Białecki.",
+      "evidence_location": "line 78, 'License' section",
+      "confidence": "high",
+      "reason": "Names the creator of the artifact for attribution."
+    },
+    {
+      "field": "citation",
+      "value": "@article{Białecki2023, author = {Białecki, Andrzej and Jakubowska, Natalia and Dobrowolski, Paweł and Białecki, Piotr and Krupiński, Leszek and Szczap, Andrzej and Białecki, Robert and Gajewski, Jan}, title = {SC2EGSet: StarCraft II Esport Replay and Game-state Dataset}, journal = {Scientific Data}, year = {2023}, doi = {10.1038/s41597-023-02510-7}}",
+      "normalized_value": "@article{Białecki2023, author = {Białecki, Andrzej and Jakubowska, Natalia and Dobrowolski, Paweł and Białecki, Piotr and Krupiński, Leszek and Szczap, Andrzej and Białecki, Robert and Gajewski, Jan}, title = {SC2EGSet: StarCraft II Esport Replay and Game-state Dataset}, journal = {Scientific Data}, year = {2023}, doi = {10.1038/s41597-023-02510-7}}",
+      "evidence": "```bibtex\n@article{Białecki2023,\n  author   = {Bia{\\l}ecki, Andrzej\n              and Jakubowska, Natalia\n              and Dobrowolski, Pawe{\\l}\n              and Bia{\\l}ecki, Piotr\n              and Krupi{\\'{n}}ski, Leszek\n              and Szczap, Andrzej\n              and Bia{\\l}ecki, Robert\n              and Gajewski, Jan},\n  title    = {SC2EGSet: StarCraft II Esport Replay and Game-state Dataset},\n  journal  = {Scientific Data},\n  year     = {2023},\n  month    = {Sep},\n  day      = {08},\n  volume   = {10},\n  number   = {1},\n  pages    = {600},\n  issn     = {2052-4463},\n  doi      = {10.1038/s41597-023-02510-7},\n  url      = {https://doi.org/10.1038/s41597-023-02510-7}\n}\n```",
+      "evidence_location": "lines 86-108, 'Cite' section bibtex code block",
+      "confidence": "high",
+      "reason": "Provides the BibTeX citation for the dataset description article, enabling proper academic attribution."
+    },
+    {
+      "field": "publication_venue",
+      "value": "Scientific Data, 2023, volume 10, number 1, pages 600, DOI 10.1038/s41597-023-02510-7",
+      "normalized_value": "Scientific Data, 2023, volume 10, number 1, pages 600, DOI 10.1038/s41597-023-02510-7",
+      "evidence": "  journal  = {Scientific Data},\n  year     = {2023},\n  month    = {Sep},\n  day      = {08},\n  volume   = {10},\n  number   = {1},\n  pages    = {600},\n  issn     = {2052-4463},\n  doi      = {10.1038/s41597-023-02510-7},",
+      "evidence_location": "lines 97-105, 'Cite' section bibtex code block",
+      "confidence": "high",
+      "reason": "Identifies the peer-reviewed publication venue and identifiers for the associated dataset article."
+    }
+  ]
+}

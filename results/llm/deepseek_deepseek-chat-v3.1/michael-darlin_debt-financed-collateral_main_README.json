@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Debt-Financed Collateral",
+      "normalized_value": "Debt-Financed Collateral",
+      "evidence": "# Debt-Financed Collateral",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the project name"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2204.11107",
+      "normalized_value": "https://arxiv.org/abs/2204.11107",
+      "evidence": "([ArXiv](https://arxiv.org/abs/2204.11107))",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Link to the associated research paper"
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_",
+      "normalized_value": "https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_",
+      "evidence": "[here](https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Link to the exported database data"
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "Large-scale data collection (Python)",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Language used for data collection scripts"
+    },
+    {
+      "field": "programming_language",
+      "value": "NodeJS",
+      "normalized_value": "NodeJS",
+      "evidence": "One-off data collection (NodeJS)",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Language used for targeted data collection scripts"
+    },
+    {
+      "field": "script_purpose",
+      "value": "collection of classes used for data collection",
+      "normalized_value": "collection of classes used for data collection",
+      "evidence": "*defiEvents.py*: collection of classes used for data collection.",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Describes the purpose of the defiEvents.py script"
+    },
+    {
+      "field": "script_purpose",
+      "value": "script to collect data. This script was run once for each project. Code was written to collect data across multiple protocol versions (e.g. both Version 1 and Version 2 of Uniswap), but only data from the most recent protocol was used.",
+      "normalized_value": "script to collect data. This script was run once for each project. Code was written to collect data across multiple protocol versions (e.g. both Version 1 and Version 2 of Uniswap), but only data from the most recent protocol was used.",
+      "evidence": "*collectEvents.py*: script to collect data. This script was run once for each project. Code was written to collect data across multiple protocol versions (e.g. both Version 1 and Version 2 of Uniswap), but only data from the most recent protocol was used.",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Describes the purpose and usage of collectEvents.py"
+    },
+    {
+      "field": "script_purpose",
+      "value": "Collect data on all existing Maker vaults, including all addresses associated to the vault (owner, DSProxy, and UrnHandler addresses).",
+      "normalized_value": "Collect data on all existing Maker vaults, including all addresses associated to the vault (owner, DSProxy, and UrnHandler addresses).",
+      "evidence": "*mkrVaults.js*: Collect data on all existing Maker vaults, including all addresses associated to the vault (owner, DSProxy, and UrnHandler addresses).",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Describes the purpose of mkrVaults.js"
+    },
+    {
+      "field": "script_purpose",
+      "value": "Collect information to adjust DAI amounts recorded in frob transactions. Frob transaction amounts (specifically for debt withdrawal/repayment) are recorded without interest rate adjustments. This file collects information to adjust DAI amounts according to the prevailing cumulative interest rate in the Maker Vat contract.",
+      "normalized_value": "Collect information to adjust DAI amounts recorded in frob transactions. Frob transaction amounts (specifically for debt withdrawal/repayment) are recorded without interest rate adjustments. This file collects information to adjust DAI amounts according to the prevailing cumulative interest rate in the Maker Vat contract.",
+      "evidence": "*mkrRateAdjust.js*: Collect information to adjust DAI amounts recorded in frob transactions. Frob transaction amounts (specifically for debt withdrawal/repayment) are recorded without interest rate adjustments. This file collects information to adjust DAI amounts according to the prevailing cumulative interest rate in the Maker Vat contract.",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Describes the purpose of mkrRateAdjust.js"
+    },
+    {
+      "field": "script_purpose",
+      "value": "Collect pair addresses from Uniswap for all tokens used in the final analysis.",
+      "normalized_value": "Collect pair addresses from Uniswap for all tokens used in the final analysis.",
+      "evidence": "*uniExchanges.js*: Collect pair addresses from Uniswap for all tokens used in the final analysis.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Describes the purpose of uniExchanges.js"
+    },
+    {
+      "field": "script_purpose",
+      "value": "Collect hourly USD pricing data from Coinbase and update each transaction with the most recent USD price.",
+      "normalized_value": "Collect hourly USD pricing data from Coinbase and update each transaction with the most recent USD price.",
+      "evidence": "*usdValues.js*: Collect hourly USD pricing data from Coinbase and update each transaction with the most recent USD price.",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Describes the purpose of usdValues.js"
+    },
+    {
+      "field": "algorithm_file",
+      "value": "algo.ipynb contains the algorithm used to estimate the percentage of debt-financed collateral",
+      "normalized_value": "algo.ipynb contains the algorithm used to estimate the percentage of debt-financed collateral",
+      "evidence": "*algo.ipynb* contains the algorithm used to estimate the percentage of debt-financed collateral",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Identifies the file containing the estimation algorithm"
+    },
+    {
+      "field": "analysis_file",
+      "value": "analysis.r contains the R code used to create charts and tables for the final paper.",
+      "normalized_value": "analysis.r contains the R code used to create charts and tables for the final paper.",
+      "evidence": "*analysis.r* contains the R code used to create charts and tables for the final paper.",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Identifies the file used for data analysis and visualization"
+    },
+    {
+      "field": "utility_file",
+      "value": "ABIs for relevant contracts",
+      "normalized_value": "ABIs for relevant contracts",
+      "evidence": "*abi.js*: ABIs for relevant contracts",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Describes the purpose of abi.js utility file"
+    },
+    {
+      "field": "utility_file",
+      "value": "relevant addresses",
+      "normalized_value": "relevant addresses",
+      "evidence": "*addr.js*: relevant addresses",
+      "evidence_location": "30",
+      "confidence": "high",
+      "reason": "Describes the purpose of addr.js utility file"
+    },
+    {
+      "field": "utility_file",
+      "value": "helper functions",
+      "normalized_value": "helper functions",
+      "evidence": "*eventLib.js*: helper functions",
+      "evidence_location": "31",
+      "confidence": "high",
+      "reason": "Describes the purpose of eventLib.js utility file"
+    }
+  ]
+}

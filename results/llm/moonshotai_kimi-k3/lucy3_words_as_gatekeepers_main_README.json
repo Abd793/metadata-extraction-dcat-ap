@@ -1,0 +1,256 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Words as Gatekeepers",
+      "normalized_value": "Words as Gatekeepers",
+      "evidence": "# Words as Gatekeepers",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Identifies the artifact/project by its title."
+    },
+    {
+      "field": "license",
+      "value": "CC BY-NC 4.0",
+      "normalized_value": "CC BY-NC 4.0",
+      "evidence": "License: [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "States the legal terms under which the artifact can be reused."
+    },
+    {
+      "field": "authors",
+      "value": "Li Lucy, Jesse Dodge, David Bamman, Katherine A. Keith",
+      "normalized_value": "Li Lucy, Jesse Dodge, David Bamman, Katherine A. Keith",
+      "evidence": "**Authors**: Li Lucy, Jesse Dodge, David Bamman, Katherine A. Keith",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Names the creators of the artifact, useful for citation and attribution."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2212.09676",
+      "normalized_value": "https://arxiv.org/abs/2212.09676",
+      "evidence": "**[Paper](https://arxiv.org/abs/2212.09676)**",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Link to the associated research paper for context and citation."
+    },
+    {
+      "field": "blog_post_url",
+      "value": "https://blog.allenai.org/words-as-gatekeepers-measuring-discipline-specific-terms-and-meanings-in-scholarly-publications-718dc56d08a5",
+      "normalized_value": "https://blog.allenai.org/words-as-gatekeepers-measuring-discipline-specific-terms-and-meanings-in-scholarly-publications-718dc56d08a5",
+      "evidence": "**[Blog post](https://blog.allenai.org/words-as-gatekeepers-measuring-discipline-specific-terms-and-meanings-in-scholarly-publications-718dc56d08a5)**",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Link to an accompanying blog post describing the work."
+    },
+    {
+      "field": "description",
+      "value": "we develop and validate an interpretable approach for measuring scholarly jargon from text. Expanding the scope of prior work which focuses on word types, we use word sense induction to also identify words that are widespread but overloaded with different meanings across fields.",
+      "normalized_value": "we develop and validate an interpretable approach for measuring scholarly jargon from text. Expanding the scope of prior work which focuses on word types, we use word sense induction to also identify words that are widespread but overloaded with different meanings across fields.",
+      "evidence": "In this work, we develop and validate an interpretable approach for measuring scholarly jargon from text. Expanding the scope of prior work which focuses on word types, we use word sense induction to also identify words that are widespread but overloaded with different meanings across fields.",
+      "evidence_location": "line 13, Abstract paragraph",
+      "confidence": "high",
+      "reason": "Summarizes the purpose and method of the artifact."
+    },
+    {
+      "field": "task",
+      "value": "measuring scholarly jargon from text",
+      "normalized_value": "measuring scholarly jargon from text",
+      "evidence": "we develop and validate an interpretable approach for measuring scholarly jargon from text",
+      "evidence_location": "line 13, Abstract paragraph",
+      "confidence": "high",
+      "reason": "Defines the scientific task addressed by the artifact."
+    },
+    {
+      "field": "method",
+      "value": "word sense induction",
+      "normalized_value": "word sense induction",
+      "evidence": "we use word sense induction to also identify words that are widespread but overloaded with different meanings across fields",
+      "evidence_location": "line 13, Abstract paragraph",
+      "confidence": "high",
+      "reason": "Names the core method used to identify discipline-specific word senses."
+    },
+    {
+      "field": "input_dataset",
+      "value": "S2ORC",
+      "normalized_value": "S2ORC",
+      "evidence": "Information on accessing S2ORC can be found [here](https://github.com/allenai/s2orc).",
+      "evidence_location": "line 30, 'Data filtering' subsection of '## Code pipeline'",
+      "confidence": "high",
+      "reason": "Identifies the primary scholarly corpus the pipeline runs on and where to access it."
+    },
+    {
+      "field": "input_dataset",
+      "value": "Wikipedia",
+      "normalized_value": "Wikipedia",
+      "evidence": "- `data_process/clean_up_wikipedia.py`: sample a subset of Wikipedia",
+      "evidence_location": "line 32, 'Data filtering' subsection of '## Code pipeline'",
+      "confidence": "high",
+      "reason": "Identifies Wikipedia as another data source used in the pipeline."
+    },
+    {
+      "field": "model",
+      "value": "scholarBERT",
+      "normalized_value": "scholarBERT",
+      "evidence": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset s2orc --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "evidence_location": "lines 70-72, fenced code block under 'WSI pipeline'",
+      "confidence": "high",
+      "reason": "Names the masked language model used to write replacement predictions."
+    },
+    {
+      "field": "related_repository",
+      "value": "https://github.com/allenai/WSIatScale",
+      "normalized_value": "https://github.com/allenai/WSIatScale",
+      "evidence": "Note that many scripts are modified versions of ones found in the [WSIatScale repo](https://github.com/allenai/WSIatScale).",
+      "evidence_location": "line 56, 'WSI pipeline' subsection",
+      "confidence": "high",
+      "reason": "Identifies the upstream repository from which many scripts are derived, useful for provenance and reuse."
+    },
+    {
+      "field": "setup_command",
+      "value": "bash prepare_sense_input.sh 2>&1 | tee temp.log",
+      "normalized_value": "bash prepare_sense_input.sh 2>&1 | tee temp.log",
+      "evidence": "Run `bash prepare_sense_input.sh 2>&1 | tee temp.log` to do the next three scripts:",
+      "evidence_location": "line 58, 'WSI pipeline' subsection",
+      "confidence": "high",
+      "reason": "Command that runs the initial input preparation steps of the WSI pipeline."
+    },
+    {
+      "field": "inference_command",
+      "value": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset s2orc --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "normalized_value": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset s2orc --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "evidence": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset s2orc --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "evidence_location": "lines 70-72, fenced code block under 'WSI pipeline'",
+      "confidence": "high",
+      "reason": "Usage example for writing masked-token replacement predictions on S2ORC."
+    },
+    {
+      "field": "inference_command",
+      "value": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset wikipedia --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "normalized_value": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset wikipedia --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "evidence": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset wikipedia --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "evidence_location": "lines 76-78, fenced code block under 'WSI pipeline'",
+      "confidence": "high",
+      "reason": "Usage example for writing masked-token replacement predictions on Wikipedia."
+    },
+    {
+      "field": "pipeline_command",
+      "value": "python create_inverted_index.py --replacements_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --vocab_path /home/lucyl/language-map-of-science/logs/sense_vocab/wsi_vocab_set_98_50.txt --outdir /home/lucyl/language-map-of-science/logs/inverted_index --input_ids_path /home/lucyl/language-map-of-science/data/input_paper_ids/journal_analysis.txt",
+      "normalized_value": "python create_inverted_index.py --replacements_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --vocab_path /home/lucyl/language-map-of-science/logs/sense_vocab/wsi_vocab_set_98_50.txt --outdir /home/lucyl/language-map-of-science/logs/inverted_index --input_ids_path /home/lucyl/language-map-of-science/data/input_paper_ids/journal_analysis.txt",
+      "evidence": "python create_inverted_index.py --replacements_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --vocab_path /home/lucyl/language-map-of-science/logs/sense_vocab/wsi_vocab_set_98_50.txt --outdir /home/lucyl/language-map-of-science/logs/inverted_index --input_ids_path /home/lucyl/language-map-of-science/data/input_paper_ids/journal_analysis.txt",
+      "evidence_location": "lines 84-86, fenced code block under 'WSI pipeline'",
+      "confidence": "high",
+      "reason": "Command to create the inverted index needed for word sense induction clustering."
+    },
+    {
+      "field": "pipeline_command",
+      "value": "python cluster_reps_per_token.py --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --out_dir /home/lucyl/language-map-of-science/logs/word_clusters_lemmed --lemmatize True --resolution 0.0",
+      "normalized_value": "python cluster_reps_per_token.py --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --out_dir /home/lucyl/language-map-of-science/logs/word_clusters_lemmed --lemmatize True --resolution 0.0",
+      "evidence": "python cluster_reps_per_token.py --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --out_dir /home/lucyl/language-map-of-science/logs/word_clusters_lemmed --lemmatize True --resolution 0.0",
+      "evidence_location": "lines 92-94, fenced code block under 'WSI pipeline'",
+      "confidence": "high",
+      "reason": "Command to cluster token representations into word senses (lemmatized, with resolution parameter)."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python cluster_reps_per_token.py --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --out_dir /home/lucyl/language-map-of-science/logs/word_clusters_eval --lemmatize True --wiki_eval True --resolution 0.0",
+      "normalized_value": "python cluster_reps_per_token.py --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --out_dir /home/lucyl/language-map-of-science/logs/word_clusters_eval --lemmatize True --wiki_eval True --resolution 0.0",
+      "evidence": "python cluster_reps_per_token.py --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --dataset s2orc --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --out_dir /home/lucyl/language-map-of-science/logs/word_clusters_eval --lemmatize True --wiki_eval True --resolution 0.0",
+      "evidence_location": "lines 100-102, fenced code block under 'WSI pipeline'",
+      "confidence": "high",
+      "reason": "Command to cluster only Wiktionary words for evaluation of the sense induction."
+    },
+    {
+      "field": "pipeline_command",
+      "value": "python assign_clusters_to_tokens.py --out_dir /home/lucyl/language-map-of-science/logs/sense_assignments_lemmed --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --dataset s2orc --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --cluster_dir /home/lucyl/language-map-of-science/logs/word_clusters_lemmed --lemmatize True --resolution 0.0",
+      "normalized_value": "python assign_clusters_to_tokens.py --out_dir /home/lucyl/language-map-of-science/logs/sense_assignments_lemmed --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --dataset s2orc --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --cluster_dir /home/lucyl/language-map-of-science/logs/word_clusters_lemmed --lemmatize True --resolution 0.0",
+      "evidence": "python assign_clusters_to_tokens.py --out_dir /home/lucyl/language-map-of-science/logs/sense_assignments_lemmed --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --dataset s2orc --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --cluster_dir /home/lucyl/language-map-of-science/logs/word_clusters_lemmed --lemmatize True --resolution 0.0",
+      "evidence_location": "lines 110-112, fenced code block under 'WSI pipeline'",
+      "confidence": "high",
+      "reason": "Command to assign every token occurrence to a sense cluster."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python assign_clusters_to_tokens.py --out_dir /home/lucyl/language-map-of-science/logs/sense_assignments_eval --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --dataset s2orc --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --cluster_dir /home/lucyl/language-map-of-science/logs/word_clusters_eval --lemmatize True --wiki_eval True --resolution 0.5",
+      "normalized_value": "python assign_clusters_to_tokens.py --out_dir /home/lucyl/language-map-of-science/logs/sense_assignments_eval --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --dataset s2orc --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --cluster_dir /home/lucyl/language-map-of-science/logs/word_clusters_eval --lemmatize True --wiki_eval True --resolution 0.5",
+      "evidence": "python assign_clusters_to_tokens.py --out_dir /home/lucyl/language-map-of-science/logs/sense_assignments_eval --index_dir /home/lucyl/language-map-of-science/logs/inverted_index --dataset s2orc --data_dir /home/lucyl/language-map-of-science/logs/replacements/replacements --cluster_dir /home/lucyl/language-map-of-science/logs/word_clusters_eval --lemmatize True --wiki_eval True --resolution 0.5",
+      "evidence_location": "lines 115-117, fenced code block under 'WSI pipeline'",
+      "confidence": "high",
+      "reason": "Command to assign clusters for Wiktionary-only evaluation words."
+    },
+    {
+      "field": "analysis_command",
+      "value": "python jargonyness_per_paper.py --cutoff 0.1 --exp_name general_specific\n\npython jargonyness_per_paper.py --cutoff 0.1 --exp_name regression_sample",
+      "normalized_value": "python jargonyness_per_paper.py --cutoff 0.1 --exp_name general_specific python jargonyness_per_paper.py --cutoff 0.1 --exp_name regression_sample",
+      "evidence": "python jargonyness_per_paper.py --cutoff 0.1 --exp_name general_specific\n\npython jargonyness_per_paper.py --cutoff 0.1 --exp_name regression_sample",
+      "evidence_location": "lines 130-134, fenced code block under 'Social implication experiments'",
+      "confidence": "high",
+      "reason": "Example usage for calculating the amount of jargon per abstract in the social implication experiments."
+    },
+    {
+      "field": "evaluation_resource",
+      "value": "Wiktionary",
+      "normalized_value": "Wiktionary",
+      "evidence": "- `val_data_process/process_wiktionary.py`: get wiktionary definitions for vocabulary words",
+      "evidence_location": "line 61, 'WSI pipeline' subsection",
+      "confidence": "high",
+      "reason": "Identifies Wiktionary as the external lexical resource used for sense validation/evaluation."
+    },
+    {
+      "field": "metric",
+      "value": "NPMI",
+      "normalized_value": "NPMI",
+      "evidence": "- `word_type.py`: calculate NPMI",
+      "evidence_location": "line 52, 'Word type pipeline' subsection",
+      "confidence": "high",
+      "reason": "Names the metric used to measure discipline-specificity of word types and senses."
+    },
+    {
+      "field": "output_artifact",
+      "value": "logs/word_clusters_lemmed/0.0/",
+      "normalized_value": "logs/word_clusters_lemmed/0.0/",
+      "evidence": "- `logs/word_clusters_lemmed/0.0/` includes senses and their top predicted substitutes. Use the `Word Cluster Analysis` notebook in the code folder to inspect the content of these files.",
+      "evidence_location": "line 19, '### Discipline-specific word senses'",
+      "confidence": "high",
+      "reason": "Points to generated sense-cluster outputs and how to inspect them."
+    },
+    {
+      "field": "output_artifact",
+      "value": "logs/fos_senses/es-True_res-0.0/",
+      "normalized_value": "logs/fos_senses/es-True_res-0.0/",
+      "evidence": "- `logs/fos_senses/es-True_res-0.0/` includes senses and their npmi scores in each field",
+      "evidence_location": "line 20, '### Discipline-specific word senses'",
+      "confidence": "high",
+      "reason": "Points to generated per-field sense NPMI score outputs."
+    },
+    {
+      "field": "output_artifact",
+      "value": "logs/type_npmi/fos_set-False_lemma-True/",
+      "normalized_value": "logs/type_npmi/fos_set-False_lemma-True/",
+      "evidence": "- `logs/type_npmi/fos_set-False_lemma-True/` includes lists of word types in each subfield and their npmi scores",
+      "evidence_location": "line 24, '### Discipline-specific word types'",
+      "confidence": "high",
+      "reason": "Points to generated per-subfield word type NPMI score outputs."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "python write_mask_preds.py --data_dir /data/actual_data --out_dir /output --dataset s2orc --model scholarBERT --max_tokens_per_batch 16384 --write_specific_replacements --vocab_path /data/wsi_vocab_set_98_50.txt --overwrite_cache --files_range 0-24",
+      "evidence_location": "lines 70-72, fenced code block under 'WSI pipeline'",
+      "confidence": "medium",
+      "reason": "All pipeline scripts are invoked with `python` and use .py extensions, indicating Python, though the language is never named explicitly."
+    },
+    {
+      "field": "dependency",
+      "value": "graph-tool",
+      "normalized_value": "graph-tool",
+      "evidence": "The below script supports the conversion of S2ORC data to a `graph-tool` network, where nodes are papers labeled with paper ID.",
+      "evidence_location": "line 147, 'Citation graph' subsection",
+      "confidence": "high",
+      "reason": "Names an external library required for the citation graph conversion script."
+    }
+  ]
+}

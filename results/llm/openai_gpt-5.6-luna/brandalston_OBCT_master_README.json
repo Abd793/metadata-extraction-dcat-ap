@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Optimal Binary Classification Trees",
+      "normalized_value": "Optimal Binary Classification Trees",
+      "evidence": "# Optimal Binary Classification Trees",
+      "evidence_location": "3; header",
+      "confidence": "high",
+      "reason": "Provides the artifact's explicit name."
+    },
+    {
+      "field": "purpose",
+      "value": "Code for the paper [\"Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees\"](http://arxiv.org/abs/2206.04857) by Brandon Alston, Hamidreza Validi, and Illya V. Hicks.",
+      "normalized_value": "Code for the paper [\"Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees\"](http://arxiv.org/abs/2206.04857) by Brandon Alston, Hamidreza Validi, and Illya V. Hicks.",
+      "evidence": "Code for the paper [\"Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees\"](http://arxiv.org/abs/2206.04857) by Brandon Alston, Hamidreza Validi, and Illya V. Hicks.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Identifies what the code implements and connects it to the associated paper."
+    },
+    {
+      "field": "paper_url",
+      "value": "http://arxiv.org/abs/2206.04857",
+      "normalized_value": "http://arxiv.org/abs/2206.04857",
+      "evidence": "[\"Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees\"](http://arxiv.org/abs/2206.04857)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Provides a direct access link to the associated paper."
+    },
+    {
+      "field": "programming_language",
+      "value": "python3.x (version 3.6 and higher)",
+      "normalized_value": "python3.x (version 3.6 and higher)",
+      "evidence": "This code uses [python3.x](https://www.python.org/downloads/) (version 3.6 and higher) and requires the [Gurobi](https://www.gurobi.com/) solver. Required python3.x packages are outlined in `requirements.txt`.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Explicitly states the required Python implementation and minimum version."
+    },
+    {
+      "field": "solver",
+      "value": "Gurobi",
+      "normalized_value": "Gurobi",
+      "evidence": "This code uses [python3.x](https://www.python.org/downloads/) (version 3.6 and higher) and requires the [Gurobi](https://www.gurobi.com/) solver. Required python3.x packages are outlined in `requirements.txt`.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Identifies the required optimization solver."
+    },
+    {
+      "field": "python_dependencies",
+      "value": "Required python3.x packages are outlined in `requirements.txt`.",
+      "normalized_value": "Required python3.x packages are outlined in `requirements.txt`.",
+      "evidence": "This code uses [python3.x](https://www.python.org/downloads/) (version 3.6 and higher) and requires the [Gurobi](https://www.gurobi.com/) solver. Required python3.x packages are outlined in `requirements.txt`.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Points to the dependency specification needed to reproduce the environment."
+    },
+    {
+      "field": "model_formulations_file",
+      "value": "`OBCT.py` contains the formulations of each model for solving using Gurobi9.x",
+      "normalized_value": "`OBCT.py` contains the formulations of each model for solving using Gurobi9.x",
+      "evidence": "- `OBCT.py` contains the formulations of each model for solving using Gurobi9.x",
+      "evidence_location": "13; Summary of Repository",
+      "confidence": "high",
+      "reason": "Locates the core model formulations and specifies the Gurobi version family used there."
+    },
+    {
+      "field": "dataset_location",
+      "value": "`Datasets/` folder contains the datasets used for generating experimental results",
+      "normalized_value": "`Datasets/` folder contains the datasets used for generating experimental results",
+      "evidence": "- `Datasets/` folder contains the datasets used for generating experimental results\n  - Note: `Datasets/` should also be used as the folder where user dataset files are stored",
+      "evidence_location": "21-22; Summary of Repository",
+      "confidence": "high",
+      "reason": "Identifies both the supplied dataset location and the expected location for user datasets."
+    },
+    {
+      "field": "run_parameters",
+      "value": "d : `str list`, name(s) of dataset file(s)\nh : `int list`, maximum depth(s) of trained tree(s)\nt : `float`, gurobi model time limit in s\nm : `str list`, list of model(s) to use\nr : `int list`, list of random seed(s) to use\np : `str`, objective priority parameter used in bi-objective modeling\ne : `str list`, model extra(s), if applicable\nf : `str`, results output file `.csv`\nl : `boolean`, log console to `.txt` file and write model to `.lp` file, both saved to the `\\log_files` folder for each model called by user",
+      "normalized_value": "d : `str list`, name(s) of dataset file(s) h : `int list`, maximum depth(s) of trained tree(s) t : `float`, gurobi model time limit in s m : `str list`, list of model(s) to use r : `int list`, list of random seed(s) to use p : `str`, objective priority parameter used in bi-objective modeling e : `str list`, model extra(s), if applicable f : `str`, results output file `.csv` l : `boolean`, log console to `.txt` file and write model to `.lp` file, both saved to the `\\log_files` folder for each model called by user",
+      "evidence": "- d : `str list`, name(s) of dataset file(s)\n    - h : `int list`, maximum depth(s) of trained tree(s)\n    - t : `float`, gurobi model time limit in s\n    - m : `str list`, list of model(s) to use\n    - r : `int list`, list of random seed(s) to use\n      - `rand_seed = [k,...,k]`  for repeat use of randome state `k`\n    - p : `str`, objective priority parameter used in bi-objective modeling\n    - e : `str list`, model extra(s), if applicable\n    - f : `str`, results output file `.csv`\n    - l : `boolean`, log console to `.txt` file and write model to `.lp` file, both saved to the `\\log_files` folder for each model called by user",
+      "evidence_location": "30-40; Running Code",
+      "confidence": "high",
+      "reason": "Defines the main inputs and reproducibility controls for running model instances."
+    },
+    {
+      "field": "target_column",
+      "value": "'target'",
+      "normalized_value": "'target'",
+      "evidence": "- We assume the target column is labeled `'target'`. Change the hard code in `model_runs.py` to change the according target column",
+      "evidence_location": "42; Running Code",
+      "confidence": "high",
+      "reason": "Identifies the expected target column and how it can be changed."
+    },
+    {
+      "field": "main_run_example",
+      "value": "import model_runs\n\ndata_names = ['soybean_small', 'monk3', 'car', 'iris', 'climate']\nheights = [3, 4, 5]\nmodels = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']\ntime_limit = 3600\nextras = ['max_features-25']\nrand_seed = [13, 58, 94, None]\ntuning = None\nfile = 'example_code_output.csv'\nconsol_log = False\nmodel_runs.main(\n  [\"-d\", data_names, \"-h\", heights, \"-m\", models, \"-t\", time_limit,\n   \"-e\", extras, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])",
+      "normalized_value": "import model_runs data_names = ['soybean_small', 'monk3', 'car', 'iris', 'climate'] heights = [3, 4, 5] models = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3'] time_limit = 3600 extras = ['max_features-25'] rand_seed = [13, 58, 94, None] tuning = None file = 'example_code_output.csv' consol_log = False model_runs.main( [\"-d\", data_names, \"-h\", heights, \"-m\", models, \"-t\", time_limit, \"-e\", extras, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])",
+      "evidence": "```python\nimport model_runs\n\ndata_names = ['soybean_small', 'monk3', 'car', 'iris', 'climate']\nheights = [3, 4, 5]\nmodels = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']\ntime_limit = 3600\nextras = ['max_features-25']\nrand_seed = [13, 58, 94, None]\ntuning = None\nfile = 'example_code_output.csv'\nconsol_log = False\nmodel_runs.main(\n  [\"-d\", data_names, \"-h\", heights, \"-m\", models, \"-t\", time_limit,\n   \"-e\", extras, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])\n```",
+      "evidence_location": "49-64; Running Code",
+      "confidence": "high",
+      "reason": "Provides a concrete reproducible example for generating model results."
+    },
+    {
+      "field": "results_output",
+      "value": "If results output file `-f file` is `None` the `models_run.py` calls automatically generates a `.csv` results file with the parameters of the function call as the file name saved to the `\\results_files` folder",
+      "normalized_value": "If results output file `-f file` is `None` the `models_run.py` calls automatically generates a `.csv` results file with the parameters of the function call as the file name saved to the `\\results_files` folder",
+      "evidence": "- If results output file `-f file` is `None` the `models_run.py` calls automatically generates a `.csv` results file with the parameters of the function call as the file name saved to the `\\results_files` folder",
+      "evidence_location": "43; Running Code",
+      "confidence": "high",
+      "reason": "Explains the default result-file behavior and output location."
+    },
+    {
+      "field": "biobjective_modeling",
+      "value": "generate a model using the heirarchical modeling capabilities of Gurobi",
+      "normalized_value": "generate a model using the heirarchical modeling capabilities of Gurobi",
+      "evidence": "To generate a model using the heirarchical modeling capabilities of Gurobi",
+      "evidence_location": "72; Bi-objective Modeling",
+      "confidence": "high",
+      "reason": "Identifies the repository's bi-objective modeling capability and its Gurobi-based approach."
+    },
+    {
+      "field": "biobjective_run_example",
+      "value": "import model_runs\n\ndata_names = ['ionosphere', 'monk2', 'breat_cancer', 'climate']\nheight = 5\nmodels = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']\ntime_limit = 3600\nrand_seed = [13, 58, 94, None]\npriorities = ['data','equal']\nfile = 'biobj_example.csv'\nconsol_log = False\nmodel_runs.biobjective(\n  [\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", time_limit,\n   \"-p\", priorities, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])",
+      "normalized_value": "import model_runs data_names = ['ionosphere', 'monk2', 'breat_cancer', 'climate'] height = 5 models = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3'] time_limit = 3600 rand_seed = [13, 58, 94, None] priorities = ['data','equal'] file = 'biobj_example.csv' consol_log = False model_runs.biobjective( [\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", time_limit, \"-p\", priorities, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])",
+      "evidence": "```python\nimport model_runs\n\ndata_names = ['ionosphere', 'monk2', 'breat_cancer', 'climate']\nheight = 5\nmodels = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']\ntime_limit = 3600\nrand_seed = [13, 58, 94, None]\npriorities = ['data','equal']\nfile = 'biobj_example.csv'\nconsol_log = False\nmodel_runs.biobjective(\n  [\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", time_limit,\n   \"-p\", priorities, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])\n```",
+      "evidence_location": "74-88; Bi-objective Modeling",
+      "confidence": "high",
+      "reason": "Provides a concrete example for reproducing bi-objective runs."
+    },
+    {
+      "field": "pareto_frontier_generation",
+      "value": "To generate the Pareto frontier call the `main` function in `pareto_runs.py` with the below parameters:",
+      "normalized_value": "To generate the Pareto frontier call the `main` function in `pareto_runs.py` with the below parameters:",
+      "evidence": "To generate the Pareto frontier call the `main` function in `pareto_runs.py` with the below parameters:",
+      "evidence_location": "96; Pareto Frontier",
+      "confidence": "high",
+      "reason": "Identifies the module and function used to generate Pareto frontiers."
+    },
+    {
+      "field": "pareto_output",
+      "value": "A `.png` file for each dataset called by the user is generated and stored in `\\results_figures\\` folder",
+      "normalized_value": "A `.png` file for each dataset called by the user is generated and stored in `\\results_figures\\` folder",
+      "evidence": "A `.png` file for each dataset called by the user is generated and stored in `\\results_figures\\` folder",
+      "evidence_location": "104; Pareto Frontier",
+      "confidence": "high",
+      "reason": "Specifies the generated Pareto artifact format and storage location."
+    },
+    {
+      "field": "pareto_model_requirement",
+      "value": "`FlowOCT` must be the model name to generate the pareto frontier of FlowOCT",
+      "normalized_value": "`FlowOCT` must be the model name to generate the pareto frontier of FlowOCT",
+      "evidence": "- Note: `FlowOCT` must be the model name to generate the pareto frontier of FlowOCT",
+      "evidence_location": "126; Pareto Frontier",
+      "confidence": "high",
+      "reason": "Records a specific model-name requirement for Pareto frontier generation."
+    },
+    {
+      "field": "usage_documentation",
+      "value": "`USAGE.md`",
+      "normalized_value": "`USAGE.md`",
+      "evidence": "For understanding model functionality associated with integer and fractional separation procedures in **CUT1** and **CUT2** models, `-e model_extras` and `-c tuning` functionality please refer to the `USAGE.md` file.",
+      "evidence_location": "130; Models Functionality",
+      "confidence": "high",
+      "reason": "Points to the documentation needed to understand CUT1/CUT2 functionality and tuning parameters."
+    },
+    {
+      "field": "external_code_sources",
+      "value": "The code found in `BendersOCT.py`, `FlowOCT.py`, `FlowOCTTree.py,` and `FlowOCTutils.py` are taken directly from the [Strong Tree](https://github.com/pashew94/StrongTree/) GitHub public repository.\nThe code found in `Quant-BnB-2D.jl`, `Quant-BnB-3D.jl`, `Algorithms.jl`, `lowerbound_middle.jl` are taken directly from the [Quant-BnB](https://github.com/mengxianglgal/Quant-BnB) GitHub public repository.",
+      "normalized_value": "The code found in `BendersOCT.py`, `FlowOCT.py`, `FlowOCTTree.py,` and `FlowOCTutils.py` are taken directly from the [Strong Tree](https://github.com/pashew94/StrongTree/) GitHub public repository. The code found in `Quant-BnB-2D.jl`, `Quant-BnB-3D.jl`, `Algorithms.jl`, `lowerbound_middle.jl` are taken directly from the [Quant-BnB](https://github.com/mengxianglgal/Quant-BnB) GitHub public repository.",
+      "evidence": "The code found in `BendersOCT.py`, `FlowOCT.py`, `FlowOCTTree.py,` and `FlowOCTutils.py` are taken directly from the [Strong Tree](https://github.com/pashew94/StrongTree/) GitHub public repository.\nThe code found in `Quant-BnB-2D.jl`, `Quant-BnB-3D.jl`, `Algorithms.jl`, `lowerbound_middle.jl` are taken directly from the [Quant-BnB](https://github.com/mengxianglgal/Quant-BnB) GitHub public repository.",
+      "evidence_location": "137-138; Acknowledgments",
+      "confidence": "high",
+      "reason": "Identifies reused files and their upstream repositories for provenance and attribution."
+    },
+    {
+      "field": "rights_notice",
+      "value": "All rights and ownership are to the original owners.",
+      "normalized_value": "All rights and ownership are to the original owners.",
+      "evidence": "All rights and ownership are to the original owners.",
+      "evidence_location": "140; Acknowledgments",
+      "confidence": "high",
+      "reason": "Provides an explicit rights and ownership notice relevant to reuse."
+    }
+  ]
+}

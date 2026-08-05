@@ -1,0 +1,175 @@
+{
+  "metadata": [
+    {
+      "field": "paper_title",
+      "value": "Ontology-driven Event Type Classification in Images",
+      "normalized_value": "Ontology-driven Event Type Classification in Images",
+      "evidence": "\"Ontology-driven Event Type Classification in Images\".",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Explicitly states the title of the paper associated with this repository."
+    },
+    {
+      "field": "authors",
+      "value": "Eric Müller-Budack, Matthias Springstein, Sherzod Hakimov, Kevin Mrutzek, and Ralph Ewerth",
+      "normalized_value": "Eric Müller-Budack, Matthias Springstein, Sherzod Hakimov, Kevin Mrutzek, and Ralph Ewerth",
+      "evidence": "> Eric Müller-Budack, Matthias Springstein, Sherzod Hakimov, Kevin Mrutzek, and Ralph Ewerth:",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Lists the authors of the published paper."
+    },
+    {
+      "field": "publication_venue",
+      "value": "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+      "normalized_value": "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+      "evidence": "In: *Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)*, pages 2928-2938, IEEE, Virtual Conference, 2021.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Identifies the conference proceedings where the research was published."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://openaccess.thecvf.com/content/WACV2021/html/Muller-Budack_Ontology-Driven_Event_Type_Classification_in_Images_WACV_2021_paper.html",
+      "normalized_value": "https://openaccess.thecvf.com/content/WACV2021/html/Muller-Budack_Ontology-Driven_Event_Type_Classification_in_Images_WACV_2021_paper.html",
+      "evidence": "- *Computer Vision Foundation (CVF)*: https://openaccess.thecvf.com/content/WACV2021/html/Muller-Budack_Ontology-Driven_Event_Type_Classification_in_Images_WACV_2021_paper.html",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Provides the direct access link to the CVF Open Access publication."
+    },
+    {
+      "field": "arxiv_url",
+      "value": "https://arxiv.org/pdf/2011.04714.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2011.04714.pdf",
+      "evidence": "- *arXiv*: https://arxiv.org/pdf/2011.04714.pdf",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Provides the direct link to the arXiv PDF of the paper."
+    },
+    {
+      "field": "project_website",
+      "value": "http://eventkg.l3s.uni-hannover.de/VisE",
+      "normalized_value": "http://eventkg.l3s.uni-hannover.de/VisE",
+      "evidence": "Further information can be found on the **EventKG** website: http://eventkg.l3s.uni-hannover.de/VisE",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Links to the official project website on EventKG."
+    },
+    {
+      "field": "singularity_image_url",
+      "value": "https://tib.eu/cloud/s/fPMwLMWo3wCmMRy/download",
+      "normalized_value": "https://tib.eu/cloud/s/fPMwLMWo3wCmMRy/download",
+      "evidence": "Download our singularity image from: [link](https://tib.eu/cloud/s/fPMwLMWo3wCmMRy/download) (Filesize is 5 GB)",
+      "evidence_location": "46, ## Setup with Singularity (for Reproducibility)",
+      "confidence": "high",
+      "reason": "Direct download link for the pre-built Singularity image used for reproducibility."
+    },
+    {
+      "field": "singularity_setup_command",
+      "value": "singularity exec \\\n  -B </PATH/TO/REPOSITORY>:/src \\\n  --nv </PATH/TO/SINGULARITY/IMAGE>.sif \\\n  bash\n\ncd /src",
+      "normalized_value": "singularity exec \\ -B </PATH/TO/REPOSITORY>:/src \\ --nv </PATH/TO/SINGULARITY/IMAGE>.sif \\ bash cd /src",
+      "evidence": "```shell script\nsingularity exec \\\n  -B </PATH/TO/REPOSITORY>:/src \\\n  --nv </PATH/TO/SINGULARITY/IMAGE>.sif \\\n  bash\n\ncd /src\n```",
+      "evidence_location": "50-57, ## Setup with Singularity (for Reproducibility)",
+      "confidence": "high",
+      "reason": "Defines the command required to run code inside the Singularity image."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "```shell script\npip install -r requirements.txt\n```",
+      "evidence_location": "64-66, ## Setup with Virtual Environment",
+      "confidence": "high",
+      "reason": "Command used to install project dependencies in a virtual environment."
+    },
+    {
+      "field": "docker_build_command",
+      "value": "docker build <PATH/TO/REPOSITORY> -t <DOCKER_NAME>",
+      "normalized_value": "docker build <PATH/TO/REPOSITORY> -t <DOCKER_NAME>",
+      "evidence": "```shell script\ndocker build <PATH/TO/REPOSITORY> -t <DOCKER_NAME>\n```",
+      "evidence_location": "75-77, ## Setup with Docker",
+      "confidence": "high",
+      "reason": "Command to build the project's Docker container."
+    },
+    {
+      "field": "docker_run_command",
+      "value": "docker run \\\n  --volume <PATH/TO/REPOSITORY>:/src \\\n  --shm-size=256m \\\n  -u $(id -u):$(id -g) \\\n  -it <DOCKER_NAME> bash \n\ncd /src",
+      "normalized_value": "docker run \\ --volume <PATH/TO/REPOSITORY>:/src \\ --shm-size=256m \\ -u $(id -u):$(id -g) \\ -it <DOCKER_NAME> bash cd /src",
+      "evidence": "```shell script\ndocker run \\\n  --volume <PATH/TO/REPOSITORY>:/src \\\n  --shm-size=256m \\\n  -u $(id -u):$(id -g) \\\n  -it <DOCKER_NAME> bash \n\ncd /src\n```",
+      "evidence_location": "81-89, ## Setup with Docker",
+      "confidence": "high",
+      "reason": "Command to execute the project's Docker container."
+    },
+    {
+      "field": "resource_download_command",
+      "value": "python download_resources.py",
+      "normalized_value": "python download_resources.py",
+      "evidence": "```shell script\npython download_resources.py\n```",
+      "evidence_location": "98-100, ## Download Ontology, Dataset and Models",
+      "confidence": "high",
+      "reason": "Command to download ontologies, models, and other required resources."
+    },
+    {
+      "field": "inference_command",
+      "value": "python infer.py -c </path/to/model.yml> -i </path/to/image(s)>",
+      "normalized_value": "python infer.py -c </path/to/model.yml> -i </path/to/image(s)>",
+      "evidence": "```shell script\npython infer.py -c </path/to/model.yml> -i </path/to/image(s)>\n```",
+      "evidence_location": "136-138, ## Inference",
+      "confidence": "high",
+      "reason": "Command to run model inference on images."
+    },
+    {
+      "field": "image_download_command",
+      "value": "python download_images.py -d </path/to/dataset.jsonl> -o </path/to/output/root_directory/>",
+      "normalized_value": "python download_images.py -d </path/to/dataset.jsonl> -o </path/to/output/root_directory/>",
+      "evidence": "```shell script\npython download_images.py -d </path/to/dataset.jsonl> -o </path/to/output/root_directory/>\n```",
+      "evidence_location": "156-158, ## Test",
+      "confidence": "high",
+      "reason": "Command to download images specified in a dataset JSONL file."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python test.py \\\n    -c </path/to/model.yml> \\\n    -i </path/to/image/root_directory> \\\n    -t </path/to/testset.jsonl>\n    -o </path/to/output.json>",
+      "normalized_value": "python test.py \\ -c </path/to/model.yml> \\ -i </path/to/image/root_directory> \\ -t </path/to/testset.jsonl> -o </path/to/output.json>",
+      "evidence": "```shell script\npython test.py \\\n    -c </path/to/model.yml> \\\n    -i </path/to/image/root_directory> \\\n    -t </path/to/testset.jsonl>\n    -o </path/to/output.json>\n```",
+      "evidence_location": "178-184, ## Test",
+      "confidence": "high",
+      "reason": "Command to evaluate models and calculate test set results."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://data.uni-hannover.de/de/dataset/vise",
+      "normalized_value": "https://data.uni-hannover.de/de/dataset/vise",
+      "evidence": "The *Visual Event Classification Dataset (VisE-D)* is available on: https://data.uni-hannover.de/de/dataset/vise",
+      "evidence_location": "196, ## VisE-D: Visual Event Classification Dataset",
+      "confidence": "high",
+      "reason": "Direct link to the VisE-D dataset hosted on Leibniz University Hannover's data repository."
+    },
+    {
+      "field": "ontology_download_url",
+      "value": "https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/99ce7e4d-df5b-40f6-afb4-16085dbf697d/download/vise-d.tar.gz",
+      "normalized_value": "https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/99ce7e4d-df5b-40f6-afb4-16085dbf697d/download/vise-d.tar.gz",
+      "evidence": "Different versions of the *Visual Event Ontology (VisE-O)* can be downloaded here: [link](https://data.uni-hannover.de/dataset/3afb333d-230f-4829-91bb-d4dd41bfdcfa/resource/99ce7e4d-df5b-40f6-afb4-16085dbf697d/download/vise-d.tar.gz)",
+      "evidence_location": "217, ## VisE-O: Visual Event Ontology",
+      "confidence": "high",
+      "reason": "Direct download link for the Visual Event Ontology (VisE-O) archive."
+    },
+    {
+      "field": "supplemental_material",
+      "value": "vise_supplemental.pdf",
+      "normalized_value": "vise_supplemental.pdf",
+      "evidence": "Detailed information on the sampling strategy to gather event images, statistics for the training and testing datasets presented in Section 3.3, and results using different inference strategies (Section 4.2.3) are available in the [vise_supplemental.pdf](vise_supplemental.pdf).",
+      "evidence_location": "237, ## Supplemental Material",
+      "confidence": "high",
+      "reason": "References the PDF containing supplemental materials for the project."
+    },
+    {
+      "field": "license",
+      "value": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007",
+      "normalized_value": "GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007",
+      "evidence": "This work is published under the GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007. For details please check the LICENSE file in the repository.",
+      "evidence_location": "242, ## LICENSE",
+      "confidence": "high",
+      "reason": "Specifies the software license governing the artifact."
+    }
+  ]
+}

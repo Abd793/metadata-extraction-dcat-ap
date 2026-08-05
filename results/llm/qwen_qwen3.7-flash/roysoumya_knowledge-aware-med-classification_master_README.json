@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "knowledge-aware-med-classification",
+      "normalized_value": "knowledge-aware-med-classification",
+      "evidence": "# knowledge-aware-med-classification",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the repository and project identifier."
+    },
+    {
+      "field": "paper_title",
+      "value": "Knowledge-Aware Neural Networks for Medical Forum Question Classification",
+      "normalized_value": "Knowledge-Aware Neural Networks for Medical Forum Question Classification",
+      "evidence": "**Knowledge-Aware Neural Networks for Medical Forum Question Classification**",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Provides the exact title of the peer-reviewed paper associated with the codebase."
+    },
+    {
+      "field": "conference_publication",
+      "value": "30th ACM International Conference on Information and Knowledge Management (CIKM 2021)",
+      "normalized_value": "30th ACM International Conference on Information and Knowledge Management (CIKM 2021)",
+      "evidence": "accepted for publication at the 30th ACM International Conference on Information and Knowledge Management (CIKM 2021)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Indicates the venue and year of publication, essential for academic indexing and citation tracking."
+    },
+    {
+      "field": "arxiv_link",
+      "value": "https://arxiv.org/abs/2109.13141",
+      "normalized_value": "https://arxiv.org/abs/2109.13141",
+      "evidence": "[arXiv](https://arxiv.org/abs/2109.13141)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Direct access link to the preprint version of the paper."
+    },
+    {
+      "field": "doi_link",
+      "value": "https://dl.acm.org/doi/10.1145/3459637.3482128",
+      "normalized_value": "https://dl.acm.org/doi/10.1145/3459637.3482128",
+      "evidence": "[DOI](https://dl.acm.org/doi/10.1145/3459637.3482128)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Official Digital Object Identifier link for formal citation and verification."
+    },
+    {
+      "field": "base_frameworks",
+      "value": "huggingface transformers, ABSA-Pytorch",
+      "normalized_value": "huggingface transformers, ABSA-Pytorch",
+      "evidence": "The codebase is based on huggingface transformers [Github codebase](https://github.com/huggingface/transformers). The LCF-BERT and LCF-associated codes is based on ABSA-Pytorch [Github codebase](https://github.com/songyouwei/ABSA-PyTorch/blob/master/models/lcf_bert.py)",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Lists foundational libraries the implementation relies on, critical for dependency resolution and environment setup."
+    },
+    {
+      "field": "task",
+      "value": "Medical Forum Question Classification",
+      "normalized_value": "Medical Forum Question Classification",
+      "evidence": "for the task of \"Medical Forum Question Classification\".",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Clearly defines the specific NLP task the model is designed to solve."
+    },
+    {
+      "field": "model_name",
+      "value": "MedBERT",
+      "normalized_value": "MedBERT",
+      "evidence": "develop a novel medical knowledge-aware BERT-based model (MedBERT)",
+      "evidence_location": "44",
+      "confidence": "high",
+      "reason": "Identifies the specific neural architecture proposed in the work."
+    },
+    {
+      "field": "datasets_used",
+      "value": "CADEC, ICHI",
+      "normalized_value": "CADEC, ICHI",
+      "evidence": "trained and evaluated on two datasets: CADEC (multi-label) and ICHI (multi-class)",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Specifies the benchmark datasets required to reproduce the reported experiments."
+    },
+    {
+      "field": "dataset_source_ICHI",
+      "value": "https://github.com/rakshajalan/ECIR-2018/tree/master/ECIR-18_medical_question_classification/Dataset",
+      "normalized_value": "https://github.com/rakshajalan/ECIR-2018/tree/master/ECIR-18_medical_question_classification/Dataset",
+      "evidence": "[Github codebase](https://github.com/rakshajalan/ECIR-2018/tree/master/ECIR-18_medical_question_classification/Dataset)",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Provides the external repository URL where the ICHI dataset can be downloaded."
+    },
+    {
+      "field": "training_evaluation_command",
+      "value": "python ./examples/ichi/run_ichi.py --model_type bert --model_name_or_path bert-base-uncased --do_lower_case --do_train --do_eval --data_dir ./data/ichi_dataset --max_seq_length 256 --per_gpu_eval_batch_size=16 --per_gpu_train_batch_size=16 --learning_rate 1e-4 --num_train_epochs 2 --output_dir ./tmp/ichi_bert_base_new --overwrite_output_dir",
+      "normalized_value": "python ./examples/ichi/run_ichi.py --model_type bert --model_name_or_path bert-base-uncased --do_lower_case --do_train --do_eval --data_dir ./data/ichi_dataset --max_seq_length 256 --per_gpu_eval_batch_size=16 --per_gpu_train_batch_size=16 --learning_rate 1e-4 --num_train_epochs 2 --output_dir ./tmp/ichi_bert_base_new --overwrite_output_dir",
+      "evidence": "```\npython ./examples/ichi/run_ichi.py --model_type bert --model_name_or_path bert-base-uncased --do_lower_case --do_train --do_eval --data_dir ./data/ichi_dataset --max_seq_length 256 --per_gpu_eval_batch_size=16 --per_gpu_train_batch_size=16 --learning_rate 1e-4 --num_train_epochs 2 --output_dir ./tmp/ichi_bert_base_new --overwrite_output_dir\n```",
+      "evidence_location": "13-15",
+      "confidence": "high",
+      "reason": "Exact shell command to reproduce the training and evaluation pipeline described in the paper."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{10.1145/3459637.3482128,\nauthor = {Roy, Soumyadeep and Chakraborty, Sudip and Mandal, Aishik and Balde, Gunjan and Sharma, Prakhar and Natarajan, Anandhavelu and Khosla, Megha and Sural, Shamik and Ganguly, Niloy},\ntitle = {Knowledge-Aware Neural Networks for Medical Forum Question Classification},\nyear = {2021},\nisbn = {9781450384469},\npublisher = {Association for Computing Machinery},\naddress = {New York, NY, USA},\nurl = {https://doi.org/10.1145/3459637.3482128},\ndoi = {10.1145/3459637.3482128},\nabstract = {Online medical forums have become a predominant platform for answering health-related\ninformation needs of consumers. However, with a significant rise in the number of\nqueries and the limited availability of experts, it is necessary to automatically\nclassify medical queries based on a consumer's intention, so that these questions\nmay be directed to the right set of medical experts. Here, we develop a novel medical\nknowledge-aware BERT-based model (MedBERT) that explicitly gives more weightage to\nmedical concept-bearing words, and utilize domain-specific side information obtained\nfrom a popular medical knowledge base. We also contribute a multi-label dataset for\nthe Medical Forum Question Classification (MFQC) task. MedBERT achieves state-of-the-art\nperformance on two benchmark datasets and performs very well in low resource settings.},\nbooktitle = {Proceedings of the 30th ACM International Conference on Information &amp; Knowledge Management},\npages = {3398–3402},\nnumpages = {5},\nkeywords = {online health communities, clinical text classification},\nlocation = {Virtual Event, Queensland, Australia},\nseries = {CIKM '21}\n}",
+      "normalized_value": "@inproceedings{10.1145/3459637.3482128, author = {Roy, Soumyadeep and Chakraborty, Sudip and Mandal, Aishik and Balde, Gunjan and Sharma, Prakhar and Natarajan, Anandhavelu and Khosla, Megha and Sural, Shamik and Ganguly, Niloy}, title = {Knowledge-Aware Neural Networks for Medical Forum Question Classification}, year = {2021}, isbn = {9781450384469}, publisher = {Association for Computing Machinery}, address = {New York, NY, USA}, url = {https://doi.org/10.1145/3459637.3482128}, doi = {10.1145/3459637.3482128}, abstract = {Online medical forums have become a predominant platform for answering health-related information needs of consumers. However, with a significant rise in the number of queries and the limited availability of experts, it is necessary to automatically classify medical queries based on a consumer's intention, so that these questions may be directed to the right set of medical experts. Here, we develop a novel medical knowledge-aware BERT-based model (MedBERT) that explicitly gives more weightage to medical concept-bearing words, and utilize domain-specific side information obtained from a popular medical knowledge base. We also contribute a multi-label dataset for the Medical Forum Question Classification (MFQC) task. MedBERT achieves state-of-the-art performance on two benchmark datasets and performs very well in low resource settings.}, booktitle = {Proceedings of the 30th ACM International Conference on Information & Knowledge Management}, pages = {3398–3402}, numpages = {5}, keywords = {online health communities, clinical text classification}, location = {Virtual Event, Queensland, Australia}, series = {CIKM '21}}",
+      "evidence": "```\n@inproceedings{10.1145/3459637.3482128,\nauthor = {Roy, Soumyadeep and Chakraborty, Sudip and Mandal, Aishik and Balde, Gunjan and Sharma, Prakhar and Natarajan, Anandhavelu and Khosla, Megha and Sural, Shamik and Ganguly, Niloy},\ntitle = {Knowledge-Aware Neural Networks for Medical Forum Question Classification},\nyear = {2021},\nisbn = {9781450384469},\npublisher = {Association for Computing Machinery},\naddress = {New York, NY, USA},\nurl = {https://doi.org/10.1145/3459637.3482128},\ndoi = {10.1145/3459637.3482128},\nabstract = {Online medical forums have become a predominant platform for answering health-related\ninformation needs of consumers. However, with a significant rise in the number of\nqueries and the limited availability of experts, it is necessary to automatically\nclassify medical queries based on a consumer's intention, so that these questions\nmay be directed to the right set of medical experts. Here, we develop a novel medical\nknowledge-aware BERT-based model (MedBERT) that explicitly gives more weightage to\nmedical concept-bearing words, and utilize domain-specific side information obtained\nfrom a popular medical knowledge base. We also contribute a multi-label dataset for\nthe Medical Forum Question Classification (MFQC) task. MedBERT achieves state-of-the-art\nperformance on two benchmark datasets and performs very well in low resource settings.},\nbooktitle = {Proceedings of the 30th ACM International Conference on Information &amp; Knowledge Management},\npages = {3398–3402},\nnumpages = {5},\nkeywords = {online health communities, clinical text classification},\nlocation = {Virtual Event, Queensland, Australia},\nseries = {CIKM '21}\n}\n```",
+      "evidence_location": "29-55",
+      "confidence": "high",
+      "reason": "Standard BibTeX entry required for proper academic attribution when reusing the model or dataset."
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "HamilToniQ",
+      "normalized_value": "HamilToniQ",
+      "evidence": "# ![HamilToniQ_logo](./figures/HamilToniQ_logo.png)HamilToniQ: An Open-Source Benchmark Toolkit for Quantum Computers",
+      "evidence_location": "line 3; title",
+      "confidence": "high",
+      "reason": "Names the artifact being documented."
+    },
+    {
+      "field": "artifact_type",
+      "value": "Open-Source Benchmark Toolkit for Quantum Computers",
+      "normalized_value": "Open-Source Benchmark Toolkit for Quantum Computers",
+      "evidence": "# ![HamilToniQ_logo](./figures/HamilToniQ_logo.png)HamilToniQ: An Open-Source Benchmark Toolkit for Quantum Computers",
+      "evidence_location": "line 3; title",
+      "confidence": "high",
+      "reason": "Describes the artifact's form and domain."
+    },
+    {
+      "field": "description",
+      "value": "HamilToniQ is an application-oriented benchmarking toolkit for the comprehensive evaluation of QPUs.",
+      "normalized_value": "HamilToniQ is an application-oriented benchmarking toolkit for the comprehensive evaluation of QPUs",
+      "evidence": "HamilToniQ is an application-oriented benchmarking toolkit for the comprehensive evaluation of QPUs.",
+      "evidence_location": "line 17; Introduction",
+      "confidence": "high",
+      "reason": "States the toolkit's primary purpose."
+    },
+    {
+      "field": "license",
+      "value": "MIT",
+      "normalized_value": "MIT",
+      "evidence": "[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![DOI](https://zenodo.org/badge/DOI/10.48550/arXiv.2404.13971.svg)](https://doi.org/10.48550/arXiv.2404.13971)",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "The README explicitly labels the artifact with an MIT license badge."
+    },
+    {
+      "field": "doi",
+      "value": "10.48550/arXiv.2404.13971",
+      "normalized_value": "10.48550/arXiv.2404.13971",
+      "evidence": "[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![DOI](https://zenodo.org/badge/DOI/10.48550/arXiv.2404.13971.svg)](https://doi.org/10.48550/arXiv.2404.13971)",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Provides a persistent identifier for the associated work."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/FelixXu35/hamiltoniq.git",
+      "normalized_value": "https://github.com/FelixXu35/hamiltoniq.git",
+      "evidence": "git clone https://github.com/FelixXu35/hamiltoniq.git",
+      "evidence_location": "line 37; Installation",
+      "confidence": "high",
+      "reason": "Provides the repository location needed to obtain the artifact."
+    },
+    {
+      "field": "installation_command",
+      "value": "cd /path/to/your/directory\ngit clone https://github.com/FelixXu35/hamiltoniq.git\ncd hamiltoniq\npip install -e .",
+      "normalized_value": "cd /path/to/your/directory git clone https://github.com/FelixXu35/hamiltoniq.git cd hamiltoniq pip install -e .",
+      "evidence": "```shell\ncd /path/to/your/directory\ngit clone https://github.com/FelixXu35/hamiltoniq.git\ncd hamiltoniq\npip install -e .\n```",
+      "evidence_location": "lines 35-40; Installation",
+      "confidence": "high",
+      "reason": "Defines the documented clone and editable-install procedure."
+    },
+    {
+      "field": "benchmark_example",
+      "value": "from hamiltoniq.bechmark import Toniq\n\ntoniq = Toniq()\nbackend = <your_backend>\nn_qubits = <your_prefered_number_of_qubits>\nn_layers = <your_prefered_number_of_layers>\nn_cores = <number_of_cores_in_your_PC>\n\nscore = toniq.simulator_run(backend=backend, n_qubits=n_qubits, n_layers=n_layers, n_cores=n_cores)",
+      "normalized_value": "from hamiltoniq.bechmark import Toniq toniq = Toniq() backend = <your_backend> n_qubits = <your_prefered_number_of_qubits> n_layers = <your_prefered_number_of_layers> n_cores = <number_of_cores_in_your_PC> score = toniq.simulator_run(backend=backend, n_qubits=n_qubits, n_layers=n_layers, n_cores=n_cores)",
+      "evidence": "```python\nfrom hamiltoniq.bechmark import Toniq\n\ntoniq = Toniq()\nbackend = <your_backend>\nn_qubits = <your_prefered_number_of_qubits>\nn_layers = <your_prefered_number_of_layers>\nn_cores = <number_of_cores_in_your_PC>\n\nscore = toniq.simulator_run(backend=backend, n_qubits=n_qubits, n_layers=n_layers, n_cores=n_cores)\n```",
+      "evidence_location": "lines 46-56; Bechmark a backend",
+      "confidence": "high",
+      "reason": "Provides the documented Python API usage for benchmarking a backend."
+    },
+    {
+      "field": "benchmark_parameters",
+      "value": "backend = <your_backend>\nn_qubits = <your_prefered_number_of_qubits>\nn_layers = <your_prefered_number_of_layers>\nn_cores = <number_of_cores_in_your_PC>",
+      "normalized_value": "backend = <your_backend> n_qubits = <your_prefered_number_of_qubits> n_layers = <your_prefered_number_of_layers> n_cores = <number_of_cores_in_your_PC>",
+      "evidence": "backend = <your_backend>\nn_qubits = <your_prefered_number_of_qubits>\nn_layers = <your_prefered_number_of_layers>\nn_cores = <number_of_cores_in_your_PC>",
+      "evidence_location": "lines 50-53; Bechmark a backend",
+      "confidence": "high",
+      "reason": "Identifies the configurable backend, circuit dimensions, and local core count."
+    },
+    {
+      "field": "benchmark_entry_point",
+      "value": "toniq.simulator_run",
+      "normalized_value": "toniq.simulator_run",
+      "evidence": "score = toniq.simulator_run(backend=backend, n_qubits=n_qubits, n_layers=n_layers, n_cores=n_cores)",
+      "evidence_location": "line 55; Bechmark a backend",
+      "confidence": "high",
+      "reason": "Names the method used to execute the benchmark and produce a score."
+    },
+    {
+      "field": "example_notebook",
+      "value": "./docs/example_code.ipynb",
+      "normalized_value": "./docs/example_code.ipynb",
+      "evidence": "An example is given in [this notebook](./docs/example_code.ipynb).",
+      "evidence_location": "line 58; Bechmark a backend",
+      "confidence": "high",
+      "reason": "Links to an additional runnable usage example."
+    },
+    {
+      "field": "primary_metric",
+      "value": "H-Score",
+      "normalized_value": "H-Score",
+      "evidence": "The toolkit generates a single score, termed H-Score, capturing all relevant QPU performance factors such as error rates, circuit compilation, and quantum error mitigation.",
+      "evidence_location": "line 22; Introduction",
+      "confidence": "high",
+      "reason": "Names the toolkit's principal benchmarking score."
+    },
+    {
+      "field": "score_factors",
+      "value": "error rates, circuit compilation, and quantum error mitigation",
+      "normalized_value": "error rates, circuit compilation, and quantum error mitigation",
+      "evidence": "error rates, circuit compilation, and quantum error mitigation",
+      "evidence_location": "line 22; Introduction",
+      "confidence": "high",
+      "reason": "Specifies the performance factors incorporated into the H-Score."
+    },
+    {
+      "field": "application_basis",
+      "value": "optimization algorithms",
+      "normalized_value": "optimization algorithms",
+      "evidence": "The toolkit is based on optimization algorithms to reflect actual application scenarios.",
+      "evidence_location": "line 24; Introduction",
+      "confidence": "high",
+      "reason": "Identifies the application-oriented basis of the benchmark."
+    },
+    {
+      "field": "multi_qpu_support",
+      "value": "multi-QPU resource management",
+      "normalized_value": "multi-QPU resource management",
+      "evidence": "Utility in multi-QPU resource management has been demonstrated.",
+      "evidence_location": "line 25; Introduction",
+      "confidence": "high",
+      "reason": "Indicates support relevant to multi-QPU resource allocation."
+    },
+    {
+      "field": "result_source",
+      "value": "built-in Q matrices",
+      "normalized_value": "built-in Q matrices",
+      "evidence": "The following results were obtained on the built-in Q matrices.",
+      "evidence_location": "line 64; H-Scores",
+      "confidence": "high",
+      "reason": "Identifies the source configuration used for the documented results."
+    },
+    {
+      "field": "comparison_constraint",
+      "value": "comparison across different numbers of qubits is meaningless",
+      "normalized_value": "comparison across different numbers of qubits is meaningless",
+      "evidence": "Note that comparison across different numbers of qubits is meaningless.",
+      "evidence_location": "line 66; H-Scores",
+      "confidence": "high",
+      "reason": "Provides an important limitation for interpreting benchmark results."
+    },
+    {
+      "field": "qpu_characterization_dimensions",
+      "value": "type, topology, and multi-QPU system",
+      "normalized_value": "type, topology, and multi-QPU system",
+      "evidence": "each QPU is classified according to its type, topology, and multi-QPU system",
+      "evidence_location": "line 90; Architecture",
+      "confidence": "high",
+      "reason": "Specifies the QPU attributes used to tailor the benchmarking workflow."
+    },
+    {
+      "field": "circuit_compilation",
+      "value": "quantum circuit compilation",
+      "normalized_value": "quantum circuit compilation",
+      "evidence": "quantum circuit compilation",
+      "evidence_location": "line 90; Architecture",
+      "confidence": "high",
+      "reason": "Identifies a workflow stage for adapting circuits to QPUs."
+    },
+    {
+      "field": "error_mitigation_method",
+      "value": "Quantum Error Mitigation (QEM)",
+      "normalized_value": "Quantum Error Mitigation (QEM)",
+      "evidence": "Quantum Error Mitigation (QEM)",
+      "evidence_location": "line 90; Architecture",
+      "confidence": "high",
+      "reason": "Names the error-mitigation method included in the workflow."
+    },
+    {
+      "field": "reported_metrics",
+      "value": "H-Score and Execution Time",
+      "normalized_value": "H-Score and Execution Time",
+      "evidence": "reliability—represented by the H-Score and Execution Time",
+      "evidence_location": "line 90; Architecture",
+      "confidence": "high",
+      "reason": "Identifies the quantitative outputs of the benchmarking workflow."
+    },
+    {
+      "field": "reference_simulator",
+      "value": "noiseless simulator",
+      "normalized_value": "noiseless simulator",
+      "evidence": "utilizes a noiseless simulator to find the scoring curve",
+      "evidence_location": "line 94; Architecture",
+      "confidence": "high",
+      "reason": "Specifies the simulator used to establish the reference scoring curve."
+    },
+    {
+      "field": "reference_use_case",
+      "value": "benchmarking on their own Q matrices",
+      "normalized_value": "benchmarking on their own Q matrices",
+      "evidence": "Users will only need this part when they are benchmarking on their own Q matrices.",
+      "evidence_location": "line 94; Architecture",
+      "confidence": "high",
+      "reason": "Clarifies when the optional reference component is required."
+    },
+    {
+      "field": "scoring_algorithm",
+      "value": "Quantum Approximate Optimization Algorithm (QAOA)",
+      "normalized_value": "Quantum Approximate Optimization Algorithm (QAOA)",
+      "evidence": "the Quantum Approximate Optimization Algorithm (QAOA) is executed a certain number of times",
+      "evidence_location": "line 94; Architecture",
+      "confidence": "high",
+      "reason": "Names the algorithm executed by the scoring component."
+    },
+    {
+      "field": "score_aggregation",
+      "value": "average of all individual scores",
+      "normalized_value": "average of all individual scores",
+      "evidence": "The final H-Score is computed as the average of all individual scores.",
+      "evidence_location": "line 94; Architecture",
+      "confidence": "high",
+      "reason": "Describes how the final H-Score is computed."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2404.13971",
+      "normalized_value": "https://arxiv.org/abs/2404.13971",
+      "evidence": "For more technical details please visit our [arXiv Paper](https://arxiv.org/abs/2404.13971).",
+      "evidence_location": "line 88; Architecture",
+      "confidence": "high",
+      "reason": "Links to the paper containing further technical details."
+    },
+    {
+      "field": "citation",
+      "value": "@article{xu2024hamiltoniq,\n  title={HamilToniQ: An Open-Source Benchmark Toolkit for Quantum Computers},\n  author={Xu, Xiaotian and Chen, Kuan-Cheng and Wille, Robert},\n  journal={arXiv preprint arXiv:2404.13971},\n  year={2024}\n}",
+      "normalized_value": "@article{xu2024hamiltoniq, title={HamilToniQ: An Open-Source Benchmark Toolkit for Quantum Computers}, author={Xu, Xiaotian and Chen, Kuan-Cheng and Wille, Robert}, journal={arXiv preprint arXiv:2404.13971}, year={2024} }",
+      "evidence": "```text\n@article{xu2024hamiltoniq,\n  title={HamilToniQ: An Open-Source Benchmark Toolkit for Quantum Computers},\n  author={Xu, Xiaotian and Chen, Kuan-Cheng and Wille, Robert},\n  journal={arXiv preprint arXiv:2404.13971},\n  year={2024}\n}\n```",
+      "evidence_location": "lines 104-111; How to cite",
+      "confidence": "high",
+      "reason": "Provides the recommended bibliographic citation for reuse in research."
+    }
+  ]
+}

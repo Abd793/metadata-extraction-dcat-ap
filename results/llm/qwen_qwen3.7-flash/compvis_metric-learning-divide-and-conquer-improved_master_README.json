@@ -1,0 +1,103 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "# Improving Deep Metric Learning by Divide and Conquer",
+      "normalized_value": "# Improving Deep Metric Learning by Divide and Conquer",
+      "evidence": "# Improving Deep Metric Learning by Divide and Conquer",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit title of the repository and associated research artifact."
+    },
+    {
+      "field": "description",
+      "value": "PyTorch implementation for the paper _Improving Deep Metric \n Learning by Divide and Conquer_ accepted to **TPAMI** (Sep. 2021), which is our follow-up paper of\n[_Divide and Conquer the Embedding Space for Metric Learning (CVPR 2019)_](https://github.com/CompVis/metric-learning-divide-and-conquer)",
+      "normalized_value": "PyTorch implementation for the paper _Improving Deep Metric Learning by Divide and Conquer_ accepted to **TPAMI** (Sep. 2021), which is our follow-up paper of [_Divide and Conquer the Embedding Space for Metric Learning (CVPR 2019)_](https://github.com/CompVis/metric-learning-divide-and-conquer)",
+      "evidence": "PyTorch implementation for the paper _Improving Deep Metric \n Learning by Divide and Conquer_ accepted to **TPAMI** (Sep. 2021), which is our follow-up paper of\n[_Divide and Conquer the Embedding Space for Metric Learning (CVPR 2019)_](https://github.com/CompVis/metric-learning-divide-and-conquer)",
+      "evidence_location": "4-6 (About)",
+      "confidence": "high",
+      "reason": "Clearly states the purpose, framework, and publication context of the codebase."
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "PyTorch implementation for the paper _Improving Deep Metric ",
+      "evidence_location": "4 (About)",
+      "confidence": "high",
+      "reason": "Identifies the primary deep learning framework used for the implementation."
+    },
+    {
+      "field": "dependencies",
+      "value": "* PyTorch 1.1.0\n* Faiss-GPU >= 1.5.0, [Link](https://github.com/facebookresearch/faiss)\n* albumentations >= 0.4.5, [Link](https://github.com/albumentations-team/albumentations)",
+      "normalized_value": "* PyTorch 1.1.0 * Faiss-GPU >= 1.5.0, [Link](https://github.com/facebookresearch/faiss) * albumentations >= 0.4.5, [Link](https://github.com/albumentations-team/albumentations)",
+      "evidence": "* PyTorch 1.1.0\n* Faiss-GPU >= 1.5.0, [Link](https://github.com/facebookresearch/faiss)\n* albumentations >= 0.4.5, [Link](https://github.com/albumentations-team/albumentations)",
+      "evidence_location": "15-17 (Requirements)",
+      "confidence": "high",
+      "reason": "Lists required software packages and their minimum versions for installation."
+    },
+    {
+      "field": "arxiv_paper_url",
+      "value": "https://arxiv.org/abs/2109.04003",
+      "normalized_value": "https://arxiv.org/abs/2109.04003",
+      "evidence": "* arxiv: https://arxiv.org/abs/2109.04003 or",
+      "evidence_location": "9 (Links)",
+      "confidence": "high",
+      "reason": "Direct link to the preprint version of the associated research paper."
+    },
+    {
+      "field": "tpami_paper_url",
+      "value": "https://ieeexplore.ieee.org/document/9540303",
+      "normalized_value": "https://ieeexplore.ieee.org/document/9540303",
+      "evidence": "* TPAMI early access: https://ieeexplore.ieee.org/document/9540303",
+      "evidence_location": "10 (Links)",
+      "confidence": "high",
+      "reason": "Direct link to the published journal article."
+    },
+    {
+      "field": "training_command",
+      "value": "```\npython train.py --experiment margin_loss_resnet50 \\\n                --dataset=sop -i=$NAME -seed=4 \\\n                --sz-embedding=512 --mod-epoch=2 --nb-clusters=32 --nb-epochs=180 \\\n                --batch-size=80 --num-samples-per-class=2 --backend=faiss-gpu \\\n                --lr-gamma=0.3 --mod-epoch-freeze=1 --sampler=distanceweighted \\\n                --weight-decay=1e-4 --batch-sampler=adaptbalanced \\\n                --force-full-embedding-epoch=80 --mask-lr-mult=100 \\\n                --masking-lambda=0.01 --mask-wd-mult=1 --dataset-dir=$datadir\n```",
+      "normalized_value": "python train.py --experiment margin_loss_resnet50 --dataset=sop -i=$NAME -seed=4 --sz-embedding=512 --mod-epoch=2 --nb-clusters=32 --nb-epochs=180 --batch-size=80 --num-samples-per-class=2 --backend=faiss-gpu --lr-gamma=0.3 --mod-epoch-freeze=1 --sampler=distanceweighted --weight-decay=1e-4 --batch-sampler=adaptbalanced --force-full-embedding-epoch=80 --mask-lr-mult=100 --masking-lambda=0.01 --mask-wd-mult=1 --dataset-dir=$datadir",
+      "evidence": "```\npython train.py --experiment margin_loss_resnet50 \\\n                --dataset=sop -i=$NAME -seed=4 \\\n                --sz-embedding=512 --mod-epoch=2 --nb-clusters=32 --nb-epochs=180 \\\n                --batch-size=80 --num-samples-per-class=2 --backend=faiss-gpu \\\n                --lr-gamma=0.3 --mod-epoch-freeze=1 --sampler=distanceweighted \\\n                --weight-decay=1e-4 --batch-sampler=adaptbalanced \\\n                --force-full-embedding-epoch=80 --mask-lr-mult=100 \\\n                --masking-lambda=0.01 --mask-wd-mult=1 --dataset-dir=$datadir\n```",
+      "evidence_location": "28-37 (Training)",
+      "confidence": "high",
+      "reason": "Provides a concrete example command to reproduce the default training setup."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "eval_model.py <log and model checkpoint path>",
+      "normalized_value": "eval_model.py <log and model checkpoint path>",
+      "evidence": "* **evaluate a trained model**: `eval_model.py <log and model checkpoint path>`. It is suggested to put only those models (checkpoints and logs) you want to eval into one folder otherwise it will evaluate all the models ind the folder",
+      "evidence_location": "57 (Evaluate or check results during)",
+      "confidence": "high",
+      "reason": "Specifies the script and arguments needed to evaluate a trained model."
+    },
+    {
+      "field": "datasets",
+      "value": "* CUB200-2011 (http://www.vision.caltech.edu/visipedia/CUB-200.html)\n* CARS196 (https://ai.stanford.edu/~jkrause/cars/car_dataset.html)\n* Stanford Online Products (http://cvgl.stanford.edu/projects/lifted_struct/)\n* In-shop Clothes Retrieval Benchmark (http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html)\n* PKU VehicleID (https://www.pkuml.org/resources/pku-vehicleid.html)",
+      "normalized_value": "* CUB200-2011 (http://www.vision.caltech.edu/visipedia/CUB-200.html) * CARS196 (https://ai.stanford.edu/~jkrause/cars/car_dataset.html) * Stanford Online Products (http://cvgl.stanford.edu/projects/lifted_struct/) * In-shop Clothes Retrieval Benchmark (http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html) * PKU VehicleID (https://www.pkuml.org/resources/pku-vehicleid.html)",
+      "evidence": "* CUB200-2011 (http://www.vision.caltech.edu/visipedia/CUB-200.html)\n* CARS196 (https://ai.stanford.edu/~jkrause/cars/car_dataset.html)\n* Stanford Online Products (http://cvgl.stanford.edu/projects/lifted_struct/)\n* In-shop Clothes Retrieval Benchmark (http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html)\n* PKU VehicleID (https://www.pkuml.org/resources/pku-vehicleid.html)",
+      "evidence_location": "67-71 (Datasets)",
+      "confidence": "high",
+      "reason": "Lists the specific benchmark datasets used for testing and evaluation."
+    },
+    {
+      "field": "metrics",
+      "value": "Variants | Loss/Sampling\t|   NMI  |  mARP  | Recall @ 1 -- 2 -- 4 -- 8\n---------|---------------\t|--------|------|-----------------\nfixed |  Margin/Distance    | 68.60 | 54.98 | 67.39 -- 77.43 --  84.82 --  90.83    ",
+      "normalized_value": "Variants | Loss/Sampling | NMI | mARP | Recall @ 1 -- 2 -- 4 -- 8 ---------|--------------- |--------|------|----------------- fixed | Margin/Distance | 68.60 | 54.98 | 67.39 -- 77.43 -- 84.82 -- 90.83",
+      "evidence": "Variants | Loss/Sampling\t|   NMI  |  mARP  | Recall @ 1 -- 2 -- 4 -- 8\n---------|---------------\t|--------|------|-----------------\nfixed |  Margin/Distance    | 68.60 | 54.98 | 67.39 -- 77.43 --  84.82 --  90.83    ",
+      "evidence_location": "123-125 (Results)",
+      "confidence": "high",
+      "reason": "Identifies the quantitative evaluation metrics reported in the results section."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "```\n@InProceedings{dcesml,\n  title={Divide and Conquer the Embedding Space for Metric Learning},\n  author={Sanakoyeu, Artsiom and Tschernezki, Vadim and B\"uchler, Uta and Ommer, Bj\"orn},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  year={2019}\n}\n\n@article{sanakoyeu2021improving,\n  title={Improving Deep Metric Learning by Divide and Conquer}, \n  author={Artsiom Sanakoyeu and Pingchuan Ma and Vadim Tschernezki and Björn Ommer},\n  journal={IEEE Transactions on pattern analysis and machine intelligence},\n  year={2021},\n  publisher={IEEE}\n}\n```",
+      "normalized_value": "@InProceedings{dcesml, title={Divide and Conquer the Embedding Space for Metric Learning}, author={Sanakoyeu, Artsiom and Tschernezki, Vadim and B\"uchler, Uta and Ommer, Bj\"orn}, booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}, year={2019}} @article{sanakoyeu2021improving, title={Improving Deep Metric Learning by Divide and Conquer}, author={Artsiom Sanakoyeu and Pingchuan Ma and Vadim Tschernezki and Björn Ommer}, journal={IEEE Transactions on pattern analysis and machine intelligence}, year={2021}, publisher={IEEE}}",
+      "evidence": "```\n@InProceedings{dcesml,\n  title={Divide and Conquer the Embedding Space for Metric Learning},\n  author={Sanakoyeu, Artsiom and Tschernezki, Vadim and B\"uchler, Uta and Ommer, Bj\"orn},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  year={2019}\n}\n\n@article{sanakoyeu2021improving,\n  title={Improving Deep Metric Learning by Divide and Conquer}, \n  author={Artsiom Sanakoyeu and Pingchuan Ma and Vadim Tschernezki and Björn Ommer},\n  journal={IEEE Transactions on pattern analysis and machine intelligence},\n  year={2021},\n  publisher={IEEE}\n}\n```",
+      "evidence_location": "173-187 (BibTex)",
+      "confidence": "high",
+      "reason": "Provides standard BibTeX entries for citing the associated research papers."
+    }
+  ]
+}

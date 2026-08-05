@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "**ReasonEval**",
+      "normalized_value": "**ReasonEval**",
+      "evidence": "**ReasonEval**, a suite comprising a new evaluation methodology with defined metrics for assessing mathematical reasoning quality and corresponding LLM-based evaluators for automated calculation.",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Explicitly identifies the primary tool/suite released in the repository."
+    },
+    {
+      "field": "artifact_description",
+      "value": "a suite comprising a new evaluation methodology with defined metrics for assessing mathematical reasoning quality and corresponding LLM-based evaluators for automated calculation.",
+      "normalized_value": "a suite comprising a new evaluation methodology with defined metrics for assessing mathematical reasoning quality and corresponding LLM-based evaluators for automated calculation.",
+      "evidence": "**ReasonEval**, a suite comprising a new evaluation methodology with defined metrics for assessing mathematical reasoning quality and corresponding LLM-based evaluators for automated calculation.",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Clearly states the purpose and scope of the artifact for users seeking to understand its function."
+    },
+    {
+      "field": "paper_title",
+      "value": "Evaluating Mathematical Reasoning Beyond Accuracy",
+      "normalized_value": "Evaluating Mathematical Reasoning Beyond Accuracy",
+      "evidence": "[Evaluating Mathematical Reasoning Beyond Accuracy](https://arxiv.org/pdf/2404.05692.pdf)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Identifies the associated academic paper for scientific context and citation."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2404.05692.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2404.05692.pdf",
+      "evidence": "(https://arxiv.org/pdf/2404.05692.pdf)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Direct link to the full paper PDF for reference and verification."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/GAIR-NLP/ReasonEval",
+      "normalized_value": "https://github.com/GAIR-NLP/ReasonEval",
+      "evidence": "git clone https://github.com/GAIR-NLP/ReasonEval",
+      "evidence_location": "43",
+      "confidence": "high",
+      "reason": "Official source code repository URL for cloning and contribution."
+    },
+    {
+      "field": "huggingface_model_urls",
+      "value": "https://huggingface.co/GAIR/ReasonEval-7B, https://huggingface.co/GAIR/ReasonEval-34B",
+      "normalized_value": "https://huggingface.co/GAIR/ReasonEval-7B, https://huggingface.co/GAIR/ReasonEval-34B",
+      "evidence": "[🤗 GAIR/ReasonEval-7B](https://huggingface.co/GAIR/ReasonEval-7B)\n| **7B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) | [WizardMath-7B-V1.1](https://huggingface.co/WizardLM/WizardMath-7B-V1.1)|\n| ReasonEval-34B    |[🤗 GAIR/ReasonEval-34B](https://huggingface.co/GAIR/ReasonEval-34B) | **34B** | [Apache License 2.0](https://www.apache.org/licenses/) | [llemma_34b](https://huggingface.co/EleutherAI/llemma_34b)|",
+      "evidence_location": "65-66",
+      "confidence": "high",
+      "reason": "Provides direct access to the hosted model checkpoints for download and inference."
+    },
+    {
+      "field": "base_models",
+      "value": "WizardMath-7B-V1.1, llemma_34b",
+      "normalized_value": "WizardMath-7B-V1.1, llemma_34b",
+      "evidence": "| Fine-tuned from model |  \n| ---------- | ------------------------------------------------------------ | --------------------------- |\n| ReasonEval-7B     | [🤗 GAIR/ReasonEval-7B](https://huggingface.co/GAIR/ReasonEval-7B) | **7B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) | [WizardMath-7B-V1.1](https://huggingface.co/WizardLM/WizardMath-7B-V1.1)|\n| ReasonEval-34B    |[🤗 GAIR/ReasonEval-34B](https://huggingface.co/GAIR/ReasonEval-34B) | **34B** | [Apache License 2.0](https://www.apache.org/licenses/) | [llemma_34b](https://huggingface.co/EleutherAI/llemma_34b)|",
+      "evidence_location": "63-66",
+      "confidence": "high",
+      "reason": "Specifies the foundation models used for fine-tuning, critical for reproducibility and understanding model lineage."
+    },
+    {
+      "field": "licenses",
+      "value": "Llama 2, Apache License 2.0",
+      "normalized_value": "Llama 2, Apache License 2.0",
+      "evidence": "| Size    | License | ...\n| **7B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |\n| **34B** | [Apache License 2.0](https://www.apache.org/licenses/) |",
+      "evidence_location": "63-66",
+      "confidence": "high",
+      "reason": "Indicates the specific open-source licenses governing each model variant for legal compliance."
+    },
+    {
+      "field": "python_version",
+      "value": "3.10",
+      "normalized_value": "3.10",
+      "evidence": "conda create -n ReasonEval python=3.10",
+      "evidence_location": "48",
+      "confidence": "high",
+      "reason": "Specifies the exact Python version required for environment setup."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "Validity, Redundancy",
+      "normalized_value": "Validity, Redundancy",
+      "evidence": "- **Validity**: The step contains no mistakes in calculation and logic.\n- **Redundancy**: The step lacks utility in solving the problem but is still valid.",
+      "evidence_location": "19-20",
+      "confidence": "high",
+      "reason": "Defines the core quantitative metrics used to assess reasoning quality beyond final answers."
+    },
+    {
+      "field": "meta_evaluation_datasets",
+      "value": "Meta-Reasoning-MATH, Meta-Reasoning-GSM8K, Perturbation",
+      "normalized_value": "Meta-Reasoning-MATH, Meta-Reasoning-GSM8K, Perturbation",
+      "evidence": "- **Meta-Reasoning-MATH**: This dataset is constructed as follows:\n...\n- **Meta-Reasoning-GSM8K**: This dataset consists of 3000 solutions from problems in GSM8K...\n- **Perturbation**: We introduce 6 types of errors to one of the intermediate steps...",
+      "evidence_location": "101, 164, 165",
+      "confidence": "high",
+      "reason": "Lists the specific datasets used for meta-evaluations, essential for benchmarking and reproduction."
+    },
+    {
+      "field": "setup_commands",
+      "value": "git clone https://github.com/GAIR-NLP/ReasonEval\ncd ReasonEval\nconda create -n ReasonEval python=3.10\nconda activate ReasonEval\npip install -r requirements.txt",
+      "normalized_value": "git clone https://github.com/GAIR-NLP/ReasonEval cd ReasonEval conda create -n ReasonEval python=3.10 conda activate ReasonEval pip install -r requirements.txt",
+      "evidence": "```bash\ngit clone https://github.com/GAIR-NLP/ReasonEval\ncd ReasonEval\n```\n* Create a conda environment and activate the environment\n```bash\nconda create -n ReasonEval python=3.10\nconda activate ReasonEval\n```\n* Install the required libraries\n```bash\npip install -r requirements.txt\n```",
+      "evidence_location": "42-54",
+      "confidence": "high",
+      "reason": "Provides exact shell commands to clone, configure, and install dependencies for the project."
+    },
+    {
+      "field": "inference_command",
+      "value": "python ./codes/examples.py\n--model_name_or_path GAIR/ReasonEval-7B # Specify the model name or path here\n--model_size 7B # Indicate the model size of ReasonEval (7B or 34B)",
+      "normalized_value": "python ./codes/examples.py --model_name_or_path GAIR/ReasonEval-7B # Specify the model name or path here --model_size 7B # Indicate the model size of ReasonEval (7B or 34B)",
+      "evidence": "```bash\n# examples\n## Replace the 'question' and 'reasoning_steps' in ./codes/examples.py with your own content.\npython ./codes/examples.py\n--model_name_or_path GAIR/ReasonEval-7B # Specify the model name or path here\n--model_size 7B # Indicate the model size of ReasonEval (7B or 34B)\n```",
+      "evidence_location": "89-95",
+      "confidence": "high",
+      "reason": "Demonstrates how to run the model for inference with required arguments."
+    },
+    {
+      "field": "evaluation_commands",
+      "value": "python ./codes/mr-gsm8k_eval.py\npython ./codes/mr-math_eval.py --error_type invalid\npython ./codes/mr-math_eval.py --error_type redundant",
+      "normalized_value": "python ./codes/mr-gsm8k_eval.py python ./codes/mr-math_eval.py --error_type invalid python ./codes/mr-math_eval.py --error_type redundant",
+      "evidence": "```bash\npython ./codes/mr-gsm8k_eval.py\npython ./codes/mr-math_eval.py --error_type invalid\npython ./codes/mr-math_eval.py --error_type redundant\n```",
+      "evidence_location": "210-214",
+      "confidence": "high",
+      "reason": "Commands to reproduce the meta-evaluation experiments reported in the paper."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{xia2024evaluating,\n        title={Evaluating Mathematical Reasoning Beyond Accuracy}, \n        author={Xia, Shijie and Li, Xuefeng and Liu, Yixin and Wu, Tongshuang and Liu, Pengfei},\n        journal={arXiv preprint arXiv:2404.05692},\n        year={2024},\n}",
+      "normalized_value": "@article{xia2024evaluating, title={Evaluating Mathematical Reasoning Beyond Accuracy}, author={Xia, Shijie and Li, Xuefeng and Liu, Yixin and Wu, Tongshuang and Liu, Pengfei}, journal={arXiv preprint arXiv:2404.05692}, year={2024},}",
+      "evidence": "```@article{xia2024evaluating,\n        title={Evaluating Mathematical Reasoning Beyond Accuracy}, \n        author={Xia, Shijie and Li, Xuefeng and Liu, Yixin and Wu, Tongshuang and Liu, Pengfei},\n        journal={arXiv preprint arXiv:2404.05692},\n        year={2024},\n}```",
+      "evidence_location": "218-224",
+      "confidence": "high",
+      "reason": "Standard BibTeX entry for proper academic attribution when reusing the resource or citing the work."
+    }
+  ]
+}

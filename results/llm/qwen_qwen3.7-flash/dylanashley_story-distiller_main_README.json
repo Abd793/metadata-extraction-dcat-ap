@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "story-distiller",
+      "normalized_value": "story-distiller",
+      "evidence": "# story-distiller",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the main heading."
+    },
+    {
+      "field": "description",
+      "value": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc. The music tracks are fitted to a fixed narrative template based on the output of a machine learning model, which itself distills each track down to its narrative essence.",
+      "normalized_value": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc. The music tracks are fitted to a fixed narrative template based on the output of a machine learning model, which itself distills each track down to its narrative essence.",
+      "evidence": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc. The music tracks are fitted to a fixed narrative template based on the output of a machine learning model, which itself distills each track down to its narrative essence.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Clearly defines the project's core purpose and methodology."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "This project is implemented in [Python](https://www.python.org/) and uses models learned with [PyTorch](https://pytorch.org).",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Identifies the primary implementation language required for setup."
+    },
+    {
+      "field": "deep_learning_framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "This project is implemented in [Python](https://www.python.org/) and uses models learned with [PyTorch](https://pytorch.org).",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Specifies the ML framework used for model training and inference."
+    },
+    {
+      "field": "repository_url",
+      "value": "git@github.com:dylanashley/story-distiller.git",
+      "normalized_value": "git@github.com:dylanashley/story-distiller.git",
+      "evidence": "git clone --sparse git@github.com:dylanashley/story-distiller.git",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Provides the exact SSH URL to clone the source code repository."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Standard command for installing declared Python dependencies."
+    },
+    {
+      "field": "external_dependency",
+      "value": "ffmpeg",
+      "normalized_value": "ffmpeg",
+      "evidence": "To use the full suite of file types supported by the tool, it is also necessary to separately install the [ffmpeg](https://ffmpeg.org/) tool by following the instructions for your operating system provided on [their website](https://ffmpeg.org/download.html).",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Identifies a critical third-party system tool required for full audio processing functionality."
+    },
+    {
+      "field": "build_install_command",
+      "value": "make all\nsudo make install",
+      "normalized_value": "make all sudo make install",
+      "evidence": "```bash\nmake all\nsudo make install\n```",
+      "evidence_location": "25-28",
+      "confidence": "high",
+      "reason": "Provides commands to compile and install the executable Python zip archive on Linux/macOS."
+    },
+    {
+      "field": "cli_usage_command",
+      "value": "sdistil files [files ...] >> playlist.txt",
+      "normalized_value": "sdistil files [files ...] >> playlist.txt",
+      "evidence": "```bash\nsdistil files [files ...] >> playlist.txt\n```",
+      "evidence_location": "34-36",
+      "confidence": "high",
+      "reason": "Shows the exact command-line interface for running the main sequencing tool."
+    },
+    {
+      "field": "web_app_command",
+      "value": "./app.py",
+      "normalized_value": "./app.py",
+      "evidence": "```bash\n./app.py\n```",
+      "evidence_location": "48-50",
+      "confidence": "high",
+      "reason": "Indicates how to launch the included web application interface."
+    },
+    {
+      "field": "paper_title",
+      "value": "On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media",
+      "normalized_value": "On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media",
+      "evidence": "*On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media*",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Cites the foundational research paper that establishes the theoretical basis for the project."
+    },
+    {
+      "field": "paper_authors",
+      "value": "Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber",
+      "normalized_value": "Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber",
+      "evidence": "by Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Lists the authors of the cited research paper for attribution and citation purposes."
+    },
+    {
+      "field": "reproducibility_scripts",
+      "value": "album_extractor.py, movie_extractor.py, template_learner.py, fit_values",
+      "normalized_value": "album_extractor.py movie_extractor.py template_learner.py fit_values",
+      "evidence": "- the scripts needed to learn the PyTorch models for extracting the narrative essence from either music albums (`album_extractor.py`) or movie frames (`movie_extractor.py`) and compute the lower bounds for the mutual information of the different features,\n- the scripts for learning a set of template curves from scalar descriptions of items in a set of collections (`template_learner.py`),\n- the code that can fit the scalar descriptions of items in a collection to a given template curve (`fit_values` in `__main__.py`),",
+      "evidence_location": "56-58",
+      "confidence": "high",
+      "reason": "Details the specific scripts available in the repository for reproducing the paper's experimental pipeline."
+    },
+    {
+      "field": "included_data_and_models",
+      "value": "data/, results/",
+      "normalized_value": "data/ results/",
+      "evidence": "- the preprocessed album data used to train the original PyTorch models for the music albums (`data/`), and\n- the learned PyTorch models and template curves (`results/`).",
+      "evidence_location": "59-60",
+      "confidence": "high",
+      "reason": "Points to directories containing preprocessed datasets and trained models for immediate reuse or evaluation."
+    },
+    {
+      "field": "template_cli_flag",
+      "value": "-t",
+      "normalized_value": "-t",
+      "evidence": "If you want to try out a different template, pass the `-t` argument to the program with the template file as an argument.",
+      "evidence_location": "40",
+      "confidence": "high",
+      "reason": "Documents the CLI flag required to swap the default narrative template for a custom one."
+    }
+  ]
+}

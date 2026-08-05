@@ -9,6 +9,8 @@ import re
 import shutil
 import subprocess
 import sys
+import threading
+import traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import Counter, defaultdict
 from multiprocessing import Pool
@@ -112,6 +114,7 @@ Input text:
 
 
 REASONING_DELIMITER = "\n\n===== FINAL RESPONSE =====\n\n"
+LOG_LOCK = threading.Lock()
 
 
 def number_lines(text: str) -> str:
@@ -121,7 +124,7 @@ def number_lines(text: str) -> str:
 def reasoning_extra_body_for_model(model: str) -> dict[str, Any]:
     model_name = model.lower()
 
-    if "deepseek-v4-flash" in model_name:
+    if "deepseek" in model_name:
         return {
             "include_reasoning": True,
             "reasoning": {"enabled": True, "effort": "xhigh", "exclude": False},
@@ -133,13 +136,16 @@ def reasoning_extra_body_for_model(model: str) -> dict[str, Any]:
             "reasoning": {"enabled": True, "effort": "high", "exclude": False},
         }
 
-    if "qwen3.5-flash" in model_name or "qwen/qwen3.5-flash" in model_name:
+    if 'qwen' in model_name:
         return {
             "include_reasoning": True,
             "reasoning": {"enabled": True, "exclude": False},
         }
 
-    return {}
+    return {
+        "include_reasoning": True,
+        "reasoning": {"enabled": True, "exclude": False, "effort": "high", "mode": "pro"},
+    }
 
 
 def object_to_dict(value: Any) -> dict[str, Any]:
@@ -208,6 +214,54 @@ def normalize_json(content: str) -> dict[str, Any]:
 
     return result
 
+
+def append_jsonl(path: Path, record: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with LOG_LOCK:
+        with path.open("a", encoding="utf-8") as handle:
+            handle.write(json.dumps(record, ensure_ascii=False, sort_keys=True) + "\n")
+
+
+def log_event(output_dir: Path, event: str, model: str, file: Path, **kwargs: Any) -> None:
+    append_jsonl(
+        output_dir / "_logs" / "metadata_extract_events.jsonl",
+        {
+            "event": event,
+            "model": model,
+            "file": str(file),
+            "readme_filename": file.name,
+            **kwargs,
+        },
+    )
+
+
+def log_failure(output_dir: Path, model: str, file: Path, stage: str, exc: BaseException, **kwargs: Any) -> None:
+    log_event(
+        output_dir,
+        "failure",
+        model,
+        file,
+        stage=stage,
+        error_type=type(exc).__name__,
+        error=str(exc),
+        traceback=traceback.format_exc(),
+        **kwargs,
+    )
+
+
+def normalize_and_write_json(model: str, file: Path, output_dir: Path, cache_file: Path, json_file: Path) -> dict[str, Any] | None:
+    try:
+        message_dict = json.loads(cache_file.read_text(encoding="utf-8"))
+        content = message_dict.get("content") or ""
+        result = normalize_json(content)
+        json_file.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+        log_event(output_dir, "json_normalized", model, file, cache_file=str(cache_file), json_file=str(json_file))
+        return result
+    except Exception as exc:
+        log_failure(output_dir, model, file, "normalize_json", exc, cache_file=str(cache_file), json_file=str(json_file))
+        return None
+
+
 # metadata extraction function
 def extract_metadata(client: OpenAI, model: str, file: Path, output_dir: Path):
     cache_file = output_dir / file.with_suffix('.txt').name
@@ -216,35 +270,37 @@ def extract_metadata(client: OpenAI, model: str, file: Path, output_dir: Path):
 
     if json_file.exists():
         logging.info(f'[Cache Hit] {str(file)}')
+        log_event(output_dir, "cache_hit_json", model, file, json_file=str(json_file))
         return json.loads(json_file.read_text(encoding="utf-8"))
 
-    # if cache_file.exists():
-    #     message_dict = json.loads(cache_file.read_text(encoding="utf-8"))
-    #     content = message_dict['content']
-    #     result = normalize_json(content)
-    #     json_file.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
-    #     return result
+    if cache_file.exists():
+        logging.info(f'[Raw Cache Hit] {str(file)}')
+        log_event(output_dir, "cache_hit_raw", model, file, cache_file=str(cache_file))
+        return normalize_and_write_json(model, file, output_dir, cache_file, json_file)
 
     logging.info(f'[Cache Miss] {str(file)}')
+    log_event(output_dir, "cache_miss", model, file, cache_file=str(cache_file), json_file=str(json_file))
     doc_content = file.read_text(encoding="utf-8")
     numbered_doc_content = number_lines(doc_content)
     messages = [
         {"role": "user", "content": PROMPT.replace('{input_text}', numbered_doc_content)}
     ]
     extra_body = reasoning_extra_body_for_model(model)
-    completion = client.chat.completions.create(
-        model=model,
-        messages=messages,
-        temperature=0,
-        extra_body=extra_body if extra_body else None
-    )
+    try:
+        completion = client.chat.completions.create(
+            model=model,
+            messages=messages,
+            temperature=0,
+            extra_body=extra_body if extra_body else None
+        )
+    except Exception as exc:
+        log_failure(output_dir, model, file, "request", exc)
+        raise
     message = completion.choices[0].message
     message_dict = object_to_dict(message)
     cache_file.write_text(json.dumps(message_dict, ensure_ascii=False, indent=2, sort_keys=True), encoding="utf-8")
-    content = message_dict['content']
-    result = normalize_json(content)
-    json_file.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
-    return result
+    log_event(output_dir, "raw_response_saved", model, file, cache_file=str(cache_file))
+    return normalize_and_write_json(model, file, output_dir, cache_file, json_file)
 
 
 # main async function
@@ -253,6 +309,8 @@ def main(args):
     result_dir = Path(f'./results/llm/{safe_model_name}')
     # 1. read all markdown files in the folder
     files = sorted([x for x in Path("results/readme_files").glob("*.md")])
+    files += sorted([x for x in Path("results/readme_files").glob("*.rst")])
+
     if args.limit:
         files = files[:args.limit]
 
@@ -270,8 +328,11 @@ def main(args):
     )
     if args.parallel == 1:
         for file in files:
-            extract_metadata(client, args.model, file, result_dir)
-            print(f"OK {file.name}")
+            result = extract_metadata(client, args.model, file, result_dir)
+            if result is None:
+                print(f"FAILED_NORMALIZE {file.name}", file=sys.stderr)
+            else:
+                print(f"OK {file.name}")
     else:
         with ThreadPoolExecutor(max_workers=args.parallel) as executor:
             future_to_file = {
@@ -281,21 +342,50 @@ def main(args):
             for future in as_completed(future_to_file):
                 file = future_to_file[future]
                 try:
-                    future.result()
+                    result = future.result()
                 except Exception as exc:
                     print(f"FAILED {file.name}: {exc}", file=sys.stderr)
+                    log_failure(result_dir, args.model, file, "worker", exc)
                 else:
-                    print(f"OK {file.name}")
+                    if result is None:
+                        print(f"FAILED_NORMALIZE {file.name}", file=sys.stderr)
+                    else:
+                        print(f"OK {file.name}")
 
 
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
     model_choices = [
-        "deepseek/deepseek-v4-flash",
         "qwen/qwen3.5-flash-02-23",
         "qwen/qwen3.6-flash",
+        "qwen/qwen3.7-flash",
+
+        "deepseek/deepseek-v4-flash",
+        'deepseek/deepseek-v3.2',
+        'deepseek/deepseek-chat-v3.1',
+
+        'moonshotai/kimi-k3',
+        # 'openai/gpt-oss-120b',
+        # 'openai/gpt-oss-20b',
+
+        # 'qwen/qwen3.5-9b',
+        # 'qwen/qwen3.5-27b',
+
+        # 'anthropic/claude-3-haiku',
+        'anthropic/claude-sonnet-5',
+        'openai/gpt-5.6-luna-pro',
+        'google/gemini-3.6-flash',
+        # 'google/gemini-3.5-flash',
+        # 'google/gemini-2.5-flash',
     ]
+    # Qwen, DeepSeek, Kimi, Claude, GPT, Gemini
+    # open source: Qwen, DeepSeek, Kimi,
+    # close source: Claude, GPT, Gemini
+
+    # within family: (Qwen 3.5, Qwen 3.6),  (Qwen 3.5, Qwen 3.7),  (Qwen 3.6, Qwen 3.7), (Deepseek x, ..), ..
+    # cross family:   (Qwen 3.5, DeepSeek 3.1),
+
     parser.add_argument("--model", choices=model_choices, required=False, default="deepseek/deepseek-v4-flash")
     parser.add_argument("--parallel", type=int, required=False, default=1)
     parser.add_argument("--limit", type=int, required=False, default=None)

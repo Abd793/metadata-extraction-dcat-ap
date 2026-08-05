@@ -1,0 +1,103 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "HAGRID: A Human-LLM Collaborative Dataset for Generative Information-seeking with Attribution",
+      "normalized_value": "HAGRID: A Human-LLM Collaborative Dataset for Generative Information-seeking with Attribution",
+      "evidence": "# HAGRID: A Human-LLM Collaborative Dataset for Generative Information-seeking with Attribution",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Explicit project name and purpose"
+    },
+    {
+      "field": "artifact_description",
+      "value": "HAGRID (**H**uman-in-the-loop **A**ttributable **G**enerative **R**etrieval for **I**nformation-seeking **D**ataset) is a dataset for generative information-seeking scenarios.",
+      "normalized_value": "HAGRID (**H**uman-in-the-loop **A**ttributable **G**enerative **R**etrieval for **I**nformation-seeking **D**ataset) is a dataset for generative information-seeking scenarios.",
+      "evidence": "HAGRID (**H**uman-in-the-loop **A**ttributable **G**enerative **R**etrieval for **I**nformation-seeking **D**ataset) is a dataset for generative information-seeking scenarios.",
+      "evidence_location": "line 18",
+      "confidence": "high",
+      "reason": "Clear description of what the artifact is and its purpose"
+    },
+    {
+      "field": "dataset_construction_method",
+      "value": "We collect attributed explanations for each question by eliciting prompts from [GPT-3.5](https://openai.com/blog/chatgpt), based on the given relevant passages. The explanations adhere to an in-context citation style, similar to scientific articles, that reference the supporting quotes. We then ask human annotators to judge the explanations based on two criteria: 1. __Informativeness:__ whether they provide a direct answer to the question. 2. __Attributability:__ whether they are attributable to the source passages.",
+      "normalized_value": "We collect attributed explanations for each question by eliciting prompts from [GPT-3.5](https://openai.com/blog/chatgpt), based on the given relevant passages. The explanations adhere to an in-context citation style, similar to scientific articles, that reference the supporting quotes. We then ask human annotators to judge the explanations based on two criteria: 1. __Informativeness:__ whether they provide a direct answer to the question. 2. __Attributability:__ whether they are attributable to the source passages.",
+      "evidence": "We collect attributed explanations for each question by eliciting prompts from [GPT-3.5](https://openai.com/blog/chatgpt), based on the given relevant passages. The explanations adhere to an in-context citation style, similar to scientific articles, that reference the supporting quotes.\nWe then ask human annotators to judge the explanations based on two criteria:\n1. __Informativeness:__ whether they provide a direct answer to the question.\n2. __Attributability:__ whether they are attributable to the source passages.",
+      "evidence_location": "lines 21-24",
+      "confidence": "high",
+      "reason": "Detailed explanation of how the dataset was constructed and evaluated"
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://huggingface.co/datasets/miracl/hagrid",
+      "normalized_value": "https://huggingface.co/datasets/miracl/hagrid",
+      "evidence": "[link](https://huggingface.co/datasets/miracl/hagrid)",
+      "evidence_location": "line 37",
+      "confidence": "high",
+      "reason": "Direct link to access the dataset"
+    },
+    {
+      "field": "dataset_usage_example",
+      "value": "import datasets\nhagrid = datasets.load_dataset(\"miracl/hagrid\", split=\"train\")\nprint(hagrid[0])",
+      "normalized_value": "import datasets\nhagrid = datasets.load_dataset(\"miracl/hagrid\", split=\"train\")\nprint(hagrid[0])",
+      "evidence": "```python\nimport datasets\nhagrid = datasets.load_dataset(\"miracl/hagrid\", split=\"train\")\nprint(hagrid[0])\n```",
+      "evidence_location": "lines 39-43",
+      "confidence": "high",
+      "reason": "Code example showing how to load and use the dataset"
+    },
+    {
+      "field": "dataset_statistics",
+      "value": "| Split | #Q | #A | #Informativeness | #Attributability |\n|:-----|:------:|:-------:|:------:|:-------:|\n| Train | 1,922 | 3,214 | 3,214 | 754 |\n| Dev | 716 | 1,318 | 1,157 | 826 |",
+      "normalized_value": "| Split | #Q | #A | #Informativeness | #Attributability |\n|:-----|:------:|:-------:|:------:|:-------:|\n| Train | 1,922 | 3,214 | 3,214 | 754 |\n| Dev | 716 | 1,318 | 1,157 | 826 |",
+      "evidence": "| Split | #Q | #A | #Informativeness | #Attributability |\n|:-----|:------:|:-------:|:------:|:-------:|\n| Train | 1,922 | 3,214 | 3,214 | 754 |\n| Dev | 716 | 1,318 | 1,157 | 826 |",
+      "evidence_location": "lines 45-48",
+      "confidence": "high",
+      "reason": "Quantitative information about dataset size and annotations"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2307.16883",
+      "normalized_value": "https://arxiv.org/abs/2307.16883",
+      "evidence": "[arXiv](https://arxiv.org/abs/2307.16883)",
+      "evidence_location": "line 13-14",
+      "confidence": "high",
+      "reason": "Link to associated research paper"
+    },
+    {
+      "field": "license",
+      "value": "Apache 2 license",
+      "normalized_value": "Apache 2 license",
+      "evidence": "This work is licensed under the Apache 2 license. See [LICENSE](LICENSE) for details.",
+      "evidence_location": "line 61",
+      "confidence": "high",
+      "reason": "Clear statement of license terms for reuse"
+    },
+    {
+      "field": "citation",
+      "value": "@article{hagrid, title={{HAGRID}: A Human-LLM Collaborative Dataset for Generative Information-Seeking with Attribution}, author={Ehsan Kamalloo and Aref Jafari and Xinyu Zhang and Nandan Thakur and Jimmy Lin}, year={2023}, journal={arXiv:2307.16883}, }",
+      "normalized_value": "@article{hagrid, title={{HAGRID}: A Human-LLM Collaborative Dataset for Generative Information-Seeking with Attribution}, author={Ehsan Kamalloo and Aref Jafari and Xinyu Zhang and Nandan Thakur and Jimmy Lin}, year={2023}, journal={arXiv:2307.16883}, }",
+      "evidence": "@article{hagrid,\n      title={{HAGRID}: A Human-LLM Collaborative Dataset for Generative Information-Seeking with Attribution}, \n      author={Ehsan Kamalloo and Aref Jafari and Xinyu Zhang and Nandan Thakur and Jimmy Lin},\n      year={2023},\n      journal={arXiv:2307.16883},\n}",
+      "evidence_location": "lines 65-71",
+      "confidence": "high",
+      "reason": "BibTeX citation for proper attribution"
+    },
+    {
+      "field": "contact",
+      "value": "project.miracl [at] gmail.com or start a Github issue under this repository",
+      "normalized_value": "project.miracl [at] gmail.com or start a Github issue under this repository",
+      "evidence": "If you have any questions, feel free to email us (project.miracl [at] gmail.com) or start a Github issue under this repository.",
+      "evidence_location": "line 56",
+      "confidence": "high",
+      "reason": "Contact information for questions and support"
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "<img alt=\"Build\" src=\"https://img.shields.io/badge/Made%20with-Python-1f425f.svg?color=purple\">",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Indicates the primary programming language used"
+    }
+  ]
+}

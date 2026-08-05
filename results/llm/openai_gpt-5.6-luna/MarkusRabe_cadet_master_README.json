@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "CADET",
+      "normalized_value": "CADET",
+      "evidence": "# CADET",
+      "evidence_location": "line 4, header",
+      "confidence": "high",
+      "reason": "Identifies the artifact by name."
+    },
+    {
+      "field": "purpose",
+      "value": "CADET is a solver for _quantified Boolean formulas_ with a forall-exists quantifier alternation (2QBF).",
+      "normalized_value": "CADET is a solver for _quantified Boolean formulas_ with a forall-exists quantifier alternation (2QBF).",
+      "evidence": "CADET is a solver for _quantified Boolean formulas_ with a forall-exists quantifier alternation (2QBF).",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Explicitly states what the artifact does and the problem class it addresses."
+    },
+    {
+      "field": "algorithm",
+      "value": "_Incremental Determinization_",
+      "normalized_value": "_Incremental Determinization_",
+      "evidence": "The solver is based on the _Incremental Determinization_ algorithm published in SAT 2016",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Names the algorithm underlying the solver."
+    },
+    {
+      "field": "benchmark_result",
+      "value": "It won second price in the 2QBF track of [QBFEval](http://www.qbflib.org/qbfeval17.php)",
+      "normalized_value": "It won second price in the 2QBF track of [QBFEval](http://www.qbflib.org/qbfeval17.php)",
+      "evidence": "It won second price in the 2QBF track of [QBFEval](http://www.qbflib.org/qbfeval17.php)",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Provides a concrete evaluation result and benchmark link."
+    },
+    {
+      "field": "input_formats",
+      "value": "CADET reads files in both [QDIMACS](http://www.qbflib.org/qdimacs.html) and [QAIGER](https://github.com/ltentrup/QAIGER) format.",
+      "normalized_value": "CADET reads files in both [QDIMACS](http://www.qbflib.org/qdimacs.html) and [QAIGER](https://github.com/ltentrup/QAIGER) format.",
+      "evidence": "CADET reads files in both [QDIMACS](http://www.qbflib.org/qdimacs.html) and [QAIGER](https://github.com/ltentrup/QAIGER) format.",
+      "evidence_location": "lines 107-109, Input Formats",
+      "confidence": "high",
+      "reason": "Specifies supported input representations for reuse and indexing."
+    },
+    {
+      "field": "compressed_input",
+      "value": "Files can be zipped with gzip, but must then end with the file extension gz or gzip.",
+      "normalized_value": "Files can be zipped with gzip, but must then end with the file extension gz or gzip.",
+      "evidence": "Files can be zipped with gzip, but must then end with the file extension gz or gzip.",
+      "evidence_location": "line 109, Input Formats",
+      "confidence": "high",
+      "reason": "Documents an input packaging requirement."
+    },
+    {
+      "field": "build_platforms",
+      "value": "CADET can be built from source with both clang and gcc. You can find pre-built binaries of CADET for Linux and OSX.",
+      "normalized_value": "CADET can be built from source with both clang and gcc. You can find pre-built binaries of CADET for Linux and OSX.",
+      "evidence": "CADET can be built from source with both clang and gcc. You can find pre-built binaries of CADET for Linux and OSX.",
+      "evidence_location": "line 75, Installing CADET",
+      "confidence": "high",
+      "reason": "Provides compiler and operating-system information relevant to installation."
+    },
+    {
+      "field": "testing_dependency",
+      "value": "The testing scripts require Python 3.",
+      "normalized_value": "The testing scripts require Python 3.",
+      "evidence": "The testing scripts require Python 3.",
+      "evidence_location": "line 75, Installing CADET",
+      "confidence": "high",
+      "reason": "Identifies a stated dependency for running tests."
+    },
+    {
+      "field": "installation_command",
+      "value": "./configure && make",
+      "normalized_value": "./configure && make",
+      "evidence": "```bash\n$ ./configure && make\n```",
+      "evidence_location": "lines 78-82, Installing CADET",
+      "confidence": "high",
+      "reason": "Gives the documented source-build command."
+    },
+    {
+      "field": "test_command",
+      "value": "make test",
+      "normalized_value": "make test",
+      "evidence": "```bash\n$ make test\n```",
+      "evidence_location": "lines 84-88, Installing CADET",
+      "confidence": "high",
+      "reason": "Gives the documented command for validating the build."
+    },
+    {
+      "field": "basic_usage",
+      "value": "./cadet file.qdimacs",
+      "normalized_value": "./cadet file.qdimacs",
+      "evidence": "```bash\n$ ./cadet file.qdimacs\n```",
+      "evidence_location": "lines 93-99, Usage",
+      "confidence": "high",
+      "reason": "Shows the primary invocation for solving a QDIMACS file."
+    },
+    {
+      "field": "stdin_usage",
+      "value": "cat file.qdimacs | ./cadet",
+      "normalized_value": "cat file.qdimacs | ./cadet",
+      "evidence": "```bash\n$ cat file.qdimacs | ./cadet\n```",
+      "evidence_location": "lines 101-105, Usage",
+      "confidence": "high",
+      "reason": "Documents that QDIMACS input can be piped through standard input."
+    },
+    {
+      "field": "certificate_semantics",
+      "value": "Proofs for UNSAT results are given as an assignment to the universally quantified variables. Proofs for SAT results are given as a circuit, mapping assignments to the universally quantified variables to assignments to the existentially quantified variables.",
+      "normalized_value": "Proofs for UNSAT results are given as an assignment to the universally quantified variables. Proofs for SAT results are given as a circuit, mapping assignments to the universally quantified variables to assignments to the existentially quantified variables.",
+      "evidence": "As 2QBF formulas in QDIMACS have a forall-exists quantifier alternation, proofs for UNSAT results are given as an assignment to the universally quantified variables. Proofs for SAT results are given as a circuit, mapping assignments to the universally quantified variables to assignments to the existentially quantified variables.",
+      "evidence_location": "lines 112-114, Proofs",
+      "confidence": "high",
+      "reason": "Explains the meaning and form of certificates produced for each result type."
+    },
+    {
+      "field": "sat_certificate_command",
+      "value": "./cadet -c certificate.aag file.qdimacs",
+      "normalized_value": "./cadet -c certificate.aag file.qdimacs",
+      "evidence": "```bash\n$ ./cadet -c certificate.aag file.qdimacs\n```",
+      "evidence_location": "lines 118-122, Proofs",
+      "confidence": "high",
+      "reason": "Provides a reproducible command for generating a SAT certificate."
+    },
+    {
+      "field": "certificate_formats",
+      "value": "You can either specify a file name to which the certificate should be written (ending in `.aag` or `.aig`) or you can specify `sdtout` to let CADET print the certificate on the terminal.",
+      "normalized_value": "You can either specify a file name to which the certificate should be written (ending in `.aag` or `.aig`) or you can specify `sdtout` to let CADET print the certificate on the terminal.",
+      "evidence": "You can either specify a file name to which the certificate should be written (ending in `.aag` or `.aig`) or you can specify `sdtout` to let CADET print the certificate on the terminal.",
+      "evidence_location": "line 118, Proofs",
+      "confidence": "high",
+      "reason": "Documents supported certificate output destinations and extensions."
+    },
+    {
+      "field": "unsat_certificate_option",
+      "value": "--qdimacs_out",
+      "normalized_value": "--qdimacs_out",
+      "evidence": "To print output according to the QDIMACS standard, use the `--qdimacs_out` flag.",
+      "evidence_location": "line 116, Proofs",
+      "confidence": "high",
+      "reason": "Identifies the command-line option for QDIMACS-standard certificate output."
+    },
+    {
+      "field": "sat_certificate_checker",
+      "value": "By default CADET produces certificates that can be checked by Certcheck, which was written by [Leander Tentrup](https://www.react.uni-saarland.de/people/tentrup.html). Certcheck comes with the distribution of [CAQE](https://www.react.uni-saarland.de/tools/caqe/).",
+      "normalized_value": "By default CADET produces certificates that can be checked by Certcheck, which was written by [Leander Tentrup](https://www.react.uni-saarland.de/people/tentrup.html). Certcheck comes with the distribution of [CAQE](https://www.react.uni-saarland.de/tools/caqe/).",
+      "evidence": "By default CADET produces certificates that can be checked by Certcheck, which was written by [Leander Tentrup](https://www.react.uni-saarland.de/people/tentrup.html). Certcheck comes with the distribution of [CAQE](https://www.react.uni-saarland.de/tools/caqe/).",
+      "evidence_location": "line 130, Checking Certificates",
+      "confidence": "high",
+      "reason": "Identifies the default SAT-certificate verification tool and its distribution source."
+    },
+    {
+      "field": "alternative_certificate_option",
+      "value": "--qbfcert",
+      "normalized_value": "--qbfcert",
+      "evidence": "To produce certificates that are compatible with [QBFcert](http://fmv.jku.at/qbfcert/) add `--qbfcert` option to the command line.",
+      "evidence_location": "line 130, Checking Certificates",
+      "confidence": "high",
+      "reason": "Provides the option for producing certificates compatible with QBFcert."
+    },
+    {
+      "field": "publications",
+      "value": "[Learning Heuristics for 2QBF through Deep Reinforcement Learning](https://arxiv.org/abs/1807.08058). Gil Lederman, Markus N. Rabe, Edward A. Lee, Sanjit A. Seshia. arXiv preprint, 2018.",
+      "normalized_value": "[Learning Heuristics for 2QBF through Deep Reinforcement Learning](https://arxiv.org/abs/1807.08058). Gil Lederman, Markus N. Rabe, Edward A. Lee, Sanjit A. Seshia. arXiv preprint, 2018.",
+      "evidence": "[Learning Heuristics for 2QBF through Deep Reinforcement Learning](https://arxiv.org/abs/1807.08058). Gil Lederman, Markus N. Rabe, Edward A. Lee, Sanjit A. Seshia. arXiv preprint, 2018.",
+      "evidence_location": "line 136, Publications",
+      "confidence": "high",
+      "reason": "Provides a linked publication relevant to the artifact's methods and context."
+    },
+    {
+      "field": "primary_method_publication",
+      "value": "[Incremental Determinization](https://www.eecs.berkeley.edu/~rabe/IncrementalDeterminizationSAT2016.pdf). Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "normalized_value": "[Incremental Determinization](https://www.eecs.berkeley.edu/~rabe/IncrementalDeterminizationSAT2016.pdf). Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "evidence": "[Incremental Determinization](https://www.eecs.berkeley.edu/~rabe/IncrementalDeterminizationSAT2016.pdf). Markus N. Rabe and Sanjit Seshia. SAT, 2016.",
+      "evidence_location": "line 142, Publications",
+      "confidence": "high",
+      "reason": "Links the publication describing the algorithm explicitly identified as the solver's basis."
+    }
+  ]
+}

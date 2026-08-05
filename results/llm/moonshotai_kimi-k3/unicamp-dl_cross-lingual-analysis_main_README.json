@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Cross-lingual analysis",
+      "normalized_value": "Cross-lingual analysis",
+      "evidence": "# Cross-lingual analysis",
+      "evidence_location": "line 1, header '# Cross-lingual analysis'",
+      "confidence": "high",
+      "reason": "Title of the repository, used to identify the artifact."
+    },
+    {
+      "field": "artifact_description",
+      "value": "This repository contains the translation codes used in the paper A cost-benefit analysis of cross-lingual transfer methods",
+      "normalized_value": "This repository contains the translation codes used in the paper A cost-benefit analysis of cross-lingual transfer methods",
+      "evidence": "This repository contains the translation codes used in the paper [A cost-benefit analysis of cross-lingual transfer methods](https://arxiv.org/abs/2105.06813).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "States the purpose and content of the repository."
+    },
+    {
+      "field": "associated_paper",
+      "value": "A cost-benefit analysis of cross-lingual transfer methods",
+      "normalized_value": "A cost-benefit analysis of cross-lingual transfer methods",
+      "evidence": "[A cost-benefit analysis of cross-lingual transfer methods](https://arxiv.org/abs/2105.06813)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Names the research paper this code accompanies."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2105.06813",
+      "normalized_value": "https://arxiv.org/abs/2105.06813",
+      "evidence": "url={https://arxiv.org/abs/2105.06813}",
+      "evidence_location": "line 44, 'How do I cite this work?' BibTeX block",
+      "confidence": "high",
+      "reason": "Direct link to the associated paper for access and citation."
+    },
+    {
+      "field": "tasks",
+      "value": "Question Answering, Natural Language Inference and Passage Text Ranking",
+      "normalized_value": "Question Answering, Natural Language Inference and Passage Text Ranking",
+      "evidence": "The models were benchmarked on three tasks (Question Answering, Natural Language Inference and Passage Text Ranking) and compared to previous published results.",
+      "evidence_location": "line 6, section 'Evaluation benchmarks'",
+      "confidence": "high",
+      "reason": "Defines the evaluation tasks, key scientific context for reuse."
+    },
+    {
+      "field": "transfer_methods",
+      "value": "1) fine-tuning a bilingual model on a source language and evaluating it on the target language without translation, i.e., in a zero-shot manner; 2) automatic translation of the training dataset to the target language; 3) automatic translation of the test set to the source language at inference time and evaluation of a model fine-tuned in English",
+      "normalized_value": "1) fine-tuning a bilingual model on a source language and evaluating it on the target language without translation, i.e., in a zero-shot manner; 2) automatic translation of the training dataset to the target language; 3) automatic translation of the test set to the source language at inference time and evaluation of a model fine-tuned in English",
+      "evidence": "We experiment with the following transfer learning techniques: 1) fine-tuning a bilingual model on a source language and evaluating it on the target language without translation, i.e., in a zero-shot manner; 2) automatic translation of the training dataset to the target language; 3) automatic translation of the test set to the source language at inference time and evaluation of a model fine-tuned in English.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Describes the methods studied, central to understanding and reproducing the work."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "Exact Match and F1-score for Q&A, Accuracy and F1-score for NLI and MRR@10 for Text Ranking",
+      "normalized_value": "Exact Match and F1-score for Q&A, Accuracy and F1-score for NLI and MRR@10 for Text Ranking",
+      "evidence": "Metrics are: Exact Match and F1-score for Q&A, Accuracy and F1-score for NLI and MRR@10 for Text Ranking.",
+      "evidence_location": "line 6, section 'Evaluation benchmarks'",
+      "confidence": "high",
+      "reason": "Specifies metrics per task, needed to evaluate or compare results."
+    },
+    {
+      "field": "reported_results",
+      "value": "BERT-pt (ours), pre-trained EN & PT, fine-tuned MNLI + ASSIN2: F1 0.9207, Accuracy 0.9207",
+      "normalized_value": "BERT-pt (ours), pre-trained EN & PT, fine-tuned MNLI + ASSIN2: F1 0.9207, Accuracy 0.9207",
+      "evidence": "| BERT-pt (ours)                  | EN & PT       |  MNLI + ASSIN2  |   0.9207     |   0.9207    |",
+      "evidence_location": "line 13, results table in 'Evaluation benchmarks'",
+      "confidence": "high",
+      "reason": "Best reported result from the authors' own model, useful for comparison and evaluation."
+    },
+    {
+      "field": "baseline_results",
+      "value": "mBERT (ASSIN2): F1 0.8680, Accuracy 0.8680; PTT5 (ASSIN2): F1 0.8850, Accuracy 0.8860; BERTimbau Large (ASSIN2): F1 0.9000, Accuracy 0.9000",
+      "normalized_value": "mBERT (ASSIN2): F1 0.8680, Accuracy 0.8680; PTT5 (ASSIN2): F1 0.8850, Accuracy 0.8860; BERTimbau Large (ASSIN2): F1 0.9000, Accuracy 0.9000",
+      "evidence": "| mBERT (Souza et al.)            | 100 languages |   ASSIN2        |   0.8680     |   0.8680    |\n| PTT5 (Carmo et al.)             | EN & PT       |   ASSIN2        |   0.8850     |   0.8860    |\n| BERTimbau Large (Souza et al.)  | EN & PT       |   ASSIN2        |   0.9000     |   0.9000    |",
+      "evidence_location": "lines 10-12, results table in 'Evaluation benchmarks'",
+      "confidence": "high",
+      "reason": "Baseline comparison results reported in the benchmark table."
+    },
+    {
+      "field": "datasets",
+      "value": "SQuAD (Q&A), FaQuAD (Q&A), MNLI (NLI), ASSIN2 (NLI)",
+      "normalized_value": "SQuAD (Q&A), FaQuAD (Q&A), MNLI (NLI), ASSIN2 (NLI)",
+      "evidence": "- [SQuAD](https://colab.research.google.com/drive/1CSNwfWJCwhFgYTtjxsDvUdN1DMuU_P4-?usp=sharing) (Q&A)\n- [FaQuAD](https://colab.research.google.com/drive/1HdPjzn61genPyZfiDG5fqAwPNI4vhegw?usp=sharing) (Q&A)\n- [MNLI](https://colab.research.google.com/drive/1Y9ZaJuN-SVo0fmwypPzcJCOetFw-A2tx?usp=sharing) (NLI)\n- [ASSIN2](https://colab.research.google.com/drive/1S5zwaw8KWee8y6Vyq-XHC8Am3GmGFpv9?usp=sharing) (NLI)",
+      "evidence_location": "lines 18-21, section 'How to Translate'",
+      "confidence": "high",
+      "reason": "Lists the datasets used with their task types, key for reproduction."
+    },
+    {
+      "field": "translation_notebook_urls",
+      "value": "SQuAD: https://colab.research.google.com/drive/1CSNwfWJCwhFgYTtjxsDvUdN1DMuU_P4-?usp=sharing; FaQuAD: https://colab.research.google.com/drive/1HdPjzn61genPyZfiDG5fqAwPNI4vhegw?usp=sharing; MNLI: https://colab.research.google.com/drive/1Y9ZaJuN-SVo0fmwypPzcJCOetFw-A2tx?usp=sharing; ASSIN2: https://colab.research.google.com/drive/1S5zwaw8KWee8y6Vyq-XHC8Am3GmGFpv9?usp=sharing",
+      "normalized_value": "SQuAD: https://colab.research.google.com/drive/1CSNwfWJCwhFgYTtjxsDvUdN1DMuU_P4-?usp=sharing; FaQuAD: https://colab.research.google.com/drive/1HdPjzn61genPyZfiDG5fqAwPNI4vhegw?usp=sharing; MNLI: https://colab.research.google.com/drive/1Y9ZaJuN-SVo0fmwypPzcJCOetFw-A2tx?usp=sharing; ASSIN2: https://colab.research.google.com/drive/1S5zwaw8KWee8y6Vyq-XHC8Am3GmGFpv9?usp=sharing",
+      "evidence": "- [SQuAD](https://colab.research.google.com/drive/1CSNwfWJCwhFgYTtjxsDvUdN1DMuU_P4-?usp=sharing) (Q&A)\n- [FaQuAD](https://colab.research.google.com/drive/1HdPjzn61genPyZfiDG5fqAwPNI4vhegw?usp=sharing) (Q&A)\n- [MNLI](https://colab.research.google.com/drive/1Y9ZaJuN-SVo0fmwypPzcJCOetFw-A2tx?usp=sharing) (NLI)\n- [ASSIN2](https://colab.research.google.com/drive/1S5zwaw8KWee8y6Vyq-XHC8Am3GmGFpv9?usp=sharing) (NLI)",
+      "evidence_location": "lines 18-21, section 'How to Translate'",
+      "confidence": "high",
+      "reason": "Colab notebooks containing the translation code, the main reproducibility resource of the repository."
+    },
+    {
+      "field": "dataset_statistics",
+      "value": "Training examples: SQuAD 86,288; FaQuAD 837; MNLI 392,702; ASSIN2 6,500. Test examples: SQuAD 21,557; FaQuAD 63; MNLI 20,000; ASSIN2 2,448",
+      "normalized_value": "Training examples: SQuAD 86,288; FaQuAD 837; MNLI 392,702; ASSIN2 6,500. Test examples: SQuAD 21,557; FaQuAD 63; MNLI 20,000; ASSIN2 2,448",
+      "evidence": "| Training examples               |  86,288    |   837    |   392,702  |  6,500   |   \n| Test examples                   |  21,557    |   63     |   20,000   |  2,448   |",
+      "evidence_location": "lines 27-28, dataset statistics table in 'How to Translate'",
+      "confidence": "high",
+      "reason": "Dataset sizes needed to understand scale and reproduce experiments."
+    },
+    {
+      "field": "translation_runtime",
+      "value": "Translate Train (Batch size = 1): SQuAD 34h, MNLI 36h; Translate Test (Batch size = 1): FaQuAD 1m 30s, ASSIN2 31m",
+      "normalized_value": "Translate Train (Batch size = 1): SQuAD 34h, MNLI 36h; Translate Test (Batch size = 1): FaQuAD 1m 30s, ASSIN2 31m",
+      "evidence": "| Translate Train (Batch size = 1)|    34h     |   -      |    36h     |    -     |  \n| Translate Test (Batch size = 1) |    -       |  1m 30s  |    -       |   31m    |",
+      "evidence_location": "lines 29-30, dataset statistics table in 'How to Translate'",
+      "confidence": "high",
+      "reason": "Reported translation costs/runtimes, relevant to the cost-benefit analysis and reproduction planning."
+    },
+    {
+      "field": "citation",
+      "value": "@article{cross-lingual2021, title={A cost-benefit analysis of cross-lingual transfer methods}, author={Moraes, Guilherme and Bonifácio, Luiz Henrique and Rodrigues de Souza, Leandro and Nogueira, Rodrigo and Lotufo, Roberto}, journal={arXiv preprint arXiv:2105.06813}, url={https://arxiv.org/abs/2105.06813}, year={2021}}",
+      "normalized_value": "@article{cross-lingual2021, title={A cost-benefit analysis of cross-lingual transfer methods}, author={Moraes, Guilherme and Bonifácio, Luiz Henrique and Rodrigues de Souza, Leandro and Nogueira, Rodrigo and Lotufo, Roberto}, journal={arXiv preprint arXiv:2105.06813}, url={https://arxiv.org/abs/2105.06813}, year={2021}}",
+      "evidence": " @article{cross-lingual2021,\n    title={A cost-benefit analysis of cross-lingual transfer methods},\n    author={Moraes, Guilherme and Bonifácio, Luiz Henrique and Rodrigues de Souza, Leandro and Nogueira, Rodrigo and Lotufo, Roberto},\n    journal={arXiv preprint arXiv:2105.06813},\n    url={https://arxiv.org/abs/2105.06813},\n    year={2021}\n}",
+      "evidence_location": "lines 40-46, 'How do I cite this work?' BibTeX block",
+      "confidence": "high",
+      "reason": "Official citation information for attributing the work."
+    },
+    {
+      "field": "authors",
+      "value": "Moraes, Guilherme and Bonifácio, Luiz Henrique and Rodrigues de Souza, Leandro and Nogueira, Rodrigo and Lotufo, Roberto",
+      "normalized_value": "Moraes, Guilherme and Bonifácio, Luiz Henrique and Rodrigues de Souza, Leandro and Nogueira, Rodrigo and Lotufo, Roberto",
+      "evidence": "author={Moraes, Guilherme and Bonifácio, Luiz Henrique and Rodrigues de Souza, Leandro and Nogueira, Rodrigo and Lotufo, Roberto}",
+      "evidence_location": "line 42, 'How do I cite this work?' BibTeX block",
+      "confidence": "high",
+      "reason": "Identifies the creators of the artifact for attribution and contact."
+    },
+    {
+      "field": "publication_year",
+      "value": "2021",
+      "normalized_value": "2021",
+      "evidence": "year={2021}",
+      "evidence_location": "line 45, 'How do I cite this work?' BibTeX block",
+      "confidence": "high",
+      "reason": "Publication date of the associated paper."
+    },
+    {
+      "field": "related_work_references",
+      "value": "[1] BERTimbau: Pretrained BERT Models for Brazilian Portuguese; [2] PTT5: Pretraining and validating the T5 model on Brazilian Portuguese data",
+      "normalized_value": "[1] BERTimbau: Pretrained BERT Models for Brazilian Portuguese; [2] PTT5: Pretraining and validating the T5 model on Brazilian Portuguese data",
+      "evidence": "[1] [BERTimbau: Pretrained BERT Models for Brazilian Portuguese](https://www.researchgate.net/publication/345395208_BERTimbau_Pretrained_BERT_Models_for_Brazilian_Portuguese)\n\n[2] [PTT5: Pretraining and validating the T5 model on Brazilian Portuguese data](https://arxiv.org/abs/2008.09144)",
+      "evidence_location": "lines 33-35, section 'References'",
+      "confidence": "high",
+      "reason": "References to baseline models used in the benchmark comparison."
+    }
+  ]
+}

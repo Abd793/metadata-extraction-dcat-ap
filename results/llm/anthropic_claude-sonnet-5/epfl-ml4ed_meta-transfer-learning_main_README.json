@@ -1,0 +1,202 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Meta Transfer Learning for Early Success Prediction in MOOCs",
+      "normalized_value": "Meta Transfer Learning for Early Success Prediction in MOOCs",
+      "evidence": "# Meta Transfer Learning for Early Success Prediction in MOOCs",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Title of the repository/artifact"
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/pdf/2205.01064.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2205.01064.pdf",
+      "evidence": "This repository is the official implementation of the L@S 2022 Paper entitled [\"Meta Transfer Learning for Early Success Prediction in MOOCs\"](https://arxiv.org/pdf/2205.01064.pdf)",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Direct link to the associated research paper"
+    },
+    {
+      "field": "authors",
+      "value": "Vinitra Swamy, Mirko Marras, and Tanja Käser",
+      "normalized_value": "Vinitra Swamy, Mirko Marras, Tanja Käser",
+      "evidence": "written by [Vinitra Swamy](http://github.com/vinitra), [Mirko Marras](https://www.mirkomarras.com/), and [Tanja Käser](https://people.epfl.ch/tanja.kaeser/?lang=en).",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Names the authors of the paper/artifact"
+    },
+    {
+      "field": "venue",
+      "value": "L@S 2022 (Proceedings of the 2022 ACM Conference on Learning at Scale)",
+      "normalized_value": "L@S 2022",
+      "evidence": "In: Proceedings of the 2022 ACM Conference on Learning at Scale (L@S 2022).",
+      "evidence_location": "line 75",
+      "confidence": "high",
+      "reason": "Publication venue for the paper, useful for citation context"
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "0. Install relevant dependencies with `pip install -r requirements.txt`.",
+      "evidence_location": "line 10",
+      "confidence": "high",
+      "reason": "Command to install dependencies required to reproduce the artifact"
+    },
+    {
+      "field": "python_version_requirement",
+      "value": "Python 3.7 or higher",
+      "normalized_value": "Python 3.7 or higher",
+      "evidence": "3. Run your desired experiment from `scripts/` by executing the script with Python 3.7 or higher.",
+      "evidence_location": "line 16",
+      "confidence": "high",
+      "reason": "Specifies minimum runtime environment requirement"
+    },
+    {
+      "field": "related_repository",
+      "value": "https://github.com/epfl-ml4ed/flipped-classroom",
+      "normalized_value": "https://github.com/epfl-ml4ed/flipped-classroom",
+      "evidence": "Extract relevant features sets (`BouroujeniEtAl`, `MarrasEtAl`, `LalleConati`, and `ChenCui`) through our lab's EDM 2021 contribution on [benchmarks for feature predictive power](https://github.com/epfl-ml4ed/flipped-classroom).",
+      "evidence_location": "line 12",
+      "confidence": "high",
+      "reason": "Links to a related repository needed for feature extraction preprocessing step"
+    },
+    {
+      "field": "feature_sets",
+      "value": "BouroujeniEtAl, MarrasEtAl, LalleConati, and ChenCui",
+      "normalized_value": "BouroujeniEtAl, MarrasEtAl, LalleConati, ChenCui",
+      "evidence": "Extract relevant features sets (`BouroujeniEtAl`, `MarrasEtAl`, `LalleConati`, and `ChenCui`) through our lab's EDM 2021 contribution on [benchmarks for feature predictive power]",
+      "evidence_location": "line 12",
+      "confidence": "high",
+      "reason": "Names specific feature extraction methods required as input to the pipeline"
+    },
+    {
+      "field": "metadata_file",
+      "value": "data/metadata.csv",
+      "normalized_value": "data/metadata.csv",
+      "evidence": "Fill out the `data/metadata.csv` file with relevant meta information about your course(s).",
+      "evidence_location": "line 14",
+      "confidence": "high",
+      "reason": "Specifies a required configuration/data file for reproducing meta feature extraction"
+    },
+    {
+      "field": "model_directory",
+      "value": "models/",
+      "normalized_value": "models/",
+      "evidence": "The best behavior-only (`BO`), behavior-timewise-meta (`BTM`), and behavior-static-meta (`BSM`) models for each early prediction setting (40% and 60%) can be found in `models/`.",
+      "evidence_location": "line 6",
+      "confidence": "high",
+      "reason": "Location of pretrained model checkpoints for reuse"
+    },
+    {
+      "field": "model_architectures",
+      "value": "Behavior Only (BO), Behavior + Time-wise Meta (BTM), Behavior + Static Meta (BSM)",
+      "normalized_value": "Behavior Only (BO), Behavior + Time-wise Meta (BTM), Behavior + Static Meta (BSM)",
+      "evidence": "- **Behavior Only** (`BO`): Models trained only using features about student behavior.\n- **Behavior + Time-wise Meta** (`BTM`): Models trained using behavior features and meta features, combined at each timestep and used together as model input.\n- **Behavior + Static Meta** (`BSM`): Models trained using behavior and meta features, combined statically at different layers of the model with attention and projection.",
+      "evidence_location": "lines 21-23",
+      "confidence": "high",
+      "reason": "Describes the three core model architectures presented in the artifact"
+    },
+    {
+      "field": "inference_code",
+      "value": "pretrained_model = 'BO_Nto1_Diff_0.4_lstm-bi-64-baseline_best_bidirectional_lstm_64_ep0.4_1641513647.8297'\nmodel = tf.keras.models.load_model('../models/' + pretrained_model)\npredictions = model.predict(features)",
+      "normalized_value": "pretrained_model = 'BO_Nto1_Diff_0.4_lstm-bi-64-baseline_best_bidirectional_lstm_64_ep0.4_1641513647.8297'\nmodel = tf.keras.models.load_model('../models/' + pretrained_model)\npredictions = model.predict(features)",
+      "evidence": "pretrained_model = 'BO_Nto1_Diff_0.4_lstm-bi-64-baseline_best_bidirectional_lstm_64_ep0.4_1641513647.8297'\nmodel = tf.keras.models.load_model('../models/' + pretrained_model)\npredictions = model.predict(features)",
+      "evidence_location": "lines 31-33",
+      "confidence": "high",
+      "reason": "Code snippet showing how to load a pretrained model and run inference"
+    },
+    {
+      "field": "checkpoint_example_name",
+      "value": "BO_Nto1_Diff_0.4_lstm-bi-64-baseline_best_bidirectional_lstm_64_ep0.4_1641513647.8297",
+      "normalized_value": "BO_Nto1_Diff_0.4_lstm-bi-64-baseline_best_bidirectional_lstm_64_ep0.4_1641513647.8297",
+      "evidence": "pretrained_model = 'BO_Nto1_Diff_0.4_lstm-bi-64-baseline_best_bidirectional_lstm_64_ep0.4_1641513647.8297'",
+      "evidence_location": "line 31",
+      "confidence": "high",
+      "reason": "Concrete example filename for a pretrained checkpoint used for inference"
+    },
+    {
+      "field": "dataset_scale",
+      "value": "26 MOOCs and 145,714 students in total, with millions of student interactions",
+      "normalized_value": "26 MOOCs, 145714 students, millions of interactions",
+      "evidence": "We extensively evaluate our models on a large data set including 26 MOOCs and 145,714 students in total, with millions of student interactions.",
+      "evidence_location": "line 37",
+      "confidence": "high",
+      "reason": "Describes scale of dataset used for evaluation, important for reproducibility context"
+    },
+    {
+      "field": "research_questions",
+      "value": "RQ1: Can student behavior transfer across iterations of the same course and across different courses? RQ2: Is a meta learning model trained on a combination of behavior and course metadata information more transferable? RQ3: Can fine-tuning a combined model on past iterations of an unseen course lead to better transferable models?",
+      "normalized_value": "RQ1, RQ2, RQ3 as stated",
+      "evidence": "- **RQ 1: Can student behavior transfer across iterations of the same course and across different courses?**",
+      "evidence_location": "line 39",
+      "confidence": "high",
+      "reason": "Defines the scientific research questions the experiments target"
+    },
+    {
+      "field": "script_BO_1to1",
+      "value": "BO_1to1.py: Train a model on one course's behavior features (behavior-only) and predicting on one course's behavior features.",
+      "normalized_value": "BO_1to1.py",
+      "evidence": "`BO_1to1.py`: Train a model on one course's behavior features (behavior-only) and predicting on one course's behavior features.",
+      "evidence_location": "line 40",
+      "confidence": "high",
+      "reason": "Names a specific experiment script and its purpose for reproducing RQ1 experiments"
+    },
+    {
+      "field": "script_BO_Nto1_Diff",
+      "value": "BO_Nto1_Diff.py: Train a model on N courses' behavior features (behavior-only) and predicting on one course's (or multiple held out courses') behavior features.",
+      "normalized_value": "BO_Nto1_Diff.py",
+      "evidence": "`BO_Nto1_Diff.py`: Train a model on N courses' behavior features (behavior-only) and predicting on one course's (or multiple held out courses') behavior features.",
+      "evidence_location": "line 41",
+      "confidence": "high",
+      "reason": "Names a specific script used to produce the best BO models referenced in Models section"
+    },
+    {
+      "field": "script_BSM_Nto1_Diff",
+      "value": "BSM_Nto1_Diff.py: Train a model on behavior and meta features from N courses, combined statically (with attention and projection), predict on one course (or multiple hold-out courses). This script produces the final architecture, using FastText encoding.",
+      "normalized_value": "BSM_Nto1_Diff.py",
+      "evidence": "`BSM_Nto1_Diff.py`: Train a model on behavior and meta features from N courses, combined statically (with attention and projection), predict on one course (or multiple hold-out courses). This script produces the final architecture, using FastText encoding.",
+      "evidence_location": "line 45",
+      "confidence": "high",
+      "reason": "Identifies the final production script/architecture and its encoding method"
+    },
+    {
+      "field": "encoding_experiments",
+      "value": "BTM_Nto1_Diff_FastText.py (FastText), BTM_Nto1_Diff_SentenceBERT.py (SentenceBERT), BTM_Nto1_Diff_UniversalSentEncoder.py (SentenceBERT)",
+      "normalized_value": "BTM_Nto1_Diff_FastText.py, BTM_Nto1_Diff_SentenceBERT.py, BTM_Nto1_Diff_UniversalSentEncoder.py",
+      "evidence": "- `BTM_Nto1_Diff_FastText.py`: Encode textual meta features with FastText, in a BTM model.\n    - `BTM_Nto1_Diff_SentenceBERT.py`: Encode textual meta features with SentenceBERT, in a BTM model.\n    - `BTM_Nto1_Diff_UniversalSentEncoder.py`: Encode textual meta features with SentenceBERT, in a BTM model.",
+      "evidence_location": "lines 48-50",
+      "confidence": "high",
+      "reason": "Lists concrete encoding experiment scripts and the text encoders used"
+    },
+    {
+      "field": "helper_script_predict_on_all_students",
+      "value": "predict_on_all_students.py: Evaluate a trained model on all students, not just the subset of hard students. This code can produce the results showcased in Figure 4.",
+      "normalized_value": "predict_on_all_students.py",
+      "evidence": "`predict_on_all_students.py`: Evaluate a trained model on all students, not just the subset of hard students. This code can produce the results showcased in Figure 4.",
+      "evidence_location": "line 59",
+      "confidence": "high",
+      "reason": "Names an evaluation utility script that reproduces a specific figure/result"
+    },
+    {
+      "field": "citation",
+      "value": "Swamy, V., Marras, M., Käser, T. (2022). Meta Transfer Learning for Early Success Prediction in MOOCs. In: Proceedings of the 2022 ACM Conference on Learning at Scale (L@S 2022).",
+      "normalized_value": "Swamy, V., Marras, M., Käser, T. (2022). Meta Transfer Learning for Early Success Prediction in MOOCs. In: Proceedings of the 2022 ACM Conference on Learning at Scale (L@S 2022).",
+      "evidence": "Swamy, V., Marras, M., Käser, T. (2022). \nMeta Transfer Learning for Early Success Prediction in MOOCs. \nIn: Proceedings of the 2022 ACM Conference on Learning at Scale (L@S 2022). ",
+      "evidence_location": "lines 73-75",
+      "confidence": "high",
+      "reason": "Formal citation for the artifact/paper as provided by authors"
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "This code is free software: you can redistribute it and/or modify it under the terms of the [MIT License](LICENSE).",
+      "evidence_location": "line 79",
+      "confidence": "high",
+      "reason": "Specifies the license under which the code is distributed"
+    }
+  ]
+}

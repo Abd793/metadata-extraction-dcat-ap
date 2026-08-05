@@ -1,0 +1,94 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "tcn3r",
+      "normalized_value": "tcn3r",
+      "evidence": "# tcn3r",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the name of the software artifact."
+    },
+    {
+      "field": "description",
+      "value": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "normalized_value": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "evidence": "Reconciliation rules for n-ary relations encoded in RDF triples",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides a concise description of the purpose of the software."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2002.08103.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2002.08103.pdf",
+      "evidence": "[the related article](https://arxiv.org/pdf/2002.08103.pdf)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Direct link to the arXiv PDF describing the motivation and algorithms."
+    },
+    {
+      "field": "doi",
+      "value": "10.1007/978-3-030-57855-8_4",
+      "normalized_value": "10.1007/978-3-030-57855-8_4",
+      "evidence": "  doi       = {10.1007/978-3-030-57855-8_4},",
+      "evidence_location": "37",
+      "confidence": "high",
+      "reason": "Digital Object Identifier (DOI) for the related research paper."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{Monnin2020,\n  author    = {Pierre Monnin and\n               Miguel Couceiro and\n               Amedeo Napoli and\n               Adrien Coulet},\n  editor    = {Mehwish Alam and\n               Tanya Braun and\n               Bruno Yun},\n  title     = {Knowledge-Based Matching of n-ary Tuples},\n  booktitle = {Ontologies and Concepts in Mind and Machine - 25th International Conference\n               on Conceptual Structures, {ICCS} 2020, Bolzano, Italy, September 18-20,\n               2020, Proceedings},\n  series    = {Lecture Notes in Computer Science},\n  volume    = {12277},\n  pages     = {48--56},\n  publisher = {Springer},\n  year      = {2020},\n  url       = {https://doi.org/10.1007/978-3-030-57855-8_4},\n  doi       = {10.1007/978-3-030-57855-8_4},\n}",
+      "normalized_value": "@inproceedings{Monnin2020, author = {Pierre Monnin and Miguel Couceiro and Amedeo Napoli and Adrien Coulet}, editor = {Mehwish Alam and Tanya Braun and Bruno Yun}, title = {Knowledge-Based Matching of n-ary Tuples}, booktitle = {Ontologies and Concepts in Mind and Machine - 25th International Conference on Conceptual Structures, {ICCS} 2020, Bolzano, Italy, September 18-20, 2020, Proceedings}, series = {Lecture Notes in Computer Science}, volume = {12277}, pages = {48--56}, publisher = {Springer}, year = {2020}, url = {https://doi.org/10.1007/978-3-030-57855-8_4}, doi = {10.1007/978-3-030-57855-8_4}, }",
+      "evidence": "@inproceedings{Monnin2020,\n  author    = {Pierre Monnin and\n               Miguel Couceiro and\n               Amedeo Napoli and\n               Adrien Coulet},\n  editor    = {Mehwish Alam and\n               Tanya Braun and\n               Bruno Yun},\n  title     = {Knowledge-Based Matching of n-ary Tuples},\n  booktitle = {Ontologies and Concepts in Mind and Machine - 25th International Conference\n               on Conceptual Structures, {ICCS} 2020, Bolzano, Italy, September 18-20,\n               2020, Proceedings},\n  series    = {Lecture Notes in Computer Science},\n  volume    = {12277},\n  pages     = {48--56},\n  publisher = {Springer},\n  year      = {2020},\n  url       = {https://doi.org/10.1007/978-3-030-57855-8_4},\n  doi       = {10.1007/978-3-030-57855-8_4},\n}",
+      "evidence_location": "19-38",
+      "confidence": "high",
+      "reason": "Complete BibTeX citation for referencing the article associated with tcn3r."
+    },
+    {
+      "field": "batch_execution_command",
+      "value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads",
+      "normalized_value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads",
+      "evidence": "```bash\ntcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR -t threads\n```",
+      "evidence_location": "49-51",
+      "confidence": "high",
+      "reason": "Command for executing tcn3r in batch mode without Docker."
+    },
+    {
+      "field": "docker_execution_command",
+      "value": "docker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4",
+      "normalized_value": "docker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4",
+      "evidence": "```bash\ndocker run --rm $(MAPUSER) -v ${PWD}/data:/data $(INAME):$(VERSION) --configuration /data/conf.json.example -o /data/output.ttl --simlimit 0.8 --complimit 2 --dimensionlimit 2 --max-rows 10000 --explain false -t 4\n```",
+      "evidence_location": "67-69",
+      "confidence": "high",
+      "reason": "Command for running tcn3r in batch mode inside Docker."
+    },
+    {
+      "field": "explain_execution_command",
+      "value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR --explain true",
+      "normalized_value": "tcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR --explain true",
+      "evidence": "```bash\ntcn3r --configuration conf.json -o output.ttl --simlimit SL --complimit CL --dimensionlimit DL --max-rows MR --explain true\n```",
+      "evidence_location": "81-83",
+      "confidence": "high",
+      "reason": "Command for executing tcn3r in explain mode without Docker."
+    },
+    {
+      "field": "example_configuration_file",
+      "value": "data/conf.json.example",
+      "normalized_value": "data/conf.json.example",
+      "evidence": "[An example is provided](data/conf.json.example)",
+      "evidence_location": "104",
+      "confidence": "high",
+      "reason": "Relative path to an example JSON configuration file."
+    },
+    {
+      "field": "dependencies",
+      "value": "* C++17\n* boost\n* libcurl\n* OpenMP",
+      "normalized_value": "* C++17 * boost * libcurl * OpenMP",
+      "evidence": "* C++17\n* boost\n* libcurl\n* OpenMP",
+      "evidence_location": "245-248",
+      "confidence": "high",
+      "reason": "List of required language and library dependencies for the artifact."
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Sparse Coding with Multi-Layer Decoders using Variance Regularization",
+      "normalized_value": "Sparse Coding with Multi-Layer Decoders using Variance Regularization",
+      "evidence": "# Sparse Coding with Multi-Layer Decoders using Variance Regularization",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Title of the artifact as given in the top-level header"
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2112.09214",
+      "normalized_value": "https://arxiv.org/abs/2112.09214",
+      "evidence": "[Sparse Coding with Multi-Layer Decoders using Variance Regularization](https://arxiv.org/abs/2112.09214).",
+      "evidence_location": "lines 2-3",
+      "confidence": "high",
+      "reason": "Direct link to the associated paper describing the method implemented"
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "This is a PyTorch implementation for the setup described in",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Identifies the software framework used to implement the artifact"
+    },
+    {
+      "field": "python_version",
+      "value": "Python 3.7",
+      "normalized_value": "Python 3.7",
+      "evidence": "- Python 3.7",
+      "evidence_location": "line 7, ### Requirements",
+      "confidence": "high",
+      "reason": "Specifies the required Python version for reproducing the environment"
+    },
+    {
+      "field": "pytorch_version",
+      "value": "[PyTorch](https://pytorch.org/get-started/previous-versions/) 1.6.0 with torchvision 0.7.0",
+      "normalized_value": "PyTorch 1.6.0 with torchvision 0.7.0",
+      "evidence": "- [PyTorch](https://pytorch.org/get-started/previous-versions/) 1.6.0 with torchvision 0.7.0",
+      "evidence_location": "line 8, ### Requirements",
+      "confidence": "high",
+      "reason": "Specifies exact dependency versions needed for environment setup"
+    },
+    {
+      "field": "dependencies",
+      "value": "numpy, tensorboardX",
+      "normalized_value": "numpy, tensorboardX",
+      "evidence": "- Other dependencies: numpy, tensorboardX",
+      "evidence_location": "line 9, ### Requirements",
+      "confidence": "high",
+      "reason": "Lists additional Python package dependencies required to run the code"
+    },
+    {
+      "field": "dataset",
+      "value": "[MNIST](http://yann.lecun.com/exdb/mnist/) dataset",
+      "normalized_value": "MNIST dataset",
+      "evidence": "the [MNIST](http://yann.lecun.com/exdb/mnist/) dataset. We provide the train and validation splits in",
+      "evidence_location": "lines 13-14, ### Datasets",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset used in the experiments with a link"
+    },
+    {
+      "field": "dataset_files",
+      "value": "data/MNIST_train.npy and data/MNIST_val.npy",
+      "normalized_value": "data/MNIST_train.npy, data/MNIST_val.npy",
+      "evidence": "```data/MNIST_train.npy``` and ```data/MNIST_val.npy```.",
+      "evidence_location": "lines 14-15, ### Datasets",
+      "confidence": "high",
+      "reason": "Provides exact paths to provided dataset splits for reproducibility"
+    },
+    {
+      "field": "dataset",
+      "value": "custom dataset with 200,000 gray-scale natural image patches of size 28x28 extracted from [ImageNet](https://www.image-net.org/index.php)",
+      "normalized_value": "custom 200,000 gray-scale 28x28 image patches dataset extracted from ImageNet",
+      "evidence": "a custom dataset with 200,000 gray-scale natural image patches of size 28x28 extracted from \n[ImageNet](https://www.image-net.org/index.php). The script to generate it is",
+      "evidence_location": "lines 16-17, ### Datasets",
+      "confidence": "high",
+      "reason": "Describes a second dataset used for experiments, with concrete size and source"
+    },
+    {
+      "field": "dataset_generation_script",
+      "value": "[build_imagenet_LCN.sh](https://github.com/kevtimova/deep-sparse/blob/main/scripts/build_ImageNet_LCN.sh)",
+      "normalized_value": "https://github.com/kevtimova/deep-sparse/blob/main/scripts/build_ImageNet_LCN.sh",
+      "evidence": "[build_imagenet_LCN.sh](https://github.com/kevtimova/deep-sparse/blob/main/scripts/build_ImageNet_LCN.sh).",
+      "evidence_location": "line 18, ### Datasets",
+      "confidence": "high",
+      "reason": "Provides the script link used to reproduce the custom ImageNet patches dataset"
+    },
+    {
+      "field": "repository",
+      "value": "https://github.com/kevtimova/deep-sparse",
+      "normalized_value": "https://github.com/kevtimova/deep-sparse",
+      "evidence": "https://github.com/kevtimova/deep-sparse/blob/main/scripts/build_ImageNet_LCN.sh",
+      "evidence_location": "line 18",
+      "confidence": "medium",
+      "reason": "Repository URL inferred from multiple script links pointing to same repo path"
+    },
+    {
+      "field": "training_script",
+      "value": "MNIST / SDL: [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/MNIST_SDL.sh)",
+      "normalized_value": "https://github.com/kevtimova/deep-sparse/blob/main/scripts/MNIST_SDL.sh",
+      "evidence": "| MNIST            | SDL      | [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/MNIST_SDL.sh)       |",
+      "evidence_location": "line 26, ### Training table",
+      "confidence": "high",
+      "reason": "Specific training script for MNIST dataset with SDL model configuration"
+    },
+    {
+      "field": "training_script",
+      "value": "MNIST / SDL-NL: [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/MNIST_SDL-NL.sh)",
+      "normalized_value": "https://github.com/kevtimova/deep-sparse/blob/main/scripts/MNIST_SDL-NL.sh",
+      "evidence": "| MNIST            | SDL-NL   | [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/MNIST_SDL-NL.sh)       |",
+      "evidence_location": "line 27, ### Training table",
+      "confidence": "high",
+      "reason": "Specific training script for MNIST dataset with SDL-NL model configuration"
+    },
+    {
+      "field": "training_script",
+      "value": "MNIST / VDL: [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/MNIST_VDL.sh)",
+      "normalized_value": "https://github.com/kevtimova/deep-sparse/blob/main/scripts/MNIST_VDL.sh",
+      "evidence": "| MNIST            | VDL      | [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/MNIST_VDL.sh)       |",
+      "evidence_location": "line 28, ### Training table",
+      "confidence": "high",
+      "reason": "Specific training script for MNIST dataset with VDL model configuration"
+    },
+    {
+      "field": "training_script",
+      "value": "MNIST / VDL-NL: [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/MNIST_VDL-NL.sh)",
+      "normalized_value": "https://github.com/kevtimova/deep-sparse/blob/main/scripts/MNIST_VDL-NL.sh",
+      "evidence": "| MNIST            | VDL-NL   | [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/MNIST_VDL-NL.sh)       |",
+      "evidence_location": "line 29, ### Training table",
+      "confidence": "high",
+      "reason": "Specific training script for MNIST dataset with VDL-NL model configuration"
+    },
+    {
+      "field": "training_script",
+      "value": "ImageNet_patches / SDL: [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/ImageNet_SDL.sh)",
+      "normalized_value": "https://github.com/kevtimova/deep-sparse/blob/main/scripts/ImageNet_SDL.sh",
+      "evidence": "| ImageNet_patches | SDL      | [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/ImageNet_SDL.sh)       |",
+      "evidence_location": "line 30, ### Training table",
+      "confidence": "high",
+      "reason": "Specific training script for ImageNet_patches dataset with SDL model configuration"
+    },
+    {
+      "field": "training_script",
+      "value": "ImageNet_patches / SDL-NL: [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/ImageNet_SDL-NL.sh)",
+      "normalized_value": "https://github.com/kevtimova/deep-sparse/blob/main/scripts/ImageNet_SDL-NL.sh",
+      "evidence": "| ImageNet_patches | SDL-NL   | [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/ImageNet_SDL-NL.sh)       |",
+      "evidence_location": "line 31, ### Training table",
+      "confidence": "high",
+      "reason": "Specific training script for ImageNet_patches dataset with SDL-NL model configuration"
+    },
+    {
+      "field": "training_script",
+      "value": "ImageNet_patches / VDL: [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/ImageNet_VDL.sh)",
+      "normalized_value": "https://github.com/kevtimova/deep-sparse/blob/main/scripts/ImageNet_VDL.sh",
+      "evidence": "| ImageNet_patches | VDL      | [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/ImageNet_VDL.sh)       |",
+      "evidence_location": "line 32, ### Training table",
+      "confidence": "high",
+      "reason": "Specific training script for ImageNet_patches dataset with VDL model configuration"
+    },
+    {
+      "field": "training_script",
+      "value": "Imagenet_patches / VDL-NL: [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/ImageNet_VDL-NL.sh)",
+      "normalized_value": "https://github.com/kevtimova/deep-sparse/blob/main/scripts/ImageNet_VDL-NL.sh",
+      "evidence": "| Imagenet_patches | VDL-NL   | [link](https://github.com/kevtimova/deep-sparse/blob/main/scripts/ImageNet_VDL-NL.sh)       |",
+      "evidence_location": "line 33, ### Training table",
+      "confidence": "high",
+      "reason": "Specific training script for Imagenet_patches dataset with VDL-NL model configuration"
+    },
+    {
+      "field": "evaluation_task",
+      "value": "denoising (for MNIST and our custom ImageNet patches dataset) and classification in the low-data regime (for MNIST only)",
+      "normalized_value": "denoising (MNIST and custom ImageNet patches) and classification in low-data regime (MNIST only)",
+      "evidence": "We evaluate our pre-trained sparse autoencoders on the downstream tasks of denoising (for MNIST and our custom \nImageNet patches dataset) and classification in the low-data regime (for MNIST only).",
+      "evidence_location": "lines 37-38, ### Evaluation",
+      "confidence": "high",
+      "reason": "Describes the downstream evaluation tasks used to assess the artifact's performance"
+    },
+    {
+      "field": "evaluation_command_denoising",
+      "value": "eval_denoising.py",
+      "normalized_value": "eval_denoising.py",
+      "evidence": "Alternatively, ```eval_denoising.py``` can be used given a pre-trained autoencoder.",
+      "evidence_location": "line 46, #### Denoising",
+      "confidence": "high",
+      "reason": "Names the script used to evaluate denoising performance given a pre-trained model"
+    },
+    {
+      "field": "evaluation_configuration_denoising",
+      "value": "noise argument in main.py",
+      "normalized_value": "noise argument in main.py",
+      "evidence": "random noise (measured by std of Gaussian noise; the noise is added to the input images) in the ```noise``` argument \nin ```main.py```.",
+      "evidence_location": "lines 43-44, #### Denoising",
+      "confidence": "high",
+      "reason": "Specifies configuration parameter for controlling noise level during evaluation"
+    },
+    {
+      "field": "evaluation_command_classification_step1",
+      "value": "compute_codes.py",
+      "normalized_value": "compute_codes.py",
+      "evidence": "Step 1: Given a pre-trained encoder, ```compute_codes.py``` can be used to create a dataset containing the codes \nfor each MNIST image.",
+      "evidence_location": "lines 52-53, #### Classification",
+      "confidence": "high",
+      "reason": "Names the script used in the first step of the classification evaluation pipeline"
+    },
+    {
+      "field": "evaluation_command_classification_step2",
+      "value": "eval_classification.py",
+      "normalized_value": "eval_classification.py",
+      "evidence": "Step 2: Using the dataset from the previous step, ```eval_classification.py``` can be used to measure classification \nperformance with a set number of training samples per class.",
+      "evidence_location": "lines 55-56, #### Classification",
+      "confidence": "high",
+      "reason": "Names the script used in the second step of the classification evaluation pipeline"
+    },
+    {
+      "field": "classifier_module",
+      "value": "modles/linear_classifier.py",
+      "normalized_value": "modles/linear_classifier.py",
+      "evidence": "a linear classifier\n(located in ```modles/linear_classifier.py```) and a classifier which uses a randomly initialized LISTA encoder module",
+      "evidence_location": "lines 58-59, #### Classification",
+      "confidence": "high",
+      "reason": "File path to the linear classifier implementation used for evaluation"
+    },
+    {
+      "field": "classifier_module",
+      "value": "modles/lista_classifier.py",
+      "normalized_value": "modles/lista_classifier.py",
+      "evidence": "followed by a linear classification layer (located in ```modles/lista_classifier.py```).",
+      "evidence_location": "line 60, #### Classification",
+      "confidence": "high",
+      "reason": "File path to the LISTA-based classifier implementation used for evaluation"
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "arXiv public datasets",
+      "normalized_value": "arXiv public datasets",
+      "evidence": "# arXiv public datasets",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Identifies the artifact by its title."
+    },
+    {
+      "field": "description",
+      "value": "Our primary purpose is to develop a set of tools to standardize and facilitate use of the arXiv as a dataset. Due to licensing and distribution issues, our work is primarily a set of scripts which builds the dataset from various public data sources.",
+      "normalized_value": "Our primary purpose is to develop a set of tools to standardize and facilitate use of the arXiv as a dataset. Due to licensing and distribution issues, our work is primarily a set of scripts which builds the dataset from various public data sources.",
+      "evidence": "Our primary purpose is to\ndevelop a set of tools to standardize and facilitate use of the arXiv as a\ndataset. Due to licensing and distribution issues, our work is primarily a set\nof scripts which builds the dataset from various public data sources.",
+      "evidence_location": "lines 5-8, introduction paragraph",
+      "confidence": "high",
+      "reason": "States the purpose and nature of the project (scripts that build an arXiv dataset)."
+    },
+    {
+      "field": "associated_publication",
+      "value": "arXiv:1905.00075 (https://arxiv.org/abs/1905.00075)",
+      "normalized_value": "arXiv:1905.00075 (https://arxiv.org/abs/1905.00075)",
+      "evidence": "[arXiv:1905.00075](https://arxiv.org/abs/1905.00075)",
+      "evidence_location": "line 5, introduction paragraph",
+      "confidence": "high",
+      "reason": "Links to the manuscript describing the dataset, useful for citation and context."
+    },
+    {
+      "field": "publication_venue",
+      "value": "ICLR 2019 workshop, RLGM (Representation Learning on Graphs and Manifolds)",
+      "normalized_value": "ICLR 2019 workshop, RLGM (Representation Learning on Graphs and Manifolds)",
+      "evidence": "This project is part of a submission to an ICLR 2019 workshop, RLGM\nRepresentation Learning on Graphs and Manifolds.",
+      "evidence_location": "lines 3-4, introduction paragraph",
+      "confidence": "high",
+      "reason": "Gives the scientific venue context for the artifact."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/mattbierbaum/arxiv-public-datasets",
+      "normalized_value": "https://github.com/mattbierbaum/arxiv-public-datasets",
+      "evidence": "git clone https://github.com/mattbierbaum/arxiv-public-datasets",
+      "evidence_location": "line 64, 'Setup on Linux' section",
+      "confidence": "high",
+      "reason": "Canonical source code location for cloning and reuse."
+    },
+    {
+      "field": "releases_url",
+      "value": "https://github.com/mattbierbaum/arxiv-public-datasets/releases",
+      "normalized_value": "https://github.com/mattbierbaum/arxiv-public-datasets/releases",
+      "evidence": "[Releases](https://github.com/mattbierbaum/arxiv-public-datasets/releases).",
+      "evidence_location": "lines 25-26, introduction",
+      "confidence": "high",
+      "reason": "Location of released dataset snapshots."
+    },
+    {
+      "field": "versioning_scheme",
+      "value": "semver",
+      "normalized_value": "semver",
+      "evidence": "We have adopted [semver](https://semver.org/) and as such will denote\nmajor releases with the first numeral in the tagged version.",
+      "evidence_location": "lines 13-14, introduction",
+      "confidence": "high",
+      "reason": "Explains how releases are versioned, relevant for reproducibility and pinning versions."
+    },
+    {
+      "field": "dataset_components",
+      "value": "Article metadata, PDFs, Plain text, Citation graph, Author string parsing",
+      "normalized_value": "Article metadata, PDFs, Plain text, Citation graph, Author string parsing",
+      "evidence": "* **Article metadata** -- title, authors string, category, doi, abstract, submitter\n* **PDFs** -- all PDFs available through arXiv bulk download\n* **Plain text** -- PDFs converted to UTF-8 encoded plain text\n* **Citation graph** -- intra-arXiv citation graph between arXiv IDs only (generated from plain text)\n* **Author string parsing** -- convert metadata author strings into standardized list of name, affiliations",
+      "evidence_location": "lines 18-22, bulleted list",
+      "confidence": "high",
+      "reason": "Enumerates the data products the project grabs or generates."
+    },
+    {
+      "field": "kaggle_hosting",
+      "value": "https://www.kaggle.com/Cornell-University/arxiv",
+      "normalized_value": "https://www.kaggle.com/Cornell-University/arxiv",
+      "evidence": "[Kaggle has agreed](https://www.kaggle.com/Cornell-University/arxiv) to cover the cost of hosting the arXiv PDFs,",
+      "evidence_location": "line 31, 'Kaggle hosting arXiv data' section",
+      "confidence": "high",
+      "reason": "Alternative free hosting source for the arXiv PDFs."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@misc{clement2019arxiv,\n    title={On the Use of ArXiv as a Dataset},\n    author={Colin B. Clement and Matthew Bierbaum and Kevin P. O'Keeffe and Alexander A. Alemi},\n    year={2019},\n    eprint={1905.00075},\n    archivePrefix={arXiv},\n    primaryClass={cs.IR}\n}",
+      "normalized_value": "@misc{clement2019arxiv, title={On the Use of ArXiv as a Dataset}, author={Colin B. Clement and Matthew Bierbaum and Kevin P. O'Keeffe and Alexander A. Alemi}, year={2019}, eprint={1905.00075}, archivePrefix={arXiv}, primaryClass={cs.IR} }",
+      "evidence": "    @misc{clement2019arxiv,\n        title={On the Use of ArXiv as a Dataset},\n        author={Colin B. Clement and Matthew Bierbaum and Kevin P. O'Keeffe and Alexander A. Alemi},\n        year={2019},\n        eprint={1905.00075},\n        archivePrefix={arXiv},\n        primaryClass={cs.IR}\n    }",
+      "evidence_location": "lines 46-53, 'Citing' section code block",
+      "confidence": "high",
+      "reason": "Suggested citation for reusers of the dataset."
+    },
+    {
+      "field": "system_dependencies",
+      "value": "python3 python3-pip python3-virtualenv poppler-utils",
+      "normalized_value": "python3 python3-pip python3-virtualenv poppler-utils",
+      "evidence": "    sudo apt install python3 python3-pip python3-virtualenv poppler-utils",
+      "evidence_location": "line 60, 'Setup on Linux' section",
+      "confidence": "high",
+      "reason": "Required system packages for installation on Debian/Ubuntu."
+    },
+    {
+      "field": "installation_commands",
+      "value": "git clone https://github.com/mattbierbaum/arxiv-public-datasets\ncd arxiv-public-datasets\nvirtualenv venv\n. venv/bin/activate\npip3 install -e .\npip3 install -r requirements.txt",
+      "normalized_value": "git clone https://github.com/mattbierbaum/arxiv-public-datasets; cd arxiv-public-datasets; virtualenv venv; . venv/bin/activate; pip3 install -e .; pip3 install -r requirements.txt",
+      "evidence": "    git clone https://github.com/mattbierbaum/arxiv-public-datasets\n    cd arxiv-public-datasets\n\n    virtualenv venv\n    . venv/bin/activate\n\n    pip3 install -e .\n    pip3 install -r requirements.txt",
+      "evidence_location": "lines 64-71, 'Setup on Linux' section",
+      "confidence": "high",
+      "reason": "Defines the full installation and environment setup procedure."
+    },
+    {
+      "field": "configuration_step",
+      "value": "cp config.json.example config.json and set ARXIV_DATA in config.json to your own directory",
+      "normalized_value": "cp config.json.example config.json and set ARXIV_DATA in config.json to your own directory",
+      "evidence": "    cp config.json.example config.json\n    [set ARXIV_DATA in config.json to your own directory]",
+      "evidence_location": "lines 77-78, 'Setup on Linux' section",
+      "confidence": "high",
+      "reason": "Required configuration step before running the pipeline."
+    },
+    {
+      "field": "storage_requirements",
+      "value": "~1TB of pdfs and ~70GB of text",
+      "normalized_value": "~1TB of pdfs and ~70GB of text",
+      "evidence": "This\ndirectory needs to have adequate space to hold ~ 1TB of pdfs and ~ 70GB of text\nif you so choose to retrieve them:",
+      "evidence_location": "lines 73-75, 'Setup on Linux' section",
+      "confidence": "high",
+      "reason": "Hardware/storage requirement needed to plan reproduction."
+    },
+    {
+      "field": "data_directory_structure",
+      "value": "$ARXIV_DATA/tarpdfs (raw pdf files from Amazon AWS bucket), $ARXIV_DATA/fulltext (.txt from raw .pdf), $ARXIV_DATA/output (co-citation network, parsed author strings, etc)",
+      "normalized_value": "$ARXIV_DATA/tarpdfs (raw pdf files from Amazon AWS bucket), $ARXIV_DATA/fulltext (.txt from raw .pdf), $ARXIV_DATA/output (co-citation network, parsed author strings, etc)",
+      "evidence": "    $ARXIV_DATA/tarpdfs   # raw pdf files from Amazon AWS bucket\n    $ARXIV_DATA/fulltext  # .txt from raw .pdf\n    $ARXIV_DATA/output    # co-citation network, parsed author strings, etc",
+      "evidence_location": "lines 82-84, 'Setup on Linux' section",
+      "confidence": "high",
+      "reason": "Describes the output layout produced by the pipeline scripts."
+    },
+    {
+      "field": "metadata_harvest_command",
+      "value": "python bin/metadata.py [OPTIONAL filepath.json.gz]",
+      "normalized_value": "python bin/metadata.py [OPTIONAL filepath.json.gz]",
+      "evidence": "    python bin/metadata.py [OPTIONAL filepath.json.gz]",
+      "evidence_location": "line 90, 'Article metadata' section",
+      "confidence": "high",
+      "reason": "Command to harvest the full arXiv OAI metadata set."
+    },
+    {
+      "field": "metadata_harvest_runtime",
+      "value": "at least 6 hours (OAI server sends 1000 entries every 15 seconds)",
+      "normalized_value": "at least 6 hours (OAI server sends 1000 entries every 15 seconds)",
+      "evidence": "This process will take at\nleast 6 hours, as the OAI server only sends 1000 entries every 15 seconds.",
+      "evidence_location": "lines 94-95, 'Article metadata' section",
+      "confidence": "high",
+      "reason": "Runtime expectation useful for planning reproduction."
+    },
+    {
+      "field": "aws_credentials_setup",
+      "value": "apt install awscli\naws configure",
+      "normalized_value": "apt install awscli; aws configure",
+      "evidence": "    apt install awscli\n    aws configure",
+      "evidence_location": "lines 107-108, 'PDFs (AWS download only)' section",
+      "confidence": "high",
+      "reason": "Credential setup required for the AWS bulk PDF download step."
+    },
+    {
+      "field": "pdf_download_command",
+      "value": "python bin/pdfdownload.py [OPTIONAL manifest_file.json.gz]",
+      "normalized_value": "python bin/pdfdownload.py [OPTIONAL manifest_file.json.gz]",
+      "evidence": "    python bin/pdfdownload.py [OPTIONAL manifest_file.json.gz]",
+      "evidence_location": "line 118, 'PDFs (AWS download only)' section",
+      "confidence": "high",
+      "reason": "Command to bulk download arXiv PDFs from AWS S3."
+    },
+    {
+      "field": "pdf_download_cost_and_size",
+      "value": "about 100 USD and 1.1TB (requester-pays AWS S3)",
+      "normalized_value": "about 100 USD and 1.1TB (requester-pays AWS S3)",
+      "evidence": "This download costs about 100 USD (and is 1.1TB) at the time of writing, as the\n[ArXiv bulk download](https://arxiv.org/help/bulk_data) only allows\nrequester-pays AWS S3 downloads.",
+      "evidence_location": "lines 113-115, 'PDFs (AWS download only)' section",
+      "confidence": "high",
+      "reason": "Cost and size information critical for planning reproduction of the dataset."
+    },
+    {
+      "field": "fulltext_conversion_command",
+      "value": "python bin/fulltext.py -N [OPTIONAL number_of_processes, default cpu_count] --PLAIN_PDFS [OPTIONAL, use if plain PDFs are dowloaded]",
+      "normalized_value": "python bin/fulltext.py -N [OPTIONAL number_of_processes, default cpu_count] --PLAIN_PDFS [OPTIONAL, use if plain PDFs are dowloaded]",
+      "evidence": "python bin/fulltext.py -N [OPTIONAL number_of_processes, default cpu_count] --PLAIN_PDFS [OPTIONAL, use if plain PDFs are dowloaded]",
+      "evidence_location": "lines 122-124, 'Plain text' section code block",
+      "confidence": "high",
+      "reason": "Command for converting PDFs to plain text, covering both AWS and Kaggle sources."
+    },
+    {
+      "field": "fulltext_conversion_compute",
+      "value": "converting 1.39 million articles requires over 400 core-hours using two Intel Xeon E5-2600 CPUs",
+      "normalized_value": "converting 1.39 million articles requires over 400 core-hours using two Intel Xeon E5-2600 CPUs",
+      "evidence": "At the time of writing, converting 1.39 million articles requires over 400 core-hours\nusing two Intel Xeon E5-2600 CPUs.",
+      "evidence_location": "lines 134-135, 'Plain text' section",
+      "confidence": "high",
+      "reason": "Concrete compute requirement and dataset scale for the text conversion step."
+    },
+    {
+      "field": "cocitation_network_command",
+      "value": "python bin/cocitations.py [OPTIONAL number_of_processes, default cpu_count]",
+      "normalized_value": "python bin/cocitations.py [OPTIONAL number_of_processes, default cpu_count]",
+      "evidence": "    python bin/cocitations.py [OPTIONAL number_of_processes, default cpu_count]",
+      "evidence_location": "line 149, 'Cocitation network' section",
+      "confidence": "high",
+      "reason": "Command to generate the intra-arXiv cocitation network."
+    },
+    {
+      "field": "cocitation_network_output",
+      "value": "$ARXIV_DATA/output/internal-citations.json.gz",
+      "normalized_value": "$ARXIV_DATA/output/internal-citations.json.gz",
+      "evidence": "The cocitation network will by default be saved in\n`$ARXIV_DATA/output/internal-citations.json.gz`.",
+      "evidence_location": "lines 151-152, 'Cocitation network' section",
+      "confidence": "high",
+      "reason": "Default output path of the citation graph artifact."
+    },
+    {
+      "field": "author_split_command",
+      "value": "python bin/authorsplit.py [OPTIONAL number_of_processes, default cpu_count]",
+      "normalized_value": "python bin/authorsplit.py [OPTIONAL number_of_processes, default cpu_count]",
+      "evidence": "    python bin/authorsplit.py [OPTIONAL number_of_processes, default cpu_count]",
+      "evidence_location": "line 160, 'Author string split' section",
+      "confidence": "high",
+      "reason": "Command to parse and split author strings from OAI metadata."
+    },
+    {
+      "field": "author_split_output",
+      "value": "$ARXIV_DATA/output/authors-parsed.json.gz",
+      "normalized_value": "$ARXIV_DATA/output/authors-parsed.json.gz",
+      "evidence": "The split author strings will by default be saved in\n`$ARXIV_DATA/output/authors-parsed.json.gz`.",
+      "evidence_location": "lines 162-163, 'Author string split' section",
+      "confidence": "high",
+      "reason": "Default output path of the parsed author data."
+    },
+    {
+      "field": "license",
+      "value": "https://raw.githubusercontent.com/mattbierbaum/arxiv-public-datasets/master/LICENSE",
+      "normalized_value": "https://raw.githubusercontent.com/mattbierbaum/arxiv-public-datasets/master/LICENSE",
+      "evidence": "<td><code itemprop=\"license\">https://raw.githubusercontent.com/mattbierbaum/arxiv-public-datasets/master/LICENSE</code></td>",
+      "evidence_location": "line 206, 'Dataset Metadata' table",
+      "confidence": "medium",
+      "reason": "Link to the license file; the specific license type is not named in the document, only its URL."
+    },
+    {
+      "field": "dataset_schema_name",
+      "value": "arXiv Public Datasets",
+      "normalized_value": "arXiv Public Datasets",
+      "evidence": "<td><code itemprop=\"name\">arXiv Public Datasets</code></td>",
+      "evidence_location": "line 176, 'Dataset Metadata' table",
+      "confidence": "high",
+      "reason": "Official schema.org dataset name used for indexing by Google Dataset Search."
+    }
+  ]
+}

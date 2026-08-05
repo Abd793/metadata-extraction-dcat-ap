@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "# ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "normalized_value": "ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "evidence": "# ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit project name provided in the main header."
+    },
+    {
+      "field": "description",
+      "value": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "normalized_value": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "evidence": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Directly states the purpose and nature of the artifact."
+    },
+    {
+      "field": "task",
+      "value": "Automatic Lyrics Transcription",
+      "normalized_value": "Automatic Lyrics Transcription",
+      "evidence": "Automatic Lyrics Transcription is the task of translating singing voice into text.",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Defines the specific scientific/engineering task addressed by the system."
+    },
+    {
+      "field": "framework",
+      "value": "Kaldi",
+      "normalized_value": "Kaldi",
+      "evidence": "This framework is built as a [Kaldi](http://kaldi-asr.org/)[1] recipe",
+      "evidence_location": "63",
+      "confidence": "high",
+      "reason": "Identifies the core speech recognition framework used to build the recipe."
+    },
+    {
+      "field": "license",
+      "value": "This work is licensed under Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International, which means that the reusers can copy, distribute, remix, transform and build upon the material in any media providing the appropriate credits to this repository and to be used for non-commercial purposes.",
+      "normalized_value": "This work is licensed under Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International, which means that the reusers can copy, distribute, remix, transform and build upon the material in any media providing the appropriate credits to this repository and to be used for non-commercial purposes.",
+      "evidence": "This work is licensed under Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International, which means that the reusers can copy, distribute, remix, transform and build upon the material in any media providing the appropriate credits to this repository and to be used for non-commercial purposes.",
+      "evidence_location": "235",
+      "confidence": "high",
+      "reason": "Explicitly states the legal license and reuse terms for the artifact."
+    },
+    {
+      "field": "paper_link_ismir2021",
+      "value": "https://arxiv.org/pdf/2108.02625.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2108.02625.pdf",
+      "evidence": "Link to paper : https://arxiv.org/pdf/2108.02625.pdf",
+      "evidence_location": "197",
+      "confidence": "high",
+      "reason": "Provides direct access to the primary research paper for the recommended MStreNet model."
+    },
+    {
+      "field": "paper_link_ijcnn2020",
+      "value": "https://arxiv.org/abs/2007.06486",
+      "normalized_value": "https://arxiv.org/abs/2007.06486",
+      "evidence": "Link to paper : https://arxiv.org/abs/2007.06486",
+      "evidence_location": "211",
+      "confidence": "high",
+      "reason": "Provides direct access to the secondary research paper for the alternative single-stream approach."
+    },
+    {
+      "field": "dataset_damp_url",
+      "value": "https://ccrma.stanford.edu/damp/",
+      "normalized_value": "https://ccrma.stanford.edu/damp/",
+      "evidence": "We use the Sing!300x30x2 data within the DAMP repository[6]. To retrieve the data, you need to apply for authorization from https://ccrma.stanford.edu/damp/ .",
+      "evidence_location": "82",
+      "confidence": "high",
+      "reason": "Link to the primary dataset required for training, noting authorization requirements."
+    },
+    {
+      "field": "dataset_dali_url",
+      "value": "https://github.com/gabolsgabs/DALI",
+      "normalized_value": "https://github.com/gabolsgabs/DALI",
+      "evidence": "DALI_v2.0 is used to train the polyphonic and cross-domain lyrics transcription models. To retrieve the data, please refer to the relevant Github repository at:\n\nhttps://github.com/gabolsgabs/DALI",
+      "evidence_location": "91-93",
+      "confidence": "high",
+      "reason": "Link to another key dataset used for training polyphonic and cross-domain models."
+    },
+    {
+      "field": "dataset_dali_talt_url",
+      "value": "https://github.com/emirdemirel/DALI-TestSet4ALT",
+      "normalized_value": "https://github.com/emirdemirel/DALI-TestSet4ALT",
+      "evidence": "The data can be retrieved via the tutorial at: https://github.com/emirdemirel/DALI-TestSet4ALT .",
+      "evidence_location": "102",
+      "confidence": "high",
+      "reason": "Link to the test dataset used for evaluating polyphonic ALT models."
+    },
+    {
+      "field": "dataset_jamendo_url",
+      "value": "https://github.com/f90/jamendolyrics",
+      "normalized_value": "https://github.com/f90/jamendolyrics",
+      "evidence": "Data can be retrieved at https://github.com/f90/jamendolyrics .",
+      "evidence_location": "109",
+      "confidence": "high",
+      "reason": "Link to the benchmark evaluation dataset used for alignment tasks and MIREX challenges."
+    },
+    {
+      "field": "dependency_installation",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "```\npip install -r requirements.txt\n```",
+      "evidence_location": "68-70",
+      "confidence": "high",
+      "reason": "Standard command for installing Python dependencies listed in the project."
+    },
+    {
+      "field": "training_command_mstrenet",
+      "value": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} \\\n    --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo}",
+      "normalized_value": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo}",
+      "evidence": "```\n./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} \\\n    --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo} \\\n```",
+      "evidence_location": "136-139",
+      "confidence": "high",
+      "reason": "Main execution script for training the recommended MStreNet model with required dataset paths."
+    },
+    {
+      "field": "inference_command",
+      "value": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "normalized_value": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "evidence": "```\naudio_path='absolute-path-to-the-input-audio-file'\nsave_path='path-to-save-the-output\ncd s5\n./extract_phn_posteriorgram.sh $audio_path $save_path\n```",
+      "evidence_location": "171-176",
+      "confidence": "high",
+      "reason": "Command to run the optional inference/posteriorgram extraction pipeline."
+    },
+    {
+      "field": "audio_sample_rate",
+      "value": "16kHz",
+      "normalized_value": "16kHz",
+      "evidence": "Note that we have used 16kHz for the sample rate and 10ms of hop size.",
+      "evidence_location": "180",
+      "confidence": "high",
+      "reason": "Specifies the audio sampling rate used in the pipeline, crucial for accurate reproduction."
+    },
+    {
+      "field": "audio_hop_size",
+      "value": "10ms",
+      "normalized_value": "10ms",
+      "evidence": "Note that we have used 16kHz for the sample rate and 10ms of hop size.",
+      "evidence_location": "180",
+      "confidence": "high",
+      "reason": "Specifies the audio frame hop size used in the pipeline, crucial for accurate reproduction."
+    },
+    {
+      "field": "citation_bibtex_ismir2021",
+      "value": "@article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}",
+      "normalized_value": "@article{demirel2021mstre, title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription}, author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon}, booktitle={In proceedings of ISMIR2021}, year={2021}}",
+      "evidence": "```\n  @article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}\n```",
+      "evidence_location": "189-196",
+      "confidence": "high",
+      "reason": "Provides the exact BibTeX entry for citing the primary model and associated paper."
+    },
+    {
+      "field": "citation_bibtex_ijcnn2020",
+      "value": "@inproceedings{demirel2020,\n  title={Automatic lyrics transcription using dilated convolutional neural networks with self-attention},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={International Joint Conference on Neural Networks},\n  publisher={IEEE},\n  year={2020}\n}",
+      "normalized_value": "@inproceedings{demirel2020, title={Automatic lyrics transcription using dilated convolutional neural networks with self-attention}, author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon}, booktitle={International Joint Conference on Neural Networks}, publisher={IEEE}, year={2020}}",
+      "evidence": "```\n@inproceedings{demirel2020,\n  title={Automatic lyrics transcription using dilated convolutional neural networks with self-attention},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={International Joint Conference on Neural Networks},\n  publisher={IEEE},\n  year={2020}\n}\n```",
+      "evidence_location": "201-209",
+      "confidence": "high",
+      "reason": "Provides the exact BibTeX entry for citing the alternative model and associated paper."
+    }
+  ]
+}

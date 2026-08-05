@@ -1,0 +1,211 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "XPert: Peripheral Circuit & Neural Architecture Co-search for Area and Energy-efficient Xbar-based Computing (Design & Automation Conference, 2023)",
+      "normalized_value": "XPert: Peripheral Circuit & Neural Architecture Co-search for Area and Energy-efficient Xbar-based Computing (Design & Automation Conference, 2023)",
+      "evidence": "# XPert: Peripheral Circuit & Neural Architecture Co-search for Area and Energy-efficient Xbar-based Computing (Design & Automation Conference, 2023)",
+      "evidence_location": "line 1, title",
+      "confidence": "high",
+      "reason": "Provides the artifact's explicit name and publication context."
+    },
+    {
+      "field": "publication_venue",
+      "value": "Design & Automation Conference, 2023",
+      "normalized_value": "Design & Automation Conference, 2023",
+      "evidence": "Design & Automation Conference, 2023",
+      "evidence_location": "line 1, title",
+      "confidence": "high",
+      "reason": "Identifies the stated publication venue and year."
+    },
+    {
+      "field": "purpose",
+      "value": "To this end, we propose XPert, which co-searches network architecture in tandem with peripheral parameters such as the type and precision of analog-to-digital converters, crossbar column sharing and the layer-specific input precision using an optimization-based design space exploration.",
+      "normalized_value": "To this end, we propose XPert, which co-searches network architecture in tandem with peripheral parameters such as the type and precision of analog-to-digital converters, crossbar column sharing and the layer-specific input precision using an optimization-based design space exploration.",
+      "evidence": "To this end, we propose XPert, which co-searches network architecture in tandem with peripheral parameters such as the type and precision of analog-to-digital converters, crossbar column sharing and the layer-specific input precision using an optimization-based design space exploration.",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Explicitly states the artifact's central method and search objective."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2303.17646",
+      "normalized_value": "https://arxiv.org/abs/2303.17646",
+      "evidence": "https://arxiv.org/abs/2303.17646",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Provides the explicitly linked paper."
+    },
+    {
+      "field": "reported_results",
+      "value": "Compared to VGG16 baselines, XPert achieves 10.24x (4.7x) lower EDAP, 1.72x (1.62x) higher TOPS/W,1.93x (3x) higher TOPS/mm2 at 92.46% (56.7%) accuracy for CIFAR10 (TinyImagenet) datasets.",
+      "normalized_value": "Compared to VGG16 baselines, XPert achieves 10.24x (4.7x) lower EDAP, 1.72x (1.62x) higher TOPS/W,1.93x (3x) higher TOPS/mm2 at 92.46% (56.7%) accuracy for CIFAR10 (TinyImagenet) datasets.",
+      "evidence": "Compared to VGG16 baselines, XPert achieves 10.24x (4.7x) lower EDAP, 1.72x (1.62x) higher TOPS/W,1.93x (3x) higher TOPS/mm2 at 92.46% (56.7%) accuracy for CIFAR10 (TinyImagenet) datasets.",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Contains concrete comparative efficiency and accuracy results along with the evaluated datasets."
+    },
+    {
+      "field": "workflow_phase",
+      "value": "Phase1-Cosearch",
+      "normalized_value": "Phase1-Cosearch",
+      "evidence": "# Instructions for running Phase1-Cosearch",
+      "evidence_location": "line 4, title",
+      "confidence": "high",
+      "reason": "Names the documented co-search execution phase."
+    },
+    {
+      "field": "co_search_command",
+      "value": "python Phase1_VGG16_backbone.py",
+      "normalized_value": "python Phase1_VGG16_backbone.py",
+      "evidence": "```\npython Phase1_VGG16_backbone.py with the variables described below.\n```",
+      "evidence_location": "lines 8-10, ## Running the Co-search",
+      "confidence": "high",
+      "reason": "Provides the command used to run the co-search."
+    },
+    {
+      "field": "learning_rate_argument",
+      "value": "--lr: Learning Rate",
+      "normalized_value": "--lr: Learning Rate",
+      "evidence": "--lr: Learning Rate",
+      "evidence_location": "line 14, ## Variable Description",
+      "confidence": "high",
+      "reason": "Defines the learning-rate command-line argument."
+    },
+    {
+      "field": "hardware_parameters_argument",
+      "value": "--hw_params: Tuple of #PEs per Tile, #Crossbars per PE, #Tiles, Crossbar Size",
+      "normalized_value": "--hw_params: Tuple of #PEs per Tile, #Crossbars per PE, #Tiles, Crossbar Size",
+      "evidence": "--hw_params: Tuple of #PEs per Tile, #Crossbars per PE, #Tiles, Crossbar Size",
+      "evidence_location": "line 15, ## Variable Description",
+      "confidence": "high",
+      "reason": "Specifies the hardware configuration tuple required by the co-search."
+    },
+    {
+      "field": "target_latency_argument",
+      "value": "--target_latency: Target Latency",
+      "normalized_value": "--target_latency: Target Latency",
+      "evidence": "--target_latency: Target Latency",
+      "evidence_location": "line 16, ## Variable Description",
+      "confidence": "high",
+      "reason": "Defines the latency target used during search."
+    },
+    {
+      "field": "target_area_argument",
+      "value": "--target_area: Target Area Constraint (mm^2)",
+      "normalized_value": "--target_area: Target Area Constraint (mm^2)",
+      "evidence": "--target_area: Target Area Constraint (mm^2)",
+      "evidence_location": "line 17, ## Variable Description",
+      "confidence": "high",
+      "reason": "Defines the area constraint used during search."
+    },
+    {
+      "field": "search_epochs_argument",
+      "value": "--epochs: Total Number of Search Epochs",
+      "normalized_value": "--epochs: Total Number of Search Epochs",
+      "evidence": "--epochs: Total Number of Search Epochs",
+      "evidence_location": "line 18, ## Variable Description",
+      "confidence": "high",
+      "reason": "Specifies the total number of optimization search epochs."
+    },
+    {
+      "field": "weight_precision_argument",
+      "value": "--wt_prec: Weight Precision",
+      "normalized_value": "--wt_prec: Weight Precision",
+      "evidence": "--wt_prec: Weight Precision",
+      "evidence_location": "line 19, ## Variable Description",
+      "confidence": "high",
+      "reason": "Defines the weight precision parameter."
+    },
+    {
+      "field": "nvm_cell_bits_argument",
+      "value": "--cellbit: Number of bits per NVM device",
+      "normalized_value": "--cellbit: Number of bits per NVM device",
+      "evidence": "--cellbit: Number of bits per NVM device",
+      "evidence_location": "line 20, ## Variable Description",
+      "confidence": "high",
+      "reason": "Defines the number of bits represented by each NVM device."
+    },
+    {
+      "field": "area_tolerance_argument",
+      "value": "--area_tolerance: The uncerainity in the on-chip area tolerated in the searched model.",
+      "normalized_value": "--area_tolerance: The uncerainity in the on-chip area tolerated in the searched model.",
+      "evidence": "--area_tolerance: The uncerainity in the on-chip area tolerated in the searched model.",
+      "evidence_location": "line 21, ## Variable Description",
+      "confidence": "high",
+      "reason": "Defines the tolerated on-chip area uncertainty parameter."
+    },
+    {
+      "field": "evaluation_network_file",
+      "value": "Network_custom.csv",
+      "normalized_value": "Network_custom.csv",
+      "evidence": "The Network_custom.csv file contains the DNN information required for evaluation.",
+      "evidence_location": "line 27, ## Step 1: Create the Network_custom.csv file",
+      "confidence": "high",
+      "reason": "Identifies the required network description file for evaluation."
+    },
+    {
+      "field": "crossbar_array_padding_rule",
+      "value": "For each layer, we append an additional layer to ensure 64 Crossbar arrays per tile.",
+      "normalized_value": "For each layer, we append an additional layer to ensure 64 Crossbar arrays per tile.",
+      "evidence": "For each layer, we append an additional layer to ensure 64 Crossbar arrays per tile.",
+      "evidence_location": "line 27, ## Step 1: Create the Network_custom.csv file",
+      "confidence": "high",
+      "reason": "Specifies a concrete network-construction requirement for evaluation."
+    },
+    {
+      "field": "network_csv_schema",
+      "value": "feature size, feature size, input channels, kernel size, kernel size, output channels, max-pool flag, padding, column sharing, ADC type (1: Flash ADC, 0: SAR ADC), Input Precision, ADC Precision.",
+      "normalized_value": "feature size, feature size, input channels, kernel size, kernel size, output channels, max-pool flag, padding, column sharing, ADC type (1: Flash ADC, 0: SAR ADC), Input Precision, ADC Precision.",
+      "evidence": "feature size, feature size, input channels, kernel size, kernel size, output channels, max-pool flag, padding, column sharing, ADC type (1: Flash ADC, 0: SAR ADC), Input Precision, ADC Precision.",
+      "evidence_location": "line 29, ## Step 1: Create the Network_custom.csv file",
+      "confidence": "high",
+      "reason": "Provides the exact column order and ADC encoding needed to construct the evaluation CSV."
+    },
+    {
+      "field": "model_configuration_location",
+      "value": "Add the desired model configurations to the cfg_list and make sure to add the cfg variable in the \"def VGG8()\" function.",
+      "normalized_value": "Add the desired model configurations to the cfg_list and make sure to add the cfg variable in the \"def VGG8()\" function.",
+      "evidence": "Add the desired model configurations to the cfg_list and make sure to add the cfg variable in the \"def VGG8()\" function.",
+      "evidence_location": "line 33, ## Step 2: Update the VGG.py with the desired model",
+      "confidence": "high",
+      "reason": "Identifies where custom model configurations must be added."
+    },
+    {
+      "field": "model_definition_format",
+      "value": "(Layer Type: ('C': Convolutional layer, 'L': Linear Layer), input channels, output channels, kernel size, output size ('same': if output feature size is same as input feature size), scaling factor.",
+      "normalized_value": "(Layer Type: ('C': Convolutional layer, 'L': Linear Layer), input channels, output channels, kernel size, output size ('same': if output feature size is same as input feature size), scaling factor.",
+      "evidence": "(Layer Type: ('C': Convolutional layer, 'L': Linear Layer), input channels, output channels, kernel size, output size ('same': if output feature size is same as input feature size), scaling factor.",
+      "evidence_location": "line 37, ## Step 2: Update the VGG.py with the desired model",
+      "confidence": "high",
+      "reason": "Defines the tuple format and layer-type codes for custom models."
+    },
+    {
+      "field": "model_configuration_example",
+      "value": "('C', 64, 512, 3, 'same', 8).",
+      "normalized_value": "('C', 64, 512, 3, 'same', 8).",
+      "evidence": "Like Network_custom.csv we append each layer with ('C', 64, 512, 3, 'same', 8).",
+      "evidence_location": "line 39, ## Step 2: Update the VGG.py with the desired model",
+      "confidence": "high",
+      "reason": "Provides a concrete convolutional-layer configuration example."
+    },
+    {
+      "field": "inference_command",
+      "value": "python inference.py --model custom",
+      "normalized_value": "python inference.py --model custom",
+      "evidence": "Run the inference.py using \"python inference.py --model custom\"",
+      "evidence_location": "line 43, ## Step 3 Run the Evaluation",
+      "confidence": "high",
+      "reason": "Provides the documented command for running evaluation inference with the custom model."
+    },
+    {
+      "field": "upstream_repository",
+      "value": "https://github.com/neurosim/DNN_NeuroSim_V1.3",
+      "normalized_value": "https://github.com/neurosim/DNN_NeuroSim_V1.3",
+      "evidence": "This repository is adapted from the Neurosim platform https://github.com/neurosim/DNN_NeuroSim_V1.3.",
+      "evidence_location": "line 47, # Acknowledgement",
+      "confidence": "high",
+      "reason": "Identifies the upstream platform from which the repository was adapted."
+    }
+  ]
+}

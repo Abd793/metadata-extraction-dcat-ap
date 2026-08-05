@@ -1,0 +1,283 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Probabilistic Cross-Modal Embedding (PCME) CVPR 2021",
+      "normalized_value": "Probabilistic Cross-Modal Embedding (PCME) CVPR 2021",
+      "evidence": "# Probabilistic Cross-Modal Embedding (PCME) CVPR 2021",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Explicit title of the artifact; essential for identification"
+    },
+    {
+      "field": "description",
+      "value": "Official Pytorch implementation of PCME",
+      "normalized_value": "Official Pytorch implementation of PCME",
+      "evidence": "Official Pytorch implementation of PCME | [Paper](https://arxiv.org/abs/2101.05068)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "States the artifact's purpose and type"
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2101.05068",
+      "normalized_value": "https://arxiv.org/abs/2101.05068",
+      "evidence": "[Paper](https://arxiv.org/abs/2101.05068)",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Direct link to the scientific paper describing the method"
+    },
+    {
+      "field": "authors",
+      "value": "Sanghyuk Chun Seong Joon Oh Rafael Sampaio de Rezende Yannis Kalantidis Diane Larlus",
+      "normalized_value": "Sanghyuk Chun Seong Joon Oh Rafael Sampaio de Rezende Yannis Kalantidis Diane Larlus",
+      "evidence": "Sanghyuk Chun Seong Joon Oh Rafael Sampaio de Rezende Yannis Kalantidis Diane Larlus",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Lists the authors for proper attribution"
+    },
+    {
+      "field": "affiliations",
+      "value": "NAVER AI LAB NAVER LABS Europe",
+      "normalized_value": "NAVER AI LAB NAVER LABS Europe",
+      "evidence": "<sup>1</sup><sub>[NAVER AI LAB](https://naver-career.gitbook.io/en/teams/clova-cic)</sub><br>\n<sup>2</sup><sub>[NAVER LABS Europe](https://europe.naverlabs.com/)</sub>",
+      "evidence_location": "lines 7-8",
+      "confidence": "high",
+      "reason": "Provides institutional context for the authors"
+    },
+    {
+      "field": "update_note",
+      "value": "Add PCME CutMix-pretrained weight (used for ECCV Caption paper)",
+      "normalized_value": "Add PCME CutMix-pretrained weight (used for ECCV Caption paper)",
+      "evidence": "- 16 Jul, 2022: Add PCME CutMix-pretrained weight (used for [ECCV Caption](https://github.com/naver-ai/eccv-caption) paper)",
+      "evidence_location": "line 18",
+      "confidence": "high",
+      "reason": "Notes availability of an improved model checkpoint"
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install cython && pip install -r requirements.txt\npython -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")'\ngit clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./",
+      "normalized_value": "pip install cython && pip install -r requirements.txt\npython -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")'\ngit clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./",
+      "evidence": "```\npip install cython && pip install -r requirements.txt\npython -c 'import nltk; nltk.download(\"punkt\", download_dir=\"/opt/conda/nltk_data\")'\ngit clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" ./\n```",
+      "evidence_location": "lines interns 25-29",
+      "confidence": "high",
+      "reason": "Core installation commands required to set up the environment"
+    },
+    {
+      "field": "docker_image",
+      "value": "docker pull sanghyukchun/pcme:torch1.2-apex-dali",
+      "normalized_value": "docker pull sanghyukchun/pcme:torch1.2-apex-dali",
+      "evidence": "```\ndocker pull sanghyukchun/pcme:torch1.2-apex-dali\n```",
+      "evidence_location": "lines 34-35",
+      "confidence": "high",
+      "reason": "Provides a reproducible Docker environment"
+    },
+    {
+      "field": "docker_cache_dir_note",
+      "value": "Please Add --model__cache_dir /vector_cache when you run the code",
+      "normalized_value": "Please Add --model__cache_dir /vector_cache when you run the code",
+      "evidence": "Please Add `--model__cache_dir /vector_cache` when you run the code",
+      "evidence_location": "line 38",
+      "confidence": "high",
+      "reason": "Important runtime configuration when using the provided Docker image"
+    },
+    {
+      "field": "config_location",
+      "value": "config/coco and config/cub",
+      "normalized_value": "config/coco and config/cub",
+      "evidence": "All experiments are based on configuration files (see [config/coco](config/coco) and [config/cub](config/cub)).",
+      "evidence_location": "line 42",
+      "confidence": "high",
+      "reason": "Specifies where configuration files are located"
+    },
+    {
+      "field": "config_override_command",
+      "value": "python <train | eval>.py --dataloader__batch_size 32 --dataloader__eval_batch_size 8 --model__eval_method matching_prob",
+      "normalized_value": "python <train | eval>.py --dataloader__batch_size 32 --dataloader__eval_batch_size 8 --model__eval_method matching_prob",
+      "evidence": "```\npython <train | eval>.py --dataloader__batch_size 32 --dataloader__eval_batch_size 8 --model__eval_method matching_prob\n```",
+      "evidence_location": "lines 45-47",
+      "confidence": "high",
+      "reason": "Example command for overriding configuration parameters"
+    },
+    {
+      "field": "coco_dataset_split_follows",
+      "value": "We followed the same split provided by VSE++.",
+      "normalized_value": "We followed the same split provided by VSE++.",
+      "evidence": "We followed the same split provided by [VSE++](http://www.cs.toronto.edu/~faghri/vsepp/data.tar).",
+      "evidence_location": "line 55",
+      "confidence": "high",
+      "reason": "Documents dataset provenance for reproducibility"
+    },
+    {
+      "field": "coco_annotations_location",
+      "value": "datasets/annotations",
+      "normalized_value": "datasets/annotations",
+      "evidence": "Dataset splits can be found in [datasets/annotations](datasets/annotations).",
+      "evidence_location": "line 56",
+      "confidence": "high",
+      "reason": "Location of dataset annotation files"
+    },
+    {
+      "field": "coco_pmrp_requires",
+      "value": "instances_<train | val>2014.json for computing PMRP score",
+      "normalized_value": "instances_<train | val>2014.json for computing PMRP score",
+      "evidence": "Note that we also need `instances_<train | val>2014.json` for computing PMRP score.",
+      "evidence_location": "line 58",
+      "confidence": "high",
+      "reason": "Specific file requirement for evaluation metric"
+    },
+    {
+      "field": "cub_image_download_link",
+      "value": "http://www.vision.caltech.edu/visipedia/CUB-200-2011.html",
+      "normalized_value": "http://www.vision.caltech.edu/visipedia/CUB-200-2011.html",
+      "evidence": "Download images (CUB-200-2011) from [this link](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), and download caption from [reedscot/cvpr2016](https://github.com/reedscot/cvpr2016).",
+      "evidence_location": "line 62",
+      "confidence": "high",
+      "reason": "Link to download CUB dataset images"
+    },
+    {
+      "field": "cub_caption_download_source",
+      "value": "reedscot/cvpr2016",
+      "normalized_value": "reedscot/cvpr2016",
+      "evidence": "download caption from [reedscot/cvpr2016](https://github.com/reedscot/cvpr2016).",
+      "evidence_location": "line 62",
+      "confidence": "high",
+      "reason": "Source for CUB caption data"
+    },
+    {
+      "field": "evaluation_command_coco_recall",
+      "value": "python evaluate_recall_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth",
+      "normalized_value": "python evaluate_recall_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth",
+      "evidence": "```\n# Compute recall metrics\npython evaluate_recall_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth \\\n    # --model__cache_dir /vector_cache # if you use my docker image\n```",
+      "evidence_location": "lines 73-79",
+      "confidence": "high",
+      "reason": "Command to evaluate recall metrics on COCO"
+    },
+    {
+      "field": "evaluation_command_coco_pmrp",
+      "value": "python extract_rankings_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth \\\n    --dump_to <dumped_ranking_file>\n\npython evaluate_pmrp_coco.py --ranking_file <dumped_ranking_file>",
+      "normalized_value": "python extract_rankings_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth \\\n    --dump_to <dumped_ranking_file>\n\npython evaluate_pmrp_coco.py --ranking_file <dumped_ranking_file>",
+      "evidence": "```\n# Compute plausible match R-Precision (PMRP) metric\npython extract_rankings_coco.py ./config/coco/pcme_coco.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --model_path model_last.pth \\\n    --dump_to <dumped_ranking_file> \\\n    # --model__cache_dir /vector_cache # if you use my docker image\n\npython evaluate_pmrp_coco.py --ranking_file <dumped_ranking_file>\n```",
+      "evidence_location": "lines 82-90",
+      "confidence": "high",
+      "reason": "Two-step command to evaluate PMRP metric on COCO"
+    },
+    {
+      "field": "pretrained_model_coco",
+      "value": "https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_coco.pth",
+      "normalized_value": "https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_coco.pth",
+      "evidence": "[link](https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_coco.pth)",
+      "evidence_location": "line 94",
+      "confidence": "high",
+      "reason": "Download link for the main pretrained model on COCO"
+    },
+    {
+      "field": "pretrained_model_coco_cutmix",
+      "value": "https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_cutmix_coco.pth",
+      "normalized_value": "https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_cutmix_coco.pth",
+      "evidence": "[link](https://github.com/naver-ai/pcme/releases/download/v1.0.0/pcme_cutmix_coco.pth)",
+      "evidence_location": "line 95",
+      "confidence": "high",
+      "reason": "Download link for the CutMix-pretrained model on COCO"
+    },
+    {
+      "field": "evaluation_command_cub",
+      "value": "python evaluate_cub.py ./config/cub/pcme_cub.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --caption_root <your_caption_path> \\\n    --model_path model_last.pth",
+      "normalized_value": "python evaluate_cub.py ./config/cub/pcme_cub.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --caption_root <your_caption_path> \\\n    --model_path model_last.pth",
+      "evidence": "```\npython evaluate_cub.py ./config/cub/pcme_cub.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --caption_root <your_caption_path> \\\n    --model_path model_last.pth \\\n    # --model__cache_dir /vector_cache # if you use my docker image\n```",
+      "evidence_location": "lines 107-113",
+      "confidence": "high",
+      "reason": "Command to evaluate model on CUB dataset"
+    },
+    {
+      "field": "evaluation_distance_methods",
+      "value": "['elk', 'l2', 'min', 'max', 'wasserstein', 'kl', 'reverse_kl', 'js', 'bhattacharyya', 'matmul', 'matching_prob']",
+      "normalized_value": "['elk', 'l2', 'min', 'max', 'wasserstein', 'kl', 'reverse_kl', 'js', 'bhattacharyya', 'matmul', 'matching_prob']",
+      "evidence": "You can choose `distance_method` in `['elk', 'l2', 'min', 'max', 'wasserstein', 'kl', 'reverse_kl', 'js', 'bhattacharyya', 'matmul', 'matching_prob']`",
+      "evidence_location": "line 128",
+      "confidence": "high",
+      "reason": "List of supported probabilistic distance methods for evaluation"
+    },
+    {
+      "field": "hardware_requirement_training",
+      "value": "we train each model with mixed-precision training (O2) on a single V100.",
+      "normalized_value": "we train each model with mixed-precision training (O2) on a single V100.",
+      "evidence": "NOTE: we train each model with mixed-precision training (O2) on a single V100.",
+      "evidence_location": "line 133",
+      "confidence": "high",
+      "reason": "Specifies the required hardware and precision for reproducing training"
+    },
+    {
+      "field": "multi_gpu_support",
+      "value": "the current code does not support multi-gpu training",
+      "normalized_value": "the current code does not support multi-gpu training",
+      "evidence": "Since, the current code does not support multi-gpu training, if you use different hardware, the batchsize should be reduced.",
+      "evidence_location": "line 134",
+      "confidence": "high",
+      "reason": "Important limitation affecting scalability and reproduction"
+    },
+    {
+      "field": "training_command_coco",
+      "value": "python train_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path>",
+      "normalized_value": "python train_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path>",
+      "evidence": "```\npython train_coco.py ./config/coco/pcme_coco.yaml --dataset_root <your_dataset_path> \\\n    # --model__cache_dir /vector_cache # if you use my docker image\n```",
+      "evidence_location": "lines 139-142",
+      "confidence": "high",
+      "reason": "Command to train model on COCO dataset"
+    },
+    {
+      "field": "training_time_coco",
+      "value": "46 hours in a single V100 with mixed precision training",
+      "normalized_value": "46 hours in a single V100 with mixed precision training",
+      "evidence": "It takes about 46 hours in a single V100 with mixed precision training.",
+      "evidence_location": "line 144",
+      "confidence": "high",
+      "reason": "Estimates required compute time for training"
+    },
+    {
+      "field": "training_command_cub",
+      "value": "python train_cub.py ./config/cub/pcme_cub.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --caption_root <your_caption_path>",
+      "normalized_value": "python train_cub.py ./config/cub/pcme_cub.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --caption_root <your_caption_path>",
+      "evidence": "```\npython train_cub.py ./config/cub/pcme_cub.yaml \\\n    --dataset_root <your_dataset_path> \\\n    --caption_root <your_caption_path> \\\n    # --model__cache_dir /vector_cache # if you use my docker image\n```",
+      "evidence_location": "lines 170-174",
+      "confidence": "high",
+      "reason": "Command to train model on CUB dataset with full training classes"
+    },
+    {
+      "field": "training_time_cub",
+      "value": "4 hours in a single V100 with mixed precision training",
+      "normalized_value": "4 hours in a single V100 with mixed precision training",
+      "evidence": "It takes about 4 hours in a single V100 with mixed precision training.",
+      "evidence_location": "line 176",
+      "confidence": "high",
+      "reason": "Estimates required compute time for training"
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{chun2021pcme,\n    title={Probabilistic Embeddings for Cross-Modal Retrieval},\n    author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane},\n    year={2021},\n    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},\n}",
+      "normalized_value": "@inproceedings{chun2021pcme,\n    title={Probabilistic Embeddings for Cross-Modal Retrieval},\n    author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane},\n    year={2021},\n    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},\n}",
+      "evidence": "```\n@inproceedings{chun2021pcme,\n    title={Probabilistic Embeddings for Cross-Modal Retrieval},\n    author={Chun, Sanghyuk and Oh, Seong Joon and De Rezende, Rafael Sampaio and Kalantidis, Yannis and Larlus, Diane},\n    year={2021},\n    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},\n}\n```",
+      "evidence_location": "lines 180-186",
+      "confidence": "high",
+      "reason": "BibTeX entry for citing the original paper"
+    },
+    {
+      "field": "suggested_citations",
+      "value": "I would like to suggest citing ECCV Caption and PCME++, too.",
+      "normalized_value": "I would like to suggest citing ECCV Caption and PCME++, too.",
+      "evidence": "I would like to suggest citing [ECCV Caption](https://github.com/naver-ai/eccv-caption) and [PCME++](https://github.com/naver-ai/pcmepp), too.",
+      "evidence_location": "line 189",
+      "confidence": "high",
+      "reason": "Indicates related work that should also be cited"
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "```\nMIT License\n\nCopyright (c) 2021-present NAVER Corp.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n```",
+      "evidence_location": "lines 208-229",
+      "confidence": "high",
+      "reason": "Full license text governing reuse of the artifact"
+    }
+  ]
+}

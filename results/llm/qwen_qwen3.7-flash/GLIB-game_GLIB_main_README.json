@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "GLIB",
+      "normalized_value": "GLIB",
+      "evidence": "# GLIB",
+      "evidence_location": "Line 1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name at the top of the document."
+    },
+    {
+      "field": "description",
+      "value": "CNN-based visual understanding for detecting UI glitches in game Apps",
+      "normalized_value": "CNN-based visual understanding for detecting UI glitches in game Apps",
+      "evidence": "CNN-based visual understanding for detecting UI glitches in game Apps",
+      "evidence_location": "Line 4",
+      "confidence": "high",
+      "reason": "Clearly defines the artifact's purpose and core technical approach."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2106.10507",
+      "normalized_value": "https://arxiv.org/abs/2106.10507",
+      "evidence": "Paper URL: https://arxiv.org/abs/2106.10507",
+      "evidence_location": "Line 6",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated academic publication for citation and context."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://doi.org/10.5281/zenodo.5081242",
+      "normalized_value": "https://doi.org/10.5281/zenodo.5081242",
+      "evidence": "download the UI image [dataset](https://doi.org/10.5281/zenodo.5081242) and unzip:",
+      "evidence_location": "Line 36",
+      "confidence": "high",
+      "reason": "Direct link to the dataset required for training and evaluation."
+    },
+    {
+      "field": "model_url",
+      "value": "https://doi.org/10.5281/zenodo.5081280",
+      "normalized_value": "https://doi.org/10.5281/zenodo.5081280",
+      "evidence": "download the pre-trained [model](https://doi.org/10.5281/zenodo.5081280) and unzip:",
+      "evidence_location": "Line 61",
+      "confidence": "high",
+      "reason": "Direct link to pre-trained model checkpoints for immediate reproduction without training from scratch."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/GLIB-game/GLIB.git",
+      "normalized_value": "https://github.com/GLIB-game/GLIB.git",
+      "evidence": "git clone --recursive https://github.com/GLIB-game/GLIB.git",
+      "evidence_location": "Lines 105, 163",
+      "confidence": "high",
+      "reason": "Source code repository URL for cloning and development."
+    },
+    {
+      "field": "operating_system",
+      "value": "Ubuntu",
+      "normalized_value": "Ubuntu",
+      "evidence": "On Ubuntu:",
+      "evidence_location": "Line 22",
+      "confidence": "high",
+      "reason": "Specifies the supported host operating system for installation."
+    },
+    {
+      "field": "programming_language",
+      "value": "python(3.5.2)",
+      "normalized_value": "python(3.5.2)",
+      "evidence": "- python(3.5.2)",
+      "evidence_location": "Line 24",
+      "confidence": "high",
+      "reason": "Indicates the primary programming language and required version."
+    },
+    {
+      "field": "dependencies",
+      "value": "- pip(20.3.4)\n- pytorch(0.4.0)\n- [cuda](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=18.04&target_type=deb_local)\n- [docker](https://docs.docker.com/engine/install/ubuntu/)\n- [nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)",
+      "normalized_value": "pip(20.3.4), pytorch(0.4.0), cuda, docker, nvidia-docker",
+      "evidence": "- pip(20.3.4)\n- pytorch(0.4.0)\n- [cuda](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&Distribution=Ubuntu&target_version=18.04&target_type=deb_local)\n- [docker](https://docs.docker.com/engine/install/ubuntu/)\n- [nvidia-docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)",
+      "evidence_location": "Lines 25-29",
+      "confidence": "high",
+      "reason": "Lists critical software dependencies and versions required to run the project."
+    },
+    {
+      "field": "docker_image",
+      "value": "qwertymj/glib:0.0.1",
+      "normalized_value": "qwertymj/glib:0.0.1",
+      "evidence": "docker pull qwertymj/glib:0.0.1",
+      "evidence_location": "Line 84",
+      "confidence": "high",
+      "reason": "Provides the official container image for reproducible environment setup."
+    },
+    {
+      "field": "training_command",
+      "value": "python train.py --train_data train_file_path --eval_data eval_file_path --augType Type",
+      "normalized_value": "python train.py --train_data train_file_path --eval_data eval_file_path --augType Type",
+      "evidence": "```shell\npython train.py --train_data train_file_path --eval_data eval_file_path --augType Type\n```",
+      "evidence_location": "Lines 177-179",
+      "confidence": "high",
+      "reason": "Defines the exact command to train the CNN model from scratch."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python test.py --test_data test_data_path --model model_path",
+      "normalized_value": "python test.py --test_data test_data_path --model model_path",
+      "evidence": "```shell\npython test.py --test_data test_data_path --model model_path\n```",
+      "evidence_location": "Lines 201-203",
+      "confidence": "high",
+      "reason": "Defines the exact command to evaluate model performance on test data."
+    },
+    {
+      "field": "saliency_map_command",
+      "value": "python saliencymap.py --test_data test_data_path --model model_path",
+      "normalized_value": "python saliencymap.py --test_data test_data_path --model model_path",
+      "evidence": "```shell\npython saliencymap.py --test_data test_data_path --model model_path\n```",
+      "evidence_location": "Lines 213-215",
+      "confidence": "high",
+      "reason": "Defines the command to generate interpretability/saliency maps for model outputs."
+    },
+    {
+      "field": "configuration_file",
+      "value": "config.py",
+      "normalized_value": "config.py",
+      "evidence": "Changing hyper-parameters is possible by editing the file [config.py](https://github.com/GLIB-game/GLIB/blob/main/config.py)",
+      "evidence_location": "Line 227",
+      "confidence": "high",
+      "reason": "Points to the source file where users can modify training hyperparameters."
+    },
+    {
+      "field": "hyperparameters",
+      "value": "#### config.EPOCH:\n\nThe max number of epochs to train the model. Stopping earlier must be done manually (kill).\n\n#### config.TRAIN_BATCH_SIZE:\n\nBatch size in training.\n\n#### config.SAVE_STEP:\n\nAfter how many training steps a model should be saved.\n\n#### config.EVAL_STEP:\n\nAfter how many training steps the model test its performance on evaluation dataset.\n\n#### config.LR:\n\nThe learning rate in training.\n\n#### config.EVAL_BATCH_SIZE\n\nBatch size in evaluation step.\n\n#### config.TEST_BATCH_SIZE\n\nBatch size in test step.",
+      "normalized_value": "EPOCH, TRAIN_BATCH_SIZE, SAVE_STEP, EVAL_STEP, LR, EVAL_BATCH_SIZE, TEST_BATCH_SIZE",
+      "evidence": "#### config.EPOCH:\n\nThe max number of epochs to train the model. Stopping earlier must be done manually (kill).\n\n#### config.TRAIN_BATCH_SIZE:\n\nBatch size in training.\n\n#### config.SAVE_STEP:\n\nAfter how many training steps a model should be saved.\n\n#### config.EVAL_STEP:\n\nAfter how many training steps the model test its performance on evaluation dataset.\n\n#### config.LR:\n\nThe learning rate in training.\n\n#### config.EVAL_BATCH_SIZE\n\nBatch size in evaluation step.\n\n#### config.TEST_BATCH_SIZE\n\nBatch size in test step.",
+      "evidence_location": "Lines 229-255",
+      "confidence": "high",
+      "reason": "Lists all configurable hyperparameters that directly impact model training and evaluation behavior."
+    },
+    {
+      "field": "practical_evaluation_results",
+      "value": "|         |       Code        |      Rule(R)      |      Rule(F)      |\n| :-----: | :---------------: | :---------------: | :---------------: |\n|   PC    |         7         |         3         |         1         |\n| Android |        35         |        22         |        15         |\n|   iOS   |        11         |         6         |         5         |\n|  total  | 53 (48 confirmed) | 31 (28 confirmed) | 21 (17 confirmed) |",
+      "normalized_value": "| | Code | Rule(R) | Rule(F) | | :---: | :---: | :---: | :---: | | PC | 7 | 3 | 1 | | Android | 35 | 22 | 15 | | iOS | 11 | 6 | 5 | | total | 53 (48 confirmed) | 31 (28 confirmed) | 21 (17 confirmed) |",
+      "evidence": "|         |       Code        |      Rule(R)      |      Rule(F)      |\n| :-----: | :---------------: | :---------------: | :---------------: |\n|   PC    |         7         |         3         |         1         |\n| Android |        35         |        22         |        15         |\n|   iOS   |        11         |         6         |         5         |\n|  total  | 53 (48 confirmed) | 31 (28 confirmed) | 21 (17 confirmed) |",
+      "evidence_location": "Lines 266-272",
+      "confidence": "high",
+      "reason": "Reports quantitative results from practical evaluation across different platforms and augmentation methods."
+    }
+  ]
+}

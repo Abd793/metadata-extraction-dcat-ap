@@ -1,0 +1,301 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "MeanSum",
+      "normalized_value": "MeanSum",
+      "evidence": "# MeanSum: A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence_location": "1 (title)",
+      "confidence": "high",
+      "reason": "The README title explicitly names the artifact."
+    },
+    {
+      "field": "artifact_description",
+      "value": "A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "normalized_value": "A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence": "# MeanSum: A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence_location": "1 (title)",
+      "confidence": "high",
+      "reason": "The title states the artifact's purpose and task."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/1810.05739",
+      "normalized_value": "https://arxiv.org/abs/1810.05739",
+      "evidence": "Corresponding paper, accepted to ICML 2019: [https://arxiv.org/abs/1810.05739](https://arxiv.org/abs/1810.05739).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "The README explicitly links the corresponding paper."
+    },
+    {
+      "field": "paper_venue",
+      "value": "ICML 2019",
+      "normalized_value": "ICML 2019",
+      "evidence": "Corresponding paper, accepted to ICML 2019: [https://arxiv.org/abs/1810.05739](https://arxiv.org/abs/1810.05739).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "The README states the paper's acceptance venue and year."
+    },
+    {
+      "field": "python_requirement",
+      "value": "python 3",
+      "normalized_value": "python 3",
+      "evidence": "- python 3",
+      "evidence_location": "8 (Requirements)",
+      "confidence": "high",
+      "reason": "Python 3 is explicitly listed as a main requirement."
+    },
+    {
+      "field": "torch_requirement",
+      "value": "torch 0.4.0",
+      "normalized_value": "torch 0.4.0",
+      "evidence": "- torch 0.4.0",
+      "evidence_location": "9 (Requirements)",
+      "confidence": "high",
+      "reason": "The required Torch version is explicitly stated."
+    },
+    {
+      "field": "additional_dependencies_file",
+      "value": "requirements.txt",
+      "normalized_value": "requirements.txt",
+      "evidence": "Rest of python packages in ```requirements.txt```.",
+      "evidence_location": "11 (Requirements)",
+      "confidence": "high",
+      "reason": "The README identifies the file containing the remaining Python dependencies."
+    },
+    {
+      "field": "docker_image",
+      "value": "pytorch/pytorch:0.4_cuda9_cudnn7",
+      "normalized_value": "pytorch/pytorch:0.4_cuda9_cudnn7",
+      "evidence": "Tested in Docker, image = ```pytorch/pytorch:0.4_cuda9_cudnn7```.",
+      "evidence_location": "12 (Requirements)",
+      "confidence": "high",
+      "reason": "The README explicitly names the Docker image used for testing."
+    },
+    {
+      "field": "setup_directory",
+      "value": "scripts/",
+      "normalized_value": "scripts/",
+      "evidence": "Execute inside ```scripts/```:",
+      "evidence_location": "16 (General setup)",
+      "confidence": "high",
+      "reason": "The README specifies where the setup commands should be run."
+    },
+    {
+      "field": "directory_setup_command",
+      "value": "bash setup_dirs.sh",
+      "normalized_value": "bash setup_dirs.sh",
+      "evidence": "bash setup_dirs.sh",
+      "evidence_location": "20-22 (General setup)",
+      "confidence": "high",
+      "reason": "This command creates required directories outside the Git repository."
+    },
+    {
+      "field": "python_package_install_command",
+      "value": "bash install_python_pkgs.sh",
+      "normalized_value": "bash install_python_pkgs.sh",
+      "evidence": "bash install_python_pkgs.sh",
+      "evidence_location": "24-28 (General setup)",
+      "confidence": "high",
+      "reason": "This command installs the Python packages needed by the artifact."
+    },
+    {
+      "field": "tensorboard_update_command",
+      "value": "python update_tensorboard.py",
+      "normalized_value": "python update_tensorboard.py",
+      "evidence": "python update_tensorboard.py",
+      "evidence_location": "30-34 (General setup)",
+      "confidence": "high",
+      "reason": "The command updates TensorBoard parameters so writer.add_text() output is displayed."
+    },
+    {
+      "field": "dataset_source",
+      "value": "https://www.yelp.com/dataset",
+      "normalized_value": "https://www.yelp.com/dataset",
+      "evidence": "1. Download Yelp data: https://www.yelp.com/dataset and place files in ```datasets/yelp_dataset/```",
+      "evidence_location": "42 (Data)",
+      "confidence": "high",
+      "reason": "The README explicitly identifies the Yelp dataset download source."
+    },
+    {
+      "field": "dataset_directory",
+      "value": "datasets/yelp_dataset/",
+      "normalized_value": "datasets/yelp_dataset/",
+      "evidence": "1. Download Yelp data: https://www.yelp.com/dataset and place files in ```datasets/yelp_dataset/```",
+      "evidence_location": "42 (Data)",
+      "confidence": "high",
+      "reason": "The README specifies where the downloaded Yelp files must be placed."
+    },
+    {
+      "field": "data_preprocessing_command",
+      "value": "bash scripts/preprocess_data.sh",
+      "normalized_value": "bash scripts/preprocess_data.sh",
+      "evidence": "bash scripts/preprocess_data.sh",
+      "evidence_location": "43-46 (Data)",
+      "confidence": "high",
+      "reason": "This command preprocesses the data and creates train, validation, and test splits."
+    },
+    {
+      "field": "tokenizer_download_url",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/subwordenc_32000_maxrevs260_fixed.pkl",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/subwordenc_32000_maxrevs260_fixed.pkl",
+      "evidence": "[link](https://s3.us-east-2.amazonaws.com/unsup-sum/subwordenc_32000_maxrevs260_fixed.pkl)",
+      "evidence_location": "47-49 (Data)",
+      "confidence": "high",
+      "reason": "The README provides the download link for the Yelp-built subword tokenizer."
+    },
+    {
+      "field": "tokenizer_destination",
+      "value": "datasets/yelp_dataset/processed/",
+      "normalized_value": "datasets/yelp_dataset/processed/",
+      "evidence": "```datasets/yelp_dataset/processed/```",
+      "evidence_location": "47-49 (Data)",
+      "confidence": "high",
+      "reason": "The README specifies the directory where the tokenizer should be placed."
+    },
+    {
+      "field": "summarization_checkpoint_url",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt",
+      "evidence": "[link](https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt)",
+      "evidence_location": "53-55 (Pre-trained models)",
+      "confidence": "high",
+      "reason": "The README explicitly links the pretrained summarization model."
+    },
+    {
+      "field": "summarization_checkpoint_destination",
+      "value": "stable_checkpoints/sum/mlstm/yelp/batch_size_16-notes_cycloss_honly-sum_lr_0.0005-tau_2.0/",
+      "normalized_value": "stable_checkpoints/sum/mlstm/yelp/batch_size_16-notes_cycloss_honly-sum_lr_0.0005-tau_2.0/",
+      "evidence": "```stable_checkpoints/sum/mlstm/yelp/batch_size_16-notes_cycloss_honly-sum_lr_0.0005-tau_2.0/```",
+      "evidence_location": "53-55 (Pre-trained models)",
+      "confidence": "high",
+      "reason": "The README specifies where the pretrained summarization model must be placed."
+    },
+    {
+      "field": "language_model_checkpoint_url",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/lm_e24_2.88.pt",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/lm_e24_2.88.pt",
+      "evidence": "[link](https://s3.us-east-2.amazonaws.com/unsup-sum/lm_e24_2.88.pt)",
+      "evidence_location": "56-58 (Pre-trained models)",
+      "confidence": "high",
+      "reason": "The README explicitly links the pretrained language model."
+    },
+    {
+      "field": "language_model_checkpoint_destination",
+      "value": "stable_checkpoints/lm/mlstm/yelp/batch_size_512-lm_lr_0.001-notes_data260_fixed/",
+      "normalized_value": "stable_checkpoints/lm/mlstm/yelp/batch_size_512-lm_lr_0.001-notes_data260_fixed/",
+      "evidence": "```stable_checkpoints/lm/mlstm/yelp/batch_size_512-lm_lr_0.001-notes_data260_fixed/```",
+      "evidence_location": "56-58 (Pre-trained models)",
+      "confidence": "high",
+      "reason": "The README specifies where the pretrained language model must be placed."
+    },
+    {
+      "field": "classification_checkpoint_url",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/clf_e10_l0.6760_a0.7092.pt",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/clf_e10_l0.6760_a0.7092.pt",
+      "evidence": "[link](https://s3.us-east-2.amazonaws.com/unsup-sum/clf_e10_l0.6760_a0.7092.pt)",
+      "evidence_location": "59-61 (Pre-trained models)",
+      "confidence": "high",
+      "reason": "The README explicitly links the pretrained classification model."
+    },
+    {
+      "field": "classification_checkpoint_destination",
+      "value": "stable_checkpoints/clf/cnn/yelp/batch_size_256-notes_data260_fixed/",
+      "normalized_value": "stable_checkpoints/clf/cnn/yelp/batch_size_256-notes_data260_fixed/",
+      "evidence": "```stable_checkpoints/clf/cnn/yelp/batch_size_256-notes_data260_fixed/```",
+      "evidence_location": "59-61 (Pre-trained models)",
+      "confidence": "high",
+      "reason": "The README specifies where the pretrained classification model must be placed."
+    },
+    {
+      "field": "reference_summaries_url",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/summaries_0-200_cleaned.csv",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/summaries_0-200_cleaned.csv",
+      "evidence": "Download from: [link](https://s3.us-east-2.amazonaws.com/unsup-sum/summaries_0-200_cleaned.csv).",
+      "evidence_location": "66 (Reference summaries)",
+      "confidence": "high",
+      "reason": "The README provides the downloadable reference-summary file."
+    },
+    {
+      "field": "reference_summary_field",
+      "value": "Answer.summary",
+      "normalized_value": "Answer.summary",
+      "evidence": "\"Input.original_review__\\<num\\>\\_\", \"Answer.summary\", etc. The \"Answer.summary\" is the",
+      "evidence_location": "67-68 (Reference summaries)",
+      "confidence": "high",
+      "reason": "The README identifies the CSV field containing the reference summary."
+    },
+    {
+      "field": "reference_summary_provenance",
+      "value": "reference summary written by the Mechanical Turk worker",
+      "normalized_value": "reference summary written by the Mechanical Turk worker",
+      "evidence": "reference summary written by the Mechanical Turk worker.",
+      "evidence_location": "69 (Reference summaries)",
+      "confidence": "high",
+      "reason": "The README states who produced the reference summaries."
+    },
+    {
+      "field": "evaluation_mode",
+      "value": "pretrained mode",
+      "normalized_value": "pretrained mode",
+      "evidence": "Testing with pretrained mode. This will output and save the automated metrics.",
+      "evidence_location": "74 (Running)",
+      "confidence": "high",
+      "reason": "The README identifies the documented evaluation procedure as testing with pretrained models."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>",
+      "normalized_value": "python train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>",
+      "evidence": "python train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>",
+      "evidence_location": "78-80 (Running)",
+      "confidence": "high",
+      "reason": "This command runs testing with the pretrained setup and a named run."
+    },
+    {
+      "field": "evaluation_output_directory",
+      "value": "outputs/eval/yelp/n_docs_8/unsup_<run_name>",
+      "normalized_value": "outputs/eval/yelp/n_docs_8/unsup_<run_name>",
+      "evidence": "Results will be in ```outputs/eval/yelp/n_docs_8/unsup_<run_name>```",
+      "evidence_location": "75 (Running)",
+      "confidence": "high",
+      "reason": "The README specifies where evaluation results are saved."
+    },
+    {
+      "field": "gpu_argument_semantics",
+      "value": "GPU ID (the one which is visible) and NOT the number of GPUs",
+      "normalized_value": "GPU ID (the one which is visible) and NOT the number of GPUs",
+      "evidence": "NOTE: Unlike some conventions, 'gpus' option here represents the GPU ID (the one which is visible) and NOT the number of GPUs.",
+      "evidence_location": "77 (Running)",
+      "confidence": "high",
+      "reason": "This clarification is important for correctly configuring evaluation and training commands."
+    },
+    {
+      "field": "training_precondition",
+      "value": "using pre-trained language model and default hyperparams",
+      "normalized_value": "using pre-trained language model and default hyperparams",
+      "evidence": "Training summarization model (using pre-trained language model and default hyperparams).",
+      "evidence_location": "82 (Running)",
+      "confidence": "high",
+      "reason": "The README states the pretrained component and hyperparameter assumptions for training."
+    },
+    {
+      "field": "training_output_directory",
+      "value": "checkpoints/sum/mlstm/yelp/<hparams>_<additional_notes>",
+      "normalized_value": "checkpoints/sum/mlstm/yelp/<hparams>_<additional_notes>",
+      "evidence": "The automated metrics results will be in ```checkpoints/sum/mlstm/yelp/<hparams>_<additional_notes>```.:",
+      "evidence_location": "83 (Running)",
+      "confidence": "high",
+      "reason": "The README specifies the directory where training results are stored."
+    },
+    {
+      "field": "training_command",
+      "value": "python train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes>",
+      "normalized_value": "python train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes>",
+      "evidence": "python train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes>",
+      "evidence_location": "84-86 (Running)",
+      "confidence": "high",
+      "reason": "This is the documented command for training the summarization model."
+    }
+  ]
+}

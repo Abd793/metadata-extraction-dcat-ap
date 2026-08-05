@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Slideflow",
+      "normalized_value": "Slideflow",
+      "evidence": "**Slideflow is a deep learning library for digital pathology, offering a user-friendly interface for model development.**",
+      "evidence_location": "line 16",
+      "confidence": "high",
+      "reason": "Identifies the artifact by name and describes its primary purpose."
+    },
+    {
+      "field": "description",
+      "value": "a deep learning library for digital pathology, offering a user-friendly interface for model development",
+      "normalized_value": "a deep learning library for digital pathology, offering a user-friendly interface for model development",
+      "evidence": "**Slideflow is a deep learning library for digital pathology, offering a user-friendly interface for model development.**",
+      "evidence_location": "line 16",
+      "confidence": "high",
+      "reason": "Provides a concise, explicit description useful for indexing and discovery."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/slideflow/slideflow",
+      "normalized_value": "https://github.com/slideflow/slideflow",
+      "evidence": "git clone https://github.com/slideflow/slideflow",
+      "evidence_location": "lines 81-86, Installation / Method 3: From source",
+      "confidence": "high",
+      "reason": "Provides the source repository needed to access and reproduce the artifact."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://slideflow.dev",
+      "normalized_value": "https://slideflow.dev",
+      "evidence": "[ArXiv](https://arxiv.org/abs/2304.04142) | [Docs](https://slideflow.dev) | [Slideflow Studio](https://slideflow.dev/studio/) | [Cite](#reference) | [✨ What's New in 3.0 ✨](https://github.com/slideflow/slideflow/releases/tag/3.0.0)",
+      "evidence_location": "lines 8-8",
+      "confidence": "high",
+      "reason": "Links to the project's documentation and tutorials."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2304.04142",
+      "normalized_value": "https://arxiv.org/abs/2304.04142",
+      "evidence": "[ArXiv](https://arxiv.org/abs/2304.04142) | [Docs](https://slideflow.dev) | [Slideflow Studio](https://slideflow.dev/studio/) | [Cite](#reference) | [✨ What's New in 3.0 ✨](https://github.com/slideflow/slideflow/releases/tag/3.0.0)",
+      "evidence_location": "lines 8-8",
+      "confidence": "high",
+      "reason": "Provides a directly linked research paper entry point."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python >= 3.7 (<3.10 if using cuCIM)",
+      "normalized_value": "Python >= 3.7 (<3.10 if using cuCIM)",
+      "evidence": "- Python >= 3.7 (<3.10 if using [cuCIM](https://docs.rapids.ai/api/cucim/stable/))",
+      "evidence_location": "lines 38-40, Requirements",
+      "confidence": "high",
+      "reason": "States the supported Python version range."
+    },
+    {
+      "field": "deep_learning_frameworks",
+      "value": "PyTorch >= 1.9 or Tensorflow 2.5-2.11",
+      "normalized_value": "PyTorch >= 1.9 or Tensorflow 2.5-2.11",
+      "evidence": "- [PyTorch](https://pytorch.org/) >= 1.9 _or_ [Tensorflow](https://www.tensorflow.org/) 2.5-2.11",
+      "evidence_location": "lines 38-40, Requirements",
+      "confidence": "high",
+      "reason": "Specifies the supported deep learning backends and versions."
+    },
+    {
+      "field": "pip_installation",
+      "value": "pip3 install --upgrade setuptools pip wheel\npip3 install slideflow[cucim] cupy-cuda11x",
+      "normalized_value": "pip3 install --upgrade setuptools pip wheel pip3 install slideflow[cucim] cupy-cuda11x",
+      "evidence": "```\npip3 install --upgrade setuptools pip wheel\npip3 install slideflow[cucim] cupy-cuda11x\n```",
+      "evidence_location": "lines 52-57, Installation / Method 1: Install via pip",
+      "confidence": "high",
+      "reason": "Provides the primary pip installation commands."
+    },
+    {
+      "field": "docker_installation",
+      "value": "docker pull jamesdolezal/slideflow:latest-tf\ndocker run -it --gpus all jamesdolezal/slideflow:latest-tf",
+      "normalized_value": "docker pull jamesdolezal/slideflow:latest-tf docker run -it --gpus all jamesdolezal/slideflow:latest-tf",
+      "evidence": "```\ndocker pull jamesdolezal/slideflow:latest-tf\ndocker run -it --gpus all jamesdolezal/slideflow:latest-tf\n```",
+      "evidence_location": "lines 63-68, Installation / Method 2: Docker image",
+      "confidence": "high",
+      "reason": "Provides reproducible Docker setup commands for the TensorFlow backend."
+    },
+    {
+      "field": "source_installation",
+      "value": "git clone https://github.com/slideflow/slideflow\nconda env create -f slideflow/environment.yml\nconda activate slideflow\npip install -e slideflow/ cupy-cuda11x",
+      "normalized_value": "git clone https://github.com/slideflow/slideflow conda env create -f slideflow/environment.yml conda activate slideflow pip install -e slideflow/ cupy-cuda11x",
+      "evidence": "```\ngit clone https://github.com/slideflow/slideflow\nconda env create -f slideflow/environment.yml\nconda activate slideflow\npip install -e slideflow/ cupy-cuda11x\n```",
+      "evidence_location": "lines 77-86, Installation / Method 3: From source",
+      "confidence": "high",
+      "reason": "Documents the source checkout, environment creation, activation, and editable installation steps."
+    },
+    {
+      "field": "optional_noncommercial_installation",
+      "value": "pip install slideflow-gpl slideflow-noncommercial",
+      "normalized_value": "pip install slideflow-gpl slideflow-noncommercial",
+      "evidence": "```\npip install slideflow-gpl slideflow-noncommercial\n```",
+      "evidence_location": "lines 88-94, Non-Commercial Add-ons",
+      "confidence": "high",
+      "reason": "Shows how to install additional tools and pretrained models under a non-commercial license."
+    },
+    {
+      "field": "slide_reading_backend",
+      "value": "cuCIM by default; Libvips is also supported",
+      "normalized_value": "cuCIM by default; Libvips is also supported",
+      "evidence": "By default, Slideflow reads whole-slide images using [cuCIM](https://docs.rapids.ai/api/cucim/stable/). Although much faster than other openslide-based frameworks, it supports fewer slide scanner formats. Slideflow also includes a [Libvips](https://libvips.github.io/libvips/) backend, which adds support for *.scn, *.mrxs, *.ndpi, *.vms, and *.vmu files.",
+      "evidence_location": "lines 108-110, Configuration / Slide reading (cuCIM vs. Libvips)",
+      "confidence": "high",
+      "reason": "Documents the default whole-slide image reader and an alternative backend with supported formats."
+    },
+    {
+      "field": "backend_configuration",
+      "value": "export SF_BACKEND=tensorflow\nexport SF_SLIDE_BACKEND=libvips",
+      "normalized_value": "export SF_BACKEND=tensorflow export SF_SLIDE_BACKEND=libvips",
+      "evidence": "```\nexport SF_BACKEND=tensorflow\n```\n\n### Slide reading (cuCIM vs. Libvips)\n\nBy default, Slideflow reads whole-slide images using [cuCIM](https://docs.rapids.ai/api/cucim/stable/). Although much faster than other openslide-based frameworks, it supports fewer slide scanner formats. Slideflow also includes a [Libvips](https://libvips.github.io/libvips/) backend, which adds support for *.scn, *.mrxs, *.ndpi, *.vms, and *.vmu files. You can set the active slide backend with the environmental variable `SF_SLIDE_BACKEND`:\n\n```\nexport SF_SLIDE_BACKEND=libvips\n```",
+      "evidence_location": "lines 100-114, Configuration",
+      "confidence": "high",
+      "reason": "Provides explicit environment-variable commands for selecting the deep learning and slide-reading backends."
+    },
+    {
+      "field": "tile_extraction_example",
+      "value": "P.extract_tiles(\n  tile_px=299,  # Tile size, in pixels\n  tile_um=302   # Tile size, in microns\n)",
+      "normalized_value": "P.extract_tiles( tile_px=299, # Tile size, in pixels tile_um=302 # Tile size, in microns )",
+      "evidence": "```python\nP.extract_tiles(\n  tile_px=299,  # Tile size, in pixels\n  tile_um=302   # Tile size, in microns\n)\n```",
+      "evidence_location": "lines 146-155, Getting started / Extract tiles from slides",
+      "confidence": "high",
+      "reason": "Shows a concrete preprocessing command and its pixel and micron tile dimensions."
+    },
+    {
+      "field": "training_example",
+      "value": "P.train(\n  'category1',\n  params=params,\n  save_predictions=True,\n  multi_gpu=True\n)",
+      "normalized_value": "P.train( 'category1', params=params, save_predictions=True, multi_gpu=True )",
+      "evidence": "```python\nP.train(\n  'category1',\n  params=params,\n  save_predictions=True,\n  multi_gpu=True\n)\n```",
+      "evidence_location": "lines 181-189, Getting started / Training models",
+      "confidence": "high",
+      "reason": "Provides a concrete model-training example including the target outcome, prediction saving, and multi-GPU setting."
+    },
+    {
+      "field": "license",
+      "value": "Apache-2.0 license",
+      "normalized_value": "Apache-2.0 license",
+      "evidence": "This code is made available under the Apache-2.0 license.",
+      "evidence_location": "lines 213-214, License",
+      "confidence": "high",
+      "reason": "States the license governing reuse of the code."
+    },
+    {
+      "field": "citation",
+      "value": "Dolezal, J.M., Kochanny, S., Dyer, E. et al. Slideflow: deep learning for digital histopathology with real-time whole-slide visualization. BMC Bioinformatics 25, 134 (2024). https://doi.org/10.1186/s12859-024-05758-x",
+      "normalized_value": "Dolezal, J.M., Kochanny, S., Dyer, E. et al. Slideflow: deep learning for digital histopathology with real-time whole-slide visualization. BMC Bioinformatics 25, 134 (2024). https://doi.org/10.1186/s12859-024-05758-x",
+      "evidence": "Dolezal, J.M., Kochanny, S., Dyer, E. et al. Slideflow: deep learning for digital histopathology with real-time whole-slide visualization. BMC Bioinformatics 25, 134 (2024). https://doi.org/10.1186/s12859-024-05758-x",
+      "evidence_location": "lines 216-219, Reference",
+      "confidence": "high",
+      "reason": "Provides the recommended bibliographic citation and DOI for attribution and scholarly reuse."
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Ref-NMS",
+      "normalized_value": "Ref-NMS",
+      "evidence": "# Ref-NMS",
+      "evidence_location": "1 (# Ref-NMS)",
+      "confidence": "high",
+      "reason": "Identifies the artifact."
+    },
+    {
+      "field": "artifact_description",
+      "value": "Official codebase for AAAI 2021 paper",
+      "normalized_value": "Official codebase for AAAI 2021 paper",
+      "evidence": "Official codebase for AAAI 2021 paper",
+      "evidence_location": "2 (# Ref-NMS)",
+      "confidence": "high",
+      "reason": "States what the repository provides."
+    },
+    {
+      "field": "paper_title",
+      "value": "Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding",
+      "normalized_value": "Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding",
+      "evidence": "[\"Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding\"](https://arxiv.org/abs/2009.01449)",
+      "evidence_location": "2 (# Ref-NMS)",
+      "confidence": "high",
+      "reason": "Names the paper associated with the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2009.01449",
+      "normalized_value": "https://arxiv.org/abs/2009.01449",
+      "evidence": "(https://arxiv.org/abs/2009.01449)",
+      "evidence_location": "2 (# Ref-NMS)",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated paper."
+    },
+    {
+      "field": "environment_file",
+      "value": "environment.yml",
+      "normalized_value": "environment.yml",
+      "evidence": "[environment.yml](environment.yml)",
+      "evidence_location": "5 (## Prerequisites)",
+      "confidence": "high",
+      "reason": "Points to the complete environment configuration."
+    },
+    {
+      "field": "python_version",
+      "value": "python 3.7.6",
+      "normalized_value": "python 3.7.6",
+      "evidence": "- python 3.7.6",
+      "evidence_location": "6 (## Prerequisites)",
+      "confidence": "high",
+      "reason": "Specifies the required Python version for reproduction."
+    },
+    {
+      "field": "pytorch_version",
+      "value": "pytorch 1.1.0",
+      "normalized_value": "pytorch 1.1.0",
+      "evidence": "- pytorch 1.1.0",
+      "evidence_location": "7 (## Prerequisites)",
+      "confidence": "high",
+      "reason": "Specifies a required deep learning framework and version."
+    },
+    {
+      "field": "torchvision_version",
+      "value": "torchvision 0.3.0",
+      "normalized_value": "torchvision 0.3.0",
+      "evidence": "- torchvision 0.3.0",
+      "evidence_location": "8 (## Prerequisites)",
+      "confidence": "high",
+      "reason": "Specifies a required computer vision dependency and version."
+    },
+    {
+      "field": "tensorboard_version",
+      "value": "tensorboard 2.1.0",
+      "normalized_value": "tensorboard 2.1.0",
+      "evidence": "- tensorboard 2.1.0",
+      "evidence_location": "9 (## Prerequisites)",
+      "confidence": "high",
+      "reason": "Specifies the required TensorBoard dependency and version."
+    },
+    {
+      "field": "spacy_version",
+      "value": "spacy 2.2.3",
+      "normalized_value": "spacy 2.2.3",
+      "evidence": "- spacy 2.2.3",
+      "evidence_location": "10 (## Prerequisites)",
+      "confidence": "high",
+      "reason": "Specifies a required NLP dependency and version."
+    },
+    {
+      "field": "data_setup_instruction",
+      "value": "Follow instructions in `data/README.md` to setup `data` directory.",
+      "normalized_value": "Follow instructions in `data/README.md` to setup `data` directory.",
+      "evidence": "Follow instructions in `data/README.md` to setup `data` directory.",
+      "evidence_location": "13 (## Data Preparation)",
+      "confidence": "high",
+      "reason": "Provides the documented prerequisite for preparing the data directory."
+    },
+    {
+      "field": "cache_setup_command",
+      "value": "sh scripts/prepare_data.sh",
+      "normalized_value": "sh scripts/prepare_data.sh",
+      "evidence": "```\nsh scripts/prepare_data.sh\n```",
+      "evidence_location": "15-18 (## Data Preparation)",
+      "confidence": "high",
+      "reason": "Defines the command used to create the cache directory."
+    },
+    {
+      "field": "cache_generated_files",
+      "value": "- vocabulary file: `std_vocab_<dataset>_<split_by>.txt`\n- selected GloVe feature: `std_glove_<dataset>_<split_by>.npy`\n- referring expression database: `std_refdb_<dataset>_<split_by>.json`\n- critical objects database: `std_ctxdb_<dataset>_<split_by>.json`",
+      "normalized_value": "- vocabulary file: `std_vocab_<dataset>_<split_by>.txt` - selected GloVe feature: `std_glove_<dataset>_<split_by>.npy` - referring expression database: `std_refdb_<dataset>_<split_by>.json` - critical objects database: `std_ctxdb_<dataset>_<split_by>.json`",
+      "evidence": "- vocabulary file: `std_vocab_<dataset>_<split_by>.txt`\n- selected GloVe feature: `std_glove_<dataset>_<split_by>.npy`\n- referring expression database: `std_refdb_<dataset>_<split_by>.json`\n- critical objects database: `std_ctxdb_<dataset>_<split_by>.json`",
+      "evidence_location": "19-23 (## Data Preparation)",
+      "confidence": "high",
+      "reason": "Lists the concrete files produced during data preparation."
+    },
+    {
+      "field": "dataset",
+      "value": "refcoco",
+      "normalized_value": "refcoco",
+      "evidence": "PYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc",
+      "evidence_location": "29 (## Train)",
+      "confidence": "high",
+      "reason": "Identifies the dataset used in the documented training and evaluation commands."
+    },
+    {
+      "field": "split_by",
+      "value": "unc",
+      "normalized_value": "unc",
+      "evidence": "PYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc",
+      "evidence_location": "29 (## Train)",
+      "confidence": "high",
+      "reason": "Identifies the dataset split configuration used by the commands."
+    },
+    {
+      "field": "binary_xe_training_command",
+      "value": "PYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc",
+      "normalized_value": "PYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc",
+      "evidence": "**Train with binary XE loss:**\n```\nPYTHONPATH=$PWD python tools/train_att_vanilla.py --dataset refcoco --split-by unc\n```",
+      "evidence_location": "27-30 (## Train)",
+      "confidence": "high",
+      "reason": "Provides the training command for binary XE loss."
+    },
+    {
+      "field": "ranking_loss_training_command",
+      "value": "PYTHONPATH=$PWD python tools/train_att_rank.py --dataset refcoco --split-by unc",
+      "normalized_value": "PYTHONPATH=$PWD python tools/train_att_rank.py --dataset refcoco --split-by unc",
+      "evidence": "**Train with ranking loss:**\n```\nPYTHONPATH=$PWD python tools/train_att_rank.py --dataset refcoco --split-by unc\n```",
+      "evidence_location": "32-35 (## Train)",
+      "confidence": "high",
+      "reason": "Provides the training command for ranking loss."
+    },
+    {
+      "field": "training_monitoring",
+      "value": "tensorboard; log file can be found in `tb` folder",
+      "normalized_value": "tensorboard; log file can be found in `tb` folder",
+      "evidence": "We use tensorboard to monitor the training process. The log file can be found in `tb` folder.",
+      "evidence_location": "37 (## Train)",
+      "confidence": "high",
+      "reason": "Specifies how training is monitored and where logs are stored."
+    },
+    {
+      "field": "proposal_generation_command",
+      "value": "PYTHONPATH=$PWD python tools/save_ref_nms_proposals.py --dataset refcoco --split-by unc --tid <tid> --m <loss_type>",
+      "normalized_value": "PYTHONPATH=$PWD python tools/save_ref_nms_proposals.py --dataset refcoco --split-by unc --tid <tid> --m <loss_type>",
+      "evidence": "**Save Ref-NMS proposals:**\n```\nPYTHONPATH=$PWD python tools/save_ref_nms_proposals.py --dataset refcoco --split-by unc --tid <tid> --m <loss_type>\n```",
+      "evidence_location": "40-43 (## Evaluate Recall)",
+      "confidence": "high",
+      "reason": "Defines how to generate and save Ref-NMS proposals."
+    },
+    {
+      "field": "loss_type_options",
+      "value": "`<loss_type>` can be either `att_vanilla` for binary XE loss or `att_rank` for rank loss.",
+      "normalized_value": "`<loss_type>` can be either `att_vanilla` for binary XE loss or `att_rank` for rank loss.",
+      "evidence": "`<loss_type>` can be either `att_vanilla` for binary XE loss or `att_rank` for rank loss.",
+      "evidence_location": "44 (## Evaluate Recall)",
+      "confidence": "high",
+      "reason": "Explains the valid loss-type values used by evaluation commands."
+    },
+    {
+      "field": "referent_recall_evaluation_command",
+      "value": "PYTHONPATH=$PWD python tools/eval_proposal_hit_rate.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>",
+      "normalized_value": "PYTHONPATH=$PWD python tools/eval_proposal_hit_rate.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>",
+      "evidence": "```\nPYTHONPATH=$PWD python tools/eval_proposal_hit_rate.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>\n```",
+      "evidence_location": "46-49 (## Evaluate Recall)",
+      "confidence": "high",
+      "reason": "Provides the command for evaluating recall on the referent object."
+    },
+    {
+      "field": "critical_object_recall_evaluation_command",
+      "value": "PYTHONPATH=$PWD python tools/eval_proposal_ctx_recall.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>",
+      "normalized_value": "PYTHONPATH=$PWD python tools/eval_proposal_ctx_recall.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>",
+      "evidence": "```\nPYTHONPATH=$PWD python tools/eval_proposal_ctx_recall.py --m <loss_type> --dataset refcoco --split-by unc --tid <tid> --conf <conf>\n```",
+      "evidence_location": "52-55 (## Evaluate Recall)",
+      "confidence": "high",
+      "reason": "Provides the command for evaluating recall on critical objects."
+    },
+    {
+      "field": "proposal_confidence_parameter",
+      "value": "conf",
+      "normalized_value": "conf",
+      "evidence": "--conf <conf>",
+      "evidence_location": "48 (## Evaluate Recall)",
+      "confidence": "high",
+      "reason": "Identifies the command-line parameter controlling proposal filtering."
+    },
+    {
+      "field": "proposal_confidence_definition",
+      "value": "score threshold used to filter Ref-NMS proposals",
+      "normalized_value": "score threshold used to filter Ref-NMS proposals",
+      "evidence": "conf parameter is the score threshold used to filter Ref-NMS proposals.",
+      "evidence_location": "50 (## Evaluate Recall)",
+      "confidence": "high",
+      "reason": "Defines the meaning of the confidence parameter."
+    },
+    {
+      "field": "target_proposals_per_expression",
+      "value": "around 8-10",
+      "normalized_value": "around 8-10",
+      "evidence": "the number of proposals per expression is around 8-10.",
+      "evidence_location": "50 (## Evaluate Recall)",
+      "confidence": "high",
+      "reason": "Provides the documented target proposal count for choosing the confidence threshold."
+    },
+    {
+      "field": "mattnet_detection_generation_command",
+      "value": "PYTHONPATH=$PWD python tools/save_matt_dets.py --dataset refcoco --split-by unc --m <loss_type> --tid <tid> --conf <conf>",
+      "normalized_value": "PYTHONPATH=$PWD python tools/save_matt_dets.py --dataset refcoco --split-by unc --m <loss_type> --tid <tid> --conf <conf>",
+      "evidence": "```\nPYTHONPATH=$PWD python tools/save_matt_dets.py --dataset refcoco --split-by unc --m <loss_type> --tid <tid> --conf <conf>\n```",
+      "evidence_location": "58-61 (## Evaluate REG Performance)",
+      "confidence": "high",
+      "reason": "Defines how to create the MAttNet-style detection file for downstream evaluation."
+    },
+    {
+      "field": "detection_file_output_pattern",
+      "value": "output/matt_dets_<loss_type>_<tid>_<dataset>_<split_by>_<top_N>.json",
+      "normalized_value": "output/matt_dets_<loss_type>_<tid>_<dataset>_<split_by>_<top_N>.json",
+      "evidence": "output/matt_dets_<loss_type>_<tid>_<dataset>_<split_by>_<top_N>.json",
+      "evidence_location": "62 (## Evaluate REG Performance)",
+      "confidence": "high",
+      "reason": "Specifies the output path pattern needed for downstream REG evaluation."
+    },
+    {
+      "field": "mattnet_repository_url",
+      "value": "https://github.com/ChopinSharp/MAttNet",
+      "normalized_value": "https://github.com/ChopinSharp/MAttNet",
+      "evidence": "[MAttNet](https://github.com/ChopinSharp/MAttNet)",
+      "evidence_location": "64 (## Evaluate REG Performance)",
+      "confidence": "high",
+      "reason": "Provides the downstream MAttNet repository."
+    },
+    {
+      "field": "cm_a_e_repository_url",
+      "value": "https://github.com/ChopinSharp/CM-Erase-REG",
+      "normalized_value": "https://github.com/ChopinSharp/CM-Erase-REG",
+      "evidence": "[CM-A-E](https://github.com/ChopinSharp/CM-Erase-REG)",
+      "evidence_location": "64 (## Evaluate REG Performance)",
+      "confidence": "high",
+      "reason": "Provides the downstream CM-A-E repository."
+    },
+    {
+      "field": "downstream_reg_baseline_instruction",
+      "value": "First, follow the README in each repository to reproduce the original reported results as baseline (c.f. Table 2 in our paper).",
+      "normalized_value": "First, follow the README in each repository to reproduce the original reported results as baseline (c.f. Table 2 in our paper).",
+      "evidence": "First, follow the README in each repository to reproduce the original reported results as baseline (c.f. Table 2 in our paper).",
+      "evidence_location": "66 (## Evaluate REG Performance)",
+      "confidence": "high",
+      "reason": "Documents the baseline reproduction procedure for downstream REG evaluation."
+    },
+    {
+      "field": "rec_evaluation_commands",
+      "value": "python tools/extract_mrcn_ref_feats.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>\npython tools/eval_ref.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>",
+      "normalized_value": "python tools/extract_mrcn_ref_feats.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type> python tools/eval_ref.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>",
+      "evidence": "python tools/extract_mrcn_ref_feats.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>\npython tools/eval_ref.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>",
+      "evidence_location": "69-70 (## Evaluate REG Performance)",
+      "confidence": "high",
+      "reason": "Provides the documented commands for evaluating REC performance."
+    },
+    {
+      "field": "res_evaluation_commands",
+      "value": "python tools/run_propose_to_mask.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>\npython tools/eval_ref_masks.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type> --save",
+      "normalized_value": "python tools/run_propose_to_mask.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type> python tools/eval_ref_masks.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type> --save",
+      "evidence": "python tools/run_propose_to_mask.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type>\npython tools/eval_ref_masks.py --dataset refcoco --splitBy unc --tid <tid> --top-N 0 --m <loss_type> --save",
+      "evidence_location": "72-73 (## Evaluate REG Performance)",
+      "confidence": "high",
+      "reason": "Provides the documented commands for evaluating RES performance."
+    },
+    {
+      "field": "pretrained_artifacts",
+      "value": "We provide pre-trained model weights as long as the corresponding **MAttNet-style detection file** (note the MattNet-style detection files can be directly used to evaluate downstream REG task performance).",
+      "normalized_value": "We provide pre-trained model weights as long as the corresponding **MAttNet-style detection file** (note the MattNet-style detection files can be directly used to evaluate downstream REG task performance).",
+      "evidence": "We provide pre-trained model weights as long as the corresponding **MAttNet-style detection file** (note the MattNet-style detection files can be directly used to evaluate downstream REG task performance).",
+      "evidence_location": "77 (## Pretrained Models)",
+      "confidence": "high",
+      "reason": "States which pretrained artifacts are supplied and how the detection files can be reused."
+    },
+    {
+      "field": "pretrained_model_download_links",
+      "value": "[[Google Drive]](https://drive.google.com/drive/folders/1BPqWW0LrAEBFna7b-ORF2TcrY7K_DDvM?usp=sharing) [[Baidu Disk]](https://pan.baidu.com/s/1G4k7APKSUs-_5StXoYaNrA) (extraction code: 5a9r)",
+      "normalized_value": "[[Google Drive]](https://drive.google.com/drive/folders/1BPqWW0LrAEBFna7b-ORF2TcrY7K_DDvM?usp=sharing) [[Baidu Disk]](https://pan.baidu.com/s/1G4k7APKSUs-_5StXoYaNrA) (extraction code: 5a9r)",
+      "evidence": "[[Google Drive]](https://drive.google.com/drive/folders/1BPqWW0LrAEBFna7b-ORF2TcrY7K_DDvM?usp=sharing) [[Baidu Disk]](https://pan.baidu.com/s/1G4k7APKSUs-_5StXoYaNrA) (extraction code: 5a9r)",
+      "evidence_location": "79 (## Pretrained Models)",
+      "confidence": "high",
+      "reason": "Provides direct download locations for the pretrained artifacts."
+    },
+    {
+      "field": "download_extraction_code",
+      "value": "5a9r",
+      "normalized_value": "5a9r",
+      "evidence": "extraction code: 5a9r",
+      "evidence_location": "79 (## Pretrained Models)",
+      "confidence": "high",
+      "reason": "Supplies the code needed to access the Baidu Disk download."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@inproceedings{chen2021ref,\n  title={Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding},\n  author={Chen, Long and Ma, Wenbo and Xiao, Jun and Zhang, Hanwang and Chang, Shih-Fu},\n  booktitle={AAAI},\n  year={2021}\n}",
+      "normalized_value": "@inproceedings{chen2021ref, title={Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding}, author={Chen, Long and Ma, Wenbo and Xiao, Jun and Zhang, Hanwang and Chang, Shih-Fu}, booktitle={AAAI}, year={2021} }",
+      "evidence": "```\n@inproceedings{chen2021ref,\n  title={Ref-NMS: Breaking Proposal Bottlenecks in Two-Stage Referring Expression Grounding},\n  author={Chen, Long and Ma, Wenbo and Xiao, Jun and Zhang, Hanwang and Chang, Shih-Fu},\n  booktitle={AAAI},\n  year={2021}\n}\n```",
+      "evidence_location": "81-89 (## Citation)",
+      "confidence": "high",
+      "reason": "Provides a reusable bibliographic citation for the artifact and paper."
+    }
+  ]
+}

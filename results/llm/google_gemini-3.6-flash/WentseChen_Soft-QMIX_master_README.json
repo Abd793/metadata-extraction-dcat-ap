@@ -1,0 +1,85 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Soft-QMIX",
+      "normalized_value": "Soft-QMIX",
+      "evidence": "# Soft-QMIX",
+      "evidence_location": "1, # Soft-QMIX",
+      "confidence": "high",
+      "reason": "Identifies the title and name of the artifact repository."
+    },
+    {
+      "field": "base_repository",
+      "value": "https://github.com/benellis3/pymarl2",
+      "normalized_value": "https://github.com/benellis3/pymarl2",
+      "evidence": "This repo is heavily based on the [pymarl](https://github.com/benellis3/pymarl2)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the upstream repository upon which this project is based."
+    },
+    {
+      "field": "installation_instructions",
+      "value": "please follow the installation guide in the original repo [pymarl](https://github.com/benellis3/pymarl2)",
+      "normalized_value": "please follow the installation guide in the original repo [pymarl](https://github.com/benellis3/pymarl2)",
+      "evidence": "please follow the installation guide in the original repo [pymarl](https://github.com/benellis3/pymarl2)",
+      "evidence_location": "7, ## Installation",
+      "confidence": "high",
+      "reason": "Directs users to installation instructions in the upstream repository."
+    },
+    {
+      "field": "run_command",
+      "value": "bash ./qmix.sh",
+      "normalized_value": "bash ./qmix.sh",
+      "evidence": "```bash\nbash ./qmix.sh\n```",
+      "evidence_location": "13-15, ## Run",
+      "confidence": "high",
+      "reason": "Provides the default execution command to run the project."
+    },
+    {
+      "field": "configuration_note",
+      "value": "You have to change `entity: \"xxx\"` in the `src/config/default.yaml` file to your own wandb entity.",
+      "normalized_value": "You have to change `entity: \"xxx\"` in the `src/config/default.yaml` file to your own wandb entity",
+      "evidence": "> You have to change `entity: \"xxx\"` in the `src/config/default.yaml` file to your own wandb entity.",
+      "evidence_location": "17, ## Run",
+      "confidence": "high",
+      "reason": "Explains a required configuration edit for Weights & Biases entity before running."
+    },
+    {
+      "field": "custom_run_command",
+      "value": "CUDA_VISIBLE_DEVICES=0 python src/main.py --config=qmix --env-config=sc2_gen_protoss",
+      "normalized_value": "CUDA_VISIBLE_DEVICES=0 python src/main.py --config=qmix --env-config=sc2_gen_protoss",
+      "evidence": "```bash\nCUDA_VISIBLE_DEVICES=0 python src/main.py --config=qmix --env-config=sc2_gen_protoss\n```",
+      "evidence_location": "21-23, ## Run",
+      "confidence": "high",
+      "reason": "Provides an example command to run the code on the protoss5v5 map using a specific CUDA GPU."
+    },
+    {
+      "field": "map_configuration",
+      "value": "capability_config:\n    n_units: 10\n    n_enemies: 10",
+      "normalized_value": "capability_config: n_units: 10 n_enemies: 10",
+      "evidence": "To run 10v10 map, you should change the `sc2_gen_terran.yaml` file\n\n```yaml\ncapability_config:\n    n_units: 10\n    n_enemies: 10\n```",
+      "evidence_location": "25-31, ## Run",
+      "confidence": "high",
+      "reason": "Specifies configuration changes needed in sc2_gen_terran.yaml to execute a 10v10 map."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2406.13930",
+      "normalized_value": "https://arxiv.org/pdf/2406.13930",
+      "evidence": "If you find this repository useful, please cite our [paper]([https://arxiv.org/abs/2207.05631](https://arxiv.org/pdf/2406.13930)):",
+      "evidence_location": "35, ## Publication",
+      "confidence": "medium",
+      "reason": "Extracts the paper URL from the publication section link, which contains a nested markdown link formatting issue in the source text."
+    },
+    {
+      "field": "citation",
+      "value": "@article{chen2024soft,\n  title={Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization},\n  author={Chen, Wentse and Huang, Shiyu and Schneider, Jeff},\n  journal={arXiv preprint arXiv:2406.13930},\n  year={2024}\n}",
+      "normalized_value": "@article{chen2024soft, title={Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization}, author={Chen, Wentse and Huang, Shiyu and Schneider, Jeff}, journal={arXiv preprint arXiv:2406.13930}, year={2024}}",
+      "evidence": "```\n@article{chen2024soft,\n  title={Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization},\n  author={Chen, Wentse and Huang, Shiyu and Schneider, Jeff},\n  journal={arXiv preprint arXiv:2406.13930},\n  year={2024}\n}\n```",
+      "evidence_location": "36-43, ## Publication",
+      "confidence": "high",
+      "reason": "Provides BibTeX entry for citing the published research paper."
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Swin Transformer for Semantic Segmentation of satellite images",
+      "normalized_value": "Swin Transformer for Semantic Segmentation of satellite images",
+      "evidence": "# Swin Transformer for Semantic Segmentation of satellite images",
+      "evidence_location": "1 (title)",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its application domain."
+    },
+    {
+      "field": "purpose",
+      "value": "reproduce semantic segmentation results of Swin Transformer",
+      "normalized_value": "reproduce semantic segmentation results of Swin Transformer",
+      "evidence": "This repo contains the supported code and configuration files to reproduce semantic segmentation results of [Swin Transformer](https://arxiv.org/pdf/2103.14030.pdf).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "States the primary reproducibility purpose of the repository."
+    },
+    {
+      "field": "associated_project",
+      "value": "Ampli ANR project",
+      "normalized_value": "Ampli ANR project",
+      "evidence": "## Application on the Ampli ANR project",
+      "evidence_location": "7 (section header)",
+      "confidence": "high",
+      "reason": "Identifies the project context in which the repository was used."
+    },
+    {
+      "field": "project_url",
+      "value": "https://projet.liris.cnrs.fr/ampli/",
+      "normalized_value": "https://projet.liris.cnrs.fr/ampli/",
+      "evidence": "[Ampli ANR projet](https://projet.liris.cnrs.fr/ampli/)",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Provides the associated project webpage."
+    },
+    {
+      "field": "framework",
+      "value": "mmsegmentaion",
+      "normalized_value": "mmsegmentaion",
+      "evidence": "It is based on [mmsegmentaion](https://github.com/open-mmlab/mmsegmentation/tree/v0.11.0).",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Names the segmentation framework used as the repository base."
+    },
+    {
+      "field": "framework_repository",
+      "value": "https://github.com/open-mmlab/mmsegmentation/tree/v0.11.0",
+      "normalized_value": "https://github.com/open-mmlab/mmsegmentation/tree/v0.11.0",
+      "evidence": "https://github.com/open-mmlab/mmsegmentation/tree/v0.11.0",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Provides the referenced framework source and versioned tree."
+    },
+    {
+      "field": "upstream_paper_url",
+      "value": "https://arxiv.org/pdf/2103.14030.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2103.14030.pdf",
+      "evidence": "https://arxiv.org/pdf/2103.14030.pdf",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Links to the Swin Transformer method paper."
+    },
+    {
+      "field": "task",
+      "value": "semantic segmentation on satellite photos",
+      "normalized_value": "semantic segmentation on satellite photos",
+      "evidence": "The goal was to do semantic segmentation on satellite photos to precisely identify the species and the density of the trees present in the pictures.",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Specifies the central computer vision task and input modality."
+    },
+    {
+      "field": "target_classes",
+      "value": "* Dense forest\n* Sparse forest\n* Moor\n* Herbaceous formation\n* Building\n* Road",
+      "normalized_value": "* Dense forest * Sparse forest * Moor * Herbaceous formation * Building * Road",
+      "evidence": "Initially, lots of classes were present in the dataset. We reduced the number of classes by merging them and finally retained the following ones:  \n* Dense forest\n* Sparse forest\n* Moor\n* Herbaceous formation\n* Building\n* Road",
+      "evidence_location": "23-29",
+      "confidence": "high",
+      "reason": "Defines the final segmentation label set."
+    },
+    {
+      "field": "dataset_provider",
+      "value": "IGN",
+      "normalized_value": "IGN",
+      "evidence": "To train and test the model, we used data provided by [IGN](https://geoservices.ign.fr/)",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Identifies the provider of the training and test data."
+    },
+    {
+      "field": "dataset_region",
+      "value": "French departments (Hautes-Alpes in our case)",
+      "normalized_value": "French departments (Hautes-Alpes in our case)",
+      "evidence": "To train and test the model, we used data provided by [IGN](https://geoservices.ign.fr/) which concerns French departments (Hautes-Alpes in our case).",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Specifies the geographic coverage used for the primary dataset."
+    },
+    {
+      "field": "dataset_sources",
+      "value": "* BD Ortho for the satellite images\n* BD Foret v2 for vegetation data\n* BD Topo for buildings and roads",
+      "normalized_value": "* BD Ortho for the satellite images * BD Foret v2 for vegetation data * BD Topo for buildings and roads",
+      "evidence": "* BD Ortho for the satellite images\n* BD Foret v2 for vegetation data\n* BD Topo for buildings and roads",
+      "evidence_location": "17-19",
+      "confidence": "high",
+      "reason": "Lists the concrete source layers used to construct the dataset."
+    },
+    {
+      "field": "spatial_resolution",
+      "value": "50cm per pixel",
+      "normalized_value": "50cm per pixel",
+      "evidence": "Important: note that the *data precision is 50cm per pixel.*",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Provides the spatial resolution needed to interpret or reproduce the data."
+    },
+    {
+      "field": "tile_specification",
+      "value": "1000x1000 resolution representing a 500m x 500m footprint",
+      "normalized_value": "1000x1000 resolution representing a 500m x 500m footprint",
+      "evidence": "Each tile has a 1000x1000 resolution representing a 500m x 500m footprint (the resolution is 50cm per pixel).",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Defines the image tile dimensions and geographic footprint."
+    },
+    {
+      "field": "dataset_layout",
+      "value": "```none\n├── data\n│   ├── ign\n│   │   ├── annotations\n│   │   │   ├── training\n│   │   │   │   ├── xxx.png\n│   │   │   │   ├── yyy.png\n│   │   │   │   ├── zzz.png\n│   │   │   ├── validation\n│   │   ├── images\n│   │   │   ├── training\n│   │   │   │   ├── xxx.png\n│   │   │   │   ├── yyy.png\n│   │   │   │   ├── zzz.png\n│   │   │   ├── validation\n\n```",
+      "normalized_value": "```none ├── data │   ├── ign │   │   ├── annotations │   │   │   ├── training │   │   │   │   ├── xxx.png │   │   │   │   ├── yyy.png │   │   │   │   ├── zzz.png │   │   │   ├── validation │   │   ├── images │   │   │   ├── training │   │   │   │   ├── xxx.png │   │   │   │   ├── yyy.png │   │   │   │   ├── zzz.png │   │   │   ├── validation ```",
+      "evidence": "```none\n├── data\n│   ├── ign\n│   │   ├── annotations\n│   │   │   ├── training\n│   │   │   │   ├── xxx.png\n│   │   │   │   ├── yyy.png\n│   │   │   │   ├── zzz.png\n│   │   │   ├── validation\n│   │   ├── images\n│   │   │   ├── training\n│   │   │   │   ├── xxx.png\n│   │   │   │   ├── yyy.png\n│   │   │   │   ├── zzz.png\n│   │   │   ├── validation\n\n```",
+      "evidence_location": "38-55 (dataset preparation)",
+      "confidence": "high",
+      "reason": "Documents the expected image and annotation directory structure."
+    },
+    {
+      "field": "dataset_download_url",
+      "value": "https://drive.google.com/file/d/1y73mUPzS5Hhq1RjPXc9bxch-Nv6HlJem/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1y73mUPzS5Hhq1RjPXc9bxch-Nv6HlJem/view?usp=sharing",
+      "evidence": "https://drive.google.com/file/d/1y73mUPzS5Hhq1RjPXc9bxch-Nv6HlJem/view?usp=sharing",
+      "evidence_location": "56",
+      "confidence": "high",
+      "reason": "Provides the downloadable dataset location."
+    },
+    {
+      "field": "pretraining_dataset",
+      "value": "ImageNet-22K",
+      "normalized_value": "ImageNet-22K",
+      "evidence": "During the training, a ImageNet-22K pretrained model was used",
+      "evidence_location": "59",
+      "confidence": "high",
+      "reason": "Identifies the pretraining source for model initialization."
+    },
+    {
+      "field": "pretrained_checkpoint_url",
+      "value": "https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_large_patch4_window12_384_22k.pth",
+      "normalized_value": "https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_large_patch4_window12_384_22k.pth",
+      "evidence": "https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_large_patch4_window12_384_22k.pth",
+      "evidence_location": "59",
+      "confidence": "high",
+      "reason": "Provides the checkpoint used to initialize training."
+    },
+    {
+      "field": "class_weights",
+      "value": "* Dense forest => 0.5\n* Sparse forest => 1.31237\n* Moor => 1.38874\n* Herbaceous formation => 1.39761\n* Building => 1.5\n* Road => 1.47807",
+      "normalized_value": "* Dense forest => 0.5 * Sparse forest => 1.31237 * Moor => 1.38874 * Herbaceous formation => 1.39761 * Building => 1.5 * Road => 1.47807",
+      "evidence": "* Dense forest => 0.5\n* Sparse forest => 1.31237\n* Moor => 1.38874\n* Herbaceous formation => 1.39761\n* Building => 1.5\n* Road => 1.47807",
+      "evidence_location": "60-65",
+      "confidence": "high",
+      "reason": "Specifies the class-balancing weights used during training."
+    },
+    {
+      "field": "backbone",
+      "value": "Swin-L",
+      "normalized_value": "Swin-L",
+      "evidence": "| Swin-L | UPerNet | 384x384 | 60K | 54.22 | [config](configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py) | [model](https://drive.google.com/file/d/1EarMOBHx6meawa6izNXJUfXRCTzhKT2M/view) |",
+      "evidence_location": "70 (Main results table)",
+      "confidence": "high",
+      "reason": "Identifies the backbone used in the reported experiment."
+    },
+    {
+      "field": "segmentation_method",
+      "value": "UPerNet",
+      "normalized_value": "UPerNet",
+      "evidence": "| Swin-L | UPerNet | 384x384 | 60K | 54.22 | [config](configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py) | [model](https://drive.google.com/file/d/1EarMOBHx6meawa6izNXJUfXRCTzhKT2M/view) |",
+      "evidence_location": "70 (Main results table)",
+      "confidence": "high",
+      "reason": "Identifies the segmentation method paired with the backbone."
+    },
+    {
+      "field": "crop_size",
+      "value": "384x384",
+      "normalized_value": "384x384",
+      "evidence": "| Swin-L | UPerNet | 384x384 | 60K | 54.22 | [config](configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py) | [model](https://drive.google.com/file/d/1EarMOBHx6meawa6izNXJUfXRCTzhKT2M/view) |",
+      "evidence_location": "70 (Main results table)",
+      "confidence": "high",
+      "reason": "Specifies the crop size for the reported experiment."
+    },
+    {
+      "field": "training_schedule",
+      "value": "60K",
+      "normalized_value": "60K",
+      "evidence": "| Swin-L | UPerNet | 384x384 | 60K | 54.22 | [config](configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py) | [model](https://drive.google.com/file/d/1EarMOBHx6meawa6izNXJUfXRCTzhKT2M/view) |",
+      "evidence_location": "70 (Main results table)",
+      "confidence": "high",
+      "reason": "Specifies the learning schedule associated with the result."
+    },
+    {
+      "field": "miou",
+      "value": "54.22",
+      "normalized_value": "54.22",
+      "evidence": "| Backbone | Method | Crop Size | Lr Schd | mIoU | config | model |\n| :---: | :---: | :---: | :---: | :---: | :---: | :---: |\n| Swin-L | UPerNet | 384x384 | 60K | 54.22 | [config](configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py) | [model](https://drive.google.com/file/d/1EarMOBHx6meawa6izNXJUfXRCTzhKT2M/view) |",
+      "evidence_location": "68-70 (Main results table)",
+      "confidence": "medium",
+      "reason": "Reports the main mean intersection-over-union result; the column mapping is given by the table header."
+    },
+    {
+      "field": "experiment_config_path",
+      "value": "configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py",
+      "normalized_value": "configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py",
+      "evidence": "[config](configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py)",
+      "evidence_location": "70",
+      "confidence": "high",
+      "reason": "Provides the configuration file for the reported experiment."
+    },
+    {
+      "field": "satellite_checkpoint_url",
+      "value": "https://drive.google.com/file/d/1EarMOBHx6meawa6izNXJUfXRCTzhKT2M/view?usp=sharing",
+      "normalized_value": "https://drive.google.com/file/d/1EarMOBHx6meawa6izNXJUfXRCTzhKT2M/view?usp=sharing",
+      "evidence": "The pre-trained model (i.e. checkpoint file) for satellite image segmentation is available for download [here](https://drive.google.com/file/d/1EarMOBHx6meawa6izNXJUfXRCTzhKT2M/view?usp=sharing).",
+      "evidence_location": "119",
+      "confidence": "high",
+      "reason": "Provides the downloadable trained checkpoint for inference."
+    },
+    {
+      "field": "generalization_test_location",
+      "value": "Cantal",
+      "normalized_value": "Cantal",
+      "evidence": "We chose Cantal and here are a few samples of the obtained results:",
+      "evidence_location": "83",
+      "confidence": "high",
+      "reason": "Identifies the separate department used to test geographic generalization."
+    },
+    {
+      "field": "tile_filter_threshold",
+      "value": "more than 50% of unidentified pixels",
+      "normalized_value": "more than 50% of unidentified pixels",
+      "evidence": "we thus removed the tiles that had more than 50% of unidentified pixels to try to improve the training.",
+      "evidence_location": "100",
+      "confidence": "high",
+      "reason": "Documents a concrete data-cleaning rule used before training."
+    },
+    {
+      "field": "installation_guide_url",
+      "value": "https://github.com/open-mmlab/mmsegmentation/blob/master/docs/get_started.md#installation",
+      "normalized_value": "https://github.com/open-mmlab/mmsegmentation/blob/master/docs/get_started.md#installation",
+      "evidence": "[get_started.md](https://github.com/open-mmlab/mmsegmentation/blob/master/docs/get_started.md#installation)",
+      "evidence_location": "106",
+      "confidence": "high",
+      "reason": "Links to the referenced installation and dataset-preparation instructions."
+    },
+    {
+      "field": "installation_commands",
+      "value": "git clone https://github.com/open-mmlab/mmsegmentation.git\ncd mmsegmentation\npip install -e .",
+      "normalized_value": "git clone https://github.com/open-mmlab/mmsegmentation.git cd mmsegmentation pip install -e .",
+      "evidence": "```\ngit clone https://github.com/open-mmlab/mmsegmentation.git\ncd mmsegmentation\npip install -e .\n```",
+      "evidence_location": "111-115",
+      "confidence": "high",
+      "reason": "Defines the documented development-mode installation commands."
+    },
+    {
+      "field": "additional_setup",
+      "value": "* Copy the *mmcv_custom* and *mmseg* folders into the *mmsegmentation* folder",
+      "normalized_value": "* Copy the *mmcv_custom* and *mmseg* folders into the *mmsegmentation* folder",
+      "evidence": "* Copy the *mmcv_custom* and *mmseg* folders into the *mmsegmentation* folder",
+      "evidence_location": "116",
+      "confidence": "high",
+      "reason": "Specifies an additional repository setup step required after installation."
+    },
+    {
+      "field": "inference_commands",
+      "value": "# single-gpu testing\npython tools/test.py <CONFIG_FILE> <SEG_CHECKPOINT_FILE> --eval mIoU\n\n# multi-gpu testing\ntools/dist_test.sh <CONFIG_FILE> <SEG_CHECKPOINT_FILE> <GPU_NUM> --eval mIoU\n\n# multi-gpu, multi-scale testing\ntools/dist_test.sh <CONFIG_FILE> <SEG_CHECKPOINT_FILE> <GPU_NUM> --aug-test --eval mIoU",
+      "normalized_value": "# single-gpu testing python tools/test.py <CONFIG_FILE> <SEG_CHECKPOINT_FILE> --eval mIoU # multi-gpu testing tools/dist_test.sh <CONFIG_FILE> <SEG_CHECKPOINT_FILE> <GPU_NUM> --eval mIoU # multi-gpu, multi-scale testing tools/dist_test.sh <CONFIG_FILE> <SEG_CHECKPOINT_FILE> <GPU_NUM> --aug-test --eval mIoU",
+      "evidence": "```\n# single-gpu testing\npython tools/test.py <CONFIG_FILE> <SEG_CHECKPOINT_FILE> --eval mIoU\n\n# multi-gpu testing\ntools/dist_test.sh <CONFIG_FILE> <SEG_CHECKPOINT_FILE> <GPU_NUM> --eval mIoU\n\n# multi-gpu, multi-scale testing\ntools/dist_test.sh <CONFIG_FILE> <SEG_CHECKPOINT_FILE> <GPU_NUM> --aug-test --eval mIoU\n```",
+      "evidence_location": "121-130",
+      "confidence": "high",
+      "reason": "Documents single-GPU, multi-GPU, and multi-scale evaluation procedures."
+    },
+    {
+      "field": "training_command",
+      "value": "python tools/train.py configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py --options model.pretrained=\"./model/swin_large_patch4_window12_384_22k.pth\"",
+      "normalized_value": "python tools/train.py configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py --options model.pretrained=\"./model/swin_large_patch4_window12_384_22k.pth\"",
+      "evidence": "python tools/train.py configs/swin/config_upernet_swin_large_patch4_window12_384x384_60k_ign.py --options model.pretrained=\"./model/swin_large_patch4_window12_384_22k.pth\"",
+      "evidence_location": "154",
+      "confidence": "high",
+      "reason": "Provides a concrete training command for the Ampli ANR experiment."
+    },
+    {
+      "field": "default_training_setup",
+      "value": "8 GPUs and 2 imgs/gpu",
+      "normalized_value": "8 GPUs and 2 imgs/gpu",
+      "evidence": "The default learning rate and training schedule is for 8 GPUs and 2 imgs/gpu.",
+      "evidence_location": "159",
+      "confidence": "high",
+      "reason": "Specifies the hardware and per-GPU batch setting assumed by the defaults."
+    },
+    {
+      "field": "memory_optimization_option",
+      "value": "use_checkpoint",
+      "normalized_value": "use_checkpoint",
+      "evidence": "`use_checkpoint` is used to save GPU memory.",
+      "evidence_location": "158",
+      "confidence": "high",
+      "reason": "Identifies the documented option for reducing GPU memory usage."
+    },
+    {
+      "field": "work_paper_url",
+      "value": "https://arxiv.org/abs/2110.05812",
+      "normalized_value": "https://arxiv.org/abs/2110.05812",
+      "evidence": "See the complete description of this work in the [dedicated arXiv paper](https://arxiv.org/abs/2110.05812).",
+      "evidence_location": "173",
+      "confidence": "high",
+      "reason": "Links to the paper describing the satellite image segmentation work."
+    },
+    {
+      "field": "upstream_citation",
+      "value": "@article{liu2021Swin,\n  title={Swin Transformer: Hierarchical Vision Transformer using Shifted Windows},\n  author={Liu, Ze and Lin, Yutong and Cao, Yue and Hu, Han and Wei, Yixuan and Zhang, Zheng and Lin, Stephen and Guo, Baining},\n  journal={arXiv preprint arXiv:2103.14030},\n  year={2021}\n}",
+      "normalized_value": "@article{liu2021Swin, title={Swin Transformer: Hierarchical Vision Transformer using Shifted Windows}, author={Liu, Ze and Lin, Yutong and Cao, Yue and Hu, Han and Wei, Yixuan and Zhang, Zheng and Lin, Stephen and Guo, Baining}, journal={arXiv preprint arXiv:2103.14030}, year={2021} }",
+      "evidence": "```\n@article{liu2021Swin,\n  title={Swin Transformer: Hierarchical Vision Transformer using Shifted Windows},\n  author={Liu, Ze and Lin, Yutong and Cao, Yue and Hu, Han and Wei, Yixuan and Zhang, Zheng and Lin, Stephen and Guo, Baining},\n  journal={arXiv preprint arXiv:2103.14030},\n  year={2021}\n}\n```",
+      "evidence_location": "163-170",
+      "confidence": "high",
+      "reason": "Provides the recommended citation for the Swin Transformer method."
+    },
+    {
+      "field": "work_citation",
+      "value": "@misc{guerin2021satellite,\n      title={Satellite Image Semantic Segmentation}, \n      author={Eric Guérin and Killian Oechslin and Christian Wolf and Benoît Martinez},\n      year={2021},\n      eprint={2110.05812},\n      archivePrefix={arXiv},\n      primaryClass={cs.CV}\n}",
+      "normalized_value": "@misc{guerin2021satellite, title={Satellite Image Semantic Segmentation}, author={Eric Guérin and Killian Oechslin and Christian Wolf and Benoît Martinez}, year={2021}, eprint={2110.05812}, archivePrefix={arXiv}, primaryClass={cs.CV} }",
+      "evidence": "```\n@misc{guerin2021satellite,\n      title={Satellite Image Semantic Segmentation}, \n      author={Eric Guérin and Killian Oechslin and Christian Wolf and Benoît Martinez},\n      year={2021},\n      eprint={2110.05812},\n      archivePrefix={arXiv},\n      primaryClass={cs.CV}\n}\n```",
+      "evidence_location": "174-183",
+      "confidence": "high",
+      "reason": "Provides the recommended citation for this satellite image segmentation work."
+    }
+  ]
+}

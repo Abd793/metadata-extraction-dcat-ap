@@ -1,0 +1,247 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "Indexes for RDF data",
+      "normalized_value": "Indexes for RDF data",
+      "evidence": "Indexes for RDF data",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the title/name of the project documented in the README."
+    },
+    {
+      "field": "repository_purpose",
+      "value": "This is the C++ library used for the experiments in the paper [*Compressed Indexes for Fast Search of Semantic Data*](http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf) [1], by Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini.",
+      "normalized_value": "This is the C++ library used for the experiments in the paper [*Compressed Indexes for Fast Search of Semantic Data*](http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf) [1], by Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini.",
+      "evidence": "This is the C++ library used for the experiments in the paper [*Compressed Indexes for Fast Search of Semantic Data*](http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf) [1], by Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini.",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Explains the main purpose and research context of the repository."
+    },
+    {
+      "field": "programming_language",
+      "value": "C++",
+      "normalized_value": "C++",
+      "evidence": "C++",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Identifies the core programming language of the library."
+    },
+    {
+      "field": "paper_title",
+      "value": "Compressed Indexes for Fast Search of Semantic Data",
+      "normalized_value": "Compressed Indexes for Fast Search of Semantic Data",
+      "evidence": "Compressed Indexes for Fast Search of Semantic Data",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Identifies the title of the associated research paper."
+    },
+    {
+      "field": "paper_url",
+      "value": "http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf",
+      "normalized_value": "http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf",
+      "evidence": "http://pages.di.unipi.it/pibiri/papers/TKDE20.pdf",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Direct link to the published PDF paper."
+    },
+    {
+      "field": "tested_environments",
+      "value": "The code is tested on Linux with `gcc` 7.3.0, 8.3.0, 9.2.0 and on Mac 10.14 with `clang` 10.0.0.",
+      "normalized_value": "The code is tested on Linux with `gcc` 7.3.0, 8.3.0, 9.2.0 and on Mac 10.14 with `clang` 10.0.0.",
+      "evidence": "The code is tested on Linux with `gcc` 7.3.0, 8.3.0, 9.2.0 and on Mac 10.14 with `clang` 10.0.0.",
+      "evidence_location": "22, Compiling the code",
+      "confidence": "high",
+      "reason": "Specifies tested OS versions and C++ compilers."
+    },
+    {
+      "field": "build_dependency",
+      "value": "CMake",
+      "normalized_value": "CMake",
+      "evidence": "[`CMake`](https://cmake.org/) is required to build the code.",
+      "evidence_location": "23, Compiling the code",
+      "confidence": "high",
+      "reason": "Identifies required software dependency for building the C++ code."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/jermp/rdf_indexes.git",
+      "normalized_value": "https://github.com/jermp/rdf_indexes.git",
+      "evidence": "https://github.com/jermp/rdf_indexes.git",
+      "evidence_location": "27, Compiling the code",
+      "confidence": "high",
+      "reason": "Git repository URL for cloning the project."
+    },
+    {
+      "field": "clone_command",
+      "value": "git clone --recursive https://github.com/jermp/rdf_indexes.git",
+      "normalized_value": "git clone --recursive https://github.com/jermp/rdf_indexes.git",
+      "evidence": "git clone --recursive https://github.com/jermp/rdf_indexes.git",
+      "evidence_location": "27, Compiling the code",
+      "confidence": "high",
+      "reason": "Command to clone repository with required recursive submodules."
+    },
+    {
+      "field": "submodule_update_command",
+      "value": "git submodule init\n    git submodule update",
+      "normalized_value": "git submodule init git submodule update",
+      "evidence": "git submodule init\n    git submodule update",
+      "evidence_location": "32-33, Compiling the code",
+      "confidence": "high",
+      "reason": "Commands to fetch submodules if cloned without recursive option."
+    },
+    {
+      "field": "build_command",
+      "value": "mkdir build\n    cd build\n    cmake ..\n    make -j",
+      "normalized_value": "mkdir build cd build cmake .. make -j",
+      "evidence": "mkdir build\n    cd build\n    cmake ..\n    make -j",
+      "evidence_location": "37-40, Compiling the code",
+      "confidence": "high",
+      "reason": "Command sequence to build the code for release environment."
+    },
+    {
+      "field": "debug_build_command",
+      "value": "mkdir debug_build\n    cd debug_build\n    cmake .. -DCMAKE_BUILD_TYPE=Debug -DUSE_SANITIZERS=On\n    make -j",
+      "normalized_value": "mkdir debug_build cd debug_build cmake .. -DCMAKE_BUILD_TYPE=Debug -DUSE_SANITIZERS=On make -j",
+      "evidence": "mkdir debug_build\n    cd debug_build\n    cmake .. -DCMAKE_BUILD_TYPE=Debug -DUSE_SANITIZERS=On\n    make -j",
+      "evidence_location": "44-47, Compiling the code",
+      "confidence": "high",
+      "reason": "Command sequence to build the project in debug mode with sanitizers."
+    },
+    {
+      "field": "python_dependencies",
+      "value": "mmh3, numpy",
+      "normalized_value": "mmh3, numpy",
+      "evidence": "The scripts require the modules `mmh3` and `numpy` that can be easily installed with `pip3 install mmh3 numpy`.",
+      "evidence_location": "110-111, Preparing the data for indexing",
+      "confidence": "high",
+      "reason": "Lists Python package dependencies required by helper scripts."
+    },
+    {
+      "field": "python_dependencies_installation_command",
+      "value": "pip3 install mmh3 numpy",
+      "normalized_value": "pip3 install mmh3 numpy",
+      "evidence": "pip3 install mmh3 numpy",
+      "evidence_location": "111, Preparing the data for indexing",
+      "confidence": "high",
+      "reason": "Command to install required Python dependencies."
+    },
+    {
+      "field": "vocab_extraction_command",
+      "value": "python3 extract_vocabs.py ../test_data/wordnet31.gz -S -P -O",
+      "normalized_value": "python3 extract_vocabs.py ../test_data/wordnet31.gz -S -P -O",
+      "evidence": "python3 extract_vocabs.py ../test_data/wordnet31.gz -S -P -O",
+      "evidence_location": "115, Preparing the data for indexing",
+      "confidence": "high",
+      "reason": "Command to extract subject, predicate, and object vocabularies from an RDF dataset."
+    },
+    {
+      "field": "dataset_mapping_command",
+      "value": "python3 map_dataset.py ../test_data/wordnet31.gz",
+      "normalized_value": "python3 map_dataset.py ../test_data/wordnet31.gz",
+      "evidence": "python3 map_dataset.py ../test_data/wordnet31.gz",
+      "evidence_location": "121, Preparing the data for indexing",
+      "confidence": "high",
+      "reason": "Command to map dataset URIs to integer triples."
+    },
+    {
+      "field": "dataset_sorting_command",
+      "value": "python3 sort.py ../test_data/wordnet31.mapped.unsorted wordnet31",
+      "normalized_value": "python3 sort.py ../test_data/wordnet31.mapped.unsorted wordnet31",
+      "evidence": "python3 sort.py ../test_data/wordnet31.mapped.unsorted wordnet31",
+      "evidence_location": "128, Preparing the data for indexing",
+      "confidence": "high",
+      "reason": "Command to sort integer triples into the required permutations."
+    },
+    {
+      "field": "build_stats_command",
+      "value": "python3 build_stats.py wordnet31.mapped.sorted",
+      "normalized_value": "python3 build_stats.py wordnet31.mapped.sorted",
+      "evidence": "python3 build_stats.py wordnet31.mapped.sorted",
+      "evidence_location": "135, Preparing the data for indexing",
+      "confidence": "high",
+      "reason": "Command to build the metadata statistics file for the dataset."
+    },
+    {
+      "field": "pipeline_execution_command",
+      "value": "bash process.sh ../test_data/wordnet31.gz",
+      "normalized_value": "bash process.sh ../test_data/wordnet31.gz",
+      "evidence": "bash process.sh ../test_data/wordnet31.gz",
+      "evidence_location": "142, Preparing the data for indexing",
+      "confidence": "high",
+      "reason": "Command to execute full dataset preprocessing script."
+    },
+    {
+      "field": "build_index_command",
+      "value": "./build pef_3t ../test_data/wordnet31.mapped.sorted -o wordnet31.pef_3t.bin",
+      "normalized_value": "./build pef_3t ../test_data/wordnet31.mapped.sorted -o wordnet31.pef_3t.bin",
+      "evidence": "./build pef_3t ../test_data/wordnet31.mapped.sorted -o wordnet31.pef_3t.bin",
+      "evidence_location": "157, Building an index",
+      "confidence": "high",
+      "reason": "Command example to construct a compressed index file."
+    },
+    {
+      "field": "supported_index_types",
+      "value": "`compact_3t`\n                `ef_3t`\n                `vb_3t`\n                `pef_3t`\n                `pef_r_3t`\n                `pef_2to`\n                `pef_2tp`",
+      "normalized_value": "`compact_3t` `ef_3t` `vb_3t` `pef_3t` `pef_r_3t` `pef_2to` `pef_2tp`",
+      "evidence": "`compact_3t`\n                `ef_3t`\n                `vb_3t`\n                `pef_3t`\n                `pef_r_3t`\n                `pef_2to`\n                `pef_2tp`",
+      "evidence_location": "165-171, Building an index",
+      "confidence": "high",
+      "reason": "List of supported index compression representations."
+    },
+    {
+      "field": "generate_queries_command",
+      "value": "shuf -n 5000 ../../test_data/wordnet31.mapped.unsorted > ../../test_data/wordnet31.mapped.unsorted.queries.5000",
+      "normalized_value": "shuf -n 5000 ../../test_data/wordnet31.mapped.unsorted > ../../test_data/wordnet31.mapped.unsorted.queries.5000",
+      "evidence": "shuf -n 5000 ../../test_data/wordnet31.mapped.unsorted > ../../test_data/wordnet31.mapped.unsorted.queries.5000",
+      "evidence_location": "192, Querying an index",
+      "confidence": "high",
+      "reason": "Command to sample triples randomly and create a query log."
+    },
+    {
+      "field": "query_index_command",
+      "value": "./queries pef_3t 1 wordnet31.pef_3t.bin -q ../test_data/wordnet31.mapped.unsorted.queries.5000 -n 5000 -w 1",
+      "normalized_value": "./queries pef_3t 1 wordnet31.pef_3t.bin -q ../test_data/wordnet31.mapped.unsorted.queries.5000 -n 5000 -w 1",
+      "evidence": "./queries pef_3t 1 wordnet31.pef_3t.bin -q ../test_data/wordnet31.mapped.unsorted.queries.5000 -n 5000 -w 1",
+      "evidence_location": "218, Querying an index",
+      "confidence": "high",
+      "reason": "Command to execute wildcard triple queries against a built index."
+    },
+    {
+      "field": "statistics_command",
+      "value": "./statistics pef_2tp wordnet31.pef_2tp.bin",
+      "normalized_value": "./statistics pef_2tp wordnet31.pef_2tp.bin",
+      "evidence": "./statistics pef_2tp wordnet31.pef_2tp.bin",
+      "evidence_location": "232, Statistics",
+      "confidence": "high",
+      "reason": "Command to print trie node statistics and space occupancy of an index."
+    },
+    {
+      "field": "test_command",
+      "value": "python ../test/check_everything.py ../test_data/wordnet31.mapped.sorted . wordnet",
+      "normalized_value": "python ../test/check_everything.py ../test_data/wordnet31.mapped.sorted . wordnet",
+      "evidence": "python ../test/check_everything.py ../test_data/wordnet31.mapped.sorted . wordnet",
+      "evidence_location": "240, Testing",
+      "confidence": "high",
+      "reason": "Command to run testing script across all index types and triple patterns."
+    },
+    {
+      "field": "author",
+      "value": "Giulio Ermanno Pibiri",
+      "normalized_value": "Giulio Ermanno Pibiri",
+      "evidence": "Giulio Ermanno Pibiri",
+      "evidence_location": "273, Authors",
+      "confidence": "high",
+      "reason": "Identifies author of the software repository."
+    },
+    {
+      "field": "citation",
+      "value": "Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini. *Compressed Indexes for Fast Search of Semantic Data*. 2020. IEEE Transactions on Knowledge and Data Engineering (TKDE). 12 pages.",
+      "normalized_value": "Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini. Compressed Indexes for Fast Search of Semantic Data. 2020. IEEE Transactions on Knowledge and Data Engineering (TKDE). 12 pages.",
+      "evidence": "Raffaele Perego, Giulio Ermanno Pibiri and Rossano Venturini. *Compressed Indexes for Fast Search of Semantic Data*. 2020. IEEE Transactions on Knowledge and Data Engineering (TKDE). 12 pages.",
+      "evidence_location": "278, References",
+      "confidence": "high",
+      "reason": "Full academic reference citation for the repository."
+    }
+  ]
+}

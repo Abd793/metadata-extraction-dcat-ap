@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Trainable Highly-expressive Activation Functions",
+      "normalized_value": "Trainable Highly-expressive Activation Functions",
+      "evidence": "# Trainable Highly-expressive Activation Functions [ECCV 2024]",
+      "evidence_location": "1 (title)",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its subject."
+    },
+    {
+      "field": "authors",
+      "value": "Irit Chelly*, Shahaf E. Finder*, Shira Ifergane, and Oren Freifeld",
+      "normalized_value": "Irit Chelly*, Shahaf E. Finder*, Shira Ifergane, and Oren Freifeld",
+      "evidence": "[Irit Chelly*](https://irita42.wixsite.com/mysite), [Shahaf E. Finder*](https://shahaffind.github.io/), [Shira Ifergane](https://www.linkedin.com/in/shira-ifergane/), and [Oren Freifeld](https://www.cs.bgu.ac.il/~orenfr/).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Names the authors associated with the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2407.07564",
+      "normalized_value": "https://arxiv.org/abs/2407.07564",
+      "evidence": "[![arXiv](https://img.shields.io/badge/arXiv-2407.07564-b31b1b.svg?style=flat)](https://arxiv.org/abs/2407.07564)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated paper."
+    },
+    {
+      "field": "publication_venue",
+      "value": "European Conference on Computer Vision",
+      "normalized_value": "European Conference on Computer Vision",
+      "evidence": "  booktitle = {European Conference on Computer Vision},",
+      "evidence_location": "52 (Citation)",
+      "confidence": "high",
+      "reason": "Identifies the conference publication venue."
+    },
+    {
+      "field": "publication_year",
+      "value": "2024",
+      "normalized_value": "2024",
+      "evidence": "  year      = {2024},",
+      "evidence_location": "53 (Citation)",
+      "confidence": "high",
+      "reason": "Identifies the publication year."
+    },
+    {
+      "field": "python_requirement",
+      "value": "python 3.12",
+      "normalized_value": "python 3.12",
+      "evidence": "- python 3.12",
+      "evidence_location": "8 (Requirements)",
+      "confidence": "high",
+      "reason": "Specifies the required Python version."
+    },
+    {
+      "field": "torch_requirement",
+      "value": "torch 2.2.2",
+      "normalized_value": "torch 2.2.2",
+      "evidence": "- torch 2.2.2 ",
+      "evidence_location": "9 (Requirements)",
+      "confidence": "high",
+      "reason": "Specifies the required PyTorch version."
+    },
+    {
+      "field": "difw_requirement",
+      "value": "difw 0.0.29",
+      "normalized_value": "difw 0.0.29",
+      "evidence": "- difw 0.0.29",
+      "evidence_location": "10 (Requirements)",
+      "confidence": "high",
+      "reason": "Specifies the required difw version."
+    },
+    {
+      "field": "scikit_learn_requirement",
+      "value": "scikit-learn 1.5.1",
+      "normalized_value": "scikit-learn 1.5.1",
+      "evidence": "- scikit-learn 1.5.1",
+      "evidence_location": "11 (Requirements)",
+      "confidence": "high",
+      "reason": "Specifies the required scikit-learn version."
+    },
+    {
+      "field": "difw_build_note",
+      "value": "`difw` can be fragile, make sure that it compiles successfully.",
+      "normalized_value": "`difw` can be fragile, make sure that it compiles successfully.",
+      "evidence": "`difw` can be fragile, make sure that it compiles successfully. We've successfully compiled it with cuda version 12.2.",
+      "evidence_location": "13 (Requirements)",
+      "confidence": "high",
+      "reason": "Warns about a potentially fragile dependency build."
+    },
+    {
+      "field": "cuda_version",
+      "value": "cuda version 12.2",
+      "normalized_value": "cuda version 12.2",
+      "evidence": "`difw` can be fragile, make sure that it compiles successfully. We've successfully compiled it with cuda version 12.2.",
+      "evidence_location": "13 (Requirements)",
+      "confidence": "high",
+      "reason": "Documents the CUDA version used for a successful difw compilation."
+    },
+    {
+      "field": "compiler_and_cuda_setup_commands",
+      "value": "conda install cxx-compiler -c conda-forge\nexport CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH\nexport LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH\nexport PATH=/usr/local/cuda-12/bin:$PATH",
+      "normalized_value": "conda install cxx-compiler -c conda-forge export CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH export LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH export PATH=/usr/local/cuda-12/bin:$PATH",
+      "evidence": "```sh\nconda install cxx-compiler -c conda-forge\nexport CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH\nexport LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH\nexport PATH=/usr/local/cuda-12/bin:$PATH\n```",
+      "evidence_location": "16-21 (Requirements)",
+      "confidence": "high",
+      "reason": "Provides documented compiler installation and CUDA path setup commands."
+    },
+    {
+      "field": "usage_example",
+      "value": "import torch\nfrom ditac import DiTAC\n\nact = DiTAC()\nx = torch.randn(8,32,20,20).to('cuda')\n\nact(x)",
+      "normalized_value": "import torch from ditac import DiTAC act = DiTAC() x = torch.randn(8,32,20,20).to('cuda') act(x)",
+      "evidence": "```python\nimport torch\nfrom ditac import DiTAC\n\nact = DiTAC()\nx = torch.randn(8,32,20,20).to('cuda')\n\nact(x)\n```",
+      "evidence_location": "25-33 (How to use)",
+      "confidence": "high",
+      "reason": "Shows how to import, instantiate, and invoke the activation layer on a CUDA tensor."
+    },
+    {
+      "field": "figure_1_reproduction_command",
+      "value": "python run_regression.py",
+      "normalized_value": "python run_regression.py",
+      "evidence": "You can recreate Fig. 1 using the sample code:\n```sh\npython run_regression.py\n```",
+      "evidence_location": "35-38 (How to use)",
+      "confidence": "high",
+      "reason": "Provides the command documented for recreating Figure 1."
+    },
+    {
+      "field": "license",
+      "value": "MIT license",
+      "normalized_value": "MIT license",
+      "evidence": "This project is released under the MIT license. Please see the [LICENSE](LICENSE) file for more information.",
+      "evidence_location": "42-43 (License)",
+      "confidence": "high",
+      "reason": "States the project license and links to the license file."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{Chelly:ECCV:2024DiTAC,\n  title     = {Trainable Highly-expressive Activation Functions},\n  author    = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren},\n  booktitle = {European Conference on Computer Vision},\n  year      = {2024},\n}",
+      "normalized_value": "@inproceedings{Chelly:ECCV:2024DiTAC, title = {Trainable Highly-expressive Activation Functions}, author = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren}, booktitle = {European Conference on Computer Vision}, year = {2024}, }",
+      "evidence": "```\n@inproceedings{Chelly:ECCV:2024DiTAC,\n  title     = {Trainable Highly-expressive Activation Functions},\n  author    = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren},\n  booktitle = {European Conference on Computer Vision},\n  year      = {2024},\n}\n```",
+      "evidence_location": "48-55 (Citation)",
+      "confidence": "high",
+      "reason": "Provides a ready-to-use BibTeX citation for the artifact's associated paper."
+    }
+  ]
+}

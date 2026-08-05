@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "sql4ml",
+      "normalized_value": "sql4ml",
+      "evidence": "# sql4ml",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Primary identifier of the artifact."
+    },
+    {
+      "field": "description",
+      "value": "Sql4ml is a Haskell project that takes as input SQL code which defines the objective/cost/loss function of a supervised machine learning model (ML), as well as a set of parameters, and generates TensorFlow (Python API) code that trains this model.",
+      "normalized_value": "Sql4ml is a Haskell project that takes as input SQL code which defines the objective/cost/loss function of a supervised machine learning model (ML), as well as a set of parameters, and generates TensorFlow (Python API) code that trains this model.",
+      "evidence": "Sql4ml is a Haskell project that takes as input SQL code which defines the objective/cost/loss function of a supervised machine learning model (ML), as well as a set of parameters, and generates TensorFlow (Python API) code that trains this model.",
+      "evidence_location": "lines 3-5",
+      "confidence": "high",
+      "reason": "Clear statement of the artifact's purpose and function."
+    },
+    {
+      "field": "paper_reference",
+      "value": "\"Nantia Makrynioti, Ruy Ley-Wild and Vasilis Vassalos. sql4ml: a declarative end-to-end workflow for machine learning.\" (https://arxiv.org/abs/1907.12415).",
+      "normalized_value": "\"Nantia Makrynioti, Ruy Ley-Wild and Vasilis Vassalos. sql4ml: a declarative end-to-end workflow for machine learning.\" (https://arxiv.org/abs/1907.12415).",
+      "evidence": "\"Nantia Makrynioti, Ruy Ley-Wild and Vasilis Vassalos. sql4ml: a declarative end-to-end workflow for machine learning.\"\n(https://arxiv.org/abs/1907.12415).",
+      "evidence_location": "lines 8-9",
+      "confidence": "high",
+      "reason": "Key citation for academic context and linking to the associated research paper."
+    },
+    {
+      "field": "tested_platforms",
+      "value": "macOS High Sierra and Ubuntu 16.04.",
+      "normalized_value": "macOS High Sierra and Ubuntu 16.04.",
+      "evidence": "The software has been tested on macOS High Sierra and Ubuntu 16.04.",
+      "evidence_location": "line 13",
+      "confidence": "high",
+      "reason": "Information about compatibility and environment for reproduction."
+    },
+    {
+      "field": "dependency",
+      "value": "Haskell Platform (https://www.haskell.org/platform/)",
+      "normalized_value": "Haskell Platform (https://www.haskell.org/platform/)",
+      "evidence": "To compile it you need to install the Haskell Platform (https://www.haskell.org/platform/).",
+      "evidence_location": "line 15",
+      "confidence": "high",
+      "reason": "Explicit build dependency."
+    },
+    {
+      "field": "dependency",
+      "value": "queryparser (https://github.com/uber/queryparser)",
+      "normalized_value": "queryparser (https://github.com/uber/queryparser)",
+      "evidence": "Sql4ml uses the open source project queryparser (https://github.com/uber/queryparser), also in Haskell.",
+      "evidence_location": "line 20",
+      "confidence": "high",
+      "reason": "Explicit external dependency and its source location."
+    },
+    {
+      "field": "main_module",
+      "value": "sql4ml_translator.hs",
+      "normalized_value": "sql4ml_translator.hs",
+      "evidence": "The sql4ml module is in file sql4ml_translator.hs.",
+      "evidence_location": "line 23",
+      "confidence": "high",
+      "reason": "Identifies the primary source file for the project."
+    },
+    {
+      "field": "example_file",
+      "value": "main.hs",
+      "normalized_value": "main.hs",
+      "evidence": "File main.hs containts two examples on how to translate SQL to TensorFlow code end-to-end.",
+      "evidence_location": "line 26",
+      "confidence": "high",
+      "reason": "Location of usage examples."
+    },
+    {
+      "field": "compilation_command",
+      "value": "ghc -o main main.hs",
+      "normalized_value": "ghc -o main main.hs",
+      "evidence": "    ghc -o main main.hs",
+      "evidence_location": "line 30",
+      "confidence": "high",
+      "reason": "Specific command to build the example executable."
+    },
+    {
+      "field": "database_system",
+      "value": "MySQL database (https://www.mysql.com/)",
+      "normalized_value": "MySQL database (https://www.mysql.com/)",
+      "evidence": "Sql4ml uses the MySQL database (https://www.mysql.com/) for storing data.",
+      "evidence_location": "line 32",
+      "confidence": "high",
+      "reason": "Identifies required database backend for operation."
+    },
+    {
+      "field": "database_setup_location",
+      "value": "/db_setups",
+      "normalized_value": "/db_setups",
+      "evidence": "After installing MySQL, you can run the SQL scripts in the directory /db_setups",
+      "evidence_location": "line 36",
+      "confidence": "high",
+      "reason": "Location of scripts for setting up test databases."
+    },
+    {
+      "field": "example_datasets",
+      "value": "Boston Housing dataset (https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html) and the Iris dataset (https://archive.ics.uci.edu/ml/datasets/iris)",
+      "normalized_value": "Boston Housing dataset (https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html) and the Iris dataset (https://archive.ics.uci.edu/ml/datasets/iris)",
+      "evidence": "to create two toy databases, one based on the Boston Housing dataset (https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html) and the other based on the Iris dataset (https://archive.ics.uci.edu/ml/datasets/iris), which you can find in the directory /data.",
+      "evidence_location": "lines 37-38",
+      "confidence": "high",
+      "reason": "Identifies the datasets used for examples and provides their sources."
+    },
+    {
+      "field": "usage_example_commands",
+      "value": "./main linear //To generate TensorFlow code for the Linear Regression model in working_examples/linear_regression.sql\n    ./main logistic //To generate TensorFlow code for the Logistic Regression model in working_examples/logistic_regression.sql",
+      "normalized_value": "./main linear //To generate TensorFlow code for the Linear Regression model in working_examples/linear_regression.sql ./main logistic //To generate TensorFlow code for the Logistic Regression model in working_examples/logistic_regression.sql",
+      "evidence": "    ./main linear //To generate TensorFlow code for the Linear Regression model in working_examples/linear_regression.sql\n    ./main logistic //To generate TensorFlow code for the Logistic Regression model in working_examples/logistic_regression.sql",
+      "evidence_location": "lines 77-78",
+      "confidence": "high",
+      "reason": "Concrete commands for generating code for two model types."
+    },
+    {
+      "field": "translation_function_signature",
+      "value": "translateToTensorFlowCommand :: L.Text -> [String] -> [String] -> [[String]] -> String",
+      "normalized_value": "translateToTensorFlowCommand :: L.Text -> [String] -> [String] -> [[String]] -> String",
+      "evidence": "    translateToTensorFlowCommand :: L.Text -> [String] -> [String] -> [[String]] -> String",
+      "evidence_location": "lines 88-89",
+      "confidence": "high",
+      "reason": "Defines the core API function signature for individual SQL translation."
+    },
+    {
+      "field": "sql_supported_syntax",
+      "value": "CREATE VIEW $(name) AS\n    SELECT $(columns), $(numericExpr)\n    FROM $(tables)\n    WHERE $(joinElement)\n    GROUP BY $(groupingElement)",
+      "normalized_value": "CREATE VIEW $(name) AS SELECT $(columns), $(numericExpr) FROM $(tables) WHERE $(joinElement) GROUP BY $(groupingElement)",
+      "evidence": "    CREATE VIEW $(name) AS\n    SELECT $(columns), $(numericExpr)\n    FROM $(tables)\n    WHERE $(joinElement)\n    GROUP BY $(groupingElement)",
+      "evidence_location": "lines 62-66",
+      "confidence": "high",
+      "reason": "Specifies the exact SQL form supported by the translator."
+    },
+    {
+      "field": "generated_code_template",
+      "value": "$(name) = $(translateNumericExpr(numericExpr))",
+      "normalized_value": "$(name) = $(translateNumericExpr(numericExpr))",
+      "evidence": "    $(name) = $(translateNumericExpr(numericExpr))",
+      "evidence_location": "line 70",
+      "confidence": "high",
+      "reason": "Shows the pattern of the generated TensorFlow code."
+    },
+    {
+      "field": "example_sql_files_location",
+      "value": "directory /working_examples",
+      "normalized_value": "directory /working_examples",
+      "evidence": "For examples, check SQL files in the directory /working_examples.",
+      "evidence_location": "line 72",
+      "confidence": "high",
+      "reason": "Location of example SQL code defining models."
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Debt-Financed Collateral",
+      "normalized_value": "Debt-Financed Collateral",
+      "evidence": "# Debt-Financed Collateral",
+      "evidence_location": "1 (title)",
+      "confidence": "high",
+      "reason": "Identifies the repository artifact."
+    },
+    {
+      "field": "purpose",
+      "value": "This repository documents the data analysis performed for the paper",
+      "normalized_value": "This repository documents the data analysis performed for the paper",
+      "evidence": "This repository documents the data analysis performed for the paper",
+      "evidence_location": "3 (Overview)",
+      "confidence": "high",
+      "reason": "States what the repository contains."
+    },
+    {
+      "field": "paper_title",
+      "value": "Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem",
+      "normalized_value": "Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem",
+      "evidence": "Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem",
+      "evidence_location": "3 (Overview)",
+      "confidence": "high",
+      "reason": "Names the paper associated with the artifact."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2204.11107",
+      "normalized_value": "https://arxiv.org/abs/2204.11107",
+      "evidence": "[ArXiv](https://arxiv.org/abs/2204.11107)",
+      "evidence_location": "3 (Overview)",
+      "confidence": "high",
+      "reason": "Provides direct access to the associated paper."
+    },
+    {
+      "field": "database_type",
+      "value": "MariaDB",
+      "normalized_value": "MariaDB",
+      "evidence": "MariaDB database",
+      "evidence_location": "3 (Overview)",
+      "confidence": "high",
+      "reason": "Identifies the database technology used to store the data."
+    },
+    {
+      "field": "data_export_url",
+      "value": "https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_",
+      "normalized_value": "https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_",
+      "evidence": "[here](https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_)",
+      "evidence_location": "3 (Overview)",
+      "confidence": "high",
+      "reason": "Provides access to an export of the stored table data."
+    },
+    {
+      "field": "event_data_collection_service",
+      "value": "Google's BigQuery service",
+      "normalized_value": "Google's BigQuery service",
+      "evidence": "Google's BigQuery service",
+      "evidence_location": "9 (Files/folders > 1-scrape)",
+      "confidence": "high",
+      "reason": "Identifies the primary service used to collect event data."
+    },
+    {
+      "field": "event_data_collection_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "using Python",
+      "evidence_location": "9 (Files/folders > 1-scrape)",
+      "confidence": "high",
+      "reason": "Identifies the programming language used for the main data collection."
+    },
+    {
+      "field": "event_collection_script",
+      "value": "collectEvents.py",
+      "normalized_value": "collectEvents.py",
+      "evidence": "*collectEvents.py*: script to collect data.",
+      "evidence_location": "11 (Files/folders > 1-scrape)",
+      "confidence": "high",
+      "reason": "Names the script used to collect data."
+    },
+    {
+      "field": "protocol_version_scope",
+      "value": "only data from the most recent protocol was used",
+      "normalized_value": "only data from the most recent protocol was used",
+      "evidence": "but only data from the most recent protocol was used.",
+      "evidence_location": "11 (Files/folders > 1-scrape)",
+      "confidence": "high",
+      "reason": "Defines the protocol-version selection applied to the collected data."
+    },
+    {
+      "field": "one_off_collection_language",
+      "value": "NodeJS",
+      "normalized_value": "NodeJS",
+      "evidence": "**One-off data collection (NodeJS)**",
+      "evidence_location": "12 (Files/folders > 1-scrape)",
+      "confidence": "high",
+      "reason": "Identifies the language/runtime used for targeted collection scripts."
+    },
+    {
+      "field": "maker_vault_collection",
+      "value": "Collect data on all existing Maker vaults, including all addresses associated to the vault (owner, DSProxy, and UrnHandler addresses)",
+      "normalized_value": "Collect data on all existing Maker vaults, including all addresses associated to the vault (owner, DSProxy, and UrnHandler addresses)",
+      "evidence": "*mkrVaults.js*: Collect data on all existing Maker vaults, including all addresses associated to the vault (owner, DSProxy, and UrnHandler addresses).",
+      "evidence_location": "13 (Files/folders > 1-scrape)",
+      "confidence": "high",
+      "reason": "Describes the Maker vault data collected and the associated address types."
+    },
+    {
+      "field": "maker_debt_adjustment",
+      "value": "Collect information to adjust DAI amounts recorded in frob transactions. Frob transaction amounts (specifically for debt withdrawal/repayment) are recorded without interest rate adjustments. This file collects information to adjust DAI amounts according to the prevailing cumulative interest rate in the Maker Vat contract",
+      "normalized_value": "Collect information to adjust DAI amounts recorded in frob transactions. Frob transaction amounts (specifically for debt withdrawal/repayment) are recorded without interest rate adjustments. This file collects information to adjust DAI amounts according to the prevailing cumulative interest rate in the Maker Vat contract",
+      "evidence": "*mkrRateAdjust.js*: Collect information to adjust DAI amounts recorded in frob transactions. Frob transaction amounts (specifically for debt withdrawal/repayment) are recorded without interest rate adjustments. This file collects information to adjust DAI amounts according to the prevailing cumulative interest rate in the Maker Vat contract.",
+      "evidence_location": "14 (Files/folders > 1-scrape)",
+      "confidence": "high",
+      "reason": "Documents how DAI amounts in frob transactions are adjusted for interest."
+    },
+    {
+      "field": "uniswap_pair_collection",
+      "value": "Collect pair addresses from Uniswap for all tokens used in the final analysis",
+      "normalized_value": "Collect pair addresses from Uniswap for all tokens used in the final analysis",
+      "evidence": "*uniExchanges.js*: Collect pair addresses from Uniswap for all tokens used in the final analysis.",
+      "evidence_location": "15 (Files/folders > 1-scrape)",
+      "confidence": "high",
+      "reason": "Describes the Uniswap address data collected for the analysis."
+    },
+    {
+      "field": "usd_pricing_collection",
+      "value": "Collect hourly USD pricing data from Coinbase and update each transaction with the most recent USD price",
+      "normalized_value": "Collect hourly USD pricing data from Coinbase and update each transaction with the most recent USD price",
+      "evidence": "*usdValues.js*: Collect hourly USD pricing data from Coinbase and update each transaction with the most recent USD price.",
+      "evidence_location": "16 (Files/folders > 1-scrape)",
+      "confidence": "high",
+      "reason": "Specifies the pricing source, frequency, and transaction update behavior."
+    },
+    {
+      "field": "transformation_notebook",
+      "value": "algo.ipynb",
+      "normalized_value": "algo.ipynb",
+      "evidence": "*algo.ipynb*",
+      "evidence_location": "20 (2-transform)",
+      "confidence": "high",
+      "reason": "Names the notebook implementing the transformation algorithm."
+    },
+    {
+      "field": "debt_financed_collateral_estimation",
+      "value": "algorithm used to estimate the percentage of debt-financed collateral",
+      "normalized_value": "algorithm used to estimate the percentage of debt-financed collateral",
+      "evidence": "*algo.ipynb* contains the algorithm used to estimate the percentage of debt-financed collateral",
+      "evidence_location": "20 (2-transform)",
+      "confidence": "high",
+      "reason": "Identifies the transformation's analytical objective."
+    },
+    {
+      "field": "analysis_script",
+      "value": "analysis.r",
+      "normalized_value": "analysis.r",
+      "evidence": "*analysis.r*",
+      "evidence_location": "24 (3-analyze)",
+      "confidence": "high",
+      "reason": "Names the script used for the final analysis."
+    },
+    {
+      "field": "analysis_language",
+      "value": "R",
+      "normalized_value": "R",
+      "evidence": "the R code",
+      "evidence_location": "24 (3-analyze)",
+      "confidence": "high",
+      "reason": "Identifies the programming language used for the analysis."
+    },
+    {
+      "field": "analysis_outputs",
+      "value": "charts and tables for the final paper",
+      "normalized_value": "charts and tables for the final paper",
+      "evidence": "create charts and tables for the final paper",
+      "evidence_location": "24 (3-analyze)",
+      "confidence": "high",
+      "reason": "Describes the outputs generated by the analysis code."
+    },
+    {
+      "field": "contract_abi_file",
+      "value": "abi.js",
+      "normalized_value": "abi.js",
+      "evidence": "- *abi.js*: ABIs for relevant contracts",
+      "evidence_location": "29 (utils)",
+      "confidence": "high",
+      "reason": "Names the utility file containing contract ABIs."
+    },
+    {
+      "field": "relevant_address_file",
+      "value": "addr.js",
+      "normalized_value": "addr.js",
+      "evidence": "- *addr.js*: relevant addresses",
+      "evidence_location": "30 (utils)",
+      "confidence": "high",
+      "reason": "Names the utility file containing relevant addresses."
+    },
+    {
+      "field": "event_helper_file",
+      "value": "eventLib.js",
+      "normalized_value": "eventLib.js",
+      "evidence": "- *eventLib.js*: helper functions",
+      "evidence_location": "31 (utils)",
+      "confidence": "high",
+      "reason": "Names the utility file containing helper functions for the NodeJS scripts."
+    }
+  ]
+}

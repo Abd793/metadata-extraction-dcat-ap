@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "BOOKSUM",
+      "normalized_value": "BOOKSUM",
+      "evidence": "# BOOKSUM: A Collection of Datasets for Long-form Narrative Summarization",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the title/name of the dataset collection project."
+    },
+    {
+      "field": "authors",
+      "value": "Wojciech Kryściński, Nazneen Rajani, Divyansh Agarwal, Caiming Xiong, Dragomir Radev",
+      "normalized_value": "Wojciech Kryściński, Nazneen Rajani, Divyansh Agarwal, Caiming Xiong, Dragomir Radev",
+      "evidence": "Authors: [Wojciech Kryściński](https://twitter.com/iam_wkr), [Nazneen Rajani](https://twitter.com/nazneenrajani), [Divyansh Agarwal](https://twitter.com/jigsaw2212), [Caiming Xiong](https://twitter.com/caimingxiong), [Dragomir Radev](http://www.cs.yale.edu/homes/radev/)",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Lists the authors of the BookSum dataset and research paper."
+    },
+    {
+      "field": "task",
+      "value": "long-form narrative summarization",
+      "normalized_value": "long-form narrative summarization",
+      "evidence": "We address these issues by introducing BookSum, a collection of datasets for long-form narrative summarization.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Defines the core computational task addressed by the dataset."
+    },
+    {
+      "field": "dataset_source_domain",
+      "value": "literature domain, such as novels, plays and stories",
+      "normalized_value": "literature domain, such as novels, plays and stories",
+      "evidence": "Our dataset covers source documents from the literature domain, such as novels, plays and stories, and includes highly abstractive, human written summaries on three levels of granularity of increasing difficulty: paragraph-, chapter-, and book-level.",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Identifies the source domain and document genres contained in the dataset."
+    },
+    {
+      "field": "summary_granularity_levels",
+      "value": "paragraph-, chapter-, and book-level",
+      "normalized_value": "paragraph-, chapter-, and book-level",
+      "evidence": "Our dataset covers source documents from the literature domain, such as novels, plays and stories, and includes highly abstractive, human written summaries on three levels of granularity of increasing difficulty: paragraph-, chapter-, and book-level.",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Specifies the three levels of summary granularity provided in BookSum."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2105.08209",
+      "normalized_value": "https://arxiv.org/abs/2105.08209",
+      "evidence": "Paper link: https://arxiv.org/abs/2105.08209",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Provides a direct link to the arXiv research paper associated with BookSum."
+    },
+    {
+      "field": "citation",
+      "value": "@article{kryscinski2021booksum,\n      title={BookSum: A Collection of Datasets for Long-form Narrative Summarization}, \n      author={Wojciech Kry{\\'s}ci{\\'n}ski and Nazneen Rajani and Divyansh Agarwal and Caiming Xiong and Dragomir Radev},\n      year={2021},\n      eprint={2105.08209},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL}\n}",
+      "normalized_value": "@article{kryscinski2021booksum, title={BookSum: A Collection of Datasets for Long-form Narrative Summarization}, author={Wojciech Kry{\\'s}ci{\\'n}ski and Nazneen Rajani and Divyansh Agarwal and Caiming Xiong and Dragomir Radev}, year={2021}, eprint={2105.08209}, archivePrefix={arXiv}, primaryClass={cs.CL} }",
+      "evidence": "```\n@article{kryscinski2021booksum,\n      title={BookSum: A Collection of Datasets for Long-form Narrative Summarization}, \n      author={Wojciech Kry{\\'s}ci{\\'n}ski and Nazneen Rajani and Divyansh Agarwal and Caiming Xiong and Dragomir Radev},\n      year={2021},\n      eprint={2105.08209},\n      archivePrefix={arXiv},\n      primaryClass={cs.CL}\n}\n```",
+      "evidence_location": "31-40",
+      "confidence": "high",
+      "reason": "Provides the BibTeX entry for citing the dataset and paper."
+    },
+    {
+      "field": "license",
+      "value": "BSD-3 License",
+      "normalized_value": "BSD-3 License",
+      "evidence": "The code is released under the **BSD-3 License** (see `LICENSE.txt` for details).",
+      "evidence_location": "58",
+      "confidence": "high",
+      "reason": "Specifies the software license governing the repository code."
+    },
+    {
+      "field": "dataset_gcp_bucket",
+      "value": "gs://sfr-books-dataset-chapters-research/all_chapterized_books.zip",
+      "normalized_value": "gs://sfr-books-dataset-chapters-research/all_chapterized_books.zip",
+      "evidence": "gsutil cp gs://sfr-books-dataset-chapters-research/all_chapterized_books.zip .",
+      "evidence_location": "66",
+      "confidence": "high",
+      "reason": "GCP bucket URI where the chapterized book text is stored."
+    },
+    {
+      "field": "dataset_download_url",
+      "value": "https://storage.cloud.google.com/sfr-books-dataset-chapters-research/all_chapterized_books.zip",
+      "normalized_value": "https://storage.cloud.google.com/sfr-books-dataset-chapters-research/all_chapterized_books.zip",
+      "evidence": "or downloaded directly [here](https://storage.cloud.google.com/sfr-books-dataset-chapters-research/all_chapterized_books.zip).",
+      "evidence_location": "69",
+      "confidence": "high",
+      "reason": "Direct HTTP download link for the chapterized book dataset."
+    },
+    {
+      "field": "data_collection_command",
+      "value": "cd scripts/data_collection/cliffnotes/\npython get_summaries.py",
+      "normalized_value": "cd scripts/data_collection/cliffnotes/ python get_summaries.py",
+      "evidence": "```\ncd scripts/data_collection/cliffnotes/\npython get_summaries.py\n```",
+      "evidence_location": "77-80",
+      "confidence": "high",
+      "reason": "Execution commands to run summary data collection from source material."
+    },
+    {
+      "field": "pretrained_model",
+      "value": "paraphrase-distilroberta-base-v1",
+      "normalized_value": "paraphrase-distilroberta-base-v1",
+      "evidence": "Generate alignments of the paragraphs with sentences from the summary using the bi-encoder **paraphrase-distilroberta-base-v1**",
+      "evidence_location": "110",
+      "confidence": "high",
+      "reason": "Identifies the specific bi-encoder model used for generating sentence-paragraph alignments."
+    },
+    {
+      "field": "data_alignment_command",
+      "value": "python align_data_bi_encoder_paraphrase.py --data_path /path/to/chapter_summary_aligned_{train/test/val}_split.jsonl.gathered --stable_alignment",
+      "normalized_value": "python align_data_bi_encoder_paraphrase.py --data_path /path/to/chapter_summary_aligned_{train/test/val}_split.jsonl.gathered --stable_alignment",
+      "evidence": "```\npython align_data_bi_encoder_paraphrase.py --data_path /path/to/chapter_summary_aligned_{train/test/val}_split.jsonl.gathered --stable_alignment\n```",
+      "evidence_location": "111-113",
+      "confidence": "high",
+      "reason": "Execution command to generate alignments between paragraphs and summary sentences."
+    }
+  ]
+}

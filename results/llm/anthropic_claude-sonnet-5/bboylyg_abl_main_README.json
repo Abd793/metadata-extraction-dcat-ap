@@ -1,0 +1,328 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Anti-Backdoor Learning",
+      "normalized_value": "Anti-Backdoor Learning",
+      "evidence": "# Anti-Backdoor Learning",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "The title of the README names the artifact."
+    },
+    {
+      "field": "paper_title",
+      "value": "Anti-Backdoor Learning: Training Clean Models on Poisoned Data",
+      "normalized_value": "Anti-Backdoor Learning: Training Clean Models on Poisoned Data",
+      "evidence": "PyTorch Code for NeurIPS 2021 paper **[Anti-Backdoor Learning: Training Clean Models on Poisoned Data](https://arxiv.org/pdf/2110.11571.pdf)**.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Names the paper this code implements, used for citation and identification."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/pdf/2110.11571.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2110.11571.pdf",
+      "evidence": "https://arxiv.org/pdf/2110.11571.pdf",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Direct link to the paper for reference/citation."
+    },
+    {
+      "field": "venue",
+      "value": "NeurIPS 2021",
+      "normalized_value": "NeurIPS 2021",
+      "evidence": "PyTorch Code for NeurIPS 2021 paper",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Publication venue and year of the paper."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python 3.6",
+      "normalized_value": "Python 3.6",
+      "evidence": "![Python 3.6](https://img.shields.io/badge/python-3.6-DodgerBlue.svg?style=plastic)",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Specifies the required Python version for reproducibility."
+    },
+    {
+      "field": "framework_version",
+      "value": "Pytorch 1.2.0",
+      "normalized_value": "PyTorch 1.2.0",
+      "evidence": "![Pytorch 1.10](https://img.shields.io/badge/pytorch-1.2.0-DodgerBlue.svg?style=plastic)",
+      "evidence_location": "line 6",
+      "confidence": "medium",
+      "reason": "Badge label says 1.10 but embedded badge value states 1.2.0, creating ambiguity about exact version required."
+    },
+    {
+      "field": "cuda_version",
+      "value": "CUDA 10.0",
+      "normalized_value": "CUDA 10.0",
+      "evidence": "![CUDA 10.0](https://img.shields.io/badge/cuda-10.0-DodgerBlue.svg?style=plastic)",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Specifies the CUDA version used/required for the environment."
+    },
+    {
+      "field": "license",
+      "value": "CC BY-NC",
+      "normalized_value": "CC BY-NC",
+      "evidence": "![License CC BY-NC](https://img.shields.io/badge/license-CC_BY--NC-DodgerBlue.svg?style=plastic)",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "States the license under which the artifact is released."
+    },
+    {
+      "field": "evaluation_protocol",
+      "value": "We will run the submitted learning method on poisoned CIFAR-10 datasets by 10 backdoor attacks used in our paper, then test the Attack Sucess Rate (ASR) and Clean Accuracy (CA) of the final model.",
+      "normalized_value": "Evaluation on poisoned CIFAR-10 using 10 backdoor attacks, measuring Attack Success Rate (ASR) and Clean Accuracy (CA)",
+      "evidence": "**Evaluation**：We will run the submitted learning method on poisoned CIFAR-10 datasets by 10 backdoor attacks used in our paper, then test the Attack Sucess Rate (ASR) and Clean Accuracy (CA) of the final model.",
+      "evidence_location": "line 15",
+      "confidence": "high",
+      "reason": "Defines the benchmark dataset, attacks, and metrics used for evaluation."
+    },
+    {
+      "field": "benchmark_dataset",
+      "value": "poisoned CIFAR-10",
+      "normalized_value": "CIFAR-10",
+      "evidence": "poisoned CIFAR-10 datasets by 10 backdoor attacks used in our paper",
+      "evidence_location": "line 15",
+      "confidence": "high",
+      "reason": "Names the benchmark dataset used for evaluation."
+    },
+    {
+      "field": "metrics",
+      "value": "Attack Sucess Rate (ASR) and Clean Accuracy (CA)",
+      "normalized_value": "Attack Success Rate (ASR), Clean Accuracy (CA)",
+      "evidence": "test the Attack Sucess Rate (ASR) and Clean Accuracy (CA) of the final model",
+      "evidence_location": "line 15",
+      "confidence": "high",
+      "reason": "Names the evaluation metrics used in the leaderboard."
+    },
+    {
+      "field": "leaderboard_result",
+      "value": "ABL | NeurIPS 2021 | available | WRN-16-1 | BadNets | ASR 3.04% | CA 86.11%",
+      "normalized_value": "ABL: WRN-16-1 architecture, BadNets attack, ASR=3.04%, CA=86.11%",
+      "evidence": "| **1** | **[ABL]()** | NeurIPS 2021 |  *available* |    WRN-16-1    |   BadNets   |     3.04     |    86.11      |",
+      "evidence_location": "line 21",
+      "confidence": "high",
+      "reason": "Concrete benchmark result reported for the ABL method against BadNets attack."
+    },
+    {
+      "field": "leaderboard_creation_date",
+      "value": "2021/10/21",
+      "normalized_value": "2021-10-21",
+      "evidence": "**Update**: This leaderboard is created on 2021/10/21 and updated on 021/10/21.",
+      "evidence_location": "line 17",
+      "confidence": "high",
+      "reason": "Provides a concrete date for when the leaderboard was created/updated."
+    },
+    {
+      "field": "pretrained_model_example",
+      "value": "WRN-16-1, CIFAR-10, GridTrigger, target label 0, weights: `./weight/backdoored_model`.",
+      "normalized_value": "WRN-16-1 model pretrained on CIFAR-10 with GridTrigger backdoor, target label 0, weights at ./weight/backdoored_model",
+      "evidence": "WRN-16-1, CIFAR-10, GridTrigger, target label 0, weights: `./weight/backdoored_model`.",
+      "evidence_location": "line 34",
+      "confidence": "high",
+      "reason": "Describes a concrete pretrained checkpoint including architecture, dataset, attack type, and file path."
+    },
+    {
+      "field": "inference_command",
+      "value": "$ python quick_unlearning_demo.py",
+      "normalized_value": "python quick_unlearning_demo.py",
+      "evidence": "```bash\n$ python quick_unlearning_demo.py \n```",
+      "evidence_location": "lines 38-40",
+      "confidence": "high",
+      "reason": "Command to run the unlearning demo verifying ABL's effect, useful for reproduction."
+    },
+    {
+      "field": "output_path",
+      "value": "'weight/ABL_results/<model_name>.tar'",
+      "normalized_value": "weight/ABL_results/<model_name>.tar",
+      "evidence": "The unlearned model will be saved to `'weight/ABL_results/<model_name>.tar'`",
+      "evidence_location": "line 58",
+      "confidence": "high",
+      "reason": "Specifies where the output model checkpoint is saved after running the demo."
+    },
+    {
+      "field": "configuration_script",
+      "value": "quick_unlearning_demo.py",
+      "normalized_value": "quick_unlearning_demo.py",
+      "evidence": "Please read `quick_unlearning_demo.py` to adjust the default parameters for your experiment.",
+      "evidence_location": "line 60",
+      "confidence": "high",
+      "reason": "Names the script users should modify to adjust experiment parameters."
+    },
+    {
+      "field": "data_preparation_module",
+      "value": "DatasetBD Class in data_loader.py",
+      "normalized_value": "DatasetBD class in data_loader.py",
+      "evidence": "The `DatasetBD` Class in `data_loader.py` can be used to generate poisoned training set by different attacks.",
+      "evidence_location": "line 219",
+      "confidence": "high",
+      "reason": "Identifies the code component responsible for generating poisoned datasets, key for reproducibility."
+    },
+    {
+      "field": "data_preparation_script",
+      "value": "create_poisoned_data.py",
+      "normalized_value": "create_poisoned_data.py",
+      "evidence": "So, better to create pre-poisoned datasets for these attacks using `create_poisoned_data.py`, then load the poisoned dataset by setting `opt.loader_fixed_data == True`.",
+      "evidence_location": "line 238",
+      "confidence": "high",
+      "reason": "Names the script for creating pre-poisoned datasets, important for attacks like Dynamic, DFTS, FC."
+    },
+    {
+      "field": "training_command",
+      "value": "$ python backdoor_isolation.py",
+      "normalized_value": "python backdoor_isolation.py",
+      "evidence": "```bash\n$ python backdoor_isolation.py \n```",
+      "evidence_location": "lines 247-249",
+      "confidence": "high",
+      "reason": "Command to run Stage One (backdoor isolation) of the ABL method."
+    },
+    {
+      "field": "output_paths_stage_one",
+      "value": "'isolation_data' and 'weight/isolation_model'",
+      "normalized_value": "isolation_data, weight/isolation_model",
+      "evidence": "The isolated data and isolation model will be saved to `'isolation_data'` and `'weight/isolation_model'`, respectively.",
+      "evidence_location": "line 251",
+      "confidence": "high",
+      "reason": "Specifies output paths from the backdoor isolation stage, important for reproducing later steps."
+    },
+    {
+      "field": "configuration_file",
+      "value": "config.py",
+      "normalized_value": "config.py",
+      "evidence": "adjust the parameters in `config.py` for your experiment.",
+      "evidence_location": "line 253",
+      "confidence": "high",
+      "reason": "Names the configuration file used to set experiment parameters."
+    },
+    {
+      "field": "training_command",
+      "value": "$ python backdoor_unlearning.py",
+      "normalized_value": "python backdoor_unlearning.py",
+      "evidence": "```bash\n$ python backdoor_unlearning.py \n```",
+      "evidence_location": "lines 258-260",
+      "confidence": "high",
+      "reason": "Command to run Stage Two (backdoor unlearning) of the ABL method."
+    },
+    {
+      "field": "output_paths_stage_two",
+      "value": "ABL_results and logs",
+      "normalized_value": "ABL_results, logs",
+      "evidence": "The final result of unlearning will be saved to `ABL_results` and `logs`.",
+      "evidence_location": "line 264",
+      "confidence": "high",
+      "reason": "Specifies where final results of the unlearning stage are saved."
+    },
+    {
+      "field": "configuration_flag",
+      "value": "opt.finetuning_ascent_model == False",
+      "normalized_value": "opt.finetuning_ascent_model=False",
+      "evidence": "you can skip the finetuning step by setting `opt.finetuning_ascent_model== False` .",
+      "evidence_location": "line 262",
+      "confidence": "high",
+      "reason": "Names a configurable flag that alters the training pipeline behavior."
+    },
+    {
+      "field": "related_attack_method",
+      "value": "CL: Clean-label backdoor attacks",
+      "normalized_value": "Clean-label backdoor attacks (CL)",
+      "evidence": "**CL:** Clean-label backdoor attacks\n\n- [Paper](https://people.csail.mit.edu/madry/lab/cleanlabel.pdf)\n- [pytorch implementation](https://github.com/hkunzhe/label_consistent_attacks_pytorch)",
+      "evidence_location": "lines 271-274",
+      "confidence": "high",
+      "reason": "Provides links to external attack method paper and implementation referenced by the artifact."
+    },
+    {
+      "field": "related_attack_method",
+      "value": "SIG: A New Backdoor Attack in CNNS by Training Set Corruption Without Label Poisoning",
+      "normalized_value": "SIG backdoor attack",
+      "evidence": "**SIG:** A New Backdoor Attack in CNNS by Training Set Corruption Without Label Poisoning\n\n- [Paper](https://ieeexplore.ieee.org/document/8802997/footnotes)",
+      "evidence_location": "lines 276-278",
+      "confidence": "high",
+      "reason": "External attack method referenced with paper link, relevant for reproducing comparison attacks."
+    },
+    {
+      "field": "related_attack_method",
+      "value": "Dynamic: Input-aware Dynamic Backdoor Attack",
+      "normalized_value": "Dynamic backdoor attack",
+      "evidence": "**Dynamic:** Input-aware Dynamic Backdoor Attack\n\n- [paper](https://papers.nips.cc/paper/2020/hash/234e691320c0ad5b45ee3c96d0d7b8f8-Abstract.html)\n- [pytorch implementation](https://github.com/VinAIResearch/input-aware-backdoor-attack-release)",
+      "evidence_location": "lines 309-312",
+      "confidence": "high",
+      "reason": "External attack referenced with implementation link, used in creating poisoned data for evaluation."
+    },
+    {
+      "field": "related_attack_method",
+      "value": "FC: Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural Networks",
+      "normalized_value": "FC (Poison Frogs) attack",
+      "evidence": "**FC:** Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural Networks\n\n- [paper](file/22722a343513ed45f14905eb07621686-Paper.pdf)\n- [pytorch implementation](https://github.com/FlouriteJ/PoisonFrogs)",
+      "evidence_location": "lines 314-317",
+      "confidence": "high",
+      "reason": "External attack referenced with implementation, relevant to poisoned data preparation."
+    },
+    {
+      "field": "related_attack_method",
+      "value": "DFST: Deep Feature Space Trojan Attack of Neural Networks by Controlled Detoxification",
+      "normalized_value": "DFST attack",
+      "evidence": "**DFST:** Deep Feature Space Trojan Attack of Neural Networks by Controlled Detoxification\n\n- [paper](https://arxiv.org/abs/2012.11212)\n- [tensorflow implementation](https://github.com/Megum1/DFST)",
+      "evidence_location": "lines 319-322",
+      "confidence": "high",
+      "reason": "External attack referenced with implementation, relevant to poisoned data preparation."
+    },
+    {
+      "field": "related_attack_method",
+      "value": "LBA: Latent Backdoor Attacks on Deep Neural Networks",
+      "normalized_value": "LBA (Latent Backdoor Attack)",
+      "evidence": "**LBA:** Latent Backdoor Attacks on Deep Neural Networks\n\n- [paper](https://people.cs.uchicago.edu/~ravenben/publications/pdf/pbackdoor-ccs19.pdf)\n- [tensorflow implementation](http://sandlab.cs.uchicago.edu/latent/)",
+      "evidence_location": "lines 324-327",
+      "confidence": "high",
+      "reason": "External attack referenced with paper and implementation."
+    },
+    {
+      "field": "related_attack_method",
+      "value": "CBA: Composite Backdoor Attack for Deep Neural Network by Mixing Existing Benign Features",
+      "normalized_value": "CBA (Composite Backdoor Attack)",
+      "evidence": "**CBA:** Composite Backdoor Attack for Deep Neural Network by Mixing Existing Benign Features\n\n- [paper](https://dl.acm.org/doi/abs/10.1145/3372297.3423362)\n- [pytorch implementation](https://github.com/TemporaryAcc0unt/composite-attack)",
+      "evidence_location": "lines 329-332",
+      "confidence": "high",
+      "reason": "External attack referenced with paper and implementation."
+    },
+    {
+      "field": "related_benchmark",
+      "value": "Just How Toxic is Data Poisoning? A Unified Benchmark for Backdoor and Data Poisoning Attacks",
+      "normalized_value": "Just How Toxic is Data Poisoning? A Unified Benchmark for Backdoor and Data Poisoning Attacks",
+      "evidence": "`Note`: This repository is the official implementation of [Just How Toxic is Data Poisoning? A Unified Benchmark for Backdoor and Data Poisoning Attacks](https://arxiv.org/abs/2006.12557).",
+      "evidence_location": "line 336",
+      "confidence": "high",
+      "reason": "References a related benchmark paper and its official implementation."
+    },
+    {
+      "field": "related_library",
+      "value": "TrojanZoo",
+      "normalized_value": "TrojanZoo",
+      "evidence": "`Note`: TrojanZoo provides a universal pytorch platform to conduct security researches (especially backdoor attacks/defenses) of image classification in deep learning.",
+      "evidence_location": "line 342",
+      "confidence": "high",
+      "reason": "References a related tool/library used for backdoor attack/defense research."
+    },
+    {
+      "field": "related_library",
+      "value": "Backdoors 101",
+      "normalized_value": "Backdoors101",
+      "evidence": "Backdoors 101 — is a PyTorch framework for state-of-the-art backdoor defenses and attacks on deep learning models.",
+      "evidence_location": "line 344",
+      "confidence": "high",
+      "reason": "References a related PyTorch framework for backdoor attacks/defenses."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{li2021anti,\n  title={Anti-Backdoor Learning: Training Clean Models on Poisoned Data},\n  author={Li, Yige and Lyu, Xixiang and Koren, Nodens and Lyu, Lingjuan and Li, Bo and Ma, Xingjun},\n  booktitle={NeurIPS},\n  year={2021}\n}",
+      "normalized_value": "Li, Yige; Lyu, Xixiang; Koren, Nodens; Lyu, Lingjuan; Li, Bo; Ma, Xingjun. \"Anti-Backdoor Learning: Training Clean Models on Poisoned Data\". NeurIPS 2021.",
+      "evidence": "@inproceedings{li2021anti,\n  title={Anti-Backdoor Learning: Training Clean Models on Poisoned Data},\n  author={Li, Yige and Lyu, Xixiang and Koren, Nodens and Lyu, Lingjuan and Li, Bo and Ma, Xingjun},\n  booktitle={NeurIPS},\n  year={2021}\n}",
+      "evidence_location": "lines 356-361",
+      "confidence": "high",
+      "reason": "Provides the official BibTeX citation for the artifact's associated paper, essential for proper attribution."
+    }
+  ]
+}

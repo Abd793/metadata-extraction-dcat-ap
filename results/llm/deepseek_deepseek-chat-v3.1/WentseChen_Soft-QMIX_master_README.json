@@ -1,0 +1,103 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "Soft-QMIX",
+      "normalized_value": "Soft-QMIX",
+      "evidence": "# Soft-QMIX",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicit project name from main header"
+    },
+    {
+      "field": "base_repository",
+      "value": "pymarl",
+      "normalized_value": "pymarl",
+      "evidence": "This repo is heavily based on the [pymarl](https://github.com/benellis3/pymarl2)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the foundational codebase this project builds upon"
+    },
+    {
+      "field": "installation_instructions",
+      "value": "please follow the installation guide in the original repo [pymarl](https://github.com/benellis3/pymarl2)",
+      "normalized_value": "please follow the installation guide in the original repo pymarl",
+      "evidence": "please follow the installation guide in the original repo [pymarl](https://github.com/benellis3/pymarl2)",
+      "evidence_location": "5-7",
+      "confidence": "high",
+      "reason": "Provides installation guidance by referencing base repository"
+    },
+    {
+      "field": "run_command",
+      "value": "bash ./qmix.sh",
+      "normalized_value": "bash ./qmix.sh",
+      "evidence": "```bash\nbash ./qmix.sh\n```",
+      "evidence_location": "13-15",
+      "confidence": "high",
+      "reason": "Primary command to execute the code"
+    },
+    {
+      "field": "configuration_file",
+      "value": "src/config/default.yaml",
+      "normalized_value": "src/config/default.yaml",
+      "evidence": "`src/config/default.yaml`",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Identifies main configuration file location"
+    },
+    {
+      "field": "hyperparameter_file",
+      "value": "qmix.sh",
+      "normalized_value": "qmix.sh",
+      "evidence": "you can change the hyperparameters in the `qmix.sh` file",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Identifies file containing hyperparameter configurations"
+    },
+    {
+      "field": "example_command",
+      "value": "CUDA_VISIBLE_DEVICES=0 python src/main.py --config=qmix --env-config=sc2_gen_protoss",
+      "normalized_value": "CUDA_VISIBLE_DEVICES=0 python src/main.py --config=qmix --env-config=sc2_gen_protoss",
+      "evidence": "```bash\nCUDA_VISIBLE_DEVICES=0 python src/main.py --config=qmix --env-config=sc2_gen_protoss\n```",
+      "evidence_location": "21-23",
+      "confidence": "high",
+      "reason": "Specific command example for running on protoss5v5 map"
+    },
+    {
+      "field": "environment_config",
+      "value": "sc2_gen_terran.yaml",
+      "normalized_value": "sc2_gen_terran.yaml",
+      "evidence": "change the `sc2_gen_terran.yaml` file",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Identifies environment configuration file for map settings"
+    },
+    {
+      "field": "configuration_example",
+      "value": "capability_config:\n    n_units: 10\n    n_enemies: 10",
+      "normalized_value": "capability_config: n_units: 10 n_enemies: 10",
+      "evidence": "```yaml\ncapability_config:\n    n_units: 10\n    n_enemies: 10\n```",
+      "evidence_location": "27-31",
+      "reason": "Example configuration for 10v10 map setup",
+      "confidence": "high"
+    },
+    {
+      "field": "citation",
+      "value": "@article{chen2024soft,\n  title={Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization},\n  author={Chen, Wentse and Huang, Shiyu and Schneider, Jeff},\n  journal={arXiv preprint arXiv:2406.13930},\n  year={2024}\n}",
+      "normalized_value": "@article{chen2024soft, title={Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization}, author={Chen, Wentse and Huang, Shiyu and Schneider, Jeff}, journal={arXiv preprint arXiv:2406.13930}, year={2024}",
+      "evidence": "```\n@article{chen2024soft,\n  title={Soft-QMIX: Integrating Maximum Entropy For Monotonic Value Function Factorization},\n  author={Chen, Wentse and Huang, Shiyu and Schneider, Jeff},\n  journal={arXiv preprint arXiv:2406.13930},\n  year={2024}\n}\n```",
+      "evidence_location": "37-43",
+      "confidence": "high",
+      "reason": "BibTeX citation for associated research paper"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2406.13930",
+      "normalized_value": "https://arxiv.org/pdf/2406.13930",
+      "evidence": "paper]([https://arxiv.org/abs/2207.05631](https://arxiv.org/pdf/2406.13930)",
+      "evidence_location": "35",
+      "confidence": "medium",
+      "reason": "URL to associated paper (markdown syntax is malformed but URL is clear)"
+    }
+  ]
+}

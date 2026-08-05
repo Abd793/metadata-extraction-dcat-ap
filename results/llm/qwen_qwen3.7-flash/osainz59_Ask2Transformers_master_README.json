@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Ask2Transformers",
+      "normalized_value": "Ask2Transformers",
+      "evidence": "<h1 align=\"center\">Ask2Transformers</h1>",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the main heading."
+    },
+    {
+      "field": "artifact_description",
+      "value": "A Framework for Textual Entailment based Zero Shot text classification",
+      "normalized_value": "A Framework for Textual Entailment based Zero Shot text classification",
+      "evidence": "<h3 align=\"center\">A Framework for Textual Entailment based Zero Shot text classification</h3>",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Provides a concise summary of the artifact's purpose and core methodology."
+    },
+    {
+      "field": "supported_tasks",
+      "value": "Topic Labelling, Relation Extraction, Event Argument Extraction",
+      "normalized_value": "Topic Labelling, Relation Extraction, Event Argument Extraction",
+      "evidence": "This repository contains the code for out of the box ready to use zero-shot classifiers among different tasks, such as Topic Labelling or Relation Extraction.",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Lists the specific NLP tasks the framework is designed to handle."
+    },
+    {
+      "field": "base_framework",
+      "value": "HuggingFace Transformers",
+      "normalized_value": "HuggingFace Transformers",
+      "evidence": "It is built on top of 🤗 HuggingFace [Transformers](https://github.com/huggingface/transformers) library",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Identifies the underlying software library the artifact depends on."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/osainz59/Ask2Transformers.git",
+      "normalized_value": "https://github.com/osainz59/Ask2Transformers.git",
+      "evidence": "git clone https://github.com/osainz59/Ask2Transformers.git",
+      "evidence_location": "38",
+      "confidence": "high",
+      "reason": "Direct link to the source code repository for cloning and access."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://osainz59.github.io/Ask2Transformers",
+      "normalized_value": "https://osainz59.github.io/Ask2Transformers",
+      "evidence": "To get started with the repository consider reading the **new** [documentation](https://osainz59.github.io/Ask2Transformers)!",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Points users to official usage guides and tutorials."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install a2t",
+      "normalized_value": "pip install a2t",
+      "evidence": "pip install a2t",
+      "evidence_location": "32",
+      "confidence": "high",
+      "reason": "Primary command for installing the package via PyPI."
+    },
+    {
+      "field": "default_model_checkpoint",
+      "value": "roberta-large-mnli",
+      "normalized_value": "roberta-large-mnli",
+      "evidence": "By default, \\`roberta-large-mnli\\` checkpoint is used to perform the inference.",
+      "evidence_location": "52",
+      "confidence": "high",
+      "reason": "Specifies the pre-trained model automatically used for inference if none is selected."
+    },
+    {
+      "field": "alternative_pretrained_models",
+      "value": "joeddav/xlm-roberta-large-xnli, facebook/bart-large-mnli, microsoft/deberta-v2-xlarge-mnli",
+      "normalized_value": "joeddav/xlm-roberta-large-xnli, facebook/bart-large-mnli, microsoft/deberta-v2-xlarge-mnli",
+      "evidence": "* \\`joeddav/xlm-roberta-large-xnli\\`\\n* \\`facebook/bart-large-mnli\\`\\n* \\`microsoft/deberta-v2-xlarge-mnli\\`",
+      "evidence_location": "55-58",
+      "confidence": "high",
+      "reason": "Lists compatible NLI-compatible checkpoints that can be swapped for zero-shot classification."
+    },
+    {
+      "field": "evaluation_script",
+      "value": "evaluation.py",
+      "normalized_value": "evaluation.py",
+      "evidence": "To obtain the results reported in the papers run the [\\`evaluation.py\\`](./a2t/evaluation.py) script",
+      "evidence_location": "91",
+      "confidence": "high",
+      "reason": "Identifies the executable script used to reproduce benchmark results."
+    },
+    {
+      "field": "configuration_files_directory",
+      "value": "./resources/predefined_configs/",
+      "normalized_value": "./resources/predefined_configs/",
+      "evidence": "with the corresponding configuration [files](./resources/predefined_configs/).",
+      "evidence_location": "91",
+      "confidence": "high",
+      "reason": "Indicates where task-specific JSON configuration templates are stored."
+    },
+    {
+      "field": "training_scripts",
+      "value": "run_glue.py, tacred2mnli.py",
+      "normalized_value": "run_glue.py, tacred2mnli.py",
+      "evidence": "we have used the publicly available [run_glue.py](https://github.com/huggingface/transformers/blob/master/examples/pytorch/text-classification/run_glue.py) python script (from HuggingFace Transformers). To train your own model, first, you will need to convert your actual dataset in some sort of NLI data, we recommend you to have a look to [tacred2mnli.py](https://github.com/osainz59/Ask2Transformers/blob/master/scripts/tacred2mnli.py) script that serves as an example.",
+      "evidence_location": "83",
+      "confidence": "high",
+      "reason": "Names the reference scripts for fine-tuning and dataset conversion."
+    },
+    {
+      "field": "associated_publications",
+      "value": "Ask2Transformers - Zero Shot Domain Labelling with Pretrained Transformers (GWC2021), Label Verbalization and Entailment for Effective Zero- and Few-Shot Relation Extraction (EMNLP2021), Textual Entailment for Event Argument Extraction: Zero- and Few-Shot with Multi-Source Learning (NAACL2022)",
+      "normalized_value": "Ask2Transformers - Zero Shot Domain Labelling with Pretrained Transformers (GWC2021), Label Verbalization and Entailment for Effective Zero- and Few-Shot Relation Extraction (EMNLP2021), Textual Entailment for Event Argument Extraction: Zero- and Few-Shot with Multi-Source Learning (NAACL2022)",
+      "evidence": "- 📄 [Ask2Transformers - Zero Shot Domain Labelling with Pretrained Transformers](https://aclanthology.org/2021.gwc-1.6/) accepted in [GWC2021](http://globalwordnet.org/global-wordnet-conferences-2/).\\n- 📄 [Label Verbalization and Entailment for Effective Zero- and Few-Shot Relation Extraction](https://aclanthology.org/2021.emnlp-main.92/) accepted in [EMNLP2021](https://2021.emnlp.org/)\\n- 📄 [Textual Entailment for Event Argument Extraction: Zero- and Few-Shot with Multi-Source Learning](https://arxiv.org/abs/2205.01376) accepted as Findings in [NAACL2022](https://2022.naacl.org/)",
+      "evidence_location": "11-13",
+      "confidence": "high",
+      "reason": "Provides direct links and titles to the peer-reviewed papers describing the methodology and results."
+    },
+    {
+      "field": "evaluation_datasets",
+      "value": "BabelDomains, TACRED",
+      "normalized_value": "BabelDomains, TACRED",
+      "evidence": "evaluated on BabelDomains (Camacho-Collados and Navigli, 2017) dataset.\\n- [Relation classification](./a2t/relation_classification/) evaluated on TACRED (Zhang et al., 2017) dataset.",
+      "evidence_location": "17-18",
+      "confidence": "medium",
+      "reason": "Names the standard benchmarks used for evaluation, though this section is currently commented out in the README."
+    }
+  ]
+}

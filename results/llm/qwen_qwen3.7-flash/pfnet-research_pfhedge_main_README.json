@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PFHedge",
+      "normalized_value": "PFHedge",
+      "evidence": "<h1 align=\"center\">PFHedge: Deep Hedging in PyTorch</h1>",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly stated as the project title in the main header."
+    },
+    {
+      "field": "description",
+      "value": "A PyTorch-based framework for Deep Hedging",
+      "normalized_value": "A PyTorch-based framework for Deep Hedging",
+      "evidence": "**PFHedge** is a [PyTorch](https://pytorch.org/)-based framework for [Deep Hedging][deep-hedging-arxiv].",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Directly describes the artifact's core purpose and technical foundation."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/pfnet-research/pfhedge",
+      "normalized_value": "https://github.com/pfnet-research/pfhedge",
+      "evidence": "[![CI](https://github.com/pfnet-research/pfhedge/workflows/CI/badge.svg)](https://github.com/pfnet-research/pfhedge/actions?query=workflow%3ACI)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Standard GitHub repository link provided in the project badges."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://pfnet-research.github.io/pfhedge/",
+      "normalized_value": "https://pfnet-research.github.io/pfhedge/",
+      "evidence": "* [PFHedge Documentation](https://pfnet-research.github.io/pfhedge/)",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Official documentation site link for the library."
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install pfhedge",
+      "normalized_value": "pip install pfhedge",
+      "evidence": "```sh\npip install pfhedge\n```",
+      "evidence_location": "65-67",
+      "confidence": "high",
+      "reason": "Standard pip installation command provided in the Install section."
+    },
+    {
+      "field": "framework_dependency",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "**PFHedge** is a [PyTorch](https://pytorch.org/)-based framework for [Deep Hedging][deep-hedging-arxiv].",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Identifies the primary deep learning framework required to run the artifact."
+    },
+    {
+      "field": "supported_framework_versions",
+      "value": "1.9.0 -- 2.0.0",
+      "normalized_value": "1.9.0 -- 2.0.0",
+      "evidence": "![pytorch](https://img.shields.io/badge/torch-1.9.0--%20%7C%202.0.0---red)",
+      "evidence_location": "9",
+      "confidence": "medium",
+      "reason": "Extracted from a CI/badge image URL indicating compatible PyTorch versions."
+    },
+    {
+      "field": "training_command",
+      "value": "hedger.fit(derivative, n_epochs=200)",
+      "normalized_value": "hedger.fit(derivative, n_epochs=200)",
+      "evidence": "hedger.fit(derivative, n_epochs=200)",
+      "evidence_location": "156",
+      "confidence": "high",
+      "reason": "Example command demonstrating how to train the hedger model."
+    },
+    {
+      "field": "inference_command",
+      "value": "price = hedger.price(derivative)",
+      "normalized_value": "price = hedger.price(derivative)",
+      "evidence": "price = hedger.price(derivative)",
+      "evidence_location": "162",
+      "confidence": "high",
+      "reason": "Example command demonstrating how to compute utility indifference prices after training."
+    },
+    {
+      "field": "input_features",
+      "value": "log_moneyness, expiry_time, volatility, prev_hedge",
+      "normalized_value": "log_moneyness, expiry_time, volatility, prev_hedge",
+      "evidence": "hedger = Hedger(model, inputs=[\"log_moneyness\", \"expiry_time\", \"volatility\", \"prev_hedge\"])",
+      "evidence_location": "122",
+      "confidence": "high",
+      "reason": "Specifies the exact feature names passed to the hedger model for decision making."
+    },
+    {
+      "field": "available_models",
+      "value": "MultiLayerPerceptron, BlackScholes, WhalleyWilmott, Any PyTorch Module",
+      "normalized_value": "MultiLayerPerceptron, BlackScholes, WhalleyWilmott, Any PyTorch Module",
+      "evidence": "- [`MultiLayerPerceptron`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.MultiLayerPerceptron.html): [Multi-layer perceptron](https://en.wikipedia.org/wiki/Multilayer_perceptron).\n    - [`BlackScholes`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.BlackScholes.html): [Black-Scholes](https://en.wikipedia.org/wiki/Delta_neutral)' delta-hedging strategy.\n    - [`WhalleyWilmott`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.WhalleyWilmott.html): [Whalley-Wilmott][whalley-wilmott]'s asymptotically optimal strategy for small costs.\n    - Any PyTorch [`Module`](https://pytorch.org/docs/stable/generated/torch.torch.Module.html) which you build.",
+      "evidence_location": "107-110",
+      "confidence": "high",
+      "reason": "Lists the built-in neural network architectures and trading strategies supported out-of-the-box."
+    },
+    {
+      "field": "risk_measures",
+      "value": "EntropicRiskMeasure, ExpectedShortFall",
+      "normalized_value": "EntropicRiskMeasure, ExpectedShortFall",
+      "evidence": "- [`EntropicRiskMeasure`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.EntropicRiskMeasure.html): [Entropic Risk Measure](https://en.wikipedia.org/wiki/Entropic_risk_measure), a risk measure derived from [exponential utility](https://en.wikipedia.org/wiki/Exponential_utility).\n    - [`ExpectedShortFall`](https://pfnet-research.github.io/pfhedge/generated/pfhedge.nn.ExpectedShortfall.html): [Expected Shortfall](https://en.wikipedia.org/wiki/Expected_shortfall) or CVaR, a common measure to assess portfolio risk.",
+      "evidence_location": "112-113",
+      "confidence": "high",
+      "reason": "Specifies the optimization criteria/risk measures used to train the hedger."
+    },
+    {
+      "field": "maintainers",
+      "value": "Shota Imaki, Masanori Hirano",
+      "normalized_value": "Shota Imaki, Masanori Hirano",
+      "evidence": "This project is owned by [Preferred Networks](https://www.preferred.jp/en/) and maintained by [Shota Imaki](https://github.com/simaki) and [Masanori Hirano](https://github.com/masanorihirano).",
+      "evidence_location": "294",
+      "confidence": "high",
+      "reason": "Identifies the individuals responsible for ongoing maintenance and development."
+    },
+    {
+      "field": "organization",
+      "value": "Preferred Networks",
+      "normalized_value": "Preferred Networks",
+      "evidence": "This project is owned by [Preferred Networks](https://www.preferred.jp/en/) and maintained by [Shota Imaki](https://github.com/simaki) and [Masanori Hirano](https://github.com/masanorihirano).",
+      "evidence_location": "294",
+      "confidence": "high",
+      "reason": "Identifies the owning institution behind the project."
+    },
+    {
+      "field": "task_description",
+      "value": "hedge financial derivatives in the presence of market frictions (e.g., transaction cost)",
+      "normalized_value": "hedge financial derivatives in the presence of market frictions (e.g., transaction cost)",
+      "evidence": "Hedging [financial derivatives](https://en.wikipedia.org/wiki/Derivative_(finance)) in the presence of market frictions (e.g., transaction cost) is a challenging task.",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Clearly defines the specific quantitative finance problem the artifact addresses."
+    },
+    {
+      "field": "reference_papers",
+      "value": "Hans Bühler, Lukas Gonson, Josef Teichmann and Ben Wood, \"[Deep hedging]\". Quantitative Finance, 2019, 19, 1271-1291. arXiv:[1802.03042][deep-hedging-arxiv] \\[q-fin.CP\\].",
+      "normalized_value": "Hans Bühler, Lukas Gonson, Josef Teichmann and Ben Wood, \"[Deep hedging]\". Quantitative Finance, 2019, 19, 1271-1291. arXiv:[1802.03042][deep-hedging-arxiv] \\[q-fin.CP\\].",
+      "evidence": "* Hans Bühler, Lukas Gonson, Josef Teichmann and Ben Wood, \"[Deep hedging][deep-hedging-qf]\". Quantitative Finance, 2019, 19, 1271-1291. arXiv:[1802.03042][deep-hedging-arxiv] \\[q-fin.CP\\].",
+      "evidence_location": "298",
+      "confidence": "high",
+      "reason": "Primary academic citation establishing the theoretical foundation of Deep Hedging."
+    }
+  ]
+}

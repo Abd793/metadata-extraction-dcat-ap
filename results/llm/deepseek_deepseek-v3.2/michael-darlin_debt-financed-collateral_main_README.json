@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Debt-Financed Collateral",
+      "normalized_value": "Debt-Financed Collateral",
+      "evidence": "# Debt-Financed Collateral",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Primary name of the repository/artifact from the main header."
+    },
+    {
+      "field": "purpose",
+      "value": "documents the data analysis performed for the paper \"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\"",
+      "normalized_value": "documents the data analysis performed for the paper \"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\"",
+      "evidence": "This repository documents the data analysis performed for the paper \"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\" ([ArXiv](https://arxiv.org/abs/2204.11107)).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly states the purpose and context of the repository."
+    },
+    {
+      "field": "paper_title",
+      "value": "\"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\"",
+      "normalized_value": "\"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\"",
+      "evidence": "the paper \"Debt-Financed Collateral and Stability Risks in the DeFi Ecosystem\"",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Full title of the associated academic paper."
+    },
+    {
+      "field": "paper_arxiv_url",
+      "value": "https://arxiv.org/abs/2204.11107",
+      "normalized_value": "https://arxiv.org/abs/2204.11107",
+      "evidence": "([ArXiv](https://arxiv.org/abs/2204.11107))",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Primary link to the paper for citation and reference."
+    },
+    {
+      "field": "data_export_url",
+      "value": "https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_",
+      "normalized_value": "https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_",
+      "evidence": "an export of the table data is available [here](https://drive.google.com/drive/folders/1QGkh0MTT-lXiGh7ofzswA7042KVGEqq_).",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Direct link to the dataset, essential for reproduction."
+    },
+    {
+      "field": "original_data_storage",
+      "value": "MariaDB database",
+      "normalized_value": "MariaDB database",
+      "evidence": "All relevant data was stored in a MariaDB database",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Specifies the original database technology used for the data."
+    },
+    {
+      "field": "scrape_large_scale_tools",
+      "value": "Google's BigQuery service, using Python",
+      "normalized_value": "Google's BigQuery service, using Python",
+      "evidence": "Large-scale data collection (Python) - The majority of event data was collected through Google's BigQuery service, using Python.",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Describes the primary tools and programming language for large-scale data collection."
+    },
+    {
+      "field": "scrape_one_off_tools",
+      "value": "NodeJS",
+      "normalized_value": "NodeJS",
+      "evidence": "One-off data collection (NodeJS) - These scripts were used to collect more targeted information.",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Specifies the programming language used for targeted data collection scripts."
+    },
+    {
+      "field": "scrape_script_purpose_defiEvents.py",
+      "value": "collection of classes used for data collection.",
+      "normalized_value": "collection of classes used for data collection.",
+      "evidence": "*defiEvents.py*: collection of classes used for data collection.",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Describes the purpose of a specific key script in the data collection pipeline."
+    },
+    {
+      "field": "scrape_script_purpose_collectEvents.py",
+      "value": "script to collect data. This script was run once for each project. Code was written to collect data across multiple protocol versions (e.g. both Version as per evidence span for Normalized GUI controlation.",
+      "normalized_value": "script to collect data. This script was run once for each project. Code was written to collect data across multiple protocol versions (e.g. both Version 1 and Version 2 of Uniswap), but only data from the most recent protocol was used.",
+      "evidence": "*collectEvents.py*: script to collect data. This script was run once for each project. Code was written to collect data across multiple protocol versions (e.g. both Version 1 and Version 2 of Uniswap), but only data from the most recent protocol was used.",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Describes a key collection script, its execution pattern, and data versioning policy."
+    },
+    {
+      "field": "scrape_script_purpose_mkrVaults.js",
+      "value": "Collect data on all existing Maker vaults, including all addresses associated to the vault (owner, DSProxy, and UrnHandler addresses).",
+      "normalized_value": "Collect data on all existing Maker vaults, including all addresses associated to the vault (owner, DSProxy, and UrnHandler addresses).",
+      "evidence": "*mkrVaults.js*: Collect data on all existing Maker vaults, including all addresses associated to the vault (owner, DSProxy, and UrnHandler addresses).",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Describes a script for collecting specific on-chain data related to Maker protocol."
+    },
+    {
+      "field": "scrape_script_purpose_mkrRateAdjust.js",
+      "value": "Collect information to adjust DAI amounts recorded in frob transactions. Frob transaction amounts (specifically for debt withdrawal/repayment) are recorded without interest rate adjustments. This file collects information to adjust DAI amounts according to the prevailing cumulative interest rate in the Maker Vat contract.",
+      "normalized_value": "Collect information to adjust DAI amounts recorded in frob transactions. Frob transaction amounts (specifically for debt withdrawal/repayment) are recorded without interest rate adjustments. This file collects information to adjust DAI amounts according to the prevailing cumulative interest rate in the Maker Vat contract.",
+      "evidence": "*mkrRateAdjust.js*: Collect information to adjust DAI amounts recorded in frob transactions. Frob transaction amounts (specifically for debt withdrawal/repayment) are recorded without interest rate adjustments. This file collects information to adjust DAI amounts according to the prevailing cumulative interest rate in the Maker Vat contract.",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Describes a script for correcting/transforming financial data, critical for accurate analysis."
+    },
+    {
+      "field": "scrape_script_purpose_uniExchanges.js",
+      "value": "Collect pair addresses from Uniswap for all tokens used in the final analysis.",
+      "normalized_value": "Collect pair addresses from Uniswap for all tokens used in the final analysis.",
+      "evidence": "*uniExchanges.js*: Collect pair addresses from Uniswap for all tokens used in the final analysis.",
+      "evidence_location": "15",
+      "confidence": "high",
+      "reason": "Describes a script for collecting liquidity pool data from a key DeFi protocol."
+    },
+    {
+      "field": "scrape_script_purpose_usdValues.js",
+      "value": "Collect hourly USD pricing data from Coinbase and update each transaction with the most recent USD price.",
+      "normalized_value": "Collect hourly USD pricing data from Coinbase and update each transaction with the most recent USD price.",
+      "evidence": "*usdValues.js*: Collect hourly USD pricing data from Coinbase and update each transaction with the most recent USD price.",
+      "evidence_location": "16",
+      "confidence": "high",
+      "reason": "Describes a script for fetching and normalizing price data, essential for financial analysis."
+    },
+    {
+      "field": "transform_algorithm_file",
+      "value": "algo.ipynb contains the algorithm used to estimate the percentage of debt-financed collateral",
+      "normalized_value": "algo.ipynb contains the algorithm used to estimate the percentage of debt-financed collateral",
+      "evidence": "*algo.ipynb* contains the algorithm used to estimate the percentage of debt-financed collateral",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Points to the core algorithm file (Jupyter notebook) that performs the central analysis."
+    },
+    {
+      "field": "analysis_script_file",
+      "value": "analysis.r contains the R code used to create charts and tables for the final paper.",
+      "normalized_value": "analysis.r contains the R code used to create charts and tables for the final paper.",
+      "evidence": "*analysis.r* contains the R code used to create charts and tables for the final paper.",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Specifies the script used for generating visualizations and results for the paper."
+    },
+    {
+      "field": "utils_files",
+      "value": "This folder contains several files used by NodeJS scripts:\n- *abi.js*: ABIs for relevant contracts\n- *addr.js*: relevant addresses\n- *eventLib.js*: helper functions",
+      "normalized_value": "This folder contains several files used by NodeJS scripts:\n- *abi.js*: ABIs for relevant contracts\n- *addr.js*: relevant addresses\n- *eventLib.js*: helper functions",
+      "evidence": "This folder contains several files used by NodeJS scripts:\n- *abi.js*: ABIs for relevant contracts\n- *addr.js*: relevant addresses\n- *eventLib.js*: helper functions",
+      "evidence_location": "28-30",
+      "confidence": "high",
+      "reason": "Lists utility files and their general purpose, which are dependencies for the NodeJS scripts."
+    }
+  ]
+}

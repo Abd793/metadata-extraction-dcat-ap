@@ -1,6 +1,7 @@
 import argparse
 import json
 import math
+import random
 import re
 from itertools import combinations
 from pathlib import Path
@@ -8,18 +9,25 @@ from statistics import mean, median
 from typing import Any
 
 import numpy as np
-from sklearn.metrics import cohen_kappa_score
+
+try:
+    from sklearn.metrics import cohen_kappa_score
+except ImportError:
+    cohen_kappa_score = None
 
 
 DEFAULT_MODELS = [
     "deepseek/deepseek-v4-flash",
     "qwen/qwen3.5-flash-02-23",
     "qwen/qwen3.6-flash",
+    'deepseek/deepseek-v3.2',
 ]
 
 AGREEMENT_VIEWS = ("fields", "values", "field_value_pairs")
 SEMANTIC_EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 SEMANTIC_SIMILARITY_CHUNK_SIZE = 512
+RANDOMIZATION_TEST_ITERATIONS = 10000
+RANDOMIZATION_TEST_SEED = 20260724
 
 
 def safe_mean(values: list[float]) -> float:
@@ -28,6 +36,13 @@ def safe_mean(values: list[float]) -> float:
 
 def safe_median(values: list[float]) -> float:
     return median(values) if values else 0.0
+
+
+def safe_sample_stdev(values: list[float]) -> float:
+    if len(values) < 2:
+        return 0.0
+    value_mean = mean(values)
+    return math.sqrt(sum((value - value_mean) ** 2 for value in values) / (len(values) - 1))
 
 
 def safe_model_name(model: str) -> str:
@@ -135,6 +150,19 @@ def cohen_kappa(vec_a: list[int], vec_b: list[int]) -> float:
     if not vec_a:
         return 0.0
 
+    if cohen_kappa_score is None:
+        total = len(vec_a)
+        observed = sum(left == right for left, right in zip(vec_a, vec_b)) / total
+        left_positive = sum(vec_a) / total
+        right_positive = sum(vec_b) / total
+        expected = (
+            left_positive * right_positive
+            + (1.0 - left_positive) * (1.0 - right_positive)
+        )
+        if expected == 1.0:
+            return 1.0 if observed == 1.0 else 0.0
+        return (observed - expected) / (1.0 - expected)
+
     score = float(cohen_kappa_score(vec_a, vec_b))
     if math.isnan(score):
         return 1.0 if vec_a == vec_b else 0.0
@@ -191,6 +219,104 @@ def summarize_rows(rows: list[dict[str, Any]], view: str) -> dict[str, float]:
         "average_cohen_kappa": safe_mean(kappas),
         "median_cohen_kappa": safe_median(kappas),
     }
+
+
+def paired_randomization_p_value(
+    differences: list[float],
+    iterations: int = RANDOMIZATION_TEST_ITERATIONS,
+    seed: int = RANDOMIZATION_TEST_SEED,
+) -> float:
+    nonzero_differences = [difference for difference in differences if difference != 0.0]
+    if not nonzero_differences:
+        return 1.0
+
+    observed = abs(mean(nonzero_differences))
+    sample_count = 0
+    exceed_count = 0
+
+    if len(nonzero_differences) <= 20:
+        total_masks = 1 << len(nonzero_differences)
+        for mask in range(total_masks):
+            signed_sum = 0.0
+            for index, difference in enumerate(nonzero_differences):
+                signed_sum += difference if mask & (1 << index) else -difference
+            statistic = abs(signed_sum / len(nonzero_differences))
+            exceed_count += statistic >= observed - 1e-12
+        return exceed_count / total_masks
+
+    rng = random.Random(seed)
+    for _ in range(iterations):
+        signed_sum = sum(
+            difference if rng.random() < 0.5 else -difference
+            for difference in nonzero_differences
+        )
+        statistic = abs(signed_sum / len(nonzero_differences))
+        exceed_count += statistic >= observed - 1e-12
+        sample_count += 1
+
+    return (exceed_count + 1) / (sample_count + 1)
+
+
+def paired_difference_test(
+    baseline_rows: list[dict[str, Any]],
+    treatment_rows: list[dict[str, Any]],
+    view: str,
+    metric_key: str,
+    baseline_label: str,
+    treatment_label: str,
+) -> dict[str, Any]:
+    baseline_by_doc = {row["doc"]: row for row in baseline_rows}
+    treatment_by_doc = {row["doc"]: row for row in treatment_rows}
+    common_docs = sorted(set(baseline_by_doc) & set(treatment_by_doc))
+    differences = [
+        treatment_by_doc[doc][view][metric_key] - baseline_by_doc[doc][view][metric_key]
+        for doc in common_docs
+    ]
+    diff_stdev = safe_sample_stdev(differences)
+
+    return {
+        "test": "paired_randomization",
+        "alternative": "two_sided",
+        "baseline": baseline_label,
+        "treatment": treatment_label,
+        "metric": metric_key,
+        "n": len(differences),
+        "mean_difference": safe_mean(differences),
+        "median_difference": safe_median(differences),
+        "cohen_dz": safe_mean(differences) / diff_stdev if diff_stdev else 0.0,
+        "p_value": paired_randomization_p_value(differences),
+        "improved_count": sum(1 for difference in differences if difference > 0.0),
+        "worse_count": sum(1 for difference in differences if difference < 0.0),
+        "tie_count": sum(1 for difference in differences if difference == 0.0),
+    }
+
+
+def pair_label(pair: dict[str, Any]) -> str:
+    return f"{pair['model_a']} vs {pair['model_b']}"
+
+
+def compare_model_pairs(pairwise: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    tests = []
+    for baseline_pair, treatment_pair in combinations(pairwise, 2):
+        comparison: dict[str, Any] = {
+            "baseline_pair": pair_label(baseline_pair),
+            "treatment_pair": pair_label(treatment_pair),
+            "views": {},
+        }
+        for view in AGREEMENT_VIEWS:
+            comparison["views"][view] = {
+                metric_key: paired_difference_test(
+                    baseline_pair["docs"],
+                    treatment_pair["docs"],
+                    view,
+                    metric_key,
+                    pair_label(baseline_pair),
+                    pair_label(treatment_pair),
+                )
+                for metric_key in ("jaccard", "cohen_kappa")
+            }
+        tests.append(comparison)
+    return tests
 
 
 def multimodel_view_metrics(item_sets: list[set[str]], universe: list[str]) -> dict[str, Any]:
@@ -284,6 +410,7 @@ def evaluate(results: dict[str, dict[str, dict[str, set[str]]]]) -> dict[str, An
         "excluded_doc_counts": excluded_doc_counts,
         "universe_sizes": {view: len(universe) for view, universe in universes.items()},
         "pairwise": pairwise,
+        "pairwise_difference_tests": compare_model_pairs(pairwise),
         "overall": {
             "pair_doc_count": len(all_doc_rows),
             "averages": {view: summarize_rows(all_doc_rows, view) for view in AGREEMENT_VIEWS},
@@ -295,6 +422,83 @@ def evaluate(results: dict[str, dict[str, dict[str, set[str]]]]) -> dict[str, An
                 for view in AGREEMENT_VIEWS
             },
             "docs": multimodel_doc_rows,
+        },
+    }
+
+
+def pairwise_by_models(report: dict[str, Any]) -> dict[tuple[str, str], dict[str, Any]]:
+    return {
+        (pair["model_a"], pair["model_b"]): pair
+        for pair in report["pairwise"]
+    }
+
+
+def paired_rows_across_pairs(report: dict[str, Any]) -> list[dict[str, Any]]:
+    rows = []
+    for pair in report["pairwise"]:
+        pair_name = pair_label(pair)
+        for row in pair["docs"]:
+            keyed_row = {"doc": f"{pair_name}::{row['doc']}"}
+            for view in AGREEMENT_VIEWS:
+                keyed_row[view] = row[view]
+            rows.append(keyed_row)
+    return rows
+
+
+def compare_reports(
+    baseline_report: dict[str, Any],
+    treatment_report: dict[str, Any],
+    baseline_label: str,
+    treatment_label: str,
+) -> dict[str, Any]:
+    baseline_pairs = pairwise_by_models(baseline_report)
+    treatment_pairs = pairwise_by_models(treatment_report)
+    common_pair_keys = sorted(set(baseline_pairs) & set(treatment_pairs))
+
+    pairwise_tests = []
+    for pair_key in common_pair_keys:
+        baseline_pair = baseline_pairs[pair_key]
+        treatment_pair = treatment_pairs[pair_key]
+        pairwise_tests.append(
+            {
+                "model_a": pair_key[0],
+                "model_b": pair_key[1],
+                "views": {
+                    view: {
+                        metric_key: paired_difference_test(
+                            baseline_pair["docs"],
+                            treatment_pair["docs"],
+                            view,
+                            metric_key,
+                            baseline_label,
+                            treatment_label,
+                        )
+                        for metric_key in ("jaccard", "cohen_kappa")
+                    }
+                    for view in AGREEMENT_VIEWS
+                },
+            }
+        )
+
+    baseline_rows = paired_rows_across_pairs(baseline_report)
+    treatment_rows = paired_rows_across_pairs(treatment_report)
+    return {
+        "baseline": baseline_label,
+        "treatment": treatment_label,
+        "pairwise": pairwise_tests,
+        "overall_pair_doc": {
+            view: {
+                metric_key: paired_difference_test(
+                    baseline_rows,
+                    treatment_rows,
+                    view,
+                    metric_key,
+                    baseline_label,
+                    treatment_label,
+                )
+                for metric_key in ("jaccard", "cohen_kappa")
+            }
+            for view in AGREEMENT_VIEWS
         },
     }
 
@@ -453,6 +657,21 @@ def print_multimodel_view(prefix: str, metrics: dict[str, float]) -> None:
     )
 
 
+def format_p_value(p_value: float) -> str:
+    return "<0.0001" if p_value < 0.0001 else f"{p_value:.4f}"
+
+
+def print_difference_test(prefix: str, test: dict[str, Any]) -> None:
+    print(
+        f"{prefix}: "
+        f"mean diff={test['mean_difference']:.4f}, "
+        f"median diff={test['median_difference']:.4f}, "
+        f"p={format_p_value(test['p_value'])}, "
+        f"dz={test['cohen_dz']:.3f}, "
+        f"n={test['n']}"
+    )
+
+
 def print_report(report: dict[str, Any]) -> None:
     print(f"Models: {', '.join(report['models'])}")
     print("Document counts:")
@@ -481,6 +700,26 @@ def print_report(report: dict[str, Any]) -> None:
     print(f"  Document count: {report['overall_multimodel']['doc_count']}")
     for view in AGREEMENT_VIEWS:
         print_multimodel_view(f"  {view}", report["overall_multimodel"]["averages"][view])
+
+    print("\nPairwise model-pair difference tests:")
+    for comparison in report["pairwise_difference_tests"]:
+        print(f"  {comparison['baseline_pair']} -> {comparison['treatment_pair']}")
+        for view in AGREEMENT_VIEWS:
+            for metric_key in ("jaccard", "cohen_kappa"):
+                print_difference_test(
+                    f"    {view} {metric_key}",
+                    comparison["views"][view][metric_key],
+                )
+
+
+def print_report_comparison(comparison: dict[str, Any]) -> None:
+    print(f"\n{comparison['treatment']} minus {comparison['baseline']} statistical tests:")
+    for view in AGREEMENT_VIEWS:
+        for metric_key in ("jaccard", "cohen_kappa"):
+            print_difference_test(
+                f"  overall {view} {metric_key}",
+                comparison["overall_pair_doc"][view][metric_key],
+            )
 
 
 def print_semantic_summary(report: dict[str, Any]) -> None:
@@ -512,15 +751,20 @@ def main() -> int:
 
     if args.semantic:
         semantic_report = evaluate_semantic(results, args.semantic_threshold)
+        exact_vs_semantic = compare_reports(exact_report, semantic_report, "exact", "semantic")
         report = {
             "exact": exact_report,
             "semantic": semantic_report,
+            "statistical_tests": {
+                "semantic_minus_exact": exact_vs_semantic,
+            },
         }
         print("Exact agreement")
         print_report(exact_report)
         print("\nSemantic agreement")
         print_report(semantic_report)
         print_semantic_summary(semantic_report)
+        print_report_comparison(exact_vs_semantic)
     else:
         report = exact_report
         print_report(report)

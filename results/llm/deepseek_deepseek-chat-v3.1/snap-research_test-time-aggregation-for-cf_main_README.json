@@ -1,0 +1,139 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "TAG-CF: Test-time Aggregation for CF",
+      "normalized_value": "TAG-CF: Test-time Aggregation for CF",
+      "evidence": "# TAG-CF: Test-time Aggregation for CF",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the project name and purpose"
+    },
+    {
+      "field": "paper_title",
+      "value": "How Does Message Passing Improve Collaborative Filtering?",
+      "normalized_value": "How Does Message Passing Improve Collaborative Filtering?",
+      "evidence": "**[How Does Message Passing Improve Collaborative Filtering?](https://arxiv.org/abs/2404.08660)**",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Primary research paper title"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2404.08660",
+      "normalized_value": "https://arxiv.org/abs/2404.08660",
+      "evidence": "**[How Does Message Passing Improve Collaborative Filtering?](https://arxiv.org/abs/2404.08660)**",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Link to the research paper"
+    },
+    {
+      "field": "conference",
+      "value": "NeurIPS 2024",
+      "normalized_value": "NeurIPS 2024",
+      "evidence": "accepted at NeurIPS 2024.",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Conference where paper was accepted"
+    },
+    {
+      "field": "description",
+      "value": "a test-time aggregation framework that can be utilized as a plug-and-play module to enhance the performance of matrix factorization models",
+      "normalized_value": "a test-time aggregation framework that can be utilized as a plug-and-play module to enhance the performance of matrix factorization models",
+      "evidence": "The paper proposes TAG-CF which is a test-time aggregation framework that can be utilized as a plug-and-play module to enhance the performance of matrix factorization models.",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Clear description of what TAG-CF is and its purpose"
+    },
+    {
+      "field": "installation_command",
+      "value": "conda create --name <env> --file requirements.txt",
+      "normalized_value": "conda create --name <env> --file requirements.txt",
+      "evidence": "conda create --name <env> --file requirements.txt",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Command to install dependencies for reproducibility"
+    },
+    {
+      "field": "data_download_instructions",
+      "value": "Please download the data following the [instruction](./dataset/README.md).",
+      "normalized_value": "Please download the data following the [instruction](./dataset/README.md).",
+      "evidence": "Please download the data following the [instruction](./dataset/README.md).",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Instructions for obtaining required data"
+    },
+    {
+      "field": "training_command_mf",
+      "value": "make run_pipeline MODEL_YAML_PATH=config/MF.yaml DATA_YAML_PATH=config/bpr_ml.yaml",
+      "normalized_value": "make run_pipeline MODEL_YAML_PATH=config/MF.yaml DATA_YAML_PATH=config/bpr_ml.yaml",
+      "evidence": "make run_pipeline MODEL_YAML_PATH=config/MF.yaml DATA_YAML_PATH=config/bpr_ml.yaml",
+      "evidence_location": "23",
+      "confidence": "high",
+      "reason": "Command to train matrix factorization model"
+    },
+    {
+      "field": "training_command_lightgcn",
+      "value": "make run_pipeline MODEL_YAML_PATH=config/LGCN.yaml DATA_YAML_PATH=config/bpr_ml.yaml",
+      "normalized_value": "make run_pipeline MODEL_YAML_PATH=config/LGCN.yaml DATA_YAML_PATH=config/bpr_ml.yaml",
+      "evidence": "make run_pipeline MODEL_YAML_PATH=config/LGCN.yaml DATA_YAML_PATH=config/bpr_ml.yaml",
+      "evidence_location": "26",
+      "confidence": "high",
+      "reason": "Command to train LightGCN model"
+    },
+    {
+      "field": "training_command_tagcf",
+      "value": "make run_pipeline MODEL_YAML_PATH=config/TAGCF_bpr_ml.yaml  DATA_YAML_PATH=config/bpr_ml.yaml",
+      "normalized_value": "make run_pipeline MODEL_YAML_PATH=config/TAGCF_bpr_ml.yaml  DATA_YAML_PATH=config/bpr_ml.yaml",
+      "evidence": "make run_pipeline MODEL_YAML_PATH=config/TAGCF_bpr_ml.yaml  DATA_YAML_PATH=config/bpr_ml.yaml",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Command to run test-time aggregation with TAG-CF"
+    },
+    {
+      "field": "datasets",
+      "value": "Amazon-Book, Yelp-2018, Gowalla, MovieLens-1M",
+      "normalized_value": "Amazon-Book, Yelp-2018, Gowalla, MovieLens-1M",
+      "evidence": "Amazon-Book\nYelp-2018\nGowalla\nMovieLens-1M",
+      "evidence_location": "37,42,47,52",
+      "confidence": "high",
+      "reason": "List of datasets used for evaluation"
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "Recall@10, Recall@20, NDCG@10, NDCG@20",
+      "normalized_value": "Recall@10, Recall@20, NDCG@10, NDCG@20",
+      "evidence": "Recall@10 | 0.0619 | 0.0630 | 1.83% | 0.0396 | 0.0454 | 14.55%\nRecall@20 | 0.0959 | 0.0972 | 1.32% | 0.0652 | 0.0737 | 13.04%\nNDCG@10   | 0.0527 | 0.0536 | 1.60% | 0.0330 | 0.0384 | 16.47%\nNDCG@20   | 0.0641 | 0.0650 | 1.54% | 0.0416 | 0.0479 | 15.06%",
+      "evidence_location": "38-41",
+      "confidence": "high",
+      "reason": "Evaluation metrics used to measure performance"
+    },
+    {
+      "field": "methods",
+      "value": "BPR, DirectAU, LightGCN, TAG-CF",
+      "normalized_value": "BPR, DirectAU, LightGCN, TAG-CF",
+      "evidence": "DirectAU|+TAGCF|Impr. (%)|BPR|+TAGCF|Impr. (%)\n# Train a LightGCN model.",
+      "evidence_location": "25,35",
+      "confidence": "high",
+      "reason": "Methods and algorithms implemented and compared"
+    },
+    {
+      "field": "citation",
+      "value": "@article{ju2024does,\n  title={How Does Message Passing Improve Collaborative Filtering?},\n  author={Ju, Mingxuan and Shiao, William and Guo, Zhichun and Ye, Yanfang and Liu, Yozen and Shah, Neil and Zhao, Tong},\n  journal={Advances in neural information processing systems},\n  year={2024}\n}",
+      "normalized_value": "@article{ju2024does,\n  title={How Does Message Passing Improve Collaborative Filtering?},\n  author={Ju, Mingxuan and Shiao, William and Guo, Zhichun and Ye, Yanfang and Liu, Yozen and Shah, Neil and Zhao, Tong},\n  journal={Advances in neural information processing systems},\n  year={2024}\n}",
+      "evidence": "@article{ju2024does,\n  title={How Does Message Passing Improve Collaborative Filtering?},\n  author={Ju, Mingxuan and Shiao, William and Guo, Zhichun and Ye, Yanfang and Liu, Yozen and Shah, Neil and Zhao, Tong},\n  journal={Advances in neural information processing systems},\n  year={2024}\n}",
+      "evidence_location": "62-68",
+      "confidence": "high",
+      "reason": "BibTeX citation for proper attribution"
+    },
+    {
+      "field": "contact_email",
+      "value": "mju@snap.com",
+      "normalized_value": "mju@snap.com",
+      "evidence": "Please contact mju@snap.com for any questions.",
+      "evidence_location": "71",
+      "confidence": "high",
+      "reason": "Contact information for questions"
+    }
+  ]
+}

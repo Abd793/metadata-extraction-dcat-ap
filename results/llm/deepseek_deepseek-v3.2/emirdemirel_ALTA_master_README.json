@@ -1,0 +1,193 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "normalized_value": "ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "evidence": "# ALTA - (A)utomatic (L)yrics (T)r(A)nscription",
+      "evidence_location": "Line 1",
+      "confidence": "high",
+      "reason": "Identifies the name of the artifact."
+    },
+    {
+      "field": "description",
+      "value": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "normalized_value": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "evidence": "A Kaldi[1] recipe for automatic lyrics transcription.",
+      "evidence_location": "Line 3",
+      "confidence": "high",
+      "reason": "Describes the purpose of the artifact."
+    },
+    {
+      "field": "task",
+      "value": "Automatic Lyrics Transcription is the task of translating singing voice into text.",
+      "normalized_value": "Automatic Lyrics Transcription is the task of translating singing voice into text.",
+      "evidence": "Automatic Lyrics Transcription is the task of translating singing voice into text.",
+      "evidence_location": "Line 27",
+      "confidence": "high",
+      "reason": "Defines the scientific task addressed."
+    },
+    {
+      "field": "acoustic_model_name",
+      "value": "MStre-Net",
+      "normalized_value": "MStre-Net",
+      "evidence": "MStre-Net[3]",
+      "evidence_location": "Line 33",
+      "confidence": "high",
+      "reason": "Names the primary acoustic model used."
+    },
+    {
+      "field": "alternative_model_name",
+      "value": "Dilated Convolutional Neural Networks with Self-Attention (single-stream)",
+      "normalized_value": "Dilated Convolutional Neural Networks with Self-Attention (single-stream)",
+      "evidence": "##### 1 - Dilated Convolutional Neural Networks with Self-Attention (single-stream):",
+      "evidence_location": "Line 119",
+      "confidence": "high",
+      "reason": "Describes an alternative model included in the repository."
+    },
+    {
+      "field": "language_model_description",
+      "value": "The LM is a 4-gram MaxEnt trained using the SRILM toolkit, where Kneser-Ney smoothing applied.",
+      "normalized_value": "The LM is a 4-gram MaxEnt trained using the SRILM toolkit, where Kneser-Ney smoothing applied.",
+      "evidence": "**Language Model**: The LM is a 4-gram MaxEnt trained using the SRILM toolkit, where Kneser-Ney smoothing applied.",
+      "evidence_location": "Line 52",
+      "confidence": "high",
+      "reason": "Describes the language model used."
+    },
+    {
+      "field": "pronunciation_model_description",
+      "value": "A predefined lexicon that provides a mapping between words and their phonemic representations. We use the singing adapted version presented here[5].",
+      "normalized_value": "A predefined lexicon that provides a mapping between words and their phonemic representations. We use the singing adapted version presented here[5].",
+      "evidence": "**Pronunciation Model**: A predefined lexicon that provides a mapping between words and their phonemic representations. We use the singing adapted version presented here[5].",
+      "evidence_location": "Line 54",
+      "confidence": "high",
+      "reason": "Describes the pronunciation model used."
+    },
+    {
+      "field": "framework",
+      "value": "Kaldi",
+      "normalized_value": "Kaldi",
+      "evidence": "This framework is built as a [Kaldi](http://kaldi-asr.org/)[1] recipe",
+      "evidence_location": "Line 63",
+      "confidence": "high",
+      "reason": "Specifies the underlying framework for the recipe."
+    },
+    {
+      "field": "python_dependencies_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "Lines 68-70",
+      "confidence": "high",
+      "reason": "Command to install Python dependencies."
+    },
+    {
+      "field": "dataset_damp_access",
+      "value": "https://ccrma.stanford.edu/damp/",
+      "normalized_value": "https://ccrma.stanford.edu/damp/",
+      "evidence": "https://ccrma.stanford.edu/damp/",
+      "evidence_location": "Line 82",
+      "confidence": "high",
+      "reason": "Access link for the DAMP dataset."
+    },
+    {
+      "field": "dataset_dali_access",
+      "value": "https://github.com/gabolsgabs/DALI",
+      "normalized_value": "https://github.com/gabolsgabs/DALI",
+      "evidence": "https://github.com/gabolsgabs/DALI",
+      "evidence_location": "Line 93",
+      "confidence": "high",
+      "reason": "Access link for the DALI dataset."
+    },
+    {
+      "field": "dataset_dali_talt_access",
+      "value": "https://github.com/emirdemirel/DALI-TestSet4ALT",
+      "normalized_value": "https://github.com/emirdemirel/DALI-TestSet4ALT",
+      "evidence": "https://github.com/emirdemirel/DALI-TestSet4ALT",
+      "evidence_location": "Line 102",
+      "confidence": "high",
+      "reason": "Access link for the DALI-TALT dataset."
+    },
+    {
+      "field": "dataset_jamendo_access",
+      "value": "https://github.com/f90/jamendolyrics",
+      "normalized_value": "https://github.com/f90/jamendolyrics",
+      "evidence": "https://github.com/f90/jamendolyrics",
+      "evidence_location": "Line 109",
+      "confidence": "high",
+      "reason": "Access link for the Jamendo dataset."
+    },
+    {
+      "field": "training_command_single_stream",
+      "value": "./run_singlestream.sh $audiopath",
+      "normalized_value": "./run_singlestream.sh $audiopath",
+      "evidence": "./run_singlestream.sh $audiopath",
+      "evidence_location": "Line 130",
+      "confidence": "high",
+      "reason": "Command to run the single-stream training recipe."
+    },
+    {
+      "field": "training_command_mstrenet",
+      "value": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo}",
+      "normalized_value": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo}",
+      "evidence": "./run_mstrenet.sh --datadir_damp ${datadir_damp} --datadir_dali ${datadir_dali} \\\n    --datadir_dali_talt ${datadir_dali_talt} --datadir_jamendo ${datadir_jamendo} \\",
+      "evidence_location": "Lines 137-139",
+      "confidence": "high",
+      "reason": "Command to run the MStre-Net training recipe."
+    },
+    {
+      "field": "extraction_command",
+      "value": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "normalized_value": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "evidence": "./extract_phn_posteriorgram.sh $audio_path $save_path",
+      "evidence_location": "Line 175",
+      "confidence": "high",
+      "reason": "Command to extract phoneme posteriorgrams."
+    },
+    {
+      "field": "citation_mstrenet",
+      "value": "@article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}",
+      "normalized_value": "@article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}",
+      "evidence": "  @article{demirel2021mstre,\n  title={MSTRE-Net: Multistreaming Acoustic Modeling for Automatic Lyrics Transcription},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={In proceedings of ISMIR2021},\n  year={2021}\n}",
+      "evidence_location": "Lines 190-196",
+      "confidence": "high",
+      "reason": "BibTeX citation for the MStre-Net paper."
+    },
+    {
+      "field": "citation_single_stream",
+      "value": "@inproceedings{demirel2020,\n  title={Automatic lyrics transcription using dilated convolutional neural networks with self-attention},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={International Joint Conference on Neural Networks},\n  publisher={IEEE},\n  year={2020}\n}",
+      "normalized_value": "@inproceedings{demirel2020,\n  title={Automatic lyrics transcription using dilated convolutional neural networks with self-attention},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={International Joint Conference on Neural Networks},\n  publisher={IEEE},\n  year={2020}\n}",
+      "evidence": "@inproceedings{demirel2020,\n  title={Automatic lyrics transcription using dilated convolutional neural networks with self-attention},\n  author={Demirel, Emir and Ahlb{\"a}ck, Sven and Dixon, Simon},\n  booktitle={International Joint Conference on Neural Networks},\n  publisher={IEEE},\n  year={2020}\n}",
+      "evidence_location": "Lines 202-208",
+      "confidence": "high",
+      "reason": "BibTeX citation for the single-stream paper."
+    },
+    {
+      "field": "paper_url_mstrenet",
+      "value": "https://arxiv.org/pdf/2108.02625.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2108.02625.pdf",
+      "evidence": "https://arxiv.org/pdf/2108.02625.pdf",
+      "evidence_location": "Line 197",
+      "confidence": "high",
+      "reason": "URL to the MStre-Net paper."
+    },
+    {
+      "field": "paper_url_single_stream",
+      "value": "https://arxiv.org/abs/2007.06486",
+      "normalized_value": "https://arxiv.org/abs/2007.06486",
+      "evidence": "https://arxiv.org/abs/2007.06486",
+      "evidence_location": "Line 211",
+      "confidence": "high",
+      "reason": "URL to the single-stream paper."
+    },
+    {
+      "field": "license",
+      "value": "Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International",
+      "normalized_value": "Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International",
+      "evidence": "This work is licensed under Creative Commons - Attribution-NonCommercial-ShareAlike 4.0 International",
+      "evidence_location": "Line 234",
+      "confidence": "high",
+      "reason": "Specifies the license for reuse."
+    }
+  ]
+}

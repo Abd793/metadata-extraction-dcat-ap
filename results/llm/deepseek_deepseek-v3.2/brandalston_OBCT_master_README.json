@@ -1,0 +1,175 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Optimal Binary Classification Trees",
+      "normalized_value": "Optimal Binary Classification Trees",
+      "evidence": "# Optimal Binary Classification Trees",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Direct title of the artifact for identification."
+    },
+    {
+      "field": "paper_title",
+      "value": "Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees",
+      "normalized_value": "Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees",
+      "evidence": "[\"Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees\"](http://arxiv.org/abs/2206.04857)",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Associated research paper for scientific context and citation."
+    },
+    {
+      "field": "paper_url",
+      "value": "http://arxiv.org/abs/2206.04857",
+      "normalized_value": "http://arxiv.org/abs/2206.04857",
+      "evidence": "http://arxiv.org/abs/2206.04857",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Direct link to the paper for access and citation."
+    },
+    {
+      "field": "authors",
+      "value": "Brandon Alston, Hamidreza Validi, and Illya V. Hicks",
+      "normalized_value": "Brandon Alston, Hamidreza Validi, and Illya V. Hicks",
+      "evidence": "by Brandon Alston, Hamidreza Validi, and Illya V. Hicks.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Identifies the paper authors for attribution."
+    },
+    {
+      "field": "copyright_holders",
+      "value": "Copyright 2023 Brandon C. Alston, Hamidreza Validi",
+      "normalized_value": "Copyright 2023 Brandon C. Alston, Hamidreza Validi",
+      "evidence": "Copyright 2023 Brandon C. Alston, Hamidreza Validi",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Legal copyright information for reuse."
+    },
+    {
+      "field": "programming_language",
+      "value": "python3.x (version 3.6 and higher)",
+      "normalized_value": "python3.x (version 3.6 and higher)",
+      "evidence": "python3.x (version 3.6 and higher)",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Required language version for environment setup."
+    },
+    {
+      "field": "solver_requirement",
+      "value": "Gurobi",
+      "normalized_value": "Gurobi",
+      "evidence": "requires the [Gurobi](https://www.gurobi.com/) solver",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Essential external solver needed for execution."
+    },
+    {
+      "field": "dependencies_file",
+      "value": "requirements.txt",
+      "normalized_value": "requirements.txt",
+      "evidence": "Required python3.x packages are outlined in `requirements.txt`.",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "File containing package dependencies for installation."
+    },
+    {
+      "field": "main_script",
+      "value": "model_runs.py",
+      "normalized_value": "model_runs.py",
+      "evidence": "`model_runs.py` contains the code necessary to create, solve, and report results in a `.csv` file of each instance called by the user",
+      "evidence_location": "line 17",
+      "confidence": "high",
+      "reason": "Primary entry point script for running the models."
+    },
+    {
+      "field": "run_parameters",
+      "value": "- d : `str list`, name(s) of dataset file(s)\n- h : `int list`, maximum depth(s) of trained tree(s)\n- t : `float`, gurobi model time limit in s\n- m : `str list`, list of model(s) to use\n- r : `int list`, list of random seed(s) to use\n  - `rand_seed = [k,...,k]`  for repeat use of randome state `k`\n- p : `str`, objective priority parameter used in bi-objective modeling\n- e : `str list`, model extra(s), if applicable\n- f : `str`, results output file `.csv`\n- l : `boolean`, log console to `.txt` file and write model to `.lp` file, both saved to the `\\log_files` folder for each model called by user",
+      "normalized_value": "- d : `str list`, name(s) of dataset file(s) - h : `int list`, maximum depth(s) of trained tree(s) - t : `float`, gurobi model time limit in s - m : `str list`, list of model(s) to use - r : `int list`, list of random seed(s) to use - `rand_seed = [k,...,k]` for repeat use of randome state `k` - p : `str`, objective priority parameter used in bi-objective modeling - e : `str list`, model extra(s), if applicable - f : `str`, results output file `.csv` - l : `boolean`, log console to `.txt` file and write model to `.lp` file, both saved to the `\\log_files` folder for each model called by user",
+      "evidence": "- d : `str list`, name(s) of dataset file(s)\n- h : `int list`, maximum depth(s) of trained tree(s)\n- t : `float`, gurobi model time limit in s\n- m : `str list`, list of model(s) to use\n- r : `int list`, list of random seed(s) to use\n  - `rand_seed = [k,...,k]`  for repeat use of randome state `k`\n- p : `str`, objective priority parameter used in bi-objective modeling\n- e : `str list`, model extra(s), if applicable\n- f : `str`, results output file `.csv`\n- l : `boolean`, log console to `.txt` file and write model to `.lp` file, both saved to the `\\log_files` folder for each model called by user",
+      "evidence_location": "lines 31-40",
+      "confidence": "high",
+      "reason": "Parameters needed to configure and run the code for reproduction."
+    },
+    {
+      "field": "target_column_assumption",
+      "value": "target column is labeled 'target'",
+      "normalized_value": "target column is labeled 'target'",
+      "evidence": "We assume the target column is labeled `'target'`.",
+      "evidence_location": "line 42",
+      "confidence": "high",
+      "reason": "Assumption about data format for correct usage and preparation."
+    },
+    {
+      "field": "output_file_default",
+      "value": "If results output file `-f file` is `None` the `models_run.py` calls automatically generates a `.csv` results file with the parameters of the function call as the file name saved to the `\\results_files` folder",
+      "normalized_value": "If results output file `-f file` is `None` the `models_run.py` calls automatically generates a `.csv` results file with the parameters of the function call as the file name saved to the `\\results_files` folder",
+      "evidence": "If results output file `-f file` is `None` the `models_run.py` calls automatically generates a `.csv` results file with the parameters of the function call as the file name saved to the `\\results_files` folder",
+      "evidence_location": "lines 43-44",
+      "confidence": "high",
+      "reason": "Describes default output behavior for ease of use."
+    },
+    {
+      "field": "example_command_main",
+      "value": "import model_runs\n\ndata_names = ['soybean_small', 'monk3', 'car', 'iris', 'climate']\nheights = [3, 4, 5]\nmodels = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']\ntime_limit = 3600\nextras = ['max_features-25']\nrand_seed = [13, 58, 94, None]\ntuning = None\nfile = 'example_code_output.csv'\nconsol_log = False\nmodel_runs.main(\n  [\"-d\", data_names, \"-h\", heights, \"-m\", models, \"-t\", time_limit,\n   \"-e\", extras, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])",
+      "normalized_value": "import model_runs data_names = ['soybean_small', 'monk3', 'car', 'iris', 'climate'] heights = [3, 4, 5] models = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3'] time_limit = 3600 extras = ['max_features-25'] rand_seed = [13, 58, 94, None] tuning = None file = 'example_code_output.csv' consol_log = False model_runs.main( [\"-d\", data_names, \"-h\", heights, \"-m\", models, \"-t\", time_limit, \"-e\", extras, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])",
+      "evidence": "```python\nimport model_runs\n\ndata_names = ['soybean_small', 'monk3', 'car', 'iris', 'climate']\nheights = [3, 4, 5]\nmodels = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']\ntime_limit = 3600\nextras = ['max_features-25']\nrand_seed = [13, 58, 94, None]\ntuning = None\nfile = 'example_code_output.csv'\nconsol_log = False\nmodel_runs.main(\n  [\"-d\", data_names, \"-h\", heights, \"-m\", models, \"-t\", time_limit,\n   \"-e\", extras, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])\n```",
+      "evidence_location": "lines 49-64",
+      "confidence": "high",
+      "reason": "Concrete example command for running the main function for reproduction."
+    },
+    {
+      "field": "example_command_biobjective",
+      "value": "import model_runs\n\ndata_names = ['ionosphere', 'monk2', 'breat_cancer', 'climate']\nheight = 5\nmodels = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']\ntime_limit = 3600\nrand_seed = [13, 58, 94, None]\npriorities = ['data','equal']\nfile = 'biobj_example.csv'\nconsol_log = False\nmodel_runs.biobjective(\n  [\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", time_limit,\n   \"-p\", priorities, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])",
+      "normalized_value": "import model_runs data_names = ['ionosphere', 'monk2', 'breat_cancer', 'climate'] height = 5 models = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3'] time_limit = 3600 rand_seed = [13, 58, 94, None] priorities = ['data','equal'] file = 'biobj_example.csv' consol_log = False model_runs.biobjective( [\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", time_limit, \"-p\", priorities, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])",
+      "evidence": "```python\nimport model_runs\n\ndata_names = ['ionosphere', 'monk2', 'breat_cancer', 'climate']\nheight = 5\nmodels = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']\ntime_limit = 3600\nrand_seed = [13, 58, 94, None]\npriorities = ['data','equal']\nfile = 'biobj_example.csv'\nconsol_log = False\nmodel_runs.biobjective(\n  [\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", time_limit,\n   \"-p\", priorities, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])\n```",
+      "evidence_location": "lines 74-88",
+      "confidence": "high",
+      "reason": "Example command for bi-objective modeling usage."
+    },
+    {
+      "field": "example_command_pareto",
+      "value": "import model_runs\n\nheight = 4\nmodels = ['FlowOCT', 'MCF1', 'MCF2', 'CUT1', 'CUT2']\nrand_states = [15, 78, 0]\ndata_names = ['hayes_roth', 'house_votes_84']\nfile = 'pareto_example.csv'\nmodel_runs.pareto([\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", 3600, \"-r\", rand_states, \"-f\", file])",
+      "normalized_value": "import model_runs height = 4 models = ['FlowOCT', 'MCF1', 'MCF2', 'CUT1', 'CUT2'] rand_states = [15, 78, 0] data_names = ['hayes_roth', 'house_votes_84'] file = 'pareto_example.csv' model_runs.pareto([\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", 3600, \"-r\", rand_states, \"-f\", file])",
+      "evidence": "```python\nimport model_runs\n\nheight = 4\nmodels = ['FlowOCT', 'MCF1', 'MCF2', 'CUT1', 'CUT2']\nrand_states = [15, 78, 0]\ndata_names = ['hayes_roth', 'house_votes_84']\nfile = 'pareto_example.csv'\nmodel_runs.pareto([\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", 3600, \"-r\", rand_states, \"-f\", file])\n```",
+      "evidence_location": "lines 111-120",
+      "confidence": "high",
+      "reason": "Example command for generating Pareto frontier."
+    },
+    {
+      "field": "models_list",
+      "value": "['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']",
+      "normalized_value": "['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']",
+      "evidence": "models = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']",
+      "evidence_location": "line 54",
+      "confidence": "high",
+      "reason": "List of model names implemented or used in the code."
+    },
+    {
+      "field": "datasets_folder",
+      "value": "`Datasets/` folder contains the datasets used for generating experimental results\n  - Note: `Datasets/` should also be used as the folder where user dataset files are stored",
+      "normalized_value": "`Datasets/` folder contains the datasets used for generating experimental results - Note: `Datasets/` should also be used as the folder where user dataset files are stored",
+      "evidence": "`Datasets/` folder contains the datasets used for generating experimental results\n  - Note: `Datasets/` should also be used as the folder where user dataset files are stored",
+      "evidence_location": "lines 21-22",
+      "confidence": "high",
+      "reason": "Specifies the directory for dataset files for data preparation."
+    },
+    {
+      "field": "acknowledgment_repositories",
+      "value": "The code found in `BendersOCT.py`, `FlowOCT.py`, `FlowOCTTree.py,` and `FlowOCTutils.py` are taken directly from the [Strong Tree](https://github.com/pashew94/StrongTree/) GitHub public repository.\nThe code found in `Quant-BnB-2D.jl`, `Quant-BnB-3D.jl`, `Algorithms.jl`, `lowerbound_middle.jl` are taken directly from the [Quant-BnB](https://github.com/mengxianglgal/Quant-BnB) GitHub public repository.",
+      "normalized_value": "The code found in `BendersOCT.py`, `FlowOCT.py`, `FlowOCTTree.py,` and `FlowOCTutils.py` are taken directly from the [Strong Tree](https://github.com/pashew94/StrongTree/) GitHub public repository. The code found in `Quant-BnB-2D.jl`, `Quant-BnB-3D.jl`, `Algorithms.jl`, `lowerbound_middle.jl` are taken directly from the [Quant-BnB](https://github.com/mengxianglgal/Quant-BnB) GitHub public repository.",
+      "evidence": "The code found in `BendersOCT.py`, `FlowOCT.py`, `FlowOCTTree.py,` and `FlowOCTutils.py` are taken directly from the [Strong Tree](https://github.com/pashew94/StrongTree/) GitHub public repository.\nThe code found in `Quant-BnB-2D.jl`, `Quant-BnB-3D.jl`, `Algorithms.jl`, `lowerbound_middle.jl` are taken directly from the [Quant-BnB](https://github.com/mengxianglgal/Quant-BnB) GitHub public repository.",
+      "evidence_location": "lines 137-138",
+      "confidence": "high",
+      "reason": "Attribution for reused code from other repositories."
+    },
+    {
+      "field": "terms_of_use",
+      "value": "All rights and ownership are to the original owners.",
+      "normalized_value": "All rights and ownership are to the original owners.",
+      "evidence": "All rights and ownership are to the original owners.",
+      "evidence_location": "line 140",
+      "confidence": "medium",
+      "reason": "Indicates terms for reuse and attribution, though not a standard license."
+    }
+  ]
+}

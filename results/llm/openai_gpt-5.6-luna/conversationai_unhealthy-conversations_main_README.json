@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "The Unhealthy Comments Corpus (UCC)",
+      "normalized_value": "The Unhealthy Comments Corpus (UCC)",
+      "evidence": "# The Unhealthy Comments Corpus (UCC)",
+      "evidence_location": "1; header",
+      "confidence": "high",
+      "reason": "Identifies the artifact and its corpus name."
+    },
+    {
+      "field": "corpus_description",
+      "value": "The Unhealthy Comments Corpus (UCC) is corpus of 44355 comments intended to assist in research on identifying subtle attributes which contribute to unhealthy conversations online.",
+      "normalized_value": "The Unhealthy Comments Corpus (UCC) is corpus of 44355 comments intended to assist in research on identifying subtle attributes which contribute to unhealthy conversations online.",
+      "evidence": "The Unhealthy Comments Corpus (UCC) is corpus of 44355 comments intended to assist in research on identifying subtle attributes which contribute to unhealthy conversations online.",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "States the corpus size and its intended research purpose."
+    },
+    {
+      "field": "annotation_labels",
+      "value": "Each comment is labelled as either 'healthy' or 'unhealthy', in addition to binary labels for the presence of six potentially 'unhealthy' sub-attributes: (1) hostile; (2) antagonistic, insulting, provocative or trolling; (3) dismissive; (4) condescending or patronising; (5) sarcastic; and/or (6) an unfair generalisation.",
+      "normalized_value": "Each comment is labelled as either 'healthy' or 'unhealthy', in addition to binary labels for the presence of six potentially 'unhealthy' sub-attributes: (1) hostile; (2) antagonistic, insulting, provocative or trolling; (3) dismissive; (4) condescending or patronising; (5) sarcastic; and/or (6) an unfair generalisation.",
+      "evidence": "Each comment is labelled as either 'healthy' or 'unhealthy', in addition to binary labels for the presence of six potentially 'unhealthy' sub-attributes: (1) hostile; (2) antagonistic, insulting, provocative or trolling; (3) dismissive; (4) condescending or patronising; (5) sarcastic; and/or (6) an unfair generalisation.",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Defines the target labels available for each comment."
+    },
+    {
+      "field": "label_confidence_scores",
+      "value": "Each label also has an associated confidence score.",
+      "normalized_value": "Each label also has an associated confidence score.",
+      "evidence": "Each label also has an associated confidence score.",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Indicates that labels include confidence information."
+    },
+    {
+      "field": "paper",
+      "value": "https://arxiv.org/abs/2010.07410",
+      "normalized_value": "https://arxiv.org/abs/2010.07410",
+      "evidence": "[paper](https://arxiv.org/abs/2010.07410)",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Provides the paper describing annotation, quality control, statistics, and baseline results."
+    },
+    {
+      "field": "data_files",
+      "value": "train.csv, test.csv, and val.csv",
+      "normalized_value": "train.csv, test.csv, and val.csv",
+      "evidence": "The dataset is provided as three .csv files, `train.csv`, `test.csv`, and `val.csv`.",
+      "evidence_location": "14-16; ## The data",
+      "confidence": "high",
+      "reason": "Names the primary dataset files needed to use the corpus."
+    },
+    {
+      "field": "annotation_data_file",
+      "value": "unhealthy_full.csv",
+      "normalized_value": "unhealthy_full.csv",
+      "evidence": "We also provide the individual annotations of each comment in `unhealthy_full.csv`.",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Identifies the file containing individual judgments for alternative aggregation or filtering."
+    },
+    {
+      "field": "annotator_metadata",
+      "value": "Each of these annotations includes the trustworthiness score of the annotator, allowing users to impose higher trustworthiness thresholds or apply different aggregation methods as desired.",
+      "normalized_value": "Each of these annotations includes the trustworthiness score of the annotator, allowing users to impose higher trustworthiness thresholds or apply different aggregation methods as desired.",
+      "evidence": "Each of these annotations includes the trustworthiness score of the annotator, allowing users to impose higher trustworthiness thresholds or apply different aggregation methods as desired.",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Describes reusable annotator-level metadata and supported customization of aggregation."
+    },
+    {
+      "field": "source_corpus",
+      "value": "the [comments](https://github.com/sfu-discourse-lab/SOCC#comments) corpus within the [SFU Opinion and Comments Corpus](https://github.com/sfu-discourse-lab/SOCC)",
+      "normalized_value": "the [comments](https://github.com/sfu-discourse-lab/SOCC#comments) corpus within the [SFU Opinion and Comments Corpus](https://github.com/sfu-discourse-lab/SOCC)",
+      "evidence": "The raw comments were taken from the [comments](https://github.com/sfu-discourse-lab/SOCC#comments) corpus within the [SFU Opinion and Comments Corpus](https://github.com/sfu-discourse-lab/SOCC).",
+      "evidence_location": "20",
+      "confidence": "high",
+      "reason": "Identifies the provenance of the raw comments and links to the source corpus."
+    },
+    {
+      "field": "baseline_method",
+      "value": "Fine-tuning pre-trained BERT",
+      "normalized_value": "Fine-tuning pre-trained BERT",
+      "evidence": "Fine-tuning pre-trained BERT produces classifiers with modest performance compared to the state of the art for sequence classification.",
+      "evidence_location": "24; ## Baseline classification",
+      "confidence": "high",
+      "reason": "Names the model approach used for the baseline classifiers."
+    },
+    {
+      "field": "baseline_notebook",
+      "value": "UnhealthyConversations.ipynb",
+      "normalized_value": "UnhealthyConversations.ipynb",
+      "evidence": "We provide notebooks to replicate our baseline classification results on this dataset in `UnhealthyConversations.ipynb`.",
+      "evidence_location": "24",
+      "confidence": "high",
+      "reason": "Provides the notebook intended to reproduce baseline classification results."
+    },
+    {
+      "field": "evaluation_metric",
+      "value": "ROC AUC",
+      "normalized_value": "ROC AUC",
+      "evidence": "For each comment, we randomly hold out one annotator to act as our 'human model' and use the aggregated score of the other annotators as the ground truth to compute the ROC AUC (repeated 5 times then averaged).",
+      "evidence_location": "30",
+      "confidence": "high",
+      "reason": "Defines the evaluation metric and the human-model comparison procedure."
+    },
+    {
+      "field": "baseline_auc_results",
+      "value": "| Attribute}  | Human AUC | BERT AUC |\n|------------ |-----------|----------|\n|Antagonistic |0.71       |  0.82    | \n|Condescending| 0.72      |    0.78  |\n|Dismissive   | 0.68      | 0.82     |\n|Generalisation | 0.73    | 0.74     |\n|Hostile       |0.76      |0.84      |\n|Sarcastic     |0.72      |0.64      |\n|Unhealthy     | 0.62     | 0.69   |",
+      "normalized_value": "| Attribute} | Human AUC | BERT AUC | |------------ |-----------|----------| |Antagonistic |0.71 | 0.82 | |Condescending| 0.72 | 0.78 | |Dismissive | 0.68 | 0.82 | |Generalisation | 0.73 | 0.74 | |Hostile |0.76 |0.84 | |Sarcastic |0.72 |0.64 | |Unhealthy | 0.62 | 0.69 |",
+      "evidence": "| Attribute}  | Human AUC | BERT AUC |\n|------------ |-----------|----------|\n|Antagonistic |0.71       |  0.82    | \n|Condescending| 0.72      |    0.78  |\n|Dismissive   | 0.68      | 0.82     |\n|Generalisation | 0.73    | 0.74     |\n|Hostile       |0.76      |0.84      |\n|Sarcastic     |0.72      |0.64      |\n|Unhealthy     | 0.62     | 0.69   |",
+      "evidence_location": "32-40",
+      "confidence": "high",
+      "reason": "Reports the human and BERT ROC AUC values for each annotated attribute."
+    },
+    {
+      "field": "auc_analysis_notebook",
+      "value": "AUC_analysis.ipynb",
+      "normalized_value": "AUC_analysis.ipynb",
+      "evidence": "Code for  this analysis is in `AUC_analysis.ipynb`.",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "Identifies the notebook containing code for the AUC analysis."
+    },
+    {
+      "field": "license",
+      "value": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License",
+      "normalized_value": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License",
+      "evidence": "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.",
+      "evidence_location": "47",
+      "confidence": "high",
+      "reason": "States the license governing reuse of the work."
+    },
+    {
+      "field": "license_url",
+      "value": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "normalized_value": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "evidence": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "evidence_location": "48",
+      "confidence": "high",
+      "reason": "Provides the authoritative license link for reuse terms."
+    }
+  ]
+}

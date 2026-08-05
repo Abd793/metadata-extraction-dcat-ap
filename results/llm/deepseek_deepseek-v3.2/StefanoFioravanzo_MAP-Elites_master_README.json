@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "MAP-Elites for Constrained Optimization",
+      "normalized_value": "MAP-Elites for Constrained Optimization",
+      "evidence": "## MAP-Elites for Constrained Optimization",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Title of the artifact, primary identifier."
+    },
+    {
+      "field": "artifact_description",
+      "value": "Python implementation of the [MAP Elites algorithm](https://arxiv.org/abs/1504.04909) (originally devised for unconstrained optimization), for constrained optimization problems.",
+      "normalized_value": "Python implementation of the [MAP Elites algorithm](https://arxiv.org/abs/1504.04909) (originally devised for unconstrained optimization), for constrained optimization problems.",
+      "evidence": "Python implementation of the [MAP Elites algorithm](https://arxiv.org/abs/1504.04909) (originally devised for unconstrained optimization), for constrained optimization problems.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Core description of the artifact's purpose and method."
+    },
+    {
+      "field": "paper_reference",
+      "value": "More details can be found in our original [GECCO paper](https://dl.acm.org/doi/10.1145/3319619.3321939) and its [extended arXiv version](https://arxiv.org/abs/1902.00703).",
+      "normalized_value": "More details can be found in our original [GECCO paper](https://dl.acm.org/doi/10.1145/3319619.3321939) and its [extended arXiv version](https://arxiv.org/abs/1902.00703).",
+      "evidence": "More details can be found in our original [GECCO paper](https://dl.acm.org/doi/10.1145/3319619.3321939) and its [extended arXiv version](https://arxiv.org/abs/1902.00703).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Links to associated scientific papers for context and details."
+    },
+    {
+      "field": "project_structure",
+      "value": ".\n├── controller.py\n├── map_elites\n│   ├── mapelites.py\n│   ├── plot_utils.py\n│   └── ea_operators.py\n├── functions.py\n├── config.ini\n├── mapelites_continuous_opt.py\n├── notebooks\n│   ├── plotter.ipynb\n│   └── n_dim_plotter.ipynb\n└── utils\n    └── fcnsuite.c",
+      "normalized_value": ".\n├── controller.py\n├── map_elites\n│   ├── mapelites.py\n│   ├── plot_utils.py\n│   └── ea_operators.py\n├── functions.py\n├── config.ini\n├── mapelites_continuous_opt.py\n├── notebooks\n│   ├── plotter.ipynb\n│   └── n_dim_plotter.ipynb\n└── utils\n    └── fcnsuite.c",
+      "evidence": ".\n├── controller.py\n├── map_elites\n│   ├── mapelites.py\n│   ├── plot_utils.py\n│   └── ea_operators.py\n├── functions.py\n├── config.ini\n├── mapelites_continuous_opt.py\n├── notebooks\n│   ├── plotter.ipynb\n│   └── n_dim_plotter.ipynb\n└── utils\n    └── fcnsuite.c",
+      "evidence_location": "lines 8-22",
+      "confidence": "high",
+      "reason": "Shows the file layout, crucial for understanding and navigating the codebase."
+    },
+    {
+      "field": "core_class",
+      "value": "The main MAPElites class in `mapelites.py` is an abstract class implementing all the base logic common to any instance of the algorithm.",
+      "normalized_value": "The main MAPElites class in `mapelites.py` is an abstract class implementing all the base logic common to any instance of the algorithm.",
+      "evidence": "The main MAPElites class in `mapelites.py` is an abstract class implementing all the base logic common to any instance of the algorithm.",
+      "evidence_location": "line 24",
+      "confidence": "high",
+      "reason": "Identifies the central component of the implementation for users."
+    },
+    {
+      "field": "implementation_requirements",
+      "value": "To run the algorithm you need to subclass `MapElites` and implement `map_x_to_b()`, `performance_measure()`, `generate_random_solution()`, `generate_feature_dimensions()`.",
+      "normalized_value": "To run the algorithm you need to subclass `MapElites` and implement `map_x_to_b()`, `performance_measure()`, `generate_random_solution()`, `generate_feature_dimensions()`.",
+      "evidence": "To run the algorithm you need to subclass `MapElites` and implement `map_x_to_b()`, `performance_measure()`, `generate_random_solution()`, `generate_feature_dimensions()`.",
+      "evidence_location": "line 25",
+      "confidence": "high",
+      "reason": "Specific methods that must be implemented to use the algorithm, key for reproducibility."
+    },
+    {
+      "field": "plotting_capability",
+      "value": "This implementation supports up to 4 dimensional heatmap plotting, with nested dimensions in the same plot.",
+      "normalized_value": "This implementation supports up to 4 dimensional heatmap plotting, with nested dimensions in the same plot.",
+      "evidence": "This implementation supports up to 4 dimensional heatmap plotting, with nested dimensions in the same plot.",
+      "evidence_location": "line131",
+      "confidence": "high",
+      "reason": "Specifies the visualization capabilities, important for result analysis."
+    },
+    {
+      "field": "evolutionary_operators_location",
+      "value": "Crossover and mutation evolutionary operators are implemented in `ea_operators.py`",
+      "normalized_value": "Crossover and mutation evolutionary operators are implemented in `ea_operators.py`",
+      "evidence": "Crossover and mutation evolutionary operators are implemented in `ea_operators.py`",
+      "evidence_location": "line 133",
+      "confidence": "high",
+      "reason": "Location of key evolutionary algorithm components."
+    },
+    {
+      "field": "configuration_method",
+      "value": "All the configuration can be done using the `config.ini` file provided at the root of the project.",
+      "normalized_value": "All the configuration can be done using the `config.ini` file provided at the root of the project.",
+      "evidence": "All the configuration can be done using the `config.ini` file provided at the root of the project.",
+      "evidence_location": "line 185",
+      "confidence": "high",
+      "reason": "Describes the primary method for configuring runs."
+    },
+    {
+      "field": "example_configuration",
+      "value": "[mapelites]\n; random seed\nseed = 54\n; number of initial random samples\nbootstrap_individuals = 100\n; numer of map elites iterations\niterations = 10000\n; True: solve a minimization problem. False: solve a maximization problem\nminimization = True\n\n[opt_function]\n; Define the optimization function.\n; This must be the name of a class subclassing the abstract class ConstrainedFunction. See functions.py for reference\nname = C16\n; Number of dimensions of the optimization function\ndimensions = 4\n; Define heatmap bins for feature dimensions\n; Name each bin as `bin_{name of constraint}` where `name_of_constraint` is the name of the constraint\n; function implemented in the specified optimization function class\n; If you want to define ONE bin for all constraints, name it `bin_all`\n; Note: The bins must be defined by numbers, except for the `inf` label which can be defined ether at the beginning\n; of at the end of the bins.\n; bin_all = inf,0.0,1.0,2.0,3.0,4.0,inf\nbin_g1 = inf,0.0,1.0,2.0,3.0,4.0,inf\nbin_g2 = inf,0.0,1.0,2.0,3.0,inf\nbin_h1 = inf,0.0,1.0,2.0,3.0,4.0,5.0,inf\nbin_h2 = inf,0.0,1.0,2.0,inf\n\n[crossover]\n; Crossover function taken from ea_operators.py file.\n; Name of called function is {type}_crossover(). If `type = UNIFORM` then the function call is `uniform_crossover()`\ntype = UNIFORM\n; list of arguments to the above function\nindpb = 0.5\n\n[mutation]\n; mutation function taken from ea_operators.py file.\n; name of called function is {type}_mutation(). If `type = GAUSSIAN` then the function call is `gaussian_mutation()`\ntype = GAUSSIAN\n; Define how to manage the boundaries during mutation, meaning how the algorithm should behave in case it mutates outside of the function domain.\n; There are three possible cases:\n; - `saturation`: x in [a,b], if after mutation x>b -> x=b; if x<a -> x=a\n; - `bounce`: if x is mutated outside [a, b] it is bounced back by the remaining delta\n; - `toroidal`: if x is mutated outside [a, b], x is bounced to the other bound by the remaining delta, 'pac-man' style\nboundary = saturation\n; list of arguments to the above function\nmu = 0\nsigma = 0.2\n; probability of each attribute to be mutated\nindpb = 0.5",
+      "normalized_value": "[mapelites]\n; random seed\nseed = 54\n; number of initial random samples\nbootstrap_individuals = 100\n; numer of map elites iterations\niterations = 10000\n; True: solve a minimization problem. False: solve a maximization problem\nminimization = True\n\n[opt_function]\n; Define the optimization function.\n; This must be the name of a class subclassing the abstract class ConstrainedFunction. See functions.py for reference\nname = C16\n; Number of dimensions of the optimization function\ndimensions = 4\n; Define heatmap bins for feature dimensions\n; Name each bin as `bin_{name of constraint}` where `name_of_constraint` is the name of the constraint\n; function implemented in the specified optimization function class\n; If you want to define ONE bin for all constraints, name it `bin_all`\n; Note: The bins must be defined by numbers, except for the `inf` label which can be defined ether at the beginning\n; of at the end of the bins.\n; bin_all = inf,0.0,1.0,2.0,3.0,4.0,inf\nbin_g1 = inf,0.0,1.0,2.0,3.0,4.0,inf\nbin_g2 = inf,0.0,1.0,2.0,3.0,inf\nbin_h1 = inf,0.0,1.0,2.0,3.0,4.0,5.0,inf\nbin_h2 = inf,0.0,1.0,2.0,inf\n\n[crossover]\n; Crossover function taken from ea_operators.py file.\n; Name of called function is {type}_crossover(). If `type = UNIFORM` then the function call is `uniform_crossover()`\ntype = UNIFORM\n; list of arguments to the above function\nindpb = 0.5\n\n[mutation]\n; mutation function taken from ea_operators.py file.\n; name of called function is {type}_mutation(). If `type = GAUSSIAN` then the function call is `gaussian_mutation()`\ntype = GAUSSIAN\n; Define how to manage the boundaries during mutation, meaning how the algorithm should behave in case it mutates outside of the function domain.\n; There are three possible cases:\n; - `saturation`: x in [a,b], if after mutation x>b -> x=b; if x<a -> x=a\n; - `bounce`: if x is mutated outside [a, b] it is bounced back by the remaining delta\n; - `toroidal`: if x is mutated outside [a, b], x is bounced to the other bound by the remaining delta, 'pac-man' style\nboundary = saturation\n; list of arguments to the above function\nmu = 0\nsigma = 0.2\n; probability of each attribute to be mutated\nindpb = 0.5",
+      "evidence": "[mapelites]\n; random seed\nseed = 54\n; number of initial random samples\nbootstrap_individuals = 100\n; numer of map elites iterations\niterations = 10000\n; True: solve a minimization problem. False: solve a maximization problem\nminimization = True\n\n[opt_function]\n; Define the optimization function.\n; This must be the name of a class subclassing the abstract class ConstrainedFunction. See functions.py for reference\nname = C16\n; Number of dimensions of the optimization function\ndimensions = 4\n; Define heatmap bins for feature dimensions\n; Name each bin as `bin_{name of constraint}` where `name_of_constraint` is the name of the constraint\n; function implemented in the specified optimization function class\n; If you want to define ONE bin for all constraints, name it `bin_all`\n; Note: The bins must be defined by numbers, except for the `inf` label which can be defined ether at the beginning\n; of at the end of the bins.\n; bin_all = inf,0.0,1.0,2.0,3.0,4.0,inf\nbin_g1 = inf,0.0,1.0,2.0,3.0,4.0,inf\nbin_g2 = inf,0.0,1.0,2.0,3.0,inf\nbin_h1 = inf,0.0,1.0,2.0,3.0,4.0,5.0,inf\nbin_h2 = inf,0.0,1.0,2.0,inf\n\n[crossover]\n; Crossover function taken from ea_operators.py file.\n; Name of called function is {type}_crossover(). If `type = UNIFORM` then the function call is `uniform_crossover()`\ntype = UNIFORM\n; list of arguments to the above function\nindpb = 0.5\n\n[mutation]\n; mutation function taken from ea_operators.py file.\n; name of called function is {type}_mutation(). If `type = GAUSSIAN` then the function call is `gaussian_mutation()`\ntype = GAUSSIAN\n; Define how to manage the boundaries during mutation, meaning how the algorithm should behave in case it mutates outside of the function domain.\n; There are three possible cases:\n; - `saturation`: x in [a,b], if after mutation x>b -> x=b; if x<a -> x=a\n; - `bounce`: if x is mutated outside [a, b] it is bounced back by the remaining delta\n; - `toroidal`: if x is mutated outside [a, b], x is bounced to the other bound by the remaining delta, 'pac-man' style\nboundary = saturation\n; list of arguments to the above function\nmu = 0\nsigma = 0.2\n; probability of each attribute to be mutated\nindpb = 0.5",
+      "evidence_location": "lines 35-86",
+      "confidence": "high",
+      "reason": "Detailed configuration template essential for setting up and reproducing runs."
+    },
+    {
+      "field": "example_application",
+      "value": "In this project we extended the core MAP-Elites algorithm to solve continuous constrained optimization problem.",
+      "normalized_value": "In this project we extended the core MAP-Elites algorithm to solve continuous constrained optimization problem.",
+      "evidence": "In this project we extended the core MAP-Elites algorithm to solve continuous constrained optimization problem.",
+      "evidence_location": "lines 89-90",
+      "confidence": "high",
+      "reason": "Describes the specific type of optimization problem targeted, providing context."
+    },
+    {
+      "field": "citation",
+      "value": "If you use this code (or any modified version of it), please add the following reference:\n\n```\nStefano Fioravanzo and Giovanni Iacca. 2019. Evaluating MAP-Elites\non constrained optimization problems. In Proceedings of the Genetic \nand Evolutionary Computation Conference Companion (GECCO '19). \nAssociation for Computing Machinery, New York, NY, USA, 253–254. \nDOI:https://doi.org/10.1145/3319619.3321939\n\n@inproceedings{fioravanzo2019evaluating,\n  title={Evaluating MAP-Elites on Constrained Optimization Problems},\n  author={Fioravanzo, Stefano and Iacca, Giovanni},\n  booktitle={Genetic and Evolutionary Computation Conference Companion},\n  pages={253--254},\n  year={2019},\n  organization={ACM}\n}",
+      "normalized_value": "If you use this code (or any modified version of it), please add the following reference:\n\n```\nStefano Fioravanzo and Giovanni Iacca. 2019. Evaluating MAP-Elites\non constrained optimization problems. In Proceedings of the Genetic \nand Evolutionary Computation Conference Companion (GECCO '19). \nAssociation for Computing Machinery, New York, NY, USA, 253–254. \nDOI:https://doi.org/10.1145/3319619.3321939\n\n@inproceedings{fioravanzo2019evaluating,\n  title={Evaluating MAP-Elites on Constrained Optimization Problems},\n  author={Fioravanzo, Stefano and Iacca, Giovanni},\n  booktitle={Genetic and Evolutionary Computation Conference Companion},\n  pages={253--254},\n  year={2019},\n  organization={ACM}\n}",
+      "evidence": "```\nStefano Fioravanzo and Giovanni Iacca. 2019. Evaluating MAP-Elites\non constrained optimization problems. In Proceedings of the Genetic \nand Evolutionary Computation Conference Companion (GECCO '19). \nAssociation for Computing Machinery, New York, NY, USA, 253–254. \nDOI:https://doi.org/10.1145/3319619.3321939\n\n@inproceedings{fioravanzo2019evaluating,\n  title={Evaluating MAP-Elites on Constrained Optimization Problems},\n  author={Fioravanzo, Stefano and Iacca, Giovanni},\n  booktitle={Genetic and Evolutionary Computation Conference Companion},\n  pages={253--254},\n  year={2019},\n  organization={ACM}\n}",
+      "evidence_location": "lines 96-110",
+      "confidence": "high",
+      "reason": "Required citation for reuse, including full bibliographic details and BibTeX."
+    },
+    {
+      "field": "citation_doi",
+      "value": "DOI:https://doi.org/10.1145/3319619.3321939",
+      "normalized_value": "DOI:https://doi.org/10.1145/3319619.3321939",
+      "evidence": "DOI:https://doi.org/10.1145/3319619.3321939",
+      "evidence_location": "line 101",
+      "confidence": "high",
+      "reason": "Persistent identifier for the associated paper, crucial for citation and lookup."
+    }
+  ]
+}

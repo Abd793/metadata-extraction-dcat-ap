@@ -1,0 +1,247 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Improving Deep Metric Learning by Divide and Conquer",
+      "normalized_value": "Improving Deep Metric Learning by Divide and Conquer",
+      "evidence": "# Improving Deep Metric Learning by Divide and Conquer",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Title of the repository/artifact as given in the top-level header."
+    },
+    {
+      "field": "description",
+      "value": "PyTorch implementation for the paper _Improving Deep Metric Learning by Divide and Conquer_ accepted to **TPAMI** (Sep. 2021), which is our follow-up paper of [_Divide and Conquer the Embedding Space for Metric Learning (CVPR 2019)_](https://github.com/CompVis/metric-learning-divide-and-conquer)",
+      "normalized_value": "PyTorch implementation for the paper Improving Deep Metric Learning by Divide and Conquer accepted to TPAMI (Sep. 2021), follow-up of Divide and Conquer the Embedding Space for Metric Learning (CVPR 2019)",
+      "evidence": "PyTorch implementation for the paper _Improving Deep Metric \nLearning by Divide and Conquer_ accepted to **TPAMI** (Sep. 2021), which is our follow-up paper of\n[_Divide and Conquer the Embedding Space for Metric Learning (CVPR 2019)_](https://github.com/CompVis/metric-learning-divide-and-conquer)",
+      "evidence_location": "4-6 (## About)",
+      "confidence": "high",
+      "reason": "Describes what the artifact is and its relation to prior work."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/2109.04003",
+      "normalized_value": "https://arxiv.org/abs/2109.04003",
+      "evidence": "* arxiv: https://arxiv.org/abs/2109.04003 or",
+      "evidence_location": "9 (## About - Links)",
+      "confidence": "high",
+      "reason": "Link to the arXiv preprint of the paper this artifact implements."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://ieeexplore.ieee.org/document/9540303",
+      "normalized_value": "https://ieeexplore.ieee.org/document/9540303",
+      "evidence": "* TPAMI early access: https://ieeexplore.ieee.org/document/9540303",
+      "evidence_location": "10 (## About - Links)",
+      "confidence": "high",
+      "reason": "Link to the TPAMI early access publication of the paper this artifact implements."
+    },
+    {
+      "field": "related_repository",
+      "value": "https://github.com/CompVis/metric-learning-divide-and-conquer",
+      "normalized_value": "https://github.com/CompVis/metric-learning-divide-and-conquer",
+      "evidence": "* Divide and Conquer the Embedding Space for Metric Learning (our previous paper on CVPR 2019): \nhttps://github.com/CompVis/metric-learning-divide-and-conquer",
+      "evidence_location": "165-166 (## Related Repos)",
+      "confidence": "high",
+      "reason": "Related repository for the predecessor paper (CVPR 2019)."
+    },
+    {
+      "field": "related_repository",
+      "value": "https://github.com/Confusezius/Revisiting_Deep_Metric_Learning_PyTorch",
+      "normalized_value": "https://github.com/Confusezius/Revisiting_Deep_Metric_Learning_PyTorch",
+      "evidence": "* An easy-to-use repo to start your DML research, containing collections of models, losses, and samplers implemented in PyTorch:\nhttps://github.com/Confusezius/Revisiting_Deep_Metric_Learning_PyTorch",
+      "evidence_location": "167-168 (## Related Repos)",
+      "confidence": "high",
+      "reason": "Related repository useful for deep metric learning research using this codebase's ecosystem."
+    },
+    {
+      "field": "dependency",
+      "value": "PyTorch 1.1.0",
+      "normalized_value": "PyTorch 1.1.0",
+      "evidence": "* PyTorch 1.1.0",
+      "evidence_location": "15 (## Requirements)",
+      "confidence": "high",
+      "reason": "Specifies the required PyTorch version for reproducing the environment."
+    },
+    {
+      "field": "dependency",
+      "value": "Faiss-GPU >= 1.5.0, [Link](https://github.com/facebookresearch/faiss)",
+      "normalized_value": "Faiss-GPU >= 1.5.0",
+      "evidence": "* Faiss-GPU >= 1.5.0, [Link](https://github.com/facebookresearch/faiss)",
+      "evidence_location": "16 (## Requirements)",
+      "confidence": "high",
+      "reason": "Specifies required Faiss-GPU version dependency."
+    },
+    {
+      "field": "dependency",
+      "value": "albumentations >= 0.4.5, [Link](https://github.com/albumentations-team/albumentations)",
+      "normalized_value": "albumentations >= 0.4.5",
+      "evidence": "* albumentations >= 0.4.5, [Link](https://github.com/albumentations-team/albumentations)",
+      "evidence_location": "17 (## Requirements)",
+      "confidence": "high",
+      "reason": "Specifies required albumentations version dependency."
+    },
+    {
+      "field": "training_command",
+      "value": "python train.py --experiment margin_loss_resnet50 \\\n                --dataset=sop -i=$NAME -seed=4 \\\n                --sz-embedding=512 --mod-epoch=2 --nb-clusters=32 --nb-epochs=180 \\\n                --batch-size=80 --num-samples-per-class=2 --backend=faiss-gpu \\\n                --lr-gamma=0.3 --mod-epoch-freeze=1 --sampler=distanceweighted \\\n                --weight-decay=1e-4 --batch-sampler=adaptbalanced \\\n                --force-full-embedding-epoch=80 --mask-lr-mult=100 \\\n                --masking-lambda=0.01 --mask-wd-mult=1 --dataset-dir=$datadir",
+      "normalized_value": "python train.py --experiment margin_loss_resnet50 --dataset=sop -i=$NAME -seed=4 --sz-embedding=512 --mod-epoch=2 --nb-clusters=32 --nb-epochs=180 --batch-size=80 --num-samples-per-class=2 --backend=faiss-gpu --lr-gamma=0.3 --mod-epoch-freeze=1 --sampler=distanceweighted --weight-decay=1e-4 --batch-sampler=adaptbalanced --force-full-embedding-epoch=80 --mask-lr-mult=100 --masking-lambda=0.01 --mask-wd-mult=1 --dataset-dir=$datadir",
+      "evidence": "python train.py --experiment margin_loss_resnet50 \\\n                --dataset=sop -i=$NAME -seed=4 \\\n                --sz-embedding=512 --mod-epoch=2 --nb-clusters=32 --nb-epochs=180 \\\n                --batch-size=80 --num-samples-per-class=2 --backend=faiss-gpu \\\n                --lr-gamma=0.3 --mod-epoch-freeze=1 --sampler=distanceweighted \\\n                --weight-decay=1e-4 --batch-sampler=adaptbalanced \\\n                --force-full-embedding-epoch=80 --mask-lr-mult=100 \\\n                --masking-lambda=0.01 --mask-wd-mult=1 --dataset-dir=$datadir",
+      "evidence_location": "29-36 (### Training)",
+      "confidence": "high",
+      "reason": "Concrete example command to reproduce training with default parameters."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "eval_model.py <log and model checkpoint path>",
+      "normalized_value": "eval_model.py <log and model checkpoint path>",
+      "evidence": "* **evaluate a trained model**: `eval_model.py <log and model checkpoint path>`. It is suggested to put only those models (checkpoints and logs) you want to eval into one folder otherwise it will evaluate all the models ind the folder",
+      "evidence_location": "57 (### Evaluate or check results during)",
+      "confidence": "high",
+      "reason": "Command for evaluating a trained model checkpoint, needed for reproduction/evaluation workflow."
+    },
+    {
+      "field": "results_browsing_command",
+      "value": "python browse_results <log path>",
+      "normalized_value": "python browse_results <log path>",
+      "evidence": "You can print a summary of the results with `python browse_results <log path>`.",
+      "evidence_location": "60 (### Evaluate or check results during)",
+      "confidence": "high",
+      "reason": "Command to view/summarize intermediate/final results from logs."
+    },
+    {
+      "field": "supported_dataset",
+      "value": "CUB200-2011 (http://www.vision.caltech.edu/visipedia/CUB-200.html)",
+      "normalized_value": "CUB200-2011",
+      "evidence": "* CUB200-2011 (http://www.vision.caltech.edu/visipedia/CUB-200.html)",
+      "evidence_location": "67 (### Datasets)",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset the method was tested on with its source link."
+    },
+    {
+      "field": "supported_dataset",
+      "value": "CARS196 (https://ai.stanford.edu/~jkrause/cars/car_dataset.html)",
+      "normalized_value": "CARS196",
+      "evidence": "* CARS196 (https://ai.stanford.edu/~jkrause/cars/car_dataset.html)",
+      "evidence_location": "68 (### Datasets)",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset the method was tested on with its source link."
+    },
+    {
+      "field": "supported_dataset",
+      "value": "Stanford Online Products (http://cvgl.stanford.edu/projects/lifted_struct/)",
+      "normalized_value": "Stanford Online Products",
+      "evidence": "* Stanford Online Products (http://cvgl.stanford.edu/projects/lifted_struct/)",
+      "evidence_location": "69 (### Datasets)",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset the method was tested on with its source link."
+    },
+    {
+      "field": "supported_dataset",
+      "value": "In-shop Clothes Retrieval Benchmark (http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html)",
+      "normalized_value": "In-shop Clothes Retrieval Benchmark",
+      "evidence": "* In-shop Clothes Retrieval Benchmark (http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html)",
+      "evidence_location": "70 (### Datasets)",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset the method was tested on with its source link."
+    },
+    {
+      "field": "supported_dataset",
+      "value": "PKU VehicleID (https://www.pkuml.org/resources/pku-vehicleid.html)",
+      "normalized_value": "PKU VehicleID",
+      "evidence": "* PKU VehicleID (https://www.pkuml.org/resources/pku-vehicleid.html)",
+      "evidence_location": "71 (### Datasets)",
+      "confidence": "high",
+      "reason": "Names a benchmark dataset the method was tested on with its source link."
+    },
+    {
+      "field": "result_metric",
+      "value": "CUB200: learn Margin/Distance NMI 69.84, mARP 55.11, Recall@1 67.71 -- @2 78.14 -- @4 85.80 -- @8 91.46",
+      "normalized_value": "CUB200 learn Margin/Distance: NMI=69.84, mARP=55.11, Recall@1=67.71, Recall@2=78.14, Recall@4=85.80, Recall@8=91.46",
+      "evidence": "learn |  Margin/Distance   \t| 69.84 | 55.11 | __67.71__ --  78.14 --  85.80 --  91.46",
+      "evidence_location": "126 (## Results - CUB200)",
+      "confidence": "high",
+      "reason": "Reported quantitative benchmark result (recall@k, NMI, mARP) for CUB200 dataset with learn variant."
+    },
+    {
+      "field": "result_metric",
+      "value": "Cars196: fixed Margin/Distance NMI 70.57, mARP 65.89, Recall@1 87.22 -- @2 92.19 -- @4 95.39 -- @8 97.43",
+      "normalized_value": "Cars196 fixed Margin/Distance: NMI=70.57, mARP=65.89, Recall@1=87.22, Recall@2=92.19, Recall@4=95.39, Recall@8=97.43",
+      "evidence": "fixed |  Margin/Distance    | 70.57 | 65.89 | __87.22__ -- 92.19 --  95.39 --  97.43    ",
+      "evidence_location": "133 (## Results - Cars196)",
+      "confidence": "high",
+      "reason": "Reported quantitative benchmark result for Cars196 dataset with fixed variant."
+    },
+    {
+      "field": "result_metric",
+      "value": "In-Shop Clothes: learn Margin/Distance NMI 89.88, mARP 88.50, Recall@1 90.49 -- @10 97.48 -- @20 98.23 -- @30 98.51",
+      "normalized_value": "In-Shop Clothes learn Margin/Distance: NMI=89.88, mARP=88.50, Recall@1=90.49, Recall@10=97.48, Recall@20=98.23, Recall@30=98.51",
+      "evidence": "learn |  Margin/Distance    | 89.88 | 88.50| __90.49__ -- 97.48 -- 98.23 -- 98.51",
+      "evidence_location": "142 (## Results - In-Shop Clothes)",
+      "confidence": "high",
+      "reason": "Reported quantitative benchmark result for In-Shop Clothes dataset with learn variant."
+    },
+    {
+      "field": "result_metric",
+      "value": "Online Products: learn Margin/Distance NMI 89.68, mARP 79.60, Recall@1 79.80 -- @10 90.46 -- @100 95.26",
+      "normalized_value": "Online Products learn Margin/Distance: NMI=89.68, mARP=79.60, Recall@1=79.80, Recall@10=90.46, Recall@100=95.26",
+      "evidence": "learn |  Margin/Distance   \t| 89.68 | 79.60| __79.80__ --  90.46 --  95.26",
+      "evidence_location": "149 (## Results - Online Products)",
+      "confidence": "high",
+      "reason": "Reported quantitative benchmark result for Stanford Online Products dataset with learn variant."
+    },
+    {
+      "field": "result_metric",
+      "value": "VID (Large eval set): fixed Margin/Distance NMI 90.78, mARP 92.89, Recall@1 94.01 -- @5 96.18",
+      "normalized_value": "VID (Large eval set) fixed Margin/Distance: NMI=90.78, mARP=92.89, Recall@1=94.01, Recall@5=96.18",
+      "evidence": "fixed |  Margin/Distance\t| 90.78 | 92.89 | __94.01__ -- 96.18",
+      "evidence_location": "156 (## Results - VID)",
+      "confidence": "high",
+      "reason": "Reported quantitative benchmark result for PKU VehicleID dataset (Large eval set) with fixed variant."
+    },
+    {
+      "field": "results_disclaimer",
+      "value": "The results above are slightly different from those on the paper, as they were obtained before the code refactoring and with PyTorch (0.4.1) and Faiss (1.4.0). Some deviations in results based on different PyTorch/Cuda/Faiss versions and hardware (e.g. between P100 and RTX GPUs) are to be expected.",
+      "normalized_value": "The results above are slightly different from those on the paper, as they were obtained before the code refactoring and with PyTorch (0.4.1) and Faiss (1.4.0). Some deviations in results based on different PyTorch/Cuda/Faiss versions and hardware (e.g. between P100 and RTX GPUs) are to be expected.",
+      "evidence": "_Disclaimer: The results above are slightly different from those on the paper, as they were obtained before the code refactoring and with PyTorch (0.4.1) and Faiss (1.4.0). Some deviations in results based on different PyTorch/Cuda/Faiss versions and hardware (e.g. between P100 and RTX GPUs) are to be expected._",
+      "evidence_location": "160 (## Results)",
+      "confidence": "high",
+      "reason": "Important caveat about reproducibility of reported results given hardware/software version differences."
+    },
+    {
+      "field": "citation",
+      "value": "@InProceedings{dcesml,\n  title={Divide and Conquer the Embedding Space for Metric Learning},\n  author={Sanakoyeu, Artsiom and Tschernezki, Vadim and B\\\"uchler, Uta and Ommer, Bj\\\"orn},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  year={2019}\n}",
+      "normalized_value": "@InProceedings{dcesml, title={Divide and Conquer the Embedding Space for Metric Learning}, author={Sanakoyeu, Artsiom and Tschernezki, Vadim and Büchler, Uta and Ommer, Björn}, booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}, year={2019}}",
+      "evidence": "@InProceedings{dcesml,\n  title={Divide and Conquer the Embedding Space for Metric Learning},\n  author={Sanakoyeu, Artsiom and Tschernezki, Vadim and B\\\"uchler, Uta and Ommer, Bj\\\"orn},\n  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},\n  year={2019}\n}",
+      "evidence_location": "174-179 (## BibTex)",
+      "confidence": "high",
+      "reason": "BibTeX citation entry for the predecessor CVPR 2019 paper, needed for proper attribution."
+    },
+    {
+      "field": "citation",
+      "value": "@article{sanakoyeu2021improving,\n  title={Improving Deep Metric Learning by Divide and Conquer}, \n  author={Artsiom Sanakoyeu and Pingchuan Ma and Vadim Tschernezki and Björn Ommer},\n  journal={IEEE Transactions on pattern analysis and machine intelligence},\n  year={2021},\n  publisher={IEEE}\n}",
+      "normalized_value": "@article{sanakoyeu2021improving, title={Improving Deep Metric Learning by Divide and Conquer}, author={Artsiom Sanakoyeu and Pingchuan Ma and Vadim Tschernezki and Björn Ommer}, journal={IEEE Transactions on pattern analysis and machine intelligence}, year={2021}, publisher={IEEE}}",
+      "evidence": "@article{sanakoyeu2021improving,\n  title={Improving Deep Metric Learning by Divide and Conquer}, \n  author={Artsiom Sanakoyeu and Pingchuan Ma and Vadim Tschernezki and Björn Ommer},\n  journal={IEEE Transactions on pattern analysis and machine intelligence},\n  year={2021},\n  publisher={IEEE}\n}",
+      "evidence_location": "181-187 (## BibTex)",
+      "confidence": "high",
+      "reason": "BibTeX citation entry for the main paper implemented by this artifact, needed for proper attribution."
+    },
+    {
+      "field": "task",
+      "value": "Deep Metric Learning",
+      "normalized_value": "Deep Metric Learning",
+      "evidence": "# Improving Deep Metric Learning by Divide and Conquer",
+      "evidence_location": "1",
+      "confidence": "medium",
+      "reason": "The title and overall content indicate the artifact addresses the deep metric learning task."
+    },
+    {
+      "field": "logging_tool",
+      "value": "Weights&Biases",
+      "normalized_value": "Weights & Biases",
+      "evidence": "- **--wandb-enabled**: by setting this flag, you will enable the [Weights&Biases](https://wandb.ai/site) logging. Please change the w&b initial setting at the last part of `/experiment/margin_loss_resnet50.py` accordingly.",
+      "evidence_location": "49 (### Training)",
+      "confidence": "high",
+      "reason": "Optional logging integration supported by the training script, useful for experiment tracking reproduction."
+    }
+  ]
+}

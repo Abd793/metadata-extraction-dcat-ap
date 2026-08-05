@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "story-distiller",
+      "normalized_value": "story-distiller",
+      "evidence": "# story-distiller",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the project name from the main header"
+    },
+    {
+      "field": "purpose",
+      "value": "embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc",
+      "normalized_value": "embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc",
+      "evidence": "This project attempts to embed a story into a music playlist by sorting the playlist (i.e., sequencing it) so that the order of the music follows a narrative arc.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Clearly describes the main purpose and functionality of the project"
+    },
+    {
+      "field": "programming_language",
+      "value": "Python",
+      "normalized_value": "Python",
+      "evidence": "This project is implemented in [Python](https://www.python.org/)",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Explicitly states the implementation language"
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch",
+      "normalized_value": "PyTorch",
+      "evidence": "and uses models learned with [PyTorch](https://pytorch.org).",
+      "evidence_location": "10",
+      "confidence": "high",
+      "reason": "Identifies the machine learning framework used"
+    },
+    {
+      "field": "installation_command",
+      "value": "git clone --sparse git@github.com:dylanashley/story-distiller.git",
+      "normalized_value": "git clone --sparse git@github.com:dylanashley/story-distiller.git",
+      "evidence": "git clone --sparse git@github.com:dylanashley/story-distiller.git",
+      "evidence_location": "14",
+      "confidence": "high",
+      "reason": "Provides the exact command for cloning the repository with sparse checkout"
+    },
+    {
+      "field": "dependency_installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Provides the command to install Python dependencies"
+    },
+    {
+      "field": "additional_dependency",
+      "value": "ffmpeg",
+      "normalized_value": "ffmpeg",
+      "evidence": "it is also necessary to separately install the [ffmpeg](https://ffmpeg.org/) tool",
+      "evidence_location": "22",
+      "confidence": "high",
+      "reason": "Identifies an additional required tool for full functionality"
+    },
+    {
+      "field": "build_command",
+      "value": "make all",
+      "normalized_value": "make all",
+      "evidence": "make all",
+      "evidence_location": "26",
+      "confidence": "high",
+      "reason": "Command to build the project on Linux/macOS"
+    },
+    {
+      "field": "install_command",
+      "value": "sudo make install",
+      "normalized_value": "sudo make install",
+      "evidence": "sudo make install",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Command to install the built executable"
+    },
+    {
+      "field": "usage_command",
+      "value": "sdistil files [files ...] >> playlist.txt",
+      "normalized_value": "sdistil files [files ...] >> playlist.txt",
+      "evidence": "sdistil files [files ...] >> playlist.txt",
+      "evidence_location": "35",
+      "confidence": "high",
+      "reason": "Primary command-line usage pattern for the tool"
+    },
+    {
+      "field": "audio_processing_library",
+      "value": "librosa",
+      "normalized_value": "librosa",
+      "evidence": "[librosa](https://librosa.org/doc/latest/index.html) is used to process the audio files",
+      "evidence_location": "38",
+      "confidence": "high",
+      "reason": "Identifies the library used for audio processing"
+    },
+    {
+      "field": "web_app_command",
+      "value": "./app.py",
+      "normalized_value": "./app.py",
+      "evidence": "./app.py",
+      "evidence_location": "49",
+      "confidence": "high",
+      "reason": "Command to run the web application"
+    },
+    {
+      "field": "repository_url",
+      "value": "git@github.com:dylanashley/story-distiller.git",
+      "normalized_value": "git@github.com:dylanashley/story-distiller.git",
+      "evidence": "git clone git@github.com:dylanashley/story-distiller.git",
+      "evidence_location": "64",
+      "confidence": "high",
+      "reason": "Provides the repository URL for full cloning"
+    },
+    {
+      "field": "paper_citation",
+      "value": "On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media by Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber",
+      "normalized_value": "On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media by Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber",
+      "evidence": "On the Distillation of Stories for Transferring Narrative Arcs in Collections of Independent Media by Dylan R. Ashley, Vincent Herrmann, Zachary Friggstad, and Jürgen Schmidhuber.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Provides the academic paper that the project is based on"
+    },
+    {
+      "field": "reproduction_scripts",
+      "value": "album_extractor.py, movie_extractor.py, template_learner.py",
+      "normalized_value": "album_extractor.py, movie_extractor.py, template_learner.py",
+      "evidence": "the scripts needed to learn the PyTorch models for extracting the narrative essence from either music albums (`album_extractor.py`) or movie frames (`movie_extractor.py`) and compute the lower bounds for the mutual information of the different features, - the scripts for learning a set of template curves from scalar descriptions of items in a set of collections (`template_learner.py`),",
+      "evidence_location": "56-58",
+      "confidence": "high",
+      "reason": "Lists the scripts available for reproducing research results"
+    },
+    {
+      "field": "data_directory",
+      "value": "data/",
+      "normalized_value": "data/",
+      "evidence": "the preprocessed album data used to train the original PyTorch models for the music albums (`data/`)",
+      "evidence_location": "59",
+      "confidence": "high",
+      "reason": "Identifies the directory containing training data"
+    },
+    {
+      "field": "results_directory",
+      "value": "results/",
+      "normalized_value": "results/",
+      "evidence": "the learned PyTorch models and template curves (`results/`)",
+      "evidence_location": "60",
+      "confidence": "high",
+      "reason": "Identifies the directory containing trained models and results"
+    },
+    {
+      "field": "code_style",
+      "value": "black",
+      "normalized_value": "black",
+      "evidence": "[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Indicates the code formatting standard used in the project"
+    }
+  ]
+}

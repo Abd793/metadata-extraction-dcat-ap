@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Recursive Visual Attention in Visual Dialog",
+      "normalized_value": "Recursive Visual Attention in Visual Dialog",
+      "evidence": "Recursive Visual Attention in Visual Dialog",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the project title and primary identifier."
+    },
+    {
+      "field": "task",
+      "value": "Visual Dialog",
+      "normalized_value": "Visual Dialog",
+      "evidence": "Recursive Visual Attention in Visual Dialog",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Clearly indicates the machine learning task addressed by the code."
+    },
+    {
+      "field": "framework",
+      "value": "PyTorch v1.0",
+      "normalized_value": "PyTorch v1.0",
+      "evidence": "This code is implemented using PyTorch v1.0, and provides out of the box support with CUDA 9 and CuDNN 7.",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Specifies the core deep learning framework and version required for reproduction."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python 3.6",
+      "normalized_value": "Python 3.6",
+      "evidence": "conda create -n visdial-ch python=3.6",
+      "evidence_location": "34",
+      "confidence": "high",
+      "reason": "Defines the exact Python version used in the environment setup."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "CUDA 9 and CuDNN 7",
+      "normalized_value": "CUDA 9 and CuDNN 7",
+      "evidence": "This code is implemented using PyTorch v1.0, and provides out of the box support with CUDA 9 and CuDNN 7.",
+      "evidence_location": "25",
+      "confidence": "high",
+      "reason": "Specifies GPU compute libraries and versions needed for execution."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://www.github.com/yuleiniu/rva",
+      "normalized_value": "https://www.github.com/yuleiniu/rva",
+      "evidence": "git clone https://www.github.com/yuleiniu/rva",
+      "evidence_location": "33",
+      "confidence": "high",
+      "reason": "Provides the direct link to clone the source code repository."
+    },
+    {
+      "field": "paper_pdf_url",
+      "value": "https://arxiv.org/pdf/1812.02664.pdf",
+      "normalized_value": "https://arxiv.org/pdf/1812.02664.pdf",
+      "evidence": "([PDF](https://arxiv.org/pdf/1812.02664.pdf))",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "Links directly to the official publication PDF for scientific context."
+    },
+    {
+      "field": "base_repository",
+      "value": "batra-mlp-lab/visdial-challenge-starter-pytorch",
+      "normalized_value": "batra-mlp-lab/visdial-challenge-starter-pytorch",
+      "evidence": "This code is reimplemented as a fork of [batra-mlp-lab/visdial-challenge-starter-pytorch][6].",
+      "evidence_location": "19",
+      "confidence": "high",
+      "reason": "Identifies the upstream codebase this implementation is derived from, aiding reproducibility and dependency tracing."
+    },
+    {
+      "field": "dataset",
+      "value": "VisDial v1.0",
+      "normalized_value": "VisDial v1.0",
+      "evidence": "Download the VisDial v1.0 dialog json files from [here][3] and keep it under `$PROJECT_ROOT/data` directory, for default arguments to work effectively.",
+      "evidence_location": "49",
+      "confidence": "high",
+      "reason": "Names the specific dataset version required for training and evaluation."
+    },
+    {
+      "field": "training_command",
+      "value": "python train.py --config-yml configs/rva.yml --gpu-ids 0 # provide more ids for multi-GPU execution other args...",
+      "normalized_value": "python train.py --config-yml configs/rva.yml --gpu-ids 0 # provide more ids for multi-GPU execution other args...",
+      "evidence": "```shell\npython train.py --config-yml configs/rva.yml --gpu-ids 0 # provide more ids for multi-GPU execution other args...\n```",
+      "evidence_location": "100-101",
+      "confidence": "high",
+      "reason": "Provides the exact command to initiate model training, including configuration path and GPU flags."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python evaluate.py --config-yml /path/to/config.yml --load-pthpath /path/to/checkpoint.pth --split val --gpu-ids 0",
+      "normalized_value": "python evaluate.py --config-yml /path/to/config.yml --load-pthpath /path/to/checkpoint.pth --split val --gpu-ids 0",
+      "evidence": "```shell\npython evaluate.py --config-yml /path/to/config.yml --load-pthpath /path/to/checkpoint.pth --split val --gpu-ids 0\n```",
+      "evidence_location": "118",
+      "confidence": "high",
+      "reason": "Provides the exact command to run inference and generate evaluation metrics on a checkpoint."
+    },
+    {
+      "field": "metrics",
+      "value": "Mean reciprocal rank, R@{1, 5, 10}, Mean rank, Normalized Discounted Cumulative Gain (NDCG)",
+      "normalized_value": "Mean reciprocal rank, R@{1, 5, 10}, Mean rank, Normalized Discounted Cumulative Gain (NDCG)",
+      "evidence": "report metrics from the [Visual Dialog paper][5] (Mean reciprocal rank, R@{1, 5, 10}, Mean rank), and Normalized Discounted Cumulative Gain (NDCG), introduced in the first Visual Dialog Challenge (in 2018).",
+      "evidence_location": "121",
+      "confidence": "high",
+      "reason": "Lists the specific quantitative benchmarks reported during evaluation, crucial for comparing results."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@InProceedings{niu2019recursive,\n    author = {Niu, Yulei and Zhang, Hanwang and Zhang, Manli and Zhang, Jianhong and Lu, Zhiwu and Wen, Ji-Rong},\n    title = {Recursive Visual Attention in Visual Dialog},\n    booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n    month = {June},\n    year = {2019}\n}",
+      "normalized_value": "@InProceedings{niu2019recursive, author = {Niu, Yulei and Zhang, Hanwang and Zhang, Manli and Zhang, Jianhong and Lu, Zhiwu and Wen, Ji-Rong}, title = {Recursive Visual Attention in Visual Dialog}, booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, month = {June}, year = {2019}}",
+      "evidence": "```\n@InProceedings{niu2019recursive,\n    author = {Niu, Yulei and Zhang, Hanwang and Zhang, Manli and Zhang, Jianhong and Lu, Zhiwu and Wen, Ji-Rong},\n    title = {Recursive Visual Attention in Visual Dialog},\n    booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},\n    month = {June},\n    year = {2019}\n}\n```",
+      "evidence_location": "8-16",
+      "confidence": "high",
+      "reason": "Provides the complete academic citation details for proper attribution and indexing."
+    },
+    {
+      "field": "installation_dependencies",
+      "value": "requirements.txt",
+      "normalized_value": "requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "39",
+      "confidence": "high",
+      "reason": "Indicates the standard Python dependency file used to install project packages."
+    }
+  ]
+}

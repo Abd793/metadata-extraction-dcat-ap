@@ -1,0 +1,337 @@
+{
+  "metadata": [
+    {
+      "field": "library_name",
+      "value": "Highway",
+      "normalized_value": "Highway",
+      "evidence": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Explicitly names the library"
+    },
+    {
+      "field": "description",
+      "value": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "normalized_value": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "evidence": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Concise description of the artifact's purpose"
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://google.github.io/highway/en/master/",
+      "normalized_value": "https://google.github.io/highway/en/master/",
+      "evidence": "[Documentation](https://google.github.io/highway/en/master/)",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Primary documentation link"
+    },
+    {
+      "field": "license",
+      "value": "dual-licensed as Apache 2 / BSD-3.",
+      "normalized_value": "dual-licensed as Apache 2 / BSD-3.",
+      "evidence": "Previously licensed under Apache 2, now dual-licensed as Apache 2 / BSD-3.",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Specifies licensing terms for reuse"
+    },
+    {
+      "field": "programming_language",
+      "value": "C++",
+      "normalized_value": "C++",
+      "evidence": "Highway is a C++ library",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Primary implementation language"
+    },
+    {
+      "field": "minimum_language_version",
+      "value": "C++11",
+      "normalized_value": "C++11",
+      "evidence": "Highway only requires C++11",
+      "evidence_location": "line267",
+      "confidence": "high",
+      "reason": "Specifies required language version"
+    },
+    {
+      "field": "purpose",
+      "value": "to reliably and economically push the boundaries of what is possible in software.",
+      "normalized_value": "to reliably and economically push the boundaries of what is possible in software.",
+      "evidence": "Highway is for engineers who want to reliably and economically push the boundaries of what is possible in software.",
+      "evidence_location": "lines 14-16",
+      "confidence": "medium",
+      "reason": "Explains the target audience and high-level goal"
+    },
+    {
+      "field": "key_feature",
+      "value": "portable SIMD/vector intrinsics",
+      "normalized_value": "portable SIMD/vector intrinsics",
+      "evidence": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Core technical feature"
+    },
+    {
+      "field": "supported_platforms",
+      "value": "five architectures",
+      "normalized_value": "five architectures",
+      "evidence": "Highway supports five architectures;",
+      "evidence_location": "line 32",
+      "confidence": "high",
+      "reason": "Specifies breadth of platform support"
+    },
+    {
+      "field": "supported_compilers",
+      "value": "four families of compilers",
+      "normalized_value": "four families of compilers",
+      "evidence": "Highway only requires C++11 and supports four families of compilers.",
+      "evidence_location": "lines 34-35",
+      "confidence": "high",
+      "reason": "Important for reproducibility and compatibility"
+    },
+    {
+      "field": "example_demo_url",
+      "value": "https://gcc.godbolt.org/z/KM3ben7ET",
+      "normalized_value": "https://gcc.godbolt.org/z/KM3ben7ET",
+      "evidence": "[multiple targets with dynamic dispatch](https://gcc.godbolt.org/z/KM3ben7ET)",
+      "evidence_location": "line 70",
+      "confidence": "high",
+      "reason": "Link to online demo with specific configuration"
+    },
+    {
+      "field": "example_demo_url",
+      "value": "https://gcc.godbolt.org/z/rGnjMevKG",
+      "normalized_value": "https://gcc.godbolt.org/z/rGnjMevKG",
+      "evidence": "[single target using -m flags](https://gcc.godbolt.org/z/rGnjMevKG)",
+      "evidence_location": "line 72",
+      "confidence": "high",
+      "reason": "Link to alternative online demo"
+    },
+    {
+      "field": "example_project",
+      "value": "Zimtohrli perceptual metric",
+      "normalized_value": "Zimtohrli perceptual metric",
+      "evidence": "Audio: [Zimtohrli perceptual metric](https://github.com/google/zimtohrli)",
+      "evidence_location": "line 81",
+      "confidence": "high",
+      "reason": "Example of a project using the library"
+    },
+    {
+      "field": "package_manager",
+      "value": "vcpkg",
+      "normalized_value": "vcpkg",
+      "evidence": "vcpkg install highway",
+      "evidence_location": "line 272",
+      "confidence": "high",
+      "reason": "Installation command for a specific package manager"
+    },
+    {
+      "field": "supported_architectures_list",
+      "value": "Armv7+, IBM Z, POWER, RISC-V, WebAssembly, x86",
+      "normalized_value": "Armv7+, IBM Z, POWER, RISC-V, WebAssembly, x86",
+      "evidence": "Armv7+: `NEON_WITHOUT_AES`, `NEON`, `NEON_BF16`, `SVE`, `SVE2`, `SVE_256`, `SVE2_128`; IBM Z: `Z14`, `Z15`; POWER: `PPC8` (v2.07), `PPC9` (v3.0), `PPC10` (v3.1B, not yet supported due to compiler bugs, see #1207; also requires QEMU 7.2); RISC-V: `RVV` (1.0); WebAssembly: `WASM`, `WASM_EMU256` (a 2x unrolled version of wasm128, enabled if `HWY_WANT_WASM2` is defined. This will remain supported until it is potentially superseded by a future version of WASM.); x86: `SSE2` `SSSE3` (~Intel Core) `SSE4` (~Nehalem, also includes AES + CLMUL). `AVX2` (~Haswell, also includes BMI2 + F16 + FMA) `AVX3` (~Skylake, AVX-512F/BW/CD/DQ/VL) `AVX3_DL` (~Icelake, includes BitAlg + CLMUL + GFNI + VAES + VBMI + VBMI2 + VNNI + VPOPCNT; requires opt-in by defining `HWY_WANT_AVX3_DL` unless compiling for static dispatch), `AVX3_ZEN4` (like AVX3_DL but optimized for AMD Zen4; requires opt-in by defining `HWY_WANT_AVX3_ZEN4` if compiling for static dispatch, but enabled by default for runtime dispatch), `AVX3_SPR` (~Sapphire Rapids, includes AVX-512FP16)",
+      "evidence_location": "lines 148-171",
+      "confidence": "high",
+      "reason": "Detailed list of supported CPU architectures and their specific targets"
+    },
+    {
+      "field": "total_targets",
+      "value": "24 targets",
+      "normalized_value": "24 targets",
+      "evidence": "Highway supports 24 targets, listed in alphabetical order of platform:",
+      "evidence_location": "line 146",
+      "confidence": "high",
+      "reason": "Quantifies the extent of supported targets"
+    },
+    {
+      "field": "versioning_scheme",
+      "value": "aim to follow the semver.org system (MAJOR.MINOR.PATCH)",
+      "normalized_value": "aim to follow the semver.org system (MAJOR.MINOR.PATCH)",
+      "evidence": "Highway releases aim to follow the semver.org system (MAJOR.MINOR.PATCH), incrementing MINOR after backward-compatible additions and PATCH after backward-compatible fixes.",
+      "evidence_location": "lines 183-185",
+      "confidence": "high",
+      "reason": "Important for understanding compatibility and updates"
+    },
+    {
+      "field": "current_version",
+      "value": "1.0",
+      "normalized_value": "1.0",
+      "evidence": "The current version 1.0 signals an increased focus on backwards compatibility.",
+      "evidence_location": "line 188",
+      "confidence": "high",
+      "reason": "Current major version number"
+    },
+    {
+      "field": "ci_testing",
+      "value": "Continuous integration tests build with a recent version of Clang (running on native x86, or QEMU for RISC-V and Arm) and MSVC 2019 (v19.28, running on native x86).",
+      "normalized_value": "Continuous integration tests build with a recent version of Clang (running on native x86, or QEMU for RISC-V and Arm) and MSVC 2019 (v19.28, running on native x86).",
+      "evidence": "Continuous integration tests build with a recent version of Clang (running on native x86, or QEMU for RISC-V and Arm) and MSVC 2019 (v19.28, running on native x86).",
+      "evidence_location": "lines 194-196",
+      "confidence": "high",
+      "reason": "Describes the testing environment, important for reproducibility"
+    },
+    {
+      "field": "pre_release_testing",
+      "value": "test on x86 with Clang and GCC, and Armv7/8 via GCC cross-compile.",
+      "normalized_value": "test on x86 with Clang and GCC, and Armv7/8 via GCC cross-compile.",
+      "evidence": "Before releases, we also test on x86 with Clang and GCC, and Armv7/8 via GCC cross-compile.",
+      "evidence_location": "line 198",
+      "confidence": "high",
+      "reason": "Additional testing process before releases"
+    },
+    {
+      "field": "build_system",
+      "value": "CMake",
+      "normalized_value": "CMake",
+      "evidence": "This project uses CMake to generate and build.",
+      "evidence_location": "line 220",
+      "confidence": "high",
+      "reason": "Primary build system"
+    },
+    {
+      "field": "dependency",
+      "value": "googletest",
+      "normalized_value": "googletest",
+      "evidence": "Highway's unit tests use [googletest](https://github.com/google/googletest).",
+      "evidence_location": "line 227",
+      "confidence": "high",
+      "reason": "Testing dependency"
+    },
+    {
+      "field": "installation_command",
+      "value": "sudo apt install cmake",
+      "normalized_value": "sudo apt install cmake",
+      "evidence": "sudo apt install cmake",
+      "evidence_location": "line 224",
+      "confidence": "high",
+      "reason": "Command to install a required dependency on Debian-based systems"
+    },
+    {
+      "field": "installation_command",
+      "value": "sudo apt install libgtest-dev",
+      "normalized_value": "sudo apt install libgtest-dev",
+      "evidence": "sudo apt install libgtest-dev",
+      "evidence_location": "line 233",
+      "confidence": "high",
+      "reason": "Command to install optional testing dependency"
+    },
+    {
+      "field": "build_command",
+      "value": "mkdir -p build && cd build\ncmake ..\nmake -j && make test",
+      "normalized_value": "mkdir -p build && cd build cmake .. make -j && make test",
+      "evidence": "mkdir -p build && cd build\ncmake ..\nmake -j && make test",
+      "evidence_location": "lines 246-248",
+      "confidence": "high",
+      "reason": "Standard build and test commands"
+    },
+    {
+      "field": "quick_start_location",
+      "value": "benchmark inside examples/",
+      "normalized_value": "benchmark inside examples/",
+      "evidence": "You can use the `benchmark` inside examples/ as a starting point.",
+      "evidence_location": "line 279",
+      "confidence": "high",
+      "reason": "Points to a starting point for new users"
+    },
+    {
+      "field": "quick_reference_location",
+      "value": "g3doc/quick_reference.md",
+      "normalized_value": "g3doc/quick_reference.md",
+      "evidence": "A [quick-reference page](g3doc/quick_reference.md) briefly lists all operations and their parameters,",
+      "evidence_location": "line 281",
+      "confidence": "high",
+      "reason": "Reference for detailed API information"
+    },
+    {
+      "field": "faq_location",
+      "value": "g3doc/faq.md",
+      "normalized_value": "g3doc/faq.md",
+      "evidence": "The [FAQ](g3doc/faq.md) answers questions about portability, API design and where to find more information.",
+      "evidence_location": "line 285",
+      "confidence": "high",
+      "reason": "Resource for common questions"
+    },
+    {
+      "field": "compiler_optimization_flag",
+      "value": "-O2",
+      "normalized_value": "-O2",
+      "evidence": "For clang and GCC, `-O2` is generally sufficient.",
+      "evidence_location": "line 372",
+      "confidence": "high",
+      "reason": "Recommended compiler optimization flag"
+    },
+    {
+      "field": "msvc_compiler_flag",
+      "value": "/Gv",
+      "normalized_value": "/Gv",
+      "evidence": "For MSVC, we recommend compiling with `/Gv` to allow non-inlined functions to pass vector arguments in registers.",
+      "evidence_location": "line 374",
+      "confidence": "high",
+      "reason": "Specific compiler flag for MSVC"
+    },
+    {
+      "field": "msvc_arch_flag",
+      "value": "/arch:AVX2",
+      "normalized_value": "/arch:AVX2",
+      "evidence": "it is also important to compile with `/arch:AVX2`.",
+      "evidence_location": "line 376",
+      "confidence": "medium",
+      "reason": "Compiler flag for AVX2 target, important for performance"
+    },
+    {
+      "field": "additional_resource",
+      "value": "Highway introduction (slides)",
+      "normalized_value": "Highway introduction (slides)",
+      "evidence": "*   [Highway introduction (slides)](g3doc/highway_intro.pdf)",
+      "evidence_location": "line 484",
+      "confidence": "high",
+      "reason": "Link to introductory presentation"
+    },
+    {
+      "field": "additional_resource",
+      "value": "Overview of instructions per operation on different architectures",
+      "normalized_value": "Overview of instructions per operation on different architectures",
+      "evidence": "*   [Overview of instructions per operation on different architectures](g3doc/instruction_matrix.pdf)",
+      "evidence_location": "line 485",
+      "confidence": "high",
+      "reason": "Performance reference"
+    },
+    {
+      "field": "additional_resource",
+      "value": "Design philosophy and comparison",
+      "normalized_value": "Design philosophy and comparison",
+      "evidence": "*   [Design philosophy and comparison](g3doc/design_philosophy.md)",
+      "evidence_location": "line 486",
+      "confidence": "high",
+      "reason": "Resource for understanding design decisions"
+    },
+    {
+      "field": "additional_resource",
+      "value": "Implementation details",
+      "normalized_value": "Implementation details",
+      "evidence": "*   [Implementation details](g3doc/impl_details.md)",
+      "evidence_location": "line 487",
+      "confidence": "high",
+      "reason": "Technical documentation"
+    },
+    {
+      "field": "contact_email",
+      "value": "janwas@google.com",
+      "normalized_value": "janwas@google.com",
+      "evidence": "Contact: janwas@google.com",
+      "evidence_location": "line 496",
+      "confidence": "high",
+      "reason": "Primary contact for the project"
+    },
+    {
+      "field": "development_tool",
+      "value": "farm-sve",
+      "normalized_value": "farm-sve",
+      "evidence": "We have used [farm-sve](https://gitlab.inria.fr/bramas/farm-sve) by Berenger Bramas; it has proved useful for checking the SVE port on an x86 development machine.",
+      "evidence_location": "lines 491-493",
+      "confidence": "high",
+      "reason": "Acknowledgement of a tool used in development"
+    }
+  ]
+}

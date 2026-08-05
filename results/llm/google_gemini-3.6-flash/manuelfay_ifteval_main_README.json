@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "paper_title",
+      "value": "Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications",
+      "normalized_value": "Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications",
+      "evidence": "# Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Identifies the title of the paper and repository."
+    },
+    {
+      "field": "publication_venue",
+      "value": "EMNLP 2023",
+      "normalized_value": "EMNLP 2023",
+      "evidence": "EMNLP 2023",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the academic conference where the paper was published."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2310.14103",
+      "normalized_value": "https://arxiv.org/abs/2310.14103",
+      "evidence": "https://arxiv.org/abs/2310.14103",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Provides direct URL to the paper on arXiv."
+    },
+    {
+      "field": "abstract",
+      "value": "Instruction Fine-Tuning (IFT) is a powerful paradigm that strengthens the zero-shot capabilities of Large Language Models (LLMs), but in doing so induces new evaluation metric requirements. We show LLM-based metrics to be well adapted to these requirements, and leverage them to conduct an investigation of task-specialization strategies, quantifying the trade-offs that emerge in practical industrial settings. Our findings offer practitioners actionable insights for real-world IFT model deployment.",
+      "normalized_value": "Instruction Fine-Tuning (IFT) is a powerful paradigm that strengthens the zero-shot capabilities of Large Language Models (LLMs), but in doing so induces new evaluation metric requirements. We show LLM-based metrics to be well adapted to these requirements, and leverage them to conduct an investigation of task-specialization strategies, quantifying the trade-offs that emerge in practical industrial settings. Our findings offer practitioners actionable insights for real-world IFT model deployment.",
+      "evidence": "Instruction Fine-Tuning (IFT) is a powerful paradigm that strengthens the zero-shot capabilities of Large Language Models (LLMs), but in doing so induces new evaluation metric requirements. We show LLM-based metrics to be well adapted to these requirements, and leverage them to conduct an investigation of task-specialization strategies, quantifying the trade-offs that emerge in practical industrial settings. Our findings offer practitioners actionable insights for real-world IFT model deployment.",
+      "evidence_location": "8",
+      "confidence": "high",
+      "reason": "Provides a summary of the paper's research focus, methods, and findings."
+    },
+    {
+      "field": "citation",
+      "value": "@misc{faysse2023revisiting,\n      title={Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications}, \n      author={Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo},\n      year={2023},\n      eprint={2310.14103},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG}\n}",
+      "normalized_value": "@misc{faysse2023revisiting, title={Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications}, author={Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo}, year={2023}, eprint={2310.14103}, archivePrefix={arXiv}, primaryClass={cs.LG} }",
+      "evidence": "```\n@misc{faysse2023revisiting,\n      title={Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications}, \n      author={Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo},\n      year={2023},\n      eprint={2310.14103},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG}\n}\n```",
+      "evidence_location": "14-23",
+      "confidence": "high",
+      "reason": "Provides BibTeX format citation for the research paper."
+    },
+    {
+      "field": "authors",
+      "value": "Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo",
+      "normalized_value": "Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo",
+      "evidence": "Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Lists the authors of the publication."
+    },
+    {
+      "field": "target_datasets",
+      "value": "Xsum, SST2, Squad, CONLL",
+      "normalized_value": "Xsum, SST2, Squad, CONLL",
+      "evidence": "Xsum, SST2, Squad, CONLL",
+      "evidence_location": "38",
+      "confidence": "high",
+      "reason": "Lists target classic NLP task datasets used in paper's experiments."
+    },
+    {
+      "field": "result_analysis_notebook",
+      "value": "scripts/result_aggregation/results_viz.ipynb",
+      "normalized_value": "scripts/result_aggregation/results_viz.ipynb",
+      "evidence": "scripts/result_aggregation/results_viz.ipynb",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "Identifies the Jupyter notebook used for aggregating and analyzing experimental results."
+    },
+    {
+      "field": "training_script",
+      "value": "model_training/finetune.py",
+      "normalized_value": "model_training/finetune.py",
+      "evidence": "model_training/finetune.py",
+      "evidence_location": "57",
+      "confidence": "high",
+      "reason": "Identifies the primary script used to execute fine-tuning training."
+    },
+    {
+      "field": "training_command",
+      "value": "sbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8     --output=frac_100u.out     --error=frac_100u.err     --wrap=\"python model_training/finetune.py       --train_data_path data/fractial_code/fractial_code_100_train.jsonl      --output_dir models/fractial_code_100       --micro_batch_size 32       --num_epochs 2       --cutoff_len 512       --val_data_path data/fractial_code/fractial_code_1000_validation.jsonl       --test_data_path data/fractial_code/fractial_code_only_test.jsonl\"",
+      "normalized_value": "sbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8 --output=frac_100u.out --error=frac_100u.err --wrap=\"python model_training/finetune.py --train_data_path data/fractial_code/fractial_code_100_train.jsonl --output_dir models/fractial_code_100 --micro_batch_size 32 --num_epochs 2 --cutoff_len 512 --val_data_path data/fractial_code/fractial_code_1000_validation.jsonl --test_data_path data/fractial_code/fractial_code_only_test.jsonl\"",
+      "evidence": "```bash\nsbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8     --output=frac_100u.out     --error=frac_100u.err     --wrap=\"python model_training/finetune.py       --train_data_path data/fractial_code/fractial_code_100_train.jsonl      --output_dir models/fractial_code_100       --micro_batch_size 32       --num_epochs 2       --cutoff_len 512       --val_data_path data/fractial_code/fractial_code_1000_validation.jsonl       --test_data_path data/fractial_code/fractial_code_only_test.jsonl\"\n```",
+      "evidence_location": "62-64",
+      "confidence": "high",
+      "reason": "Provides the SLURM command template used for model fine-tuning and evaluation."
+    },
+    {
+      "field": "evaluation_scorers",
+      "value": "- Any scorer available through HuggingFace Evaluate\n- BertScore\n- SentenceBert\n- A Reward model trained by OpenAssistant\n- API-access LLMs like GPT4 or GPT3.5\n- Support for Custom heuristics on custom datasets",
+      "normalized_value": "- Any scorer available through HuggingFace Evaluate - BertScore - SentenceBert - A Reward model trained by OpenAssistant - API-access LLMs like GPT4 or GPT3.5 - Support for Custom heuristics on custom datasets",
+      "evidence": "- Any scorer available through HuggingFace Evaluate\n- BertScore\n- SentenceBert\n- A Reward model trained by OpenAssistant\n- API-access LLMs like GPT4 or GPT3.5\n- Support for Custom heuristics on custom datasets",
+      "evidence_location": "72-77",
+      "confidence": "high",
+      "reason": "Lists evaluation metrics and scoring systems integrated into the repository."
+    },
+    {
+      "field": "proprietary_dependency",
+      "value": "illuin_llm_tools",
+      "normalized_value": "illuin_llm_tools",
+      "evidence": "illuin_llm_tools",
+      "evidence_location": "88",
+      "confidence": "high",
+      "reason": "Identifies an external proprietary dependency used for API request caching and parallelization."
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "XPert",
+      "normalized_value": "XPert",
+      "evidence": "# XPert: Peripheral Circuit & Neural Architecture Co-search for Area and Energy-efficient Xbar-based Computing (Design & Automation Conference, 2023)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly identifies the project name in the primary heading."
+    },
+    {
+      "field": "publication_venue",
+      "value": "Design & Automation Conference, 2023",
+      "normalized_value": "Design & Automation Conference, 2023",
+      "evidence": "# XPert: Peripheral Circuit & Neural Architecture Co-search for Area and Energy-efficient Xbar-based Computing (Design & Automation Conference, 2023)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Indicates the conference where the research was presented, aiding academic citation and context."
+    },
+    {
+      "field": "description",
+      "value": "co-searches network architecture in tandem with peripheral parameters such as the type and precision of analog-to-digital converters, crossbar column sharing and the layer-specific input precision using an optimization-based design space exploration.",
+      "normalized_value": "co-searches network architecture in tandem with peripheral parameters such as the type and precision of analog-to-digital converters, crossbar column sharing and the layer-specific input precision using an optimization-based design space exploration.",
+      "evidence": "To this end, we propose XPert, which co-searches network architecture in tandem with peripheral parameters such as the type and precision of analog-to-digital converters, crossbar column sharing and the layer-specific input precision using an optimization-based design space exploration.",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Clearly defines the core methodology and purpose of the tool for hardware-aware neural architecture search."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2303.17646",
+      "normalized_value": "https://arxiv.org/abs/2303.17646",
+      "evidence": "The paper is available at https://arxiv.org/abs/2303.17646",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Provides direct access to the full academic publication describing the method and results."
+    },
+    {
+      "field": "benchmark_datasets",
+      "value": "CIFAR10, TinyImagenet",
+      "normalized_value": "CIFAR10, TinyImagenet",
+      "evidence": "at 92.46% (56.7%) accuracy for CIFAR10 (TinyImagenet) datasets.",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Specifies the exact image classification datasets used for evaluation and reporting results."
+    },
+    {
+      "field": "reported_metrics",
+      "value": "10.24x (4.7x) lower EDAP, 1.72x (1.62x) higher TOPS/W,1.93x (3x) higher TOPS/mm2 at 92.46% (56.7%) accuracy",
+      "normalized_value": "10.24x (4.7x) lower EDAP, 1.72x (1.62x) higher TOPS/W,1.93x (3x) higher TOPS/mm2 at 92.46% (56.7%) accuracy",
+      "evidence": "XPert achieves 10.24x (4.7x) lower EDAP, 1.72x (1.62x) higher TOPS/W,1.93x (3x) higher TOPS/mm2 at 92.46% (56.7%) accuracy for CIFAR10 (TinyImagenet) datasets.",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Captures quantitative performance improvements over baselines across energy-delay-area product, throughput/watt, throughput/area, and accuracy."
+    },
+    {
+      "field": "baseline_model",
+      "value": "VGG16",
+      "normalized_value": "VGG16",
+      "evidence": "Compared to VGG16 baselines, XPert achieves...",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Identifies the reference neural network architecture used for comparative performance evaluation."
+    },
+    {
+      "field": "search_command",
+      "value": "python Phase1_VGG16_backbone.py",
+      "normalized_value": "python Phase1_VGG16_backbone.py",
+      "evidence": "```\npython Phase1_VGG16_backbone.py with the variables described below.\n```",
+      "evidence_location": "8-10",
+      "confidence": "high",
+      "reason": "Primary execution command for running the hardware-aware co-search phase."
+    },
+    {
+      "field": "cli_arguments",
+      "value": "--lr: Learning Rate\n--hw_params: Tuple of #PEs per Tile, #Crossbars per PE, #Tiles, Crossbar Size\n--target_latency: Target Latency\n--target_area: Target Area Constraint (mm^2)\n--epochs: Total Number of Search Epochs\n--wt_prec: Weight Precision\n--cellbit: Number of bits per NVM device\n--area_tolerance: The uncerainity in the on-chip area tolerated in the searched model. ",
+      "normalized_value": "--lr: Learning Rate --hw_params: Tuple of #PEs per Tile, #Crossbars per PE, #Tiles, Crossbar Size --target_latency: Target Latency --target_area: Target Area Constraint (mm^2) --epochs: Total Number of Search Epochs --wt_prec: Weight Precision --cellbit: Number of bits per NVM device --area_tolerance: The uncerainity in the on-chip area tolerated in the searched model.",
+      "evidence": "```\n--lr: Learning Rate\n--hw_params: Tuple of #PEs per Tile, #Crossbars per PE, #Tiles, Crossbar Size\n--target_latency: Target Latency\n--target_area: Target Area Constraint (mm^2)\n--epochs: Total Number of Search Epochs\n--wt_prec: Weight Precision\n--cellbit: Number of bits per NVM device\n--area_tolerance: The uncerainity in the on-chip area tolerated in the searched model. \n```",
+      "evidence_location": "13-22",
+      "confidence": "high",
+      "reason": "Documents all configurable command-line parameters required to customize and reproduce the search process."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python inference.py --model custom",
+      "normalized_value": "python inference.py --model custom",
+      "evidence": "Run the inference.py using \"python inference.py --model custom\"",
+      "evidence_location": "43",
+      "confidence": "high",
+      "reason": "Command specified for executing the C++ hardware simulation/evaluation step after search completion."
+    },
+    {
+      "field": "csv_input_schema",
+      "value": "feature size, feature size, input channels, kernel size, kernel size, output channels, max-pool flag, padding, column sharing, ADC type (1: Flash ADC, 0: SAR ADC), Input Precision, ADC Precision.",
+      "normalized_value": "feature size, feature size, input channels, kernel size, kernel size, output channels, max-pool flag, padding, column sharing, ADC type (1: Flash ADC, 0: SAR ADC), Input Precision, ADC Precision.",
+      "evidence": "feature size, feature size, input channels, kernel size, kernel size, output channels, max-pool flag, padding, column sharing, ADC type (1: Flash ADC, 0: SAR ADC), Input Precision, ADC Precision.",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Defines the exact column order and meaning for the required Network_custom.csv input file used in evaluation."
+    },
+    {
+      "field": "model_config_tuple_format",
+      "value": "(Layer Type: ('C': Convolutional layer, 'L': Linear Layer), input channels, output channels, kernel size, output size ('same': if output feature size is same as input feature size), scaling factor.",
+      "normalized_value": "(Layer Type: ('C': Convolutional layer, 'L': Linear Layer), input channels, output channels, kernel size, output size ('same': if output feature size is same as input feature size), scaling factor.",
+      "evidence": "(Layer Type: ('C': Convolutional layer, 'L': Linear Layer), input channels, output channels, kernel size, output size ('same': if output feature size is same as input feature size), scaling factor.",
+      "evidence_location": "37",
+      "confidence": "high",
+      "reason": "Specifies the precise tuple structure required to define custom neural network layers in the configuration list."
+    },
+    {
+      "field": "upstream_repository",
+      "value": "https://github.com/neurosim/DNN_NeuroSim_V1.3",
+      "normalized_value": "https://github.com/neurosim/DNN_NeuroSim_V1.3",
+      "evidence": "This repository is adapted from the Neurosim platform https://github.com/neurosim/DNN_NeuroSim_V1.3.",
+      "evidence_location": "47",
+      "confidence": "high",
+      "reason": "Identifies the foundational simulation platform this project extends, crucial for understanding dependencies and attribution."
+    }
+  ]
+}

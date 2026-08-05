@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Optimal Binary Classification Trees",
+      "normalized_value": "Optimal Binary Classification Trees",
+      "evidence": "# Optimal Binary Classification Trees",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicitly states the project name in the main heading."
+    },
+    {
+      "field": "paper_title",
+      "value": "Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees",
+      "normalized_value": "Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees",
+      "evidence": "[\"Mixed Integer Linear Optimization Formulations for Learning Optimal Binary Classification Trees\"](http://arxiv.org/abs/2206.04857)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Provides the exact title of the associated academic paper for citation and scientific context."
+    },
+    {
+      "field": "paper_url",
+      "value": "http://arxiv.org/abs/2206.04857",
+      "normalized_value": "http://arxiv.org/abs/2206.04857",
+      "evidence": "(http://arxiv.org/abs/2206.04857)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Direct link to the paper for accessing full methodology, benchmarks, and results."
+    },
+    {
+      "field": "authors",
+      "value": "Brandon Alston, Hamidreza Validi, and Illya V. Hicks",
+      "normalized_value": "Brandon Alston, Hamidreza Validi, and Illya V. Hicks",
+      "evidence": "by Brandon Alston, Hamidreza Validi, and Illya V. Hicks.",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Lists the creators/authors of the paper and codebase for attribution."
+    },
+    {
+      "field": "programming_language",
+      "value": "python3.x",
+      "normalized_value": "python3.x",
+      "evidence": "[python3.x](https://www.python.org/downloads/)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Specifies the primary implementation language."
+    },
+    {
+      "field": "minimum_python_version",
+      "value": "3.6",
+      "normalized_value": "3.6",
+      "evidence": "version 3.6 and higher",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Defines the minimum required Python version for environment compatibility."
+    },
+    {
+      "field": "solver",
+      "value": "Gurobi",
+      "normalized_value": "Gurobi",
+      "evidence": "requires the [Gurobi](https://www.gurobi.com/) solver.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Identifies the mandatory commercial optimization solver required to execute the formulations."
+    },
+    {
+      "field": "requirements_file",
+      "value": "requirements.txt",
+      "normalized_value": "requirements.txt",
+      "evidence": "Required python3.x packages are outlined in `requirements.txt`.",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Points to the dependency manifest needed for reproducible environment setup."
+    },
+    {
+      "field": "target_column_assumption",
+      "value": "'target'",
+      "normalized_value": "'target'",
+      "evidence": "We assume the target column is labeled 'target'.",
+      "evidence_location": "42",
+      "confidence": "high",
+      "reason": "Critical preprocessing assumption that users must adjust if their datasets use different column naming."
+    },
+    {
+      "field": "main_function_example",
+      "value": "import model_runs\n\ndata_names = ['soybean_small', 'monk3', 'car', 'iris', 'climate']\nheights = [3, 4, 5]\nmodels = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']\ntime_limit = 3600\nextras = ['max_features-25']\nrand_seed = [13, 58, 94, None]\ntuning = None\nfile = 'example_code_output.csv'\nconsol_log = False\nmodel_runs.main(\n  [\"-d\", data_names, \"-h\", heights, \"-m\", models, \"-t\", time_limit,\n   \"-e\", extras, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])",
+      "normalized_value": "import model_runs\n\ndata_names = ['soybean_small', 'monk3', 'car', 'iris', 'climate']\nheights = [3, 4, 5]\nmodels = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']\ntime_limit = 3600\nextras = ['max_features-25']\nrand_seed = [13, 58, 94, None]\ntuning = None\nfile = 'example_code_output.csv'\nconsol_log = False\nmodel_runs.main(\n  [\"-d\", data_names, \"-h\", heights, \"-m\", models, \"-t\", time_limit,\n   \"-e\", extras, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])",
+      "evidence": "```python\nimport model_runs\n\ndata_names = ['soybean_small', 'monk3', 'car', 'iris', 'climate']\nheights = [3, 4, 5]\nmodels = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']\ntime_limit = 3600\nextras = ['max_features-25']\nrand_seed = [13, 58, 94, None]\ntuning = None\nfile = 'example_code_output.csv'\nconsol_log = False\nmodel_runs.main(\n  [\"-d\", data_names, \"-h\", heights, \"-m\", models, \"-t\", time_limit,\n   \"-e\", extras, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])\n```",
+      "evidence_location": "49-64",
+      "confidence": "high",
+      "reason": "Provides a complete, runnable Python script demonstrating standard model execution and parameter configuration."
+    },
+    {
+      "field": "terminal_main_command",
+      "value": "python3 import model_runs; model_runs.main -d ['soybean-small','monk3','car','iris','climate'] -h [3,4,5] -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -e ['max_features-25'] -r [13, 58, 94, None] -c None -f 'test_results.csv' -l False",
+      "normalized_value": "python3 import model_runs; model_runs.main -d ['soybean-small','monk3','car','iris','climate'] -h [3,4,5] -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -e ['max_features-25'] -r [13, 58, 94, None] -c None -f 'test_results.csv' -l False",
+      "evidence": "```bash\npython3 import model_runs; model_runs.main -d ['soybean-small','monk3','car','iris','climate'] -h [3,4,5] -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -e ['max_features-25'] -r [13, 58, 94, None] -c None -f 'test_results.csv' -l False\n```",
+      "evidence_location": "66-68",
+      "confidence": "high",
+      "reason": "Shows direct CLI invocation for quick reproduction and testing."
+    },
+    {
+      "field": "biobjective_function_example",
+      "value": "import model_runs\n\ndata_names = ['ionosphere', 'monk2', 'breat_cancer', 'climate']\nheight = 5\nmodels = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']\ntime_limit = 3600\nrand_seed = [13, 58, 94, None]\npriorities = ['data','equal']\nfile = 'biobj_example.csv'\nconsol_log = False\nmodel_runs.biobjective(\n  [\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", time_limit,\n   \"-p\", priorities, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])",
+      "normalized_value": "import model_runs\n\ndata_names = ['ionosphere', 'monk2', 'breat_cancer', 'climate']\nheight = 5\nmodels = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']\ntime_limit = 3600\nrand_seed = [13, 58, 94, None]\npriorities = ['data','equal']\nfile = 'biobj_example.csv'\nconsol_log = False\nmodel_runs.biobjective(\n  [\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", time_limit,\n   \"-p\", priorities, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])",
+      "evidence": "```python\nimport model_runs\n\ndata_names = ['ionosphere', 'monk2', 'breat_cancer', 'climate']\nheight = 5\nmodels = ['MCF1', 'MCF2', 'CUT1-ALL', 'CUT2-FRAC-3']\ntime_limit = 3600\nrand_seed = [13, 58, 94, None]\npriorities = ['data','equal']\nfile = 'biobj_example.csv'\nconsol_log = False\nmodel_runs.biobjective(\n  [\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", time_limit,\n   \"-p\", priorities, \"-r\", rand_seed, \"-f\", file, \"-l\", consol_log])\n```",
+      "evidence_location": "74-88",
+      "confidence": "high",
+      "reason": "Demonstrates how to configure and run hierarchical bi-objective modeling using Gurobi's capabilities."
+    },
+    {
+      "field": "terminal_biobjective_command",
+      "value": "python3 import model_runs; model_runs.biobjective -d ['ionosphere', 'monk2', 'breat_cancer', 'climate'] -h 5 -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -p ['data','equal'] -r [13, 58, 94, None] -f 'biobj_example.csv' -l False",
+      "normalized_value": "python3 import model_runs; model_runs.biobjective -d ['ionosphere', 'monk2', 'breat_cancer', 'climate'] -h 5 -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -p ['data','equal'] -r [13, 58, 94, None] -f 'biobj_example.csv' -l False",
+      "evidence": "```bash\npython3 import model_runs; model_runs.biobjective -d ['ionosphere', 'monk2', 'breat_cancer', 'climate'] -h 5 -m ['MCF1','MCF2','CUT1-ALL','CUT2-FRAC-3'] -t 3600 -p ['data','equal'] -r [13, 58, 94, None] -f 'biobj_example.csv' -l False\n```",
+      "evidence_location": "90-92",
+      "confidence": "high",
+      "reason": "Provides the equivalent terminal command for reproducing bi-objective runs."
+    },
+    {
+      "field": "pareto_function_example",
+      "value": "import model_runs\n\nheight = 4\nmodels = ['FlowOCT', 'MCF1', 'MCF2', 'CUT1', 'CUT2']\nrand_states = [15, 78, 0]\ndata_names = ['hayes_roth', 'house_votes_84']\nfile = 'pareto_example.csv'\nmodel_runs.pareto([\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", 3600, \"-r\", rand_states, \"-f\", file])",
+      "normalized_value": "import model_runs\n\nheight = 4\nmodels = ['FlowOCT', 'MCF1', 'MCF2', 'CUT1', 'CUT2']\nrand_states = [15, 78, 0]\ndata_names = ['hayes_roth', 'house_votes_84']\nfile = 'pareto_example.csv'\nmodel_runs.pareto([\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", 3600, \"-r\", rand_states, \"-f\", file])",
+      "evidence": "```python\nimport model_runs\n\nheight = 4\nmodels = ['FlowOCT', 'MCF1', 'MCF2', 'CUT1', 'CUT2']\nrand_states = [15, 78, 0]\ndata_names = ['hayes_roth', 'house_votes_84']\nfile = 'pareto_example.csv'\nmodel_runs.pareto([\"-d\", data_names, \"-h\", height, \"-m\", models, \"-t\", 3600, \"-r\", rand_states, \"-f\", file])\n```",
+      "evidence_location": "111-120",
+      "confidence": "high",
+      "reason": "Shows how to generate Pareto frontiers across multiple models and datasets."
+    },
+    {
+      "field": "terminal_pareto_command",
+      "value": "python3 import model_runs; model_runs.pareto -d ['hayes_roth', 'house_votes_84'] -h 4 -m ['FOCT', 'MCF1', 'MCF2', 'CUT1', 'CUT2'] -t 3600 -r [15, 78, 0] -f 'pareto_example.csv'",
+      "normalized_value": "python3 import model_runs; model_runs.pareto -d ['hayes_roth', 'house_votes_84'] -h 4 -m ['FOCT', 'MCF1', 'MCF2', 'CUT1', 'CUT2'] -t 3600 -r [15, 78, 0] -f 'pareto_example.csv'",
+      "evidence": "```bash\npython3 import model_runs; model_runs.pareto -d ['hayes_roth', 'house_votes_84'] -h 4 -m ['FOCT', 'MCF1', 'MCF2', 'CUT1', 'CUT2'] -t 3600 -r [15, 78, 0] -f 'pareto_example.csv'\n```",
+      "evidence_location": "123-125",
+      "confidence": "high",
+      "reason": "Provides the terminal equivalent for reproducing Pareto frontier generation."
+    },
+    {
+      "field": "dependent_repositories",
+      "value": "Strong Tree (https://github.com/pashew94/StrongTree/), Quant-BnB (https://github.com/mengxianglgal/Quant-BnB)",
+      "normalized_value": "Strong Tree (https://github.com/pashew94/StrongTree/), Quant-BnB (https://github.com/mengxianglgal/Quant-BnB)",
+      "evidence": "The code found in `BendersOCT.py`, `FlowOCT.py`, `FlowOCTTree.py,` and `FlowOCTutils.py` are taken directly from the [Strong Tree](https://github.com/pashew94/StrongTree/) GitHub public repository.\nThe code found in `Quant-BnB-2D.jl`, `Quant-BnB-3D.jl`, `Algorithms.jl`, `lowerbound_middle.jl` are taken directly from the [Quant-BnB](https://github.com/mengxianglgal/Quant-BnB) GitHub public repository.",
+      "evidence_location": "137-138",
+      "confidence": "high",
+      "reason": "Documents external code dependencies and clarifies attribution/legal ownership requirements for reused components."
+    },
+    {
+      "field": "output_format",
+      "value": ".csv",
+      "normalized_value": ".csv",
+      "evidence": "stores the generated .csv files with model metrics",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Specifies the standardized output format for model results and metrics."
+    }
+  ]
+}

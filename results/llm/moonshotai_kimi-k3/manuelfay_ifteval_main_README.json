@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications",
+      "normalized_value": "Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications",
+      "evidence": "# Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications",
+      "evidence_location": "line 1 (top-level header)",
+      "confidence": "high",
+      "reason": "Identifies the artifact and associated paper title."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/2310.14103",
+      "normalized_value": "https://arxiv.org/abs/2310.14103",
+      "evidence": "This repository contains the code for the EMNLP 2023 paper [Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications](https://arxiv.org/abs/2310.14103).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Direct link to the associated paper for citation and context."
+    },
+    {
+      "field": "publication_venue",
+      "value": "EMNLP 2023",
+      "normalized_value": "EMNLP 2023",
+      "evidence": "This repository contains the code for the EMNLP 2023 paper",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Names the venue and year of the associated publication."
+    },
+    {
+      "field": "abstract",
+      "value": "Instruction Fine-Tuning (IFT) is a powerful paradigm that strengthens the zero-shot capabilities of Large Language Models (LLMs), but in doing so induces new evaluation metric requirements. We show LLM-based metrics to be well adapted to these requirements, and leverage them to conduct an investigation of task-specialization strategies, quantifying the trade-offs that emerge in practical industrial settings. Our findings offer practitioners actionable insights for real-world IFT model deployment.",
+      "normalized_value": "Instruction Fine-Tuning (IFT) is a powerful paradigm that strengthens the zero-shot capabilities of Large Language Models (LLMs), but in doing so induces new evaluation metric requirements. We show LLM-based metrics to be well adapted to these requirements, and leverage them to conduct an investigation of task-specialization strategies, quantifying the trade-offs that emerge in practical industrial settings. Our findings offer practitioners actionable insights for real-world IFT model deployment.",
+      "evidence": "Instruction Fine-Tuning (IFT) is a powerful paradigm that strengthens the zero-shot capabilities of Large Language Models (LLMs), but in doing so induces new evaluation metric requirements. We show LLM-based metrics to be well adapted to these requirements, and leverage them to conduct an investigation of task-specialization strategies, quantifying the trade-offs that emerge in practical industrial settings. Our findings offer practitioners actionable insights for real-world IFT model deployment.",
+      "evidence_location": "line 8, section 'Abstract'",
+      "confidence": "high",
+      "reason": "Summarizes the purpose, method, and contribution of the artifact."
+    },
+    {
+      "field": "authors",
+      "value": "Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo",
+      "normalized_value": "Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo",
+      "evidence": "author={Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo},",
+      "evidence_location": "line 17, section 'Citation' (bibtex code block)",
+      "confidence": "high",
+      "reason": "Author list needed for attribution and citation."
+    },
+    {
+      "field": "citation",
+      "value": "@misc{faysse2023revisiting,\n      title={Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications}, \n      author={Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo},\n      year={2023},\n      eprint={2310.14103},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG}\n}",
+      "normalized_value": "@misc{faysse2023revisiting,\n      title={Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications}, \n      author={Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo},\n      year={2023},\n      eprint={2310.14103},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG}\n}",
+      "evidence": "@misc{faysse2023revisiting,\n      title={Revisiting Instruction Fine-tuned Model Evaluation to Guide Industrial Applications}, \n      author={Manuel Faysse and Gautier Viaud and Céline Hudelot and Pierre Colombo},\n      year={2023},\n      eprint={2310.14103},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG}\n}",
+      "evidence_location": "lines 15-22, section 'Citation' (bibtex code block)",
+      "confidence": "high",
+      "reason": "Provides the exact BibTeX entry for citing the work."
+    },
+    {
+      "field": "training_data",
+      "value": "data/fractial_mixes contains the various instruction training sets; each folder contains n samples from the folder name category plus the rest of the synthetic samples from the Alpaca train set",
+      "normalized_value": "data/fractial_mixes contains the various instruction training sets; each folder contains n samples from the folder name category plus the rest of the synthetic samples from the Alpaca train set",
+      "evidence": "In `data/fractial_mixes`, you will find the various instruction training sets used for both parts of the paper,\nevaluation of all scorers (Section 2) and investigations of learning dynamics (Section 3).\nEach folder contains data where n samples from the folder name category are included in the training set, along with the \nrest of the synthetic samples from the Alpaca train set.",
+      "evidence_location": "lines 33-36, section 'Repository structure > Data'",
+      "confidence": "high",
+      "reason": "Describes where the training data lives and how the mixes are constructed, aiding reproduction."
+    },
+    {
+      "field": "target_task_datasets",
+      "value": "Xsum, SST2, Squad, CONLL",
+      "normalized_value": "Xsum, SST2, Squad, CONLL",
+      "evidence": "Some task categories are synthetically generated through the Alpaca paradigm, others are manually labeled more classic\nNLP tasks (Xsum, SST2, Squad, CONLL) and are used as target tasks in most of the paper's experiments.",
+      "evidence_location": "lines 37-38, section 'Repository structure > Data'",
+      "confidence": "high",
+      "reason": "Names the concrete benchmark/target datasets used in experiments."
+    },
+    {
+      "field": "results_location",
+      "value": "data/results (CSV files per experiment); raw JSON in data/results/results_new.zip; analysis notebook at scripts/result_aggregation/results_viz.ipynb",
+      "normalized_value": "data/results (CSV files per experiment); raw JSON in data/results/results_new.zip; analysis notebook at scripts/result_aggregation/results_viz.ipynb",
+      "evidence": "The experimental results are added in `data/results`, per experiment as CSV files.\nRaw JSON files for all models and experiments are also included in `data/results/results_new.zip`.\nTo process them for further analysis, a notebook is contained in `scripts/result_aggregation/results_viz.ipynb`.",
+      "evidence_location": "lines 40-42, section 'Repository structure > Data'",
+      "confidence": "high",
+      "reason": "Tells users where to find experimental results and how to process them."
+    },
+    {
+      "field": "training_script",
+      "value": "model_training/finetune.py",
+      "normalized_value": "model_training/finetune.py",
+      "evidence": "The `model_training/finetune.py` file contains finetuning results for running instruction finetuning training on \ncustom data with Lora adapters, and computing and storing model predictions on the test sets.\nIt is heavily inspired by tloen's Alpaca-Lora.",
+      "evidence_location": "lines 57-59, section 'Repository structure > Model training'",
+      "confidence": "high",
+      "reason": "Identifies the entry point for instruction fine-tuning and its method (LoRA adapters)."
+    },
+    {
+      "field": "training_command",
+      "value": "sbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8     --output=frac_100u.out     --error=frac_100u.err     --wrap=\"python model_training/finetune.py       --train_data_path data/fractial_code/fractial_code_100_train.jsonl      --output_dir models/fractial_code_100       --micro_batch_size 32       --num_epochs 2       --cutoff_len 512       --val_data_path data/fractial_code/fractial_code_1000_validation.jsonl       --test_data_path data/fractial_code/fractial_code_only_test.jsonl\"",
+      "normalized_value": "sbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8 --output=frac_100u.out --error=frac_100u.err --wrap=\"python model_training/finetune.py --train_data_path data/fractial_code/fractial_code_100_train.jsonl --output_dir models/fractial_code_100 --micro_batch_size 32 --num_epochs 2 --cutoff_len 512 --val_data_path data/fractial_code/fractial_code_1000_validation.jsonl --test_data_path data/fractial_code/fractial_code_only_test.jsonl\"",
+      "evidence": "sbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8     --output=frac_100u.out     --error=frac_100u.err     --wrap=\"python model_training/finetune.py       --train_data_path data/fractial_code/fractial_code_100_train.jsonl      --output_dir models/fractial_code_100       --micro_batch_size 32       --num_epochs 2       --cutoff_len 512       --val_data_path data/fractial_code/fractial_code_1000_validation.jsonl       --test_data_path data/fractial_code/fractial_code_only_test.jsonl\"",
+      "evidence_location": "lines 62-64, section 'Repository structure > Model training' (bash code block)",
+      "confidence": "high",
+      "reason": "Concrete SLURM training command showing how to reproduce model fine-tuning, including hyperparameters."
+    },
+    {
+      "field": "training_hardware",
+      "value": "gpua100 partition, 1 GPU, 32G mem-per-cpu, 8 cpus-per-task",
+      "normalized_value": "gpua100 partition, 1 GPU, 32G mem-per-cpu, 8 cpus-per-task",
+      "evidence": "sbatch --job-name=frac_100u --nodes=1 --time=24:00:00 -p gpua100 --gres=gpu:1 --mem-per-cpu=32G --cpus-per-task=8",
+      "evidence_location": "line 63, section 'Repository structure > Model training' (bash code block)",
+      "confidence": "high",
+      "reason": "Specifies the hardware environment (A100 GPU node) used for training, relevant for reproduction."
+    },
+    {
+      "field": "evaluation_scorers",
+      "value": "Any scorer available through HuggingFace Evaluate; BertScore; SentenceBert; A Reward model trained by OpenAssistant; API-access LLMs like GPT4 or GPT3.5; Support for Custom heuristics on custom datasets",
+      "normalized_value": "Any scorer available through HuggingFace Evaluate; BertScore; SentenceBert; A Reward model trained by OpenAssistant; API-access LLMs like GPT4 or GPT3.5; Support for Custom heuristics on custom datasets",
+      "evidence": "Scorers include:\n- Any scorer available through HuggingFace Evaluate\n- BertScore\n- SentenceBert\n- A Reward model trained by OpenAssistant\n- API-access LLMs like GPT4 or GPT3.5\n- Support for Custom heuristics on custom datasets",
+      "evidence_location": "lines 71-77, section 'Repository structure > Evaluation'",
+      "confidence": "high",
+      "reason": "Lists the evaluation metrics/scorers implemented, central to the paper's contribution on LLM-based evaluation."
+    },
+    {
+      "field": "external_data_source",
+      "value": "all datasets used are publicly available on the HuggingFace hub",
+      "normalized_value": "all datasets used are publicly available on the HuggingFace hub",
+      "evidence": "Note we include only the final sampled datasets in this repo for practicity, and because all datasets used are publicly available on the HuggingFace hub.",
+      "evidence_location": "line 47, section 'Repository structure > Scripts'",
+      "confidence": "high",
+      "reason": "Indicates where the original datasets can be obtained for reproduction."
+    },
+    {
+      "field": "maintenance_status",
+      "value": "repository intended to support reproducing the work in the EMNLP paper; not going to be further developed",
+      "normalized_value": "repository intended to support reproducing the work in the EMNLP paper; not going to be further developed",
+      "evidence": "As this is a repository intended to support reproducing the work in the EMNLP paper, it is not going\nto be further developped moving onwards. Some paths to data sources might have been changed since the original code writing.",
+      "evidence_location": "lines 81-82, section 'Repository structure > Contact'",
+      "confidence": "high",
+      "reason": "Informs users about the archival/reproduction-only status and potential staleness of the code."
+    },
+    {
+      "field": "proprietary_dependency",
+      "value": "illuin_llm_tools",
+      "normalized_value": "illuin_llm_tools",
+      "evidence": "The `illuin_llm_tools` package is a proprietary package, which is simply a wrapper around the OpenAI API to \nenable easier parallelization and caching of the API requests.\nIt is in the process of being open-sourced, in the meantime, simply replacing it's use with classic API calls with the \nOpenAI library yields the same results (lm-evaluator.py).",
+      "evidence_location": "lines 88-91, section 'Repository structure > FAQ'",
+      "confidence": "high",
+      "reason": "Documents a non-public dependency and the supported workaround (direct OpenAI API calls), critical for reuse."
+    }
+  ]
+}

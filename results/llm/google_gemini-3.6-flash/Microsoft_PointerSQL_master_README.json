@@ -1,0 +1,148 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PointSQL",
+      "normalized_value": "PointSQL",
+      "evidence": "PointSQL",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Specifies the name of the software repository."
+    },
+    {
+      "field": "paper_title",
+      "value": "Natural Language to Structured Query Generation via Meta-Learning",
+      "normalized_value": "Natural Language to Structured Query Generation via Meta-Learning",
+      "evidence": "Natural Language to Structured Query Generation via Meta-Learning",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Title of the primary research paper associated with this repository."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/abs/1803.02400",
+      "normalized_value": "https://arxiv.org/abs/1803.02400",
+      "evidence": "https://arxiv.org/abs/1803.02400",
+      "evidence_location": "2",
+      "confidence": "high",
+      "reason": "Link to the primary research paper on arXiv."
+    },
+    {
+      "field": "organization",
+      "value": "Microsoft Research",
+      "normalized_value": "Microsoft Research",
+      "evidence": "Microsoft Research",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Identifies the research group/organization that created the artifact."
+    },
+    {
+      "field": "benchmark_dataset",
+      "value": "WikiSQL",
+      "normalized_value": "WikiSQL",
+      "evidence": "We present the setup for the WikiSQL experiments.",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Identifies the benchmark dataset used for experiments."
+    },
+    {
+      "field": "preprocessed_dataset_url",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny",
+      "evidence": "Download a preprocessed dataset [link](https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny) to `input/`",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Direct download link for the initial preprocessed dataset."
+    },
+    {
+      "field": "pretrained_embeddings_url",
+      "value": "https://nlp.stanford.edu/projects/glove/",
+      "normalized_value": "https://nlp.stanford.edu/projects/glove/",
+      "evidence": "[glove](https://nlp.stanford.edu/projects/glove/)",
+      "evidence_location": "37",
+      "confidence": "high",
+      "reason": "URL for downloading GloVe pretrained embeddings used in preprocessing."
+    },
+    {
+      "field": "preprocessed_dataset_v2_url",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t",
+      "evidence": "A preprocessed dataset can be found [here](https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t)",
+      "evidence_location": "41",
+      "confidence": "high",
+      "reason": "Direct download link for the v2 preprocessed dataset matching WikiSQL v1.1."
+    },
+    {
+      "field": "training_command",
+      "value": "$ OUTDIR=output/meta_sum\n$ mkdir $OUTDIR\n$ python run.py --input-dir ./input \\\n    --output-dir $OUTDIR \\\n    --config config/nl2prog.meta_2_0.001.rank.config  \\\n    --meta_learning_rate 0.001 --gradient_clip_norm 5 \\\n    --num_layers 3  --num_meta_example 2 \\\n    --meta_learning --production",
+      "normalized_value": "$ OUTDIR=output/meta_sum $ mkdir $OUTDIR $ python run.py --input-dir ./input --output-dir $OUTDIR --config config/nl2prog.meta_2_0.001.rank.config --meta_learning_rate 0.001 --gradient_clip_norm 5 --num_layers 3 --num_meta_example 2 --meta_learning --production",
+      "evidence": "```\n$ OUTDIR=output/meta_sum\n$ mkdir $OUTDIR\n$ python run.py --input-dir ./input \\\n    --output-dir $OUTDIR \\\n    --config config/nl2prog.meta_2_0.001.rank.config  \\\n    --meta_learning_rate 0.001 --gradient_clip_norm 5 \\\n    --num_layers 3  --num_meta_example 2 \\\n    --meta_learning --production\n```",
+      "evidence_location": "48-57",
+      "confidence": "high",
+      "reason": "Command required to execute Meta + Sum loss model training."
+    },
+    {
+      "field": "test_results",
+      "value": "Logical Form Accuracy: 0.628073829775\n    Execute Accuracy: 0.680379563733",
+      "normalized_value": "Logical Form Accuracy: 0.628073829775 Execute Accuracy: 0.680379563733",
+      "evidence": "Logical Form Accuracy: 0.628073829775\n    Execute Accuracy: 0.680379563733",
+      "evidence_location": "97-98",
+      "confidence": "high",
+      "reason": "Reported evaluation accuracy metrics on the WikiSQL test set for the Meta + Sum model."
+    },
+    {
+      "field": "pretrained_checkpoint_url",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz",
+      "evidence": "Download [pretrained model checkpoints](https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz) to ``model_zoo/``",
+      "evidence_location": "122",
+      "confidence": "high",
+      "reason": "Direct download link for pretrained model checkpoints."
+    },
+    {
+      "field": "dependency",
+      "value": "Tensorflow 1.4",
+      "normalized_value": "Tensorflow 1.4",
+      "evidence": "- Tensorflow 1.4",
+      "evidence_location": "130",
+      "confidence": "high",
+      "reason": "Specifies the required version of the Tensorflow library."
+    },
+    {
+      "field": "programming_language",
+      "value": "python 3.6",
+      "normalized_value": "python 3.6",
+      "evidence": "- python 3.6",
+      "evidence_location": "131",
+      "confidence": "high",
+      "reason": "Specifies the required Python programming language version."
+    },
+    {
+      "field": "dependency",
+      "value": "Stanza",
+      "normalized_value": "Stanza",
+      "evidence": "- [Stanza](https://github.com/stanfordnlp/stanza)",
+      "evidence_location": "132",
+      "confidence": "high",
+      "reason": "Specifies the dependency on the Stanza NLP framework."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{pshuang2018PT-MAML,\n  author    = {Po{-}Sen Huang and\n               Chenglong Wang and\n               Rishabh Singh and\n               Wen-tau Yih and\n               Xiaodong He},\n  title     = {Natural Language to Structured Query Generation via Meta-Learning},\n  booktitle = {NAACL},\n  year      = {2018},\n}",
+      "normalized_value": "@inproceedings{pshuang2018PT-MAML, author = {Po{-}Sen Huang and Chenglong Wang and Rishabh Singh and Wen-tau Yih and Xiaodong He}, title = {Natural Language to Structured Query Generation via Meta-Learning}, booktitle = {NAACL}, year = {2018}, }",
+      "evidence": "```\n@inproceedings{pshuang2018PT-MAML,\n  author    = {Po{-}Sen Huang and\n               Chenglong Wang and\n               Rishabh Singh and\n               Wen-tau Yih and\n               Xiaodong He},\n  title     = {Natural Language to Structured Query Generation via Meta-Learning},\n  booktitle = {NAACL},\n  year      = {2018},\n}\n```",
+      "evidence_location": "141-152",
+      "confidence": "high",
+      "reason": "BibTeX citation entry for the NAACL 2018 paper."
+    },
+    {
+      "field": "code_of_conduct_url",
+      "value": "https://opensource.microsoft.com/codeofconduct/",
+      "normalized_value": "https://opensource.microsoft.com/codeofconduct/",
+      "evidence": "[Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)",
+      "evidence_location": "195",
+      "confidence": "high",
+      "reason": "Link to the Microsoft Open Source Code of Conduct governing the repository."
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "project_name",
+      "value": "Computational Hypergraph Discovery: A Gaussian process framework for connecting the dots",
+      "normalized_value": "Computational Hypergraph Discovery: A Gaussian process framework for connecting the dots",
+      "evidence": "# Computational Hypergraph Discovery: A Gaussian process framework for connecting the dots",
+      "evidence_location": "4",
+      "confidence": "high",
+      "reason": "Clear project title that identifies the artifact"
+    },
+    {
+      "field": "paper_title",
+      "value": "\"Codiscovering graphical structure and functional relationships within data: A Gaussian Process framework for connecting the dots\"",
+      "normalized_value": "\"Codiscovering graphical structure and functional relationships within data: A Gaussian Process framework for connecting the dots\"",
+      "evidence": "This is the source code for the paper [\"Codiscovering graphical structure and functional relationships within data: A Gaussian Process framework for connecting the dots\"][paper_url].",
+      "evidence_location": "12",
+      "confidence": "high",
+      "reason": "Identifies the associated research paper for citation and context"
+    },
+    {
+      "field": "paper_url",
+      "value": "https://www.pnas.org/doi/10.1073/pnas.2403449121",
+      "normalized_value": "https://www.pnas.org/doi/10.1073/pnas.2403449121",
+      "evidence": "[paper_url]: https://www.pnas.org/doi/10.1073/pnas.2403449121",
+      "evidence_location": "336",
+      "confidence": "high",
+      "reason": "Direct link to the research paper for reference"
+    },
+    {
+      "field": "blog_url",
+      "value": "https://theobourdais.github.io/posts/2023/11/CHD/",
+      "normalized_value": "https://theobourdais.github.io/posts/2023/11/CHD/",
+      "evidence": "[blog_url]: https://theobourdais.github.io/posts/2023/11/CHD/",
+      "evidence_location": "337",
+      "confidence": "high",
+      "reason": "Link to companion blog post for gentle introduction"
+    },
+    {
+      "field": "license",
+      "value": "Apache 2.0",
+      "normalized_value": "Apache 2.0",
+      "evidence": "[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)](https://opensource.org/license/apache-2-0/)",
+      "evidence_location": "6",
+      "confidence": "high",
+      "reason": "License information important for reuse and distribution"
+    },
+    {
+      "field": "programming_language",
+      "value": "Python 3.11.4",
+      "normalized_value": "Python 3.11.4",
+      "evidence": "[![Python 3.11.4](https://img.shields.io/badge/python-3.11.4-blue.svg)](https://www.python.org/downloads/release/python-3114/)",
+      "evidence_location": "7",
+      "confidence": "high",
+      "reason": "Programming language and version required for execution"
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/TheoBourdais/ComputationalHypergraphDiscovery",
+      "normalized_value": "https://github.com/TheoBourdais/ComputationalHypergraphDiscovery",
+      "evidence": "git clone https://github.com/TheoBourdais/ComputationalHypergraphDiscovery.git",
+      "evidence_location": "43",
+      "confidence": "high",
+      "reason": "Source repository location for accessing the code"
+    },
+    {
+      "field": "pypi_package_name",
+      "value": "ComputationalHypergraphDiscovery",
+      "normalized_value": "ComputationalHypergraphDiscovery",
+      "evidence": "pip install ComputationalHypergraphDiscovery",
+      "evidence_location": "31",
+      "confidence": "high",
+      "reason": "Package name for installation via pip"
+    },
+    {
+      "field": "dependencies",
+      "value": "matplotlib, NumPy, scipy, JAX, networkx",
+      "normalized_value": "matplotlib, NumPy, scipy, JAX, networkx",
+      "evidence": "- matplotlib\n- NumPy\n- scipy\n- JAX\n- networkx",
+      "evidence_location": "20-24",
+      "confidence": "high",
+      "reason": "Required packages for running the code"
+    },
+    {
+      "field": "installation_command",
+      "value": "pip install ComputationalHypergraphDiscovery",
+      "normalized_value": "pip install ComputationalHypergraphDiscovery",
+      "evidence": "pip install ComputationalHypergraphDiscovery",
+      "evidence_location": "31",
+      "confidence": "high",
+      "reason": "Primary installation command for reproducibility"
+    },
+    {
+      "field": "source_installation_command",
+      "value": "pip install -r requirements.txt",
+      "normalized_value": "pip install -r requirements.txt",
+      "evidence": "pip install -r requirements.txt",
+      "evidence_location": "38",
+      "confidence": "high",
+      "reason": "Alternative installation method from source"
+    },
+    {
+      "field": "example_dataset_url",
+      "value": "https://github.com/TheoBourdais/ComputationalHypergraphDiscovery/blob/main/examples/SachsData.csv",
+      "normalized_value": "https://github.com/TheoBourdais/ComputationalHypergraphDiscovery/blob/main/examples/SachsData.csv",
+      "evidence": "You can find the Sachs dataset in the repo, at this [link](https://github.com/TheoBourdais/ComputationalHypergraphDiscovery/blob/main/examples/SachsData.csv).",
+      "evidence_location": "51",
+      "confidence": "high",
+      "reason": "Location of example dataset for testing and reproduction"
+    },
+    {
+      "field": "quick_start_code",
+      "value": "import ComputationalHypergraphDiscovery as CHD\nimport pandas as pd\ndf=pd.read_csv('https://github.com/TheoBourdais/ComputationalHypergraphDiscovery/blob/8c3fed6dfe58a01cb73e469579ff7703b0681f7e/examples/Sachs/SachsData.csv?raw=true')\ndf=df.sample(n=500,random_state=1) #subsample to run example quickly\nkernels=[CHD.Modes.LinearMode(),CHD.Modes.QuadraticMode()]\ngraph_discovery = CHD.GraphDiscovery.from_dataframe(df,kernels=kernels)\ngraph_discovery.fit()\ngraph_discovery.plot_graph()",
+      "normalized_value": "import ComputationalHypergraphDiscovery as CHD\nimport pandas as pd\ndf=pd.read_csv('https://github.com/TheoBourdais/ComputationalHypergraphDiscovery/blob/8c3fed6dfe58a01cb73e469579ff7703b0681f7e/examples/Sachs/SachsData.csv?raw=true')\ndf=df.sample(n=500,random_state=1) #subsample to run example quickly\nkernels=[CHD.Modes.LinearMode(),CHD.Modes.QuadraticMode()]\ngraph_discovery = CHD.GraphDiscovery.from_dataframe(df,kernels=kernels)\ngraph_discovery.fit()\ngraph_discovery.plot_graph()",
+      "evidence": "import ComputationalHypergraphDiscovery as CHD\nimport pandas as pd\ndf=pd.read_csv('https://github.com/TheoBourdais/ComputationalHypergraphDiscovery/blob/8c3fed6dfe58a01cb73e469579ff7703b0681f7e/examples/Sachs/SachsData.csv?raw=true')\ndf=df.sample(n=500,random_state=1) #subsample to run example quickly\nkernels=[CHD.Modes.LinearMode(),CHD.Modes.QuadraticMode()]\ngraph_discovery = CHD.GraphDiscovery.from_dataframe(df,kernels=kernels)\ngraph_discovery.fit()\ngraph_discovery.plot_graph()",
+      "evidence_location": "53-60",
+      "confidence": "high",
+      "reason": "Complete working example for quick start and testing"
+    },
+    {
+      "field": "main_class",
+      "value": "GraphDiscovery",
+      "normalized_value": "GraphDiscovery",
+      "evidence": "graph_discovery = CHD.GraphDiscovery.from_dataframe(df,kernels=kernels)",
+      "evidence_location": "58",
+      "confidence": "high",
+      "reason": "Primary class name for understanding the API"
+    },
+    {
+      "field": "supported_kernels",
+      "value": "LinearMode, QuadraticMode, GaussianMode",
+      "normalized_value": "LinearMode, QuadraticMode, GaussianMode",
+      "evidence": "- **LinearMode**: The linear kernel. \n    - not interpolatory \n    - $\\kappa_{\\text{linear}}(x,y)=1+\\langle x,y\\rangle$\n    - Call: `Modes.LinearMode()`\n- **QuadraticMode**: The quadratic kernel. \n    - not interpolatory \n    - $\\kappa_{\\text{quadratic}}(x,y)=(1+\\langle x,y\\rangle)^2$ (only implemented for $x_1,y_1,x_2,y_2\\in\\mathbb{R}$).\n    - Call: `Modes.QuadraticMode()`\n- **GaussianMode**: The Gaussian kernel. \n    - interpolatory \n    - has hyperparameter `l` the lengthscale\n    - $\\kappa_{\\text{gaussian}}(x,y)=\\kappa_{\\text{quadratic}}(x,y)+\\prod_{i=1}^p (1+\\exp(-(x_i-y_i)^2/(2l^2)))$ only implemented for $x,y\\in\\mathbb{R}$.\n    - Call: `Modes.GaussianMode(l=1)`",
+      "evidence_location": "160-172",
+      "confidence": "high",
+      "reason": "Available kernel types for the graph discovery method"
+    },
+    {
+      "field": "decision_logic_classes",
+      "value": "ThresholdKernelChooser, MinNoiseKernelChooser, ThresholdModeChooser, MaxIncrementModeChooser",
+      "normalized_value": "ThresholdKernelChooser, MinNoiseKernelChooser, ThresholdModeChooser, MaxIncrementModeChooser",
+      "evidence": "- **Threshold**: \n    - Implemented in `ThresholdKernelChooser`. \n    - Choose an amount of noise that is acceptable, and choose the simplest kernel that has a noise-to-signal ratio below this threshold. \n    - If the threshold is too low, no kernel will be chosen \n    - In the example, with a threshold of 0.5 (i.e., half of the data is noise, half is signal), the linear kernel is chosen.\n-  **Minimum noise**:\n    - Implemented in `MinNoiseKernelChooser`.\n    - Choose the kernel that has the lowest noise such that the noise is not in the `Z_test` interval (which would mean the noise ratio is not statistically significant).\n    - If no kernel has a noise ratio that is not statistically significant, no kernel is chosen.\n    - In the example, the Gaussian kernel is chosen.\n- **Threshold**: \n    - Implemented in `ThresholdModeChooser`. \n    - Choose a threshold for the noise ratio, and keep the ancestors until the noise ratio goes above this threshold.\n    - In the example, with a threshold of 0.7, we would keep 8 ancestors.\n- **Maximum increment**: \n    - Implemented in `MaxIncrementModeChooser`. \n    - We look at the highest spike in the noise ratio and keep the ancestors we had at the moment of this spike.\n    - In the example, we see the spike occurs at 2 ancestors, so we keep these 2 ancestors.",
+      "evidence_location": "228-257",
+      "confidence": "high",
+      "reason": "Available decision logic implementations for the algorithm"
+    },
+    {
+      "field": "data_format",
+      "value": "2D array of shape (n_samples, n_features) where each row is a sample and each column is a feature",
+      "normalized_value": "2D array of shape (n_samples, n_features) where each row is a sample and each column is a feature",
+      "evidence": "The dataset is a 2D array of shape (n_samples, n_features) where each row is a sample and each column is a feature.",
+      "evidence_location": "49",
+      "confidence": "high",
+      "reason": "Required data format for input to the algorithm"
+    },
+    {
+      "field": "data_type_restriction",
+      "value": "The data is assumed to be real numbers. The algorithm only accepts data in the form of a 2D array of shape (n_samples,n_features). Other shapes will be rejected, and other types of data will be treated as real numbers.",
+      "normalized_value": "The data is assumed to be real numbers. The algorithm only accepts data in the form of a 2D array of shape (n_samples,n_features). Other shapes will be rejected, and other types of data will be treated as real numbers.",
+      "evidence": "The data is assumed to be real numbers. The algorithm only accepts data in the form of a 2D array of shape (n_samples,n_features). Other shapes will be rejected, and other types of data will be treated as real numbers.",
+      "evidence_location": "139",
+      "confidence": "high",
+      "reason": "Important restriction on input data type and format"
+    }
+  ]
+}

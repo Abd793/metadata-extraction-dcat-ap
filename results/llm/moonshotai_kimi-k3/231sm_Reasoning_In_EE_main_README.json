@@ -1,0 +1,238 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "OntoED and OntoEvent",
+      "normalized_value": "OntoED and OntoEvent",
+      "evidence": "# OntoED and OntoEvent",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Names the two artifacts documented: the OntoED model and the OntoEvent dataset."
+    },
+    {
+      "field": "description",
+      "value": "OntoED: A Model for Low-resource Event Detection with Ontology Embedding",
+      "normalized_value": "OntoED: A Model for Low-resource Event Detection with Ontology Embedding",
+      "evidence": "<font size=4><strong>OntoED: A Model for Low-resource Event Detection with Ontology Embedding</strong></font>",
+      "evidence_location": "line 4",
+      "confidence": "high",
+      "reason": "States the full title and purpose of the model."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/231sm/Reasoning_In_EE",
+      "normalized_value": "https://github.com/231sm/Reasoning_In_EE",
+      "evidence": "git clone https://github.com/231sm/Reasoning_In_EE.git",
+      "evidence_location": "lines 127-133, Usage section",
+      "confidence": "high",
+      "reason": "The GitHub repository hosting the code and dataset, needed for access and reproduction."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2105.10922.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2105.10922.pdf",
+      "evidence": "[OntoED: Low-resource Event Detection with Ontology Embedding](https://arxiv.org/pdf/2105.10922.pdf)",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Link to the paper describing the model and dataset."
+    },
+    {
+      "field": "publication_venue",
+      "value": "ACL 2021",
+      "normalized_value": "ACL 2021",
+      "evidence": "accepted by ACL 2021",
+      "evidence_location": "line 8",
+      "confidence": "high",
+      "reason": "Identifies the peer-reviewed venue where the work was published."
+    },
+    {
+      "field": "task",
+      "value": "low-resource event detection",
+      "normalized_value": "low-resource event detection",
+      "evidence": "OntoED is a model that resolves event detection under low-resource conditions.",
+      "evidence_location": "line 16, Brief Introduction section",
+      "confidence": "high",
+      "reason": "Defines the NLP task the model addresses."
+    },
+    {
+      "field": "method",
+      "value": "It models the relationship between event types through ontology embedding: it can transfer knowledge of high-resource event types to low-resource ones, and the unseen event type can establish connection with seen ones via event ontology.",
+      "normalized_value": "It models the relationship between event types through ontology embedding: it can transfer knowledge of high-resource event types to low-resource ones, and the unseen event type can establish connection with seen ones via event ontology.",
+      "evidence": "It models the relationship between event types through ontology embedding: it can transfer knowledge of high-resource event types to low-resource ones, and the unseen event type can establish connection with seen ones via event ontology.",
+      "evidence_location": "line 16, Brief Introduction section",
+      "confidence": "high",
+      "reason": "Describes the core technical approach (ontology embedding) used by the model."
+    },
+    {
+      "field": "framework",
+      "value": "Huggingface's Transformers",
+      "normalized_value": "Huggingface's Transformers",
+      "evidence": "The implementations are based on [Huggingface's Transformers](https://github.com/huggingface/transformers)",
+      "evidence_location": "line 10",
+      "confidence": "high",
+      "reason": "Identifies the underlying framework the implementation is built on."
+    },
+    {
+      "field": "baseline_models",
+      "value": "DMCNN, JMEE, jointEE-NN",
+      "normalized_value": "DMCNN, JMEE, jointEE-NN",
+      "evidence": "├── DMCNN\n    │   ├── README.md",
+      "evidence_location": "lines 39-110, Project Structure code block",
+      "confidence": "medium",
+      "reason": "The project structure lists three baseline model directories (DMCNN, JMEE, jointEE-NN) provided for reproduction; names are split across the tree listing."
+    },
+    {
+      "field": "python_version",
+      "value": "python==3.6.9",
+      "normalized_value": "python==3.6.9",
+      "evidence": "- python==3.6.9",
+      "evidence_location": "line 115, Requirements section",
+      "confidence": "high",
+      "reason": "Required Python version for running the code."
+    },
+    {
+      "field": "torch_version",
+      "value": "torch==1.8.0 (lower may also be OK)",
+      "normalized_value": "torch==1.8.0 (lower may also be OK)",
+      "evidence": "- torch==1.8.0 (lower may also be OK)",
+      "evidence_location": "line 117, Requirements section",
+      "confidence": "high",
+      "reason": "Required PyTorch version dependency."
+    },
+    {
+      "field": "transformers_version",
+      "value": "transformers==2.8.0",
+      "normalized_value": "transformers==2.8.0",
+      "evidence": "- transformers==2.8.0",
+      "evidence_location": "line 119, Requirements section",
+      "confidence": "high",
+      "reason": "Required Transformers library version dependency."
+    },
+    {
+      "field": "sklearn_version",
+      "value": "sklearn==0.20.2",
+      "normalized_value": "sklearn==0.20.2",
+      "evidence": "- sklearn==0.20.2",
+      "evidence_location": "line 121, Requirements section",
+      "confidence": "high",
+      "reason": "Required scikit-learn version dependency."
+    },
+    {
+      "field": "installation_command",
+      "value": "git clone https://github.com/231sm/Reasoning_In_EE.git",
+      "normalized_value": "git clone https://github.com/231sm/Reasoning_In_EE.git",
+      "evidence": "cd [LOCAL_PROJECT_PATH]\n\ngit clone https://github.com/231sm/Reasoning_In_EE.git",
+      "evidence_location": "lines 129-133, Usage section code block",
+      "confidence": "high",
+      "reason": "Setup step for obtaining the project."
+    },
+    {
+      "field": "run_command",
+      "value": "./run_ontoed.sh",
+      "normalized_value": "./run_ontoed.sh",
+      "evidence": "cd Reasoning_In_EE/OntoED\n\n./run_ontoed.sh\n('--do_train', '--do_eval', '--evaluate_during_training', '--do_test' is necessarily input in 'run_ontoed.sh')",
+      "evidence_location": "lines 154-158, Usage section code block",
+      "confidence": "high",
+      "reason": "Command to run training, validation, and testing of the model."
+    },
+    {
+      "field": "alternative_run_command",
+      "value": "python run_ontoed.py --para...",
+      "normalized_value": "python run_ontoed.py --para...",
+      "evidence": "Or you can run run_ontoed.py with manual parameter input (parameters can be copied from 'run_ontoed.sh')\n\npython run_ontoed.py --para...",
+      "evidence_location": "lines 160-162, Usage section code block",
+      "confidence": "high",
+      "reason": "Alternative way to run the model with manual parameter input."
+    },
+    {
+      "field": "configuration_requirement",
+      "value": "input the true path of 'LABEL_PATH' and 'RELATION_PATH' at the end of data_utils.py",
+      "normalized_value": "input the true path of 'LABEL_PATH' and 'RELATION_PATH' at the end of data_utils.py",
+      "evidence": "Adjust the parameters in [```run_ontoed.sh```](https://github.com/231sm/Reasoning_In_EE/tree/main/OntoED/run_ontoed.sh) bash file, and input the true path of 'LABEL\\_PATH' and 'RELATION\\_PATH' at the end of [```data_utils.py```](https://github.com/231sm/Reasoning_In_EE/tree/main/OntoED/data_utils.py).",
+      "evidence_location": "line 135, Usage section",
+      "confidence": "high",
+      "reason": "Required manual configuration step before running the model."
+    },
+    {
+      "field": "output_artifact",
+      "value": "A folder with configuration, models weights, and results (in is_test_true_eval_results.txt) will be saved at the path you input ('--output_dir')",
+      "normalized_value": "A folder with configuration, models weights, and results (in is_test_true_eval_results.txt) will be saved at the path you input ('--output_dir')",
+      "evidence": "A folder with configuration, models weights, and results (in ```is_test_true_eval_results.txt```) will be saved at the path you input ('--output_dir') in the bash file [```run_ontoed.sh```](https://github.com/231sm/Reasoning_In_EE/tree/main/OntoED/run_ontoed.sh).",
+      "evidence_location": "line 152, Usage section",
+      "confidence": "high",
+      "reason": "Describes where model checkpoints and evaluation results are saved, useful for reproduction and evaluation."
+    },
+    {
+      "field": "dataset_name",
+      "value": "OntoEvent",
+      "normalized_value": "OntoEvent",
+      "evidence": "[**OntoEvent**](https://github.com/231sm/Reasoning_In_EE/tree/main/OntoEvent)  is proposed for ED and also annotated with correlations among events.",
+      "evidence_location": "line 167, How about the Dataset section",
+      "confidence": "high",
+      "reason": "Names the dataset released with the project and its purpose."
+    },
+    {
+      "field": "dataset_statistics",
+      "value": "13 supertypes with 100 subtypes, derived from 4,115 documents with 60,546 event instances",
+      "normalized_value": "13 supertypes with 100 subtypes, derived from 4,115 documents with 60,546 event instances",
+      "evidence": "It contains 13 supertypes with 100 subtypes, derived from 4,115 documents with 60,546 event instances.",
+      "evidence_location": "line 167, How about the Dataset section",
+      "confidence": "high",
+      "reason": "Concrete size and coverage statistics of the OntoEvent dataset."
+    },
+    {
+      "field": "dataset_event_correlations",
+      "value": "3,804",
+      "normalized_value": "3,804",
+      "evidence": "***OntoEvent***    | 4,115 | 60,546 | 13 | 100 | 3,804 |",
+      "evidence_location": "line 179, Statistics table",
+      "confidence": "high",
+      "reason": "Number of event correlations annotated in OntoEvent, a distinguishing feature of the dataset."
+    },
+    {
+      "field": "compared_datasets",
+      "value": "ACE 2005, TAC KBP 2017, FewEvent, MAVEN",
+      "normalized_value": "ACE 2005, TAC KBP 2017, FewEvent, MAVEN",
+      "evidence": "ACE 2005        | 599 | 4,090 | 8 | 33 | None |\nTAC KBP 2017    | 167 | 4,839 | 8 | 18  | None |\nFewEvent              | - | 70,852 | 19 | 100  | None |\nMAVEN           | 4,480 | 111,611 | 21 | 168  | None |",
+      "evidence_location": "lines 175-178, Statistics table",
+      "confidence": "high",
+      "reason": "Existing event detection datasets compared against OntoEvent in the statistics table."
+    },
+    {
+      "field": "data_format",
+      "value": "json",
+      "normalized_value": "json",
+      "evidence": "The OntoEvent dataset is stored in json format.",
+      "evidence_location": "line 182, Data Format section",
+      "confidence": "high",
+      "reason": "File format of the dataset, needed for reuse and processing."
+    },
+    {
+      "field": "event_relation_types",
+      "value": "COSUPER, SUBSUPER, SUPERSUB",
+      "normalized_value": "COSUPER, SUBSUPER, SUPERSUB",
+      "evidence": "🍒Especially for \"COSUPER\", \"SUBSUPER\" and \"SUPERSUB\", we list the *event type pair*, and the data format is as below:",
+      "evidence_location": "line 227, Data Format section",
+      "confidence": "high",
+      "reason": "Names specific event relation types annotated in the dataset."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{ACL2021_OntoED, title = \"{O}nto{ED}: Low-resource Event Detection with Ontology Embedding\", author = \"Deng, Shumin and Zhang, Ningyu and Li, Luoqiu and Hui, Chen and Huaixiao, Tou and Chen, Mosha and Huang, Fei and Chen, Huajun\", booktitle = \"Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)\", year = \"2021\", doi = \"10.18653/v1/2021.acl-long.220\", pages = \"2828--2839\"}",
+      "normalized_value": "@inproceedings{ACL2021_OntoED, title = \"{O}nto{ED}: Low-resource Event Detection with Ontology Embedding\", author = \"Deng, Shumin and Zhang, Ningyu and Li, Luoqiu and Hui, Chen and Huaixiao, Tou and Chen, Mosha and Huang, Fei and Chen, Huajun\", booktitle = \"Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)\", year = \"2021\", doi = \"10.18653/v1/2021.acl-long.220\", pages = \"2828--2839\"}",
+      "evidence": "@inproceedings{ACL2021_OntoED,\n    title = \"{O}nto{ED}: Low-resource Event Detection with Ontology Embedding\",\n    author = \"Deng, Shumin  and\n      Zhang, Ningyu  and\n      Li, Luoqiu  and\n      Hui, Chen  and\n      Huaixiao, Tou  and\n      Chen, Mosha  and\n      Huang, Fei  and\n      Chen, Huajun\",\n    booktitle = \"Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)\",\n    month = aug,\n    year = \"2021\",\n    address = \"Online\",\n    publisher = \"Association for Computational Linguistics\",\n    url = \"https://aclanthology.org/2021.acl-long.220\",\n    doi = \"10.18653/v1/2021.acl-long.220\",\n    pages = \"2828--2839\"\n}",
+      "evidence_location": "lines 241-261, How to Cite section code block",
+      "confidence": "high",
+      "reason": "Official BibTeX citation for attributing the work."
+    },
+    {
+      "field": "doi",
+      "value": "10.18653/v1/2021.acl-long.220",
+      "normalized_value": "10.18653/v1/2021.acl-long.220",
+      "evidence": "doi = \"10.18653/v1/2021.acl-long.220\"",
+      "evidence_location": "line 258, How to Cite section",
+      "confidence": "high",
+      "reason": "Persistent identifier for the associated paper."
+    }
+  ]
+}

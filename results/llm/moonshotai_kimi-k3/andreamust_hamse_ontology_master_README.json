@@ -1,0 +1,238 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "HaMSE Ontology",
+      "normalized_value": "HaMSE Ontology",
+      "evidence": "# HaMSE Ontology",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Names the artifact, used for identification and indexing."
+    },
+    {
+      "field": "artifact_description",
+      "value": "This repository contains the code developed for the Master Thesis in Digital Humanities and Digital Knwoledge at the University of Bologna, under the supervision of Prof. Aldo Gangemi and the supervision of Prof. Albert Meroño Peñuela.",
+      "normalized_value": "This repository contains the code developed for the Master Thesis in Digital Humanities and Digital Knwoledge at the University of Bologna, under the supervision of Prof. Aldo Gangemi and the supervision of Prof. Albert Meroño Peñuela.",
+      "evidence": "This repository contains the code developed for the Master Thesis in Digital Humanities and Digital Knwoledge at the University of Bologna, under the supervision of Prof. Aldo Gangemi and the supervision of Prof. Albert Meroño Peñuela.",
+      "evidence_location": "line 2",
+      "confidence": "high",
+      "reason": "Describes the origin, academic context, and supervision of the artifact."
+    },
+    {
+      "field": "associated_publication",
+      "value": "Andrea Poltronieri, & Aldo Gangemi (2022). The HaMSE Ontology: Using Semantic Technologies to support Music Representation Interoperability and Musicological Analysis. CoRR, abs/2202.05817.",
+      "normalized_value": "Andrea Poltronieri, & Aldo Gangemi (2022). The HaMSE Ontology: Using Semantic Technologies to support Music Representation Interoperability and Musicological Analysis. CoRR, abs/2202.05817.",
+      "evidence": "Andrea Poltronieri, & Aldo Gangemi (2022). The HaMSE Ontology: Using Semantic Technologies to support Music Representation Interoperability and Musicological Analysis. CoRR, abs/2202.05817.",
+      "evidence_location": "lines 4-6, fenced code block",
+      "confidence": "high",
+      "reason": "Identifies the publication describing the artifact, useful for citation and context."
+    },
+    {
+      "field": "ontology_url",
+      "value": "https://raw.githubusercontent.com/andreamust/HaMSE_Ontology/master/schema",
+      "normalized_value": "https://raw.githubusercontent.com/andreamust/HaMSE_Ontology/master/schema",
+      "evidence": "* the [HaMSE ontology](https://raw.githubusercontent.com/andreamust/HaMSE_Ontology/master/schema), which proposes to represent these features",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Direct access link to the ontology schema resource."
+    },
+    {
+      "field": "knowledge_base_url",
+      "value": "https://raw.githubusercontent.com/andreamust/HaMSE_Ontology/master/data",
+      "normalized_value": "https://raw.githubusercontent.com/andreamust/HaMSE_Ontology/master/data",
+      "evidence": "* a small [Knowledge Base](https://raw.githubusercontent.com/andreamust/HaMSE_Ontology/master/data), containing an example of data extracted with the algorithms aforementioned and modelled using the HaMSE Ontology.",
+      "evidence_location": "line 10",
+      "confidence": "high",
+      "reason": "Direct access link to the example knowledge base data."
+    },
+    {
+      "field": "feature_extraction_categories",
+      "value": "five main categories, aiming at extracting five different types of musical features",
+      "normalized_value": "five main categories, aiming at extracting five different types of musical features",
+      "evidence": "The data extraction algorithms are divided into five main categories, aiming at extracting five different types of musical features.",
+      "evidence_location": "line 13, section 'Data Extraction Algorithms'",
+      "confidence": "high",
+      "reason": "Summarizes the scope of the feature extraction code (audio-to-score alignment, emotional, melodic, harmonic, structural features)."
+    },
+    {
+      "field": "alignment_method",
+      "value": "Dynamic Time Warping (DTW)",
+      "normalized_value": "Dynamic Time Warping (DTW)",
+      "evidence": "For this task, we used a classic approach based on Dynamic Time Warping (DTW).",
+      "evidence_location": "line 22, section 'Audio-to-score Alignment'",
+      "confidence": "high",
+      "reason": "Names the core algorithm used for audio-to-score alignment, relevant for reproduction."
+    },
+    {
+      "field": "dependency",
+      "value": "Librosa",
+      "normalized_value": "Librosa",
+      "evidence": "In particular, we have used the DTW algorithm provided by the [Librosa](https://github.com/librosa/librosa).",
+      "evidence_location": "line 23, section 'Audio-to-score Alignment'",
+      "confidence": "high",
+      "reason": "External library dependency used for the DTW alignment."
+    },
+    {
+      "field": "dependency",
+      "value": "Midi2audio",
+      "normalized_value": "Midi2audio",
+      "evidence": "More specifically, the symbolic notation has been converted to audio signal using the [Midi2audio library](https://github.com/bzamecnik/midi2audio).",
+      "evidence_location": "line 25, section 'Audio-to-score Alignment'",
+      "confidence": "high",
+      "reason": "External library dependency used to convert symbolic notation to audio."
+    },
+    {
+      "field": "dependency",
+      "value": "music21",
+      "normalized_value": "music21",
+      "evidence": "To support the scanning of symbolic representations we reused [music21](https://github.com/cuthbertLab/music21) and [The VIS framework](https://github.com/ELVIS-Project/vis-framework).",
+      "evidence_location": "line 46, section 'Melodic Features'",
+      "confidence": "high",
+      "reason": "External library dependency for symbolic music analysis."
+    },
+    {
+      "field": "dependency",
+      "value": "The VIS framework",
+      "normalized_value": "The VIS framework",
+      "evidence": "To support the scanning of symbolic representations we reused [music21](https://github.com/cuthbertLab/music21) and [The VIS framework](https://github.com/ELVIS-Project/vis-framework).",
+      "evidence_location": "line 46, section 'Melodic Features'",
+      "confidence": "high",
+      "reason": "External framework dependency for melodic pattern extraction."
+    },
+    {
+      "field": "dependency",
+      "value": "MSAF library",
+      "normalized_value": "MSAF library",
+      "evidence": "For the structural features of the song, i.e. the structure and sections that make up the song, we reused the [MSAF library](https://pythonhosted.org/msaf/tutorial.html), using it directly on the audio signal.",
+      "evidence_location": "line 66, section 'Structural Features'",
+      "confidence": "high",
+      "reason": "External library dependency for music structural analysis."
+    },
+    {
+      "field": "training_dataset",
+      "value": "4Q audio emotion dataset provided by the Centre for Informatics and Systems on the University of Coimbra (Panda, Malheiro and Paiva 2018), made up of 900 audio-clips of 30 seconds length, divided into four different groups",
+      "normalized_value": "4Q audio emotion dataset provided by the Centre for Informatics and Systems on the University of Coimbra (Panda, Malheiro and Paiva 2018), made up of 900 audio-clips of 30 seconds length, divided into four different groups",
+      "evidence": "The dataset chosen for this task is the 4Q audio emotion dataset30 provided by the Centre for Informatics and Systems on the University of Coimbra (Panda, Malheiro and Paiva 2018). The dataset is made up of 900 audio-clips of 30 seconds length, divided into four different groups.",
+      "evidence_location": "line 35, section 'Emotional Features'",
+      "confidence": "high",
+      "reason": "Identifies the dataset used to train the emotion recognition model, key for reproducibility."
+    },
+    {
+      "field": "emotion_model",
+      "value": "Russell's Circumplex Model of Affect (four quadrants)",
+      "normalized_value": "Russell's Circumplex Model of Affect (four quadrants)",
+      "evidence": "These groups are defined according to the four quadrants of Russell’s model. James A. Russell in 1980 introduced a Circumplex Model of Affect (Russell 1980) that aimed at spatially representing interrelations between affective dimensions.",
+      "evidence_location": "line 36, section 'Emotional Features'",
+      "confidence": "high",
+      "reason": "Describes the theoretical model underlying the emotion labels."
+    },
+    {
+      "field": "model_architecture",
+      "value": "Convolutional Recurrent Network",
+      "normalized_value": "Convolutional Recurrent Network",
+      "evidence": "The best performance in training the model (77.2% in accuracy) were obtained using a Convolutional Recurrent Network, which layers were organised as follows:",
+      "evidence_location": "line 38, section 'Emotional Features'",
+      "confidence": "high",
+      "reason": "Names the neural network architecture achieving the best reported result."
+    },
+    {
+      "field": "reported_accuracy",
+      "value": "77.2% in accuracy",
+      "normalized_value": "77.2% in accuracy",
+      "evidence": "The best performance in training the model (77.2% in accuracy) were obtained using a Convolutional Recurrent Network, which layers were organised as follows:",
+      "evidence_location": "line 38, section 'Emotional Features'",
+      "confidence": "high",
+      "reason": "Quantitative evaluation result for the emotion recognition model."
+    },
+    {
+      "field": "melodic_pattern_types",
+      "value": "Interval Patterns, Rhythmic Patterns, Identical Patterns, Longest identical Patterns",
+      "normalized_value": "Interval Patterns, Rhythmic Patterns, Identical Patterns, Longest identical Patterns",
+      "evidence": "The implemented algorithm allows the extraction of different types of melodic patterns, including:\n* Interval Patterns\n* Rhythmic Patterns\n* Identical Patterns\n* Longest identical Patterns.",
+      "evidence_location": "lines 48-52, section 'Melodic Features'",
+      "confidence": "high",
+      "reason": "Enumerates the concrete outputs of the melodic feature extraction algorithm."
+    },
+    {
+      "field": "harmonic_features",
+      "value": "the pitch of the song, the dissonances present in the song, the chords that are formed in polyphonic compositions, the recurrent harmonic sequences",
+      "normalized_value": "the pitch of the song, the dissonances present in the song, the chords that are formed in polyphonic compositions, the recurrent harmonic sequences",
+      "evidence": "For harmonic features, we implemented an algorithm to extract several harmonic features, including:\n* the pitch of the song\n* the dissonances present in the song\n* the chords that are formed in polyphonic compositions\n* the recurrent harmonic sequences, using a mirror approach to that proposed in the previous section.",
+      "evidence_location": "lines 58-62, section 'Harmonic Features'",
+      "confidence": "high",
+      "reason": "Enumerates the concrete outputs of the harmonic feature extraction algorithm."
+    },
+    {
+      "field": "ontology_purpose",
+      "value": "merges and harmonizes two or more different and non-interoperable music representations (e.g. audio data and scores), either symbolic or non-symbolic",
+      "normalized_value": "merges and harmonizes two or more different and non-interoperable music representations (e.g. audio data and scores), either symbolic or non-symbolic",
+      "evidence": "This new model merges and harmonizes two or more different and non-interoperable music representations (e.g. audio data and scores), either symbolic or non-symbolic.",
+      "evidence_location": "line 70, section 'HaMSE Ontology'",
+      "confidence": "high",
+      "reason": "States the purpose and function of the ontology."
+    },
+    {
+      "field": "project_website",
+      "value": "https://andreapoltronieri.org/HaMSE_project/",
+      "normalized_value": "https://andreapoltronieri.org/HaMSE_project/",
+      "evidence": "The documentation of the ontology, together with other more specific information is hosted on [The HaMSE Project Website](https://andreapoltronieri.org/HaMSE_project/).",
+      "evidence_location": "line 72, section 'HaMSE Ontology'",
+      "confidence": "high",
+      "reason": "Link to the project documentation website."
+    },
+    {
+      "field": "ontology_uri",
+      "value": "https://github.com/andreamust/HaMSE_Ontology/schema",
+      "normalized_value": "https://github.com/andreamust/HaMSE_Ontology/schema",
+      "evidence": "The URI of this ontology is the following: `https://github.com/andreamust/HaMSE_Ontology/schema`",
+      "evidence_location": "line 73, section 'HaMSE Ontology'",
+      "confidence": "high",
+      "reason": "Canonical URI of the ontology, needed for referencing and reuse in semantic web contexts."
+    },
+    {
+      "field": "knowledge_base_content",
+      "value": "data from a Bach's chorale, namely the sixth movement of the church cantata Wie schön leuchtet der Morgenstern, catalogued under the index BWV1, the chorale entitled \"Wie bin ich doch so herzlich froh\"",
+      "normalized_value": "data from a Bach's chorale, namely the sixth movement of the church cantata Wie schön leuchtet der Morgenstern, catalogued under the index BWV1, the chorale entitled \"Wie bin ich doch so herzlich froh\"",
+      "evidence": "We created a small knowledge base in order to test the ontology. The knowledge base was populated with data from a Bach’s chorale, namely the sixth movement of the church cantata Wie schön leuchtet der Morgenstern. The piece is catalogued under the index BWV1. The sixth and last movement is the chorale entitled *\"Wie bin ich doch so herzlich froh\"*.",
+      "evidence_location": "line 76, section 'The Knowledge Base'",
+      "confidence": "high",
+      "reason": "Identifies the specific musical work used to populate the example knowledge base."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": "@article{poltronieri2022HaMSEOntology, author = {Andrea Poltronieri and Aldo Gangemi}, title = {The HaMSE Ontology: Using Semantic Technologies to support Music Representation Interoperability and Musicological Analysis}, journal = {CoRR}, volume = {abs/2202.05817}, year = {2022}, url = {https://arxiv.org/abs/2202.05817}, eprinttype = {arXiv}, eprint = {2202.05817}}",
+      "normalized_value": "@article{poltronieri2022HaMSEOntology, author = {Andrea Poltronieri and Aldo Gangemi}, title = {The HaMSE Ontology: Using Semantic Technologies to support Music Representation Interoperability and Musicological Analysis}, journal = {CoRR}, volume = {abs/2202.05817}, year = {2022}, url = {https://arxiv.org/abs/2202.05817}, eprinttype = {arXiv}, eprint = {2202.05817}}",
+      "evidence": "@article{poltronieri2022HaMSEOntology,\n          author    = {Andrea Poltronieri and\n                       Aldo Gangemi},\n          title     = {The HaMSE Ontology: Using Semantic Technologies to support Music Representation\n                       Interoperability and Musicological Analysis},\n          journal   = {CoRR},\n          volume    = {abs/2202.05817},\n          year      = {2022},\n          url       = {https://arxiv.org/abs/2202.05817},\n          eprinttype = {arXiv},\n          eprint    = {2202.05817},\n          timestamp = {Fri, 18 Feb 2022 12:23:53 +0100},\n          biburl    = {https://dblp.org/rec/journals/corr/abs-2202-05817.bib},\n          bibsource = {dblp computer science bibliography, https://dblp.org}\n}",
+      "evidence_location": "lines 81-98, section 'Citations', fenced code block",
+      "confidence": "high",
+      "reason": "Provides the canonical BibTeX citation for the artifact's publication."
+    },
+    {
+      "field": "related_work",
+      "value": "The Music Note Ontology (WOP 2021)",
+      "normalized_value": "The Music Note Ontology (WOP 2021)",
+      "evidence": "A more advanced version of this work can be found in:\n\n```\n@inproceedings{poltronieri2021musicnoteontology,\n          title={The Music Note Ontology},\n          author={Poltronieri, Andrea and Gangemi, Aldo},\n          booktitle={Proceedings of the 12th Workshop on Ontology Design and Patterns (WOP 2021), Online, October 24, 2021.},",
+      "evidence_location": "lines 100-112, section 'Citations'",
+      "confidence": "high",
+      "reason": "Points to a related, more advanced publication by the same authors."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "## License\nMIT License\n\nCopyright (c) 2021 Andrea Poltronieri",
+      "evidence_location": "lines 114-117, section 'License'",
+      "confidence": "high",
+      "reason": "Legal terms governing reuse of the artifact."
+    },
+    {
+      "field": "copyright_holder",
+      "value": "Andrea Poltronieri",
+      "normalized_value": "Andrea Poltronieri",
+      "evidence": "Copyright (c) 2021 Andrea Poltronieri",
+      "evidence_location": "line 117, section 'License'",
+      "confidence": "high",
+      "reason": "Identifies the copyright holder and year for attribution."
+    }
+  ]
+}

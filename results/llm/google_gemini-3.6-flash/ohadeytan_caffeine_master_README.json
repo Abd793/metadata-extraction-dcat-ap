@@ -1,0 +1,112 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Caffeine",
+      "normalized_value": "Caffeine",
+      "evidence": "Caffeine is a [high performance][benchmarks], [near optimal][efficiency] caching library.",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Identifies the name of the software project."
+    },
+    {
+      "field": "description",
+      "value": "Caffeine is a [high performance][benchmarks], [near optimal][efficiency] caching library.",
+      "normalized_value": "Caffeine is a [high performance][benchmarks], [near optimal][efficiency] caching library.",
+      "evidence": "Caffeine is a [high performance][benchmarks], [near optimal][efficiency] caching library.",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Describes the function and purpose of the project."
+    },
+    {
+      "field": "license_url",
+      "value": "http://www.apache.org/licenses/LICENSE-2.0.html",
+      "normalized_value": "http://www.apache.org/licenses/LICENSE-2.0.html",
+      "evidence": "[![License](http://img.shields.io/:license-apache-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "Direct link to the Apache License 2.0 covering this artifact."
+    },
+    {
+      "field": "user_guide_url",
+      "value": "https://github.com/ben-manes/caffeine/wiki",
+      "normalized_value": "https://github.com/ben-manes/caffeine/wiki",
+      "evidence": "[users-guide]: https://github.com/ben-manes/caffeine/wiki",
+      "evidence_location": "99",
+      "confidence": "high",
+      "reason": "Link to the user's guide wiki for documentation."
+    },
+    {
+      "field": "api_documentation_url",
+      "value": "http://www.javadoc.io/doc/com.github.ben-manes.caffeine/caffeine",
+      "normalized_value": "http://www.javadoc.io/doc/com.github.ben-manes.caffeine/caffeine",
+      "evidence": "[javadoc]: http://www.javadoc.io/doc/com.github.ben-manes.caffeine/caffeine",
+      "evidence_location": "100",
+      "confidence": "high",
+      "reason": "Link to the API reference documentation (JavaDoc)."
+    },
+    {
+      "field": "benchmark_url",
+      "value": "https://github.com/ben-manes/caffeine/wiki/Benchmarks",
+      "normalized_value": "https://github.com/ben-manes/caffeine/wiki/Benchmarks",
+      "evidence": "[benchmarks]: https://github.com/ben-manes/caffeine/wiki/Benchmarks",
+      "evidence_location": "98",
+      "confidence": "high",
+      "reason": "Link to performance benchmark results."
+    },
+    {
+      "field": "usage_example",
+      "value": "```java\nLoadingCache<Key, Graph> graphs = Caffeine.newBuilder()\n    .maximumSize(10_000)\n    .expireAfterWrite(Duration.ofMinutes(5))\n    .refreshAfterWrite(Duration.ofMinutes(1))\n    .build(key -> createExpensiveGraph(key));\n```",
+      "normalized_value": "```java\nLoadingCache<Key, Graph> graphs = Caffeine.newBuilder()\n    .maximumSize(10_000)\n    .expireAfterWrite(Duration.ofMinutes(5))\n    .refreshAfterWrite(Duration.ofMinutes(1))\n    .build(key -> createExpensiveGraph(key));\n```",
+      "evidence": "```java\nLoadingCache<Key, Graph> graphs = Caffeine.newBuilder()\n    .maximumSize(10_000)\n    .expireAfterWrite(Duration.ofMinutes(5))\n    .refreshAfterWrite(Duration.ofMinutes(1))\n    .build(key -> createExpensiveGraph(key));\n```",
+      "evidence_location": "20-26",
+      "confidence": "high",
+      "reason": "Demonstrates Java code snippet for initializing and configuring a Caffeine cache."
+    },
+    {
+      "field": "version",
+      "value": "3.0.3",
+      "normalized_value": "3.0.3",
+      "evidence": "implementation 'com.github.ben-manes.caffeine:caffeine:3.0.3'",
+      "evidence_location": "86",
+      "confidence": "high",
+      "reason": "Identifies the release version of the Caffeine package."
+    },
+    {
+      "field": "installation_dependency",
+      "value": "```gradle\nimplementation 'com.github.ben-manes.caffeine:caffeine:3.0.3'\n\n// Optional extensions\nimplementation 'com.github.ben-manes.caffeine:guava:3.0.3'\nimplementation 'com.github.ben-manes.caffeine:jcache:3.0.3'\n```",
+      "normalized_value": "```gradle\nimplementation 'com.github.ben-manes.caffeine:caffeine:3.0.3'\n\n// Optional extensions\nimplementation 'com.github.ben-manes.caffeine:guava:3.0.3'\nimplementation 'com.github.ben-manes.caffeine:jcache:3.0.3'\n```",
+      "evidence": "```gradle\nimplementation 'com.github.ben-manes.caffeine:caffeine:3.0.3'\n\n// Optional extensions\nimplementation 'com.github.ben-manes.caffeine:guava:3.0.3'\nimplementation 'com.github.ben-manes.caffeine:jcache:3.0.3'\n```",
+      "evidence_location": "85-91",
+      "confidence": "high",
+      "reason": "Gradle dependency declaration required to import and use Caffeine and its extensions."
+    },
+    {
+      "field": "scientific_publication",
+      "value": "TinyLFU: A Highly Efficient Cache Admission Policy by Gil Einziger, Roy Friedman, Ben Manes",
+      "normalized_value": "TinyLFU: A Highly Efficient Cache Admission Policy by Gil Einziger, Roy Friedman, Ben Manes",
+      "evidence": " * [TinyLFU: A Highly Efficient Cache Admission Policy][tinylfu] by Gil Einziger, Roy Friedman, Ben Manes",
+      "evidence_location": "77",
+      "confidence": "high",
+      "reason": "References research paper evaluating the underlying cache eviction policy."
+    },
+    {
+      "field": "scientific_publication",
+      "value": "Adaptive Software Cache Management by Gil Einziger, Ohad Eytan, Roy Friedman, Ben Manes",
+      "normalized_value": "Adaptive Software Cache Management by Gil Einziger, Ohad Eytan, Roy Friedman, Ben Manes",
+      "evidence": " * [Adaptive Software Cache Management][adaptive-tinylfu] by Gil Einziger, Ohad Eytan, Roy Friedman, Ben Manes",
+      "evidence_location": "78",
+      "confidence": "high",
+      "reason": "References research paper evaluating the underlying cache management policy."
+    },
+    {
+      "field": "scientific_publication",
+      "value": "Lightweight Robust Size Aware Cache Management by Gil Einziger, Ohad Eytan, Roy Friedman, Ben Manes",
+      "normalized_value": "Lightweight Robust Size Aware Cache Management by Gil Einziger, Ohad Eytan, Roy Friedman, Ben Manes",
+      "evidence": " * [Lightweight Robust Size Aware Cache Management][size-tinylfu] by Gil Einziger, Ohad Eytan, Roy Friedman, Ben Manes",
+      "evidence_location": "79",
+      "confidence": "high",
+      "reason": "References research paper evaluating the underlying cache management policy."
+    }
+  ]
+}

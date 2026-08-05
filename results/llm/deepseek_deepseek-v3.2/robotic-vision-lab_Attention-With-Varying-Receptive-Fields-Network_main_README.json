@@ -1,0 +1,157 @@
+{
+  "metadata": [
+    {
+      "field": "name",
+      "value": "Attention With Varying Receptive Fields Network",
+      "normalized_value": "Attention With Varying Receptive Fields Network",
+      "evidence": "## Attention With Varying Receptive Fields Network",
+      "evidence_location": "Line 1",
+      "confidence": "high",
+      "reason": "Identifies the artifact title."
+    },
+    {
+      "field": "description",
+      "value": "created a library of various super-resolution models and modules, along with documentation, for thermal and RGB super-resolution.",
+      "normalized_value": "created a library of various super-resolution models and modules, along with documentation, for thermal and RGB super-resolution.",
+      "evidence": "created a library of various super-resolution models and modules, along with documentation, for thermal and RGB super-resolution.",
+      "evidence_location": "Lines 7-8",
+      "confidence": "high",
+      "reason": "Summarizes the artifact's purpose and scope."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://arxiv.org/pdf/2108.00094.pdf",
+      "normalized_value": "https://arxiv.org/pdf/2108.00094.pdf",
+      "evidence": "[Thermal Image Super-Resolution Using Second-Order Channel Attention with Varying Receptive Fields](https://arxiv.org/pdf/2108.00094.pdf)",
+      "evidence_location": "Lines 19-21",
+      "confidence": "high",
+      "reason": "Provides link to the associated research paper."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{gutierrez2021thermal, \n  title={Thermal image super-resolution using second-order channel attention with varying receptive fields},\n  author={Gutierrez, Nolan B and Beksi, William J},\n  booktitle={Proceedings of the International Conference on Computer Vision Systems (ICVS)},\n  pages={3--13},\n  year={2021}\n}",
+      "normalized_value": "@inproceedings{gutierrez2021thermal, title={Thermal image super-resolution using second-order channel attention with varying receptive fields}, author={Gutierrez, Nolan B and Beksi, William J}, booktitle={Proceedings of the International Conference on Computer Vision Systems (ICVS)}, pages={3--13}, year={2021} }",
+      "evidence": "@inproceedings{gutierrez2021thermal, \n  title={Thermal image super-resolution using second-order channel attention with varying receptive fields},\n  author={Gutierrez, Nolan B and Beksi, William J},\n  booktitle={Proceedings of the International Conference on Computer Vision Systems (ICVS)},\n  pages={3--13},\n  year={2021}\n}",
+      "evidence_location": "Lines 29-37",
+      "confidence": "high",
+      "reason": "BibTeX entry for citing the work, essential for attribution."
+    },
+    {
+      "field": "dependencies",
+      "value": "opencv, numpy, tensorflow, and pillow",
+      "normalized_value": "opencv numpy tensorflow pillow",
+      "evidence": "opencv, numpy, tensorflow, and pillow need to be installed along with their dependencies.",
+      "evidence_location": "Lines 41-43",
+      "confidence": "high",
+      "reason": "Lists software dependencies required for installation."
+    },
+    {
+      "field": "environment",
+      "value": "Ubuntu 20.04 machine using an Anaconda 3 environment. The experiments were run with an NVIDIA GPU and CUDA.",
+      "normalized_value": "Ubuntu 20.04 machine using an Anaconda 3 environment. The experiments were run with an NVIDIA GPU and CUDA.",
+      "evidence": "The experiments were conducted on an Ubuntu 20.04 machine using an Anaconda 3 environment. The experiments were run with an NVIDIA GPU and CUDA.",
+      "evidence_location": "Lines 43-45",
+      "confidence": "high",
+      "reason": "Specifies the operating system, environment, and hardware used for reproducibility."
+    },
+    {
+      "field": "conda_create_command",
+      "value": "conda create -y -n myenv tensorflow==2.4.1 numpy==1.19.2  pip  pillow==7.2.0 tensorflow-gpu==2.5.0",
+      "normalized_value": "conda create -y -n myenv tensorflow==2.4.1 numpy==1.19.2 pip pillow==7.2.0 tensorflow-gpu==2.5.0",
+      "evidence": "`conda create -y -n myenv tensorflow==2.4.1 numpy==1.19.2  pip  pillow==7.2.0 tensorflow-gpu==2.5.0`",
+      "evidence_location": "Lines 49-50",
+      "confidence": "high",
+      "reason": "Command to create the Anaconda environment for setup."
+    },
+    {
+      "field": "conda_activate_command",
+      "value": "conda activate myenv",
+      "normalized_value": "conda activate myenv",
+      "evidence": "`conda activate myenv`",
+      "evidence_location": "Line 54",
+      "confidence": "high",
+      "reason": "Command to activate the conda environment."
+    },
+    {
+      "field": "install_opencv_command",
+      "value": "conda install -c conda-forge opencv",
+      "normalized_value": "conda install -c conda-forge opencv",
+      "evidence": "`conda install -c conda-forge opencv`",
+      "evidence_location": "Line 58",
+      "confidence": "high",
+      "reason": "Command to install OpenCV dependency."
+    },
+    {
+      "field": "usage_command_train_setup",
+      "value": "python train.py 2",
+      "normalized_value": "python train.py 2",
+      "evidence": "`python train.py 2`",
+      "evidence_location": "Line 67",
+      "confidence": "high",
+      "reason": "Command to start training setup with GUI for dataset selection."
+    },
+    {
+      "field": "usage_command_train_scale",
+      "value": "python train.py 4",
+      "normalized_value": "python train.py 4",
+      "evidence": "`python train.py 4`",
+      "evidence_location": "Line 154",
+      "confidence": "high",
+      "reason": "Command to begin experiment with x4 upscaling factor."
+    },
+    {
+      "field": "reproduction_commands",
+      "value": "python train.py 2\npython train.py 3\npython train.py 4",
+      "normalized_value": "python train.py 2 python train.py 3 python train.py 4",
+      "evidence": "python train.py 2\npython train.py 3\npython train.py 4",
+      "evidence_location": "Lines 170-174",
+      "confidence": "high",
+      "reason": "Commands to reproduce experimental results for different scale factors."
+    },
+    {
+      "field": "reproduction_command_bicubic",
+      "value": "python test_bicubic.py",
+      "normalized_value": "python test_bicubic.py",
+      "evidence": "`python test_bicubic.py`",
+      "evidence_location": "Line 185",
+      "confidence": "high",
+      "reason": "Command to reproduce bicubic interpolation baseline results."
+    },
+    {
+      "field": "external_datasets",
+      "value": "Flir_test refers to the [FLIR Thermal Dataset for Algorithm Training](https://www.flir.com/oem/adas/adas-dataset-form/), 320_axis_mr, 640_flir_hr, 160_domo_lr refers to the [Thermal Image Super-Resolution Challenge](https://pbvs-workshop.github.io/datasets.html) dataset, and KAIST refers to the [KAIST](https://soonminhwang.github.io/rgbt-ped-detection/) dataset.",
+      "normalized_value": "Flir_test refers to the [FLIR Thermal Dataset for Algorithm Training](https://www.flir.com/oem/adas/adas-dataset-form/), 320_axis_mr, 640_flir_hr, 160_domo_lr refers to the [Thermal Image Super-Resolution Challenge](https://pbvs-workshop.github.io/datasets.html) dataset, and KAIST refers to the [KAIST](https://soonminhwang.github.io/rgbt-ped-detection/) dataset.",
+      "evidence": "In this JSON file, `Flir_test` refers to the [FLIR Thermal Dataset for Algorithm Training](https://www.flir.com/oem/adas/adas-dataset-form/), `320_axis_mr, 640_flir_hr, 160_domo_lr` refers to the [Thermal Image Super-Resolution Challenge](https://pbvs-workshop.github.io/datasets.html) dataset, and `KAIST` refers to the [KAIST](https://soonminhwang.github.io/rgbt-ped-detection/) dataset.",
+      "evidence_location": "Lines 133-138",
+      "confidence": "high",
+      "reason": "References to external datasets used in experiments, with access links."
+    },
+    {
+      "field": "available_models",
+      "value": "rcan, rcan_dd, rcan_dd_comp, rcan_DDSOCA, rcan_soca",
+      "normalized_value": "rcan rcan_dd rcan_dd_comp rcan_DDSOCA rcan_soca",
+      "evidence": "modelnames = ['rcan','rcan_dd','rcan_dd_comp','rcan_DDSOCA', 'rcan_soca']",
+      "evidence_location": "Line 165",
+      "confidence": "high",
+      "reason": "Lists models implemented in the library for experiments."
+    },
+    {
+      "field": "task",
+      "value": "image super-resolution",
+      "normalized_value": "image super-resolution",
+      "evidence": "the task of image super-resolution",
+      "evidence_location": "Lines 11-12",
+      "confidence": "high",
+      "reason": "Defines the computer vision task addressed by the artifact."
+    },
+    {
+      "field": "license_url",
+      "value": "https://github.com/robotic-vision-lab/Attention-With-Varying-Receptive-Fields-Network/blob/main/LICENSE",
+      "normalized_value": "https://github.com/robotic-vision-lab/Attention-With-Varying-Receptive-Fields-Network/blob/main/LICENSE",
+      "evidence": "[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/robotic-vision-lab/Attention-With-Varying-Receptive-Fields-Network/blob/main/LICENSE)",
+      "evidence_location": "Lines 187-189",
+      "confidence": "high",
+      "reason": "Provides link to the license file for legal reuse information."
+    }
+  ]
+}

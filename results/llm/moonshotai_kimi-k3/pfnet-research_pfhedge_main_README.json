@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PFHedge",
+      "normalized_value": "PFHedge",
+      "evidence": "<h1 align=\"center\">PFHedge: Deep Hedging in PyTorch</h1>",
+      "evidence_location": "line 1, top-level heading",
+      "confidence": "high",
+      "reason": "Explicitly names the artifact and its purpose in the document title."
+    },
+    {
+      "field": "description",
+      "value": "PFHedge is a PyTorch-based framework for Deep Hedging",
+      "normalized_value": "PFHedge is a PyTorch-based framework for Deep Hedging",
+      "evidence": "**PFHedge** is a [PyTorch](https://pytorch.org/)-based framework for [Deep Hedging][deep-hedging-arxiv].",
+      "evidence_location": "line 11",
+      "confidence": "high",
+      "reason": "Direct statement of what the artifact is and the framework it builds on."
+    },
+    {
+      "field": "task_domain",
+      "value": "Deep Hedging: a deep learning-based framework to hedge financial derivatives",
+      "normalized_value": "Deep Hedging: a deep learning-based framework to hedge financial derivatives",
+      "evidence": "[**Deep Hedging**][deep-hedging-arxiv] is a deep learning-based framework to hedge financial derivatives.",
+      "evidence_location": "line 18, section 'What is Deep Hedging?'",
+      "confidence": "high",
+      "reason": "Defines the scientific task/domain the artifact addresses."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/pfnet-research/pfhedge",
+      "normalized_value": "https://github.com/pfnet-research/pfhedge",
+      "evidence": "[![CI](https://github.com/pfnet-research/pfhedge/workflows/CI/badge.svg)](https://github.com/pfnet-research/pfhedge/actions?query=workflow%3ACI)",
+      "evidence_location": "line 5, badges",
+      "confidence": "high",
+      "reason": "Badge links identify the GitHub repository hosting the artifact."
+    },
+    {
+      "field": "pypi_package",
+      "value": "pfhedge",
+      "normalized_value": "pfhedge",
+      "evidence": "[![pypi](https://img.shields.io/pypi/v/pfhedge.svg)](https://pypi.org/project/pfhedge)",
+      "evidence_location": "line 4, badges",
+      "confidence": "high",
+      "reason": "Identifies the PyPI package name for installation and indexing."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://pfnet-research.github.io/pfhedge/",
+      "normalized_value": "https://pfnet-research.github.io/pfhedge/",
+      "evidence": "* [PFHedge Documentation](https://pfnet-research.github.io/pfhedge/)",
+      "evidence_location": "line 13",
+      "confidence": "high",
+      "reason": "Link to the official documentation site for the artifact."
+    },
+    {
+      "field": "install_command",
+      "value": "pip install pfhedge",
+      "normalized_value": "pip install pfhedge",
+      "evidence": "```sh\npip install pfhedge\n```",
+      "evidence_location": "lines 65-67, section 'Install'",
+      "confidence": "high",
+      "reason": "Defines the installation step needed to use the artifact."
+    },
+    {
+      "field": "pytorch_version_requirement",
+      "value": "torch 1.9.0+ | 2.0.0+",
+      "normalized_value": "torch 1.9.0+ | 2.0.0+",
+      "evidence": "![pytorch](https://img.shields.io/badge/torch-1.9.0--%20%7C%202.0.0---red)",
+      "evidence_location": "line 9, badges",
+      "confidence": "medium",
+      "reason": "Badge indicates supported PyTorch versions; the badge shorthand ('--' meaning '+') requires minor interpretation."
+    },
+    {
+      "field": "code_style",
+      "value": "black",
+      "normalized_value": "black",
+      "evidence": "[![code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)",
+      "evidence_location": "line 8, badges",
+      "confidence": "high",
+      "reason": "States the code formatter used, relevant for contributors."
+    },
+    {
+      "field": "training_command",
+      "value": "hedger.fit(derivative, n_epochs=200)",
+      "normalized_value": "hedger.fit(derivative, n_epochs=200)",
+      "evidence": "```py\nhedger.fit(derivative, n_epochs=200)\n```",
+      "evidence_location": "lines 155-157, section 'Fit and Price'",
+      "confidence": "high",
+      "reason": "Shows the core training API call for fitting a hedging model."
+    },
+    {
+      "field": "inference_command",
+      "value": "price = hedger.price(derivative)",
+      "normalized_value": "price = hedger.price(derivative)",
+      "evidence": "```py\nprice = hedger.price(derivative)\n```",
+      "evidence_location": "lines 161-163, section 'Fit and Price'",
+      "confidence": "high",
+      "reason": "Shows how to compute the derivative price (utility indifference price) after training."
+    },
+    {
+      "field": "gpu_usage",
+      "value": "Use the `to` method to set device/dtype, e.g. device = torch.device(\"cuda:0\")",
+      "normalized_value": "Use the `to` method to set device/dtype, e.g. device = torch.device(\"cuda:0\")",
+      "evidence": "To employ the desired [`device`](https://pytorch.org/docs/stable/tensor_attributes.html#torch.torch.device) and/or [`dtype`](https://pytorch.org/docs/stable/tensor_attributes.html#torch.torch.dtype) in fitting and pricing, use `to` method.\n\n```py\ndtype = torch.float64\ndevice = torch.device(\"cuda:0\")\n\nderivative = EuropeanOption(BrownianStock()).to(dtype, device)\nhedger = Hedger(...).to(dtype, device)\n```",
+      "evidence_location": "lines 169-177, section 'Use GPU'",
+      "confidence": "high",
+      "reason": "Documents hardware acceleration support and how to enable it."
+    },
+    {
+      "field": "example_notebook",
+      "value": "https://colab.research.google.com/github/pfnet-research/pfhedge/blob/main/examples/example_readme.ipynb",
+      "normalized_value": "https://colab.research.google.com/github/pfnet-research/pfhedge/blob/main/examples/example_readme.ipynb",
+      "evidence": "[example-readme-colab]: https://colab.research.google.com/github/pfnet-research/pfhedge/blob/main/examples/example_readme.ipynb",
+      "evidence_location": "line 308 (link referenced by 'Open In Colab' badge at line 71)",
+      "confidence": "high",
+      "reason": "Provides a runnable Colab demo notebook for the README example."
+    },
+    {
+      "field": "key_components",
+      "value": "pfhedge.instruments (Primary and Derivative instruments), pfhedge.nn (Hedger, MultiLayerPerceptron, BlackScholes, WhalleyWilmott, EntropicRiskMeasure, ExpectedShortFall), pfhedge.autogreek",
+      "normalized_value": "pfhedge.instruments (Primary and Derivative instruments), pfhedge.nn (Hedger, MultiLayerPerceptron, BlackScholes, WhalleyWilmott, EntropicRiskMeasure, ExpectedShortFall), pfhedge.autogreek",
+      "evidence": "A module [`pfhedge.autogreek`](https://pfnet-research.github.io/pfhedge/autogreek.html) provides functions implementing automatic evaluation of greeks using automatic differentiation.",
+      "evidence_location": "line 262, section 'Autogreek' (components also listed in sections 'Prepare a Derivative to Hedge' lines 75-78 and 'Create Your Hedger' lines 99-113)",
+      "confidence": "medium",
+      "reason": "Summarizes the library's module structure; value is composed from multiple sections so confidence is medium."
+    },
+    {
+      "field": "owner",
+      "value": "Preferred Networks",
+      "normalized_value": "Preferred Networks",
+      "evidence": "This project is owned by [Preferred Networks](https://www.preferred.jp/en/) and maintained by [Shota Imaki](https://github.com/simaki) and [Masanori Hirano](https://github.com/masanorihirano).",
+      "evidence_location": "line 294, section 'Contribution'",
+      "confidence": "high",
+      "reason": "States the owning organization, useful for attribution and reuse."
+    },
+    {
+      "field": "maintainers",
+      "value": "Shota Imaki and Masanori Hirano",
+      "normalized_value": "Shota Imaki and Masanori Hirano",
+      "evidence": "This project is owned by [Preferred Networks](https://www.preferred.jp/en/) and maintained by [Shota Imaki](https://github.com/simaki) and [Masanori Hirano](https://github.com/masanorihirano).",
+      "evidence_location": "line 294, section 'Contribution'",
+      "confidence": "high",
+      "reason": "Names the individual maintainers, useful for contact and attribution."
+    },
+    {
+      "field": "contributing_guide",
+      "value": ".github/CONTRIBUTING.md",
+      "normalized_value": ".github/CONTRIBUTING.md",
+      "evidence": "Please take a look at [CONTRIBUTING.md](.github/CONTRIBUTING.md) before creating a pull request.",
+      "evidence_location": "line 292, section 'Contribution'",
+      "confidence": "high",
+      "reason": "Points to contribution guidelines for reusers who want to contribute."
+    },
+    {
+      "field": "reference_paper",
+      "value": "Hans Bühler, Lukas Gonon, Josef Teichmann and Ben Wood, \"Deep hedging\". Quantitative Finance, 2019, 19, 1271-1291. arXiv:1802.03042 [q-fin.CP]",
+      "normalized_value": "Hans Bühler, Lukas Gonon, Josef Teichmann and Ben Wood, \"Deep hedging\". Quantitative Finance, 2019, 19, 1271-1291. arXiv:1802.03042 [q-fin.CP]",
+      "evidence": "* Hans Bühler, Lukas Gonon, Josef Teichmann and Ben Wood, \"[Deep hedging][deep-hedging-qf]\". Quantitative Finance, 2019, 19, 1271-1291. arXiv:[1802.03042][deep-hedging-arxiv] \\[q-fin.CP\\].",
+      "evidence_location": "line 298, section 'References'",
+      "confidence": "high",
+      "reason": "Primary citation for the Deep Hedging method underlying the artifact."
+    },
+    {
+      "field": "reference_paper",
+      "value": "Shota Imaki, Kentaro Imajo, Katsuya Ito, Kentaro Minami and Kei Nakagawa, \"No-Transaction Band Network: A Neural Network Architecture for Efficient Deep Hedging\". arXiv:2103.01775 [q-fin.CP]",
+      "normalized_value": "Shota Imaki, Kentaro Imajo, Katsuya Ito, Kentaro Minami and Kei Nakagawa, \"No-Transaction Band Network: A Neural Network Architecture for Efficient Deep Hedging\". arXiv:2103.01775 [q-fin.CP]",
+      "evidence": "* Shota Imaki, Kentaro Imajo, Katsuya Ito, Kentaro Minami and Kei Nakagawa, \"No-Transaction Band Network: A Neural Network Architecture for Efficient Deep Hedging\". arXiv:[2103.01775][ntb-network-arxiv] \\[q-fin.CP\\].",
+      "evidence_location": "line 300, section 'References'",
+      "confidence": "high",
+      "reason": "Cites the paper proposing the No-Transaction Band Network implemented in the library."
+    },
+    {
+      "field": "related_blog_post",
+      "value": "https://tech.preferred.jp/en/blog/neural-network-architecture-for-efficient-deep-hedging/",
+      "normalized_value": "https://tech.preferred.jp/en/blog/neural-network-architecture-for-efficient-deep-hedging/",
+      "evidence": "* [Neural Network Architecture for Efficient Deep Hedging](https://tech.preferred.jp/en/blog/neural-network-architecture-for-efficient-deep-hedging/) ([Japanese version](https://tech.preferred.jp/ja/blog/deep-hedging/))",
+      "evidence_location": "line 14",
+      "confidence": "high",
+      "reason": "Provides an explanatory resource about the neural network architecture used."
+    }
+  ]
+}

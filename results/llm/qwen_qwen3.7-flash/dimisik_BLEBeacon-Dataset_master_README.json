@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "BLEBeacon Dataset",
+      "normalized_value": "BLEBeacon Dataset",
+      "evidence": "# BLEBeacon Dataset",
+      "evidence_location": "Line 1",
+      "confidence": "high",
+      "reason": "Explicitly states the primary name of the artifact."
+    },
+    {
+      "field": "artifact_description",
+      "value": "The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month.",
+      "normalized_value": "The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE) advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month.",
+      "evidence": "The BLEBeacon dataset is a collection of Bluetooth Low Energy (BLE)  advertisement packets/traces generated from BLE beacons carried by people following their daily routine inside a university building for a whole month.",
+      "evidence_location": "Line 2",
+      "confidence": "high",
+      "reason": "Provides the core purpose, content type, and real-world context of the dataset."
+    },
+    {
+      "field": "dataset_url",
+      "value": "https://crawdad.org/unm/blebeacon/20190312/",
+      "normalized_value": "https://crawdad.org/unm/blebeacon/20190312/",
+      "evidence": "https://crawdad.org/unm/blebeacon/20190312/",
+      "evidence_location": "Line 4",
+      "confidence": "high",
+      "reason": "Direct access link to the official archive hosting the dataset."
+    },
+    {
+      "field": "citation_text",
+      "value": "Dimitrios Sikeridis, Ioannis Papapanagiotou, Michael Devetsikiotis, CRAWDAD dataset unm/blebeacon (v. 2019‑03‑12), downloaded from https://crawdad.org/unm/blebeacon/20190312, Mar 2019.",
+      "normalized_value": "Dimitrios Sikeridis, Ioannis Papapanagiotou, Michael Devetsikiotis, CRAWDAD dataset unm/blebeacon (v. 2019‑03‑12), downloaded from https://crawdad.org/unm/blebeacon/20190312, Mar 2019.",
+      "evidence": "> Dimitrios Sikeridis, Ioannis Papapanagiotou, Michael Devetsikiotis, CRAWDAD dataset unm/blebeacon (v. 2019‑03‑12), downloaded from https://crawdad.org/unm/blebeacon/20190312, Mar 2019.",
+      "evidence_location": "Line 7",
+      "confidence": "high",
+      "reason": "Provides the standard academic citation required for proper attribution when reusing the dataset."
+    },
+    {
+      "field": "hardware_beacons",
+      "value": "Gimbal Series 10 iBeacons",
+      "normalized_value": "Gimbal Series 10 iBeacons",
+      "evidence": "Users carried off-the-shelf Gimbal Series 10 iBeacons that continuously transmit BLE advertisement packets.",
+      "evidence_location": "Line 19",
+      "confidence": "high",
+      "reason": "Specifies the exact sensor hardware used to generate the data, critical for reproducibility."
+    },
+    {
+      "field": "hardware_scanners",
+      "value": "Raspberry Pi 3 (RPi)",
+      "normalized_value": "Raspberry Pi 3 (RPi)",
+      "evidence": "The backbone of the system is a network of Raspberry Pi 3 (RPi), able to collect all generated packets.",
+      "evidence_location": "Line 19",
+      "confidence": "high",
+      "reason": "Specifies the receiver hardware used for data collection."
+    },
+    {
+      "field": "transmission_frequency",
+      "value": "1 Hz",
+      "normalized_value": "1 Hz",
+      "evidence": "The periodic transmission rate for each beacon is set to 1 Hz",
+      "evidence_location": "Line 19",
+      "confidence": "high",
+      "reason": "Defines the signal emission rate, a key parameter for analyzing temporal patterns in the data."
+    },
+    {
+      "field": "transmission_power",
+      "value": "0 dBm",
+      "normalized_value": "0 dBm",
+      "evidence": "and transmission power of 0 dBm.",
+      "evidence_location": "Line 19",
+      "confidence": "high",
+      "reason": "Defines the signal strength at the source, essential for interpreting RSSI values."
+    },
+    {
+      "field": "data_collection_duration",
+      "value": "a whole month",
+      "normalized_value": "a whole month",
+      "evidence": "inside a university building for a whole month.",
+      "evidence_location": "Line 2",
+      "confidence": "high",
+      "reason": "Indicates the temporal scope of the data collection period."
+    },
+    {
+      "field": "dataset_files",
+      "value": "RSSI Report file, Check-In/Check-Out Report file",
+      "normalized_value": "RSSI Report file, Check-In/Check-Out Report file",
+      "evidence": "The BLEBeacon dataset contains two files, one with the trial readings from the RSSI report operation (RSSI Report file) and the other from the Check-In/Check-Out report operation (Check-In Check-Out Report file).",
+      "evidence_location": "Line 34",
+      "confidence": "high",
+      "reason": "Describes the structural composition of the dataset package."
+    },
+    {
+      "field": "rssi_report_fields",
+      "value": "* Entry_id: unique identifier of a packet in the dataset.\n* Beacon_id: unique identifier of the occupant/beacon.\n* RSSI: the Received Signal Strength Indicator (RSSI) in dB.\n* Timestamp: Date (Month/Day/Year) and Unix time (Hour:Second) of the advertisement packet reception moment from the Rpi.\n* RPi_id: RPi that received the packet.",
+      "normalized_value": "* Entry_id: unique identifier of a packet in the dataset.\n* Beacon_id: unique identifier of the occupant/beacon.\n* RSSI: the Received Signal Strength Indicator (RSSI) in dB.\n* Timestamp: Date (Month/Day/Year) and Unix time (Hour:Second) of the advertisement packet reception moment from the Rpi.\n* RPi_id: RPi that received the packet.",
+      "evidence": "* Entry_id: unique identifier of a packet in the dataset.\n* Beacon_id: unique identifier of the occupant/beacon.\n* RSSI: the Received Signal Strength Indicator (RSSI) in dB.\n* Timestamp: Date (Month/Day/Year) and Unix time (Hour:Second) of the advertisement packet reception moment from the Rpi.\n* RPi_id: RPi that received the packet.",
+      "evidence_location": "Lines 36-40",
+      "confidence": "high",
+      "reason": "Defines the exact schema/column names for the first dataset file."
+    },
+    {
+      "field": "checkin_checkout_fields",
+      "value": "* In_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the moment a user enters the RPi's vicinity and the first advertisement packet is received.\n* Out_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the last advertisement packet received from the same user by the specific RPi.",
+      "normalized_value": "* In_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the moment a user enters the RPi's vicinity and the first advertisement packet is received.\n* Out_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the last advertisement packet received from the same user by the specific RPi.",
+      "evidence": "* In_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the moment a user enters the RPi's vicinity and the first advertisement packet is received.\n* Out_time: Date (Month/Day/Year) and Unix time (Hour:Second) of the last advertisement packet received from the same user by the specific RPi.",
+      "evidence_location": "Lines 44-45",
+      "confidence": "high",
+      "reason": "Defines the additional schema columns for the occupancy tracking dataset file."
+    },
+    {
+      "field": "related_publication_link",
+      "value": "https://arxiv.org/abs/1802.08782",
+      "normalized_value": "https://arxiv.org/abs/1802.08782",
+      "evidence": "[\"BLEBeacon: A Real-Subject Trial Dataset from Mobile Bluetooth Low Energy Beacons\"](https://arxiv.org/abs/1802.08782)",
+      "evidence_location": "Line 50",
+      "confidence": "high",
+      "reason": "Links to the primary peer-reviewed/preprint paper detailing the dataset's methodology and experimental setup."
+    },
+    {
+      "field": "dataset_version",
+      "value": "v. 2019‑03‑12",
+      "normalized_value": "v. 2019‑03‑12",
+      "evidence": "CRAWDAD dataset unm/blebeacon (v. 2019‑03‑12)",
+      "evidence_location": "Line 7",
+      "confidence": "high",
+      "reason": "Identifies the specific version snapshot of the dataset for accurate referencing and reproducibility."
+    }
+  ]
+}

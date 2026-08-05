@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PointSQL",
+      "normalized_value": "PointSQL",
+      "evidence": "This is PointSQL, the source codes of [Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400)",
+      "evidence_location": "1-2",
+      "confidence": "high",
+      "reason": "Identifies the name of the artifact"
+    },
+    {
+      "field": "purpose",
+      "value": "the source codes of [Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400) and [Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text) from Microsoft Research. We present the setup for the WikiSQL experiments.",
+      "normalized_value": "the source codes of Natural Language to Structured Query Generation via Meta-Learning and Pointing Out SQL Queries From Text from Microsoft Research. We present the setup for the WikiSQL experiments.",
+      "evidence": "This is PointSQL, the source codes of [Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400) and [Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text) from Microsoft Research.\nWe present the setup for the WikiSQL experiments.",
+      "evidence_location": "1-4",
+      "confidence": "high",
+      "reason": "Describes the purpose and scope of the artifact"
+    },
+    {
+      "field": "paper_links",
+      "value": "https://arxiv.org/abs/1803.02400, https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text, https://arxiv.org/abs/1807.03100",
+      "normalized_value": "https://arxiv.org/abs/1803.02400, https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text, https://arxiv.org/abs/1807.03100",
+      "evidence": "[Natural Language to Structured Query Generation via Meta-Learning](https://arxiv.org/abs/1803.02400)\n[Pointing Out SQL Queries From Text](https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text)\n[Execute-Guided Decoding](https://arxiv.org/abs/1807.03100)",
+      "evidence_location": "2, 3, 40",
+      "confidence": "high",
+      "reason": "Provides links to related research papers"
+    },
+    {
+      "field": "dataset_links",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny, https://github.com/salesforce/WikiSQL, https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny, https://github.com/salesforce/WikiSQL, https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t",
+      "evidence": "Download a preprocessed dataset [link](https://1drv.ms/u/s!AryzSDJYB5TxnDWZtpb3ZjL3xBny) to `input/`\nDownload data from [WikiSQL](https://github.com/salesforce/WikiSQL).\nA preprocessed dataset can be found [here](https://1drv.ms/u/s!AryzSDJYB5TxnF31OCt_4to7uY2t)",
+      "evidence_location": "11, 17, 41",
+      "confidence": "high",
+      "reason": "Provides links to datasets needed for reproduction"
+    },
+    {
+      "field": "embedding_links",
+      "value": "https://nlp.stanford.edu/projects/glove/, http://www.logos.t.u-tokyo.ac.jp/~hassy/publications/arxiv2016jmt/",
+      "normalized_value": "https://nlp.stanford.edu/projects/glove/, http://www.logos.t.u-tokyo.ac.jp/~hassy/publications/arxiv2016jmt/",
+      "evidence": "Download pretrained embeddings from [glove](https://nlp.stanford.edu/projects/glove/) and [character n-gram embeddings](http://www.logos.t.u-tokyo.ac.jp/~hassy/publications/arxiv2016jmt/)",
+      "evidence_location": "37",
+      "confidence": "high",
+      "reason": "Provides links to required pretrained embeddings"
+    },
+    {
+      "field": "pretrained_models_link",
+      "value": "https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz",
+      "normalized_value": "https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz",
+      "evidence": "Download [pretrained model checkpoints](https://1drv.ms/u/s!AryzSDJYB5TxnDR5I4rYjLi4HUYz) to ``model_zoo/``",
+      "evidence_location": "122",
+      "confidence": "high",
+      "reason": "Provides link to pretrained models for reuse"
+    },
+    {
+      "field": "software_requirements",
+      "value": "Tensorflow 1.4, python 3.6, Stanza",
+      "normalized_value": "Tensorflow 1.4, python 3.6, Stanza",
+      "evidence": "Tensorflow 1.4\npython 3.6\n[Stanza](https://github.com/stanfordnlp/stanza)",
+      "evidence_location": "130-132",
+      "confidence": "high",
+      "reason": "Lists software dependencies needed to run the code"
+    },
+    {
+      "field": "training_command",
+      "value": "OUTDIR=output/meta_sum\nmkdir $OUTDIR\npython run.py --input-dir ./input --output-dir $OUTDIR --config config/nl2prog.meta_2_0.001.rank.config --meta_learning_rate 0.001 --gradient_clip_norm 5 --num_layers 3 --num_meta_example 2 --meta_learning --production",
+      "normalized_value": "OUTDIR=output/meta_sum mkdir $OUTDIR python run.py --input-dir ./input --output-dir $OUTDIR --config config/nl2prog.meta_2_0.001.rank.config --meta_learning_rate 0.001 --gradient_clip_norm 5 --num_layers 3 --num_meta_example 2 --meta_learning --production",
+      "evidence": "$ OUTDIR=output/meta_sum\n$ mkdir $OUTDIR\n$ python run.py --input-dir ./input \\\n    --output-dir $OUTDIR \\\n    --config config/nl2prog.meta_2_0.001.rank.config  \\\n    --meta_learning_rate 0.001 --gradient_clip_norm 5 \\\n    --num_layers 3  --num_meta_example 2 \\\n    --meta_learning --production",
+      "evidence_location": "49-56",
+      "confidence": "high",
+      "reason": "Provides exact command for training the model"
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "Logical Form Accuracy: 0.631383269546, Execute Accuracy: 0.68277747403, Logical Form Accuracy: 0.628073829775, Execute Accuracy: 0.680379563733, Logical Form Accuracy: 0.614592374009, Execute Accuracy: 0.668055314471",
+      "normalized_value": "Logical Form Accuracy: 0.631383269546, Execute Accuracy: 0.68277747403, Logical Form Accuracy: 0.628073829775, Execute Accuracy: 0.680379563733, Logical Form Accuracy: 0.614592374009, Execute Accuracy: 0.668055314471",
+      "evidence": "Logical Form Accuracy: 0.631383269546\nExecute Accuracy: 0.68277747403\nLogical Form Accuracy: 0.628073829775\nExecute Accuracy: 0.680379563733\nLogical Form Accuracy: 0.614592374009\nExecute Accuracy: 0.668055314471",
+      "evidence_location": "78-79, 96-97, 116-117",
+      "confidence": "high",
+      "reason": "Provides evaluation metrics for model performance"
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{pshuang2018PT-MAML,\n  author    = {Po{-}Sen Huang and\n               Chenglong Wang and\n               Rishabh Singh and\n               Wen-tau Yih and\n               Xiaodong He},\n  title     = {Natural Language to Structured Query Generation via Meta-Learning},\n  booktitle = {NAACL},\n  year      = {2018},\n}",
+      "normalized_value": "@inproceedings{pshuang2018PT-MAML, author = {Po{-}Sen Huang and Chenglong Wang and Rishabh Singh and Wen-tau Yih and Xiaodong He}, title = {Natural Language to Structured Query Generation via Meta-Learning}, booktitle = {NAACL}, year = {2018}, }",
+      "evidence": "@inproceedings{pshuang2018PT-MAML,\n  author    = {Po{-}Sen Huang and\n               Chenglong Wang and\n               Rishabh Singh and\n               Wen-tau Yih and\n               Xiaodong He},\n  title     = {Natural Language to Structured Query Generation via Meta-Learning},\n  booktitle = {NAACL},\n  year      = {2018},\n}",
+      "evidence_location": "142-151",
+      "confidence": "high",
+      "reason": "Provides citation information for proper attribution"
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{2018executionguided,\n  author    = {Chenglong Wang and\n               Po{-}Sen Huang and\n               Alex Polozov and\n               Marc Brockschmidt and \n               Rishabh Singh},\n  title = \"{Execution-Guided Neural Program Decoding}\",\n  booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)},\n  year = {2018}\n}",
+      "normalized_value": "@inproceedings{2018executionguided, author = {Chenglong Wang and Po{-}Sen Huang and Alex Polozov and Marc Brockschmidt and Rishabh Singh}, title = \"{Execution-Guided Neural Program Decoding}\", booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)}, year = {2018} }",
+      "evidence": "@inproceedings{2018executionguided,\n  author    = {Chenglong Wang and\n               Po{-}Sen Huang and\n               Alex Polozov and\n               Marc Brockschmidt and \n               Rishabh Singh},\n  title = \"{Execution-Guided Neural Program Decoding}\",\n  booktitle = {ICML workshop on Neural Abstract Machines & Program Induction v2 (NAMPI)},\n  year = {2018}\n}",
+      "evidence_location": "156-165",
+      "confidence": "high",
+      "reason": "Provides citation information for proper attribution"
+    },
+    {
+      "field": "citation",
+      "value": "@techreport{chenglong,\n  author = {Wang, Chenglong and Brockschmidt, Marc and Singh, Rishabh},\n  title = {Pointing Out {SQL} Queries From Text},\n  number = {MSR-TR-2017-45},\n  year = {2017},\n  month = {November},\n  url = {https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/},\n}",
+      "normalized_value": "@techreport{chenglong, author = {Wang, Chenglong and Brockschmidt, Marc and Singh, Rishabh}, title = {Pointing Out {SQL} Queries From Text}, number = {MSR-TR-2017-45}, year = {2017}, month = {November}, url = {https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/}, }",
+      "evidence": "@techreport{chenglong,\n  author = {Wang, Chenglong and Brockschmidt, Marc and Singh, Rishabh},\n  title = {Pointing Out {SQL} Queries From Text},\n  number = {MSR-TR-2017-45},\n  year = {2017},\n  month = {November},\n  url = {https://www.microsoft.com/en-us/research/publication/pointing-sql-queries-text/},\n}",
+      "evidence_location": "173-180",
+      "confidence": "high",
+      "reason": "Provides citation information for proper attribution"
+    },
+    {
+      "field": "dataset_version",
+      "value": "v2",
+      "normalized_value": "v2",
+      "evidence": "Note we use a new preprocessed dataset (v2) in the [Execute-Guided Decoding](https://arxiv.org/abs/1807.03100) paper",
+      "evidence_location": "40",
+      "confidence": "high",
+      "reason": "Specifies dataset version used in the research"
+    },
+    {
+      "field": "dataset_compatibility",
+      "value": "the version 2 dataset matches the v1.1 release of WikiSQL",
+      "normalized_value": "the version 2 dataset matches the v1.1 release of WikiSQL",
+      "evidence": "the version 2 dataset matches the v1.1 release of [WikiSQL](https://github.com/salesforce/WikiSQL).",
+      "evidence_location": "43",
+      "confidence": "high",
+      "reason": "Specifies compatibility between dataset versions"
+    }
+  ]
+}

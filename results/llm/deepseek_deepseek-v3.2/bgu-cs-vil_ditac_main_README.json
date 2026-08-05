@@ -1,0 +1,130 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Trainable Highly-expressive Activation Functions",
+      "normalized_value": "Trainable Highly-expressive Activation Functions",
+      "evidence": "Trainable Highly-expressive Activation Functions",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Identifies the artifact by name."
+    },
+    {
+      "field": "conference",
+      "value": "ECCV 2024",
+      "normalized_value": "ECCV 2024",
+      "evidence": "[ECCV 2024]",
+      "evidence_location": "line 1",
+      "confidence": "high",
+      "reason": "Specifies the conference where the work was presented."
+    },
+    {
+      "field": "authors",
+      "value": "Irit Chelly*, Shahaf E. Finder*, Shira Ifergane, and Oren Freifeld.",
+      "normalized_value": "Irit Chelly*, Shahaf E. Finder*, Shira Ifergane, and Oren Freifeld.",
+      "evidence": "[Irit Chelly*](https://irita42.wixsite.com/mysite), [Shahaf E. Finder*](https://shahaffind.github.io/), [Shira Ifergane](https://www.linkedin.com/in/shira-ifergane/), and [Oren Freifeld](https://www.cs.bgu.ac.il/~orenfr/).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Lists the creators of the artifact."
+    },
+    {
+      "field": "arxiv_link",
+      "value": "https://arxiv.org/abs/2407.07564",
+      "normalized_value": "https://arxiv.org/abs/2407.07564",
+      "evidence": "[![arXiv](https://img.shields.io/badge/arXiv-2407.07564-b31b1b.svg?style=flat)](https://arxiv.org/abs/2407.07564)",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Provides a link to the associated paper on arXiv."
+    },
+    {
+      "field": "requirements",
+      "value": "python 3.12, torch 2.2.2, difw 0.0.29, scikit-learn 1.5.1",
+      "normalized_value": "python 3.12, torch 2.2.2, difw 0.0.29, scikit-learn 1.5.1",
+      "evidence": "- python 3.12\n- torch 2.2.2 \n- difw 0.0.29\n- scikit-learn 1.5.1",
+      "evidence_location": "lines 8-11",
+      "confidence": "high",
+      "reason": "Specifies software dependencies for installation."
+    },
+    {
+      "field": "dependencies_note",
+      "value": "difw can be fragile, make sure that it compiles successfully. We've successfully compiled it with cuda version 12.2.",
+      "normalized_value": "difw can be fragile, make sure that it compiles successfully. We've successfully compiled it with cuda version 12.2.",
+      "evidence": "`difw` can be fragile, make sure that it compiles successfully. We've successfully compiled it with cuda version 12.2.",
+      "evidence_location": "line 13",
+      "confidence": "high",
+      "reason": "Important note for setting up the difw dependency."
+    },
+    {
+      "field": "setup_commands",
+      "value": "conda install cxx-compiler -c conda-forge\nexport CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH\nexport LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH\nexport PATH=/usr/local/cuda-12/bin:$PATH",
+      "normalized_value": "conda install cxx-compiler -c conda-forge export CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH export LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH export PATH=/usr/local/cuda-12/bin:$PATH",
+      "evidence": "```sh\nconda install cxx-compiler -c conda-forge\nexport CPATH=/usr/local/cuda-12/targets/x86_64-linux/include:$CPATH\nexport LD_LIBRARY_PATH=/usr/local/cuda-12/targets/x86_64-linux/lib:$LD_LIBRARY_PATH\nexport PATH=/usr/local/cuda-12/bin:$PATH\n```",
+      "evidence_location": "lines 16-21",
+      "confidence": "high",
+      "reason": "Commands for environment setup to ensure difw compiles."
+    },
+    {
+      "field": "usage_code",
+      "value": "import torch\nfrom ditac import DiTAC\n\nact = DiTAC()\nx = torch.randn(8,32,20,20).to('cuda')\n\nact(x)",
+      "normalized_value": "import torch from ditac import DiTAC act = DiTAC() x = torch.randn(8,32,20,20).to('cuda') act(x)",
+      "evidence": "```python\nimport torch\nfrom ditac import DiTAC\n\nact = DiTAC()\nx = torch.randn(8,32,20,20).to('cuda')\n\nact(x)\n```",
+      "evidence_location": "lines 25-33",
+      "confidence": "high",
+      "reason": "Example code for using the DiTAC activation function."
+    },
+    {
+      "field": "reproduction_command",
+      "value": "python run_regression.py",
+      "normalized_value": "python run_regression.py",
+      "evidence": "python run_regression.py",
+      "evidence_location": "line 37",
+      "confidence": "high",
+      "reason": "Command to reproduce a figure from the paper."
+    },
+    {
+      "field": "license",
+      "value": "MIT license",
+      "normalized_value": "MIT license",
+      "evidence": "This project is released under the MIT license. Please see the [LICENSE](LICENSE) file for more information.",
+      "evidence_location": "lines 42-43",
+      "confidence": "high",
+      "reason": "Specifies the license for legal reuse."
+    },
+    {
+      "field": "citation",
+      "value": "@inproceedings{Chelly:ECCV:2024DiTAC,\n  title     = {Trainable Highly-expressive Activation Functions},\n  author    = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren},\n  booktitle = {European Conference on Computer Vision},\n  year      = {2024},\n}",
+      "normalized_value": "@inproceedings{Chelly:ECCV:2024DiTAC, title = {Trainable Highly-expressive Activation Functions}, author = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren}, booktitle = {European Conference on Computer Vision}, year = {2024}, }",
+      "evidence": "```\n@inproceedings{Chelly:ECCV:2024DiTAC,\n  title     = {Trainable Highly-expressive Activation Functions},\n  author    = {Chelly, Irit and Finder, Shahaf E and Ifergane, Shira and Freifeld, Oren},\n  booktitle = {European Conference on Computer Vision},\n  year      = {2024},\n}\n```",
+      "evidence_location": "lines 49-54",
+      "confidence": "high",
+      "reason": "BibTeX entry for citing the paper."
+    },
+    {
+      "field": "previous_citations",
+      "value": "@inproceedings{martinez2022closed,\n  title={Closed-form diffeomorphic transformations for time series alignment},\n  author={Martinez, I{\\~n}igo and Viles, Elisabeth and Olaizola, Igor G},\n  booktitle={International Conference on Machine Learning},\n  pages={15122--15158},\n  year={2022},\n  organization={PMLR}\n}\n\n@article{freifeld2017transformations,\n  title={Transformations based on continuous piecewise-affine velocity fields},\n  author={Freifeld, Oren and Hauberg, S{\\o}ren and Batmanghelich, Kayhan and Fisher, Jonn W},\n  journal={IEEE transactions on pattern analysis and machine intelligence},\n  volume={39},\n  number={12},\n  pages={2496--2509},\n  year={2017},\n  publisher={IEEE}\n}",
+      "normalized_value": "@inproceedings{martinez2022closed, title={Closed-form diffeomorphic transformations for time series alignment}, author={Martinez, I{\\~n}igo and Viles, Elisabeth and Olaizola, Igor G}, booktitle={International Conference on Machine Learning}, pages={15122--15158}, year={2022}, organization={PMLR} } @article{freifeld2017transformations, title={Transformations based on continuous piecewise-affine velocity fields}, author={Freifeld, Oren and Hauberg, S{\\o}ren and Batmanghelich, Kayhan and Fisher, Jonn W}, journal={IEEE transactions on pattern analysis and machine intelligence}, volume={39}, number={12}, pages={2496--2509}, year={2017}, publisher={IEEE} }",
+      "evidence": "```\n@inproceedings{martinez2022closed,\n  title={Closed-form diffeomorphic transformations for time series alignment},\n  author={Martinez, I{\\~n}igo and Viles, Elisabeth and Olaizola, Igor G},\n  booktitle={International Conference on Machine Learning},\n  pages={15122--15158},\n  year={2022},\n  organization={PMLR}\n}\n\n@article{freifeld2017transformations,\n  title={Transformations based on continuous piecewise-affine velocity fields},\n  author={Freifeld, Oren and Hauberg, S{\\o}ren and Batmanghelich, Kayhan and Fisher, Jonn W},\n  journal={IEEE transactions on pattern analysis and machine intelligence},\n  volume={39},\n  number={12},\n  pages={2496--2509},\n  year={2017},\n  publisher={IEEE}\n}\n```",
+      "evidence_location": "lines 58-76",
+      "confidence": "high",
+      "reason": "References to related previous works."
+    },
+    {
+      "field": "method_name",
+      "value": "DiTAC",
+      "normalized_value": "DiTAC",
+      "evidence": "from ditac import DiTAC",
+      "evidence_location": "line 27",
+      "confidence": "high",
+      "reason": "Identifies the specific activation function method."
+    },
+    {
+      "field": "availability_note",
+      "value": "Other experiments' code will be uploaded soon",
+      "normalized_value": "Other experiments' code will be uploaded soon",
+      "evidence": "**Other experiments' code will be uploaded soon**",
+      "evidence_location": "line 40",
+      "confidence": "high",
+      "reason": "Informs about future availability of additional code."
+    }
+  ]
+}

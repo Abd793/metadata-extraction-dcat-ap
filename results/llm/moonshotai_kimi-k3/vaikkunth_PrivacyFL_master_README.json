@@ -1,0 +1,184 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "PrivacyFL",
+      "normalized_value": "PrivacyFL",
+      "evidence": "# PrivacyFL: A simulator for privacy-preserving and secure federated learning",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Names the artifact, essential for identification and indexing."
+    },
+    {
+      "field": "description",
+      "value": "This repository contains the source code for running a privacy perserving federated learning simulator. The source code is currently set up for the configuration of three clients performing secure and differentially private federated learning using logistic regresion on the MNIST dataset.",
+      "normalized_value": "This repository contains the source code for running a privacy perserving federated learning simulator. The source code is currently set up for the configuration of three clients performing secure and differentially private federated learning using logistic regresion on the MNIST dataset.",
+      "evidence": "This repository contains the source code for running a privacy perserving federated learning simulator. The source code is currently set up for the configuration of three clients performing secure and differentially private federated learning using logistic regresion on the MNIST dataset.",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Describes the artifact's purpose and default configuration, helping users understand what it does."
+    },
+    {
+      "field": "task",
+      "value": "privacy-preserving and secure federated learning simulation",
+      "normalized_value": "privacy-preserving and secure federated learning simulation",
+      "evidence": "# PrivacyFL: A simulator for privacy-preserving and secure federated learning",
+      "evidence_location": "line 1, top-level header",
+      "confidence": "high",
+      "reason": "Identifies the scientific/technical domain of the artifact."
+    },
+    {
+      "field": "default_model",
+      "value": "logistic regression",
+      "normalized_value": "logistic regression",
+      "evidence": "three clients performing secure and differentially private federated learning using logistic regresion on the MNIST dataset",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Names the machine learning model used in the default simulation, relevant for reproduction."
+    },
+    {
+      "field": "dataset",
+      "value": "MNIST",
+      "normalized_value": "MNIST",
+      "evidence": "using logistic regresion on the MNIST dataset",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Names the dataset used in the example simulation, relevant for reproduction and evaluation."
+    },
+    {
+      "field": "publication_venue",
+      "value": "29TH ACM INTERNATIONAL CONFERENCE ON INFORMATION AND KNOWLEDGE MANAGEMENT",
+      "normalized_value": "29TH ACM INTERNATIONAL CONFERENCE ON INFORMATION AND KNOWLEDGE MANAGEMENT",
+      "evidence": "## UPDATE : Paper accepted at the 29TH ACM INTERNATIONAL CONFERENCE ON INFORMATION AND KNOWLEDGE MANAGEMENT",
+      "evidence_location": "line 5, 'UPDATE' section header",
+      "confidence": "high",
+      "reason": "Identifies the peer-reviewed venue of the associated paper, useful for citation and credibility."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://dl.acm.org/doi/10.1145/3340531.3412771",
+      "normalized_value": "https://dl.acm.org/doi/10.1145/3340531.3412771",
+      "evidence": "Paper and Video Link : https://dl.acm.org/doi/10.1145/3340531.3412771",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Provides the access link (DOI) to the associated paper and video."
+    },
+    {
+      "field": "installation_command",
+      "value": "conda env create -f environment.yml -n YourEnvironmentName",
+      "normalized_value": "conda env create -f environment.yml -n YourEnvironmentName",
+      "evidence": "First, clone this repository locally. Then create a conda enviroment by running:\n```\nconda env create -f environment.yml -n YourEnvironmentName\n```",
+      "evidence_location": "lines 15-18, 'Installing' section",
+      "confidence": "high",
+      "reason": "Defines the environment setup step required to install the artifact's dependencies."
+    },
+    {
+      "field": "environment_activation_command",
+      "value": "source activate YourEnvironmentName",
+      "normalized_value": "source activate YourEnvironmentName",
+      "evidence": "Activate the new enviornment:\n```\nsource activate YourEnvironmentName\n```",
+      "evidence_location": "lines 19-22, 'Installing' section",
+      "confidence": "high",
+      "reason": "Defines the step to activate the conda environment before running the simulator."
+    },
+    {
+      "field": "run_command",
+      "value": "python run_simulation.py",
+      "normalized_value": "python run_simulation.py",
+      "evidence": "To validate correct installation `cd` to `src` and run \n```\npython run_simulation.py\n```",
+      "evidence_location": "lines 23-26, 'Installing' section",
+      "confidence": "high",
+      "reason": "Defines the command to run/validate the simulation, key for reproduction."
+    },
+    {
+      "field": "dependency_manager",
+      "value": "conda (environment.yml)",
+      "normalized_value": "conda (environment.yml)",
+      "evidence": "conda env create -f environment.yml -n YourEnvironmentName",
+      "evidence_location": "line 17, 'Installing' section code block",
+      "confidence": "high",
+      "reason": "Identifies the dependency/environment management tool and spec file used for installation."
+    },
+    {
+      "field": "dependency",
+      "value": "pyspark",
+      "normalized_value": "pyspark",
+      "evidence": "When initialized, clients are also provided their dataset, which in the example is a pyspark dataframe.",
+      "evidence_location": "line 41, 'ClientAgent' section",
+      "confidence": "high",
+      "reason": "Names a concrete software dependency used for data representation in the example."
+    },
+    {
+      "field": "configuration_file",
+      "value": "config.py",
+      "normalized_value": "config.py",
+      "evidence": "We have provided a default `config.py` file as an example.",
+      "evidence_location": "line 30, 'Configuring Your Simulation' section",
+      "confidence": "high",
+      "reason": "Identifies the configuration file users modify to customize the simulation."
+    },
+    {
+      "field": "configuration_options",
+      "value": "USE_SECURITY, USE_DP_PRIVACY, USING_CUMULATIVE",
+      "normalized_value": "USE_SECURITY, USE_DP_PRIVACY, USING_CUMULATIVE",
+      "evidence": "The file contains Boolean variables `USE_SECURITY` and `USE_DP_PRIVACY` to toggle security and differential privacy features.",
+      "evidence_location": "line 32, 'Configuring Your Simulation' section",
+      "confidence": "high",
+      "reason": "Names the concrete Boolean configuration flags that control security, differential privacy, and cumulative dataset behavior."
+    },
+    {
+      "field": "core_classes",
+      "value": "Agent, ClientAgent, ServerAgent, Initializer, Directory",
+      "normalized_value": "Agent, ClientAgent, ServerAgent, Initializer, Directory",
+      "evidence": "Agent (defined in agent.py) is the base class for this simulation. It is not meant to be initialized directly, but subclassed to create an agent with whichever behavior you would like. We have provided two sample subclasses, **ClientAgent** and **ServerAgent**, which are both used in the sample simulation.",
+      "evidence_location": "lines 36-58, 'System Architecure' section",
+      "confidence": "high",
+      "reason": "Lists the main architectural classes, helping users understand and extend the codebase."
+    },
+    {
+      "field": "evaluation_metrics",
+      "value": "Personal accuracy, Personal computation time, Federated accuracy, Simulated time to receive federated weights",
+      "normalized_value": "Personal accuracy, Personal computation time, Federated accuracy, Simulated time to receive federated weights",
+      "evidence": "Performance Metrics for client_agent2 on iteration 1 \n------------------------------------------- \nPersonal accuracy: 0.8283333333333334 \nPersonal computation time: 0:00:01.194242 \nFederated accuracy: 0.8566666666666667 \nSimulated time to receive federated weights: 0:00:07.202375",
+      "evidence_location": "lines 68-82, 'Features' section code block",
+      "confidence": "high",
+      "reason": "Names the metrics output by the simulator, relevant for evaluation and comparison."
+    },
+    {
+      "field": "sample_results",
+      "value": "Personal accuracy: 0.8283333333333334 (client_agent2), 0.8216666666666667 (client_agent0); Federated accuracy: 0.8566666666666667 on iteration 1",
+      "normalized_value": "Personal accuracy: 0.8283333333333334 (client_agent2), 0.8216666666666667 (client_agent0); Federated accuracy: 0.8566666666666667 on iteration 1",
+      "evidence": "Personal accuracy: 0.8283333333333334 \nPersonal computation time: 0:00:01.194242 \nFederated accuracy: 0.8566666666666667 \nSimulated time to receive federated weights: 0:00:07.202375",
+      "evidence_location": "lines 71-74, 'Features' section code block",
+      "confidence": "high",
+      "reason": "Provides concrete sample output values showing expected simulation results."
+    },
+    {
+      "field": "authors",
+      "value": "Vaikkunth Mugunthan, Anton Peraire, Lalana Kagal",
+      "normalized_value": "Vaikkunth Mugunthan, Anton Peraire, Lalana Kagal",
+      "evidence": "Vaikkunth Mugunthan* Anton Peraire* Lalana Kagal",
+      "evidence_location": "line 89, 'Authors' section",
+      "confidence": "high",
+      "reason": "Identifies the authors for attribution and citation."
+    },
+    {
+      "field": "license",
+      "value": "MIT License",
+      "normalized_value": "MIT License",
+      "evidence": "This project is licensed under the MIT License",
+      "evidence_location": "line 93, 'License' section",
+      "confidence": "high",
+      "reason": "States the legal terms governing reuse of the artifact."
+    },
+    {
+      "field": "copyright",
+      "value": "Copyright (c) 2020 Vaikkunth, Anton, Lalana (PrivacyFL)",
+      "normalized_value": "Copyright (c) 2020 Vaikkunth, Anton, Lalana (PrivacyFL)",
+      "evidence": "Copyright (c) 2020 Vaikkunth, Anton, Lalana (PrivacyFL)",
+      "evidence_location": "line 97, 'License' section",
+      "confidence": "high",
+      "reason": "Provides copyright holder and year information for attribution."
+    }
+  ]
+}

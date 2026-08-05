@@ -1,0 +1,265 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Highway",
+      "normalized_value": "Highway",
+      "evidence": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Names the artifact, essential for identification and indexing."
+    },
+    {
+      "field": "description",
+      "value": "a C++ library that provides portable SIMD/vector intrinsics",
+      "normalized_value": "a C++ library that provides portable SIMD/vector intrinsics",
+      "evidence": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Concise statement of the artifact's purpose and type."
+    },
+    {
+      "field": "programming_language",
+      "value": "C++",
+      "normalized_value": "C++",
+      "evidence": "Highway is a C++ library that provides portable SIMD/vector intrinsics.",
+      "evidence_location": "line 5",
+      "confidence": "high",
+      "reason": "Identifies the implementation language, needed for reuse decisions."
+    },
+    {
+      "field": "language_standard_requirement",
+      "value": "C++11",
+      "normalized_value": "C++11",
+      "evidence": "Highway only requires C++11\nand supports four families of compilers.",
+      "evidence_location": "lines 34-35, section \"How\"",
+      "confidence": "high",
+      "reason": "Minimum language standard required to use the library."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://google.github.io/highway/en/master/",
+      "normalized_value": "https://google.github.io/highway/en/master/",
+      "evidence": "[Documentation](https://google.github.io/highway/en/master/)",
+      "evidence_location": "line 7",
+      "confidence": "high",
+      "reason": "Link to official documentation for the artifact."
+    },
+    {
+      "field": "license",
+      "value": "dual-licensed as Apache 2 / BSD-3",
+      "normalized_value": "dual-licensed as Apache 2 / BSD-3",
+      "evidence": "Previously licensed under Apache 2, now dual-licensed as Apache 2 / BSD-3.",
+      "evidence_location": "line 9",
+      "confidence": "high",
+      "reason": "Legal terms governing reuse of the artifact."
+    },
+    {
+      "field": "supported_architectures",
+      "value": "five architectures",
+      "normalized_value": "five architectures",
+      "evidence": "**Works on widely-used platforms**: Highway supports five architectures; the\nsame application code can target various instruction sets, including those with\n'scalable' vectors (size unknown at compile time).",
+      "evidence_location": "lines 32-34, section \"How\"",
+      "confidence": "high",
+      "reason": "States platform portability scope of the library."
+    },
+    {
+      "field": "supported_targets",
+      "value": "24 targets, including EMU128, SCALAR, NEON, SVE, SVE2, Z14, Z15, PPC8, PPC9, PPC10, RVV, WASM, WASM_EMU256, SSE2, SSSE3, SSE4, AVX2, AVX3, AVX3_DL, AVX3_ZEN4, AVX3_SPR",
+      "normalized_value": "24 targets, including EMU128, SCALAR, NEON, SVE, SVE2, Z14, Z15, PPC8, PPC9, PPC10, RVV, WASM, WASM_EMU256, SSE2, SSSE3, SSE4, AVX2, AVX3, AVX3_DL, AVX3_ZEN4, AVX3_SPR",
+      "evidence": "Highway supports 24 targets, listed in alphabetical order of platform:",
+      "evidence_location": "lines 144-170, section \"Current status\" / \"Targets\"",
+      "confidence": "high",
+      "reason": "Enumerates the SIMD instruction set targets the library can compile for, key for evaluating hardware compatibility."
+    },
+    {
+      "field": "performance_claim",
+      "value": "reduce energy usage e.g. fivefold; often see 5-10x speedups",
+      "normalized_value": "reduce energy usage e.g. fivefold; often see 5-10x speedups",
+      "evidence": "CPUs provide SIMD/vector instructions that apply the same operation to multiple\ndata items. This can reduce energy usage e.g. *fivefold* because fewer\ninstructions are executed. We also often see *5-10x* speedups.",
+      "evidence_location": "lines 20-22, section \"How\"",
+      "confidence": "medium",
+      "reason": "Quantitative performance motivation for using SIMD via this library; figures are general SIMD claims rather than benchmarked Highway results."
+    },
+    {
+      "field": "application_domains",
+      "value": "image processing (floating-point), compression, video analysis, linear algebra, cryptography, sorting and random generation",
+      "normalized_value": "image processing (floating-point), compression, video analysis, linear algebra, cryptography, sorting and random generation",
+      "evidence": "Highway provides an extensive set of\noperations, used for image processing (floating-point), compression, video\nanalysis, linear algebra, cryptography, sorting and random generation.",
+      "evidence_location": "lines 46-48, section \"How\"",
+      "confidence": "high",
+      "reason": "Lists concrete domains where the library is applied, useful for search and reuse."
+    },
+    {
+      "field": "build_system",
+      "value": "CMake",
+      "normalized_value": "CMake",
+      "evidence": "This project uses CMake to generate and build.",
+      "evidence_location": "line 220, section \"Installation\"",
+      "confidence": "high",
+      "reason": "Primary build system, required for reproduction and installation."
+    },
+    {
+      "field": "alternative_build_system",
+      "value": "Bazel",
+      "normalized_value": "Bazel",
+      "evidence": "Bazel is also supported for building, but it is not as widely used/tested.",
+      "evidence_location": "line 253, section \"Installation\"",
+      "confidence": "high",
+      "reason": "Secondary supported build system."
+    },
+    {
+      "field": "install_cmake_command",
+      "value": "sudo apt install cmake",
+      "normalized_value": "sudo apt install cmake",
+      "evidence": "```bash\nsudo apt install cmake\n```",
+      "evidence_location": "lines 223-225, section \"Installation\"",
+      "confidence": "high",
+      "reason": "Command to install the build prerequisite on Debian-based systems."
+    },
+    {
+      "field": "build_and_test_command",
+      "value": "mkdir -p build && cd build\ncmake ..\nmake -j && make test",
+      "normalized_value": "mkdir -p build && cd build\ncmake ..\nmake -j && make test",
+      "evidence": "```bash\nmkdir -p build && cd build\ncmake ..\nmake -j && make test\n```",
+      "evidence_location": "lines 245-249, section \"Installation\"",
+      "confidence": "high",
+      "reason": "Standard CMake workflow to build the library and run tests."
+    },
+    {
+      "field": "test_script",
+      "value": "run_tests.sh (run_tests.bat on Windows)",
+      "normalized_value": "run_tests.sh (run_tests.bat on Windows)",
+      "evidence": "Or you can run `run_tests.sh` (`run_tests.bat` on Windows).",
+      "evidence_location": "line 251, section \"Installation\"",
+      "confidence": "high",
+      "reason": "Alternative one-step test runner scripts for Unix and Windows."
+    },
+    {
+      "field": "test_dependency",
+      "value": "googletest",
+      "normalized_value": "googletest",
+      "evidence": "Highway's unit tests use [googletest](https://github.com/google/googletest).\nBy default, Highway's CMake downloads this dependency at configuration time.\nYou can avoid this by setting the `HWY_SYSTEM_GTEST` CMake variable to ON and\ninstalling gtest separately:",
+      "evidence_location": "lines 227-230, section \"Installation\"",
+      "confidence": "high",
+      "reason": "External dependency required for unit tests, with configuration option to use a system install."
+    },
+    {
+      "field": "vcpkg_install_command",
+      "value": "vcpkg install highway",
+      "normalized_value": "vcpkg install highway",
+      "evidence": "```bash\nvcpkg install highway\n```",
+      "evidence_location": "lines 271-273, section \"Building highway - Using vcpkg\"",
+      "confidence": "high",
+      "reason": "Package manager installation command."
+    },
+    {
+      "field": "package_managers",
+      "value": "alpinelinux, conan-io, conda-forge, DragonFlyBSD, fd00/yacp, freebsd, getsolus/packages, ghostbsd, microsoft/vcpkg, MidnightBSD, MSYS2, NetBSD, openSUSE, opnsense, Xilinx/Vitis_Libraries, xmake-io/xmake-repo",
+      "normalized_value": "alpinelinux, conan-io, conda-forge, DragonFlyBSD, fd00/yacp, freebsd, getsolus/packages, ghostbsd, microsoft/vcpkg, MidnightBSD, MSYS2, NetBSD, openSUSE, opnsense, Xilinx/Vitis_Libraries, xmake-io/xmake-repo",
+      "evidence": "you can also find it in the following package\nmanagers or repositories:\n\n*   alpinelinux\n*   conan-io\n*   conda-forge\n*   DragonFlyBSD,\n*   fd00/yacp\n*   freebsd\n*   getsolus/packages\n*   ghostbsd\n*   microsoft/vcpkg\n*   MidnightBSD\n*   MSYS2\n*   NetBSD\n*   openSUSE\n*   opnsense\n*   Xilinx/Vitis_Libraries\n*   xmake-io/xmake-repo",
+      "evidence_location": "lines 119-137",
+      "confidence": "high",
+      "reason": "Lists distribution channels where the library can be obtained, aiding installation."
+    },
+    {
+      "field": "versioning_scheme",
+      "value": "semver.org system (MAJOR.MINOR.PATCH)",
+      "normalized_value": "semver.org system (MAJOR.MINOR.PATCH)",
+      "evidence": "Highway releases aim to follow the semver.org system (MAJOR.MINOR.PATCH),\nincrementing MINOR after backward-compatible additions and PATCH after\nbackward-compatible fixes.",
+      "evidence_location": "lines 183-184, section \"Versioning\"",
+      "confidence": "high",
+      "reason": "Describes release versioning policy, relevant for dependency pinning."
+    },
+    {
+      "field": "current_version",
+      "value": "1.0",
+      "normalized_value": "1.0",
+      "evidence": "The current version 1.0 signals an increased focus on backwards compatibility.",
+      "evidence_location": "line 188, section \"Versioning\"",
+      "confidence": "high",
+      "reason": "States the current major version and its compatibility guarantee."
+    },
+    {
+      "field": "ci_testing_environment",
+      "value": "recent version of Clang (native x86, or QEMU for RISC-V and Arm) and MSVC 2019 (v19.28, native x86)",
+      "normalized_value": "recent version of Clang (native x86, or QEMU for RISC-V and Arm) and MSVC 2019 (v19.28, native x86)",
+      "evidence": "Continuous integration tests build with a recent version of Clang (running on\nnative x86, or QEMU for RISC-V and Arm) and MSVC 2019 (v19.28, running on native\nx86).",
+      "evidence_location": "lines 194-196, section \"Testing\"",
+      "confidence": "high",
+      "reason": "Describes the tested compiler/platform matrix, relevant for reproducibility and support expectations."
+    },
+    {
+      "field": "armv7_build_flag",
+      "value": "-DHWY_CMAKE_ARM7:BOOL=ON",
+      "normalized_value": "-DHWY_CMAKE_ARM7:BOOL=ON",
+      "evidence": "When building for Armv7, a limitation of current compilers requires you to add\n`-DHWY_CMAKE_ARM7:BOOL=ON` to the CMake command line; see #834 and #1032.",
+      "evidence_location": "lines 255-256, section \"Installation\"",
+      "confidence": "high",
+      "reason": "Required CMake flag for a specific target architecture build."
+    },
+    {
+      "field": "recommended_compiler_flags",
+      "value": "-O2 for clang and GCC; /Gv (and /arch:AVX2 when using AVX2 with half-width vectors) for MSVC",
+      "normalized_value": "-O2 for clang and GCC; /Gv (and /arch:AVX2 when using AVX2 with half-width vectors) for MSVC",
+      "evidence": "For clang and GCC, `-O2` is\ngenerally sufficient.\n\nFor MSVC, we recommend compiling with `/Gv` to allow non-inlined functions to\npass vector arguments in registers.",
+      "evidence_location": "lines 371-374, section \"Compiler flags\"",
+      "confidence": "high",
+      "reason": "Compiler flags needed to achieve correct and performant builds of dependent applications."
+    },
+    {
+      "field": "related_paper",
+      "value": "vectorized Quicksort paper, https://arxiv.org/abs/2205.05982",
+      "normalized_value": "vectorized Quicksort paper, https://arxiv.org/abs/2205.05982",
+      "evidence": "*   [vectorized Quicksort](https://github.com/google/highway/tree/master/hwy/contrib/sort) ([paper](https://arxiv.org/abs/2205.05982))",
+      "evidence_location": "line 116",
+      "confidence": "high",
+      "reason": "Link to a published paper describing a component of the project, useful for citation and scientific context."
+    },
+    {
+      "field": "external_evaluation",
+      "value": "Evaluation of C++ SIMD Libraries: \"Highway excelled with a strong performance across multiple SIMD extensions [..]. Thus, Highway may currently be the most suitable SIMD library for many software projects.\"",
+      "normalized_value": "Evaluation of C++ SIMD Libraries: \"Highway excelled with a strong performance across multiple SIMD extensions [..]. Thus, Highway may currently be the most suitable SIMD library for many software projects.\"",
+      "evidence": "*   [Evaluation of C++ SIMD Libraries](https://www.mnm-team.org/pub/Fopras/rock23/):\n    \"Highway excelled with a strong performance across multiple SIMD extensions\n    [..]. Thus, Highway may currently be the most suitable SIMD library for many\n    software projects.\"",
+      "evidence_location": "lines 111-114",
+      "confidence": "high",
+      "reason": "Independent comparative evaluation of the library, useful for assessment and citation."
+    },
+    {
+      "field": "demo_links",
+      "value": "Compiler Explorer demos: multiple targets with dynamic dispatch (https://gcc.godbolt.org/z/KM3ben7ET), single target using -m flags (https://gcc.godbolt.org/z/rGnjMevKG)",
+      "normalized_value": "Compiler Explorer demos: multiple targets with dynamic dispatch (https://gcc.godbolt.org/z/KM3ben7ET), single target using -m flags (https://gcc.godbolt.org/z/rGnjMevKG)",
+      "evidence": "Online demos using Compiler Explorer:\n\n-   [multiple targets with dynamic dispatch](https://gcc.godbolt.org/z/KM3ben7ET)\n    (more complicated, but flexible and uses best available SIMD)\n-   [single target using -m flags](https://gcc.godbolt.org/z/rGnjMevKG)\n    (simpler, but requires/only uses the instruction set enabled by compiler\n    flags)",
+      "evidence_location": "lines 68-74, section \"Examples\"",
+      "confidence": "high",
+      "reason": "Runnable online demos that help users try and understand the library."
+    },
+    {
+      "field": "contact_email",
+      "value": "janwas@google.com",
+      "normalized_value": "janwas@google.com",
+      "evidence": "Contact: janwas@google.com",
+      "evidence_location": "line 496, section \"Acknowledgments\"",
+      "confidence": "high",
+      "reason": "Point of contact for the project."
+    },
+    {
+      "field": "support_status",
+      "value": "This is not an officially supported Google product.",
+      "normalized_value": "This is not an officially supported Google product.",
+      "evidence": "This is not an officially supported Google product.",
+      "evidence_location": "line 495, section \"Acknowledgments\"",
+      "confidence": "high",
+      "reason": "Clarifies the support/maintenance status of the artifact."
+    },
+    {
+      "field": "cross_compiled_test_requirement",
+      "value": "qemu-user-binfmt package on Debian",
+      "normalized_value": "qemu-user-binfmt package on Debian",
+      "evidence": "Running cross-compiled tests requires support from the OS, which on Debian is\nprovided by the `qemu-user-binfmt` package.",
+      "evidence_location": "lines 239-240, section \"Installation\"",
+      "confidence": "high",
+      "reason": "Dependency needed to run cross-compiled tests, relevant for reproduction on non-native targets."
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "MeanSum",
+      "normalized_value": "MeanSum",
+      "evidence": "# MeanSum: A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence_location": "line 1, title header",
+      "confidence": "high",
+      "reason": "Names the artifact, useful for identification and search."
+    },
+    {
+      "field": "task",
+      "value": "Unsupervised Neural Multi-Document Abstractive Summarization",
+      "normalized_value": "Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence": "# MeanSum: A Model for Unsupervised Neural Multi-Document Abstractive Summarization",
+      "evidence_location": "line 1, title header",
+      "confidence": "high",
+      "reason": "Describes the task the model addresses, useful for indexing and search."
+    },
+    {
+      "field": "paper_link",
+      "value": "https://arxiv.org/abs/1810.05739",
+      "normalized_value": "https://arxiv.org/abs/1810.05739",
+      "evidence": "Corresponding paper, accepted to ICML 2019: [https://arxiv.org/abs/1810.05739](https://arxiv.org/abs/1810.05739).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "Link to the corresponding paper for citation and further reading."
+    },
+    {
+      "field": "publication_venue",
+      "value": "ICML 2019",
+      "normalized_value": "ICML 2019",
+      "evidence": "Corresponding paper, accepted to ICML 2019: [https://arxiv.org/abs/1810.05739](https://arxiv.org/abs/1810.05739).",
+      "evidence_location": "line 3",
+      "confidence": "high",
+      "reason": "States the venue where the paper was accepted, useful for citation and scientific context."
+    },
+    {
+      "field": "programming_language",
+      "value": "python 3",
+      "normalized_value": "python 3",
+      "evidence": "Main requirements:\n- python 3\n- torch 0.4.0",
+      "evidence_location": "lines 7-9, Requirements section",
+      "confidence": "high",
+      "reason": "Required language version for reproducing the artifact."
+    },
+    {
+      "field": "framework_dependency",
+      "value": "torch 0.4.0",
+      "normalized_value": "torch 0.4.0",
+      "evidence": "Main requirements:\n- python 3\n- torch 0.4.0",
+      "evidence_location": "lines 7-9, Requirements section",
+      "confidence": "high",
+      "reason": "Core framework dependency with pinned version, needed for reproduction."
+    },
+    {
+      "field": "dependencies_file",
+      "value": "requirements.txt",
+      "normalized_value": "requirements.txt",
+      "evidence": "Rest of python packages in ```requirements.txt```.",
+      "evidence_location": "line 11, Requirements section",
+      "confidence": "high",
+      "reason": "Points to the file listing remaining Python package dependencies."
+    },
+    {
+      "field": "tested_environment",
+      "value": "pytorch/pytorch:0.4_cuda9_cudnn7",
+      "normalized_value": "pytorch/pytorch:0.4_cuda9_cudnn7",
+      "evidence": "Tested in Docker, image = ```pytorch/pytorch:0.4_cuda9_cudnn7```.",
+      "evidence_location": "line 12, Requirements section",
+      "confidence": "high",
+      "reason": "Docker image in which the code was tested, useful for environment reproduction."
+    },
+    {
+      "field": "setup_command",
+      "value": "bash setup_dirs.sh",
+      "normalized_value": "bash setup_dirs.sh",
+      "evidence": "##### Create directories that aren't part of the Git repo (checkpoints/, outputs/):\n\n```\nbash setup_dirs.sh\n```",
+      "evidence_location": "lines 18-22, General setup section",
+      "confidence": "high",
+      "reason": "Setup step creating required directories (checkpoints/, outputs/)."
+    },
+    {
+      "field": "install_command",
+      "value": "bash install_python_pkgs.sh",
+      "normalized_value": "bash install_python_pkgs.sh",
+      "evidence": "##### Install python packages:\n\n```\nbash install_python_pkgs.sh\n```",
+      "evidence_location": "lines 24-28, General setup section",
+      "confidence": "high",
+      "reason": "Command to install Python package dependencies."
+    },
+    {
+      "field": "setup_command",
+      "value": "python update_tensorboard.py",
+      "normalized_value": "python update_tensorboard.py",
+      "evidence": "##### The default parameters for Tensorboard(x?) cause texts from writer.add_text() to not show up. Update by:\n\n```\npython update_tensorboard.py\n```",
+      "evidence_location": "lines 30-34, General setup section",
+      "confidence": "high",
+      "reason": "Setup step fixing Tensorboard text logging configuration."
+    },
+    {
+      "field": "dataset",
+      "value": "Yelp data: https://www.yelp.com/dataset",
+      "normalized_value": "Yelp data: https://www.yelp.com/dataset",
+      "evidence": "1. Download Yelp data: https://www.yelp.com/dataset and place files in ```datasets/yelp_dataset/```",
+      "evidence_location": "line 42, Data section",
+      "confidence": "high",
+      "reason": "Identifies the dataset used and where to obtain it."
+    },
+    {
+      "field": "preprocessing_command",
+      "value": "bash scripts/preprocess_data.sh",
+      "normalized_value": "bash scripts/preprocess_data.sh",
+      "evidence": "2. Run script to pre-process script and create train, val, test splits:\n    ```\n    bash scripts/preprocess_data.sh\n    ```",
+      "evidence_location": "lines 43-46, Data section",
+      "confidence": "high",
+      "reason": "Command to preprocess data and create train/val/test splits, needed for reproduction."
+    },
+    {
+      "field": "tokenizer_download",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/subwordenc_32000_maxrevs260_fixed.pkl",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/subwordenc_32000_maxrevs260_fixed.pkl",
+      "evidence": "3. Download subword tokenizer built on Yelp and place in \n```datasets/yelp_dataset/processed/```: \n[link](https://s3.us-east-2.amazonaws.com/unsup-sum/subwordenc_32000_maxrevs260_fixed.pkl)",
+      "evidence_location": "lines 47-49, Data section",
+      "confidence": "high",
+      "reason": "Download link for the subword tokenizer required for preprocessing/inference."
+    },
+    {
+      "field": "pretrained_summarization_model",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt",
+      "evidence": "1. Download summarization model and place in \n```stable_checkpoints/sum/mlstm/yelp/batch_size_16-notes_cycloss_honly-sum_lr_0.0005-tau_2.0/```: \n[link](https://s3.us-east-2.amazonaws.com/unsup-sum/sum_e0_tot3.32_r1f0.27.pt)",
+      "evidence_location": "lines 53-55, Pre-trained models section",
+      "confidence": "high",
+      "reason": "Checkpoint download for the pretrained summarization model, needed for evaluation/inference."
+    },
+    {
+      "field": "pretrained_language_model",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/lm_e24_2.88.pt",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/lm_e24_2.88.pt",
+      "evidence": "2. Download language model and place in \n```stable_checkpoints/lm/mlstm/yelp/batch_size_512-lm_lr_0.001-notes_data260_fixed/```: \n[link](https://s3.us-east-2.amazonaws.com/unsup-sum/lm_e24_2.88.pt)",
+      "evidence_location": "lines 56-58, Pre-trained models section",
+      "confidence": "high",
+      "reason": "Checkpoint download for the pretrained language model used in training."
+    },
+    {
+      "field": "pretrained_classification_model",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/clf_e10_l0.6760_a0.7092.pt",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/clf_e10_l0.6760_a0.7092.pt",
+      "evidence": "3. Download classification model and place in \n```stable_checkpoints/clf/cnn/yelp/batch_size_256-notes_data260_fixed/```: \n[link](https://s3.us-east-2.amazonaws.com/unsup-sum/clf_e10_l0.6760_a0.7092.pt)",
+      "evidence_location": "lines 59-61, Pre-trained models section",
+      "confidence": "high",
+      "reason": "Checkpoint download for the pretrained classification model."
+    },
+    {
+      "field": "reference_summaries_download",
+      "value": "https://s3.us-east-2.amazonaws.com/unsup-sum/summaries_0-200_cleaned.csv",
+      "normalized_value": "https://s3.us-east-2.amazonaws.com/unsup-sum/summaries_0-200_cleaned.csv",
+      "evidence": "Download from: [link](https://s3.us-east-2.amazonaws.com/unsup-sum/summaries_0-200_cleaned.csv).",
+      "evidence_location": "line 66, Reference summaries section",
+      "confidence": "high",
+      "reason": "Download link for human-written reference summaries used for evaluation."
+    },
+    {
+      "field": "reference_summaries_source",
+      "value": "The \"Answer.summary\" is the reference summary written by the Mechanical Turk worker.",
+      "normalized_value": "The \"Answer.summary\" is the reference summary written by the Mechanical Turk worker.",
+      "evidence": "Each row contains \"Input.business_id\", \"Input.original_review_\\<num\\>\\_id\", \n\"Input.original_review__\\<num\\>\\_\", \"Answer.summary\", etc. The \"Answer.summary\" is the\nreference summary written by the Mechanical Turk worker.",
+      "evidence_location": "lines 67-69, Reference summaries section",
+      "confidence": "high",
+      "reason": "Explains provenance of reference summaries (Mechanical Turk), relevant for evaluation context."
+    },
+    {
+      "field": "evaluation_command",
+      "value": "python train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>",
+      "normalized_value": "python train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>",
+      "evidence": "Testing with pretrained mode. This will output and save the automated metrics. \nResults will be in ```outputs/eval/yelp/n_docs_8/unsup_<run_name>```\n\nNOTE: Unlike some conventions, 'gpus' option here represents the GPU ID (the one which is visible) and NOT the number of GPUs. Hence, for a machine with a single GPU, you will give gpus=0\n```\npython train_sum.py --mode=test --gpus=0 --batch_size=16 --notes=<run_name>\n```",
+      "evidence_location": "lines 74-80, Running section",
+      "confidence": "high",
+      "reason": "Command to run evaluation with the pretrained model and produce automated metrics."
+    },
+    {
+      "field": "training_command",
+      "value": "python train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes>",
+      "normalized_value": "python train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes>",
+      "evidence": "Training summarization model (using pre-trained language model and default hyperparams).\nThe automated metrics results will be in ```checkpoints/sum/mlstm/yelp/<hparams>_<additional_notes>```.:\n```\npython train_sum.py --batch_size=16 --gpus=0,1,2,3 --notes=<additional_notes> \n```",
+      "evidence_location": "lines 82-86, Running section",
+      "confidence": "high",
+      "reason": "Command to train the summarization model using the pretrained language model."
+    },
+    {
+      "field": "gpu_option_semantics",
+      "value": "'gpus' option here represents the GPU ID (the one which is visible) and NOT the number of GPUs",
+      "normalized_value": "'gpus' option here represents the GPU ID (the one which is visible) and NOT the number of GPUs",
+      "evidence": "NOTE: Unlike some conventions, 'gpus' option here represents the GPU ID (the one which is visible) and NOT the number of GPUs. Hence, for a machine with a single GPU, you will give gpus=0",
+      "evidence_location": "line 77, Running section",
+      "confidence": "high",
+      "reason": "Clarifies non-standard meaning of the gpus argument, important for correct reproduction."
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "3D CMR-Domain-Adaptation",
+      "normalized_value": "3D CMR-Domain-Adaptation",
+      "evidence": "# 3D CMR-Domain-Adaptation",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Explicitly states the repository/project name in the main heading."
+    },
+    {
+      "field": "description",
+      "value": "This repo contains code to train a deep learning model for **Unsupervised Domain Adaptation (UDA)** of 3D cardiac magnetic resonance (CMR) cine images to **transform from axial to short-axis orientation**. The task associated to the domain adaptation is to perform a **segmentation task via a pre-trained fixed network**, and the results are leveraged to guide the transformation process (rigid transform via spatial transformer networks).",
+      "normalized_value": "This repo contains code to train a deep learning model for **Unsupervised Domain Adaptation (UDA)** of 3D cardiac magnetic resonance (CMR) cine images to **transform from axial to short-axis orientation**. The task associated to the domain adaptation is to perform a **segmentation task via a pre-trained fixed network**, and the results are leveraged to guide the transformation process (rigid transform via spatial transformer networks).",
+      "evidence": "This repo contains code to train a deep learning model for **Unsupervised Domain Adaptation (UDA)** of 3D cardiac magnetic resonance (CMR) cine images to **transform from axial to short-axis orientation**. The task associated to the domain adaptation is to perform a **segmentation task via a pre-trained fixed network**, and the results are leveraged to guide the transformation process (rigid transform via spatial transformer networks).",
+      "evidence_location": "3-4",
+      "confidence": "high",
+      "reason": "Clearly defines the project's purpose, core task, and methodological approach."
+    },
+    {
+      "field": "repository_url",
+      "value": "https://github.com/Cardio-AI/3d-mri-domain-adaptation",
+      "normalized_value": "https://github.com/Cardio-AI/3d-mri-domain-adaptation",
+      "evidence": "![Unsupervised Domain adaptation learning](https://github.com/Cardio-AI/3d-mri-domain-adaptation/blob/master/reports/ax_sax_learning_example.gif \"learning progress\")",
+      "evidence_location": "9",
+      "confidence": "high",
+      "reason": "Provides the direct URL to the GitHub repository hosting the code."
+    },
+    {
+      "field": "paper_url",
+      "value": "https://ieeexplore.ieee.org/document/9328840",
+      "normalized_value": "https://ieeexplore.ieee.org/document/9328840",
+      "evidence": "- Link to original paper: [IEEE TMI paper link](https://ieeexplore.ieee.org/document/9328840) (accepted 13.1.2021)",
+      "evidence_location": "29",
+      "confidence": "high",
+      "reason": "Links to the official peer-reviewed publication for context and validation."
+    },
+    {
+      "field": "preprint_url",
+      "value": "http://arxiv.org/abs/2101.07653",
+      "normalized_value": "http://arxiv.org/abs/2101.07653",
+      "evidence": "- A pre-print version is available here: [arxiv-Preprint](http://arxiv.org/abs/2101.07653)",
+      "evidence_location": "30",
+      "confidence": "high",
+      "reason": "Provides open-access access to the manuscript prior to formal publication."
+    },
+    {
+      "field": "programming_language",
+      "value": "Python 3.6",
+      "normalized_value": "Python 3.6",
+      "evidence": "- Python 3.6 locally installed ",
+      "evidence_location": "125",
+      "confidence": "high",
+      "reason": "Specifies the exact Python version required for compatibility."
+    },
+    {
+      "field": "deep_learning_framework",
+      "value": "TF 2.X",
+      "normalized_value": "TF 2.X",
+      "evidence": "- The Deep Learning models/layers are build with TF 2.X.",
+      "evidence_location": "18",
+      "confidence": "high",
+      "reason": "Identifies the primary deep learning framework and major version used."
+    },
+    {
+      "field": "environment_configuration",
+      "value": "environment.yaml",
+      "normalized_value": "environment.yaml",
+      "evidence": "- The repository dependencies are saved as conda environment (environment.yaml) file.",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Points to the conda environment specification file for reproducible dependency management."
+    },
+    {
+      "field": "hardware_requirements",
+      "value": "nvidia drivers, cuda and cudnn",
+      "normalized_value": "nvidia drivers, cuda and cudnn",
+      "evidence": "- Installed nvidia drivers, cuda and cudnn ",
+      "evidence_location": "128",
+      "confidence": "high",
+      "reason": "Lists essential GPU-accelerated software prerequisites for running the model."
+    },
+    {
+      "field": "installation_commands",
+      "value": "```\ngit clone %repo-name%\ncd %repo-name%\n```\nCreate a conda environment from environment.yaml (environment name will be ax2sax)\n```\nconda env create --file environment.yaml\n```\n\nActivate environment\n```\nconda activate ax2sax\n```\nInstall a helper to automatically change the working directory to the project root directory\n```\npip install --extra-index-url https://test.pypi.org/simple/ ProjectRoot\n```\nCreate a jupyter kernel from the activated environment, this kernel will be visible in the jupyter lab\n```\npython -m ipykernel install --user --name ax2sax --display-name \"ax2sax kernel\"\n```\n\n\n### Enable interactive widgets in Jupyterlab\n\nPre-condition: nodejs installed globally or into the conda environment. e.g.:\n```\nconda install -c conda-forge nodejs\n```\nInstall the jupyterlab-manager which enables the use of interactive widgets\n```\njupyter labextension install @jupyter-widgets/jupyterlab-manager\n```",
+      "normalized_value": "git clone %repo-name% cd %repo-name% conda env create --file environment.yaml conda activate ax2sax pip install --extra-index-url https://test.pypi.org/simple/ ProjectRoot python -m ipykernel install --user --name ax2sax --display-name \"ax2sax kernel\" conda install -c conda-forge nodejs jupyter labextension install @jupyter-widgets/jupyterlab-manager",
+      "evidence": "```\ngit clone %repo-name%\ncd %repo-name%\n```\nCreate a conda environment from environment.yaml (environment name will be ax2sax)\n```\nconda env create --file environment.yaml\n```\n\nActivate environment\n```\nconda activate ax2sax\n```\nInstall a helper to automatically change the working directory to the project root directory\n```\npip install --extra-index-url https://test.pypi.org/simple/ ProjectRoot\n```\nCreate a jupyter kernel from the activated environment, this kernel will be visible in the jupyter lab\n```\npython -m ipykernel install --user --name ax2sax --display-name \"ax2sax kernel\"\n```\n\n\n### Enable interactive widgets in Jupyterlab\n\nPre-condition: nodejs installed globally or into the conda environment. e.g.:\n```\nconda install -c conda-forge nodejs\n```\nInstall the jupyterlab-manager which enables the use of interactive widgets\n```\njupyter labextension install @jupyter-widgets/jupyterlab-manager\n```",
+      "evidence_location": "132-164 (Setup instructions)",
+      "confidence": "high",
+      "reason": "Provides complete, sequential shell commands to clone, configure, and activate the development environment."
+    },
+    {
+      "field": "citation_bibtex",
+      "value": ">@article{Koehler_2021, <br>\n   title={Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks},<br>\n   ISSN={1558-254X},<br>\n   url={http://dx.doi.org/10.1109/TMI.2021.3052972},<br>\n   DOI={10.1109/tmi.2021.3052972},<br>\n   journal={IEEE Transactions on Medical Imaging},<br>\n   publisher={Institute of Electrical and Electronics Engineers (IEEE)},<br>\n   author={Koehler, Sven and Hussain, Tarique and Blair, Zach and Huffaker, Tyler and Ritzmann, Florian and Tandon, Animesh and Pickardt, Thomas and Sarikouch, Samir and Sarikouch, Samir and Latus, Heiner and Greil, Gerald and Wolf, Ivo and Engelhardt, Sandy},\n   year={2021},<br>\n   pages={1–1}<br>\n}",
+      "normalized_value": "@article{Koehler_2021, title={Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks}, ISSN={1558-254X}, url={http://dx.doi.org/10.1109/TMI.2021.3052972}, DOI={10.1109/tmi.2021.3052972}, journal={IEEE Transactions on Medical Imaging}, publisher={Institute of Electrical and Electronics Engineers (IEEE)}, author={Koehler, Sven and Hussain, Tarique and Blair, Zach and Huffaker, Tyler and Ritzmann, Florian and Tandon, Animesh and Pickardt, Thomas and Sarikouch, Samir and Sarikouch, Samir and Latus, Heiner and Greil, Gerald and Wolf, Ivo and Engelhardt, Sandy}, year={2021}, pages={1–1}}",
+      "evidence": ">@article{Koehler_2021, <br>\n   title={Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks},<br>\n   ISSN={1558-254X},<br>\n   url={http://dx.doi.org/10.1109/TMI.2021.3052972},<br>\n   DOI={10.1109/tmi.2021.3052972},<br>\n   journal={IEEE Transactions on Medical Imaging},<br>\n   publisher={Institute of Electrical and Electronics Engineers (IEEE)},<br>\n   author={Koehler, Sven and Hussain, Tarique and Blair, Zach and Huffaker, Tyler and Ritzmann, Florian and Tandon, Animesh and Pickardt, Thomas and Sarikouch, Samir and Sarikouch, Samir and Latus, Heiner and Greil, Gerald and Wolf, Ivo and Engelhardt, Sandy},\n   year={2021},<br>\n   pages={1–1}<br>\n}",
+      "evidence_location": "34-44",
+      "confidence": "high",
+      "reason": "Provides standardized BibTeX formatting for proper academic attribution and citation tracking."
+    },
+    {
+      "field": "authors",
+      "value": "S. Koehler, T. Hussain, Z. Blair, T. Huffaker, F. Ritzmann, A. Tandon, T. Pickardt, S. Sarikouch, H. Latus, G. Greil, I. Wolf, S. Engelhardt",
+      "normalized_value": "S. Koehler, T. Hussain, Z. Blair, T. Huffaker, F. Ritzmann, A. Tandon, T. Pickardt, S. Sarikouch, H. Latus, G. Greil, I. Wolf, S. Engelhardt",
+      "evidence": "S. Koehler, T. Hussain, Z. Blair, T. Huffaker, F. Ritzmann, A. Tandon,\nT. Pickardt, S. Sarikouch, H. Latus, G. Greil, I. Wolf, S. Engelhardt,",
+      "evidence_location": "26-27",
+      "confidence": "high",
+      "reason": "Lists the primary researchers responsible for developing the code and conducting the study."
+    },
+    {
+      "field": "publication_venue",
+      "value": "IEEE Transactions on Medical Imaging (TMI)",
+      "normalized_value": "IEEE Transactions on Medical Imaging (TMI)",
+      "evidence": "\"Unsupervised Domain Adaptation from Axial to Short-Axis Multi-Slice Cardiac MR Images by Incorporating Pretrained Task Networks,\" in IEEE Transactions on Medical Imaging (TMI), early access, doi: 10.1109/TMI.2021.3052972.",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Identifies the peer-reviewed journal, establishing scientific credibility and context."
+    },
+    {
+      "field": "doi",
+      "value": "10.1109/TMI.2021.3052972",
+      "normalized_value": "10.1109/TMI.2021.3052972",
+      "evidence": "doi: 10.1109/TMI.2021.3052972.",
+      "evidence_location": "27",
+      "confidence": "high",
+      "reason": "Provides a persistent digital identifier for locating and citing the publication."
+    },
+    {
+      "field": "dataset_source",
+      "value": "German Competence Network for Congenital Heart Defects",
+      "normalized_value": "German Competence Network for Congenital Heart Defects",
+      "evidence": "For this work a multi-centric heterogeneous cine-SSFPs CMR TOF data set from the [German Competence Network for Congenital Heart Defects](https://www.kompetenznetz-ahf.de/en/about-us/competence-network/)) was used",
+      "evidence_location": "113",
+      "confidence": "high",
+      "reason": "Names the clinical consortium that collected the medical imaging data, aiding provenance verification."
+    },
+    {
+      "field": "dataset_identifier",
+      "value": "NCT00266188",
+      "normalized_value": "NCT00266188",
+      "evidence": "(study identifier: NCT00266188, title: Non-invasive Imaging and Exercise Tolerance Tests in Post-repair Tetralogy of Fallot -Intervention and Course in Patients Over 8 Years Old).",
+      "evidence_location": "113",
+      "confidence": "high",
+      "reason": "Provides the clinical trial registration number for dataset traceability and ethical compliance checking."
+    },
+    {
+      "field": "dataset_acquisition_specs",
+      "value": "acquired at 14 different German sites between 2005-2008 on 1.5T and 3T machines",
+      "normalized_value": "acquired at 14 different German sites between 2005-2008 on 1.5T and 3T machines",
+      "evidence": "The data was acquired at 14 different German sites between 2005-2008 on 1.5T and 3T machines;",
+      "evidence_location": "115",
+      "confidence": "high",
+      "reason": "Details scanner field strengths and collection timeframe, critical for assessing domain shift and reproducibility."
+    },
+    {
+      "field": "key_component",
+      "value": "Euler2Affine Layer",
+      "normalized_value": "Euler2Affine Layer",
+      "evidence": "A special **Euler2Affine Layer** was implemented to restrict the transform of the spatial transformer network to be rigid and invertible.",
+      "evidence_location": "13",
+      "confidence": "high",
+      "reason": "Highlights a custom architectural module designed to enforce specific geometric constraints (rigidity/invertibility)."
+    }
+  ]
+}

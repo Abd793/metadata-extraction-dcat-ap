@@ -1,0 +1,166 @@
+{
+  "metadata": [
+    {
+      "field": "artifact_name",
+      "value": "Caffeine",
+      "normalized_value": "Caffeine",
+      "evidence": "Caffeine",
+      "evidence_location": "11",
+      "confidence": "high",
+      "reason": "Primary name of the artifact; essential for identification."
+    },
+    {
+      "field": "purpose",
+      "value": "a high performance, near optimal caching library",
+      "normalized_value": "a high performance, near optimal caching library",
+      "evidence": "Caffeine is a [high performance][benchmarks], [near optimal][efficiency] caching library.",
+      "evidence_location": "11-12",
+      "confidence": "high",
+      "reason": "Directly states the artifact's purpose and key characteristics (high-performance caching)."
+    },
+    {
+      "field": "project_license",
+      "value": "Apache License",
+      "normalized_value": "Apache License",
+      "evidence": "[![License](http://img.shields.io/:license-apache-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)",
+      "evidence_location": "5",
+      "confidence": "high",
+      "reason": "License badge indicates the artifact is under the Apache License, crucial for legal reuse."
+    },
+    {
+      "field": "build_status_badge_url",
+      "value": "https://github.com/ben-manes/caffeine/workflows/build/badge.svg",
+      "normalized_value": "https://github.com/ben-manes/caffeine/workflows/build/badge.svg",
+      "evidence": "[![Build Status](https://github.com/ben-manes/caffeine/workflows/build/badge.svg)](https://github.com/ben-manes/caffeine/actions?query=workflow%3Abuild)",
+      "evidence_location": "1",
+      "confidence": "high",
+      "reason": "Link to build status badge provides a quick visual indicator of project health."
+    },
+    {
+      "field": "maven_central_coordinates",
+      "value": "com.github.ben-manes.caffeine:caffeine",
+      "normalized_value": "com.github.ben-manes.caffeine:caffeine",
+      "evidence": "[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.ben-manes.caffeine/caffeine/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.ben-manes.caffeine/caffeine)",
+      "evidence_location": "3",
+      "confidence": "high",
+      "reason": "Explicit Maven groupId and artifactId for dependency management and installation."
+    },
+    {
+      "field": "version",
+      "value": "3.0.3",
+      "normalized_value": "3.0.3",
+      "evidence": "implementation 'com.github.ben-manes.caffeine:caffeine:3.0.3'",
+      "evidence_location": "86",
+      "confidence": "high",
+      "reason": "Specific version number is required for reproducible installation and to avoid dependency conflicts."
+    },
+    {
+      "field": "install_command",
+      "value": "implementation 'com.github.ben-manes.caffeine:caffeine:3.0.3'",
+      "normalized_value": "implementation 'com.github.ben-manes.caffeine:caffeine:3.0.3'",
+      "evidence": "implementation 'com.github.ben-manes.caffeine:caffeine:3.0.3'",
+      "evidence_location": "86",
+      "confidence": "high",
+      "reason": "Gradle dependency declaration for adding the main library to a project."
+    },
+    {
+      "field": "optional_extension_artifacts",
+      "value": "implementation 'com.github.ben-manes.caffeine:guava:3.0.3'\nimplementation 'com.github.ben-manes.caffeine:jcache:3.0.3'",
+      "normalized_value": "implementation 'com.github.ben-manes.caffeine:guava:3.0.3' implementation 'com.github.ben-manes.caffeine:jcache:3.0.3'",
+      "evidence": "// Optional extensions\nimplementation 'com.github.ben-manes.caffeine:guava:3.0.3'\nimplementation 'com.github.ben-manes.caffeine:jcache:3.0.3'",
+      "evidence_location": "88-90",
+      "confidence": "high",
+      "reason": "Specific artifact coordinates for optional extensions that provide additional functionality (Guava adapter, JCache)."
+    },
+    {
+      "field": "programming_language",
+      "value": "Java",
+      "normalized_value": "Java",
+      "evidence": "LoadingCache<Key, Graph> graphs = Caffeine.newBuilder()",
+      "evidence_location": "21",
+      "confidence": "high",
+      "reason": "Code example uses Java syntax and types, indicating the primary implementation language."
+    },
+    {
+      "field": "api_inspiration",
+      "value": "Google Guava inspired API",
+      "normalized_value": "Google Guava inspired API",
+      "evidence": "Caffeine provides an in-memory cache using a Google Guava inspired API.",
+      "evidence_location": "17",
+      "confidence": "high",
+      "reason": "Clarifies the API design lineage, helping users familiar with Guava's cache to understand Caffeine."
+    },
+    {
+      "field": "usage_example",
+      "value": "LoadingCache<Key, Graph> graphs = Caffeine.newBuilder()\n    .maximumSize(10_000)\n    .expireAfterWrite(Duration.ofMinutes(5))\n    .refreshAfterWrite(Duration.ofMinutes(1))\n    .build(key -> createExpensiveGraph(key));",
+      "normalized_value": "LoadingCache<Key, Graph> graphs = Caffeine.newBuilder() .maximumSize(10_000) .expireAfterWrite(Duration.ofMinutes(5)) .refreshAfterWrite(Duration.ofMinutes(1)) .build(key -> createExpensiveGraph(key));",
+      "evidence": "LoadingCache<Key, Graph> graphs = Caffeine.newBuilder()\n    .maximumSize(10_000)\n    .expireAfterWrite(Duration.ofMinutes(5))\n    .refreshAfterWrite(Duration.ofMinutes(1))\n    .build(key -> createExpensiveGraph(key));",
+      "evidence_location": "21-26",
+      "confidence": "high",
+      "reason": "Concrete example of constructing a cache with key configuration options (size, expiration, refresh)."
+    },
+    {
+      "field": "key_features",
+      "value": "automatic loading of entries into the cache, optionally asynchronously\nsize-based eviction when a maximum is exceeded based on frequency and recency\ntime-based expiration of entries, measured since last access or last write\nasynchronously refresh when the first stale request for an entry occurs\nkeys automatically wrapped in weak references\nvalues automatically wrapped in weak or soft references\nnotification of evicted (or otherwise removed) entries\nwrites propagated to an external resource\naccumulation of cache access statistics",
+      "normalized_value": "automatic loading of entries into the cache, optionally asynchronously size-based eviction when a maximum is exceeded based on frequency and recency time-based expiration of entries, measured since last access or last write asynchronously refresh when the first stale request for an entry occurs keys automatically wrapped in weak references values automatically wrapped in weak or soft references notification of evicted (or otherwise removed) entries writes propagated to an external resource accumulation of cache access statistics",
+      "evidence": " * [automatic loading of entries][population] into the cache, optionally asynchronously\n * [size-based eviction][size] when a maximum is exceeded based on [frequency and recency][efficiency]\n * [time-based expiration][time] of entries, measured since last access or last write\n * [asynchronously refresh][refresh] when the first stale request for an entry occurs\n * keys automatically wrapped in [weak references][reference]\n * values automatically wrapped in [weak or soft references][reference]\n * [notification][listener] of evicted (or otherwise removed) entries\n * [writes propagated][compute] to an external resource\n * accumulation of cache access [statistics][statistics]",
+      "evidence_location": "31-39",
+      "confidence": "high",
+      "reason": "Comprehensive list of core functionalities that define what the library can do and how it can be configured."
+    },
+    {
+      "field": "extensions",
+      "value": "JSR-107 JCache\nGuava adapters\nSimulation",
+      "normalized_value": "JSR-107 JCache Guava adapters Simulation",
+      "evidence": " * [JSR-107 JCache][jsr107]\n * [Guava adapters][guava-adapter]\n * [Simulation][simulator]",
+      "evidence_location": "42-44",
+      "confidence": "high",
+      "reason": "Named extensions that provide additional standards compliance, interoperability, or tooling."
+    },
+    {
+      "field": "related_research_papers",
+      "value": "TinyLFU: A Highly Efficient Cache Admission Policy by Gil Einziger, Roy Friedman, Ben Manes\nAdaptive Software Cache Management by Gil Einziger, Ohad Eytan, Roy Friedman, Ben Manes\nLightweight Robust Size Aware Cache Management by Gil Einziger, Ohad Eytan, Roy Friedman, Ben Manes",
+      "normalized_value": "TinyLFU: A Highly Efficient Cache Admission Policy by Gil Einziger, Roy Friedman, Ben Manes Adaptive Software Cache Management by Gil Einziger, Ohad Eytan, Roy Friedman, Ben Manes Lightweight Robust Size Aware Cache Management by Gil Einziger, Ohad Eytan, Roy Friedman, Ben Manes",
+      "evidence": " * [TinyLFU: A Highly Efficient Cache Admission Policy][tinylfu] by Gil Einziger, Roy Friedman, Ben Manes\n    * [Adaptive Software Cache Management][adaptive-tinylfu] by Gil Einziger, Ohad Eytan, Roy Friedman, Ben Manes\n    * [Lightweight Robust Size Aware Cache Management][size-tinylfu] by Gil Einziger, Ohad Eytan, Roy Friedman, Ben Manes",
+      "evidence_location": "77-79",
+      "confidence": "high",
+      "reason": "Citations to research papers that underpin the library's eviction policies, important for scientific context and credibility."
+    },
+    {
+      "field": "release_notes_url",
+      "value": "https://github.com/ben-manes/caffeine/releases",
+      "normalized_value": "https://github.com/ben-manes/caffeine/releases",
+      "evidence": "See the [release notes][releases] for details of the changes.",
+      "evidence_location": "93",
+      "confidence": "high",
+      "reason": "Link to release notes for tracking changes, updates, and version migration information."
+    },
+    {
+      "field": "snapshot_repository_url",
+      "value": "https://oss.sonatype.org/content/repositories/snapshots/com/github/ben-manes/caffeine/",
+      "normalized_value": "https://oss.sonatype.org/content/repositories/snapshots/com/github/ben-manes/caffeine/",
+      "evidence": "Snapshots of the development version are available in\n[Sonatype's snapshots repository][snapshots].",
+      "evidence_location": "95-96",
+      "confidence": "high",
+      "reason": "URL for accessing unstable development builds, useful for testing upcoming features or providing early feedback."
+    },
+    {
+      "field": "documentation_url",
+      "value": "https://github.com/ben-manes/caffeine/wiki",
+      "normalized_value": "https://github.com/ben-manes/caffeine/wiki",
+      "evidence": "For more\n details, see our [user's guide][users-guide] and browse the [API docs][javadoc] for the latest\n release.",
+      "evidence_location": "11-13",
+      "confidence": "high",
+      "reason": "Link to the user's guide (wiki) for comprehensive documentation and tutorials."
+    },
+    {
+      "field": "javadoc_url",
+      "value": "http://www.javadoc.io/doc/com.github.ben-manes.caffeine/caffeine",
+      "normalized_value": "http://www.javadoc.io/doc/com.github.ben-manes.caffeine/caffeine",
+      "evidence": "and browse the [API docs][javadoc] for the latest\n release.",
+      "evidence_location": "12-13",
+      "confidence": "high",
+      "reason": "Direct link to API documentation (JavaDoc) essential for developers using the library."
+    }
+  ]
+}
