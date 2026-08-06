@@ -70,11 +70,6 @@ Avoid extracting low-value metadata such as generic section headings, vague bene
 For each metadata item, return:
 - field: a short snake_case name for the metadata type you identified
 - value: the extracted value, as close to verbatim as possible
-- normalized_value: apply ONLY these normalizations, nothing else:
-  - trim surrounding whitespace/punctuation
-  - collapse internal whitespace
-  - do not shorten, expand, or abbreviate names (e.g. keep "MIT License" as "MIT License", not "MIT"; keep "Node.js 18" as-is, not "Node 18")
-  If no normalization applies, repeat value exactly.
 - evidence: a text span copied VERBATIM (character-for-character) from the artifact text, including original Markdown syntax (e.g. keep "## Installation" as-is, keep code fence contents as-is). Do not include the input line number prefixes. Do not paraphrase, reflow, merge non-adjacent sentences, or fix typos in the evidence field. This field will be programmatically checked as a substring of the source document after JSON string decoding, so JSON escaping of newlines and quotes is acceptable.
 - evidence_location: line number or line range from the numbered input, optionally plus Markdown section/header title; use "unknown" only if not available
 - confidence: one of "high", "medium", "low", using these criteria:
