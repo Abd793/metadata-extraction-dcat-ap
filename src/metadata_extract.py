@@ -99,7 +99,6 @@ Return only valid JSON in the following format:
     {
       "field": "...",
       "value": "...",
-      "normalized_value": "...",
       "evidence": "...",
       "evidence_location": "...",
       "confidence": "high | medium | low",
